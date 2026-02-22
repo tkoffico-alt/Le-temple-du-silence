@@ -2,8 +2,8 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
   
-  // Utilisation du modèle gemini-pro sur la route v1 : la fondation immuable
-  const url = "https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=" + apiKey;
+  // Utilisation de gemini-1.5-flash sur v1 : la configuration universelle de 2026
+  const url = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=" + apiKey;
 
   try {
     const response = await fetch(url, {
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     const data = await response.json();
     
     if (data.error) {
-      // Le Sage nous révèle ici la cause profonde du silence
+      // Le Sage nous révèle ici la cause profonde du silence (403, 404, etc.)
       return res.status(200).json({ text: "Note du Sage : " + data.error.message });
     }
 
@@ -25,7 +25,7 @@ export default async function handler(req, res) {
       const result = data.candidates[0].content.parts[0].text;
       res.status(200).json({ text: result });
     } else {
-      res.status(200).json({ text: "Le Sage médite... La réponse n'est pas encore manifestée." });
+      res.status(200).json({ text: "Le Sage médite... La vibration n'est pas encore manifestée." });
     }
 
   } catch (error) {

@@ -2,8 +2,9 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
   
-  // Utilisation de v1beta + gemini-1.5-flash : la combinaison gagnante en 2026
-  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + apiKey;
+  // Utilisation du modèle 'gemini-1.0-pro' qui est le pilier le plus stable
+  // Cette version lève l'erreur 'not found' pour les clés API standards
+  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=" + apiKey;
 
   try {
     const response = await fetch(url, {
@@ -20,14 +21,8 @@ export default async function handler(req, res) {
       return res.status(200).json({ text: "Note du Sage : " + data.error.message });
     }
 
-    // Extraction de la parole sacrée
-    if (data.candidates && data.candidates[0].content) {
-      const result = data.candidates[0].content.parts[0].text;
-      res.status(200).json({ text: result });
-    } else {
-      res.status(200).json({ text: "Le Sage médite... Réessayez dans un instant." });
-    }
-
+    const result = data.candidates[0].content.parts[0].text;
+    res.status(200).json({ text: result });
   } catch (error) {
     res.status(200).json({ text: "Le Sage cherche ses mots... (Erreur : " + error.message + ")" });
   }

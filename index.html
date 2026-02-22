@@ -1,64 +1,111 @@
 <!DOCTYPE html>
 
 <html lang="fr">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Le Temple du Silence</title>
+
 <style>
+
 body { font-family: sans-serif; background-color: #f4f7f6; color: #2c3e50; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+
 .container { max-width: 800px; width: 90%; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; }
+
 h1 { color: #2980b9; font-style: italic; }
+
 .btn-main { background-color: #3498db; color: white; border: none; padding: 15px 30px; margin: 10px; border-radius: 50px; cursor: pointer; font-size: 1.1rem; }
+
 #affichage-contenu { margin-top: 30px; min-height: 150px; font-size: 1.25rem; line-height: 1.8; text-align: left; border-top: 1px solid #eee; padding-top: 20px; }
+
 </style>
+
 </head>
+
 <body>
+
 <div class="container">
+
 <h1>Le Temple du Silence</h1>
+
 <div class="menu">
+
 <button id="btn-sage" class="btn-main">L'Instructeur AYP</button>
+
 <button id="btn-parabole" class="btn-main">Autres Paraboles</button>
+
 </div>
+
 <div id="affichage-contenu">
+
 <p id="texte-parabole" style="text-align:center;">Kofi écoute le courant... Posez votre question.</p>
+
 </div>
+
 </div>
+
 <script>
-const API_KEY = "AIzaSyACdI-w5L8GxNvfCIYVrMf3WpB-OKzpkMw";
-const MODEL_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent";
-const systemPrompt = "Tu es le Sage AYP. Ton ton est poétique, masculin et calme. Tu illustres tes réponses avec l'histoire de Kofi et sa rivière. Tu définis la Kundalini comme la conductivité extatique du système nerveux (Yogani).";
+
+const MODEL_URL = "/api/generate";
 
 async function demanderAuSage(message) {
+
 const affichage = document.getElementById('texte-parabole');
+
 affichage.innerHTML = "Le Sage médite au bord de l'eau...";
+
 try {
-const response = await fetch(MODEL_URL + "?key=" + API_KEY, {
+
+const response = await fetch(MODEL_URL, {
+
 method: 'POST',
+
 headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ contents: [{ parts: [{ text: systemPrompt + " Question: " + message }] }] })
+
+body: JSON.stringify({ prompt: message })
+
 });
+
 const data = await response.json();
-if (data.candidates && data.candidates[0].content) {
-affichage.innerHTML = data.candidates[0].content.parts[0].text;
+
+if (data.text) {
+
+affichage.innerHTML = data.text;
+
 } else {
-affichage.innerHTML = "Le Sage est silencieux. Vérifiez la clé.";
+
+affichage.innerHTML = "Le Sage attend que le pont soit terminé.";
+
 }
+
 } catch (e) {
-affichage.innerHTML = "La rivière est agitée par une erreur technique.";
+
+affichage.innerHTML = "La rivière est agitée. Vérifions le pont.";
+
 }
+
 }
 
 document.getElementById('btn-sage').onclick = function() {
+
 const q = prompt("Quelle est votre question pour le Sage ?");
+
 if (q) demanderAuSage(q);
+
 };
 
 document.getElementById('btn-parabole').onclick = function() {
+
 demanderAuSage("Raconte-moi une courte parabole de Kofi sur la paix intérieure.");
+
 };
+
 </script>
 
 </body>
-</html>
 
+</html>

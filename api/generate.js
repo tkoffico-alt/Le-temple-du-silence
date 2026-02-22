@@ -2,8 +2,8 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
   
-  // Utilisation de gemini-pro sur la route v1 pour lever l'erreur de la Page 82
-  const url = "https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=" + apiKey;
+  // Utilisation du modèle gemini-1.5-pro qui est le standard v1 en 2026
+  const url = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro:generateContent?key=" + apiKey;
 
   try {
     const response = await fetch(url, {

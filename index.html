@@ -24,7 +24,6 @@ h1 { color: #2980b9; font-style: italic; }
 <p id="texte-parabole" style="text-align:center;">Kofi écoute le courant... Posez votre question.</p>
 </div>
 </div>
-
 <script>
 const API_KEY = "AIzaSyDFvvBPknI0Tl7YHae6PiwP2FnWpbHG9PU";
 const MODEL_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent";
@@ -34,7 +33,8 @@ async function demanderAuSage(message) {
 const affichage = document.getElementById('texte-parabole');
 affichage.innerHTML = "Le Sage médite...";
 try {
-const response = await fetch(${MODEL_URL}?key=${API_KEY}, {
+const urlFinal = MODEL_URL + "?key=" + API_KEY;
+const response = await fetch(urlFinal, {
 method: 'POST',
 headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ contents: [{ parts: [{ text: systemPrompt + " Question: " + message }] }] })
@@ -43,20 +43,20 @@ const data = await response.json();
 if (data.candidates && data.candidates[0].content) {
 affichage.innerHTML = data.candidates[0].content.parts[0].text;
 } else {
-affichage.innerHTML = "Le Sage est silencieux.";
+affichage.innerHTML = "Le Sage est silencieux. Vérifiez la clé.";
 }
 } catch (e) {
-affichage.innerHTML = "La rivière est agitée.";
+affichage.innerHTML = "La rivière est agitée par une erreur technique.";
 }
 }
 
-document.getElementById('btn-sage').onclick = () => {
-const q = prompt("Votre question ?");
+document.getElementById('btn-sage').onclick = function() {
+const q = prompt("Quelle est votre question pour le Sage ?");
 if (q) demanderAuSage(q);
 };
 
-document.getElementById('btn-parabole').onclick = () => {
-demanderAuSage("Raconte une courte parabole de Kofi.");
+document.getElementById('btn-parabole').onclick = function() {
+demanderAuSage("Raconte-moi une courte parabole de Kofi sur la paix intérieure.");
 };
 </script>
 

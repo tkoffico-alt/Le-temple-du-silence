@@ -2,8 +2,8 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
   
-  // En 2026, la route v1beta est redevenue le sésame pour les clés gratuites
-  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + apiKey;
+  // Utilisation du modèle gemini-pro sur la route v1beta : la racine immuable
+  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=" + apiKey;
 
   try {
     const response = await fetch(url, {
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     const data = await response.json();
     
     if (data.error) {
-      // Si l'erreur persiste, nous lirons le message du Gardien pour le diagnostic final
+      // Si l'erreur persiste, le Sage nous révélera le code précis (403, 404, etc.)
       return res.status(200).json({ text: "Note du Sage : " + data.error.message });
     }
 
@@ -25,7 +25,7 @@ export default async function handler(req, res) {
       const result = data.candidates[0].content.parts[0].text;
       res.status(200).json({ text: result });
     } else {
-      res.status(200).json({ text: "Le Sage médite... (Aucune réponse reçue du Temple)" });
+      res.status(200).json({ text: "Le Sage médite... La vibration n'est pas encore manifestée." });
     }
 
   } catch (error) {

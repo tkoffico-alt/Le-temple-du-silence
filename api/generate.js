@@ -2,22 +2,22 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
   
-  // Utilisation de gemini-1.5-flash sur v1 : la configuration universelle de 2026
-  const url = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=" + apiKey;
+  // En 2026, la route v1beta est redevenue le sésame pour les clés gratuites
+  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + apiKey;
 
   try {
     const response = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        contents: [{ parts: [{ text: "Tu es le Sage AYP. Réponds avec poésie et brièveté à : " + prompt }] }]
+        contents: [{ parts: [{ text: "Tu es le Sage AYP. Réponds avec poésie à : " + prompt }] }]
       })
     });
 
     const data = await response.json();
     
     if (data.error) {
-      // Le Sage nous révèle ici la cause profonde du silence (403, 404, etc.)
+      // Si l'erreur persiste, nous lirons le message du Gardien pour le diagnostic final
       return res.status(200).json({ text: "Note du Sage : " + data.error.message });
     }
 
@@ -25,7 +25,7 @@ export default async function handler(req, res) {
       const result = data.candidates[0].content.parts[0].text;
       res.status(200).json({ text: result });
     } else {
-      res.status(200).json({ text: "Le Sage médite... La vibration n'est pas encore manifestée." });
+      res.status(200).json({ text: "Le Sage médite... (Aucune réponse reçue du Temple)" });
     }
 
   } catch (error) {

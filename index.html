@@ -31,10 +31,9 @@ const systemPrompt = "Tu es le Sage AYP. Ton ton est poétique, masculin et calm
 
 async function demanderAuSage(message) {
 const affichage = document.getElementById('texte-parabole');
-affichage.innerHTML = "Le Sage médite...";
+affichage.innerHTML = "Le Sage médite au bord de l'eau...";
 try {
-const urlFinal = MODEL_URL + "?key=" + API_KEY;
-const response = await fetch(urlFinal, {
+const response = await fetch(MODEL_URL + "?key=" + API_KEY, {
 method: 'POST',
 headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ contents: [{ parts: [{ text: systemPrompt + " Question: " + message }] }] })
@@ -62,4 +61,3 @@ demanderAuSage("Raconte-moi une courte parabole de Kofi sur la paix intérieure.
 
 </body>
 </html>
-

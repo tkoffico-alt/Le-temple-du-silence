@@ -2,8 +2,8 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
   
-  // Utilisation du modèle 1.5-flash avec le préfixe complet pour lever l'erreur
-  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + apiKey;
+  // Appel du modèle 2.0 Flash qui est souvent la solution aux erreurs "not found"
+  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=" + apiKey;
 
   try {
     const response = await fetch(url, {
@@ -16,7 +16,6 @@ export default async function handler(req, res) {
 
     const data = await response.json();
     
-    // Si le modèle n'est toujours pas trouvé, nous essayons la version alternative
     if (data.error) {
       return res.status(200).json({ text: "Note du Sage : " + data.error.message });
     }

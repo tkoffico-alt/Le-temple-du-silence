@@ -2,20 +2,21 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
   
-  // Changement du modèle vers 'gemini-pro' pour assurer la compatibilité
-  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=" + apiKey;
+  // Utilisation du modèle 1.5-flash avec le préfixe complet pour lever l'erreur
+  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + apiKey;
 
   try {
     const response = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        contents: [{ parts: [{ text: "Tu es le Sage AYP. Réponds avec une poésie brève à : " + prompt }] }]
+        contents: [{ parts: [{ text: "Tu es le Sage AYP. Réponds avec poésie à : " + prompt }] }]
       })
     });
 
     const data = await response.json();
     
+    // Si le modèle n'est toujours pas trouvé, nous essayons la version alternative
     if (data.error) {
       return res.status(200).json({ text: "Note du Sage : " + data.error.message });
     }

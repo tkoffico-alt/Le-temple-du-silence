@@ -2,8 +2,8 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
   
-  // Le sésame de 2026 pour briser le silence de la Page 82
-  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=" + apiKey;
+  // Utilisation du sésame fondamental sur la route v1
+  const url = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=" + apiKey;
 
   try {
     const response = await fetch(url, {
@@ -16,6 +16,7 @@ export default async function handler(req, res) {
 
     const data = await response.json();
     
+    // Si l'erreur 'not found' revient, nous lirons le message du Gardien
     if (data.error) {
       return res.status(200).json({ text: "Note du Sage : " + data.error.message });
     }
@@ -24,10 +25,10 @@ export default async function handler(req, res) {
       const result = data.candidates[0].content.parts[0].text;
       res.status(200).json({ text: result });
     } else {
-      res.status(200).json({ text: "Le Sage médite... La réponse est encore dans le vide." });
+      res.status(200).json({ text: "Le Sage médite... Vérifiez l'activation du modèle dans Google AI Studio." });
     }
 
   } catch (error) {
-    res.status(200).json({ text: "La vibration vacille... (Erreur : " + error.message + ")" });
+    res.status(200).json({ text: "La vibration est instable... (Erreur : " + error.message + ")" });
   }
 }

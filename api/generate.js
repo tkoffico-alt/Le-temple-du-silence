@@ -2,15 +2,15 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
   
-  // Utilisation du nom de modèle complet et récent pour lever l'erreur de la Page 82
-  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-002:generateContent?key=" + apiKey;
+  // Le sésame de 2026 pour briser le silence de la Page 82
+  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=" + apiKey;
 
   try {
     const response = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        contents: [{ parts: [{ text: "Tu es le Sage AYP. Réponds avec poésie à : " + prompt }] }]
+        contents: [{ parts: [{ text: "Tu es le Sage AYP. Réponds avec poésie et brièveté à : " + prompt }] }]
       })
     });
 
@@ -24,10 +24,10 @@ export default async function handler(req, res) {
       const result = data.candidates[0].content.parts[0].text;
       res.status(200).json({ text: result });
     } else {
-      res.status(200).json({ text: "Le Sage médite... (Aucune réponse générée)" });
+      res.status(200).json({ text: "Le Sage médite... La réponse est encore dans le vide." });
     }
 
   } catch (error) {
-    res.status(200).json({ text: "La vibration est instable... (Erreur : " + error.message + ")" });
+    res.status(200).json({ text: "La vibration vacille... (Erreur : " + error.message + ")" });
   }
 }

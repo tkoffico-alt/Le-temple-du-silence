@@ -2,8 +2,8 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
   
-  // Utilisation du modèle gemini-1.5-pro qui est le standard v1 en 2026
-  const url = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro:generateContent?key=" + apiKey;
+  // Utilisation de gemini-pro sur la version v1 : le chemin le plus court
+  const url = "https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=" + apiKey;
 
   try {
     const response = await fetch(url, {
@@ -17,12 +17,15 @@ export default async function handler(req, res) {
     const data = await response.json();
     
     if (data.error) {
+      // Si une erreur persiste, le Sage nous en donne la raison précise
       return res.status(200).json({ text: "Note du Sage : " + data.error.message });
     }
 
+    // Le moment de la révélation
     const result = data.candidates[0].content.parts[0].text;
     res.status(200).json({ text: result });
+
   } catch (error) {
-    res.status(200).json({ text: "Le Sage cherche ses mots... (Erreur : " + error.message + ")" });
+    res.status(200).json({ text: "La connexion vacille... (Erreur : " + error.message + ")" });
   }
 }

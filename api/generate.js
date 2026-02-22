@@ -2,9 +2,8 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
   
-  // Utilisation du modèle 'gemini-1.5-flash' sur la route 'v1' (la plus stable)
-  // Si cette route échoue encore, c'est que la clé API a besoin du nom le plus simple possible.
-  const url = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=" + apiKey;
+  // Utilisation de la version v1 avec le nom de modèle le plus fondamental
+  const url = "https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=" + apiKey;
 
   try {
     const response = await fetch(url, {
@@ -18,13 +17,17 @@ export default async function handler(req, res) {
     const data = await response.json();
     
     if (data.error) {
-      // Si l'erreur 'not found' persiste, nous tentons le modèle 'gemini-pro' par défaut
+      // Si l'erreur persiste, nous affichons le message brut de Google pour comprendre
       return res.status(200).json({ text: "Note du Sage : " + data.error.message });
+    }
+
+    if (!data.candidates || data.candidates.length === 0) {
+      return res.status(200).json({ text: "Le Sage médite en silence... (Pas de réponse reçue)" });
     }
 
     const result = data.candidates[0].content.parts[0].text;
     res.status(200).json({ text: result });
   } catch (error) {
-    res.status(200).json({ text: "Le Sage cherche ses mots... (Erreur : " + error.message + ")" });
+    res.status(200).json({ text: "La connexion au Temple est instable... (Erreur : " + error.message + ")" });
   }
 }

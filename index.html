@@ -10,7 +10,6 @@ body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; color: #2
 .container { max-width: 800px; width: 90%; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; }
 h1 { color: #2980b9; font-style: italic; margin-bottom: 30px; }
 .btn-main { background-color: #3498db; color: white; border: none; padding: 15px 30px; margin: 10px; border-radius: 50px; cursor: pointer; font-size: 1.1rem; transition: 0.3s; }
-.btn-main:hover { background-color: #2980b9; }
 #affichage-contenu { margin-top: 30px; min-height: 150px; font-size: 1.25rem; line-height: 1.8; text-align: left; border-top: 1px solid #eee; padding-top: 20px; }
 </style>
 </head>
@@ -30,45 +29,38 @@ h1 { color: #2980b9; font-style: italic; margin-bottom: 30px; }
 const API_KEY = "AIzaSyDFvvBPknI0Tl7YHae6PiwP2FnWpbHG9PU";
 const MODEL_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent";
 const systemPrompt = "Tu es le Sage AYP. Ton ton est poétique, masculin et calme. Tu illustres tes réponses avec l'histoire de Kofi et sa rivière. Tu définis la Kundalini comme la conductivité extatique du système nerveux (Yogani).";
+
 async function demanderAuSage(message) {
 const affichage = document.getElementById('texte-parabole');
-affichage.innerHTML = "Le Sage médite au bord de l'eau...";
+affichage.innerHTML = "Le Sage médite...";
 try {
 const response = await fetch(${MODEL_URL}?key=${API_KEY}, {
 method: 'POST',
 headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({
-contents: [{ parts: [{ text: systemPrompt + "\n\nQuestion: " + message }] }]
-})
+body: JSON.stringify({ contents: [{ parts: [{ text: systemPrompt + "\n\nQuestion: " + message }] }] })
 });
 const data = await response.json();
 if (data.candidates && data.candidates[0].content) {
-const text = data.candidates[0].content.parts[0].text;
-affichage.innerHTML = text.replace(/\n/g, "
+affichage.innerHTML = data.candidates[0].content.parts[0].text.replace(/\n/g, "
 
 
 ");
 } else {
-affichage.innerHTML = "Le Sage est silencieux. Vérifiez la clé ou les crédits.";
+affichage.innerHTML = "La rivière est calme. (Vérifiez la clé).";
 }
-} catch (error) {
-affichage.innerHTML = "La rivière est agitée (Erreur de connexion).";
+} catch (e) {
+affichage.innerHTML = "Tempête sur la rivière.";
 }
 }
 
 document.getElementById('btn-sage').addEventListener('click', () => {
-const question = prompt("Quelle interrogation portez-vous aujourd'hui ?");
-if (question) demanderAuSage(question);
+const q = prompt("Votre question ?");
+if (q) demanderAuSage(q);
 });
 
 document.getElementById('btn-parabole').addEventListener('click', () => {
-demanderAuSage("Raconte-moi une courte parabole de Kofi sur la paix intérieure.");
+demanderAuSage("Raconte une courte parabole de Kofi.");
 });
-</script>
-
-</body>
-</html>  
-
 </script>
 
 </body>

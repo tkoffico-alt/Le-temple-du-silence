@@ -2,8 +2,8 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
   
-  // Appel du modèle 2.0 Flash qui est souvent la solution aux erreurs "not found"
-  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=" + apiKey;
+  // Utilisation du nom de modèle le plus compatible pour lever l'erreur de la Page 82
+  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=" + apiKey;
 
   try {
     const response = await fetch(url, {
@@ -23,6 +23,6 @@ export default async function handler(req, res) {
     const result = data.candidates[0].content.parts[0].text;
     res.status(200).json({ text: result });
   } catch (error) {
-    res.status(200).json({ text: "Le Sage cherche ses mots... (Erreur : " + error.message + ")" });
+    res.status(200).json({ text: "La connexion vacille... (Erreur : " + error.message + ")" });
   }
 }

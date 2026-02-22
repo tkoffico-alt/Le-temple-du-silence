@@ -2,8 +2,8 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
   
-  // Le sésame le plus pur : version stable v1 et modèle sans suffixe
-  const url = "https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=" + apiKey;
+  // Utilisation du nom de modèle complet et récent pour lever l'erreur de la Page 82
+  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-002:generateContent?key=" + apiKey;
 
   try {
     const response = await fetch(url, {
@@ -24,7 +24,7 @@ export default async function handler(req, res) {
       const result = data.candidates[0].content.parts[0].text;
       res.status(200).json({ text: result });
     } else {
-      res.status(200).json({ text: "Le Sage médite... Vérifiez si votre clé API est bien active sur Google Cloud." });
+      res.status(200).json({ text: "Le Sage médite... (Aucune réponse générée)" });
     }
 
   } catch (error) {

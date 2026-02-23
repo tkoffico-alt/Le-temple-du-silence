@@ -147,11 +147,16 @@
         <div class="card">
             
             <div id="sage" class="section active">
-                <h1>Le Temple du Silence</h1>
-                <p>Posez votre question à l'Instructeur...</p>
-                <button class="cta-button" onclick="askSage()">Interroger le Sage</button>
-                <div id="response-area">Présence simple, l'âme accueille.</div>
-            </div>
+    <h1>Le Temple du Silence</h1>
+    <p>Confiez votre interrogation à l'Instructeur...</p>
+    
+    <input type="text" id="user-question" placeholder="Votre question ici..." 
+           style="width: 80%; padding: 15px; border-radius: 10px; border: 1px solid var(--gold); background: rgba(255,255,255,0.1); color: white; margin-bottom: 20px; font-family: 'Georgia', serif;">
+    
+    <br>
+    <button class="cta-button" onclick="askSage()">Interroger le Sage</button>
+    <div id="response-area">Présence simple, l'âme accueille.</div>
+</div>
 
             <div id="parabole" class="section">
                 <h1>La Parabole</h1>
@@ -190,11 +195,13 @@
         }
 
         async function askSage() {
-            const responseDiv = document.getElementById('response-area');
-            responseDiv.innerHTML = "L'Instructeur AYP médite sur votre souffle...";
-            
-            // On restaure ici l'identité du Sage et ses connaissances en Yoga
-            const promptInstruction = "Tu es l'Instructeur AYP, expert en yoga et méditation profonde. Réponds avec une poésie concise et spirituelle à cette demande de guidance : ";
+        const questionInput = document.getElementById('user-question');
+        const userPrompt = questionInput.value || "Donne-moi une guidance générale."; 
+        
+        const responseDiv = document.getElementById('response-area');
+        responseDiv.innerHTML = "L'Instructeur AYP médite sur votre question...";
+        
+        const promptInstruction = "Tu es l'Instructeur AYP, expert en yoga. Réponds avec poésie à ceci : " + userPrompt;
 
             try {
                 const res = await fetch('/api/generate', {
@@ -211,4 +218,5 @@
     </script>
 </body>
 </html>
+
 

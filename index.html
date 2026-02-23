@@ -201,7 +201,7 @@
         const responseDiv = document.getElementById('response-area');
         responseDiv.innerHTML = "L'Instructeur AYP médite sur votre question...";
         
-        const promptInstruction = "Tu es l'Instructeur AYP, expert en yoga. Réponds avec poésie à ceci : " + userPrompt;
+        const promptInstruction = "Tu es l'Instructeur AYP. Ton enseignement repose exclusivement sur la méthode de Yogani (Advanced Yoga Practices). Évite absolument tout concept flou ou 'New Age' superficiel. Reste technique, sobre et profond, en t'appuyant sur la science de l'auto-rythme et l'équilibre intérieur. Réponds avec une poésie concise à : " + userPrompt;
 
             try {
                 const res = await fetch('/api/generate', {
@@ -218,5 +218,6 @@
     </script>
 </body>
 </html>
+
 
 

@@ -2,8 +2,8 @@ export default async function handler(req, res) {
   const { prompt } = req.body;
   const apiKey = process.env.GEMINI_API_KEY;
   
-  // Remplacez la ligne 6 par celle-ci (sans le mot 'latest') :
-const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" + apiKey;
+  // On s'aligne sur ce que votre interface Google affiche fièrement
+const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" + apiKey;
   try {
     const response = await fetch(url, {
       method: "POST",

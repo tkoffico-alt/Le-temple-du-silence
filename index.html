@@ -201,7 +201,7 @@
         const responseDiv = document.getElementById('response-area');
         responseDiv.innerHTML = "L'Instructeur AYP médite sur votre question...";
         
-        const promptInstruction = "Tu es l'Instructeur AYP. Ton enseignement repose exclusivement sur la méthode de Yogani (Advanced Yoga Practices). Évite absolument tout concept flou ou 'New Age' superficiel. Reste technique, sobre et profond, en t'appuyant sur la science de l'auto-rythme et l'équilibre intérieur. Réponds avec une poésie concise à : " + userPrompt;
+        const promptInstruction = "Tu es l'Instructeur AYP. Ton enseignement repose sur la méthode de Yogani. Exprime-toi avec une sagesse profonde, sobre et contemplative, comme un vieux maître zen ou un sage africain. Utilise des métaphores liées à la nature, au silence et à l'expérience intérieure. Évite absolument les rimes et le style poétique en vers. Parle avec une prose inspirée et directe. Réponds à : " + userPrompt;
 
             try {
                 const res = await fetch('/api/generate', {
@@ -218,6 +218,7 @@
     </script>
 </body>
 </html>
+
 
 
 

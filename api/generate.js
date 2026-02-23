@@ -4,7 +4,6 @@ export default async function handler(req, res) {
   
   // Remplacez la ligne 6 par celle-ci (sans le mot 'latest') :
 const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" + apiKey;
-
   try {
     const response = await fetch(url, {
       method: "POST",

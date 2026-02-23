@@ -1,111 +1,211 @@
 <!DOCTYPE html>
-
 <html lang="fr">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemin AYP - Le Temple du Silence</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-bg: #0f172a;
+            --accent-blue: #2563eb;
+        }
 
-<meta charset="UTF-8">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            color: #f0f0f0;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        /* Barre de Navigation style "Chemin AYP" */
+        nav {
+            background: rgba(15, 23, 42, 0.9);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--gold);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-<title>Le Temple du Silence</title>
+        .logo {
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
-<style>
+        .nav-links button {
+            background: transparent;
+            border: none;
+            color: #cbd5e1;
+            margin-left: 1.5rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
 
-body { font-family: sans-serif; background-color: #f4f7f6; color: #2c3e50; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .nav-links button:hover {
+            color: var(--gold);
+        }
 
-.container { max-width: 800px; width: 90%; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; }
+        .active-link {
+            border-bottom: 2px solid var(--gold) !important;
+            color: white !important;
+        }
 
-h1 { color: #2980b9; font-style: italic; }
+        /* Conteneur Principal */
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem 2rem;
+        }
 
-.btn-main { background-color: #3498db; color: white; border: none; padding: 15px 30px; margin: 10px; border-radius: 50px; cursor: pointer; font-size: 1.1rem; }
+        .card {
+            background: rgba(15, 23, 42, 0.85);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+        }
 
-#affichage-contenu { margin-top: 30px; min-height: 150px; font-size: 1.25rem; line-height: 1.8; text-align: left; border-top: 1px solid #eee; padding-top: 20px; }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            background: linear-gradient(to right, #fff, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-</style>
+        .section { display: none; }
+        .section.active { display: block; }
 
+        /* Style des boutons d'action */
+        .cta-button {
+            background: var(--accent-blue);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin: 20px 0;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background: #1d4ed8;
+        }
+
+        #response-area {
+            margin-top: 2rem;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #e2e8f0;
+            font-style: italic;
+        }
+
+        .media-placeholder {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px dashed var(--gold);
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <nav>
+        <div class="logo">CHEMIN AYP</div>
+        <div class="nav-links">
+            <button onclick="showSection('sage')" id="btn-sage" class="active-link">LE SAGE AYP</button>
+            <button onclick="showSection('parabole')" id="btn-parabole">LA PARABOLE</button>
+            <button onclick="showSection('podcasts')" id="btn-podcasts">PODCASTS & VIDÉOS</button>
+        </div>
+    </nav>
 
-<h1>Le Temple du Silence</h1>
+    <div class="main-container">
+        <div class="card">
+            
+            <div id="sage" class="section active">
+                <h1>Le Temple du Silence</h1>
+                <p>Posez votre question à l'Instructeur...</p>
+                <button class="cta-button" onclick="askSage()">Interroger le Sage</button>
+                <div id="response-area">Présence simple, l'âme accueille.</div>
+            </div>
 
-<div class="menu">
+            <div id="parabole" class="section">
+                <h1>La Parabole</h1>
+                <div id="text-content" style="text-align: left;">
+                    <p>"Kofi cherchait la paix Hors de lui..."</p>
+                    </div>
+            </div>
 
-<button id="btn-sage" class="btn-main">L'Instructeur AYP</button>
+            <div id="podcasts" class="section">
+                <h1>Méditations & Visions</h1>
+                <div class="media-placeholder">
+                    <p>🎙️ Podcast : Le Silence de la Rivière</p>
+                    <audio controls style="width: 100%;">
+                        <source src="votre-lien-audio.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="media-placeholder">
+                    <p>🎥 Vidéo : Pratiques Avancées</p>
+                    <div style="background: #000; height: 200px; display: flex; align-items: center; justify-content: center;">
+                        Contenu Vidéo à venir
+                    </div>
+                </div>
+            </div>
 
-<button id="btn-parabole" class="btn-main">Autres Paraboles</button>
+        </div>
+    </div>
 
-</div>
+    <script>
+        function showSection(id) {
+            // Cacher toutes les sections
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active-link'));
+            
+            // Afficher la section choisie
+            document.getElementById(id).classList.add('active');
+            document.getElementById('btn-' + id).classList.add('active-link');
+        }
 
-<div id="affichage-contenu">
-
-<p id="texte-parabole" style="text-align:center;">Kofi écoute le courant... Posez votre question.</p>
-
-</div>
-
-</div>
-
-<script>
-
-const MODEL_URL = "/api/generate";
-
-async function demanderAuSage(message) {
-
-const affichage = document.getElementById('texte-parabole');
-
-affichage.innerHTML = "Le Sage médite au bord de l'eau...";
-
-try {
-
-const response = await fetch(MODEL_URL, {
-
-method: 'POST',
-
-headers: { 'Content-Type': 'application/json' },
-
-body: JSON.stringify({ prompt: message })
-
-});
-
-const data = await response.json();
-
-if (data.text) {
-
-affichage.innerHTML = data.text;
-
-} else {
-
-affichage.innerHTML = "Le Sage attend que le pont soit terminé.";
-
-}
-
-} catch (e) {
-
-affichage.innerHTML = "La rivière est agitée. Vérifions le pont.";
-
-}
-
-}
-
-document.getElementById('btn-sage').onclick = function() {
-
-const q = prompt("Quelle est votre question pour le Sage ?");
-
-if (q) demanderAuSage(q);
-
-};
-
-document.getElementById('btn-parabole').onclick = function() {
-
-demanderAuSage("Raconte-moi une courte parabole de Kofi sur la paix intérieure.");
-
-};
-
-</script>
-
+        async function askSage() {
+            const responseDiv = document.getElementById('response-area');
+            responseDiv.innerHTML = "Le Sage médite sur votre souffle...";
+            
+            try {
+                const res = await fetch('/api/generate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ prompt: "Donne-moi une guidance courte." })
+                });
+                const data = await res.json();
+                responseDiv.innerHTML = data.text;
+            } catch (error) {
+                responseDiv.innerHTML = "Le lien est rompu : " + error.message;
+            }
+        }
+    </script>
 </body>
-
 </html>

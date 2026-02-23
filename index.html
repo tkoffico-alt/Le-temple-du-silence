@@ -181,24 +181,26 @@
 
     <script>
         function showSection(id) {
-            // Cacher toutes les sections
+            // Gère le passage entre Le Sage, La Parabole et les Podcasts
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
             document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active-link'));
             
-            // Afficher la section choisie
             document.getElementById(id).classList.add('active');
             document.getElementById('btn-' + id).classList.add('active-link');
         }
 
         async function askSage() {
             const responseDiv = document.getElementById('response-area');
-            responseDiv.innerHTML = "Le Sage médite sur votre souffle...";
+            responseDiv.innerHTML = "L'Instructeur AYP médite sur votre souffle...";
             
+            // On restaure ici l'identité du Sage et ses connaissances en Yoga
+            const promptInstruction = "Tu es l'Instructeur AYP, expert en yoga et méditation profonde. Réponds avec une poésie concise et spirituelle à cette demande de guidance : ";
+
             try {
                 const res = await fetch('/api/generate', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ prompt: "Donne-moi une guidance courte." })
+                    body: JSON.stringify({ prompt: promptInstruction })
                 });
                 const data = await res.json();
                 responseDiv.innerHTML = data.text;
@@ -209,3 +211,4 @@
     </script>
 </body>
 </html>
+

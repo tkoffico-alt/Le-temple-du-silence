@@ -3,7 +3,7 @@ export default async function handler(req, res) {
   const apiKey = process.env.GEMINI_API_KEY;
   
   // Utilisation de la version 'Lite', confirmée dans votre liste de modèles
-  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=" + apiKey;
+  const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=" + apiKey;
 
   try {
     const response = await fetch(url, {

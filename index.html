@@ -1,289 +1,104 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chemin AYP - Le Temple du Silence</title>
-    <style>
-        :root {
-            --gold: #d4af37;
-            --dark-bg: #0f172a;
-            --accent-blue: #2563eb;
-        }
+function showSection(sectionId) {
+    // Cache toutes les sections
+    document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+    });
+    // Affiche la section demandée
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.classList.add('active');
+    }
+    
+    // Met à jour l'état visuel des boutons de navigation
+    document.querySelectorAll('.nav-links button').forEach(btn => {
+        btn.classList.remove('active-link');
+    });
+    if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active-link');
+    }
+}
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Georgia', serif;
-            color: #f0f0f0;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            min-height: 100vh;
-        }
+function setLanguage(lang) {
+    if (lang === 'en') {
+        // --- Navigation ---
+        document.getElementById('btn-sage').textContent = "THE SAGE AYP";
+        document.getElementById('btn-parabole').textContent = "THE PARABLE";
+        document.getElementById('btn-podcasts').textContent = "PODCASTS & VIDEOS";
 
-        /* Barre de Navigation */
-        nav {
-            background: rgba(15, 23, 42, 0.9);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 2px solid var(--gold);
-        }
+        // --- Section Le Sage ---
+        document.querySelector('#sage h1').textContent = "The Temple of Silence";
+        document.querySelector('#sage p').textContent = "Entrust your inquiry to the Instructor...";
+        document.getElementById('user-question').placeholder = "Your question here...";
+        document.querySelector('.cta-button').textContent = "Ask the Sage";
+        document.getElementById('response-area').textContent = "Simple presence, the soul welcomes.";
 
-        .logo {
-            color: var(--gold);
-            font-weight: bold;
-            font-size: 1.5rem;
-            text-decoration: none;
-            letter-spacing: 2px;
-        }
+        // --- Section La Parabole (Titres et Audio) ---
+        document.getElementById('parable-main-title').textContent = "The Parable";
+        document.getElementById('parable-title').textContent = "Beyond the River";
+        document.getElementById('parable-subtitle').textContent = "A Parable on the Inner Call";
+        document.getElementById('audio-label').textContent = "Listen to the story...";
+        document.getElementById('audio-source').src = "parabole-en.mp3";
+        document.getElementById('audio-parabole').load();
+        document.getElementById('parable-footer').textContent = "Cross. Listen. Practice. The rest will follow.";
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
+        // --- Le Texte de la Parabole (Injection ciblée pour le Blanc) ---
+        document.getElementById('parable-body').innerHTML = `
+            There are places where no one dares to go anymore. Invisible borders, marked not by walls, but by ancient tales — tales of fear... <br><br>
+            In a remote village, in the heart of the savanna, lived a young man named Kofi. He had neither the stature of warriors nor the prestige of elders. But he carried within him a question that never left him: what is there beyond what we think we know? <br><br>
+            One day, this question took shape. The chief's daughter, Adwoa, was struck by a mysterious illness. The healer pointed to a forgotten remedy: a rare plant, hidden deep in the forest, on the other side of the sacred river. <br><br>
+            The chief promised wealth and honors. The bravest stepped back. Fear was stronger than gold. All refused. All, except Kofi. He asked for nothing. What he heard within him was that profound silence that simply says: advance.
+        `;
 
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
+        // --- Pied de page ---
+        document.querySelector('footer p').textContent = "OWNERSHIP & LINEAGE";
 
-        .nav-links a:hover {
-            color: var(--gold);
-        }
+    } else {
+        // --- Navigation (Français) ---
+        document.getElementById('btn-sage').textContent = "LE SAGE AYP";
+        document.getElementById('btn-parabole').textContent = "LA PARABOLE";
+        document.getElementById('btn-podcasts').textContent = "PODCASTS & VIDÉOS";
 
-        .lang-switch {
-            display: flex;
-            gap: 0.5rem;
-        }
+        // --- Section Le Sage ---
+        document.querySelector('#sage h1').textContent = "Le Temple du Silence";
+        document.querySelector('#sage p').textContent = "Confiez votre interrogation à l'Instructeur...";
+        document.getElementById('user-question').placeholder = "Votre question ici...";
+        document.querySelector('.cta-button').textContent = "Interroger le Sage";
+        document.getElementById('response-area').textContent = "Simple présence, l'âme accueille.";
 
-        .btn-lang {
-            background: transparent;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            padding: 0.3rem 0.8rem;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
+        // --- Section La Parabole (Titres et Audio) ---
+        document.getElementById('parable-main-title').textContent = "La Parabole";
+        document.getElementById('parable-title').textContent = "Au-delà de la Rive";
+        document.getElementById('parable-subtitle').textContent = "Une Parabole sur l'Appel Intérieur";
+        document.getElementById('audio-label').textContent = "Écouter le récit...";
+        document.getElementById('audio-source').src = "parabole-fr.mp3";
+        document.getElementById('audio-parabole').load();
+        document.getElementById('parable-footer').textContent = "Traversez. Écoutez. Pratiquez. Le reste suivra.";
 
-        .btn-lang:hover {
-            background: var(--gold);
-            color: var(--dark-bg);
-        }
-
-        /* Sections */
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: rgba(15, 23, 42, 0.85);
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
-            text-align: center;
-        }
-
-        h1 { color: var(--gold); margin-bottom: 1.5rem; }
-        
-        /* Règle CSS ajoutée pour la blancheur du texte de la parabole */
-        #parabole p {
-            color: #ffffff !important;
-            line-height: 1.8;
-            font-size: 1.1rem;
-            text-align: justify;
-            margin-top: 2rem;
-        }
-
-        textarea {
-            width: 100%;
-            padding: 1rem;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid var(--gold);
-            color: white;
-            border-radius: 8px;
-            margin: 1rem 0;
-            height: 120px;
-        }
-
-        .cta-button {
-            background: var(--accent-blue);
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 1.1rem;
-            transition: transform 0.2s;
-        }
-
-        .cta-button:hover { transform: scale(1.05); }
-
-        .response-area {
-            margin-top: 2rem;
-            font-style: italic;
-            color: #ccc;
-        }
-
-        audio {
-            width: 100%;
-            margin: 1.5rem 0;
-            filter: sepia(20%) hue-rotate(10deg);
-        }
-
-        footer {
-            margin-top: 4rem;
-            padding: 2rem;
-            border-top: 1px solid var(--gold);
-            text-align: center;
-            color: var(--gold);
-            font-size: 0.8rem;
-            letter-spacing: 3px;
-        }
-
-        #visitor-count {
-            font-family: 'Courier New', monospace;
-            font-size: 1.2rem;
-            color: var(--gold);
-            border: 1px solid var(--gold);
-            padding: 0.5rem 1rem;
-            display: inline-block;
-            margin-top: 1rem;
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <a href="#" class="logo">CHEMIN AYP</a>
-        <div class="nav-links">
-            <a href="#sage" id="btn-sage">LE SAGE AYP</a>
-            <a href="#parabole" id="btn-parabole">LA PARABOLE</a>
-            <a href="#podcasts" id="btn-podcasts">PODCASTS & VIDÉOS</a>
-            <div class="lang-switch">
-                <button class="btn-lang" onclick="setLanguage('fr')">FR</button>
-                <button class="btn-lang" onclick="setLanguage('en')">EN</button>
-            </div>
-        </div>
-    </nav>
-
-    <div id="sage" class="container">
-        <h1>Le Temple du Silence</h1>
-        <p>Confiez votre interrogation à l'Instructeur...</p>
-        <textarea id="user-question" placeholder="Votre question ici..."></textarea>
-        <button class="cta-button">Interroger le Sage</button>
-        <div id="response-area" class="response-area">Présence simple, l'âme accueille.</div>
-    </div>
-
-    <div id="parabole" class="container">
-        <h1 id="parable-h1">Au-delà de la Rive : Une Parabole sur l'Appel Intérieur</h1>
-        <h3 id="parable-title" style="color: var(--gold);">Au-delà de la Rive</h3>
-        <p id="parable-subtitle" style="color: #aaa; font-style: italic;">Une Parabole sur l'Appel Intérieur</p>
-        
-        <p id="audio-label" style="color: var(--gold); margin-bottom: 0.5rem;">Écouter le récit...</p>
-        <audio id="audio-parabole" controls>
-            <source id="audio-source" src="parabole-fr.mp3" type="audio/mpeg">
-        </audio>
-
-        <p id="parable-footer" style="color: var(--gold); font-weight: bold; margin-bottom: 2rem;">Traversez. Écoutez. Pratiquez. Le reste suivra.</p>
-
-        <p>
+        // --- Le Texte de la Parabole (Injection ciblée pour le Blanc) ---
+        document.getElementById('parable-body').innerHTML = `
             Il est des lieux où plus personne n'ose s'aventurer. Des frontières invisibles, marquées non par des murs, mais par des récits anciens — des récits de peur. <br><br>
             Dans un village reculé, au cœur de la savane, vivait un jeune homme nommé Kofi. Il n'avait ni la stature des guerriers ni le prestige des anciens. Mais il portait en lui une question qui ne le quittait jamais : qu'y a-t-il au-delà de ce que nous pensons savoir ? <br><br>
-            Un jour, cette question prit corps. La fille du chef, Adwoa, fut frappée d'un mal mystérieux. Le guérisseur indiqua un remède oublié : une plante rare, cachée au fond de la forêt, de l'autre côté de la rivière sacrée. Mais cette forêt, disaient les anciens, était hantée. Un territoire d'esprits dévoreurs d'âmes, qu'aucun homme sage ne traverserait. <br><br>
-            Le chef promit richesses et honneurs. Les plus braves reculèrent. La peur était plus forte que l'or. Tous refusèrent. Tous, sauf Kofi. Il ne demanda rien. Ce qu'il entendait en lui, c'était ce silence profond qui dit simplement : avance. <br><br>
-            Il prit une gourde d'eau et marcha vers la rivière. Là, il s'arrêta. À ses yeux, l'eau était claire, mais elle était autre chose : une frontière symbolique. La limite entre le connu et l'inconnu. Il ferma les yeux pour écouter plus profondément que ses propres pensées. Puis, il traversa. <br><br>
-            De l'autre côté, la forêt l'enveloppa. Mais il ne trouva ni esprits ni cris. Seulement une présence. La terre sous ses pieds était dense, vibrante. Ce qu'il avait cru être un territoire d'ombres était, en réalité, un sanctuaire oublié. <br><br>
-            Au cœur de cette paix, Kofi rencontra un vieil homme assis au pied d'un arbre immense. "Pourquoi viens-tu, marcheur ?" demanda-t-il. Kofi raconta son histoire. Le sage écouta, puis pointa une plante discrète : "Voici ce que tu cherches. Mais souviens-toi : ce n'est pas la forêt qui dévore les âmes. Ce sont les désirs non maîtrisés des hommes."
-        </p>
-    </div>
+            Un jour, cette question prit corps. La fille du chef, Adwoa, fut frappée d'un mal mystérieux. Le guérisseur indiqua un remède oublié : une plante rare, cachée au fond de la forêt, de l'autre côté de la rivière sacrée. <br><br>
+            Le chef promit richesses et honneurs. Les plus braves reculèrent. La peur était plus forte que l'or. Tous refusèrent. Tous, sauf Kofi. Il ne demanda rien. Ce qu'il entendait en lui, c'était ce silence profond qui dit simplement : avance.
+        `;
 
-    <footer>
-        <p>PROPRIÉTÉ & LIGNÉE</p>
-        <div id="visitor-count">
-            Âmes de passage : <span id="count">0000</span>
-        </div>
-    </footer>
+        // --- Pied de page ---
+        document.querySelector('footer p').textContent = "PROPRIÉTÉ & LIGNÉE";
+    }
+}
 
-    <script>
-        function setLanguage(lang) {
-            if (lang === 'en') {
-                document.getElementById('btn-sage').textContent = "THE SAGE AYP";
-                document.getElementById('btn-parabole').textContent = "THE PARABLE";
-                document.getElementById('btn-podcasts').textContent = "PODCASTS & VIDEOS";
-                document.querySelector('#sage h1').textContent = "The Temple of Silence";
-                document.querySelector('#sage p').textContent = "Entrust your inquiry to the Instructor...";
-                document.getElementById('user-question').placeholder = "Your question here...";
-                document.querySelector('.cta-button').textContent = "Ask the Sage";
-                document.getElementById('response-area').textContent = "Simple presence, the soul welcomes.";
+function updateCounter() {
+    const countElement = document.getElementById('count-value');
+    if (countElement) {
+        let count = localStorage.getItem('visitCount') || 0;
+        count++;
+        localStorage.setItem('visitCount', count);
+        countElement.textContent = count;
+    }
+}
 
-                document.getElementById('parable-h1').textContent = "Beyond the River: A Parable on the Inner Call";
-                document.getElementById('parable-title').textContent = "Beyond the River";
-                document.getElementById('parable-subtitle').textContent = "A Parable on the Inner Call";
-                document.getElementById('audio-label').textContent = "Listen to the story...";
-                document.getElementById('audio-source').src = "parabole-en.mp3";
-                document.getElementById('audio-parabole').load();
-                document.getElementById('parable-footer').textContent = "Cross. Listen. Practice. The rest will follow.";
-
-                document.querySelector('#parabole p:last-of-type').innerHTML = `
-                    There are places where no one dares to go anymore. Invisible borders, marked not by walls, but by ancient tales — tales of fear... <br><br>
-                    In a remote village, in the heart of the savanna, lived a young man named Kofi. He had neither the stature of warriors nor the prestige of elders. But he carried within him a question that never left him: what is there beyond what we think we know? <br><br>
-                    One day, this question took shape. The chief's daughter, Adwoa, was struck by a mysterious illness. The healer pointed to a forgotten remedy: a rare plant, hidden deep in the forest, on the other side of the sacred river. But this forest, the elders said, was haunted. A territory of soul-devouring spirits, that no wise man would cross. <br><br>
-                    The chief promised wealth and honors. The bravest stepped back. Fear was stronger than gold. All refused. All, except Kofi. He asked for nothing. What he heard within him was this profound silence that simply said: advance. <br><br>
-                    He took a gourd of water and walked toward the river. There, he stopped. To his eyes, the water was clear, but it was something else: a symbolic border. The limit between the known and the unknown. He closed his eyes to listen more deeply than his own thoughts. Then, he crossed. <br><br>
-                    On the other side, the forest enveloped him. But he found neither spirits nor cries. Only a presence. The earth beneath his feet was dense, vibrant. What he had thought was a territory of shadows was, in reality, a forgotten sanctuary. <br><br>
-                    At the heart of this peace, Kofi met an old man sitting at the foot of an immense tree. "Why do you come, walker?" he asked. Kofi told his story. The sage listened, then pointed to a discreet plant: "Here is what you seek. But remember: it is not the forest that devours souls. It is the unmastered desires of men."
-                `;
-                document.querySelector('footer p').textContent = "OWNERSHIP & LINEAGE";
-            } else {
-                document.getElementById('btn-sage').textContent = "LE SAGE AYP";
-                document.getElementById('btn-parabole').textContent = "LA PARABOLE";
-                document.getElementById('btn-podcasts').textContent = "PODCASTS & VIDÉOS";
-                document.querySelector('#sage h1').textContent = "Le Temple du Silence";
-                document.querySelector('#sage p').textContent = "Confiez votre interrogation à l'Instructeur...";
-                document.getElementById('user-question').placeholder = "Votre question ici...";
-                document.querySelector('.cta-button').textContent = "Interroger le Sage";
-                document.getElementById('response-area').textContent = "Présence simple, l'âme accueille.";
-
-                document.getElementById('parable-h1').textContent = "Au-delà de la Rive : Une Parabole sur l'Appel Intérieur";
-                document.getElementById('parable-title').textContent = "Au-delà de la Rive";
-                document.getElementById('parable-subtitle').textContent = "Une Parabole sur l'Appel Intérieur";
-                document.getElementById('audio-label').textContent = "Écouter le récit...";
-                document.getElementById('audio-source').src = "parabole-fr.mp3";
-                document.getElementById('audio-parabole').load();
-                document.getElementById('parable-footer').textContent = "Traversez. Écoutez. Pratiquez. Le reste suivra.";
-
-                document.querySelector('#parabole p:last-of-type').innerHTML = `
-                    Il est des lieux où plus personne n'ose s'aventurer. Des frontières invisibles, marquées non par des murs, mais par des récits anciens — des récits de peur. <br><br>
-                    Dans un village reculé, au cœur de la savane, vivait un jeune homme nommé Kofi. Il n'avait ni la stature des guerriers ni le prestige des anciens. Mais il portait en lui une question qui ne le quittait jamais : qu'y a-t-il au-delà de ce que nous pensons savoir ? <br><br>
-                    Un jour, cette question prit corps. La fille du chef, Adwoa, fut frappée d'un mal mystérieux. Le guérisseur indiqua un remède oublié : une plante rare, cachée au fond de la forêt, de l'autre côté de la rivière sacrée. Mais cette forêt, disaient les anciens, était hantée. Un territoire d'esprits dévoreurs d'âmes, qu'aucun homme sage ne traverserait. <br><br>
-                    Le chef promit richesses et honneurs. Les plus braves reculèrent. La peur était plus forte que l'or. Tous refusèrent. Tous, sauf Kofi. Il ne demanda rien. Ce qu'il entendait en lui, c'était ce silence profond qui dit simplement : avance. <br><br>
-                    Il prit une gourde d'eau et marcha vers la rivière. Là, il s'arrêta. À ses yeux, l'eau était claire, mais elle était autre chose : une frontière symbolique. La limite entre le connu et l'inconnu. Il ferma les yeux pour écouter plus profondément que ses propres pensées. Puis, il traversa. <br><br>
-                    De l'autre côté, la forêt l'enveloppa. Mais il ne trouva ni esprits ni cris. Seulement une présence. La terre sous ses pieds était dense, vibrante. Ce qu'il avait cru être un territoire d'ombres était, en réalité, un sanctuaire oublié. <br><br>
-                    Au cœur de cette paix, Kofi rencontra un vieil homme assis au pied d'un arbre immense. "Pourquoi viens-tu, marcheur ?" demanda-t-il. Kofi raconta son histoire. Le sage écouta, puis pointa une plante discrète : "Voici ce que tu cherches. Mais souviens-toi : ce n'est pas la forêt qui dévore les âmes. Ce sont les désirs non maîtrisés des hommes."
-                `;
-                document.querySelector('footer p').textContent = "PROPRIÉTÉ & LIGNÉE";
-            }
-        }
-
-        function updateCounter() {
-            let visits = localStorage.getItem('temple_visits') || 0;
-            visits = parseInt(visits) + 1;
-            localStorage.setItem('temple_visits', visits);
-            document.getElementById('count').textContent = visits.toString().padStart(4, '0');
-        }
-
-        window.onload = updateCounter;
-    </script>
-</body>
-</html>
+// Initialisation au chargement de la page
+window.onload = function() {
+    updateCounter();
+    showSection('sage'); // Affiche la page du Sage par défaut
+};

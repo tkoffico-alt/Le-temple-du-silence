@@ -109,6 +109,15 @@
             margin-top: 20px;
             border: 1px dashed var(--gold);
         }
+        @media (max-width: 600px) {
+    footer div {
+        gap: 15px !important; /* Donne plus d'air entre les éléments sur petit écran */
+    }
+    #visit-counter {
+        font-size: 0.6rem !important; /* Réduit légèrement le compteur pour le mobile */
+    }
+            footer img { width: 180px !important; }
+}
     </style>
 </head>
 <body>
@@ -139,7 +148,12 @@
 
             <div id="parabole" class="section">
                 <h1 id="parable-main-title">La Parabole</h1>
-                <div id="text-content" style="text-align: justify; line-height: 1.8;">
+                <div class="audio-container" style="text-align: center; margin-bottom: 20px;">
+    <p id="audio-label" style="font-style: italic; font-size: 0.9rem; color: var(--gold);">Écouter le récit...</p>
+    <audio id="audio-parabole" controls style="width: 100%; max-width: 400px; filter: sepia(1);">
+        <source id="audio-source" src="parabole-fr.mp3" type="audio/mpeg">
+    </audio>
+</div>
                     <h2 id="parable-title" style="color: var(--gold); text-align: center;">Au-delà de la Rivière</h2>
                     <p id="parable-subtitle" style="text-align: center; font-size: 0.9rem; margin-bottom: 2rem; color: #cbd5e1;">Une Parabole sur l’Appel Intérieur</p>
                     
@@ -168,6 +182,9 @@
     <footer style="margin-top: 50px; padding: 40px 0; text-align: center; border-top: 1px solid rgba(212, 175, 55, 0.1);">
     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
         <img src="signature-ayp.png" alt="Sceau et Logo AYP" style="width: 250px; height: auto; filter: drop-shadow(0 0 10px rgba(214, 175, 55, 0.3));">
+        <div id="visit-counter" style="color: var(--gold); font-size: 0.7rem; letter-spacing: 3px; opacity: 0.5; margin-bottom: 5px;">
+    PASSANTS : <span id="count">0000</span>
+</div>
         <p style="color: var(--gold); font-size: 0.8rem; letter-spacing: 2px; opacity: 0.7;">PROPRIÉTÉ & LIGNÉE</p>
     </div>
 </footer>
@@ -198,7 +215,11 @@ function setLanguage(lang) {
         // Traduction de la Parabole (Texte intégral de Kofi)
         document.querySelector('#parabole h1').textContent = "Beyond the River: A Parable on the Inner Call";
         document.querySelector('#parabole p').innerHTML = `There are places where no one dares to go anymore. Invisible borders, marked not by walls, but by ancient tales—tales of fear.<br><br>In a remote village, in the heart of the savannah, lived a young man named Kofi. He had neither the stature of warriors nor the prestige of the elders. But he carried within him a question that never left him: what lies beyond what we think we know?<br><br>One day, this question took form. The chief’s daughter, Adwoa, was struck by a mysterious illness. Prayers and remedies were of no avail. The healer consulted the oracles, who pointed to a forgotten cure: a rare plant, hidden deep in the forest, on the other side of the sacred river. But this forest, the elders said, was haunted. A territory of soul-devouring spirits, which no wise man would cross.<br><br>The chief promised riches and honors to anyone who would dare to venture there. The bravest drew back. Fear, nourished by stories, was stronger than the promise of gold. All refused. All, except Kofi. He asked for nothing. Neither glory nor reward. What he heard within him was that profound silence, which does not bargain, but simply says: advance.<br><br>He took a gourd of water, an amulet given by his mother, and walked toward the river. There, he stopped. To his eyes, the water was clear, but it was something else: a symbolic border. The limit between the known and the unknown. He closed his eyes. Not to flee, but to listen deeper than his own thoughts. Then, he crossed.<br><br>On the other side, the forest enveloped him. But he found neither spirits nor screams. Only a presence. The earth beneath his feet was dense, vibrant. The wind sang through the leaves. What was supposed to be a territory of shadows was, in reality, a forgotten sanctuary.<br><br>At the heart of this peace, Kofi met an old man sitting at the foot of an immense tree. "Why do you come, walker?" he asked. Kofi told his story. The sage listened, then pointed to a discreet plant: "Here is what you seek. But remember: it is not the forest that devours souls. It is the unmastered desires of men."<br><br>Kofi took the plant, gave thanks, and left. When he crossed the river again, Adwoa was healed. On that day, the village received a simple truth: <strong>"Ears hear the fears of others, but only the eyes of the heart see the truth."</strong><br><br>Cross. Listen. Practice. The rest will follow.`;
-        
+
+        // Mise à jour de l'audio pour l'Anglais
+document.getElementById('audio-label').textContent = "Listen to the story...";
+document.getElementById('audio-source').src = "parabole-en.mp3";
+document.getElementById('audio-parabole').load();
         // Traduction du Footer
         document.querySelector('footer p').textContent = "OWNERSHIP & LINEAGE";
     } else {
@@ -223,9 +244,22 @@ function setLanguage(lang) {
             Kofi prit la plante, rendit grâce et repartit. Adwoa fut guérie. Ce jour-là, le village reçut une vérité simple :<br>
             <strong>"Les oreilles entendent les peurs des autres, mais seuls les yeux du cœur voient la vérité."</strong><br><br>
             Chacun de nous est appelé à s'approcher de cette rivière intérieure. À traverser la frontière des peurs héritées. La forêt n'a jamais été dangereuse. Ce sont nos histoires qui l'ont rendue hostile. Ce que nous cherchons est déjà en nous.<br><br>
+            // Mise à jour de l'audio pour le Français
+document.getElementById('audio-label').textContent = "Écouter le récit...";
+document.getElementById('audio-source').src = "parabole-fr.mp3";
+document.getElementById('audio-parabole').load();
             Traversez. Écoutez. Pratiquez. Le reste suivra.`;
         
         document.querySelector('footer p').textContent = "PROPRIÉTÉ & LIGNÉE";
     }
+    // Fonction pour compter les âmes de passage
+function updateCounter() {
+    let visits = localStorage.getItem('temple_visits') || 0;
+    visits = parseInt(visits) + 1;
+    localStorage.setItem('temple_visits', visits);
+    document.getElementById('count').textContent = visits.toString().padStart(4, '0');
+}
+updateCounter();
 }
 </script>
+

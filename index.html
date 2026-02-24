@@ -185,16 +185,39 @@ function showSection(id) {
 // INTELLIGENCE BILINGUE
 function setLanguage(lang) {
     if(lang === 'en') {
+        // Textes du Sage
         document.querySelector('h1').textContent = "The Temple of Silence";
         document.querySelector('#sage p').textContent = "Entrust your inquiry to the Instructor...";
         document.getElementById('user-question').placeholder = "Your question here...";
         document.querySelector('.cta-button').textContent = "Ask the Sage";
+        
+        // La Parabole (Texte Officiel)
+        document.querySelector('#parabole h1').textContent = "Beyond the River: The Awakening (Part II)";
+        document.querySelector('#parabole p').innerHTML = `
+            He took a gourd of water, an amulet given by his mother, and walked toward the river. There, he stopped. To his eyes, the water was clear, but it was something else: a symbolic border. The limit between the known and the unknown.<br><br>
+            He closed his eyes. Not to flee, but to listen deeper than his own thoughts. Then, he crossed. On the other side, the forest enveloped him. But he found neither spirits nor screams. Only a presence. The earth beneath his feet was dense, vibrant. The wind sang through the leaves. What was supposed to be a territory of shadows was, in reality, a forgotten sanctuary.<br><br>
+            At the heart of this peace, Kofi met an old man sitting at the foot of an immense tree. His skin seemed sculpted by time. His eyes carried the light of cloudless nights.<br><br>
+            "Why do you come, walker?" he asked.<br>
+            Kofi told his story. The sage listened, then pointed to a discreet plant at his feet: "Here is what you seek. But remember: it is not the forest that devours souls. It is the unmastered desires of men. The elders sowed tales of fear to protect this sacred place from greed. But those who come with a pure heart find nothing here but what they already carry within them."<br><br>
+            Kofi took the plant, gave thanks, and left. When he crossed the river again, a thick silence fell upon the village. Adwoa was healed. The elders, with fleeting glances, understood what they had forgotten.<br><br>
+            On that day, the village received a simple truth, passed from mouth to mouth, but whose understanding belongs only to those who dare to live it:<br>
+            <strong>"Ears hear the fears of others, but only the eyes of the heart see the truth."</strong><br><br>
+            Each of us is called, one day or another, to approach this inner river. To cross the border of inherited fears. To enter this forest which, behind the shadows projected by our mind, hides a space of unalterable peace.<br><br>
+            The true initiation begins there. The forest was never dangerous. It is our stories that made it hostile. What we seek is not elsewhere. It has always been within us, but veiled by the turmoil of our desires and resistances.<br><br>
+            Cross. Listen. Practice. The rest will follow.`;
+        
+        // Pied de page
         document.querySelector('footer p').textContent = "OWNERSHIP & LINEAGE";
     } else {
+        // Retour au Français (Assurez-vous que votre texte FR est aussi complet ici)
         document.querySelector('h1').textContent = "Le Temple du Silence";
         document.querySelector('#sage p').textContent = "Confiez votre interrogation à l'Instructeur...";
         document.getElementById('user-question').placeholder = "Votre question ici...";
         document.querySelector('.cta-button').textContent = "Interroger le Sage";
+        
+        document.querySelector('#parabole h1').textContent = "Au-delà de la Rive : L'Éveil (Partie II)";
+        document.querySelector('#parabole p').innerHTML = "Le texte français de Kofi ici...";
+        
         document.querySelector('footer p').textContent = "PROPRIÉTÉ & LIGNÉE";
     }
 }
@@ -204,3 +227,4 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.onclick = () => setLanguage(btn.textContent.toLowerCase());
 });
 </script>
+

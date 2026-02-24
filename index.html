@@ -33,8 +33,11 @@
         }
         h1, h2 { color: #d4af37; }
         #parable-body { text-align: justify; line-height: 1.8; font-size: 1.1rem; }
-        .logos-area { margin: 30px 0; }
-        .logos-area img { width: 60px; margin: 0 15px; filter: drop-shadow(0 0 5px #d4af37); }
+        
+        /* Zone Signature Unique */
+        .signature-area { margin: 30px 0; }
+        .signature-area img { width: 150px; filter: drop-shadow(0 0 5px #d4af37); }
+        
         footer { margin-top: 50px; padding: 30px; color: #d4af37; font-size: 0.9rem; letter-spacing: 2px; }
     </style>
 </head>
@@ -72,9 +75,8 @@
         <div id="pod-content" style="text-align:left; line-height:2; font-size:1.1rem;"></div>
     </div>
 
-    <div class="logos-area">
-        <img src="logo-meditant.png" alt="Sceau du Méditant">
-        <img src="logo-om.png" alt="Sceau Om">
+    <div class="signature-area">
+        <img src="signature-ayp.png" alt="Signature AYP">
     </div>
 
     <footer>
@@ -98,7 +100,7 @@
         document.getElementById('sage-sub').textContent = isEn ? "Entrust your question to the Instructor..." : "Confiez votre interrogation à l'Instructeur...";
         document.getElementById('sage-btn').textContent = isEn ? "ASK THE SAGE" : "INTERROGER";
         
-        const frText = `Il y a des lieux où personne n’ose plus aller... Dans un village reculé, vivez un jeune homme nommé Kofi. Il portait en lui une question : que se cache-t-il au-delà de ce que l’on croit savoir ? <br><br> Un jour, la fille du chef fut frappée d’un mal mystérieux. Seul Kofi osa traverser la rivière sacrée vers la forêt interdite. Là-bas, il trouva un sage qui lui remit la plante guérisseuse en disant : "Ce n’est pas la forêt qui dévore les âmes, ce sont les désirs non maîtrisés." <br><br> Kofi guérit la jeune fille, et le village comprit : "Les oreilles entendent les peurs des autres, mais seuls les yeux du cœur voient la vérité."`;
+        const frText = `Il y a des lieux où personne n’ose plus aller... Dans un village reculé, au cœur de la savane, vivait un jeune homme nommé Kofi. Il portait en lui une question qui ne le quittait jamais : que se cache-t-il au-delà de ce que l’on croit savoir ? <br><br> Un jour, la fille du chef fut frappée d’un mal mystérieux. Seul Kofi osa traverser la rivière sacrée vers la forêt interdite. Là-bas, il trouva un sage qui lui remit la plante guérisseuse en disant : "Ce n’est pas la forêt qui dévore les âmes, ce sont les désirs non maîtrisés." <br><br> Kofi guérit la jeune fille, et le village comprit : "Les oreilles entendent les peurs des autres, mais seuls les yeux du cœur voient la vérité."`;
         
         const enText = `There are places where no one dares to go anymore... In a remote village lived a young man named Kofi. He carried a question: what lies beyond what we think we know? <br><br> One day, the chief's daughter fell ill. Only Kofi dared cross the sacred river into the forbidden forest. There, he met a sage who gave him the cure, saying: "It is not the forest that devours souls, but uncontrolled desires." <br><br> Kofi healed the girl, and the village learned: "Ears hear the fears of others, but only the eyes of the heart see the truth."`;
 

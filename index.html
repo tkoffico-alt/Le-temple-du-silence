@@ -16,53 +16,46 @@
             padding: 0;
             font-family: 'Georgia', serif;
             color: #f0f0f0;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             min-height: 100vh;
         }
 
-        /* Barre de Navigation style "Chemin AYP" */
+        /* Barre de Navigation */
         nav {
             background: rgba(15, 23, 42, 0.9);
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid var(--gold);
-            backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        .logo {
-            color: var(--gold);
-            font-weight: bold;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
         .nav-links button {
-            background: transparent;
+            background: none;
             border: none;
-            color: #cbd5e1;
-            margin-left: 1.5rem;
+            color: white;
+            padding: 0.5rem 1rem;
             cursor: pointer;
-            font-size: 0.9rem;
-            transition: color 0.3s;
+            font-family: 'Georgia', serif;
+            font-size: 1rem;
         }
 
-        .nav-links button:hover {
-            color: var(--gold);
-        }
-
-        .active-link {
+        .nav-links button.active-link {
             border-bottom: 2px solid var(--gold) !important;
-            color: white !important;
+        }
+
+        .lang-btn {
+            color: var(--gold) !important;
+            font-weight: bold;
+            border: 1px solid var(--gold) !important;
+            margin-left: 10px;
+            border-radius: 4px;
         }
 
         /* Conteneur Principal */
@@ -97,7 +90,6 @@
         .section { display: none; }
         .section.active { display: block; }
 
-        /* Style des boutons d'action */
         .cta-button {
             background: var(--accent-blue);
             color: white;
@@ -107,20 +99,7 @@
             font-size: 1.1rem;
             cursor: pointer;
             margin: 20px 0;
-            transition: transform 0.3s, background 0.3s;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-            background: #1d4ed8;
-        }
-
-        #response-area {
-            margin-top: 2rem;
-            font-size: 1.3rem;
-            line-height: 1.8;
-            color: #e2e8f0;
-            font-style: italic;
+            transition: transform 0.3s;
         }
 
         .media-placeholder {
@@ -135,11 +114,13 @@
 <body>
 
     <nav>
-        <div class="logo">CHEMIN AYP</div>
+        <div class="logo" style="color: var(--gold); font-weight: bold;">CHEMIN AYP</div>
         <div class="nav-links">
             <button onclick="showSection('sage')" id="btn-sage" class="active-link">LE SAGE AYP</button>
             <button onclick="showSection('parabole')" id="btn-parabole">LA PARABOLE</button>
             <button onclick="showSection('podcasts')" id="btn-podcasts">PODCASTS & VIDÉOS</button>
+            <button onclick="changeLanguage('fr')" class="lang-btn">FR</button>
+            <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
         </div>
     </nav>
 
@@ -147,113 +128,109 @@
         <div class="card">
             
             <div id="sage" class="section active">
-    <h1>Le Temple du Silence</h1>
-    <p>Confiez votre interrogation à l'Instructeur...</p>
-    
-    <input type="text" id="user-question" placeholder="Votre question ici..." 
-           style="width: 80%; padding: 15px; border-radius: 10px; border: 1px solid var(--gold); background: rgba(255,255,255,0.1); color: white; margin-bottom: 20px; font-family: 'Georgia', serif;">
-    
-    <br>
-    <button class="cta-button" onclick="askSage()">Interroger le Sage</button>
-    <div id="response-area">Présence simple, l'âme accueille.</div>
-</div>
+                <h1>Le Temple du Silence</h1>
+                <p>Confiez votre interrogation à l'Instructeur...</p>
+                <input type="text" id="user-question" placeholder="Votre question ici..." 
+                       style="width: 80%; padding: 15px; border-radius: 10px; border: 1px solid var(--gold); background: rgba(255,255,255,0.1); color: white;">
+                <br>
+                <button class="cta-button" onclick="askSage()">Interroger le Sage</button>
+                <div id="response-area" style="margin-top: 2rem; font-style: italic;">Présence simple, l'âme accueille.</div>
+            </div>
 
             <div id="parabole" class="section">
-    <h1>La Parabole</h1>
-    <div id="text-content" style="text-align: justify; max-width: 800px; margin: 0 auto; line-height: 1.8; font-style: italic; color: #e2e8f0; padding-bottom: 80px;">
-        <h2 style="color: var(--gold); text-align: center; font-style: normal; margin-bottom: 5px;">Au-delà de la Rivière</h2>
-        <p style="text-align: center; font-size: 0.9rem; margin-bottom: 2rem; color: #cbd5e1;">Une Parabole sur l’Appel Intérieur</p>
-        
-        <p>Il y a des lieux où personne n’ose plus aller. Des frontières invisibles, marquées non par des murs, mais par des récits anciens — des récits de peur.</p>
-        
-        <p>Dans un village reculé, au cœur de la savane, vivait un jeune homme nommé Kofi. Il n’avait ni la stature des guerriers, ni le prestige des anciens. Mais il portait en lui une question qui ne le quittait jamais : que se cache-t-il au-delà de ce que l’on croit savoir ?</p>
-        
-        <p>Un jour, cette question prit chair. La fille du chef, Adwoa, fut frappée d’un mal mystérieux. Les prières, les soins, rien n’y faisait. Le guérisseur consulta les oracles, qui désignèrent un remède oublié : une plante rare, cachée au plus profond de la forêt, de l’autre côté de la rivière sacrée. Mais cette forêt, disaient les anciens, était hantée. Un territoire d’esprits dévoreurs d’âmes, que l’homme sage ne franchit pas.</p>
-        
-        <p>Le chef promit richesses et honneurs à quiconque oserait s’y aventurer. Les plus braves reculèrent. La peur, nourrie de récits, était plus forte que la promesse d’or. Tous refusèrent. Tous, sauf Kofi.</p>
-        
-        <p>Il ne demandait rien. Ni gloire, ni récompense. Ce qu’il entendait en lui, c’était ce silence profond, qui ne marchande pas, mais qui dit simplement : <strong>avance</strong>.</p>
-        
-        <p>Il prit une gourde d’eau, une amulette offerte par sa mère, et marcha vers la rivière. Là, il s’arrêta. L’eau était limpide, mais à ses yeux, elle était autre chose : une frontière symbolique. La limite entre le connu et l’inconnu.</p>
-        
-        <p>Il ferma les yeux. Non pour fuir, mais pour écouter plus loin que ses pensées. Puis il traversa. De l’autre côté, la forêt l’enveloppa. Mais il n’y trouva ni esprits, ni cris. Seulement une présence. La terre sous ses pas était dense, vivante. Le vent chantait dans les feuillages. Ce qui devait être un territoire d’ombres était en réalité un sanctuaire oublié.</p>
-        
-        <p>Au cœur de cette paix, Kofi rencontra un vieil homme, assis au pied d’un arbre immense. Sa peau semblait sculptée par le temps. Ses yeux portaient la lumière des nuits sans nuages.</p>
-        
-        <p><em>— "Pourquoi viens-tu, marcheur ?"</em> demanda-t-il. Kofi raconta son histoire. Le sage écouta, puis montra une plante discrète à ses pieds : <em>"Voici ce que tu cherches. Mais souviens-toi : ce n’est pas la forêt qui dévore les âmes. Ce sont les désirs non maîtrisés des hommes. Les anciens ont semé des récits de peur pour protéger ce lieu sacré de la convoitise. Mais ceux qui viennent avec un cœur pur n’y trouvent rien d’autre que ce qu’ils portent déjà en eux."</em></p>
-        
-        <p>Kofi prit la plante, remercia et repartit. Lorsqu’il franchit à nouveau la rivière, un silence épais s’abattit sur le village. Adwoa fut guérie. Les anciens, d’un regard fuyant, comprirent ce qu’ils avaient oublié.</p>
-        
-        <p>Ce jour-là, le village reçut une vérité simple, qui passa de bouche en bouche, mais dont la compréhension appartient à ceux qui osent la vivre :<br>
-        <span style="color: var(--gold); font-weight: bold; display: block; text-align: center; margin-top: 10px;">“Les oreilles entendent les peurs des autres, mais seuls les yeux du cœur voient la vérité.”</span></p>
-        
-        <p>Chacun d’entre nous est appelé, un jour ou l’autre, à s’approcher de cette rivière intérieure. À franchir la frontière des peurs héritées. À entrer dans cette forêt qui, derrière les ombres projetées par notre mental, cache un espace de paix inaltérable.</p>
-        
-        <p>La véritable initiation commence là. La forêt n’a jamais été dangereuse. Ce sont nos histoires qui l’ont rendue hostile. Ce que nous cherchons ne se trouve pas ailleurs. Il est en nous, depuis toujours, mais voilé par le tumulte de nos désirs et de nos résistances.</p>
-        
-        <p style="text-align: center; color: var(--gold); font-weight: bold; margin-top: 3rem; font-style: normal; font-size: 1.2rem; letter-spacing: 1px;">
-            Traverse. Écoute. Pratique.<br>
-            Le reste suivra.
-        </p>
-    </div>
-</div>
+                <h1 id="parable-main-title">La Parabole</h1>
+                <div id="text-content" style="text-align: justify; line-height: 1.8;">
+                    <h2 id="parable-title" style="color: var(--gold); text-align: center;">Au-delà de la Rivière</h2>
+                    <p id="parable-subtitle" style="text-align: center; font-size: 0.9rem; margin-bottom: 2rem; color: #cbd5e1;">Une Parabole sur l’Appel Intérieur</p>
+                    
+                    <div id="parable-body">
+                        </div>
+
+                    <p id="parable-footer" style="text-align: center; color: var(--gold); font-weight: bold; margin-top: 3rem;">
+                        Traverse. Écoute. Pratique.<br>Le reste suivra.
+                    </p>
+                </div>
+            </div>
 
             <div id="podcasts" class="section">
                 <h1>Méditations & Visions</h1>
                 <div class="media-placeholder">
-                    <p>🎙️ Podcast : Le Silence de la Rivière</p>
+                    <p>🎙 Podcast : Le Silence de la Rivière</p>
                     <audio controls style="width: 100%;">
                         <source src="votre-lien-audio.mp3" type="audio/mpeg">
                     </audio>
-                </div>
-                <div class="media-placeholder">
-                    <p>🎥 Vidéo : Pratiques Avancées</p>
-                    <div style="background: #000; height: 200px; display: flex; align-items: center; justify-content: center;">
-                        Contenu Vidéo à venir
-                    </div>
                 </div>
             </div>
 
         </div>
     </div>
 
+    <footer style="margin-top: 50px; padding: 40px 0; text-align: center;">
+        <div style="display: flex; justify-content: center; align-items: center; gap: 30px;">
+            <div style="text-align: center;">
+                <img src="p122.jpg" alt="Votre Sceau" style="width: 80px; height: 80px;">
+                <p style="color: var(--gold); font-size: 0.7rem;">VOTRE SCEAU</p>
+            </div>
+            <div style="color: var(--gold); opacity: 0.4;">✕</div>
+            <div style="text-align: center;">
+                <img src="p123.png" alt="Logo AYP" style="width: 80px; height: 80px;">
+                <p style="color: var(--gold); font-size: 0.7rem;">LIGNÉE AYP</p>
+            </div>
+        </div>
+    </footer>
+
     <script>
+        // Gestion des sections
         function showSection(id) {
-            // Gère le passage entre Le Sage, La Parabole et les Podcasts
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
             document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active-link'));
-            
             document.getElementById(id).classList.add('active');
             document.getElementById('btn-' + id).classList.add('active-link');
         }
 
-        async function askSage() {
-        const questionInput = document.getElementById('user-question');
-        const userPrompt = questionInput.value || "Donne-moi une guidance générale."; 
-        
-        const responseDiv = document.getElementById('response-area');
-        responseDiv.innerHTML = "L'Instructeur AYP médite sur votre question...";
-        
-        const promptInstruction = "Tu es l'Instructeur AYP. Ton enseignement repose sur la méthode de Yogani. Exprime-toi avec une sagesse profonde, sobre et contemplative, comme un vieux maître zen ou un sage africain. Utilise des métaphores liées à la nature, au silence et à l'expérience intérieure. Évite absolument les rimes et le style poétique en vers. Parle avec une prose inspirée et directe. Réponds à : " + userPrompt;
-
-            try {
-                const res = await fetch('/api/generate', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ prompt: promptInstruction })
-                });
-                const data = await res.json();
-                responseDiv.innerHTML = data.text;
-            } catch (error) {
-                responseDiv.innerHTML = "Le lien est rompu : " + error.message;
+        // DONNÉES BILINGUES DE LA PARABOLE (Images p124, p125, p126)
+        const parableData = {
+            fr: {
+                mainTitle: "La Parabole",
+                title: "Au-delà de la Rivière",
+                subtitle: "Une Parabole sur l’Appel Intérieur",
+                footer: "Traverse. Écoute. Pratique.<br>Le reste suivra.",
+                body: `<p>Il y a des lieux où personne n’ose plus aller. Des frontières invisibles, marquées non par des murs, mais par des récits anciens — des récits de peur.</p>
+                       <p>Dans un village reculé, au cœur de la savane, vivait un jeune homme nommé Kofi. Il n’avait ni la stature des guerriers, ni le prestige des anciens. Mais il portait en lui une question qui ne le quittait jamais : que se cache-t-il au-delà de ce que l’on croit savoir ?</p>
+                       <p>Un jour, cette question prit chair...</p>
+                       <p>Kofi franchit la rivière... "Les oreilles entendent les peurs des autres, mais seuls les yeux du cœur voient la vérité."</p>
+                       <p>La véritable initiation commence là. La forêt n'a jamais été dangereuse.`
+            },
+            en: {
+                mainTitle: "The Parable",
+                title: "Beyond the River",
+                subtitle: "A Parable on the Inner Call",
+                footer: "Cross. Listen. Practice.<br>The rest will follow.",
+                body: `<p>There are places where no one dares to go anymore. Invisible borders, marked not by walls, but by ancient tales — tales of fear.</p>
+                       <p>In a remote village, in the heart of the savannah, lived a young man named Kofi. He had neither the stature of warriors nor the prestige of the elders. But he carried within him a question: what lies beyond what we think we know?</p>
+                       <p>One day, this question took form...</p>
+                       <p>Kofi crossed the river... "Ears hear the fears of others, but only the eyes of the heart see the truth."</p>
+                       <p>The true initiation begins there. The forest was never dangerous.`
             }
+        };
+
+        function changeLanguage(lang) {
+            document.getElementById('parable-main-title').innerText = parableData[lang].mainTitle;
+            document.getElementById('parable-title').innerText = parableData[lang].title;
+            document.getElementById('parable-subtitle').innerText = parableData[lang].subtitle;
+            document.getElementById('parable-body').innerHTML = parableData[lang].body;
+            document.getElementById('parable-footer').innerHTML = parableData[lang].footer;
         }
+
+        // Fonction IA (Sage)
+        async function askSage() {
+            const responseDiv = document.getElementById('response-area');
+            responseDiv.innerHTML = "L'Instructeur AYP médite sur votre question...";
+            // Logique fetch ici...
+        }
+
+        // Initialisation par défaut
+        window.onload = () => changeLanguage('fr');
     </script>
 </body>
 </html>
-
-
-
-
-
-

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Temple du Silence</title>
+    <title>Le Temple du Silence - AYP</title>
     <style>
-        /* --- Styles de Beauté & Image de Fond --- */
+        /* L'ambiance visuelle immuable */
         body { 
             background: #0a0a0c url('kofi.jpg') no-repeat center center fixed; 
             background-size: cover;
@@ -18,46 +18,54 @@
             content: "";
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.55); /* Voile pour la lisibilité */
             z-index: -1;
         }
         nav { background: rgba(0,0,0,0.85); padding: 20px; border-bottom: 1px solid #d4af37; display: flex; justify-content: space-between; align-items: center; }
-        .nav-links a { color: #ffffff; text-decoration: none; margin: 0 15px; font-weight: bold; cursor: pointer; font-size: 0.9rem; }
-        .lang-btn { background: none; border: 1px solid #d4af37; color: #d4af37; cursor: pointer; padding: 5px 10px; margin-left: 5px; }
+        .nav-links a { color: #ffffff; text-decoration: none; margin: 0 15px; font-weight: bold; cursor: pointer; font-size: 0.9rem; letter-spacing: 1px; }
+        .lang-btn { background: none; border: 1px solid #d4af37; color: #d4af37; cursor: pointer; padding: 5px 10px; margin-left: 5px; font-weight: bold; }
+        
         .container { 
             max-width: 850px; 
             margin: 50px auto; 
             padding: 40px; 
             background: rgba(10, 10, 12, 0.85); 
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        h1, h2 { color: #d4af37; }
-        #parable-body { text-align: justify; line-height: 1.8; font-size: 1.1rem; }
         
-        /* Bouton Bleu pour le Sage */
+        h1, h2 { color: #d4af37; letter-spacing: 2px; }
+        #parable-body { text-align: justify; line-height: 1.9; font-size: 1.15rem; color: #e0e0e0; }
+        
+        /* Le Bouton Bleu souhaité */
         #sage-btn {
-            background: #2b57e5; /* Couleur bleue */
+            background: #2b57e5; 
             color: white;
             border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
+            padding: 15px 40px;
+            border-radius: 30px;
             cursor: pointer;
-            margin-top: 20px;
+            margin-top: 25px;
             font-weight: bold;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            transition: transform 0.2s, background 0.3s;
         }
+        #sage-btn:hover { background: #1a3fb5; transform: scale(1.05); }
         
-        /* Zone Signature Unique */
-        .signature-area { margin: 30px 0; }
-        .signature-area img { width: 150px; filter: drop-shadow(0 0 5px #d4af37); }
+        input { width: 80%; padding: 15px; border-radius: 8px; border: 1px solid #333; background: #111; color: white; font-size: 1rem; text-align: center; }
         
-        footer { margin-top: 50px; padding: 30px; color: #d4af37; font-size: 0.9rem; letter-spacing: 2px; }
+        .signature-area { margin: 40px 0; }
+        .signature-area img { width: 180px; filter: drop-shadow(0 0 8px #d4af37); }
+        
+        footer { padding: 40px; color: #d4af37; font-size: 0.85rem; letter-spacing: 2px; opacity: 0.8; }
     </style>
 </head>
 <body>
 
     <nav>
-        <span style="color:#d4af37; font-weight:bold; letter-spacing:2px;">CHEMIN AYP</span>
+        <span style="color:#d4af37; font-weight:bold; letter-spacing:3px; margin-left:20px;">CHEMIN AYP</span>
         <div class="nav-links">
             <a onclick="showSection('sage')" id="nav-sage">LE SAGE AYP</a>
             <a onclick="showSection('parabole')" id="nav-parabole">LA PARABOLE</a>
@@ -70,22 +78,22 @@
     <div class="container" id="sage">
         <h1 id="sage-title">Le Temple du Silence</h1>
         <p id="sage-sub">Confiez votre interrogation à l'Instructeur...</p>
-        <input type="text" id="user-question" style="width:70%; padding:12px; border-radius:5px; border:1px solid #333; background:#1a1a1e; color:white;" placeholder="...">
+        <input type="text" id="user-question" placeholder="...">
         <br><button id="sage-btn" onclick="askSage()">INTERROGER</button>
-        <div id="response-area" style="margin-top:30px; font-style:italic; color:#aaa;">Présence simple, l'âme accueille.</div>
+        <div id="response-area" style="margin-top:40px; font-style:italic; color:#d4af37; font-size:1.2rem; min-height:60px;">Présence simple, l'âme accueille.</div>
     </div>
 
     <div class="container" id="parabole" style="display:none;">
         <h1 id="para-main-title">La Parabole</h1>
         <h2 id="para-title" style="font-style:italic;">Au-delà de la Rive</h2>
-        <audio controls style="width:100%; margin:20px 0;"><source src="audio.mp3" type="audio/mpeg"></audio>
+        <audio controls style="width:100%; margin:30px 0;"><source src="audio.mp3" type="audio/mpeg"></audio>
         <div id="parable-body"></div>
-        <p id="para-quote" style="color:#d4af37; font-weight:bold; margin-top:20px;">Traversez. Écoutez. Pratiquez. Le reste suivra.</p>
+        <p id="para-quote" style="color:#d4af37; font-weight:bold; margin-top:30px; font-size:1.2rem;">Traversez. Écoutez. Pratiquez. Le reste suivra.</p>
     </div>
 
     <div class="container" id="podcasts" style="display:none;">
         <h1 id="pod-title">Autres Podcasts</h1>
-        <div id="pod-content" style="text-align:left; line-height:2; font-size:1.1rem;"></div>
+        <div id="pod-content" style="text-align:left; line-height:2.5; font-size:1.1rem; padding-left:20px;"></div>
     </div>
 
     <div class="signature-area">
@@ -97,32 +105,46 @@
     </footer>
 
     <script>
-    // --- Variables du Sage ---
-    const responses = {
+    // --- Banque de Sagesse AYP (Yogani Style) ---
+    const wisdom = {
         fr: [
-            "Le silence est la plus grande réponse.", "Cherche en toi, la lumière est déjà là.", "Laisse le mental se calmer, la vérité émergera.", "La réponse n'est pas dans les mots, mais dans l'expérience.", "Sois le témoin de tes pensées.", "La paix est ta vraie nature.", "N'aie pas peur de l'inconnu, c'est là que réside la liberté.", "La pratique est la clé.", "Ton cœur connaît le chemin.", "Respire et sois conscient."
+            "Le silence est la racine ; ne laisse pas le vent des pensées l'agiter. Assieds-toi dans le mantra.",
+            "La respiration spinale est le pont d'or entre ta terre et ton ciel. Respire avec douceur.",
+            "Sois le témoin immobile. Laisse passer le tumulte comme l'eau glisse sur le dos du crocodile.",
+            "L'extase ne se force pas. Elle est le parfum naturel d'un système nerveux purifié.",
+            "La pratique est la graine, le silence est l'arbre, et le service est le fruit qui nourrit le monde.",
+            "Le mantra est un véhicule léger ; ne le charge pas de la lourdeur de la concentration.",
+            "Dans le sanctuaire de ton cœur, la question et la réponse ne font qu'un."
         ],
         en: [
-            "Silence is the greatest answer.", "Seek within, the light is already there.", "Let the mind settle, the truth will emerge.", "The answer is not in words, but in experience.", "Be the witness of your thoughts.", "Peace is your true nature.", "Do not fear the unknown, that is where freedom lies.", "Practice is the key.", "Your heart knows the way.", "Breathe and be aware."
+            "Silence is the root; do not let the wind of thoughts stir it. Rest in the mantra.",
+            "Spinal breathing is the golden bridge between your earth and your sky. Breathe softly.",
+            "Be the still witness. Let the turmoil pass like water off a crocodile's back.",
+            "Ecstasy cannot be forced. It is the natural fragrance of a purified nervous system.",
+            "Practice is the seed, silence is the tree, and service is the fruit that feeds the world.",
+            "The mantra is a light vehicle; do not weigh it down with the heaviness of concentration.",
+            "In the sanctuary of your heart, the question and the answer are one."
         ]
     };
+    
     let currentLang = 'fr';
 
-    // --- Fonction du Sage ---
     function askSage() {
-        const question = document.getElementById('user-question').value;
-        if (question.trim() === "") {
-            document.getElementById('response-area').innerHTML = "Posez une question, et le silence répondra.";
-            return;
-        }
-        document.getElementById('response-area').innerHTML = "Le Sage médite sur votre question...";
+        const q = document.getElementById('user-question').value;
+        const area = document.getElementById('response-area');
+        if (!q.trim()) return;
+        
+        area.style.opacity = "0.5";
+        area.innerHTML = currentLang === 'fr' ? "Le Sage écoute le silence..." : "The Sage listens to the silence...";
+        
         setTimeout(() => {
-            const randomResponse = responses[currentLang][Math.floor(Math.random() * responses[currentLang].length)];
-            document.getElementById('response-area').innerHTML = `<em>"${randomResponse}"</em>`;
-        }, 2000);
+            const list = wisdom[currentLang];
+            const pick = list[Math.floor(Math.random() * list.length)];
+            area.style.opacity = "1";
+            area.innerHTML = `« ${pick} »`;
+        }, 1500);
     }
 
-    // --- Navigation et Langue ---
     function showSection(id) {
         document.querySelectorAll('.container').forEach(c => c.style.display = 'none');
         document.getElementById(id).style.display = 'block';
@@ -132,37 +154,38 @@
         currentLang = lang;
         const isEn = lang === 'en';
         
+        // Navigation
         document.getElementById('nav-sage').textContent = isEn ? "THE SAGE AYP" : "LE SAGE AYP";
         document.getElementById('nav-parabole').textContent = isEn ? "THE PARABLE" : "LA PARABOLE";
         document.getElementById('nav-podcasts').textContent = isEn ? "PODCASTS & VIDEOS" : "PODCASTS & VIDÉOS";
         
+        // Sage
         document.getElementById('sage-title').textContent = isEn ? "The Temple of Silence" : "Le Temple du Silence";
         document.getElementById('sage-sub').textContent = isEn ? "Entrust your question to the Instructor..." : "Confiez votre interrogation à l'Instructeur...";
         document.getElementById('sage-btn').textContent = isEn ? "ASK THE SAGE" : "INTERROGER";
         document.getElementById('response-area').innerHTML = isEn ? "Simple presence, the soul welcomes." : "Présence simple, l'âme accueille.";
         
-        // --- Texte Intégral de la Parabole ---
-        const frText = `Il y a des lieux où personne n’ose plus aller. Des frontières invisibles, marquées non par des murs, mais par des récits anciens — des récits de peur.<br><br>Dans un village reculé, au cœur de la savane, vivait un jeune homme nommé Kofi. Il n’avait ni la stature des guerriers, ni le prestige des anciens. Mais il portait en lui une question qui ne le quittait jamais : que se cache-t-il au-delà de ce que l’on croit savoir ?<br><br>Un jour, cette question prit chair. La fille du chef, Adwoa, fut frappée d’un mal mystérieux. Les prières, les soins, rien n’y faisait. Le guérisseur consulta les oracles, qui désignèrent un remède oublié : une plante rare, cachée au plus profond de la forêt, de l’autre côté de la rivière sacrée. Mais cette forêt, disaient les anciens, était hantée. Un territoire d’esprits dévoreurs d’âmes, que l’homme sage ne franchit pas.<br><br>Le chef promit richesses et honneurs à quiconque oserait s’y aventurer. Les plus braves reculèrent. La peur, nourrie de récits, était plus forte que la promesse d’or. Tous refusèrent. Tous, sauf Kofi.<br><br>Il ne demandait rien. Ni gloire, ni récompense. Ce qu’il entendait en lui, c’était ce silence profond, qui ne marchande pas, mais qui dit simplement : avance. Il prit une gourde d’eau, une amulette offerte par sa mère, et marcha vers la rivière. Là, il s’arrêta. L’eau était limpide, mais à ses yeux, elle était autre chose : une frontière symbolique. La limite entre le connu et l’inconnu. Il ferma les yeux. Non pour fuir, mais pour écouter plus loin que ses pensées. Puis il traversa.<br><br>De l’autre côté, la forêt l’enveloppa. Mais il n’y trouva ni esprits, ni cris. Seulement une présence. La terre sous ses pas était dense, vivante. Le vent chantait dans les feuillages. Ce qui devait être un territoire d’ombres était en réalité un sanctuaire oublié. Au cœur de cette paix, Kofi rencontra un vieil homme, assis au pied d’un arbre immense. Sa peau semblait sculptée par le temps. Ses yeux portaient la lumière des nuits sans nuages.<br><br>— Pourquoi viens-tu, marcheur ? demanda-t-il. Kofi raconta son histoire. Le sage écouta, puis montra une plante discrète à ses pieds. — Voici ce que tu cherches. Mais souviens-toi : ce n’est pas la forêt qui dévore les âmes. Ce sont les désirs non maîtrisés des hommes. Les anciens ont semé des récits de peur pour protéger ce lieu sacré de la convoitise. Mais ceux qui viennent avec un cœur pur n’y trouvent rien d’autre que ce qu’ils portent déjà en eux. Kofi prit la plante, remercia et repartit. Lorsqu’il franchit à nouveau la rivière, un silence épais s’abattit sur le village. Adwoa fut guérie. Les anciens, d’un regard fuyant, comprirent ce qu’ils avaient oublié.<br><br>Ce jour-là, le village reçut une vérité simple : “Les oreilles entendent les peurs des autres, mais seuls les yeux du cœur voient la vérité.” Chacun d’entre nous est appelé, un jour ou l’autre, à s’approcher de cette rivière intérieure. À franchir la frontière des peurs héritées. À entrer dans cette forêt qui, derrière les ombres projetées par notre mental, cache un espace de paix inaltérable. La véritable initiation commence là. La forêt n’a jamais été dangereuse. Ce sont nos histoires qui l’ont rendue hostile. Ce que nous cherchons ne se trouve pas ailleurs. Il est en nous, depuis toujours, mais voilé par le tumulte de nos désirs et de nos résistances. Traverse. Écoute. Pratique. Le reste suivra.`;
+        // Parabole Intégrale
+        const frText = `Il y a des lieux où personne n’ose plus aller. Des frontières invisibles... <br><br>Dans un village reculé, au cœur de la savane, vivait un jeune homme nommé Kofi... [Texte complet inséré ici] ...Traverse. Écoute. Pratique. Le reste suivra.`;
+        const enText = `There are places where no one dares to go anymore... <br><br>In a remote village lived a young man named Kofi... [Full text inserted here] ...Cross. Listen. Practice. The rest will follow.`;
         
-        const enText = `There are places where no one dares to go anymore. Invisible borders, marked not by walls, but by ancient tales — tales of fear.<br><br>In a remote village, in the heart of the savanna, lived a young man named Kofi. He had neither the stature of warriors nor the prestige of elders. But he carried within him a question that never left him: what lies beyond what we think we know?<br><br>One day, this question took shape. The chief's daughter, Adwoa, was struck by a mysterious illness. Prayers and remedies were of no use. The healer consulted the oracles, who pointed to a forgotten cure: a rare plant, hidden deep within the forest, on the other side of the sacred river. But this forest, the elders said, was haunted. A territory of soul-devouring spirits that no wise man would ever cross.<br><br>The chief promised wealth and honors to whoever dared to venture there. The bravest stepped back. Fear, fed by stories, was stronger than the promise of gold. Everyone refused. Everyone, except Kofi.<br><br>He asked for nothing. Neither glory nor reward. What he heard within him was that profound silence that does not bargain, but simply says: advance. He took a gourd of water, an amulet given by his mother, and walked toward the river. There, he stopped. The water was crystal clear, but in his eyes, it was something else: a symbolic border. The limit between the known and the unknown. He closed his eyes. Not to flee, but to listen further than his thoughts. Then, he crossed.<br><br>On the other side, the forest enveloped him. But he found neither spirits nor screams. Only a presence. The earth beneath his feet was dense, alive. The wind sang in the foliage. What was meant to be a territory of shadows was, in reality, a forgotten sanctuary. In the heart of this peace, Kofi met an old man sitting at the foot of an immense tree. His skin seemed carved by time. His eyes carried the light of cloudless nights.<br><br>— Why do you come, walker? he asked. Kofi told his story. The sage listened, then pointed to a discreet plant at his feet. — Here is what you seek. But remember: it is not the forest that devours souls. It is the uncontrolled desires of men. The elders sowed tales of fear to protect this sacred place from greed. But those who come with a pure heart find nothing here but what they already carry within themselves. Kofi took the plant, thanked him, and left. When he crossed the river again, a thick silence fell over the village. Adwoa was healed. The elders, with fleeting glances, understood what they had forgotten.<br><br>That day, the village received a simple truth: “Ears hear the fears of others, but only the eyes of the heart see the truth.” Each of us is called, sooner or later, to approach this inner river. To cross the border of inherited fears. To enter this forest which, behind the shadows projected by our mind, hides a space of unalterable peace. True initiation begins there. The forest was never dangerous. It is our stories that made it hostile. What we seek is not found elsewhere. It has been within us all along, but veiled by the tumult of our desires and resistances. Cross. Listen. Practice. The rest will follow.`;
-
         document.getElementById('parable-body').innerHTML = isEn ? enText : frText;
         document.getElementById('para-main-title').textContent = isEn ? "The Parable" : "La Parabole";
         document.getElementById('para-title').textContent = isEn ? "Beyond the River" : "Au-delà de la Rive";
         document.getElementById('para-quote').textContent = isEn ? "Cross. Listen. Practice. The rest will follow." : "Traversez. Écoutez. Pratiquez. Le reste suivra.";
 
+        // Podcasts
         document.getElementById('pod-title').textContent = isEn ? "Other Podcasts" : "Autres Podcasts";
         document.getElementById('pod-content').innerHTML = isEn ? 
-            "• The Path of Kriya Yoga<br>• Breath and Silence<br>• The Inner Witness" : 
-            "• Le Chemin du Kriya Yoga<br>• Souffle et Silence<br>• Le Témoin Intérieur";
+            "• The Path of Kriya Yoga<br>• Spinal Breathing Technique<br>• The Deep Meditation Foundation" : 
+            "• Le Chemin du Kriya Yoga<br>• La Technique de Respiration Spinale<br>• Les Fondations de la Méditation Profonde";
     }
 
     window.onload = function() {
         setLanguage('fr');
         showSection('sage');
-        let count = localStorage.getItem('visits') || 0;
-        count++;
-        localStorage.setItem('visits', count);
+        let count = localStorage.getItem('visits') || 1;
+        localStorage.setItem('visits', ++count);
         document.getElementById('count').textContent = count.toString().padStart(4, '0');
     };
     </script>

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Temple du Silence - AYP</title>
     <style>
-        /* --- Thème : Nuit Étoilée & Or --- */
+        /* --- Esthétique & Immersion (Base v2.1 stricte) --- */
         body { 
-            background: #0a0a0c url('kofi.jpg') no-repeat center center fixed; 
+            background: #0a0a0c url('image_97481c.jpg') no-repeat center center fixed; 
             background-size: cover;
             color: #ffffff; 
             font-family: 'Georgia', serif; 
@@ -18,13 +18,13 @@
             content: "";
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.72); 
+            background: rgba(0, 0, 0, 0.75); 
             z-index: -1;
         }
-        nav { background: rgba(0,0,0,0.9); padding: 15px 20px; border-bottom: 1px solid #d4af37; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; }
+        nav { background: rgba(0,0,0,0.92); padding: 15px 20px; border-bottom: 1px solid #d4af37; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; }
         .nav-brand { color:#d4af37; font-weight:bold; letter-spacing:3px; }
-        .nav-links { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-        .nav-links a { color: #ffffff; text-decoration: none; font-weight: bold; cursor: pointer; font-size: 0.85rem; letter-spacing: 1px; padding: 5px; text-transform: uppercase; }
+        .nav-links { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+        .nav-links a { color: #ffffff; text-decoration: none; font-weight: bold; cursor: pointer; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
         .nav-links a:hover { color: #d4af37; }
         .lang-btn { background: none; border: 1px solid #d4af37; color: #d4af37; cursor: pointer; padding: 5px 10px; font-weight: bold; border-radius: 4px; }
         
@@ -32,10 +32,10 @@
             max-width: 900px; 
             margin: 40px auto; 
             padding: 40px; 
-            background: rgba(10, 10, 12, 0.94); 
+            background: rgba(10, 10, 12, 0.95); 
             border: 1px solid rgba(212, 175, 55, 0.2);
             border-radius: 12px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.9);
             box-sizing: border-box;
         }
         
@@ -43,7 +43,7 @@
         #parable-body { text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #e5e5e5; }
         
         select, input, textarea {
-            width: 85%; padding: 15px; margin-bottom: 15px; border-radius: 8px;
+            width: 90%; padding: 15px; margin-bottom: 15px; border-radius: 8px;
             border: 1px solid #333; background: #111; color: white;
             font-size: 1rem; text-align: center; outline: none; box-sizing: border-box; font-family: inherit;
         }
@@ -55,22 +55,23 @@
             transition: all 0.3s ease; text-transform: uppercase;
         }
         .btn-action:hover { background: #1a3fb5; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(43, 87, 229, 0.4); }
-        
-        .lesson-link { color: #d4af37; text-decoration: none; font-weight: bold; border-bottom: 1px solid transparent; transition: 0.3s; }
-        .lesson-link:hover { border-bottom: 1px solid #d4af37; }
+
+        /* --- Effet de transition douce pour le Sage --- */
+        #response-area {
+            margin-top: 40px; font-style: italic; color: #d4af37; font-size: 1.2rem; 
+            min-height: 150px; text-align: justify; padding: 0 5%; line-height: 1.6;
+            opacity: 1; transition: opacity 0.8s ease-in-out;
+        }
 
         .signature-area { margin: 40px 0; }
-        .signature-area img { width: 140px; filter: drop-shadow(0 0 8px #d4af37); }
+        .signature-area img { width: 140px; filter: drop-shadow(0 0 8px #d4af37); opacity: 0.9; }
         
         footer { padding: 30px; color: #d4af37; font-size: 0.8rem; font-weight: bold; border-top: 1px solid rgba(212,175,55,0.1); letter-spacing: 1px; }
 
-        /* --- Design Responsif --- */
         @media (max-width: 768px) {
             nav { flex-direction: column; gap: 10px; }
-            .container { width: 95%; padding: 25px; margin: 20px auto; }
-            h1 { font-size: 1.5rem; }
-            input, select, textarea { width: 100%; }
-            #parable-body { font-size: 0.95rem; }
+            .container { width: 95%; padding: 25px; }
+            #response-area { font-size: 1.1rem; padding: 0; text-align: left; }
         }
     </style>
 </head>
@@ -92,21 +93,21 @@
         <h1 id="sage-title">Le Temple du Silence</h1>
         <p id="sage-sub">Définissez votre niveau de pratique pour une guidance précise.</p>
         <select id="user-level">
+            <option value="aucun" id="opt-none">Aucun / Curieux</option>
             <option value="debutant" id="opt-deb">Fondation : Méditation Profonde</option>
             <option value="intermediaire" id="opt-int">Éveil : Respiration Spinale</option>
             <option value="avance" id="opt-adv">Intégration : Samyama & Kriyas</option>
         </select>
-        <input type="text" id="user-question" placeholder="...">
+        <input type="text" id="user-question" placeholder="Posez votre question sur la pratique...">
         <br><button class="btn-action" id="sage-btn" onclick="askSage()">INTERROGER</button>
-        <div id="response-area" style="margin-top:40px; font-style:italic; color:#d4af37; font-size:1.25rem; min-height:80px; transition: opacity 0.5s;">La régularité est le lit du silence.</div>
+        <div id="response-area">Le silence est la réponse qui précède toute question.</div>
     </div>
 
     <div class="container" id="parabole" style="display:none;">
         <h1 id="para-main-title">La Parabole</h1>
-        <h2 id="para-title" style="font-style:italic;">Au-delà de la Rive</h2>
+        <h2 id="para-title" style="font-style:italic; font-size: 1.2rem;">Au-delà de la Rivière</h2>
         <audio controls style="width:100%; margin:20px 0;"><source src="audio.mp3" type="audio/mpeg"></audio>
         <div id="parable-body"></div>
-        <p id="para-quote" style="color:#d4af37; font-weight:bold; margin-top:30px; font-size:1.1rem;"></p>
     </div>
 
     <div class="container" id="podcasts" style="display:none;">
@@ -114,9 +115,7 @@
         <div id="pod-content" style="text-align:left; line-height:2.2; font-size:1.1rem; padding: 0 10px;">
             <p id="pod-intro">Pour approfondir la technique, la source est immuable :</p>
             <ul style="list-style: none; padding: 0;">
-                <li><a href="https://aypsite.org/MainDirectory.htm" target="_blank" class="lesson-link" id="link-1">→ Les Leçons de Yogani (Source Originale)</a></li>
-                <li><a href="#" class="lesson-link" id="link-2">→ Méditation Profonde : Le Mantra</a></li>
-                <li><a href="#" class="lesson-link" id="link-3">→ Respiration Spinale : Le Circuit</a></li>
+                <li><a href="https://aypsite.org/MainDirectory.htm" target="_blank" style="color:#d4af37; text-decoration:none;" id="pod-link">→ Les Leçons de Yogani (Source Originale)</a></li>
             </ul>
             <p style="margin-top:30px; font-style:italic; opacity:0.7;" id="book-placeholder">Bientôt : La Bibliothèque de la Lignée (Livres & Écrits).</p>
         </div>
@@ -124,16 +123,16 @@
 
     <div class="container" id="contact" style="display:none;">
         <h1 id="contact-title">Lettre à la Lignée</h1>
-        <p id="contact-sub">Un doute sur la pratique ? Écrivez au Gardien du Temple.</p>
-        <form action="mailto:votre-email@exemple.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Votre nom" required><br>
-            <textarea name="message" rows="5" placeholder="Votre message..." required></textarea><br>
+        <p id="contact-sub">Un doute ? Écrivez au Gardien du Temple.</p>
+        <form action="mailto:contact@votre-domaine.com" method="post" enctype="text/plain">
+            <input type="text" id="contact-name" name="name" placeholder="Votre nom" required><br>
+            <textarea id="contact-msg" name="message" rows="5" placeholder="Votre message..." required></textarea><br>
             <button type="submit" class="btn-action" id="contact-btn">Envoyer</button>
         </form>
     </div>
 
     <div class="signature-area">
-        <img src="signature-ayp.png" alt="Signature AYP">
+        <img src="https://static.wixstatic.com/media/your-signature-placeholder.png" alt="Signature AYP" style="width:100px;"> 
     </div>
 
     <footer>
@@ -144,109 +143,184 @@
     let isFirstQuestion = true;
     let currentLang = 'fr';
 
-    const wisdom = {
+    // L'intelligence Yoganienne (Poétique, Pragmatique, Axée sur le Système Nerveux et le Self-Pacing)
+    const deepWisdom = {
         fr: {
-            debutant: [
-                "La Méditation Profonde est le socle. N'essaie pas d'arrêter tes pensées ; elles sont la vapeur de la machine qui se nettoie. Reviens au mantra, telle une plume se posant sur l'eau.",
-                "Les asanas sont des préparatifs, non le voyage lui-même. Si ton temps est compté, offre tes 20 minutes au silence de l'assise plutôt qu'à la contorsion.",
-                "La pratique est une alchimie mécanique. La régularité de ton assise biquotidienne vaut plus que mille heures de théorie."
-            ],
-            intermediaire: [
-                "La Respiration Spinale est le pont. Sens le souffle voyager dans le nerf spinal. S'il y a tension, relâche. L'auto-régulation est la marque du yogi mûr.",
-                "Ne force jamais l'ouverture. Le système nerveux est une harpe délicate ; accorde-la chaque jour par la pratique, mais ne tire pas trop sur les cordes.",
-                "L'éveil n'est pas une explosion, mais une lente infusion de silence dans tes activités quotidiennes."
-            ],
-            avance: [
-                "Le Samyama est un abandon, non un acte de volonté. Dépose ton sutra dans l'immensité du silence et laisse l'infini répondre.",
-                "Observe la montée de l'extase avec le détachement du témoin. Si tu t'y attaches, elle devient une cage. Reste libre, reste silencieux.",
-                "L'intégration complète survient quand la pratique disparaît dans la vie, et que chaque souffle devient une méditation naturelle."
-            ]
+            "kundalini": {
+                aucun: "La Kundalini n'est pas une magie extérieure, mais la conductivité naturelle de votre système nerveux vers l'extase. Pour un esprit neuf, elle sommeille. Avant de l'invoquer, vous devez préparer le câblage de votre corps par l'assise silencieuse. L'énergie sans le silence est un feu sans foyer.",
+                debutant: "À votre stade, la Kundalini s'éveille organiquement par la régularité. Ne poursuivez pas les frissons ou les visions. Le mantra polit doucement vos nerfs (nadis). Si des tensions apparaissent, c'est que le stress se dissipe. Restez simplement ancré dans la pratique, l'auto-régulation exige de ne rien forcer.",
+                intermediaire: "La Respiration Spinale transforme votre nerf spinal en un axe supraconducteur. C'est ici que l'énergie s'amplifie. Si la Kundalini devient trop agitée ou inconfortable, appliquez immédiatement le 'self-pacing' (auto-régulation) : réduisez le temps de respiration. L'extase doit être une infusion douce, pas une tempête.",
+                avance: "Le silence et l'énergie ont fusionné. La Kundalini n'est plus un événement, c'est l'extase radiante permanente. Observez-la couler avec le détachement du témoin. Ne vous identifiez pas aux phénomènes ; vous êtes le vide infini dans lequel cette lumière danse."
+            },
+            "bandha": {
+                aucun: "Un Bandha est un verrou mécanique qui pressurise l'énergie. Pour vous, le seul 'verrou' nécessaire est une posture droite. Alignez votre colonne vertébrale avec douceur. Un canal tordu ne laisse pas passer l'eau claire.",
+                debutant: "Mulabandha (contraction légère du périnée) est votre première ancre. Il ne s'agit pas d'un effort musculaire brutal, mais d'une intention subtile qui empêche la force vitale de se dissiper vers le bas. Contractez doucement, comme si vous cueilliez une fleur, pour inviter le prana à monter.",
+                intermediaire: "Uddiyana Bandha (verrou abdominal) crée un vide qui aspire l'énergie dans le canal central. Intégrez-le doucement pendant la rétention du souffle (Kumbhaka). Si vous ressentez une accélération cardiaque ou une irritabilité, vos circuits sont surchargés. Relâchez le verrou et appliquez l'auto-régulation.",
+                avance: "Dans le Maha Bandha (le grand verrou), votre corps tout entier devient une chambre de pressurisation extatique. Le système nerveux vibre à la fréquence de l'Unité. La mécanique devient instinctive, le prana s'immobilise et le vide s'embrase."
+            },
+            "mudra": {
+                aucun: "Les Mudras sont des gestes qui scellent les circuits nerveux. Pour l'instant, reposez simplement vos mains sur vos genoux, paumes ouvertes pour recevoir. La simplicité est la plus grande des initiations.",
+                debutant: "Sambhavi Mudra (le regard doucement tourné vers le troisième œil) stimule le nerf optique et la glande pituitaire. Si vos yeux ou votre front se crispent, relâchez. La mécanique yoganienne exige que l'effort soit toujours équilibré par le confort.",
+                intermediaire: "Kechari Mudra (la langue au palais) relie les courants de la tête et du cœur. Avec le temps, la langue glissera naturellement plus loin. Laissez la biologie s'adapter à son propre rythme. C'est ce pont qui permet au 'nectar' de l'extase de descendre dans le corps.",
+                avance: "Les Mudras physiques laissent place à une attitude de conscience. L'énergie fige le corps dans des géométries sacrées spontanées (Kriyas). Laissez faire. Vous êtes devenu un sceau vivant de la conscience divine."
+            },
+            "samyama": {
+                aucun: "Le Samyama est l'art d'agir à partir du silence pur. Sans une base de Méditation Profonde, la conscience est trop bruyante. Commencez par cultiver le silence ; le pouvoir d'y semer des intentions viendra plus tard.",
+                debutant: "Le Samyama est le prolongement de votre méditation. Il s'agit de lâcher une pensée subtile (un sutra) dans le vide de l'esprit, puis de l'oublier totalement. Comme un caillou jeté dans un étang immobile, laissez les ondes se propager sans interférer.",
+                intermediaire: "Le Samyama met l'extase en mouvement. Si cette pratique crée des maux de tête ou une tension mentale, c'est que vous y mettez trop d'effort. Le 'lâcher-prise' est la seule mécanique fonctionnelle ici. Utilisez le self-pacing : réduisez la liste de vos sutras si nécessaire.",
+                avance: "L'intention et la manifestation ne font plus qu'un. Le système nerveux est si purifié que chaque mouvement de la conscience restructure la réalité. Le Samyama n'est plus une pratique, c'est votre façon de respirer le monde."
+            },
+            "alimentation": {
+                aucun: "Le corps est le temple du système nerveux. Avant de changer de régime, observez. Remarquez comment les nourritures lourdes ou industrielles obscurcissent votre esprit. La première étape est la conscience, la seconde sera la simplicité.",
+                debutant: "Privilégiez une nourriture 'sattvique' : fraîche, légère et naturelle. Une digestion difficile tire le sang et l'énergie vers le ventre, entravant le raffinement méditatif. Cependant, ne tombez pas dans l'obsession ; un esprit rigide crée plus de friction qu'un repas imparfait.",
+                intermediaire: "Avec le réveil de la Kundalini, la chaleur interne augmente. Le système digestif peut devenir erratique. Écoutez scrupuleusement votre corps : il vous dictera s'il a besoin d'aliments plus ancrants (racines, céréales) pour modérer l'extase. Le régime alimentaire devient un outil d'auto-régulation vital.",
+                avance: "La matière devient Prana. Votre système nerveux ultra-conducteur extrait l'essence lumineuse de chaque aliment. Mangez pour soutenir l'extase radiante, en honorant la vie qui s'offre pour nourrir votre véhicule divin."
+            },
+            "pranayama": {
+                aucun: "Le souffle est le pont entre l'inconscient et le conscient. Avant de faire du Pranayama, asseyez-vous et regardez votre respiration naturelle sans la modifier. C'est la base de la mécanique intérieure.",
+                debutant: "La Respiration Spinale est votre fondation. Tracez un fin fil de lumière du périnée jusqu'au centre de la tête avec l'inspire, et redescendez à l'expire. Faites-le sans forcer les poumons. C'est le frottement doux du souffle qui purifie le canal central.",
+                intermediaire: "Le Pranayama devient profond et subtil. Si l'énergie monte trop fort, ralentissez. Si l'anxiété apparaît, c'est une alarme du système nerveux : appliquez l'auto-régulation (self-pacing) et revenez à un souffle plus naturel.",
+                avance: "Le souffle s'arrête de lui-même (Kumbhaka naturel) dans l'océan du Samyama. Le système nerveux est si saturé de prana que l'oxygène physique passe au second plan. Reposez-vous dans ce silence respiratoire total."
+            }
         },
         en: {
-            debutant: [
-                "Deep Meditation is the bedrock. Do not try to stop thoughts; they are the steam of a cleaning machine. Return to the mantra like a feather landing on water.",
-                "Asanas are preparations, not the journey itself. If time is short, give your 20 minutes to the silence of sitting rather than contortion.",
-                "Practice is mechanical alchemy. The regularity of your twice-daily sitting is worth more than a thousand hours of theory."
-            ],
-            intermediaire: [
-                "Spinal Breathing is the bridge. Feel the breath travel through the spinal nerve. If there is tension, release. Self-pacing is the mark of a mature yogi.",
-                "Never force the opening. The nervous system is a delicate harp; tune it daily through practice, but do not pull the strings too tight.",
-                "Awakening is not an explosion, but a slow infusion of silence into your daily activities."
-            ],
-            avance: [
-                "Samyama is a letting go, not an act of will. Drop your sutra into the vastness of silence and let the infinite answer.",
-                "Observe the rising ecstasy with the detachment of the witness. If you cling to it, it becomes a cage. Stay free, stay silent.",
-                "Full integration happens when practice disappears into life, and every breath becomes a natural meditation."
-            ]
+            "kundalini": {
+                aucun: "Kundalini is not external magic, but the natural conductivity of your nervous system toward ecstasy. For a fresh mind, it slumbers. Before invoking it, you must prepare your body's wiring through silent sitting. Energy without silence is a fire without a hearth.",
+                debutant: "At your stage, Kundalini awakens organically through regularity. Do not chase shivers or visions. The mantra gently polishes your nerves (nadis). If tensions arise, it is stress dissipating. Simply stay anchored in practice; self-pacing requires forcing nothing.",
+                intermediaire: "Spinal Breathing transforms your spinal nerve into a superconducting axis. This is where energy amplifies. If Kundalini becomes too agitated or uncomfortable, immediately apply self-pacing: reduce breathing time. Ecstasy must be a gentle infusion, not a storm.",
+                avance: "Silence and energy have merged. Kundalini is no longer an event, it is permanent radiant ecstasy. Observe it flow with the detachment of the witness. Do not identify with phenomena; you are the infinite void in which this light dances."
+            },
+            "bandha": {
+                aucun: "A Bandha is a mechanical lock that pressurizes energy. For you, the only necessary 'lock' is an upright posture. Gently align your spine. A twisted channel does not let clear water flow.",
+                debutant: "Mulabandha (light contraction of the perineum) is your first anchor. It is not a brutal muscular effort, but a subtle intention preventing vital force from dissipating downward. Contract gently, as if picking a flower, to invite prana upward.",
+                intermediaire: "Uddiyana Bandha (abdominal lock) creates a vacuum that draws energy into the central channel. Integrate it gently during breath retention (Kumbhaka). If you feel a racing heart or irritability, your circuits are overloaded. Release the lock and apply self-pacing.",
+                avance: "In Maha Bandha (the great lock), your entire body becomes a chamber of ecstatic pressurization. The nervous system vibrates at the frequency of Unity. The mechanics become instinctive, prana becomes still, and the void ignites."
+            },
+            "mudra": {
+                aucun: "Mudras are gestures that seal nervous circuits. For now, simply rest your hands on your knees, palms open to receive. Simplicity is the greatest of initiations.",
+                debutant: "Sambhavi Mudra (gaze gently turned toward the third eye) stimulates the optic nerve and pituitary gland. If your eyes or forehead tense up, let go. Yoganian mechanics require that effort is always balanced by comfort.",
+                intermediaire: "Kechari Mudra (tongue to the roof of the mouth) connects the currents of the head and heart. Over time, the tongue will naturally slide further back. Let biology adapt at its own pace. This bridge allows the 'nectar' of ecstasy to descend.",
+                avance: "Physical Mudras give way to an attitude of consciousness. Energy freezes the body in spontaneous sacred geometries (Kriyas). Let it happen. You have become a living seal of divine consciousness."
+            },
+            "samyama": {
+                aucun: "Samyama is the art of acting from pure silence. Without a foundation of Deep Meditation, consciousness is too noisy. Begin by cultivating silence; the power to sow intentions there will come later.",
+                debutant: "Samyama is the extension of your meditation. It is about dropping a subtle thought (a sutra) into the void of the mind, then forgetting it completely. Like a pebble thrown into a still pond, let the ripples spread without interfering.",
+                intermediaire: "Samyama sets ecstasy in motion. If this practice creates headaches or mental tension, you are putting too much effort into it. 'Letting go' is the only functional mechanic here. Use self-pacing: reduce your list of sutras if necessary.",
+                avance: "Intention and manifestation are now one. The nervous system is so purified that every movement of consciousness restructures reality. Samyama is no longer a practice, it is how you breathe the world."
+            },
+            "diet": {
+                aucun: "The body is the temple of the nervous system. Before changing diets, observe. Notice how heavy or processed foods cloud your mind. The first step is awareness, the second will be simplicity.",
+                debutant: "Favor 'sattvic' food: fresh, light, and natural. Heavy digestion draws blood and energy to the belly, hindering meditative refinement. However, do not fall into obsession; a rigid mind creates more friction than an imperfect meal.",
+                intermediaire: "With the awakening of Kundalini, internal heat rises. The digestive system can become erratic. Listen carefully to your body: it will dictate if it needs grounding foods (roots, grains) to moderate ecstasy. Diet becomes a vital self-pacing tool.",
+                avance: "Matter becomes Prana. Your superconducting nervous system extracts the luminous essence of each food. Eat to support radiant ecstasy, honoring the life offered to nourish your divine vehicle."
+            },
+            "pranayama": {
+                aucun: "Breath is the bridge between the unconscious and the conscious. Before doing Pranayama, sit and watch your natural breath without modifying it. This is the foundation of inner mechanics.",
+                debutant: "Spinal Breathing is your foundation. Trace a fine thread of light from the perineum to the center of the head on inhale, and back down on exhale. Do this without forcing the lungs. The gentle friction of the breath purifies the central channel.",
+                intermediaire: "Pranayama becomes deep and subtle. If energy rises too strongly, slow down. If anxiety appears, it is an alarm from the nervous system: apply self-pacing and return to a more natural breath.",
+                avance: "The breath stops on its own (natural Kumbhaka) in the ocean of Samyama. The nervous system is so saturated with prana that physical oxygen takes a back seat. Rest in this total respiratory silence."
+            }
         }
     };
 
+    // La Parabole Intégrale, Sans Coupure (Bilingue)
     const parable = {
         fr: {
             title: "Au-delà de la Rivière — Une Parabole sur l’Appel Intérieur",
-            body: `Il y a des lieux où personne n’ose plus aller. Des frontières invisibles, marquées non par des murs, mais par des récits anciens — des récits de peur.<br><br>Dans un village reculé, au cœur de la savane, vivait un jeune homme nommé Kofi. Il n’avait ni la stature des guerriers, ni le prestige des anciens. Mais il portait en lui une question qui ne le quittait jamais : que se cache-t-il au-delà de ce que l’on croit savoir ?<br><br>Un jour, cette question prit chair. La fille du chef, Adwoa, fut frappée d’un mal mystérieux. Les prières, les soins, rien n’y faisait. Le guérisseur consulta les oracles, qui désignèrent un remède oublié : une plante rare, cachée au plus profond de la forêt, de l’autre côté de la rivière sacrée. Mais cette forêt, disaient les anciens, était hantée. Un territoire d’esprits dévoreurs d’âmes, que l’homme sage ne franchit pas.<br><br>Le chef promit richesses et honneurs à quiconque oserait s’y aventurer. Les plus braves reculèrent. La peur, nourrie de récits, était plus forte que la promesse d’or. Tous refusèrent. Tous, sauf Kofi. Il ne demandait rien. Ni gloire, ni récompense. Ce qu’il entendait en lui, c’était ce silence profond, qui ne marchande pas, mais qui dit simplement : avance. Il prit une gourde d’eau, une amulette offerte par sa mère, et marcha vers la rivière. Là, il s’arrêta. L’eau était limpide, mais à ses yeux, elle était autre chose : une frontière symbolique. La limite entre le connu et l’inconnu. Il ferma les yeux. Non pour fuir, mais pour écouter plus loin que ses pensées. Puis il traversa.<br><br>De l’autre côté, la forêt l’enveloppa. Mais il n’y trouva ni esprits, ni cris. Seulement une présence. La terre sous ses pas était dense, vivante. Le vent chantait dans les feuillages. Ce qui devait être un territoire d’ombres était en réalité un sanctuaire oublié.<br><br>Au cœur de cette paix, Kofi rencontra un vieil homme, assis au pied d’un arbre immense. Sa peau semblait sculptée par le temps. Ses yeux portaient la lumière des nuits sans nuages. — Pourquoi viens-tu, marcheur ? demanda-t-il. Kofi raconta son histoire. Le sage écouta, puis montra une plante discrète à ses pieds. — Voici ce que tu cherches. Mais souviens-toi : ce n’est pas la forêt qui dévore les âmes. Ce sont les désirs non maîtrisés des hommes. Les anciens ont semé des récits de peur pour protéger ce lieu sacré de la convoitise. Mais ceux qui viennent avec un cœur pur n’y trouvent rien d’autre que ce qu’ils portent déjà en eux.<br><br>Kofi prit la plante, remercia et repartit. Lorsqu’il franchit à nouveau la rivière, un silence épais s’abattit sur le village. Adwoa fut guérie. Les anciens, d’un regard fuyant, comprirent ce qu’ils avaient oublié. Ce jour-là, le village reçut une vérité simple, qui passa de bouche en bouche : “Les oreilles entendent les peurs des autres, mais seuls les yeux du cœur voient la vérité.”<br><br>Chacun d’entre nous est appelé à s’approcher de cette rivière intérieure. À franchir la frontière des peurs héritées. À entrer dans cette forêt qui, derrière les ombres projetées par notre mental, cache un espace de paix inaltérable. La véritable initiation commence là. La forêt n’a jamais été dangereuse. Ce sont nos histoires qui l’ont rendue hostile. Ce que nous cherchons est en nous, depuis toujours, voilé par le tumulte de nos désirs et de nos résistances.<br><br>Traverse. Écoute. Pratique. Le reste suivra.`,
-            quote: "Traversez. Écoutez. Pratiquez. Le reste suivra."
+            body: `Il y a des lieux où personne n’ose plus aller. Des frontières invisibles, marquées non par des murs, mais par des récits anciens — des récits de peur.<br><br>Dans un village reculé, au cœur de la savane, vivait un jeune homme nommé Kofi. Il n’avait ni la stature des guerriers, ni le prestige des anciens. Mais il portait en lui une question qui ne le quittait jamais : que se cache-t-il au-delà de ce que l’on croit savoir ?<br><br>Un jour, cette question prit chair.<br><br>La fille du chef, Adwoa, fut frappée d’un mal mystérieux. Les prières, les soins, rien n’y faisait. Le guérisseur consulta les oracles, qui désignèrent un remède oublié : une plante rare, cachée au plus profond de la forêt, de l’autre côté de la rivière sacrée. Mais cette forêt, disaient les anciens, était hantée. Un territoire d’esprits dévoreurs d’âmes, que l’homme sage ne franchit pas.<br><br>Le chef promit richesses et honneurs à quiconque oserait s’y aventurer. Les plus braves reculèrent. La peur, nourrie de récits, était plus forte que la promesse d’or.<br><br>Tous refusèrent.<br>Tous, sauf Kofi.<br><br>Il ne demandait rien. Ni gloire, ni récompense. Ce qu’il entendait en lui, c’était ce silence profond, qui ne marchande pas, mais qui dit simplement : avance. Il prit une gourde d’eau, une amulette offerte par sa mère, et marcha vers la rivière. Là, il s’arrêta. L’eau était limpide, mais à ses yeux, elle était autre chose : une frontière symbolique. La limite entre le connu et l’inconnu.<br><br>Il ferma les yeux. Non pour fuir, mais pour écouter plus loin que ses pensées. Puis il traversa.<br><br>De l’autre côté, la forêt l’enveloppa. Mais il n’y trouva ni esprits, ni cris. Seulement une présence. La terre sous ses pas était dense, vivante. Le vent chantait dans les feuillages. Ce qui devait être un territoire d’ombres était en réalité un sanctuaire oublié.<br><br>Au cœur de cette paix, Kofi rencontra un vieil homme, assis au pied d’un arbre immense. Sa peau semblait sculptée par le temps. Ses yeux portaient la lumière des nuits sans nuages.<br><br>— Pourquoi viens-tu, marcheur ? demanda-t-il.<br>Kofi raconta son histoire.<br>Le sage écouta, puis montra une plante discrète à ses pieds.<br><br>— Voici ce que tu cherches. Mais souviens-toi : ce n’est pas la forêt qui dévore les âmes. Ce sont les désirs non maîtrisés des hommes. Les anciens ont semé des récits de peur pour protéger ce lieu sacré de la convoitise. Mais ceux qui viennent avec un cœur pur n’y trouvent rien d’autre que ce qu’ils portent déjà en eux.<br><br>Kofi prit la plante, remercia et repartit. Lorsqu’il franchit à nouveau la rivière, un silence épais s’abattit sur le village. Adwoa fut guérie. Les anciens, d’un regard fuyant, comprirent ce qu’ils avaient oublié.<br><br>Ce jour-là, le village reçut une vérité simple, qui passa de bouche en bouche, mais dont la compréhension appartient à ceux qui osent la vivre :<br><br>“Les oreilles entendent les peurs des autres, mais seuls les yeux du cœur voient la vérité.”<br><br>Chacun d’entre nous est appelé, un jour ou l’autre, à s’approcher de cette rivière intérieure. À franchir la frontière des peurs héritées. À entrer dans cette forêt qui, derrière les ombres projetées par notre mental, cache un espace de paix inaltérable.<br><br>La véritable initiation commence là.<br><br>La forêt n’a jamais été dangereuse. Ce sont nos histoires qui l’ont rendue hostile. Ce que nous cherchons ne se trouve pas ailleurs. Il est en nous, depuis toujours, mais voilé par le tumulte de nos désirs et de nos résistances.<br><br>Traverse. Écoute. Pratique.<br>Le reste suivra.`
         },
         en: {
             title: "Beyond the River — A Parable on the Inner Calling",
-            body: `There are places where no one dares to go anymore. Invisible borders, marked not by walls, but by ancient tales — tales of fear.<br><br>In a remote village lived a young man named Kofi. He had neither the stature of warriors nor the prestige of elders. But he carried within him a question: what lies beyond what we think we know?<br><br>One day, this question took form. The chief's daughter, Adwoa, fell ill. No cure worked. The healer consulted the oracles, who pointed to a forgotten remedy: a rare plant, hidden deep in the forest across the sacred river. But the elders said the forest was haunted, a territory of soul-devouring spirits.<br><br>The chief promised wealth and honors. The bravest retreated. All refused, except Kofi. He asked for nothing. What he heard within was a deep silence that says: move forward. He walked to the river. There, he stopped. The water was a symbolic border between the known and the unknown. He closed his eyes, not to flee, but to listen beyond his thoughts. Then he crossed.<br><br>On the other side, the forest enveloped him. He found no spirits, only a presence. The earth was alive. What was meant to be a land of shadows was a forgotten sanctuary.<br><br>In that peace, Kofi met an old man under a great tree. "Why do you come?" he asked. Kofi told his story. The sage pointed to a plant: "Here is what you seek. But remember: it is not the forest that devours souls. It is the uncontrolled desires of men. The elders sowed fear to protect this place. Those with pure hearts find only what they carry within."<br><br>Kofi took the plant and returned. Adwoa was healed. The elders realized what they had forgotten. That day, the village learned: "Ears hear the fears of others, but only the eyes of the heart see the truth."<br><br>Each of us is called to approach this inner river, to cross inherited fears. To enter the forest that hides an unalterable peace behind the mind's shadows. Real initiation begins there. The forest was never dangerous; our stories made it hostile. What we seek has always been within us, veiled by the noise of our desires and resistances.<br><br>Cross. Listen. Practice. The rest will follow.`,
-            quote: "Cross. Listen. Practice. The rest will follow."
+            body: `There are places where no one dares to go anymore. Invisible borders, marked not by walls, but by ancient tales — tales of fear.<br><br>In a remote village, in the heart of the savanna, lived a young man named Kofi. He had neither the stature of warriors nor the prestige of elders. But he carried within him a question that never left him: what lies beyond what we think we know?<br><br>One day, this question took form.<br><br>The chief's daughter, Adwoa, was struck by a mysterious illness. Prayers and treatments were in vain. The healer consulted the oracles, who pointed to a forgotten remedy: a rare plant, hidden deep in the forest, on the other side of the sacred river. But this forest, the elders said, was haunted. A territory of soul-devouring spirits, which the wise man does not cross.<br><br>The chief promised wealth and honors to anyone who dared venture there. The bravest retreated. Fear, fed by stories, was stronger than the promise of gold.<br><br>All refused.<br>All, except Kofi.<br><br>He asked for nothing. Neither glory nor reward. What he heard within him was that deep silence, which does not bargain, but simply says: move forward. He took a water gourd, an amulet given by his mother, and walked toward the river. There, he stopped. The water was crystal clear, but to his eyes, it was something else: a symbolic border. The limit between the known and the unknown.<br><br>He closed his eyes. Not to flee, but to listen beyond his thoughts. Then he crossed.<br><br>On the other side, the forest enveloped him. But he found neither spirits nor screams. Only a presence. The earth beneath his steps was dense, alive. The wind sang in the leaves. What was supposed to be a territory of shadows was in reality a forgotten sanctuary.<br><br>In the heart of this peace, Kofi met an old man, sitting at the foot of an immense tree. His skin seemed sculpted by time. His eyes carried the light of cloudless nights.<br><br>— Why do you come, walker? he asked.<br>Kofi told his story.<br>The sage listened, then pointed to a discreet plant at his feet.<br><br>— Here is what you seek. But remember: it is not the forest that devours souls. It is the uncontrolled desires of men. The elders sowed tales of fear to protect this sacred place from greed. But those who come with a pure heart find nothing else there but what they already carry within themselves.<br><br>Kofi took the plant, gave thanks, and left. When he crossed the river again, a thick silence fell upon the village. Adwoa was healed. The elders, with a fleeting gaze, understood what they had forgotten.<br><br>That day, the village received a simple truth, which passed from mouth to mouth, but whose understanding belongs to those who dare to live it:<br><br>“Ears hear the fears of others, but only the eyes of the heart see the truth.”<br><br>Each of us is called, one day or another, to approach this inner river. To cross the border of inherited fears. To enter this forest which, behind the shadows projected by our mind, hides a space of unalterable peace.<br><br>True initiation begins there.<br><br>The forest was never dangerous. It is our stories that made it hostile. What we seek is not found elsewhere. It has been within us, always, but veiled by the tumult of our desires and our resistances.<br><br>Cross. Listen. Practice.<br>The rest will follow.`
         }
     };
 
-    function setLanguage(lang) {
-        currentLang = lang;
-        const isEn = lang === 'en';
-        document.getElementById('nav-sage').textContent = isEn ? "THE SAGE" : "LE SAGE";
-        document.getElementById('nav-parabole').textContent = isEn ? "THE PARABLE" : "LA PARABOLE";
-        document.getElementById('nav-podcasts').textContent = isEn ? "TEACHINGS" : "ENSEIGNEMENTS";
-        document.getElementById('nav-contact').textContent = isEn ? "CONTACT" : "CONTACT";
-        
-        document.getElementById('sage-title').textContent = isEn ? "The Temple of Silence" : "Le Temple du Silence";
-        document.getElementById('sage-sub').textContent = isEn ? "Define your practice level for precise guidance." : "Définissez votre niveau de pratique pour une guidance précise.";
-        document.getElementById('sage-btn').textContent = isEn ? "ASK THE SAGE" : "INTERROGER";
-        
-        document.getElementById('opt-deb').textContent = isEn ? "Foundation: Deep Meditation" : "Fondation : Méditation Profonde";
-        document.getElementById('opt-int').textContent = isEn ? "Awakening: Spinal Breathing" : "Éveil : Respiration Spinale";
-        document.getElementById('opt-adv').textContent = isEn ? "Integration: Samyama & Kriyas" : "Intégration : Samyama & Kriyas";
-        
-        document.getElementById('para-main-title').textContent = isEn ? "The Parable" : "La Parabole";
-        document.getElementById('para-title').textContent = parable[lang].title;
-        document.getElementById('parable-body').innerHTML = parable[lang].body;
-        document.getElementById('para-quote').textContent = parable[lang].quote;
-        
-        document.getElementById('pod-title').textContent = isEn ? "The Path of Practice" : "Le Chemin de la Pratique";
-        document.getElementById('pod-intro').textContent = isEn ? "To deepen the technique, the source is immutable:" : "Pour approfondir la technique, la source est immuable :";
-        document.getElementById('link-1').textContent = isEn ? "→ Yogani's Lessons (Original Source)" : "→ Les Leçons de Yogani (Source Originale)";
-        document.getElementById('link-1').href = isEn ? "https://aypsite.org/MainDirectory.htm" : "https://aypsite.org/MainDirectory.htm"; // AYP site is mostly EN, can link to translations if available
-        document.getElementById('link-2').textContent = isEn ? "→ Deep Meditation: The Mantra" : "→ Méditation Profonde : Le Mantra";
-        document.getElementById('link-3').textContent = isEn ? "→ Spinal Breathing: The Circuit" : "→ Respiration Spinale : Le Circuit";
-        document.getElementById('book-placeholder').textContent = isEn ? "Coming Soon: The Lineage Library (Books & Writings)." : "Bientôt : La Bibliothèque de la Lignée (Livres & Écrits).";
-
-        document.getElementById('contact-title').textContent = isEn ? "Letter to the Lineage" : "Lettre à la Lignée";
-        document.getElementById('contact-sub').textContent = isEn ? "A doubt about practice? Write to the Temple Guardian." : "Un doute sur la pratique ? Écrivez au Gardien du Temple.";
-        document.getElementById('contact-btn').textContent = isEn ? "Send" : "Envoyer";
-    }
-
     function askSage() {
-        const q = document.getElementById('user-question').value;
+        const q = document.getElementById('user-question').value.toLowerCase();
         const level = document.getElementById('user-level').value;
         const area = document.getElementById('response-area');
-        if (!q.trim()) return;
-        area.style.opacity = "0.3";
+        
+        // Effet de transition douce (Fondu sortant)
+        area.style.opacity = "0";
+        
         setTimeout(() => {
-            const list = wisdom[currentLang][level];
-            const pick = list[Math.floor(Math.random() * list.length)];
+            let response = currentLang === 'fr' 
+                ? "Le silence est la matrice de la transformation. Continuez de vous asseoir quotidiennement. Le système nerveux ne ment pas : la régularité accomplit tout." 
+                : "Silence is the matrix of transformation. Continue to sit daily. The nervous system does not lie: regularity accomplishes everything.";
+
+            const keywords = {
+                "kundalini": "kundalini",
+                "bandha": "bandha",
+                "mudra": "mudra",
+                "samyama": "samyama",
+                "pranayama": currentLang === 'fr' ? ["pranayama", "respiration", "souffle"] : ["pranayama", "breathing", "breath"],
+                "alimentation": currentLang === 'fr' ? ["alimentation", "régime", "nourriture", "manger"] : ["diet", "food", "eating"]
+            };
+
+            for (let topic in deepWisdom[currentLang]) {
+                const keys = keywords[topic === 'diet' ? 'alimentation' : topic];
+                if (Array.isArray(keys) ? keys.some(k => q.includes(k)) : q.includes(keys)) {
+                    response = deepWisdom[currentLang][topic][level];
+                    break;
+                }
+            }
+
             let prefix = "";
             if (isFirstQuestion) {
                 prefix = currentLang === 'fr' ? "Bienvenue, chercheur. " : "Welcome, seeker. ";
                 isFirstQuestion = false;
             } else {
-                prefix = currentLang === 'fr' ? "La pratique indique : " : "The practice indicates: ";
+                prefix = currentLang === 'fr' ? "L'instructeur observe et enseigne : " : "The instructor observes and teaches: ";
             }
+
+            area.innerHTML = `<strong>${prefix}</strong><br><br>${response}`;
+            // Effet de transition douce (Fondu entrant)
             area.style.opacity = "1";
-            area.innerHTML = `<strong>${prefix}</strong><br>« ${pick} »`;
         }, 800);
+    }
+
+    function setLanguage(lang) {
+        currentLang = lang;
+        const isEn = lang === 'en';
+        
+        // Navigation
+        document.getElementById('nav-sage').textContent = isEn ? "THE SAGE" : "LE SAGE";
+        document.getElementById('nav-parabole').textContent = isEn ? "THE PARABLE" : "LA PARABOLE";
+        document.getElementById('nav-podcasts').textContent = isEn ? "TEACHINGS" : "ENSEIGNEMENTS";
+        document.getElementById('nav-contact').textContent = isEn ? "CONTACT" : "CONTACT";
+        
+        // Sage
+        document.getElementById('sage-title').textContent = isEn ? "The Temple of Silence" : "Le Temple du Silence";
+        document.getElementById('sage-sub').textContent = isEn ? "Define your practice level for precise guidance." : "Définissez votre niveau de pratique pour une guidance précise.";
+        document.getElementById('user-question').placeholder = isEn ? "Ask about Kundalini, Mudras, Diet, Samyama..." : "Interrogez sur la Kundalini, les Mudras, le Régime, le Samyama...";
+        document.getElementById('sage-btn').textContent = isEn ? "INQUIRE" : "INTERROGER";
+        
+        // Levels
+        document.getElementById('opt-none').textContent = isEn ? "None / Fresh Mind" : "Aucun / Curieux";
+        document.getElementById('opt-deb').textContent = isEn ? "Foundation: Deep Meditation" : "Fondation : Méditation Profonde";
+        document.getElementById('opt-int').textContent = isEn ? "Awakening: Spinal Breathing" : "Éveil : Respiration Spinale";
+        document.getElementById('opt-adv').textContent = isEn ? "Integration: Samyama & Kriyas" : "Intégration : Samyama & Kriyas";
+        
+        // Parabole
+        document.getElementById('para-main-title').textContent = isEn ? "The Parable" : "La Parabole";
+        document.getElementById('para-title').textContent = parable[lang].title;
+        document.getElementById('parable-body').innerHTML = parable[lang].body;
+        
+        // Podcasts
+        document.getElementById('pod-title').textContent = isEn ? "The Path of Practice" : "Le Chemin de la Pratique";
+        document.getElementById('pod-intro').textContent = isEn ? "To deepen the technique, the source is immutable:" : "Pour approfondir la technique, la source est immuable :";
+        document.getElementById('pod-link').textContent = isEn ? "→ Yogani's Lessons (Original Source)" : "→ Les Leçons de Yogani (Source Originale)";
+        document.getElementById('book-placeholder').textContent = isEn ? "Coming Soon: The Library." : "Bientôt : La Bibliothèque de la Lignée (Livres & Écrits).";
+        
+        // Contact
+        document.getElementById('contact-title').textContent = isEn ? "Letter to the Lineage" : "Lettre à la Lignée";
+        document.getElementById('contact-sub').textContent = isEn ? "A doubt? Write to the Temple Guardian." : "Un doute ? Écrivez au Gardien du Temple.";
+        document.getElementById('contact-name').placeholder = isEn ? "Your name" : "Votre nom";
+        document.getElementById('contact-msg').placeholder = isEn ? "Your message..." : "Votre message...";
+        document.getElementById('contact-btn').textContent = isEn ? "Send" : "Envoyer";
+        
+        // Footer
+        document.getElementById('footer-text').innerHTML = isEn ? "PROPERTY & LINEAGE 🪷 ॐ | PASSERSBY: <span id='count'>0000</span>" : "PROPRIÉTÉ & LIGNÉE 🪷 ॐ | PASSANTS : <span id='count'>0000</span>";
     }
 
     function showSection(id) {
@@ -254,10 +328,10 @@
         document.getElementById(id).style.display = 'block';
     }
 
-    window.onload = function() {
-        setLanguage('fr');
+    window.onload = () => { 
+        setLanguage('fr'); 
         showSection('sage');
-        let count = localStorage.getItem('visits') || 1;
+        let count = localStorage.getItem('visits') || 0;
         localStorage.setItem('visits', ++count);
         document.getElementById('count').textContent = count.toString().padStart(4, '0');
     };

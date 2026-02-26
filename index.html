@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Temple du Silence - AYP</title>
+    
+    <title>Le Temple du Silence - Chemin AYP</title>
+    <meta name="description" content="Sanctuaire dédié à la pratique de la Méditation Profonde, de la Respiration Spinale et du Samyama. Explorez la mécanique de l'extase et de l'auto-rythme.">
+    <meta property="og:title" content="Le Temple du Silence - Lignée AYP">
+    <meta property="og:description" content="Découvrez les enseignements du silence intérieur, guidé par la mécanique du système nerveux.">
+    <meta property="og:image" content="kofi.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="theme-color" content="#0a0a0c">
+    <link rel="apple-touch-icon" href="signature-ayp.png">
+    <link rel="manifest" href="manifest.json">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +29,7 @@
             text-align: center;
             overflow-x: hidden;
             background-color: #000;
+            transition: background-color 0.8s ease;
         }
 
         /* --- Fond Vivant (Slow Zoom) --- */
@@ -28,6 +40,7 @@
             background-size: cover;
             z-index: -3;
             animation: slowZoom 60s alternate infinite ease-in-out;
+            transition: opacity 1s ease;
         }
 
         @keyframes slowZoom {
@@ -41,6 +54,7 @@
             top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.82); 
             z-index: -2;
+            transition: opacity 1s ease;
         }
 
         /* --- Particules de Silence --- */
@@ -52,6 +66,7 @@
             pointer-events: none;
             z-index: -1;
             animation: floatUp linear infinite;
+            transition: opacity 0.5s ease;
         }
 
         @keyframes floatUp {
@@ -62,7 +77,7 @@
         }
 
         /* --- Navigation --- */
-        nav { background: rgba(0,0,0,0.92); padding: 15px 20px; border-bottom: 1px solid rgba(212,175,55,0.25); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; }
+        nav { background: rgba(0,0,0,0.92); padding: 15px 20px; border-bottom: 1px solid rgba(212,175,55,0.25); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; transition: opacity 0.8s ease; }
         .nav-brand { color:#d4af37; font-weight:700; letter-spacing:3px; font-family: 'Cinzel', serif; }
         .nav-links { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
         .nav-links a { color: #ffffff; text-decoration: none; font-weight: 600; cursor: pointer; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; font-family: 'Cinzel', serif;}
@@ -83,6 +98,7 @@
             backdrop-filter: blur(4px);
             text-align: justify;
             display: none;
+            transition: all 0.8s ease;
         }
         
         h1, h2, h3 { color: #d4af37; letter-spacing: 2px; text-align: center; font-family: 'Cinzel', serif; }
@@ -112,12 +128,25 @@
             box-shadow: 0 0 15px rgba(43, 87, 229, 0.8), 0 0 30px rgba(43, 87, 229, 0.4); 
         }
 
+        /* --- Mode Zen --- */
+        .zen-btn {
+            background: none; border: 1px solid #d4af37; color: #d4af37; 
+            padding: 8px 15px; border-radius: 20px; cursor: pointer; 
+            font-family: 'Cinzel', serif; font-size: 0.9rem; transition: 0.3s; 
+            display: flex; align-items: center; gap: 8px; margin: 0 auto 30px auto;
+        }
+        .zen-btn:hover { background: #d4af37; color: #000; }
+        
+        body.zen-active #bg-image { opacity: 0.05; }
+        body.zen-active nav, body.zen-active footer, body.zen-active .signature-area, body.zen-active .particle { opacity: 0; pointer-events: none; }
+        body.zen-active .container { background: rgba(5, 5, 8, 0.95); border-color: transparent; box-shadow: none; max-width: 800px; }
+
         /* --- Audio Players --- */
         audio { width: 100%; margin-top: 15px; border-radius: 30px; outline: none; }
 
         /* --- Section Podcasts --- */
         .podcast-item { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid rgba(212,175,55,0.2); }
-        .transcript-btn { background: none; border: 1px solid #d4af37; color: #d4af37; padding: 8px 20px; border-radius: 20px; cursor: pointer; margin-top: 15px; font-family: 'Cinzel', serif; font-size: 0.8rem; transition: 0.3s; }
+        .transcript-btn { background: none; border: 1px solid #d4af37; color: #d4af37; padding: 8px 20px; border-radius: 20px; cursor: pointer; margin-top: 15px; font-family: 'Cinzel', serif; font-size: 0.8rem; transition: 0.3s; display: block; margin-left: auto; margin-right: auto; }
         .transcript-btn:hover { background: #d4af37; color: #000; }
         .transcript-content { display: none; margin-top: 20px; font-size: 1.15rem; line-height: 1.8; color: #d0d0d0; background: rgba(0,0,0,0.4); padding: 20px; border-radius: 8px; border-left: 3px solid #d4af37; }
 
@@ -126,29 +155,35 @@
             text-align: center; margin-top: 50px; font-style: italic; color: #ffffff; font-size: 1.2rem; letter-spacing: 1px; opacity: 0.9;
         }
 
-        /* --- Réponse du Sage --- */
+        /* --- Mémoire du Sage --- */
         #response-area {
-            margin-top: 40px; font-style: italic; color: #d4af37; font-size: 1.35rem; 
-            min-height: 150px; text-align: justify; padding: 0 5%; line-height: 1.7;
-            opacity: 1; transition: opacity 0.8s ease-in-out;
+            margin-top: 40px; text-align: justify; padding: 0 5%;
+        }
+        .sage-response {
+            font-style: italic; color: #d4af37; font-size: 1.4rem; line-height: 1.8;
+            padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid rgba(212,175,55,0.1);
+            transition: all 1s ease-in-out;
+        }
+        .sage-response:last-child { border-bottom: none; }
+        .sage-response.faded {
+            opacity: 0.35; font-size: 1.1rem; color: #b5b5b5; transform: translateY(10px);
         }
 
-        .signature-area { margin: 50px 0; display: flex; justify-content: center; }
+        .signature-area { margin: 50px 0; display: flex; justify-content: center; transition: opacity 0.8s ease; }
         .signature-area img { width: 140px; filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.4)); opacity: 0.9; }
         
-        footer { padding: 30px; color: #d4af37; font-size: 0.9rem; font-family: 'Cinzel', serif; border-top: 1px solid rgba(212,175,55,0.1); letter-spacing: 1px; text-align: center; }
+        footer { padding: 30px; color: #d4af37; font-size: 0.9rem; font-family: 'Cinzel', serif; border-top: 1px solid rgba(212,175,55,0.1); letter-spacing: 1px; text-align: center; transition: opacity 0.8s ease; }
 
         @media (max-width: 768px) {
             nav { flex-direction: column; gap: 10px; }
             .container { width: 95%; padding: 25px; margin-top: 30px; }
-            #response-area { font-size: 1.15rem; padding: 0; text-align: left; }
+            .sage-response { font-size: 1.2rem; }
         }
     </style>
 </head>
 <body>
 
     <div id="bg-image"></div>
-
     <audio id="sage-resonance" src="resonance.mp3" loop preload="auto"></audio>
 
     <nav>
@@ -172,6 +207,7 @@
     </div>
 
     <div class="container" id="parabole">
+        <button class="zen-btn" onclick="toggleZen()">👁️ <span class="zen-text">Mode Zen</span></button>
         <h1 id="para-main-title">La Parabole</h1>
         <h2 id="para-title" style="font-style:italic; font-size: 1.4rem;">Au-delà de la Rivière</h2>
         <audio id="parable-audio" controls src="parabole.mp3"></audio>
@@ -188,25 +224,9 @@
     </div>
 
     <div class="container" id="podcasts">
+        <button class="zen-btn" onclick="toggleZen()">👁️ <span class="zen-text">Mode Zen</span></button>
         <h1 id="podcast-main-title">Podcasts de la Lignée</h1>
-        
-        <div class="podcast-item">
-            <h3>1. La Mécanique de l'Extase</h3>
-            <audio controls src="podcast1.mp3"></audio>
-            <button class="transcript-btn" onclick="toggleTranscript('trans1')">LIRE LA TRANSCRIPTION</button>
-            <div id="trans1" class="transcript-content">
-                Ceci est l'espace réservé pour le texte orthographié du podcast. L'administrateur du site peut y insérer le contenu intégral. Le silence intérieur s'installe non par l'effort, mais par la régularité...
-            </div>
-        </div>
-
-        <div class="podcast-item">
-            <h3>2. L'Art du Self-Pacing (Auto-Rythme)</h3>
-            <audio controls src="podcast2.mp3"></audio>
-            <button class="transcript-btn" onclick="toggleTranscript('trans2')">LIRE LA TRANSCRIPTION</button>
-            <div id="trans2" class="transcript-content">
-                Insérez ici la transcription du deuxième épisode. Il abordera l'importance vitale de l'écoute du système nerveux pendant les pratiques avancées...
-            </div>
-        </div>
+        <div id="podcast-list-container"></div>
     </div>
 
     <div class="container" id="contact">
@@ -232,10 +252,76 @@
     let isFirstQuestion = true;
     let lastTopic = ""; 
     let typingTimeout; 
+    let isZen = false;
 
     /* ==========================
-       GÉNÉRATION DES PARTICULES
+       FONCTION MODE ZEN
     ========================== */
+    function toggleZen() {
+        isZen = !isZen;
+        if(isZen) {
+            document.body.classList.add('zen-active');
+        } else {
+            document.body.classList.remove('zen-active');
+        }
+    }
+
+    /* ==========================
+       MINI-CMS : BASE DE DONNÉES PODCASTS
+    ========================== */
+    const PODCASTS_DATABASE = {
+        fr: [
+            {
+                title: "La Mécanique de l'Extase",
+                audioFile: "podcast_fr_1.mp3",
+                transcript: "Ceci est la transcription intégrale du premier podcast. Le silence intérieur s'installe non par l'effort, mais par la régularité biquotidienne..."
+            }
+        ],
+        en: [
+            {
+                title: "The Mechanics of Ecstasy",
+                audioFile: "podcast_en_1.mp3",
+                transcript: "This is the full transcript of the first podcast. Inner silence settles not through effort, but through twice-daily regularity..."
+            }
+        ]
+    };
+
+    function renderPodcasts() {
+        const container = document.getElementById("podcast-list-container");
+        container.innerHTML = ""; 
+        const currentPodcasts = PODCASTS_DATABASE[currentLang];
+        const btnText = currentLang === 'fr' ? "LIRE LA TRANSCRIPTION" : "READ TRANSCRIPT";
+
+        if (currentPodcasts.length === 0) {
+            container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${currentLang === 'fr' ? "Bientôt disponible." : "Coming soon."}</p>`;
+            return;
+        }
+
+        currentPodcasts.forEach((pod, index) => {
+            const podHTML = `
+                <div class="podcast-item">
+                    <h3>${index + 1}. ${pod.title}</h3>
+                    <audio controls src="${pod.audioFile}"></audio>
+                    <button class="transcript-btn" onclick="toggleTranscript('trans_${currentLang}_${index}')">${btnText}</button>
+                    <div id="trans_${currentLang}_${index}" class="transcript-content">
+                        ${pod.transcript}
+                    </div>
+                </div>
+            `;
+            container.innerHTML += podHTML;
+        });
+    }
+
+    function toggleTranscript(id) {
+        const el = document.getElementById(id);
+        if(el.style.display === "none" || el.style.display === "") {
+            el.style.display = "block";
+            el.style.animation = "opacity 0.5s ease";
+        } else {
+            el.style.display = "none";
+        }
+    }
+
     function createParticles() {
         const numParticles = 40;
         const body = document.body;
@@ -249,19 +335,6 @@
             p.style.animationDuration = (Math.random() * 10 + 15) + 's';
             p.style.animationDelay = (Math.random() * 10) + 's';
             body.appendChild(p);
-        }
-    }
-
-    /* ==========================
-       FONCTION TRANSCRIPTION
-    ========================== */
-    function toggleTranscript(id) {
-        const el = document.getElementById(id);
-        if(el.style.display === "none" || el.style.display === "") {
-            el.style.display = "block";
-            el.style.animation = "opacity 0.5s ease";
-        } else {
-            el.style.display = "none";
         }
     }
 
@@ -280,51 +353,51 @@
     };
 
     /* ==========================
-       CERVEAU MODULAIRE DU SAGE
+       CERVEAU DU SAGE (Poétique & Scientifique)
     ========================== */
     const sageBrain = {
         fr: {
             vague: {
-                core: ["La méditation ne cherche pas d'expérience éclatante, elle cultive une stabilité profonde.", "Le silence intérieur s'installe non par l'effort, mais par l'abandon doux au mantra."],
-                science: ["Les neurosciences confirment que cette simplicité active le réseau du mode par défaut, permettant au cerveau de se régénérer.", "La recherche montre qu'une assise immobile abaisse drastiquement la fréquence cardiaque et favorise le système parasympathique."],
-                pacing: ["Asseyez-vous sans attente. La constance transforme le système nerveux plus sûrement que toute intensité.", "Laissez le processus se faire. L'auto-rythme est le gardien de votre évolution."]
+                core: ["L'arbre le plus majestueux tire sa force de ses racines immobiles enfouies dans l'obscurité. La méditation n'est pas une quête de lumière aveuglante, mais un retour à cette terre silencieuse où tout prend naissance.", "Le silence intérieur ne se capture pas par la force. Il s'installe délicatement, comme la rosée du matin, lorsque l'on s'abandonne doucement au mantra."],
+                science: ["Même les érudits de ce temps découvrent que cette immobilité n'est pas un vide, mais un baume. En cessant la lutte, le système nerveux se baigne dans ses propres eaux calmes, réparant les blessures de l'agitation.", "La recherche confirme qu'une assise immobile abaisse la fréquence cardiaque, ouvrant grand les portes du système nerveux parasympathique, là où réside la véritable guérison."],
+                pacing: ["Ne forcez pas le fleuve à couler plus vite. Asseyez-vous, chaque jour. La goutte d'eau qui tombe avec régularité finit par percer la pierre la plus dure.", "Laissez la nature accomplir son œuvre. L'auto-rythme est le gardien bienveillant de votre évolution."]
             },
             kundalini: {
-                core: ["L'énergie Kundalini est l'éveil de la conductivité naturelle de votre nerf spinal.", "Ne poursuivez pas les frissons de l'extase. Ils sont un sous-produit du silence qui polit vos canaux."],
-                science: ["La neurobiologie contemporaine voit ce processus comme une neuroplasticité accélérée, réorganisant en profondeur le nerf vague.", "Ce que les yogis appellent l'éveil correspond à une synchronisation cohérente des ondes cérébrales."],
-                pacing: ["Si l'irritabilité ou la chaleur s'accumule, arrêtez la pratique. Reposez-vous, mangez lourd. L'auto-rythme est la loi absolue.", "Le secret de l'intégration est la douceur. Ne forcez jamais le système nerveux."]
+                core: ["La Kundalini est le serpent de feu sacré qui dort à la base de ta montagne intérieure. Ne cherche pas à le réveiller par la violence de ton ego, laisse le silence l'inviter à s'élever.", "Ne poursuis pas les frissons aveuglants de l'extase. Ils ne sont que le sous-produit de l'eau claire qui polit enfin tes canaux."],
+                science: ["Ce feu intérieur est la pure conductivité de tes nerfs, une réorganisation profonde de tes voies subtiles, que la science moderne observe comme la danse plastique du cerveau et du nerf vague.", "Ce que les anciens yogis appelaient l'éveil correspond à une magnifique synchronisation cohérente des ondes cérébrales à travers le corps."],
+                pacing: ["Mais prends garde, voyageur. Si la chaleur te consume ou si l'esprit s'embrase, tu dois t'arrêter. Mange les fruits lourds de la terre et repose-toi. Le feu doit réchauffer le foyer, non l'incendier.", "Le secret de la pleine intégration est une infinie douceur. N'enfonce jamais les portes de ton propre temple nerveux."]
             },
             samyama: {
-                core: ["Le Samyama consiste à laisser tomber un sutra dans le vide de l'esprit, puis à s'en détacher.", "Dans le Samyama, l'intellect ne fait rien. C'est le silence qui orchestre la création."],
-                science: ["C'est une mécanique similaire à la superposition quantique : observer fige la particule, l'oubli permet l'expansion de l'onde.", "Lâcher prise permet aux processus végétatifs de traiter l'information bien au-delà de nos capacités frontales."],
-                pacing: ["Si des maux de tête surviennent, vous forcez le sutra. Relâchez immédiatement.", "N'attendez aucun résultat immédiat. L'auto-rythme exige un abandon total de l'intention."]
+                core: ["Le Samyama est le murmure du vent dans une vallée silencieuse. Tu déposes une graine de pensée dans la terre de la conscience pure, puis, tu t'éloignes sans te retourner.", "Dans le silence du Samyama, l'intellect s'efface. L'attente est le poison de la manifestation ; seul l'oubli permet à la magie d'opérer."],
+                science: ["C'est une mécanique vertigineuse, semblable à la physique quantique : l'observation force et fige la particule, l'oubli bienveillant permet l'expansion majestueuse de l'onde.", "Ce lâcher-prise total permet à tes processus végétatifs et inconscients de tisser la réalité bien au-delà des fragiles limites de ta cognition frontale."],
+                pacing: ["Si une douleur étreint ton front, c'est que ton esprit tente d'arracher la graine pour la faire éclore. Relâche ton emprise immédiatement.", "N'attends aucun prodige dans l'instant. L'auto-rythme exige un abandon absolu. Seul le vide permet au miracle de s'accomplir à sa propre heure."]
             },
             respiration: {
-                core: ["La Respiration Spinale purifie le Sushumna. Tracez le fil de lumière du périnée au centre du crâne.", "Le souffle lent et fin est le prélude nécessaire à la méditation profonde."],
-                science: ["Cette technique module puissamment le tonus vagal et équilibre le rythme cardiaque, créant un pont corps-esprit.", "La recherche sur la variabilité de la fréquence cardiaque confirme que ce rythme optimise les fluides cérébro-spinaux."],
-                pacing: ["Si l'anxiété monte, c'est un avertissement nerveux. Réduisez le temps de respiration.", "Rien ne doit être forcé. Appliquez l'auto-rythme au moindre signe de friction."]
+                core: ["Le souffle est le pont invisible entre ton esprit égaré et ton âme éveillée. Par la Respiration Spinale, tu tires un fil d'or et de soie du fondement de ton être jusqu'à ta couronne.", "Cette inspiration lente et infiniment fine est le prélude obligatoire, elle balaye la poussière avant l'entrée dans le grand temple de la méditation."],
+                science: ["Ce va-et-vient conscient apaise les tempêtes du cœur, module ton tonus vagal et synchronise ton rythme biologique avec celui de l'univers.", "L'observation de la fréquence cardiaque confirme que cette lenteur majestueuse optimise et harmonise la danse de tes fluides cérébro-spinaux."],
+                pacing: ["Si l'angoisse vient brouiller ton souffle, c'est que tu tires trop fort sur le fil. Sois doux comme la brise du soir.", "L'auto-rythme est la boussole infaillible qui te ramène toujours sur la voie de la paix. Ne retiens jamais ton souffle si ton corps te supplie de respirer."]
             }
         },
         en: {
             vague: {
-                core: ["Meditation does not seek spectacular experiences; it cultivates deep stability.", "Inner silence settles not through effort, but through gentle surrender to the mantra."],
-                science: ["Neuroscience confirms that this simplicity activates the default mode network, allowing the brain to regenerate.", "Research shows that sitting still drastically lowers heart rate and shifts you into the parasympathetic nervous system."],
-                pacing: ["Sit without expectations. Consistency transforms the nervous system more safely than intensity.", "Let the process unfold. Self-pacing is the guardian of your evolution."]
+                core: ["The most majestic tree draws its strength from its still roots buried in the dark. Meditation is not a quest for blinding light, but a return to this silent earth where all things are born.", "Inner silence cannot be captured by force. It settles delicately, like morning dew, when one gently surrenders to the mantra."],
+                science: ["Even the scholars of this age discover that stillness is not an emptiness, but a balm. By ceasing the struggle, the nervous system bathes in its own calm waters, repairing the wounds of restlessness.", "Research confirms that sitting still drastically lowers the heart rate, throwing wide open the doors of the parasympathetic nervous system, where true healing resides."],
+                pacing: ["Do not force the river to flow faster. Sit, every day. The drop of water falling with regularity eventually pierces the hardest stone.", "Let nature perform its work. Self-pacing is the benevolent guardian of your evolution."]
             },
             kundalini: {
-                core: ["Kundalini energy is the awakening of the natural conductivity in your spinal nerve.", "Do not chase the shivers of ecstasy. They are a byproduct of silence polishing your channels."],
-                science: ["Contemporary neurobiology views this process as accelerated neuroplasticity, profoundly reorganizing the vagus nerve.", "What yogis call awakening corresponds to a coherent synchronization of brainwaves."],
-                pacing: ["If irritability or heat accumulates, stop the practice. Rest, eat heavy foods. Self-pacing is absolute.", "The secret of integration is gentleness. Never force the nervous system."]
+                core: ["Kundalini is the sacred fire sleeping at the base of your inner mountain. Do not seek to awaken it through the violence of your ego; let silence gently invite it to rise.", "Do not chase the blinding shivers of ecstasy. They are merely the byproduct of clear water finally polishing your inner channels."],
+                science: ["This inner fire is the pure conductivity of your nerves, a profound reorganization of your subtle pathways that modern science observes as the plastic dance of the brain and vagus nerve.", "What the ancient yogis called awakening corresponds to a magnificent, coherent synchronization of brainwaves throughout the entire body."],
+                pacing: ["But beware, traveler. If heat consumes you or the mind catches fire, you must stop. Eat the heavy fruits of the earth and rest. The fire must warm the hearth, not burn it down.", "The secret of full integration is infinite gentleness. Never kick down the doors of your own nervous temple."]
             },
             samyama: {
-                core: ["Samyama is about dropping a seed-thought into the void of the mind, and then letting it go.", "In Samyama, the intellect does nothing. It is silence that orchestrates creation."],
-                science: ["It is akin to quantum superposition: observing collapses the particle; forgetting allows the wave to expand.", "Letting go allows vegetative processes to handle information far beyond our frontal limits."],
-                pacing: ["If headaches occur, you are forcing the sutra. Immediately release your attention.", "Expect no immediate results. Self-pacing requires total surrender of intention."]
+                core: ["Samyama is the whisper of the wind in a silent valley. You drop a seed of thought into the soil of pure consciousness, and then walk away without looking back.", "In the silence of Samyama, the intellect steps aside. Expectation is the poison of manifestation; only forgetting allows the magic to work."],
+                science: ["It is a dizzying mechanic, akin to quantum physics: observation forces and freezes the particle, while benevolent forgetting allows the majestic expansion of the wave.", "This total letting go allows your vegetative and unconscious processes to weave reality far beyond the fragile limits of your frontal cognition."],
+                pacing: ["If a pain grips your forehead, your mind is trying to tear the seed open. Release your grip immediately.", "Expect no prodigy in the moment. Self-pacing requires absolute surrender. Only emptiness allows the miracle to unfold at its own appointed hour."]
             },
             respiration: {
-                core: ["Spinal Breathing purifies the Sushumna. Trace the thread of light from the perineum to the skull.", "Slow, fine breathing is the necessary prelude to deep meditation."],
-                science: ["This technique powerfully modulates vagal tone, creating a direct bridge between body and mind.", "Research on heart rate variability confirms that this rhythm optimizes cerebrospinal fluids."],
-                pacing: ["If anxiety rises, it is a nervous warning. Reduce breathing time.", "Nothing must be forced. Apply self-pacing at the slightest sign of friction."]
+                core: ["Breath is the invisible bridge between your wandering mind and your awakened soul. With Spinal Breathing, you draw a thread of gold and silk from the root of your being to your crown.", "This slow, infinitely fine breath is the mandatory prelude; it sweeps the dust away before entering the great temple of meditation."],
+                science: ["This conscious ebb and flow calms the storms of the heart, modulates your vagal tone, and synchronizes your biological rhythm with that of the universe.", "Heart rate variability observation confirms that this majestic slowness optimizes and harmonizes the dance of your cerebrospinal fluids."],
+                pacing: ["If anxiety comes to blur your breath, you are pulling the thread too hard. Be gentle like the evening breeze.", "Self-pacing is the infallible compass that always brings you back to the path of peace. Never hold your breath if your body begs to breathe."]
             }
         }
     };
@@ -340,61 +413,81 @@
         
         if (!q.trim()) return;
 
-        clearTimeout(typingTimeout);
-        area.style.opacity = 0; 
+        const oldResponses = area.querySelectorAll('.sage-response');
+        oldResponses.forEach(el => el.classList.add('faded'));
         
-        // Démarre la résonance audio
+        if (oldResponses.length >= 3) {
+            oldResponses[oldResponses.length - 1].remove();
+        }
+
+        clearTimeout(typingTimeout);
+        
         resonance.volume = 0.15;
         let playPromise = resonance.play();
         if (playPromise !== undefined) {
-            playPromise.catch(error => console.log("L'audio a été bloqué par le navigateur (interaction requise)."));
+            playPromise.catch(error => console.log("L'audio a été bloqué par le navigateur."));
         }
 
-        setTimeout(() => {
-            let topic = "vague";
-            if (q.includes("kundalini") || q.includes("energie") || q.includes("energy")) topic = "kundalini";
-            else if (q.includes("samyama") || q.includes("sutra") || q.includes("intention")) topic = "samyama";
-            else if (q.includes("respiration") || q.includes("pranayama") || q.includes("breathing") || q.includes("souffle")) topic = "respiration";
+        let topic = "vague";
+        if (q.includes("kundalini") || q.includes("energie") || q.includes("energy")) topic = "kundalini";
+        else if (q.includes("samyama") || q.includes("sutra") || q.includes("intention")) topic = "samyama";
+        else if (q.includes("respiration") || q.includes("pranayama") || q.includes("breathing") || q.includes("souffle")) topic = "respiration";
 
-            let b = sageBrain[currentLang][topic];
-            let fullResponse = `${getRandom(b.core)}<br><br>${getRandom(b.science)}<br><br>${getRandom(b.pacing)}`;
+        let b = sageBrain[currentLang][topic];
+        let fullResponse = `${getRandom(b.core)}<br><br>${getRandom(b.science)}<br><br>${getRandom(b.pacing)}`;
 
-            let prefix = isFirstQuestion 
-                ? (currentLang === "fr" ? "Bienvenue, chercheur." : "Welcome, seeker.") 
-                : (currentLang === "fr" ? "Écoutez ceci :" : "Listen closely:");
-            isFirstQuestion = false;
+        // Suffixe poétique aléatoire
+        let suffix = "";
+        if (currentLang === 'fr') {
+            suffix = Math.random() > 0.5 ? "La patience est l'eau douce qui nourrit la graine." : "Acceptez le mystère de votre propre lenteur.";
+        } else {
+            suffix = Math.random() > 0.5 ? "Patience is the sweet water that nourishes the seed." : "Embrace the mystery of your own slowness.";
+        }
+        fullResponse += `<br><br><em>${suffix}</em>`;
 
-            area.innerHTML = `<strong>${prefix}</strong><br><br>« `;
-            area.style.opacity = 1; 
-            
-            let i = 0;
-            function typeWriter() {
-                if (i < fullResponse.length) {
-                    if (fullResponse.substring(i, i+4) === "<br>") {
-                        area.innerHTML += "<br>";
-                        i += 4;
-                    } else {
-                        area.innerHTML += fullResponse.charAt(i);
-                        i++;
-                    }
+        let prefix = isFirstQuestion 
+            ? (currentLang === "fr" ? "Bienvenue, voyageur." : "Welcome, traveler.") 
+            : (currentLang === "fr" ? "Écoutez ceci :" : "Listen closely:");
+        isFirstQuestion = false;
 
-                    let delay = 35; 
-                    let lastChar = fullResponse.charAt(i-1);
-                    if (['.', '!', '?'].includes(lastChar)) delay = 600; 
-                    if (lastChar === ',') delay = 250; 
-
-                    typingTimeout = setTimeout(typeWriter, delay);
+        const newResp = document.createElement('div');
+        newResp.className = 'sage-response';
+        newResp.innerHTML = `<strong>${prefix}</strong><br><br>« `;
+        
+        area.prepend(newResp);
+        
+        let i = 0;
+        function typeWriter() {
+            if (i < fullResponse.length) {
+                if (fullResponse.substring(i, i+4) === "<br>") {
+                    newResp.innerHTML += "<br>";
+                    i += 4;
+                } else if (fullResponse.substring(i, i+4) === "<em>") {
+                    newResp.innerHTML += "<em>";
+                    i += 4;
+                } else if (fullResponse.substring(i, i+5) === "</em>") {
+                    newResp.innerHTML += "</em>";
+                    i += 5;
                 } else {
-                    area.innerHTML += " »"; 
-                    // Stoppe l'audio doucement à la fin
-                    let fadeOut = setInterval(() => {
-                        if(resonance.volume > 0.05) resonance.volume -= 0.05;
-                        else { clearInterval(fadeOut); resonance.pause(); }
-                    }, 200);
+                    newResp.innerHTML += fullResponse.charAt(i);
+                    i++;
                 }
+
+                let delay = 35; 
+                let lastChar = fullResponse.charAt(i-1);
+                if (['.', '!', '?'].includes(lastChar)) delay = 600; 
+                if (lastChar === ',') delay = 250; 
+
+                typingTimeout = setTimeout(typeWriter, delay);
+            } else {
+                newResp.innerHTML += " »"; 
+                let fadeOut = setInterval(() => {
+                    if(resonance.volume > 0.05) resonance.volume -= 0.05;
+                    else { clearInterval(fadeOut); resonance.pause(); }
+                }, 200);
             }
-            typeWriter(); 
-        }, 800); 
+        }
+        typeWriter(); 
     }
 
     function toggleLanguage() {
@@ -427,15 +520,18 @@
         document.getElementById("book-placeholder").textContent = isEn ? "Coming soon: The Lineage Library." : "Bientôt : La Bibliothèque de la Lignée.";
 
         document.getElementById("podcast-main-title").textContent = isEn ? "Lineage Podcasts" : "Podcasts de la Lignée";
-        document.querySelectorAll(".transcript-btn").forEach(btn => {
-            btn.textContent = isEn ? "READ TRANSCRIPT" : "LIRE LA TRANSCRIPTION";
-        });
+        
+        document.querySelectorAll(".zen-text").forEach(el => el.textContent = isEn ? "Zen Mode" : "Mode Zen");
 
         document.getElementById("contact-title").textContent = isEn ? "Contact" : "Contact";
         document.getElementById("contact-sub").textContent = isEn ? "Any doubt? Write to the Temple Guardian." : "Un doute sur la pratique ? Écrivez au Gardien du Temple.";
         document.getElementById("contact-name").placeholder = isEn ? "Your name" : "Votre nom";
         document.getElementById("contact-msg").placeholder = isEn ? "Your message..." : "Votre message...";
         document.getElementById("contact-btn").textContent = isEn ? "SEND" : "ENVOYER";
+
+        document.getElementById("footer-text").innerHTML = isEn ? "PROPERTY & LINEAGE 🪷 ॐ" : "PROPRIÉTÉ & LIGNÉE 🪷 ॐ";
+
+        renderPodcasts();
 
         clearTimeout(typingTimeout);
         document.getElementById("response-area").innerHTML = "";
@@ -452,7 +548,6 @@
         setLanguage("fr");
         showSection("sage");
         
-        // Système de compteur de visiteurs
         let count = localStorage.getItem('visits') || 0;
         localStorage.setItem('visits', ++count);
         document.getElementById('count').textContent = count.toString().padStart(4, '0');

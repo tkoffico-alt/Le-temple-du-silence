@@ -464,7 +464,7 @@
                 science: ["Cette union anatomique ferme le circuit entre le canal central et le cerveau glandulaire, inondant le corps d'endorphines.", "En stimulant directement les plexus supérieurs, Kechari pacifie instantanément le chaos du système nerveux sympathique."],
                 pacing: ["Si la tension est trop vive, redescends la langue. La porte s'ouvrira quand les charnières seront prêtes.", "La douceur est la clé des royaumes supérieurs. Laisse le temps fondre les dernières barrières."]
             },
-            universel: { /* NO NOUVEAU THEME: LA SAGESSE UNIVERSELLE */
+            universel: { 
                 core: [
                     "La véritable sagesse commence là où s'arrêtent nos certitudes. Questionner l'existence, c'est déjà y participer pleinement.",
                     "Nous ne voyons pas le monde tel qu'il est, mais tel que nous sommes. Éclaircir son propre regard, c'est illuminer l'univers.",
@@ -646,12 +646,12 @@
         document.getElementById("nav-podcasts").textContent = isEn ? "PODCASTS" : "PODCASTS";
         document.getElementById("nav-contact").textContent = isEn ? "CONTACT" : "CONTACT";
         
-        document.getElementById("sage-title").textContent = isEn ? "The Temple of Silence" : "Le Temple of Silence";
+        document.getElementById("sage-title").textContent = isEn ? "The Temple of Silence" : "Le Temple du Silence";
         document.getElementById("user-question").placeholder = isEn ? "Ask your question (Samyama, Kundalini...)" : "Posez votre question (Samyama, Kundalini...)";
         document.getElementById("sage-btn").textContent = isEn ? "INQUIRE" : "INTERROGER";
         document.getElementById("silence-quote").textContent = isEn ? "Regularity is the bed of silence." : "La régularité est le lit du silence.";
         
-        updateThemeButton();
+        updateThemeButton(); // S'assure que le bouton thème traduit aussi sa langue au clic
 
         document.getElementById("para-main-title").textContent = isEn ? "The Parable" : "La Parabole";
         document.getElementById("para-title").textContent = parableData[lang].title;

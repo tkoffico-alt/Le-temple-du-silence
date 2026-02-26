@@ -34,10 +34,10 @@
         }
 
         body.theme-clarte {
-            --fond-voile: rgba(245, 245, 240, 0.88); /* Voile lumineux doux */
+            --fond-voile: rgba(245, 245, 240, 0.88);
             --texte-principal: #1a1a1a;
             --texte-secondaire: #2c2c2c;
-            --couleur-accent: #b8860b; /* Or légèrement plus sombre pour le contraste */
+            --couleur-accent: #b8860b;
             --fond-conteneur: rgba(255, 255, 255, 0.65);
             --fond-nav: rgba(245, 245, 240, 0.95);
             --fond-input: rgba(255, 255, 255, 0.9);
@@ -136,7 +136,7 @@
         input:focus, textarea:focus { border-color: var(--couleur-accent); }
         textarea { min-height: 120px; text-align: left; }
         
-        /* --- Boutons Intéractifs (Glow Effect) --- */
+        /* --- Boutons Intéractifs --- */
         .btn-action {
             display: block; margin: 0 auto;
             background: #2b57e5; color: white; border: none; padding: 16px 45px;
@@ -193,7 +193,6 @@
             opacity: 0.35; font-size: 1.1rem; color: var(--texte-secondaire); transform: translateY(10px);
         }
 
-        /* Le NOUVEAU curseur de pensée */
         .curseur-reflexion {
             display: inline-block;
             width: 2px;
@@ -291,12 +290,12 @@
     <script>
     let currentLang = 'fr';
     let isFirstQuestion = true;
-    let lastTopic = ""; 
     let typingTimeout; 
     let isZen = false;
+    let lastAphorism = ""; 
 
     /* ==========================
-       NOUVEAU : GESTION DE L'ATMOSPHÈRE (Clarté / Profondeur)
+       GESTION DE L'ATMOSPHÈRE (Clarté / Profondeur)
     ========================== */
     let isClarte = localStorage.getItem('theme') === 'clarte';
     if (isClarte) document.body.classList.add('theme-clarte');
@@ -335,20 +334,16 @@
        MINI-CMS : BASE DE DONNÉES PODCASTS
     ========================== */
     const PODCASTS_DATABASE = {
-        fr: [
-            {
-                title: "La Mécanique de l'Extase",
-                audioFile: "podcast_fr_1.mp3",
-                transcript: "Ceci est la transcription intégrale du premier podcast. Le silence intérieur s'installe non par l'effort, mais par la régularité biquotidienne..."
-            }
-        ],
-        en: [
-            {
-                title: "The Mechanics of Ecstasy",
-                audioFile: "podcast_en_1.mp3",
-                transcript: "This is the full transcript of the first podcast. Inner silence settles not through effort, but through twice-daily regularity..."
-            }
-        ]
+        fr: [{
+            title: "La Mécanique de l'Extase",
+            audioFile: "podcast_fr_1.mp3",
+            transcript: "Ceci est la transcription intégrale du premier podcast. Le silence intérieur s'installe non par l'effort, mais par la régularité biquotidienne..."
+        }],
+        en: [{
+            title: "The Mechanics of Ecstasy",
+            audioFile: "podcast_en_1.mp3",
+            transcript: "This is the full transcript of the first podcast. Inner silence settles not through effort, but through twice-daily regularity..."
+        }]
     };
 
     function renderPodcasts() {
@@ -418,56 +413,113 @@
     };
 
     /* ==========================
-       CERVEAU DU SAGE (Poétique & Scientifique)
+       CERVEAU DU SAGE ENRICHI (Yoganien + Universel)
     ========================== */
     const sageBrain = {
         fr: {
-            vague: {
-                core: ["L'arbre le plus majestueux tire sa force de ses racines immobiles enfouies dans l'obscurité. La méditation n'est pas une quête de lumière aveuglante, mais un retour à cette terre silencieuse où tout prend naissance.", "Le silence intérieur ne se capture pas par la force. Il s'installe délicatement, comme la rosée du matin, lorsque l'on s'abandonne doucement au mantra."],
-                science: ["Même les érudits de ce temps découvrent que cette immobilité n'est pas un vide, mais un baume. En cessant la lutte, le système nerveux se baigne dans ses propres eaux calmes, réparant les blessures de l'agitation.", "La recherche confirme qu'une assise immobile abaisse la fréquence cardiaque, ouvrant grand les portes du système nerveux parasympathique, là où réside la véritable guérison."],
-                pacing: ["Ne forcez pas le fleuve à couler plus vite. Asseyez-vous, chaque jour. La goutte d'eau qui tombe avec régularité finit par percer la pierre la plus dure.", "Laissez la nature accomplir son œuvre. L'auto-rythme est le gardien bienveillant de votre évolution."]
+            meditation: {
+                core: [
+                    "Le Témoin Silencieux observe le tumulte sans jamais y plonger. L'immobilité est sa seule arme.", 
+                    "Le silence intérieur ne se capture pas par la force. Il s'installe délicatement, comme la rosée du matin.",
+                    "La pensée n'est que l'écume ; ne lutte pas contre elle, plonge simplement vers les profondeurs de l'océan.",
+                    "Le mantra n'est pas un bouclier contre le monde, mais un véhicule d'une douceur infinie vers ton centre.",
+                    "L'immobilité n'est pas l'absence d'action, c'est la source vibrante d'où jaillit le Soi Intérieur."
+                ],
+                science: ["Même les érudits de ce temps découvrent que cette immobilité n'est pas un vide, mais un baume pour le système nerveux.", "La recherche confirme qu'une assise immobile abaisse la fréquence cardiaque, ouvrant les portes de la véritable guérison."],
+                pacing: ["Ne forcez pas le fleuve à couler plus vite. La goutte d'eau finit par percer la pierre la plus dure.", "Laissez la nature accomplir son œuvre. L'auto-rythme est le gardien bienveillant de votre évolution."]
             },
             kundalini: {
-                core: ["La Kundalini est le serpent de feu sacré qui dort à la base de ta montagne intérieure. Ne cherche pas à le réveiller par la violence de ton ego, laisse le silence l'inviter à s'élever.", "Ne poursuis pas les frissons aveuglants de l'extase. Ils ne sont que le sous-produit de l'eau claire qui polit enfin tes canaux."],
-                science: ["Ce feu intérieur est la pure conductivité de tes nerfs, une réorganisation profonde de tes voies subtiles, que la science moderne observe comme la danse plastique du cerveau et du nerf vague.", "Ce que les anciens yogis appelaient l'éveil correspond à une magnifique synchronisation cohérente des ondes cérébrales à travers le corps."],
-                pacing: ["Mais prends garde, voyageur. Si la chaleur te consume ou si l'esprit s'embrase, tu dois t'arrêter. Mange les fruits lourds de la terre et repose-toi. Le feu doit réchauffer le foyer, non l'incendier.", "Le secret de la pleine intégration est une infinie douceur. N'enfonce jamais les portes de ton propre temple nerveux."]
+                core: [
+                    "La Kundalini est le serpent de feu sacré qui dort à la base de ta montagne intérieure.", 
+                    "Ne poursuis pas les frissons de l'extase, ils ne sont que l'écho de la purification de tes canaux.",
+                    "L'énergie suit la conscience. Cultive le silence du Témoin, et le flot divin trouvera naturellement son chemin."
+                ],
+                science: ["Ce feu intérieur est la pure conductivité de tes nerfs, une réorganisation profonde observée comme la danse plastique du nerf vague.", "Ce que les anciens appelaient l'éveil est la magnifique synchronisation cohérente des ondes cérébrales à travers le corps."],
+                pacing: ["Mais prends garde, voyageur. Si la chaleur te consume, tu dois t'arrêter. Le feu doit réchauffer le foyer, non l'incendier.", "Le secret de l'intégration est une infinie douceur. N'enfonce jamais les portes de ton propre temple."]
             },
             samyama: {
-                core: ["Le Samyama est le murmure du vent dans une vallée silencieuse. Tu déposes une graine de pensée dans la terre de la conscience pure, puis, tu t'éloignes sans te retourner.", "Dans le silence du Samyama, l'intellect s'efface. L'attente est le poison de la manifestation ; seul l'oubli permet à la magie d'opérer."],
-                science: ["C'est une mécanique vertigineuse, semblable à la physique quantique : l'observation force et fige la particule, l'oubli bienveillant permet l'expansion majestueuse de l'onde.", "Ce lâcher-prise total permet à tes processus végétatifs et inconscients de tisser la réalité bien au-delà des fragiles limites de ta cognition frontale."],
-                pacing: ["Si une douleur étreint ton front, c'est que ton esprit tente d'arracher la graine pour la faire éclore. Relâche ton emprise immédiatement.", "N'attends aucun prodige dans l'instant. L'auto-rythme exige un abandon absolu. Seul le vide permet au miracle de s'accomplir à sa propre heure."]
+                core: [
+                    "Le Samyama est le murmure du vent dans une vallée silencieuse. Dépose la graine et éloigne-toi.", 
+                    "L'attente est le poison de la manifestation ; seul l'oubli bienveillant permet à la magie du sutra d'opérer.",
+                    "Saisir l'intention, c'est l'étouffer. La relâcher dans l'immobilité du Témoin, c'est lui donner vie."
+                ],
+                science: ["C'est une mécanique vertigineuse : l'observation fige la particule, l'oubli bienveillant permet l'expansion de l'onde.", "Ce lâcher-prise total permet à tes processus inconscients de tisser la réalité bien au-delà de ta cognition frontale."],
+                pacing: ["Si une douleur étreint ton front, relâche ton emprise immédiatement.", "N'attends aucun prodige dans l'instant. L'auto-rythme exige un abandon absolu à sa propre heure."]
             },
             respiration: {
-                core: ["Le souffle est le pont invisible entre ton esprit égaré et ton âme éveillée. Par la Respiration Spinale, tu tires un fil d'or et de soie du fondement de ton être jusqu'à ta couronne.", "Cette inspiration lente et infiniment fine est le prélude obligatoire, elle balaye la poussière avant l'entrée dans le grand temple de la méditation."],
-                science: ["Ce va-et-vient conscient apaise les tempêtes du cœur, module ton tonus vagal et synchronise ton rythme biologique avec celui de l'univers.", "L'observation de la fréquence cardiaque confirme que cette lenteur majestueuse optimise et harmonise la danse de tes fluides cérébro-spinaux."],
-                pacing: ["Si l'angoisse vient brouiller ton souffle, c'est que tu tires trop fort sur le fil. Sois doux comme la brise du soir.", "L'auto-rythme est la boussole infaillible qui te ramène toujours sur la voie de la paix. Ne retiens jamais ton souffle si ton corps te supplie de respirer."]
+                core: [
+                    "Le souffle spinal est le pont invisible entre ton esprit égaré et ton âme éveillée.", 
+                    "Cette inspiration lente balaye la poussière avant l'entrée dans le grand temple de la méditation.",
+                    "Ne force pas l'air. Invite-le à parcourir le fil d'or de ta colonne vertébrale avec une douceur royale."
+                ],
+                science: ["Ce va-et-vient conscient apaise le cœur, module ton tonus vagal et synchronise ton rythme avec l'univers.", "Cette lenteur majestueuse optimise et harmonise la danse de tes fluides cérébro-spinaux."],
+                pacing: ["Si l'angoisse vient brouiller ton souffle, sois doux comme la brise du soir.", "Ne retiens jamais ton souffle si ton corps te supplie de respirer."]
+            },
+            kechari: {
+                core: [
+                    "Kechari Mudra est l'interrupteur divin qui court-circuite la mortalité pour éveiller le nectar céleste.",
+                    "La langue repliée n'est qu'un symbole extérieur de l'esprit qui se retourne pour s'absorber dans sa propre source.",
+                    "Ne tire pas sur la langue avec force. Laisse l'ambroisie du silence l'attirer naturellement vers le haut."
+                ],
+                science: ["Cette union anatomique ferme le circuit entre le canal central et le cerveau glandulaire, inondant le corps d'endorphines.", "En stimulant directement les plexus supérieurs, Kechari pacifie instantanément le chaos du système nerveux sympathique."],
+                pacing: ["Si la tension est trop vive, redescends la langue. La porte s'ouvrira quand les charnières seront prêtes.", "La douceur est la clé des royaumes supérieurs. Laisse le temps fondre les dernières barrières."]
+            },
+            universel: { /* NO NOUVEAU THEME: LA SAGESSE UNIVERSELLE */
+                core: [
+                    "La véritable sagesse commence là où s'arrêtent nos certitudes. Questionner l'existence, c'est déjà y participer pleinement.",
+                    "Nous ne voyons pas le monde tel qu'il est, mais tel que nous sommes. Éclaircir son propre regard, c'est illuminer l'univers.",
+                    "Ce qui résiste persiste. Accepter le cours naturel des événements est le premier pas vers la véritable liberté intérieure.",
+                    "Le fleuve de la vie coule à travers toutes les traditions et toutes les vallées. Bois simplement à la source qui étanche ta soif.",
+                    "L'univers n'est pas à l'extérieur de toi. Regarde profondément dans les yeux de l'instant, et tu y trouveras toutes les étoiles."
+                ],
+                science: ["La philosophie universelle nous rappelle que l'homme est le microcosme du macrocosme : nos lois intérieures reflètent la mécanique des astres.", "La quête de sens est une nécessité vitale, inscrite au cœur même de notre architecture humaine."],
+                pacing: ["La réponse viendra quand tu cesseras de la poursuivre avec tant d'acharnement.", "Sois patient avec tout ce qui n'est pas résolu dans ton cœur. Essaye d'aimer les questions elles-mêmes."]
             }
         },
         en: {
-            vague: {
-                core: ["The most majestic tree draws its strength from its still roots buried in the dark. Meditation is not a quest for blinding light, but a return to this silent earth where all things are born.", "Inner silence cannot be captured by force. It settles delicately, like morning dew, when one gently surrenders to the mantra."],
-                science: ["Even the scholars of this age discover that stillness is not an emptiness, but a balm. By ceasing the struggle, the nervous system bathes in its own calm waters, repairing the wounds of restlessness.", "Research confirms that sitting still drastically lowers the heart rate, throwing wide open the doors of the parasympathetic nervous system, where true healing resides."],
-                pacing: ["Do not force the river to flow faster. Sit, every day. The drop of water falling with regularity eventually pierces the hardest stone.", "Let nature perform its work. Self-pacing is the benevolent guardian of your evolution."]
+            meditation: {
+                core: ["The Silent Witness observes the chaos without ever diving in. Stillness is its only weapon.", "Inner silence cannot be captured by force. It settles delicately.", "Thought is but foam; dive into the depths of the ocean.", "The mantra is a vehicle of infinite sweetness toward your center.", "Stillness is the vibrant source from which the Inner Self springs."],
+                science: ["Stillness is a balm for the nervous system.", "Sitting still drastically lowers the heart rate, opening doors to true healing."],
+                pacing: ["Do not force the river. The drop of water pierces the hardest stone.", "Let nature perform its work. Self-pacing is your guardian."]
             },
             kundalini: {
-                core: ["Kundalini is the sacred fire sleeping at the base of your inner mountain. Do not seek to awaken it through the violence of your ego; let silence gently invite it to rise.", "Do not chase the blinding shivers of ecstasy. They are merely the byproduct of clear water finally polishing your inner channels."],
-                science: ["This inner fire is the pure conductivity of your nerves, a profound reorganization of your subtle pathways that modern science observes as the plastic dance of the brain and vagus nerve.", "What the ancient yogis called awakening corresponds to a magnificent, coherent synchronization of brainwaves throughout the entire body."],
-                pacing: ["But beware, traveler. If heat consumes you or the mind catches fire, you must stop. Eat the heavy fruits of the earth and rest. The fire must warm the hearth, not burn it down.", "The secret of full integration is infinite gentleness. Never kick down the doors of your own nervous temple."]
+                core: ["Kundalini is the sacred fire sleeping at the base of your inner mountain.", "Do not chase ecstasy, it is merely the echo of purified channels.", "Energy follows consciousness. Cultivate the Witness, and the divine flow will find its way."],
+                science: ["This fire is pure conductivity, a profound reorganization of the vagus nerve.", "Awakening is the magnificent synchronization of brainwaves."],
+                pacing: ["If heat consumes you, you must stop. Warm the hearth, do not burn it down.", "The secret is infinite gentleness. Never kick down your own doors."]
             },
             samyama: {
-                core: ["Samyama is the whisper of the wind in a silent valley. You drop a seed of thought into the soil of pure consciousness, and then walk away without looking back.", "In the silence of Samyama, the intellect steps aside. Expectation is the poison of manifestation; only forgetting allows the magic to work."],
-                science: ["It is a dizzying mechanic, akin to quantum physics: observation forces and freezes the particle, while benevolent forgetting allows the majestic expansion of the wave.", "This total letting go allows your vegetative and unconscious processes to weave reality far beyond the fragile limits of your frontal cognition."],
-                pacing: ["If a pain grips your forehead, your mind is trying to tear the seed open. Release your grip immediately.", "Expect no prodigy in the moment. Self-pacing requires absolute surrender. Only emptiness allows the miracle to unfold at its own appointed hour."]
+                core: ["Samyama is the whisper of the wind. Drop the seed and walk away.", "Expectation is poison; only benevolent forgetting allows the sutra's magic to work.", "To grasp intention is to suffocate it. Release it into the Witness's stillness."],
+                science: ["Observation freezes the particle, forgetting allows the wave's expansion.", "Total letting go allows unconscious processes to weave reality."],
+                pacing: ["If pain grips your forehead, release your grip immediately.", "Expect no prodigy in the moment. Absolute surrender is required."]
             },
             respiration: {
-                core: ["Breath is the invisible bridge between your wandering mind and your awakened soul. With Spinal Breathing, you draw a thread of gold and silk from the root of your being to your crown.", "This slow, infinitely fine breath is the mandatory prelude; it sweeps the dust away before entering the great temple of meditation."],
-                science: ["This conscious ebb and flow calms the storms of the heart, modulates your vagal tone, and synchronizes your biological rhythm with that of the universe.", "Heart rate variability observation confirms that this majestic slowness optimizes and harmonizes the dance of your cerebrospinal fluids."],
-                pacing: ["If anxiety comes to blur your breath, you are pulling the thread too hard. Be gentle like the evening breeze.", "Self-pacing is the infallible compass that always brings you back to the path of peace. Never hold your breath if your body begs to breathe."]
+                core: ["Spinal breath is the bridge between wandering mind and awakened soul.", "This slow breath sweeps the dust away before entering the temple.", "Invite the air to travel the golden thread of your spine."],
+                science: ["This conscious ebb and flow calms the heart and modulates vagal tone.", "Majestic slowness harmonizes cerebrospinal fluids."],
+                pacing: ["If anxiety blurs your breath, be gentle like the evening breeze.", "Never hold your breath if your body begs to breathe."]
+            },
+            kechari: {
+                core: ["Kechari Mudra is the divine switch that awakens celestial nectar.", "The folded tongue is the mind turning back to absorb itself in its source.", "Do not force the tongue. Let the ambrosia of silence draw it upward."],
+                science: ["This union closes the circuit to the glandular brain, flooding the body with endorphins.", "Stimulating higher plexuses instantly pacifies the nervous system."],
+                pacing: ["If tension is too sharp, bring the tongue down. The door will open when ready.", "Gentleness is the key to higher realms."]
+            },
+            universel: {
+                core: ["True wisdom begins where certainty ends.", "We see the world not as it is, but as we are.", "What you resist, persists. Acceptance is the first step to freedom.", "The river of life flows through all traditions. Drink from what quenches your thirst.", "The universe is not outside. Look within, and find the stars."],
+                science: ["Universal philosophy reminds us that man is a microcosm of the macrocosm.", "The quest for meaning is inscribed in our very architecture."],
+                pacing: ["The answer will come when you stop chasing it.", "Be patient with what is unresolved. Love the questions themselves."]
             }
         }
     };
 
     function getRandom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+    function getUniqueCore(arr) {
+        let res;
+        do {
+            res = arr[Math.floor(Math.random() * arr.length)];
+        } while (res === lastAphorism && arr.length > 1);
+        lastAphorism = res;
+        return res;
+    }
 
     function askSage() {
         const q = document.getElementById("user-question").value.toLowerCase();
@@ -491,28 +543,53 @@
             playPromise.catch(error => console.log("L'audio a été bloqué par le navigateur."));
         }
 
-        let topic = "vague";
-        if (q.includes("kundalini") || q.includes("energie") || q.includes("energy")) topic = "kundalini";
-        else if (q.includes("samyama") || q.includes("sutra") || q.includes("intention")) topic = "samyama";
-        else if (q.includes("respiration") || q.includes("pranayama") || q.includes("breathing") || q.includes("souffle")) topic = "respiration";
+        // LE FILTRE YOGANIEN vs SAGESSE UNIVERSELLE
+        let topic = "universel"; // Par défaut, la question est philosophique/générale
+        
+        if (q.includes("kundalini") || q.includes("energie") || q.includes("energy")) {
+            topic = "kundalini";
+        } else if (q.includes("samyama") || q.includes("sutra") || q.includes("intention")) {
+            topic = "samyama";
+        } else if (q.includes("respiration") || q.includes("spinale") || q.includes("pranayama") || q.includes("souffle") || q.includes("breathing")) {
+            topic = "respiration";
+        } else if (q.includes("kechari") || q.includes("mudra")) {
+            topic = "kechari";
+        } else if (q.includes("meditation") || q.includes("silence") || q.includes("temoin") || q.includes("témoin") || q.includes("soi")) {
+            topic = "meditation"; // Intègre "le témoin" et "le soi intérieur"
+        }
 
         let b = sageBrain[currentLang][topic];
-        let fullResponse = `${getRandom(b.core)}<br><br>${getRandom(b.science)}<br><br>${getRandom(b.pacing)}`;
+        
+        let fullResponse = `${getUniqueCore(b.core)}<br><br>${getRandom(b.science)}<br><br>${getRandom(b.pacing)}`;
 
-        let suffix = currentLang === 'fr' 
-            ? (Math.random() > 0.5 ? "La patience est l'eau douce qui nourrit la graine." : "Acceptez le mystère de votre propre lenteur.")
-            : (Math.random() > 0.5 ? "Patience is the sweet water that nourishes the seed." : "Embrace the mystery of your own slowness.");
+        // Suffixe adapté au thème
+        let suffix = "";
+        if (topic === "universel") {
+             suffix = currentLang === 'fr' 
+                ? (Math.random() > 0.5 ? "La vérité est un miroir brisé ; chacun en possède un petit éclat." : "Que ton chemin soit éclairé par ta propre lumière.")
+                : (Math.random() > 0.5 ? "Truth is a shattered mirror; everyone holds a small piece." : "May your path be lit by your own light.");
+        } else {
+            suffix = currentLang === 'fr' 
+                ? (Math.random() > 0.5 ? "La patience est l'eau douce qui nourrit la graine." : "Acceptez le mystère de votre propre lenteur.")
+                : (Math.random() > 0.5 ? "Patience is the sweet water that nourishes the seed." : "Embrace the mystery of your own slowness.");
+        }
+        
         fullResponse += `<br><br><em>${suffix}</em>`;
 
-        let prefix = isFirstQuestion 
-            ? (currentLang === "fr" ? "Bienvenue, voyageur." : "Welcome, traveler.") 
-            : (currentLang === "fr" ? "Écoutez ceci :" : "Listen closely:");
-        isFirstQuestion = false;
+        const introsFr = ["Comprends ceci :", "Médite sur cette vérité :", "Entends la voix du silence :", "Observe cette mécanique :", "Voici ce que l'expérience révèle :"];
+        const introsEn = ["Understand this:", "Meditate on this truth:", "Hear the voice of silence:", "Observe this mechanic:", "Here is what experience reveals:"];
+
+        let prefix = "";
+        if (isFirstQuestion) {
+            prefix = currentLang === "fr" ? "Bienvenue, voyageur." : "Welcome, traveler.";
+            isFirstQuestion = false;
+        } else {
+            prefix = currentLang === "fr" ? getRandom(introsFr) : getRandom(introsEn);
+        }
 
         const newResp = document.createElement('div');
         newResp.className = 'sage-response';
         
-        // NOUVEAU : On sépare la zone de texte de la zone du curseur
         newResp.innerHTML = `<strong>${prefix}</strong><br><br>« <span class="texte-sage"></span><span class="curseur-reflexion"></span>`;
         area.prepend(newResp);
         
@@ -544,7 +621,7 @@
                 typingTimeout = setTimeout(typeWriter, delay);
             } else {
                 zoneTexte.innerHTML += " »"; 
-                curseur.style.display = "none"; // Le curseur s'efface à la fin
+                curseur.style.display = "none";
                 let fadeOut = setInterval(() => {
                     if(resonance.volume > 0.05) resonance.volume -= 0.05;
                     else { clearInterval(fadeOut); resonance.pause(); }
@@ -569,12 +646,11 @@
         document.getElementById("nav-podcasts").textContent = isEn ? "PODCASTS" : "PODCASTS";
         document.getElementById("nav-contact").textContent = isEn ? "CONTACT" : "CONTACT";
         
-        document.getElementById("sage-title").textContent = isEn ? "The Temple of Silence" : "Le Temple du Silence";
+        document.getElementById("sage-title").textContent = isEn ? "The Temple of Silence" : "Le Temple of Silence";
         document.getElementById("user-question").placeholder = isEn ? "Ask your question (Samyama, Kundalini...)" : "Posez votre question (Samyama, Kundalini...)";
         document.getElementById("sage-btn").textContent = isEn ? "INQUIRE" : "INTERROGER";
         document.getElementById("silence-quote").textContent = isEn ? "Regularity is the bed of silence." : "La régularité est le lit du silence.";
         
-        // Mise à jour du bouton Thème selon la langue
         updateThemeButton();
 
         document.getElementById("para-main-title").textContent = isEn ? "The Parable" : "La Parabole";
@@ -611,7 +687,7 @@
     window.onload = () => {
         createParticles(); 
         setLanguage("fr");
-        updateThemeButton(); // Initialise le texte du bouton de thème
+        updateThemeButton();
         showSection("sage");
         
         let count = localStorage.getItem('visits') || 0;

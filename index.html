@@ -21,15 +21,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 
     <style>
+        /* --- Variables d'Atmosphère (Clarté / Profondeur) --- */
+        :root {
+            --fond-voile: rgba(0, 0, 0, 0.82);
+            --texte-principal: #ffffff;
+            --texte-secondaire: #e5e5e5;
+            --couleur-accent: #d4af37;
+            --fond-conteneur: rgba(10, 10, 12, 0.55);
+            --fond-nav: rgba(0, 0, 0, 0.92);
+            --fond-input: rgba(17, 17, 17, 0.8);
+            --bordure-input: #222;
+        }
+
+        body.theme-clarte {
+            --fond-voile: rgba(245, 245, 240, 0.88); /* Voile lumineux doux */
+            --texte-principal: #1a1a1a;
+            --texte-secondaire: #2c2c2c;
+            --couleur-accent: #b8860b; /* Or légèrement plus sombre pour le contraste */
+            --fond-conteneur: rgba(255, 255, 255, 0.65);
+            --fond-nav: rgba(245, 245, 240, 0.95);
+            --fond-input: rgba(255, 255, 255, 0.9);
+            --bordure-input: #cccccc;
+        }
+
         /* --- Esthétique & Immersion --- */
         body { 
-            color: #ffffff; 
+            color: var(--texte-principal); 
             font-family: 'Cormorant Garamond', serif; 
             margin: 0;
             text-align: center;
             overflow-x: hidden;
             background-color: #000;
-            transition: background-color 0.8s ease;
+            transition: color 0.8s ease, background-color 0.8s ease;
         }
 
         /* --- Fond Vivant (Slow Zoom) --- */
@@ -52,9 +75,9 @@
             content: "";
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.82); 
+            background: var(--fond-voile); 
             z-index: -2;
-            transition: opacity 1s ease;
+            transition: background 1s ease, opacity 1s ease;
         }
 
         /* --- Particules de Silence --- */
@@ -77,23 +100,23 @@
         }
 
         /* --- Navigation --- */
-        nav { background: rgba(0,0,0,0.92); padding: 15px 20px; border-bottom: 1px solid rgba(212,175,55,0.25); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; transition: opacity 0.8s ease; }
-        .nav-brand { color:#d4af37; font-weight:700; letter-spacing:3px; font-family: 'Cinzel', serif; }
+        nav { background: var(--fond-nav); padding: 15px 20px; border-bottom: 1px solid rgba(212,175,55,0.25); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; transition: background 0.8s ease, opacity 0.8s ease; }
+        .nav-brand { color: var(--couleur-accent); font-weight:700; letter-spacing:3px; font-family: 'Cinzel', serif; }
         .nav-links { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
-        .nav-links a { color: #ffffff; text-decoration: none; font-weight: 600; cursor: pointer; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; font-family: 'Cinzel', serif;}
-        .nav-links a:hover { color: #d4af37; }
-        .lang-btn { background: none; border: 1px solid #d4af37; color: #d4af37; cursor: pointer; padding: 5px 10px; font-weight: bold; border-radius: 4px; transition: 0.3s; font-family: 'Cinzel', serif;}
-        .lang-btn:hover { background: #d4af37; color: #000; box-shadow: 0 0 10px rgba(212,175,55,0.5); }
+        .nav-links a { color: var(--texte-principal); text-decoration: none; font-weight: 600; cursor: pointer; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; font-family: 'Cinzel', serif;}
+        .nav-links a:hover { color: var(--couleur-accent); }
+        .lang-btn { background: none; border: 1px solid var(--couleur-accent); color: var(--couleur-accent); cursor: pointer; padding: 5px 10px; font-weight: bold; border-radius: 4px; transition: 0.3s; font-family: 'Cinzel', serif;}
+        .lang-btn:hover { background: var(--couleur-accent); color: var(--fond-voile); box-shadow: 0 0 10px rgba(212,175,55,0.5); }
         
         /* --- Conteneurs --- */
         .container { 
             max-width: 900px; 
             margin: 60px auto; 
             padding: 40px; 
-            background: rgba(10, 10, 12, 0.55); 
+            background: var(--fond-conteneur); 
             border: 1px solid rgba(212, 175, 55, 0.15);
             border-radius: 12px;
-            box-shadow: 0 20px 45px rgba(0,0,0,0.9);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.4);
             box-sizing: border-box;
             backdrop-filter: blur(4px);
             text-align: justify;
@@ -101,16 +124,16 @@
             transition: all 0.8s ease;
         }
         
-        h1, h2, h3 { color: #d4af37; letter-spacing: 2px; text-align: center; font-family: 'Cinzel', serif; }
-        #parable-body { text-align: justify; line-height: 1.9; font-size: 1.2rem; color: #e5e5e5; margin-top: 15px; }
+        h1, h2, h3 { color: var(--couleur-accent); letter-spacing: 2px; text-align: center; font-family: 'Cinzel', serif; }
+        #parable-body { text-align: justify; line-height: 1.9; font-size: 1.2rem; color: var(--texte-secondaire); margin-top: 15px; transition: color 0.8s ease;}
         
         /* --- Inputs --- */
         input, textarea {
             width: 90%; padding: 15px; margin-bottom: 20px; border-radius: 8px;
-            border: 1px solid #222; background: rgba(17, 17, 17, 0.8); color: white;
-            font-size: 1.1rem; text-align: center; outline: none; box-sizing: border-box; font-family: 'Cormorant Garamond', serif; transition: border 0.3s;
+            border: 1px solid var(--bordure-input); background: var(--fond-input); color: var(--texte-principal);
+            font-size: 1.1rem; text-align: center; outline: none; box-sizing: border-box; font-family: 'Cormorant Garamond', serif; transition: border 0.3s, background 0.8s ease, color 0.8s ease;
         }
-        input:focus, textarea:focus { border-color: #d4af37; }
+        input:focus, textarea:focus { border-color: var(--couleur-accent); }
         textarea { min-height: 120px; text-align: left; }
         
         /* --- Boutons Intéractifs (Glow Effect) --- */
@@ -130,49 +153,66 @@
 
         /* --- Mode Zen --- */
         .zen-btn {
-            background: none; border: 1px solid #d4af37; color: #d4af37; 
+            background: none; border: 1px solid var(--couleur-accent); color: var(--couleur-accent); 
             padding: 8px 15px; border-radius: 20px; cursor: pointer; 
             font-family: 'Cinzel', serif; font-size: 0.9rem; transition: 0.3s; 
             display: flex; align-items: center; gap: 8px; margin: 0 auto 30px auto;
         }
-        .zen-btn:hover { background: #d4af37; color: #000; }
+        .zen-btn:hover { background: var(--couleur-accent); color: var(--fond-voile); }
         
         body.zen-active #bg-image { opacity: 0.05; }
         body.zen-active nav, body.zen-active footer, body.zen-active .signature-area, body.zen-active .particle { opacity: 0; pointer-events: none; }
-        body.zen-active .container { background: rgba(5, 5, 8, 0.95); border-color: transparent; box-shadow: none; max-width: 800px; }
+        body.zen-active .container { background: var(--fond-voile); border-color: transparent; box-shadow: none; max-width: 800px; }
 
         /* --- Audio Players --- */
         audio { width: 100%; margin-top: 15px; border-radius: 30px; outline: none; }
 
         /* --- Section Podcasts --- */
         .podcast-item { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid rgba(212,175,55,0.2); }
-        .transcript-btn { background: none; border: 1px solid #d4af37; color: #d4af37; padding: 8px 20px; border-radius: 20px; cursor: pointer; margin-top: 15px; font-family: 'Cinzel', serif; font-size: 0.8rem; transition: 0.3s; display: block; margin-left: auto; margin-right: auto; }
-        .transcript-btn:hover { background: #d4af37; color: #000; }
-        .transcript-content { display: none; margin-top: 20px; font-size: 1.15rem; line-height: 1.8; color: #d0d0d0; background: rgba(0,0,0,0.4); padding: 20px; border-radius: 8px; border-left: 3px solid #d4af37; }
+        .transcript-btn { background: none; border: 1px solid var(--couleur-accent); color: var(--couleur-accent); padding: 8px 20px; border-radius: 20px; cursor: pointer; margin-top: 15px; font-family: 'Cinzel', serif; font-size: 0.8rem; transition: 0.3s; display: block; margin-left: auto; margin-right: auto; }
+        .transcript-btn:hover { background: var(--couleur-accent); color: var(--fond-voile); }
+        .transcript-content { display: none; margin-top: 20px; font-size: 1.15rem; line-height: 1.8; color: var(--texte-secondaire); background: rgba(0,0,0,0.1); padding: 20px; border-radius: 8px; border-left: 3px solid var(--couleur-accent); }
 
         /* --- Citation Blanche --- */
         #silence-quote {
-            text-align: center; margin-top: 50px; font-style: italic; color: #ffffff; font-size: 1.2rem; letter-spacing: 1px; opacity: 0.9;
+            text-align: center; margin-top: 50px; font-style: italic; color: var(--texte-principal); font-size: 1.2rem; letter-spacing: 1px; opacity: 0.9;
+            transition: color 0.8s ease;
         }
 
-        /* --- Mémoire du Sage --- */
+        /* --- Mémoire du Sage & Curseur --- */
         #response-area {
             margin-top: 40px; text-align: justify; padding: 0 5%;
         }
         .sage-response {
-            font-style: italic; color: #d4af37; font-size: 1.4rem; line-height: 1.8;
+            font-style: italic; color: var(--couleur-accent); font-size: 1.4rem; line-height: 1.8;
             padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid rgba(212,175,55,0.1);
             transition: all 1s ease-in-out;
         }
         .sage-response:last-child { border-bottom: none; }
         .sage-response.faded {
-            opacity: 0.35; font-size: 1.1rem; color: #b5b5b5; transform: translateY(10px);
+            opacity: 0.35; font-size: 1.1rem; color: var(--texte-secondaire); transform: translateY(10px);
+        }
+
+        /* Le NOUVEAU curseur de pensée */
+        .curseur-reflexion {
+            display: inline-block;
+            width: 2px;
+            height: 1.1em;
+            background-color: var(--couleur-accent);
+            vertical-align: text-bottom;
+            margin-left: 4px;
+            animation: battement-coeur 1s infinite;
+        }
+
+        @keyframes battement-coeur {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
         }
 
         .signature-area { margin: 50px 0; display: flex; justify-content: center; transition: opacity 0.8s ease; }
         .signature-area img { width: 140px; filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.4)); opacity: 0.9; }
         
-        footer { padding: 30px; color: #d4af37; font-size: 0.9rem; font-family: 'Cinzel', serif; border-top: 1px solid rgba(212,175,55,0.1); letter-spacing: 1px; text-align: center; transition: opacity 0.8s ease; }
+        footer { padding: 30px; color: var(--couleur-accent); font-size: 0.9rem; font-family: 'Cinzel', serif; border-top: 1px solid rgba(212,175,55,0.1); letter-spacing: 1px; text-align: center; transition: opacity 0.8s ease; }
 
         @media (max-width: 768px) {
             nav { flex-direction: column; gap: 10px; }
@@ -195,6 +235,7 @@
             <a onclick="showSection('podcasts')" id="nav-podcasts">PODCASTS</a>
             <a onclick="showSection('contact')" id="nav-contact">CONTACT</a>
             <button class="lang-btn" onclick="toggleLanguage()">FR / EN</button>
+            <button class="lang-btn" onclick="toggleTheme()" id="theme-btn">🌙 PROFONDEUR</button>
         </div>
     </nav>
 
@@ -218,7 +259,7 @@
         <h1 id="teachings-title">Enseignements</h1>
         <div style="text-align:center; line-height:2.5; font-size:1.2rem;">
             <p id="pod-intro">Pour approfondir la technique, la source est immuable :</p>
-            <a href="https://aypsite.org/" target="_blank" style="color:#d4af37; text-decoration:none; font-weight:bold; font-size:1.3rem; font-family:'Cinzel',serif;" id="pod-link">→ Les Leçons de Yogani (Source Originale)</a>
+            <a href="https://aypsite.org/" target="_blank" style="color:var(--couleur-accent); text-decoration:none; font-weight:bold; font-size:1.3rem; font-family:'Cinzel',serif;" id="pod-link">→ Les Leçons de Yogani (Source Originale)</a>
             <p style="margin-top:40px; font-style:italic; opacity:0.7;" id="book-placeholder">Bientôt : La Bibliothèque de la Lignée (Livres & Écrits).</p>
         </div>
     </div>
@@ -253,6 +294,30 @@
     let lastTopic = ""; 
     let typingTimeout; 
     let isZen = false;
+
+    /* ==========================
+       NOUVEAU : GESTION DE L'ATMOSPHÈRE (Clarté / Profondeur)
+    ========================== */
+    let isClarte = localStorage.getItem('theme') === 'clarte';
+    if (isClarte) document.body.classList.add('theme-clarte');
+
+    function toggleTheme() {
+        const body = document.body;
+        body.classList.toggle('theme-clarte');
+        isClarte = body.classList.contains('theme-clarte');
+        localStorage.setItem('theme', isClarte ? 'clarte' : 'profondeur');
+        updateThemeButton();
+    }
+
+    function updateThemeButton() {
+        const btn = document.getElementById("theme-btn");
+        const isEn = currentLang === 'en';
+        if (isClarte) {
+            btn.innerHTML = isEn ? "☀️ CLARITY" : "☀️ CLARTÉ";
+        } else {
+            btn.innerHTML = isEn ? "🌙 DEPTH" : "🌙 PROFONDEUR";
+        }
+    }
 
     /* ==========================
        FONCTION MODE ZEN
@@ -402,9 +467,7 @@
         }
     };
 
-    function getRandom(arr) {
-        return arr[Math.floor(Math.random() * arr.length)];
-    }
+    function getRandom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
 
     function askSage() {
         const q = document.getElementById("user-question").value.toLowerCase();
@@ -436,13 +499,9 @@
         let b = sageBrain[currentLang][topic];
         let fullResponse = `${getRandom(b.core)}<br><br>${getRandom(b.science)}<br><br>${getRandom(b.pacing)}`;
 
-        // Suffixe poétique aléatoire
-        let suffix = "";
-        if (currentLang === 'fr') {
-            suffix = Math.random() > 0.5 ? "La patience est l'eau douce qui nourrit la graine." : "Acceptez le mystère de votre propre lenteur.";
-        } else {
-            suffix = Math.random() > 0.5 ? "Patience is the sweet water that nourishes the seed." : "Embrace the mystery of your own slowness.";
-        }
+        let suffix = currentLang === 'fr' 
+            ? (Math.random() > 0.5 ? "La patience est l'eau douce qui nourrit la graine." : "Acceptez le mystère de votre propre lenteur.")
+            : (Math.random() > 0.5 ? "Patience is the sweet water that nourishes the seed." : "Embrace the mystery of your own slowness.");
         fullResponse += `<br><br><em>${suffix}</em>`;
 
         let prefix = isFirstQuestion 
@@ -452,24 +511,28 @@
 
         const newResp = document.createElement('div');
         newResp.className = 'sage-response';
-        newResp.innerHTML = `<strong>${prefix}</strong><br><br>« `;
         
+        // NOUVEAU : On sépare la zone de texte de la zone du curseur
+        newResp.innerHTML = `<strong>${prefix}</strong><br><br>« <span class="texte-sage"></span><span class="curseur-reflexion"></span>`;
         area.prepend(newResp);
+        
+        const zoneTexte = newResp.querySelector('.texte-sage');
+        const curseur = newResp.querySelector('.curseur-reflexion');
         
         let i = 0;
         function typeWriter() {
             if (i < fullResponse.length) {
                 if (fullResponse.substring(i, i+4) === "<br>") {
-                    newResp.innerHTML += "<br>";
+                    zoneTexte.innerHTML += "<br>";
                     i += 4;
                 } else if (fullResponse.substring(i, i+4) === "<em>") {
-                    newResp.innerHTML += "<em>";
+                    zoneTexte.innerHTML += "<em>";
                     i += 4;
                 } else if (fullResponse.substring(i, i+5) === "</em>") {
-                    newResp.innerHTML += "</em>";
+                    zoneTexte.innerHTML += "</em>";
                     i += 5;
                 } else {
-                    newResp.innerHTML += fullResponse.charAt(i);
+                    zoneTexte.innerHTML += fullResponse.charAt(i);
                     i++;
                 }
 
@@ -480,7 +543,8 @@
 
                 typingTimeout = setTimeout(typeWriter, delay);
             } else {
-                newResp.innerHTML += " »"; 
+                zoneTexte.innerHTML += " »"; 
+                curseur.style.display = "none"; // Le curseur s'efface à la fin
                 let fadeOut = setInterval(() => {
                     if(resonance.volume > 0.05) resonance.volume -= 0.05;
                     else { clearInterval(fadeOut); resonance.pause(); }
@@ -510,6 +574,9 @@
         document.getElementById("sage-btn").textContent = isEn ? "INQUIRE" : "INTERROGER";
         document.getElementById("silence-quote").textContent = isEn ? "Regularity is the bed of silence." : "La régularité est le lit du silence.";
         
+        // Mise à jour du bouton Thème selon la langue
+        updateThemeButton();
+
         document.getElementById("para-main-title").textContent = isEn ? "The Parable" : "La Parabole";
         document.getElementById("para-title").textContent = parableData[lang].title;
         document.getElementById("parable-body").innerHTML = parableData[lang].body;
@@ -529,8 +596,6 @@
         document.getElementById("contact-msg").placeholder = isEn ? "Your message..." : "Votre message...";
         document.getElementById("contact-btn").textContent = isEn ? "SEND" : "ENVOYER";
 
-        document.getElementById("footer-text").innerHTML = isEn ? "PROPERTY & LINEAGE 🪷 ॐ" : "PROPRIÉTÉ & LIGNÉE 🪷 ॐ";
-
         renderPodcasts();
 
         clearTimeout(typingTimeout);
@@ -546,6 +611,7 @@
     window.onload = () => {
         createParticles(); 
         setLanguage("fr");
+        updateThemeButton(); // Initialise le texte du bouton de thème
         showSection("sage");
         
         let count = localStorage.getItem('visits') || 0;

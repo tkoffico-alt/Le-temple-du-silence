@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Temple du Silence - AYP</title>
     <style>
+        /* --- Esthétique & Immersion --- */
         body { 
             background: #0a0a0c url('kofi.jpg') no-repeat center center fixed; 
             background-size: cover;
@@ -17,10 +18,14 @@
             content: "";
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.80); 
+            background: rgba(0, 0, 0, 0.80);
             z-index: -1;
         }
-        nav { background: rgba(0,0,0,0.92); padding: 15px 20px; border-bottom: 1px solid #d4af37; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; }
+        nav { 
+            background: rgba(0,0,0,0.92); padding: 15px 20px; border-bottom: 1px solid #d4af37; 
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; 
+            position: sticky; top: 0; z-index: 100; 
+        }
         .nav-brand { color:#d4af37; font-weight:bold; letter-spacing:3px; }
         .nav-links { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
         .nav-links a { color: #ffffff; text-decoration: none; font-weight: bold; cursor: pointer; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
@@ -40,12 +45,14 @@
         }
         h1, h2 { color: #d4af37; letter-spacing: 2px; }
         #parable-body { text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #e5e5e5; }
+
         input, textarea {
             width: 90%; padding: 15px; margin-bottom: 25px; border-radius: 8px;
             border: 1px solid #222; background: rgba(17, 17, 17, 0.8); color: white;
             font-size: 1rem; text-align: center; outline: none; box-sizing: border-box; font-family: inherit;
         }
         input:focus { border-color: #d4af37; }
+
         .btn-action {
             background: #2b57e5; color: white; border: none; padding: 16px 45px;
             border-radius: 35px; cursor: pointer; margin-top: 10px;
@@ -141,16 +148,16 @@ const deepWisdom = {
         "bandha": "Les Bandhas sont des verrous mécaniques qui pressurisent le prana pour éveiller le système nerveux. Mulabandha empêche la dissipation de l'énergie vers le bas, tandis qu'Uddiyana Bandha aspire cette énergie vers le haut. Jalandhara Bandha scelle le circuit. Intégrez-les doucement, un par un, durant vos pratiques de respiration. Si cette pressurisation crée de l'anxiété ou des palpitations, vos circuits sont surchargés. Relâchez immédiatement les verrous et revenez à la base. L'auto-rythme est votre seul filet de sécurité.",
         "mudra": "Les Mudras sont des sceaux qui relient les courants énergétiques du corps. Sambhavi Mudra stimule la glande pituitaire, tandis que Kechari Mudra crée un pont essentiel pour la descente du 'nectar' extatique. Ne forcez pas la chair. Si vos yeux se crispent ou si votre langue tire, relâchez l'effort. La biologie s'adaptera d'elle-même avec le temps. L'effort dans la pratique doit toujours être équilibré par le plus grand confort.",
         "samyama": "Le Samyama est la mécanique intime de la création : c'est l'art de lâcher une pensée-graine dans le silence pur de la conscience, puis de l'oublier totalement. C'est comme jeter un caillou dans un étang immobile : laissez les ondes agir sans interférer. Pratiquez-le après la méditation, quand l'esprit est vaste. Si le Samyama provoque de la fatigue mentale ou des tensions dans la tête, c'est le signe d'un effort excessif ou d'une surcharge. Appliquez l'auto-rythme : réduisez le nombre de sutras ou cessez temporairement la pratique pour revenir au simple repos de la méditation.",
-        "alimentation": "Le corps est le temple de votre système nerveux. Une alimentation légère et naturelle réduit la friction digestive et facilite la fluidité de vos méditations. Cependant, lorsque la Kundalini s'éveille avec force, votre feu intérieur peut s'emballer. C'est ici que l'alimentation devient un outil crucial d'auto-régulation. Si l'énergie est trop envahissante, mangez des aliments lourds, ancrants pour ralentir la conductivité. Ne soyez jamais rigide avec les dogmes alimentaires ; écoutez les besoins de votre biologie en pleine mutation.",
-        "pranayama": "La Respiration Spinale est le grand purificateur de votre canal central. En traçant mentalement un fil de lumière du périnée jusqu'au centre de la tête avec le souffle, vous lissez le passage pour l'extase. La respiration doit être lente, sans jamais forcer. Si des vertiges ou des déséquilibres émotionnels apparaissent, vous allez trop vite. Réduisez le temps de votre respiration spinale, ou supprimez les suspensions de souffle. Soyez le maître doux de votre propre rythme."
+        "alimentation": "Le corps est le temple de votre système nerveux. Une alimentation légère et naturelle (sattvique) réduit la friction digestive et facilite la fluidité de vos méditations. Cependant, lorsque la Kundalini s'éveille avec force, votre feu intérieur peut s'emballer. C'est ici que l'alimentation devient un outil crucial d'auto-régulation. Si l'énergie est trop envahissante, mangez des aliments lourds, ancrants pour ralentir la conductivité. Ne soyez jamais rigide avec les dogmes alimentaires ; écoutez les besoins de votre biologie en pleine mutation.",
+        "pranayama": "La Respiration Spinale est le grand purificateur de votre canal central. En traçant mentalement un fil de lumière du périnée jusqu'au sommet de la tête avec le souffle, vous lissez le passage pour l'extase. La respiration doit être lente, sans jamais forcer les poumons. Si des vertiges ou déséquilibres émotionnels apparaissent, réduisez le temps de respiration ou supprimez les suspensions de souffle. Soyez le maître doux de votre rythme."
     },
     en: {
-        "kundalini": "Kundalini energy is not an external mystical force, but the natural conductivity of your nervous system toward ecstasy. It awakens organically through the regularity of Deep Meditation and Spinal Breathing. Never force it. If you feel excessive heat, headaches, or irritability, it is a sign of nervous friction. The golden rule is self-pacing: reduce practice time, rest, and ground yourself with heavy activities or solid food. Awakening is a slow infusion of light, not an explosion.",
-        "bandha": "Bandhas are mechanical locks that pressurize prana to awaken the nervous system. Mulabandha prevents downward energy loss, Uddiyana Bandha draws it upward, Jalandhara Bandha seals the circuit. Integrate gently, one by one. If anxiety arises, circuits are overloaded. Self-pacing is your safety net.",
-        "mudra": "Mudras are seals connecting energy currents. Sambhavi Mudra stimulates the pituitary, Kechari Mudra forms a bridge for ecstatic 'nectar'. Do not force the flesh; biology adapts over time. Effort must balance with comfort.",
-        "samyama": "Samyama is the intimate mechanics of creation: planting a seed-thought in pure silence and then forgetting it. Let ripples act without interference. If mental fatigue occurs, reduce sutras or return to simple meditation. Self-pacing is key.",
-        "diet": "The body is the temple of your nervous system. A light, natural diet reduces friction. If Kundalini surges strongly, eat heavy, grounding foods to slow conductivity. Listen to your evolving biology.",
-        "pranayama": "Spinal Breathing is the great purifier of your central channel. Tracing a thread of light from perineum to head smooths the passage for ecstasy. If dizziness occurs, you are moving too fast. Be gentle and master your own pace."
+        "kundalini": "Kundalini energy is not an external mystical force, but the natural conductivity of your nervous system toward ecstasy. It awakens organically through the regularity of Deep Meditation and Spinal Breathing. Never force it. If you feel excessive heat, headaches, or irritability, it's a sign of nervous friction. Self-pacing is essential: reduce practice time, rest, and ground yourself with heavier activities or food. Awakening is gradual, like a slow infusion of light.",
+        "bandha": "Bandhas are mechanical locks that pressurize prana to awaken the nervous system. Mulabandha prevents downward energy dissipation, Uddiyana Bandha draws it upward, and Jalandhara Bandha seals the circuit. Integrate them gently, one at a time. If anxiety arises, circuits may be overloaded. Adjust your pace and return to basics.",
+        "mudra": "Mudras are seals connecting energy flows. Sambhavi Mudra stimulates the pituitary gland, Kechari Mudra creates a bridge for ecstatic nectar. Never strain the flesh. If eyes or tongue tense, release effort. Biology adapts naturally over time. Comfort is key.",
+        "samyama": "Samyama is the intimate mechanics of creation: releasing a seed-thought into the pure silence of consciousness and forgetting it completely. Let ripples flow without interference. If mental fatigue occurs, reduce sutras or return to simple meditation. Self-pacing preserves clarity.",
+        "diet": "The body is the temple of your nervous system. A light, natural diet reduces friction. If Kundalini surges strongly, consume grounding, heavier foods to slow conductivity. Listen to your evolving biology rather than rigid rules.",
+        "pranayama": "Spinal Breathing purifies your central channel. Mentally trace a thread of light from the perineum to the crown while breathing slowly. Avoid forcing the lungs. If dizziness occurs, slow your pace. Master your rhythm gently."
     }
 };
 
@@ -158,63 +165,63 @@ const parable = {
     fr: {
         title: "Au-delà de la Rivière — Une Parabole sur l’Appel Intérieur",
         body: `<p>Il y a des lieux où personne n’ose plus aller. Des frontières invisibles, marquées non par des murs, mais par des récits anciens — des récits de peur.</p>
-               <p>Dans un village reculé, au cœur de la savane, vivait un jeune homme nommé Kofi. Il n’avait ni la stature des guerriers, ni le prestige des anciens. Mais il portait en lui une question qui ne le quittait jamais : que se cache-t-il au-delà de ce que l’on croit savoir ?</p>
-               <p>Un jour, cette question prit chair.</p>
-               <p>La fille du chef, Adwoa, fut frappée d’un mal mystérieux. Les prières, les soins, rien n’y faisait. Le guérisseur consulta les oracles, qui désignèrent un remède oublié : une plante rare, cachée au plus profond de la forêt, de l’autre côté de la rivière sacrée. Mais cette forêt, disaient les anciens, était hantée. Un territoire d’esprits dévoreurs d’âmes, que l’homme sage ne franchit pas.</p>
-               <p>Le chef promit richesses et honneurs à quiconque oserait s’y aventurer. Les plus braves reculèrent. La peur, nourrie de récits, était plus forte que la promesse d’or. Tous refusèrent. Tous, sauf Kofi.</p>
-               <p>Il ne demandait rien. Ni gloire, ni récompense. Ce qu’il entendait en lui, c’était ce silence profond, qui ne marchande pas, mais qui dit simplement : avance.</p>
-               <p>Il prit une gourde d’eau, une amulette offerte par sa mère, et marcha vers la rivière. Là, il s’arrêta. L’eau était limpide, mais à ses yeux, elle était autre chose : une frontière symbolique. La limite entre le connu et l’inconnu.</p>
-               <p>Il ferma les yeux. Non pour fuir, mais pour écouter plus loin que ses pensées. Puis il traversa.</p>
-               <p>De l’autre côté, la forêt l’enveloppa. Mais il n’y trouva ni esprits, ni cris. Seulement une présence. La terre sous ses pas était dense, vivante. Le vent chantait dans les feuillages. Ce qui devait être un territoire d’ombres était en réalité un sanctuaire oublié.</p>
-               <p>Au cœur de cette paix, Kofi rencontra un vieil homme, assis au pied d’un arbre immense. Sa peau semblait sculptée par le temps. Ses yeux portaient la lumière des nuits sans nuages.</p>
-               <p>— Pourquoi viens-tu, marcheur ? demanda-t-il.<br>Kofi raconta son histoire.<br>Le sage écouta, puis montra une plante discrète à ses pieds.</p>
-               <p>— Voici ce que tu cherches. Mais souviens-toi : ce n’est pas la forêt qui dévore les âmes. Ce sont les désirs non maîtrisés des hommes. Les anciens ont semé des récits de peur pour protéger ce lieu sacré de la convoitise. Mais ceux qui viennent avec un cœur pur n’y trouvent rien d’autre que ce qu’ils portent déjà en eux.</p>
-               <p>Kofi prit la plante, remercia et repartit. Lorsqu’il franchit à nouveau la rivière, un silence épais s’abattit sur le village. Adwoa fut guérie. Les anciens, d’un regard fuyant, comprirent ce qu’ils avaient oublié.</p>
-               <p>Ce jour-là, le village reçut une vérité simple, qui passa de bouche en bouche, mais dont la compréhension appartient à ceux qui osent la vivre :<br><strong>“Les oreilles entendent les peurs des autres, mais seuls les yeux du cœur voient la vérité.”</strong></p>
-               <p>Chacun d’entre nous est appelé, un jour ou l’autre, à s’approcher de cette rivière intérieure. À franchir la frontière des peurs héritées. À entrer dans cette forêt qui, derrière les ombres projetées par notre mental, cache un espace de paix inaltérable. La véritable initiation commence là.</p>
-               <p>La forêt n’a jamais été dangereuse. Ce sont nos histoires qui l’ont rendue hostile. Ce que nous cherchons ne se trouve pas ailleurs. Il est en nous, depuis toujours, mais voilé par le tumulte de nos désirs et de nos résistances.</p>
-               <p>Traverse. Écoute. Pratique.<br>Le reste suivra.</p>`
+<p>Dans un village reculé, au cœur de la savane, vivait un jeune homme nommé Kofi. Il n’avait ni la stature des guerriers, ni le prestige des anciens. Mais il portait en lui une question qui ne le quittait jamais : que se cache-t-il au-delà de ce que l’on croit savoir ?</p>
+<p>Un jour, cette question prit chair.</p>
+<p>La fille du chef, Adwoa, fut frappée d’un mal mystérieux. Les prières, les soins, rien n’y faisait. Le guérisseur consulta les oracles, qui désignèrent un remède oublié : une plante rare, cachée au plus profond de la forêt, de l’autre côté de la rivière sacrée. Mais cette forêt, disaient les anciens, était hantée. Un territoire d’esprits dévoreurs d’âmes, que l’homme sage ne franchit pas.</p>
+<p>Le chef promit richesses et honneurs à quiconque oserait s’y aventurer. Les plus braves reculèrent. La peur, nourrie de récits, était plus forte que la promesse d’or. Tous refusèrent. Tous, sauf Kofi.</p>
+<p>Il ne demandait rien. Ni gloire, ni récompense. Ce qu’il entendait en lui, c’était ce silence profond, qui ne marchande pas, mais qui dit simplement : avance.</p>
+<p>Il prit une gourde d’eau, une amulette offerte par sa mère, et marcha vers la rivière. Là, il s’arrêta. L’eau était limpide, mais à ses yeux, elle était autre chose : une frontière symbolique. La limite entre le connu et l’inconnu.</p>
+<p>Il ferma les yeux. Non pour fuir, mais pour écouter plus loin que ses pensées. Puis il traversa.</p>
+<p>De l’autre côté, la forêt l’enveloppa. Mais il n’y trouva ni esprits, ni cris. Seulement une présence. La terre sous ses pas était dense, vivante. Le vent chantait dans les feuillages. Ce qui devait être un territoire d’ombres était en réalité un sanctuaire oublié.</p>
+<p>Au cœur de cette paix, Kofi rencontra un vieil homme, assis au pied d’un arbre immense. Sa peau semblait sculptée par le temps. Ses yeux portaient la lumière des nuits sans nuages.</p>
+<p>— Pourquoi viens-tu, marcheur ? demanda-t-il.<br>Kofi raconta son histoire.<br>Le sage écouta, puis montra une plante discrète à ses pieds.</p>
+<p>— Voici ce que tu cherches. Mais souviens-toi : ce n’est pas la forêt qui dévore les âmes. Ce sont les désirs non maîtrisés des hommes. Les anciens ont semé des récits de peur pour protéger ce lieu sacré de la convoitise. Mais ceux qui viennent avec un cœur pur n’y trouvent rien d’autre que ce qu’ils portent déjà en eux.</p>
+<p>Kofi prit la plante, remercia et repartit. Lorsqu’il franchit à nouveau la rivière, un silence épais s’abattit sur le village. Adwoa fut guérie. Les anciens, d’un regard fuyant, comprirent ce qu’ils avaient oublié.</p>
+<p>Ce jour-là, le village reçut une vérité simple, qui passa de bouche en bouche, mais dont la compréhension appartient à ceux qui osent la vivre :<br><strong>“Les oreilles entendent les peurs des autres, mais seuls les yeux du cœur voient la vérité.”</strong></p>
+<p>Chacun d’entre nous est appelé, un jour ou l’autre, à s’approcher de cette rivière intérieure. À franchir la frontière des peurs héritées. À entrer dans cette forêt qui, derrière les ombres projetées par notre mental, cache un espace de paix inaltérable.<br>La véritable initiation commence là.</p>
+<p>La forêt n’a jamais été dangereuse. Ce sont nos histoires qui l’ont rendue hostile. Ce que nous cherchons ne se trouve pas ailleurs. Il est en nous, depuis toujours, mais voilé par le tumulte de nos désirs et de nos résistances.</p>
+<p>Traverse. Écoute. Pratique.<br>Le reste suivra.</p>`
     },
     en: {
         title: "Beyond the River — A Parable on the Inner Calling",
         body: `<p>There are places where no one dares to go anymore. Invisible borders, marked not by walls, but by ancient tales — tales of fear.</p>
-               <p>In a remote village, in the heart of the savanna, lived a young man named Kofi. He had neither the stature of warriors nor the prestige of elders. But he carried within him a question that never left him: what lies beyond what we think we know?</p>
-               <p>One day, this question took form.</p>
-               <p>The chief's daughter, Adwoa, was struck by a mysterious illness. Prayers and treatments were in vain. The healer consulted the oracles, who pointed to a forgotten remedy: a rare plant, hidden deep in the forest, on the other side of the sacred river. But this forest, the elders said, was haunted. A territory of soul-devouring spirits, which the wise man does not cross.</p>
-               <p>The chief promised wealth and honors to anyone who dared venture there. The bravest retreated. Fear, fed by stories, was stronger than the promise of gold. All refused. All, except Kofi.</p>
-               <p>He asked for nothing. Neither glory nor reward. What he heard within him was that deep silence, which does not bargain, but simply says: move forward.</p>
-               <p>He took a water gourd, an amulet given by his mother, and walked toward the river. There, he stopped. The water was crystal clear, but to his eyes, it was a symbolic border. The limit between the known and the unknown.</p>
-               <p>He closed his eyes. Not to flee, but to listen beyond his thoughts. Then he crossed.</p>
-               <p>On the other side, the forest enveloped him. But he found neither spirits nor screams. Only a presence. The earth beneath his steps was dense, alive. The wind sang in the leaves. What was supposed to be a territory of shadows was in reality a forgotten sanctuary.</p>
-               <p>In the heart of this peace, Kofi met an old man, sitting at the foot of an immense tree. His skin seemed sculpted by time. His eyes carried the light of cloudless nights.</p>
-               <p>— Why do you come, walker? he asked.<br>Kofi told his story.<br>The sage listened, then pointed to a discreet plant at his feet.</p>
-               <p>— Here is what you seek. But remember: it is not the forest that devours souls. It is the uncontrolled desires of men. The elders sowed tales of fear to protect this sacred place from greed. But those who come with a pure heart find nothing else there but what they already carry within themselves.</p>
-               <p>Kofi took the plant, gave thanks, and left. When he crossed the river again, a thick silence fell upon the village. Adwoa was healed. The elders, with a fleeting gaze, understood what they had forgotten.</p>
-               <p>That day, the village received a simple truth, passed from mouth to mouth, whose understanding belongs only to those who dare to live it:<br><strong>“Ears hear the fears of others, but only the eyes of the heart see the truth.”</strong></p>
-               <p>Each of us is called, sooner or later, to approach this inner river. To cross the border of inherited fears. To enter this forest which, behind the shadows projected by our mind, hides a space of unalterable peace. True initiation begins there.</p>
-               <p>The forest was never dangerous. It is our stories that made it hostile. What we seek is not found elsewhere. It has been within us, always, but veiled by the tumult of our desires and resistances.</p>
-               <p>Cross. Listen. Practice.<br>The rest will follow.</p>`
+<p>In a remote village, in the heart of the savanna, lived a young man named Kofi. He had neither the stature of warriors nor the prestige of elders. But he carried within him a question that never left him: what lies beyond what we think we know?</p>
+<p>One day, this question took form.</p>
+<p>The chief's daughter, Adwoa, was struck by a mysterious illness. Prayers and treatments were in vain. The healer consulted the oracles, who pointed to a forgotten remedy: a rare plant, hidden deep in the forest, on the other side of the sacred river. But this forest, the elders said, was haunted. A territory of soul-devouring spirits, which the wise do not cross.</p>
+<p>The chief promised wealth and honors to anyone who dared venture there. The bravest retreated. Fear, fed by stories, was stronger than the promise of gold. All refused. All, except Kofi.</p>
+<p>He asked for nothing. Neither glory nor reward. What he heard within him was that deep silence, which does not bargain, but simply says: move forward.</p>
+<p>He took a water gourd, an amulet from his mother, and walked to the river. There, he paused. The water was clear, but to his eyes it was something else: a symbolic border. The boundary between the known and unknown.</p>
+<p>He closed his eyes. Not to flee, but to listen beyond his thoughts. Then he crossed.</p>
+<p>On the other side, the forest enveloped him. But he found neither spirits nor screams. Only a presence. The earth beneath his steps was dense, alive. The wind sang in the leaves. What was supposed to be a territory of shadows was in reality a forgotten sanctuary.</p>
+<p>In the heart of this peace, Kofi met an old man, sitting at the foot of an immense tree. His skin seemed sculpted by time. His eyes carried the light of cloudless nights.</p>
+<p>— Why do you come, walker? he asked.<br>Kofi told his story.<br>The sage listened, then pointed to a discreet plant at his feet.</p>
+<p>— Here is what you seek. But remember: it is not the forest that devours souls. It is the uncontrolled desires of men. The elders sowed tales of fear to protect this sacred place from greed. But those who come with a pure heart find nothing else there but what they already carry within themselves.</p>
+<p>Kofi took the plant, thanked the sage, and left. When he crossed the river again, a thick silence fell upon the village. Adwoa was healed. The elders, with a fleeting gaze, realized what they had forgotten.</p>
+<p>That day, the village received a simple truth, passed from mouth to mouth, whose understanding belongs only to those who dare to live it:<br><strong>“Ears hear the fears of others, but only the eyes of the heart see the truth.”</strong></p>
+<p>Each of us is called, sooner or later, to approach this inner river. To cross the boundary of inherited fears. To enter this forest which, behind the shadows projected by our mind, hides a space of unalterable peace.<br>True initiation begins there.</p>
+<p>The forest was never dangerous. It is our stories that made it hostile. What we seek is not found elsewhere. It has always been within us, veiled by the tumult of our desires and resistances.</p>
+<p>Cross. Listen. Practice.<br>The rest will follow.</p>`
     }
 };
 
-// --- Reste du script pour la logique du Sage et la navigation ---
+// --- Fonction Sage ---
 function askSage() {
     const q = document.getElementById('user-question').value.toLowerCase();
     const area = document.getElementById('response-area');
     area.style.opacity = "0";
-
+    
     setTimeout(() => {
         let response = currentLang === 'fr' 
             ? "Le silence est le terrain où toute pratique prend racine. Écoutez votre propre rythme." 
             : "Silence is the ground where all practice takes root. Listen to your own pace.";
 
         const keywords = {
-            "kundalini": currentLang==='fr' ? ["kundalini"] : ["kundalini"],
-            "bandha": currentLang==='fr' ? ["bandha","verrou"] : ["bandha","lock"],
-            "mudra": currentLang==='fr' ? ["mudra","sceau"] : ["mudra","seal"],
-            "samyama": currentLang==='fr' ? ["samyama","sutra"] : ["samyama","sutra"],
-            "pranayama": currentLang==='fr' ? ["pranayama","respiration","souffle"] : ["pranayama","breathing","breath"],
-            "alimentation": currentLang==='fr' ? ["alimentation","nourriture","manger","régime","faim"] : ["diet","food","eat","hunger"]
+            "kundalini": currentLang === 'fr' ? ["kundalini"] : ["kundalini"],
+            "bandha": currentLang === 'fr' ? ["bandha", "verrou"] : ["bandha", "lock"],
+            "mudra": currentLang === 'fr' ? ["mudra", "sceau"] : ["mudra", "seal"],
+            "samyama": currentLang === 'fr' ? ["samyama", "sutra"] : ["samyama", "sutra"],
+            "pranayama": currentLang === 'fr' ? ["pranayama", "respiration", "souffle"] : ["pranayama", "breathing", "breath"],
+            "alimentation": currentLang === 'fr' ? ["alimentation", "régime", "nourriture", "manger", "faim"] : ["diet", "food", "eating", "hunger"]
         };
 
         for (let topic in deepWisdom[currentLang]) {
@@ -227,10 +234,10 @@ function askSage() {
 
         let prefix = "";
         if (isFirstQuestion) {
-            prefix = currentLang==='fr' ? "Bienvenue, chercheur. " : "Welcome, seeker. ";
+            prefix = currentLang === 'fr' ? "Bienvenue, chercheur. " : "Welcome, seeker. ";
             isFirstQuestion = false;
         } else {
-            prefix = currentLang==='fr' ? "Écoute avec attention : " : "Listen carefully: ";
+            prefix = currentLang === 'fr' ? "Écoute avec attention : " : "Listen carefully: ";
         }
 
         area.innerHTML = `<strong>${prefix}</strong><br><br>« ${response} »`;
@@ -238,9 +245,10 @@ function askSage() {
     }, 800);
 }
 
+// --- Langue ---
 function setLanguage(lang) {
     currentLang = lang;
-    const isEn = lang==='en';
+    const isEn = lang === 'en';
     document.getElementById('nav-sage').textContent = isEn ? "THE SAGE" : "LE SAGE";
     document.getElementById('nav-parabole').textContent = isEn ? "THE PARABLE" : "LA PARABOLE";
     document.getElementById('nav-podcasts').textContent = isEn ? "TEACHINGS" : "ENSEIGNEMENTS";
@@ -251,29 +259,35 @@ function setLanguage(lang) {
     document.getElementById('para-main-title').textContent = isEn ? "The Parable" : "La Parabole";
     document.getElementById('para-title').textContent = parable[lang].title;
     document.getElementById('parable-body').innerHTML = parable[lang].body;
-    document.getElementById('pod-title').textContent = isEn ? "Teachings" : "Le Chemin de la Pratique";
-    document.getElementById('pod-intro').textContent = isEn ? "To deepen the technique, the source remains immutable:" : "Pour approfondir la technique, la source est immuable :";
-    document.getElementById('pod-link').textContent = isEn ? "→ Yogani’s Lessons (Original Source)" : "→ Les Leçons de Yogani (Source Originale)";
-    document.getElementById('book-placeholder').textContent = isEn ? "Coming soon: Lineage Library (Books & Writings)." : "Bientôt : La Bibliothèque de la Lignée (Livres & Écrits).";
+
+    document.getElementById('pod-title').textContent = isEn ? "The Path of Practice" : "Le Chemin de la Pratique";
+    document.getElementById('pod-intro').textContent = isEn ? 
+        "To deepen your technique, the source remains immutable:" : "Pour approfondir la technique, la source est immuable :";
+    document.getElementById('pod-link').textContent = isEn ? 
+        "→ Yogani's Lessons (Original Source)" : "→ Les Leçons de Yogani (Source Originale)";
+    document.getElementById('book-placeholder').textContent = isEn ? 
+        "Soon: The Lineage Library (Books & Writings)." : "Bientôt : La Bibliothèque de la Lignée (Livres & Écrits).";
+
     document.getElementById('contact-title').textContent = isEn ? "Letter to the Lineage" : "Lettre à la Lignée";
-    document.getElementById('contact-sub').textContent = isEn ? "A doubt? Write to the Guardian of the Temple." : "Un doute ? Écrivez au Gardien du Temple.";
-    document.getElementById('contact-name').placeholder = isEn ? "Your name" : "Votre nom";
-    document.getElementById('contact-msg').placeholder = isEn ? "Your message..." : "Votre message...";
-    document.getElementById('contact-btn').textContent = isEn ? "Send" : "Envoyer";
-    document.getElementById('footer-text').innerHTML = isEn ? "PROPERTY & LINEAGE 🪷 ॐ | PASSERSBY: <span id='count'>0000</span>" : "PROPRIÉTÉ & LIGNÉE 🪷 ॐ | PASSANTS : <span id='count'>0000</span>";
+    document.getElementById('contact-sub').textContent = isEn ? "Have a question? Write to the Temple Guardian." : "Un doute ? Écrivez au Gardien du Temple.";
+
+    document.getElementById('footer-text').innerHTML = isEn ? 
+        "PROPERTY & LINEAGE 🪷 ॐ | PASSERSBY: <span id='count'>0000</span>" : 
+        "PROPRIÉTÉ & LIGNÉE 🪷 ॐ | PASSANTS : <span id='count'>0000</span>";
 }
 
+// --- Sections ---
 function showSection(id) {
-    document.querySelectorAll('.container').forEach(c => c.style.display='none');
-    document.getElementById(id).style.display='block';
+    document.querySelectorAll('.container').forEach(c => c.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
 }
 
-window.onload = () => {
-    setLanguage('fr');
+window.onload = () => { 
+    setLanguage('fr'); 
     showSection('sage');
     let count = localStorage.getItem('visits') || 0;
     localStorage.setItem('visits', ++count);
-    document.getElementById('count').textContent = count.toString().padStart(4,'0');
+    document.getElementById('count').textContent = count.toString().padStart(4, '0');
 };
 </script>
 </body>

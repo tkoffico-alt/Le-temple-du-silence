@@ -5,79 +5,75 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Le Temple du Silence - AYP</title>
 <style>
-/* --- Esthétique & Immersion --- */
-body { 
-    background: #0a0a0c url('kofi.jpg') no-repeat center center fixed; 
-    background-size: cover;
-    color: #ffffff; 
-    font-family: 'Georgia', serif; 
-    margin: 0;
-    text-align: center;
-}
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.80);
-    z-index: -1;
-}
-nav { background: rgba(0,0,0,0.92); padding: 15px 20px; border-bottom: 1px solid #d4af37; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; }
-.nav-brand { color:#d4af37; font-weight:bold; letter-spacing:3px; }
-.nav-links { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
-.nav-links a { color: #ffffff; text-decoration: none; font-weight: bold; cursor: pointer; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
-.nav-links a:hover { color: #d4af37; }
-.lang-btn { background: none; border: 1px solid #d4af37; color: #d4af37; cursor: pointer; padding: 5px 10px; font-weight: bold; border-radius: 4px; }
+    body { 
+        background: #0a0a0c url('kofi.jpg') no-repeat center center fixed; 
+        background-size: cover;
+        color: #ffffff; 
+        font-family: 'Georgia', serif; 
+        margin: 0;
+        text-align: center;
+    }
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.80);
+        z-index: -1;
+    }
+    nav { 
+        background: rgba(0,0,0,0.92); padding: 15px 20px; border-bottom: 1px solid #d4af37; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; 
+    }
+    .nav-brand { color:#d4af37; font-weight:bold; letter-spacing:3px; }
+    .nav-links { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+    .nav-links a { color: #ffffff; text-decoration: none; font-weight: bold; cursor: pointer; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; }
+    .nav-links a:hover { color: #d4af37; }
+    .lang-btn { background: none; border: 1px solid #d4af37; color: #d4af37; cursor: pointer; padding: 5px 10px; font-weight: bold; border-radius: 4px; }
 
-.container { 
-    max-width: 900px; 
-    margin: 60px auto; 
-    padding: 40px; 
-    background: rgba(10, 10, 12, 0.5); 
-    border: 1px solid rgba(212, 175, 55, 0.15);
-    border-radius: 12px;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.9);
-    box-sizing: border-box;
-    backdrop-filter: blur(4px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-h1, h2 { color: #d4af37; letter-spacing: 2px; }
-#parable-body, #response-area { text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #e5e5e5; max-width: 800px; margin-bottom: 1em; opacity: 0; transform: translateY(15px); transition: all 0.8s ease-in-out; }
-#response-area.centered { text-align: center; }
+    .container { 
+        max-width: 900px; 
+        margin: 60px auto; 
+        padding: 40px; 
+        background: rgba(10, 10, 12, 0.5); 
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        border-radius: 12px;
+        box-shadow: 0 20px 45px rgba(0,0,0,0.9);
+        box-sizing: border-box;
+        backdrop-filter: blur(4px);
+        flex-direction: column;
+    }
 
-input, textarea {
-    width: 90%; padding: 15px; margin-bottom: 25px; border-radius: 8px;
-    border: 1px solid #222; background: rgba(17, 17, 17, 0.8); color: white;
-    font-size: 1rem; text-align: center; outline: none; box-sizing: border-box; font-family: inherit;
-}
-input:focus { border-color: #d4af37; }
+    h1, h2 { color: #d4af37; letter-spacing: 2px; }
+    #parable-body { text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #e5e5e5; opacity: 0; transform: translateY(15px); transition: all 0.8s ease-in-out; }
+    #response-area { text-align:center; line-height: 1.8; font-size: 1.1rem; color:#e5e5e5; opacity:0; transition: opacity 0.8s ease-in-out; }
+    .visible { opacity: 1 !important; transform: translateY(0) !important; }
 
-.btn-action {
-    background: #2b57e5; color: white; border: none; padding: 16px 45px;
-    border-radius: 35px; cursor: pointer; margin-top: 10px;
-    font-weight: bold; font-size: 1rem; letter-spacing: 2px;
-    transition: all 0.3s ease; text-transform: uppercase;
-}
-.btn-action:hover { background: #1a3fb5; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(43, 87, 229, 0.4); }
+    input, textarea {
+        width: 90%; padding: 15px; margin-bottom: 25px; border-radius: 8px;
+        border: 1px solid #222; background: rgba(17, 17, 17, 0.8); color: white;
+        font-size: 1rem; text-align: center; outline: none; box-sizing: border-box; font-family: inherit;
+    }
+    input:focus { border-color: #d4af37; }
 
-.signature-area { margin: 50px 0; display: flex; justify-content: center; }
-.signature-area img { width: 140px; filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.4)); opacity: 0.9; }
+    .btn-action {
+        background: #2b57e5; color: white; border: none; padding: 16px 45px;
+        border-radius: 35px; cursor: pointer; margin-top: 10px;
+        font-weight: bold; font-size: 1rem; letter-spacing: 2px;
+        transition: all 0.3s ease; text-transform: uppercase;
+    }
+    .btn-action:hover { background: #1a3fb5; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(43, 87, 229, 0.4); }
 
-footer { padding: 30px; color: #d4af37; font-size: 0.8rem; font-weight: bold; border-top: 1px solid rgba(212,175,55,0.1); letter-spacing: 1px; }
+    .signature-area { margin: 50px 0; display: flex; justify-content: center; }
+    .signature-area img { width: 140px; filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.4)); opacity: 0.9; }
 
-@media (max-width: 768px) {
-    nav { flex-direction: column; gap: 10px; }
-    .container { width: 95%; padding: 25px; }
-    #response-area { font-size: 1.1rem; padding: 0; text-align: left; }
-}
+    footer { padding: 30px; color: #d4af37; font-size: 0.8rem; font-weight: bold; border-top: 1px solid rgba(212,175,55,0.1); letter-spacing: 1px; }
 
-.highlight { background: rgba(212,175,55,0.5); border-radius: 3px; padding: 0 2px; transition: background 0.8s ease; }
-.visible { opacity: 1 !important; transform: translateY(0) !important; }
+    @media (max-width: 768px) {
+        nav { flex-direction: column; gap: 10px; }
+        .container { width: 95%; padding: 25px; }
+    }
 </style>
 </head>
 <body>
-
 <nav>
     <span class="nav-brand">CHEMIN AYP</span>
     <div class="nav-links">
@@ -90,21 +86,23 @@ footer { padding: 30px; color: #d4af37; font-size: 0.8rem; font-weight: bold; bo
     </div>
 </nav>
 
+<!-- SAGE -->
 <div class="container" id="sage">
     <h1 id="sage-title">Le Temple du Silence</h1>
     <br>
     <input type="text" id="user-question" placeholder="Posez votre question sur la pratique (Samyama, Kundalini, Mudras...)">
     <br><button class="btn-action" id="sage-btn" onclick="askSage()">INTERROGER</button>
-    <div id="response-area" class="centered">La régularité est le lit du silence.</div>
+    <div id="response-area" class="visible">La régularité est le lit du silence.</div>
 </div>
 
+<!-- PARABOLE -->
 <div class="container" id="parabole" style="display:none;">
     <h1 id="para-main-title">La Parabole</h1>
     <h2 id="para-title" style="font-style:italic; font-size: 1.2rem;"></h2>
-    <audio controls style="width:100%; margin:20px 0;"><source src="audio.mp3" type="audio/mpeg"></audio>
     <div id="parable-body"></div>
 </div>
 
+<!-- TEACHINGS -->
 <div class="container" id="podcasts" style="display:none;">
     <h1 id="pod-title">Le Chemin de la Pratique</h1>
     <div id="pod-content" style="text-align:left; line-height:2.2; font-size:1.1rem; padding: 0 10px;">
@@ -116,6 +114,7 @@ footer { padding: 30px; color: #d4af37; font-size: 0.8rem; font-weight: bold; bo
     </div>
 </div>
 
+<!-- CONTACT -->
 <div class="container" id="contact" style="display:none;">
     <h1 id="contact-title">Lettre à la Lignée</h1>
     <p id="contact-sub">Un doute ? Écrivez au Gardien du Temple.</p>
@@ -138,27 +137,25 @@ footer { padding: 30px; color: #d4af37; font-size: 0.8rem; font-weight: bold; bo
 let isFirstQuestion = true;
 let currentLang = 'fr';
 
-// --- Contenu profond du Sage ---
 const deepWisdom = {
     fr: {
-        "kundalini": "L'énergie Kundalini est la conductivité naturelle du système nerveux vers l'extase. Elle s'éveille par la régularité de la Méditation Profonde et de la Respiration Spinale. Ne forcez jamais. Si vous ressentez chaleur, maux de tête ou irritabilité, ralentissez, reposez-vous et recentrez-vous. L’auto-rythme est votre meilleur guide.",
-        "bandha": "Les Bandhas pressurisent le prana pour éveiller le système nerveux. Mulabandha, Uddiyana et Jalandhara Bandha doivent être intégrés doucement, un par un. L'auto-rythme protège contre surcharge et anxiété.",
-        "mudra": "Les Mudras relient les courants énergétiques. Sambhavi stimule la glande pituitaire, Kechari facilite la descente du nectar extatique. L'effort doit toujours rester confortable et harmonieux.",
-        "samyama": "Le Samyama est l’art de déposer une pensée-graine dans le silence et de l’oublier. Comme un caillou dans l’étang : laissez les ondes agir. Fatigue mentale? Réduisez sutras ou pratiquez le repos méditatif.",
-        "alimentation": "Le corps est le temple de votre système nerveux. Une alimentation légère facilite la méditation. Si la Kundalini est forte, des aliments lourds et ancrants régulent l’énergie. Écoutez votre corps plutôt que les dogmes.",
-        "pranayama": "La Respiration Spinale purifie le canal central. Tracez mentalement un fil de lumière du périnée à la tête. Si vertiges ou déséquilibre, ralentissez. Maîtrisez votre rythme avec douceur."
+        "kundalini": "L'énergie Kundalini n'est pas une force mystique extérieure, mais la conductivité naturelle de votre système nerveux vers l'extase. Elle s'éveille organiquement par la régularité de la Méditation Profonde et de la Respiration Spinale. Ne forcez jamais. Si vous ressentez une chaleur excessive, des maux de tête ou de l'irritabilité, c'est le signe d'une friction nerveuse. L'effort doit toujours être équilibré par le confort et la lenteur. Appliquez l'auto-rythme : réduisez la pratique si nécessaire et recentrez-vous.",
+        "bandha": "Les Bandhas sont des verrous mécaniques qui pressurisent le prana pour éveiller le système nerveux. Mulabandha empêche la dissipation vers le bas, Uddiyana Bandha attire l'énergie vers le haut, Jalandhara Bandha scelle le circuit. Introduisez-les doucement. L'auto-rythme est votre guide. Observez le corps et ajustez.",
+        "mudra": "Les Mudras sont des sceaux qui relient les courants énergétiques du corps. Sambhavi stimule la glande pituitaire, Kechari crée un pont pour la descente du 'nectar' extatique. Ne forcez pas, laissez le corps s'adapter avec le temps. Confort et fluidité sont essentiels.",
+        "samyama": "Le Samyama est l'art de déposer une pensée-graine dans le silence de la conscience, puis de l'oublier. Comme jeter un caillou dans un étang : laissez agir les ondes sans interférer. Si fatigue ou tensions apparaissent, réduisez le nombre de sutras ou faites une pause. L'auto-rythme est clé.",
+        "alimentation": "Le corps est le temple de votre système nerveux. Une alimentation légère réduit la friction digestive. Si la Kundalini s'éveille fortement, mangez des aliments lourds et ancrants pour ralentir la conductivité. Écoutez la biologie en mutation, non des dogmes rigides.",
+        "pranayama": "La Respiration Spinale purifie le canal central. Tracez mentalement un fil de lumière du périnée à la tête, lissez le passage pour l'extase. Si vertiges ou déséquilibres surviennent, ralentissez et respectez votre rythme naturel."
     },
     en: {
-        "kundalini": "Kundalini energy is the natural conductivity of your nervous system toward ecstasy. It awakens through the regularity of Deep Meditation and Spinal Breathing. Never force it. If you feel heat, headaches, or irritability, slow down, rest, and ground yourself. Self-pacing is your best guide.",
-        "bandha": "Bandhas pressurize prana to awaken the nervous system. Mulabandha, Uddiyana, and Jalandhara Bandha should be integrated gently, one at a time. Self-pacing protects against overload and anxiety.",
-        "mudra": "Mudras connect energy currents. Sambhavi stimulates the pituitary gland, Kechari facilitates ecstatic nectar descent. Effort must always be comfortable and balanced.",
-        "samyama": "Samyama is the art of dropping a seed-thought into silence and forgetting it. Like a pebble in a pond: let the ripples act. Mental fatigue? Reduce sutras or practice restful meditation.",
-        "diet": "The body is the temple of your nervous system. A light diet aids meditation. If Kundalini is strong, grounding foods regulate energy. Listen to your body rather than rigid dogmas.",
-        "pranayama": "Spinal Breathing purifies the central channel. Mentally trace a thread of light from perineum to head. Dizziness? Slow down. Master your pace gently."
+        "kundalini": "Kundalini energy is not an external mystical force, but the natural conductivity of your nervous system toward ecstasy. It awakens organically through Deep Meditation and Spinal Breathing. Never force it. If you feel heat, headaches, or irritability, slow down and listen to your body. Comfort and gradual practice are essential.",
+        "bandha": "Bandhas are mechanical locks that pressurize prana to awaken the nervous system. Mulabandha prevents downward energy loss, Uddiyana Bandha draws energy upward, Jalandhara Bandha seals the circuit. Introduce them gently. Self-pacing and attention to the body are key.",
+        "mudra": "Mudras are seals connecting energy flows. Sambhavi stimulates the pituitary gland, Kechari creates a bridge for ecstatic 'nectar'. Never force; let the body adapt. Comfort and fluidity are crucial.",
+        "samyama": "Samyama is the art of placing a seed-thought into the silence of consciousness, then forgetting it. Like tossing a stone in a pond: let the ripples act. If fatigue or tension arises, reduce the sutras or pause. Self-pacing is essential.",
+        "diet": "The body is the temple of your nervous system. A light diet reduces friction. If Kundalini is strong, eat grounding foods to slow conductivity. Listen to your changing biology rather than rigid dogmas.",
+        "pranayama": "Spinal Breathing purifies the central channel. Trace a thread of light from perineum to head to smooth the passage for ecstasy. If dizziness occurs, slow down and respect your natural pace."
     }
 };
 
-// --- Parabole bilingue ---
 const parable = {
     fr: {
         title: "Au-delà de la Rivière — Une Parabole sur l’Appel Intérieur",
@@ -167,7 +164,8 @@ const parable = {
                <p>Un jour, cette question prit chair.</p>
                <p>La fille du chef, Adwoa, fut frappée d’un mal mystérieux. Les prières, les soins, rien n’y faisait. Le guérisseur consulta les oracles, qui désignèrent un remède oublié : une plante rare, cachée au plus profond de la forêt, de l’autre côté de la rivière sacrée. Mais cette forêt, disaient les anciens, était hantée. Un territoire d’esprits dévoreurs d’âmes, que l’homme sage ne franchit pas.</p>
                <p>Le chef promit richesses et honneurs à quiconque oserait s’y aventurer. Les plus braves reculèrent. La peur, nourrie de récits, était plus forte que la promesse d’or. Tous refusèrent. Tous, sauf Kofi.</p>
-               <p>Il ne demandait rien. Ni gloire, ni récompense. Ce qu’il entendait en lui, c’était ce silence profond, qui ne marchande pas, mais qui dit simplement : avance. Il prit une gourde d’eau, une amulette offerte par sa mère, et marcha vers la rivière. Là, il s’arrêta. L’eau était limpide, mais à ses yeux, elle était autre chose : une frontière symbolique. La limite entre le connu et l’inconnu.</p>
+               <p>Il ne demandait rien. Ni gloire, ni récompense. Ce qu’il entendait en lui, c’était ce silence profond, qui ne marchande pas, mais qui dit simplement : avance.</p>
+               <p>Il prit une gourde d’eau, une amulette offerte par sa mère, et marcha vers la rivière. Là, il s’arrêta. L’eau était limpide, mais à ses yeux, elle était autre chose : une frontière symbolique. La limite entre le connu et l’inconnu.</p>
                <p>Il ferma les yeux. Non pour fuir, mais pour écouter plus loin que ses pensées. Puis il traversa.</p>
                <p>De l’autre côté, la forêt l’enveloppa. Mais il n’y trouva ni esprits, ni cris. Seulement une présence. La terre sous ses pas était dense, vivante. Le vent chantait dans les feuillages. Ce qui devait être un territoire d’ombres était en réalité un sanctuaire oublié.</p>
                <p>Au cœur de cette paix, Kofi rencontra un vieil homme, assis au pied d’un arbre immense. Sa peau semblait sculptée par le temps. Ses yeux portaient la lumière des nuits sans nuages.</p>
@@ -186,12 +184,13 @@ const parable = {
                <p>One day, this question took form.</p>
                <p>The chief's daughter, Adwoa, was struck by a mysterious illness. Prayers and treatments were in vain. The healer consulted the oracles, who pointed to a forgotten remedy: a rare plant, hidden deep in the forest, on the other side of the sacred river. But this forest, the elders said, was haunted. A territory of soul-devouring spirits, which the wise man does not cross.</p>
                <p>The chief promised wealth and honors to anyone who dared venture there. The bravest retreated. Fear, fed by stories, was stronger than the promise of gold. All refused. All, except Kofi.</p>
-               <p>He asked for nothing. Neither glory nor reward. What he heard within him was that deep silence, which does not bargain, but simply says: move forward. He took a water gourd, an amulet given by his mother, and walked toward the river. There, he stopped. The water was crystal clear, but to his eyes, it was a symbolic border. The limit between the known and the unknown.</p>
+               <p>He asked for nothing. Neither glory nor reward. What he heard within him was that deep silence, which does not bargain, but simply says: move forward.</p>
+               <p>He took a water gourd, an amulet given by his mother, and walked toward the river. There, he stopped. The water was crystal clear, but to his eyes, it was a symbolic border. The limit between the known and the unknown.</p>
                <p>He closed his eyes. Not to flee, but to listen beyond his thoughts. Then he crossed.</p>
                <p>On the other side, the forest enveloped him. But he found neither spirits nor screams. Only a presence. The earth beneath his steps was dense, alive. The wind sang in the leaves. What was supposed to be a territory of shadows was in reality a forgotten sanctuary.</p>
                <p>In the heart of this peace, Kofi met an old man, sitting at the foot of an immense tree. His skin seemed sculpted by time. His eyes carried the light of cloudless nights.</p>
                <p>— Why do you come, walker? he asked.<br>Kofi told his story.<br>The sage listened, then pointed to a discreet plant at his feet.</p>
-               <p>— Here is what you seek. But remember: it is not the forest that devours souls. It is the uncontrolled desires of men. The elders sowed tales of fear to protect this sacred place from greed. But those who come with a pure heart find nothing else there but what they already carry within themselves.</p>
+               <p>— Here is what you seek. But remember: it is not the forest that devours souls. It is the uncontrolled desires of men. The elders sowed tales of fear to protect this sacred place from greed. Those who come with a pure heart find nothing there but what they already carry within themselves.</p>
                <p>Kofi took the plant, gave thanks, and left. When he crossed the river again, a thick silence fell upon the village. Adwoa was healed. The elders, with a fleeting gaze, understood what they had forgotten.</p>
                <p>That day, the village received a simple truth, passed from mouth to mouth, whose understanding belongs only to those who dare to live it:<br><strong>“Ears hear the fears of others, but only the eyes of the heart see the truth.”</strong></p>
                <p>Each of us is called, sooner or later, to approach this inner river. To cross the border of inherited fears. To enter this forest which, behind the shadows projected by our mind, hides a space of unalterable peace.<br>True initiation begins there.</p>
@@ -200,77 +199,83 @@ const parable = {
     }
 };
 
-// --- Réponses automatiques Sage ---
 function askSage() {
     const q = document.getElementById('user-question').value.toLowerCase();
     const area = document.getElementById('response-area');
-    area.classList.remove('visible');
-    
+    area.style.opacity = "0";
+
     setTimeout(() => {
-        let response = currentLang === 'fr' 
-            ? "Le silence est le terrain où toute pratique prend racine. Écoutez votre rythme intérieur et laissez la compréhension venir naturellement." 
-            : "Silence is the ground where all practice takes root. Listen to your inner rhythm and let understanding arise naturally.";
+        let response = currentLang === 'fr'
+            ? "Le silence est le terrain où toute pratique prend racine. Écoutez votre propre rythme."
+            : "Silence is the ground where all practice takes root. Listen to your own pace.";
 
         const keywords = {
-            "kundalini": currentLang === 'fr' ? ["kundalini"] : ["kundalini"],
-            "bandha": currentLang === 'fr' ? ["bandha","verrou"] : ["bandha","lock"],
-            "mudra": currentLang === 'fr' ? ["mudra","sceau"] : ["mudra","seal"],
-            "samyama": currentLang === 'fr' ? ["samyama","sutra"] : ["samyama","sutra"],
-            "pranayama": currentLang === 'fr' ? ["pranayama","respiration","souffle"] : ["pranayama","breathing","breath"],
-            "alimentation": currentLang === 'fr' ? ["alimentation","régime","nourriture","manger","faim"] : ["diet","food","eating","hunger"]
+            "kundalini": ["kundalini"],
+            "bandha": ["bandha", "verrou"],
+            "mudra": ["mudra", "sceau"],
+            "samyama": ["samyama", "sutra"],
+            "pranayama": currentLang === 'fr' ? ["pranayama", "respiration", "souffle"] : ["pranayama", "breathing", "breath"],
+            "alimentation": currentLang === 'fr' ? ["alimentation", "régime", "nourriture", "manger", "faim"] : ["diet", "food", "eating", "hunger"]
         };
 
         for (let topic in deepWisdom[currentLang]) {
             const keys = keywords[topic];
             if (keys.some(k => q.includes(k))) {
-                const variants = Array.isArray(deepWisdom[currentLang][topic]) ? deepWisdom[currentLang][topic] : [deepWisdom[currentLang][topic]];
-                response = variants[Math.floor(Math.random() * variants.length)];
+                // Réponses variées
+                let variations = deepWisdom[currentLang][topic].split('. ').map(s => s.trim()).filter(Boolean);
+                response = variations[Math.floor(Math.random() * variations.length)] + '.';
                 break;
             }
         }
 
-        const prefix = isFirstQuestion ? (currentLang==='fr'?"Bienvenue, chercheur. ":"Welcome, seeker. ") : (currentLang==='fr'?"Écoute attentivement : ":"Listen carefully: ");
-        isFirstQuestion = false;
+        let prefix = "";
+        if (isFirstQuestion) {
+            prefix = currentLang === 'fr' ? "Bienvenue, chercheur. " : "Welcome, seeker. ";
+            isFirstQuestion = false;
+        } else {
+            prefix = currentLang === 'fr' ? "Écoute avec attention : " : "Listen carefully: ";
+        }
+
         area.innerHTML = `<strong>${prefix}</strong><br><br>« ${response} »`;
-        setTimeout(()=>area.classList.add('visible'), 50);
+        area.style.opacity = "1";
     }, 800);
 }
 
-// --- Changement de langue ---
 function setLanguage(lang) {
     currentLang = lang;
-    const isEn = lang==='en';
-    document.getElementById('nav-sage').textContent = isEn?"THE SAGE":"LE SAGE";
-    document.getElementById('nav-parabole').textContent = isEn?"THE PARABLE":"LA PARABOLE";
-    document.getElementById('nav-podcasts').textContent = isEn?"TEACHINGS":"ENSEIGNEMENTS";
-    document.getElementById('nav-contact').textContent = isEn?"CONTACT":"CONTACT";
-    document.getElementById('sage-title').textContent = isEn?"The Temple of Silence":"Le Temple du Silence";
-    document.getElementById('user-question').placeholder = isEn?"Ask about practice...":"Posez votre question sur la pratique (Samyama, Kundalini, Mudras...)";
-    document.getElementById('sage-btn').textContent = isEn? "INQUIRE":"INTERROGER";
-    document.getElementById('para-main-title').textContent = isEn?"The Parable":"La Parabole";
+    const isEn = lang === 'en';
+    document.getElementById('nav-sage').textContent = isEn ? "THE SAGE" : "LE SAGE";
+    document.getElementById('nav-parabole').textContent = isEn ? "THE PARABLE" : "LA PARABOLE";
+    document.getElementById('nav-podcasts').textContent = isEn ? "TEACHINGS" : "ENSEIGNEMENTS";
+    document.getElementById('nav-contact').textContent = "CONTACT";
+    document.getElementById('sage-title').textContent = isEn ? "The Temple of Silence" : "Le Temple du Silence";
+    document.getElementById('user-question').placeholder = isEn ? "Ask about practice..." : "Posez votre question...";
+    document.getElementById('sage-btn').textContent = isEn ? "INQUIRE" : "INTERROGER";
+    document.getElementById('para-main-title').textContent = isEn ? "The Parable" : "La Parabole";
     document.getElementById('para-title').textContent = parable[lang].title;
     document.getElementById('parable-body').innerHTML = parable[lang].body;
-    document.getElementById('pod-title').textContent = isEn?"Teachings & Guidance":"Le Chemin de la Pratique";
-    document.getElementById('pod-intro').textContent = isEn?"To deepen your practice, the source is immutable:":"Pour approfondir la pratique, la source est immuable :";
-    document.getElementById('pod-link').textContent = isEn?"→ Yogani's Lessons (Original Source)":"→ Les Leçons de Yogani (Source Originale)";
-    document.getElementById('book-placeholder').textContent = isEn?"Coming soon: Lineage Library (Books & Writings)":"Bientôt : La Bibliothèque de la Lignée (Livres & Écrits)";
-    document.getElementById('contact-title').textContent = isEn?"Letter to the Lineage":"Lettre à la Lignée";
-    document.getElementById('contact-sub').textContent = isEn?"Have a question? Write to the Temple Keeper.":"Un doute ? Écrivez au Gardien du Temple.";
-    document.getElementById('contact-btn').textContent = isEn?"Send":"Envoyer";
-    document.getElementById('footer-text').innerHTML = isEn?"PROPERTY & LINEAGE 🪷 ॐ | PASSERSBY: <span id='count'>0000</span>":"PROPRIÉTÉ & LIGNÉE 🪷 ॐ | PASSANTS : <span id='count'>0000</span>";
+    document.getElementById('pod-title').textContent = isEn ? "The Path of Practice" : "Le Chemin de la Pratique";
+    document.getElementById('pod-link').textContent = isEn ? "→ Yogani Lessons (Original Source)" : "→ Les Leçons de Yogani (Source Originale)";
+    document.getElementById('pod-intro').textContent = isEn ? "To deepen the technique, the source is immutable:" : "Pour approfondir la technique, la source est immuable :";
+    document.getElementById('book-placeholder').textContent = isEn ? "Coming Soon: Lineage Library (Books & Writings)" : "Bientôt : La Bibliothèque de la Lignée (Livres & Écrits).";
+    document.getElementById('contact-title').textContent = isEn ? "Letter to the Lineage" : "Lettre à la Lignée";
+    document.getElementById('contact-sub').textContent = isEn ? "A doubt? Write to the Guardian of the Temple." : "Un doute ? Écrivez au Gardien du Temple.";
+    document.getElementById('contact-name').placeholder = isEn ? "Your name" : "Votre nom";
+    document.getElementById('contact-msg').placeholder = isEn ? "Your message..." : "Votre message...";
+    document.getElementById('contact-btn').textContent = isEn ? "SEND" : "Envoyer";
+    document.getElementById('footer-text').innerHTML = isEn ? "PROPERTY & LINEAGE 🪷 ॐ | PASSERSBY: <span id='count'>0000</span>" : "PROPRIÉTÉ & LIGNÉE 🪷 ॐ | PASSANTS : <span id='count'>0000</span>";
 }
 
-// --- Afficher une section ---
 function showSection(id) {
-    document.querySelectorAll('.container').forEach(c=>c.style.display='none');
-    document.getElementById(id).style.display='flex';
+    document.querySelectorAll('.container').forEach(c => c.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+    if(id==='parabole'){document.getElementById('parable-body').classList.add('visible');}
 }
 
-// --- Initialisation ---
 window.onload = () => {
-    setLanguage('fr');
+    setLanguage('fr'); 
     showSection('sage');
-    let count = localStorage.getItem('visits')||0;
+    let count = localStorage.getItem('visits') || 0;
     localStorage.setItem('visits', ++count);
     document.getElementById('count').textContent = count.toString().padStart(4,'0');
 };

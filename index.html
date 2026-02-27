@@ -165,13 +165,11 @@
         body.zen-active .container { background: var(--fond-voile); border-color: transparent; box-shadow: none; max-width: 800px; }
 
         /* --- Audio Players --- */
-        audio { width: 100%; margin-top: 15px; border-radius: 30px; outline: none; }
+        audio { width: 100%; border-radius: 30px; outline: none; }
 
-        /* --- Section Podcasts --- */
-        .podcast-item { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid rgba(212,175,55,0.2); }
-        .transcript-btn { background: none; border: 1px solid var(--couleur-accent); color: var(--couleur-accent); padding: 8px 20px; border-radius: 20px; cursor: pointer; margin-top: 15px; font-family: 'Cinzel', serif; font-size: 0.8rem; transition: 0.3s; display: block; margin-left: auto; margin-right: auto; }
-        .transcript-btn:hover { background: var(--couleur-accent); color: var(--fond-voile); }
-        .transcript-content { display: none; margin-top: 20px; font-size: 1.15rem; line-height: 1.8; color: var(--texte-secondaire); background: rgba(0,0,0,0.1); padding: 20px; border-radius: 8px; border-left: 3px solid var(--couleur-accent); }
+        /* --- Section Murmures --- */
+        .murmure-item { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid rgba(212,175,55,0.2); text-align: justify; line-height: 1.8; font-size: 1.15rem; color: var(--texte-secondaire); transition: color 0.8s ease; }
+        .murmure-item h3 { margin-bottom: 15px; }
 
         /* --- Citation Blanche --- */
         #silence-quote {
@@ -231,7 +229,7 @@
             <a onclick="showSection('sage')" id="nav-sage">LE SAGE</a>
             <a onclick="showSection('parabole')" id="nav-parabole">LA PARABOLE</a>
             <a onclick="showSection('enseignements')" id="nav-teachings">ENSEIGNEMENTS</a>
-            <a onclick="showSection('podcasts')" id="nav-podcasts">PODCASTS</a>
+            <a onclick="showSection('murmures')" id="nav-murmures">MURMURES</a>
             <a onclick="showSection('contact')" id="nav-contact">CONTACT</a>
             <button class="lang-btn" onclick="toggleLanguage()">FR / EN</button>
             <button class="lang-btn" onclick="toggleTheme()" id="theme-btn">🌙 PROFONDEUR</button>
@@ -250,7 +248,7 @@
         <button class="zen-btn" onclick="toggleZen()">👁️ <span class="zen-text">Mode Zen</span></button>
         <h1 id="para-main-title">La Parabole</h1>
         <h2 id="para-title" style="font-style:italic; font-size: 1.4rem;">Au-delà de la Rivière</h2>
-        <audio id="parable-audio" controls src="parabole.mp3"></audio>
+        <audio id="parable-audio" controls src="parabole.mp3" style="margin-top: 15px;"></audio>
         <div id="parable-body"></div>
     </div>
 
@@ -268,10 +266,11 @@
         </div>
     </div>
 
-    <div class="container" id="podcasts">
+    <div class="container" id="murmures">
         <button class="zen-btn" onclick="toggleZen()">👁️ <span class="zen-text">Mode Zen</span></button>
-        <h1 id="podcast-main-title">Podcasts de la Lignée</h1>
-        <div id="podcast-list-container"></div>
+        <h1 id="murmures-main-title">Murmures de la Lignée</h1>
+        <p style="text-align:center; font-style:italic; opacity:0.8; margin-bottom: 40px;" id="murmures-intro">Graines de sagesse et courtes réflexions pour l'esprit en marche.</p>
+        <div id="murmures-list-container"></div>
     </div>
 
     <div class="container" id="contact">
@@ -336,55 +335,57 @@
     }
 
     /* ==========================
-       MINI-CMS : BASE DE DONNÉES PODCASTS
+       MINI-CMS : BASE DE DONNÉES MURMURES (Capsules courtes)
     ========================== */
-    const PODCASTS_DATABASE = {
-        fr: [{
-            title: "La Mécanique de l'Extase",
-            audioFile: "podcast_fr_1.mp3",
-            transcript: "Ceci est la transcription intégrale du premier podcast. Le silence intérieur s'installe non par l'effort, mais par la régularité biquotidienne..."
-        }],
-        en: [{
-            title: "The Mechanics of Ecstasy",
-            audioFile: "podcast_en_1.mp3",
-            transcript: "This is the full transcript of the first podcast. Inner silence settles not through effort, but through twice-daily regularity..."
-        }]
+    const MURMURES_DATABASE = {
+        fr: [
+            {
+                title: "La Boussole du Silence",
+                audioFile: "", // Ajoute le chemin vers ton fichier audio court ici si tu en as un, ex: "boussole.mp3"
+                text: "Voyageur, ne cherche pas ta voie dans le tumulte de la tempête. Une direction intérieure véritable ne hurle jamais avec l'émotion. L'urgence et la peur ne t'offrent qu'une clarté illusoire qui s'évapore avec le vent. La boussole du Soi se lit dans l'immobilité : la voie juste est celle qui demeure intelligible lorsque ton cœur cesse de s'emballer."
+            },
+            {
+                title: "Le Roseau et l'Orage",
+                audioFile: "", 
+                text: "Tu t'épuises à bâtir des forteresses. Dans ton effort constant pour te rendre invulnérable, ton corps se crispe et ton souffle se verrouille. Comprends ceci : la véritable force ne réside pas dans l'armure. Elle s'éveille à l'instant même où tu cesses de lutter contre le fait d'être affecté. Laisse l'impact traverser ton système nerveux comme le vent traverse les feuilles."
+            }
+        ],
+        en: [
+            {
+                title: "The Compass of Silence",
+                audioFile: "",
+                text: "Traveler, do not seek your path in the tumult of the storm. A true inner direction never howls with emotion. Urgency and fear offer only an illusory clarity that evaporates with the wind. The compass of the Self is read in stillness: the right path is the one that remains intelligible when your heart stops racing."
+            },
+            {
+                title: "The Reed and the Storm",
+                audioFile: "",
+                text: "You exhaust yourself building fortresses. In your constant effort to make yourself invulnerable, your body tenses and your breath locks. Understand this: true strength does not reside in armor. It awakens the very moment you stop fighting the fact of being affected. Let the impact pass through your nervous system like the wind through the leaves."
+            }
+        ]
     };
 
-    function renderPodcasts() {
-        const container = document.getElementById("podcast-list-container");
+    function renderMurmures() {
+        const container = document.getElementById("murmures-list-container");
         container.innerHTML = ""; 
-        const currentPodcasts = PODCASTS_DATABASE[currentLang];
-        const btnText = currentLang === 'fr' ? "LIRE LA TRANSCRIPTION" : "READ TRANSCRIPT";
+        const currentMurmures = MURMURES_DATABASE[currentLang];
 
-        if (currentPodcasts.length === 0) {
+        if (currentMurmures.length === 0) {
             container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${currentLang === 'fr' ? "Bientôt disponible." : "Coming soon."}</p>`;
             return;
         }
 
-        currentPodcasts.forEach((pod, index) => {
-            const podHTML = `
-                <div class="podcast-item">
-                    <h3>${index + 1}. ${pod.title}</h3>
-                    <audio controls src="${pod.audioFile}"></audio>
-                    <button class="transcript-btn" onclick="toggleTranscript('trans_${currentLang}_${index}')">${btnText}</button>
-                    <div id="trans_${currentLang}_${index}" class="transcript-content">
-                        ${pod.transcript}
-                    </div>
+        currentMurmures.forEach((murmure, index) => {
+            // Si un fichier audio est présent, le lecteur s'affiche, sinon il reste caché
+            let audioHTML = murmure.audioFile ? `<audio controls src="${murmure.audioFile}" style="margin-bottom: 15px;"></audio>` : '';
+            const murmureHTML = `
+                <div class="murmure-item">
+                    <h3>${index + 1}. ${murmure.title}</h3>
+                    ${audioHTML}
+                    <div>${murmure.text}</div>
                 </div>
             `;
-            container.innerHTML += podHTML;
+            container.innerHTML += murmureHTML;
         });
-    }
-
-    function toggleTranscript(id) {
-        const el = document.getElementById(id);
-        if(el.style.display === "none" || el.style.display === "") {
-            el.style.display = "block";
-            el.style.animation = "opacity 0.5s ease";
-        } else {
-            el.style.display = "none";
-        }
     }
 
     function createParticles() {
@@ -660,7 +661,7 @@
         document.getElementById("nav-sage").textContent = isEn ? "THE SAGE" : "LE SAGE";
         document.getElementById("nav-parabole").textContent = isEn ? "THE PARABLE" : "LA PARABOLE";
         document.getElementById("nav-teachings").textContent = isEn ? "TEACHINGS" : "ENSEIGNEMENTS";
-        document.getElementById("nav-podcasts").textContent = isEn ? "PODCASTS" : "PODCASTS";
+        document.getElementById("nav-murmures").textContent = isEn ? "WHISPERS" : "MURMURES";
         document.getElementById("nav-contact").textContent = isEn ? "CONTACT" : "CONTACT";
         
         document.getElementById("sage-title").textContent = isEn ? "The Temple of Silence" : "Le Temple du Silence";
@@ -674,7 +675,6 @@
         document.getElementById("para-title").textContent = parableData[lang].title;
         document.getElementById("parable-body").innerHTML = parableData[lang].body;
 
-        /* Mise à jour du Nouvel Enseignement ! */
         document.getElementById("teachings-title").textContent = isEn ? "Teachings" : "Enseignements";
         document.getElementById("teaching-subtitle").textContent = teachingData[lang].title;
         document.getElementById("teaching-body").innerHTML = teachingData[lang].body;
@@ -683,7 +683,9 @@
         document.getElementById("pod-link").textContent = isEn ? "→ Yogani's Lessons (Original Source)" : "→ Les Leçons de Yogani (Source Originale)";
         document.getElementById("book-placeholder").textContent = isEn ? "Coming soon: The Lineage Library." : "Bientôt : La Bibliothèque de la Lignée.";
 
-        document.getElementById("podcast-main-title").textContent = isEn ? "Lineage Podcasts" : "Podcasts de la Lignée";
+        /* Modification du Titre et de l'intro de la section Murmures */
+        document.getElementById("murmures-main-title").textContent = isEn ? "Lineage Whispers" : "Murmures de la Lignée";
+        document.getElementById("murmures-intro").textContent = isEn ? "Seeds of wisdom and short reflections for the wandering mind." : "Graines de sagesse et courtes réflexions pour l'esprit en marche.";
         
         document.querySelectorAll(".zen-text").forEach(el => el.textContent = isEn ? "Zen Mode" : "Mode Zen");
 
@@ -695,7 +697,7 @@
 
         document.getElementById("footer-text").innerHTML = isEn ? "PROPERTY & LINEAGE 🪷 ॐ" : "PROPRIÉTÉ & LIGNÉE 🪷 ॐ";
 
-        renderPodcasts();
+        renderMurmures(); // Exécute la fonction qui charge les Murmures
 
         clearTimeout(typingTimeout);
         document.getElementById("response-area").innerHTML = "";

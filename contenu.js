@@ -20,12 +20,16 @@ const MURMURES_DATABASE = {
     fr: [
         {
             title: "La Boussole du Silence",
-            audioFile: "", 
+            audioFile: "boussole.mp3", // <-- Ton fichier audio
+            imageFile: "paysage.jpg",  // <-- Ton fichier image
+            videoFile: "",             // <-- Laisse vide si tu n'as pas de vidéo mp4
             text: "Voyageur, ne cherche pas ta voie dans le tumulte de la tempête. Une direction intérieure véritable ne hurle jamais avec l'émotion. L'urgence et la peur ne t'offrent qu'une clarté illusoire qui s'évapore avec le vent. La boussole du Soi se lit dans l'immobilité : la voie juste est celle qui demeure intelligible lorsque ton cœur cesse de s'emballer."
         },
         {
             title: "Le Roseau et l'Orage",
             audioFile: "", 
+            imageFile: "",
+            videoFile: "",
             text: "Tu t'épuises à bâtir des forteresses. Dans ton effort constant pour te rendre invulnérable, ton corps se crispe et ton souffle se verrouille. Comprends ceci : la véritable force ne réside pas dans l'armure. Elle s'éveille à l'instant même où tu cesses de lutter contre le fait d'être affecté. Laisse l'impact traverser ton système nerveux comme le vent traverse les feuilles."
         }
     ],
@@ -33,11 +37,15 @@ const MURMURES_DATABASE = {
         {
             title: "The Compass of Silence",
             audioFile: "",
+            imageFile: "",
+            videoFile: "",
             text: "Traveler, do not seek your path in the tumult of the storm. A true inner direction never howls with emotion. Urgency and fear offer only an illusory clarity that evaporates with the wind. The compass of the Self is read in stillness: the right path is the one that remains intelligible when your heart stops racing."
         },
         {
             title: "The Reed and the Storm",
             audioFile: "",
+            imageFile: "",
+            videoFile: "",
             text: "You exhaust yourself building fortresses. In your constant effort to make yourself invulnerable, your body tenses and your breath locks. Understand this: true strength does not reside in armor. It awakens the very moment you stop fighting the fact of being affected. Let the impact pass through your nervous system like the wind through the leaves."
         }
     ]
@@ -158,4 +166,5 @@ const sageBrain = {
             pacing: ["The answer will come when you stop chasing it.", "Be patient with what is unresolved. Love the questions themselves."]
         }
     }
+
 };

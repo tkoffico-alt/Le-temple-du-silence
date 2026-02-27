@@ -375,46 +375,17 @@
         }
 
         currentMurmures.forEach((murmure, index) => {
+            // Si un fichier audio est présent, le lecteur s'affiche, sinon il reste caché
             let audioHTML = murmure.audioFile ? `<audio controls src="${murmure.audioFile}" style="margin-bottom: 15px; width: 100%;"></audio>` : '';
-            
-            // Le texte du bouton de partage selon la langue
-            let shareText = currentLang === 'fr' ? "Partager cette graine" : "Share this seed";
-
             const murmureHTML = `
                 <div class="murmure-item">
                     <h3>${index + 1}. ${murmure.title}</h3>
                     ${audioHTML}
-                    <div id="texte-murmure-${index}">${murmure.text}</div>
-                    
-                    <button class="zen-btn" style="margin: 20px auto 0 auto; font-size: 0.8rem; opacity: 0.7;" onclick="partagerMurmure('${murmure.title}', 'texte-murmure-${index}')">
-                        ✨ ${shareText}
-                    </button>
+                    <div>${murmure.text}</div>
                 </div>
             `;
             container.innerHTML += murmureHTML;
         });
-    }
-
-    // La fonction qui permet le partage magique
-    function partagerMurmure(titre, elementId) {
-        const texte = document.getElementById(elementId).innerText;
-        const lienSite = window.location.href; // Récupère le lien de ton site
-        
-        // Texte final qui sera partagé
-        const texteAPartager = \`« \${texte} »\n\n- \${titre}\nDécouvert sur Le Temple du Silence : \${lienSite}\`;
-
-        // Vérifie si l'appareil supporte le partage natif (surtout sur mobile)
-        if (navigator.share) {
-            navigator.share({
-                title: titre,
-                text: texteAPartager,
-            }).catch(console.error);
-        } else {
-            // Option de secours pour les ordinateurs : copie dans le presse-papier
-            navigator.clipboard.writeText(texteAPartager).then(() => {
-                alert(currentLang === 'fr' ? "Le texte a été copié pour être partagé !" : "Text copied to clipboard!");
-            });
-        }
     }
 
     function createParticles() {
@@ -497,7 +468,7 @@
             },
             respiration: {
                 core: [
-                    "Le souffle spinal est le pont invisible entre ton esprit égaré et ton âme éveillée.", 
+                    "Le souffle spinal est le pont invisible entre ton esprit égaré et ton aide éveillée.", 
                     "Cette inspiration lente balaye la poussière avant l'entrée dans le grand temple de la méditation.",
                     "Ne force pas l'air. Invite-le à parcourir le fil d'or de ta colonne vertébrale avec une douceur royale."
                 ],
@@ -712,7 +683,6 @@
         document.getElementById("pod-link").textContent = isEn ? "→ Yogani's Lessons (Original Source)" : "→ Les Leçons de Yogani (Source Originale)";
         document.getElementById("book-placeholder").textContent = isEn ? "Coming soon: The Lineage Library." : "Bientôt : La Bibliothèque de la Lignée.";
 
-        /* Modification du Titre et de l'intro de la section Murmures */
         document.getElementById("murmures-main-title").textContent = isEn ? "Lineage Whispers" : "Murmures de la Lignée";
         document.getElementById("murmures-intro").textContent = isEn ? "Seeds of wisdom and short reflections for the wandering mind." : "Graines de sagesse et courtes réflexions pour l'esprit en marche.";
         
@@ -726,7 +696,7 @@
 
         document.getElementById("footer-text").innerHTML = isEn ? "PROPERTY & LINEAGE 🪷 ॐ" : "PROPRIÉTÉ & LIGNÉE 🪷 ॐ";
 
-        renderMurmures(); // Exécute la fonction qui charge les Murmures
+        renderMurmures();
 
         clearTimeout(typingTimeout);
         document.getElementById("response-area").innerHTML = "";
@@ -752,4 +722,3 @@
 
 </body>
 </html>
-

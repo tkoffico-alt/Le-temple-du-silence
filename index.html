@@ -255,8 +255,13 @@
     </div>
 
     <div class="container" id="enseignements">
+        <button class="zen-btn" onclick="toggleZen()">👁️ <span class="zen-text">Mode Zen</span></button>
         <h1 id="teachings-title">Enseignements</h1>
-        <div style="text-align:center; line-height:2.5; font-size:1.2rem;">
+        
+        <h2 id="teaching-subtitle" style="font-style:italic; font-size: 1.4rem; margin-top: 30px;">Le Trésor Enfoui</h2>
+        <div id="teaching-body" style="text-align: justify; line-height: 1.9; font-size: 1.2rem; color: var(--texte-secondaire); margin-top: 15px; margin-bottom: 40px; transition: color 0.8s ease;"></div>
+
+        <div style="text-align:center; line-height:2.5; font-size:1.2rem; border-top: 1px solid rgba(212,175,55,0.2); padding-top: 30px;">
             <p id="pod-intro">Pour approfondir la technique, la source est immuable :</p>
             <a href="https://aypsite.org/" target="_blank" style="color:var(--couleur-accent); text-decoration:none; font-weight:bold; font-size:1.3rem; font-family:'Cinzel',serif;" id="pod-link">→ Les Leçons de Yogani (Source Originale)</a>
             <p style="margin-top:40px; font-style:italic; opacity:0.7;" id="book-placeholder">Bientôt : La Bibliothèque de la Lignée (Livres & Écrits).</p>
@@ -284,7 +289,7 @@
     </div>
 
     <footer>
-        PROPRIÉTÉ & LIGNÉE 🪷 ॐ | PASSANTS : <span id="count">0000</span>
+        <span id="footer-text">PROPRIÉTÉ & LIGNÉE 🪷 ॐ</span> | PASSANTS : <span id="count">0000</span>
     </footer>
 
     <script>
@@ -409,6 +414,20 @@
         en: {
             title: "Beyond the River — A Parable on the Inner Calling",
             body: `<p>There are places where no one dares to go anymore. Invisible borders, marked not by walls, but by ancient tales — tales of fear.</p><p>In a remote village, in the heart of the savanna, lived a young man named Kofi. He had neither the stature of warriors nor the prestige of elders. But he carried within him a question that never left him: what lies beyond what we think we know?</p><p>One day, this question took form.</p><p>The chief's daughter, Adwoa, was struck by a mysterious illness. Prayers and treatments were in vain. The healer consulted the oracles, who pointed to a forgotten remedy: a rare plant, hidden deep in the forest, on the other side of the sacred river. But this forest, the elders said, was haunted. A territory of soul-devouring spirits, which the wise man does not cross.</p><p>The chief promised wealth and honors to anyone who dared venture there. The bravest retreated. Fear, fed by stories, was stronger than the promise of gold. All refused. All, except Kofi.</p><p>He asked for nothing. Neither glory nor reward. What he heard within him was that deep silence, which does not bargain, but simply says: move forward. He took a water gourd, an amulet given by his mother, and walked toward the river. There, he stopped. The water was crystal clear, but to his eyes, it was something else: a symbolic border. The limit between the known and the unknown.</p><p>He closed his eyes. Not to flee, but to listen beyond his thoughts. Then he crossed.</p><p>On the other side, the forest enveloped him. But he found neither spirits nor screams. Only a presence. The earth beneath his steps was dense, alive. The wind sang in the leaves. What was supposed to be a territory of shadows was in reality a forgotten sanctuary.</p><p>In the heart of this peace, Kofi met an old man, sitting at the foot of an immense tree. His skin seemed sculpted by time. His eyes carried the light of cloudless nights.</p><p>— Why do you come, walker? he asked.<br>Kofi told his story.<br>The sage listened, then pointed to a discreet plant at his feet.</p><p>— Here is what you seek. But remember: it is not the forest that devours souls. It is the uncontrolled desires of men. The elders sowed tales of fear to protect this sacred place from greed. But those who come with a pure heart find nothing else there but what they already carry within themselves.</p><p>Kofi took the plant, gave thanks, and left. When he crossed the river again, a thick silence fell upon the village. Adwoa was healed. The elders, with a fleeting gaze, understood what they had forgotten.</p><p>That day, the village received a simple truth, which passed from mouth to mouth, but whose understanding belongs to those who dare to live it:</p><p><strong>“Ears hear the fears of others, but only the eyes of the heart see the truth.”</strong></p><p>Each of us is called, one day or another, to approach this inner river. To cross the border of inherited fears. To enter this forest which, behind the shadows projected by our mind, hides a space of unalterable peace.</p><p>True initiation begins there.</p><p>The forest was never dangerous. It is our stories that made it hostile. What we seek is not found elsewhere. It has been within us, always, but veiled by the tumult of our desires and our resistances.</p><p>Cross. Listen. Practice.<br>The rest will follow.</p>`
+        }
+    };
+
+    /* ==========================
+       ENSEIGNEMENTS INTÉGRAUX
+    ========================== */
+    const teachingData = {
+        fr: {
+            title: "Le Trésor Enfoui",
+            body: `<p>« Tu marches parfois avec la lourde impression de manquer de tout, fixant ton regard sur ce qui te fait défaut. Pourtant, le Soi n'est pas un sommet lointain que tu dois conquérir par la force. Il a toujours été là, silencieux et stable, sous le tumulte de tes pensées.</p><p>Les ressources dont tu as le plus grand besoin habitent déjà la mécanique ordinaire de ton corps et de ton esprit. La pratique ne crée pas la lumière ; elle ne fait qu'enlever la poussière de l'agitation qui l'obscurcit.</p><p>Cesse de puiser dans l'illusion de ton manque. Le miracle n'est pas de devenir un autre, mais de voir avec clarté ce qui te soutient depuis toujours. »</p>`
+        },
+        en: {
+            title: "The Buried Treasure",
+            body: `<p>"You sometimes walk with the heavy impression of lacking everything, fixing your gaze on what you are missing. Yet, the Self is not a distant peak that you must conquer by force. It has always been there, silent and stable, beneath the tumult of your thoughts.</p><p>The resources you need most already inhabit the ordinary mechanics of your body and mind. Practice does not create light; it merely removes the dust of agitation that obscures it.</p><p>Cease drawing from the illusion of your lack. The miracle is not to become someone else, but to see with clarity what has always supported you."</p>`
         }
     };
 
@@ -543,8 +562,7 @@
             playPromise.catch(error => console.log("L'audio a été bloqué par le navigateur."));
         }
 
-        // LE FILTRE YOGANIEN vs SAGESSE UNIVERSELLE
-        let topic = "universel"; // Par défaut, la question est philosophique/générale
+        let topic = "universel"; 
         
         if (q.includes("kundalini") || q.includes("energie") || q.includes("energy")) {
             topic = "kundalini";
@@ -555,14 +573,13 @@
         } else if (q.includes("kechari") || q.includes("mudra")) {
             topic = "kechari";
         } else if (q.includes("meditation") || q.includes("silence") || q.includes("temoin") || q.includes("témoin") || q.includes("soi")) {
-            topic = "meditation"; // Intègre "le témoin" et "le soi intérieur"
+            topic = "meditation"; 
         }
 
         let b = sageBrain[currentLang][topic];
         
         let fullResponse = `${getUniqueCore(b.core)}<br><br>${getRandom(b.science)}<br><br>${getRandom(b.pacing)}`;
 
-        // Suffixe adapté au thème
         let suffix = "";
         if (topic === "universel") {
              suffix = currentLang === 'fr' 
@@ -651,13 +668,17 @@
         document.getElementById("sage-btn").textContent = isEn ? "INQUIRE" : "INTERROGER";
         document.getElementById("silence-quote").textContent = isEn ? "Regularity is the bed of silence." : "La régularité est le lit du silence.";
         
-        updateThemeButton(); // S'assure que le bouton thème traduit aussi sa langue au clic
+        updateThemeButton(); 
 
         document.getElementById("para-main-title").textContent = isEn ? "The Parable" : "La Parabole";
         document.getElementById("para-title").textContent = parableData[lang].title;
         document.getElementById("parable-body").innerHTML = parableData[lang].body;
 
+        /* Mise à jour du Nouvel Enseignement ! */
         document.getElementById("teachings-title").textContent = isEn ? "Teachings" : "Enseignements";
+        document.getElementById("teaching-subtitle").textContent = teachingData[lang].title;
+        document.getElementById("teaching-body").innerHTML = teachingData[lang].body;
+
         document.getElementById("pod-intro").textContent = isEn ? "To deepen the technique, the source is immutable:" : "Pour approfondir la technique, la source est immuable :";
         document.getElementById("pod-link").textContent = isEn ? "→ Yogani's Lessons (Original Source)" : "→ Les Leçons de Yogani (Source Originale)";
         document.getElementById("book-placeholder").textContent = isEn ? "Coming soon: The Lineage Library." : "Bientôt : La Bibliothèque de la Lignée.";
@@ -671,6 +692,8 @@
         document.getElementById("contact-name").placeholder = isEn ? "Your name" : "Votre nom";
         document.getElementById("contact-msg").placeholder = isEn ? "Your message..." : "Votre message...";
         document.getElementById("contact-btn").textContent = isEn ? "SEND" : "ENVOYER";
+
+        document.getElementById("footer-text").innerHTML = isEn ? "PROPERTY & LINEAGE 🪷 ॐ" : "PROPRIÉTÉ & LIGNÉE 🪷 ॐ";
 
         renderPodcasts();
 

@@ -375,17 +375,46 @@
         }
 
         currentMurmures.forEach((murmure, index) => {
-            // Si un fichier audio est présent, le lecteur s'affiche, sinon il reste caché
-            let audioHTML = murmure.audioFile ? `<audio controls src="${murmure.audioFile}" style="margin-bottom: 15px;"></audio>` : '';
+            let audioHTML = murmure.audioFile ? `<audio controls src="${murmure.audioFile}" style="margin-bottom: 15px; width: 100%;"></audio>` : '';
+            
+            // Le texte du bouton de partage selon la langue
+            let shareText = currentLang === 'fr' ? "Partager cette graine" : "Share this seed";
+
             const murmureHTML = `
                 <div class="murmure-item">
                     <h3>${index + 1}. ${murmure.title}</h3>
                     ${audioHTML}
-                    <div>${murmure.text}</div>
+                    <div id="texte-murmure-${index}">${murmure.text}</div>
+                    
+                    <button class="zen-btn" style="margin: 20px auto 0 auto; font-size: 0.8rem; opacity: 0.7;" onclick="partagerMurmure('${murmure.title}', 'texte-murmure-${index}')">
+                        ✨ ${shareText}
+                    </button>
                 </div>
             `;
             container.innerHTML += murmureHTML;
         });
+    }
+
+    // La fonction qui permet le partage magique
+    function partagerMurmure(titre, elementId) {
+        const texte = document.getElementById(elementId).innerText;
+        const lienSite = window.location.href; // Récupère le lien de ton site
+        
+        // Texte final qui sera partagé
+        const texteAPartager = \`« \${texte} »\n\n- \${titre}\nDécouvert sur Le Temple du Silence : \${lienSite}\`;
+
+        // Vérifie si l'appareil supporte le partage natif (surtout sur mobile)
+        if (navigator.share) {
+            navigator.share({
+                title: titre,
+                text: texteAPartager,
+            }).catch(console.error);
+        } else {
+            // Option de secours pour les ordinateurs : copie dans le presse-papier
+            navigator.clipboard.writeText(texteAPartager).then(() => {
+                alert(currentLang === 'fr' ? "Le texte a été copié pour être partagé !" : "Text copied to clipboard!");
+            });
+        }
     }
 
     function createParticles() {
@@ -723,3 +752,4 @@
 
 </body>
 </html>
+

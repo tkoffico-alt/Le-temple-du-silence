@@ -334,10 +334,7 @@
     }
 
     /* ==========================
-       AFFICHAGE DES MURMURES ET PARTAGE (ACTE II)
-    ========================== */
-  /* ==========================
-       AFFICHAGE DES MURMURES (Audio, Image et Vidéo)
+       AFFICHAGE DES MURMURES (Audio, Image et Vidéo) ET PARTAGE
     ========================== */
     function renderMurmures() {
         const container = document.getElementById("murmures-list-container");
@@ -382,8 +379,9 @@
             container.innerHTML += murmureHTML;
         });
     }
+
     function partagerMurmure(index) {
-        // On récupère les données exactes sans passer de texte dans le HTML
+        // On récupère les données exactes
         const murmure = MURMURES_DATABASE[currentLang][index];
         const titre = murmure.title;
         const texte = document.getElementById(`texte-murmure-${index}`).innerText;
@@ -393,7 +391,7 @@
         const texteAPartager = `« ${texte} »\n\n- ${titre}\nDécouvert sur Le Temple du Silence : ${lienSite}`;
 
         if (navigator.share) {
-            // Sur mobile / navigateur compatible : ouvre le menu de partage
+            // Sur mobile / navigateur compatible
             navigator.share({
                 title: titre,
                 text: texteAPartager,
@@ -409,7 +407,7 @@
     }
 
     /* ==========================
-       PARTICULES ET FONCTIONS DE BASE
+       PARTICULES ET FONCTIONS DU SAGE
     ========================== */
     function createParticles() {
         const numParticles = 40;
@@ -619,4 +617,3 @@
 
 </body>
 </html>
-

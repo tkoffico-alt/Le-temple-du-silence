@@ -1,16 +1,20 @@
 :root {
-    --bg-color: #1a1c23; /* Un gris-bleu nuit, plus doux et moins écrasant que le noir pur */
+    --bg-overlay: rgba(26, 28, 35, 0.75); 
     --text-color: #e4e4e4;
-    --accent-color: #d4af37; /* Or vieilli */
-    --box-bg: rgba(255, 255, 255, 0.03);
+    --accent-color: #d4af37; /* Or */
+    --title-blue: #5b8cba; /* Bleu doux pour les titres */
+    --btn-blue: #2c5282; /* Bleu profond pour le bouton interroger */
+    --box-bg: rgba(255, 255, 255, 0.05);
     --border-color: rgba(212, 175, 55, 0.2);
     --transition-speed: 0.5s;
 }
 
 body.light-mode {
-    --bg-color: #f5f2eb; /* Teinte parchemin / sable */
+    --bg-overlay: rgba(245, 242, 235, 0.85);
     --text-color: #2c2c2c;
-    --accent-color: #9c7c1f; /* Or plus sombre pour contraste */
+    --accent-color: #9c7c1f;
+    --title-blue: #2b6cb0;
+    --btn-blue: #3182ce;
     --box-bg: rgba(0, 0, 0, 0.04);
     --border-color: rgba(156, 124, 31, 0.3);
 }
@@ -23,7 +27,9 @@ body.light-mode {
 }
 
 body {
-    background-color: var(--bg-color);
+    /* L'image de fond est maintenant kofi.jpg */
+    background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('kofi.jpg') no-repeat center center fixed; 
+    background-size: cover;
     color: var(--text-color);
     font-family: 'Lora', sans-serif;
     line-height: 1.6;
@@ -37,16 +43,37 @@ h1, h2, h3, h4, .serif {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: var(--accent-color);
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+/* Sous-titre Chemin AYP avec police style sanskrit (Yatra One) */
+.site-subtitle {
+    font-family: 'Yatra One', cursive; 
+    font-size: 1.6rem;
+    color: var(--title-blue);
     margin-bottom: 20px;
     letter-spacing: 2px;
 }
 
+/* Titres principaux (H2) - Plus grands et Bleus */
 h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: var(--title-blue) !important;
+    border-bottom: 1px solid var(--title-blue);
+    padding-bottom: 10px;
+}
+
+/* Sous-titres (H3) - Plus petits et Dorés */
+h3 {
+    font-size: 1.5rem;
+    color: var(--accent-color) !important;
+    margin-top: 30px;
     margin-bottom: 15px;
-    color: var(--accent-color);
+    border: none;
 }
 
 p {
@@ -167,15 +194,24 @@ input[type="text"]:focus {
     border-color: var(--accent-color);
 }
 
+/* Bouton Spécifique Interroger (Bleu) */
+#sage-btn {
+    background-color: var(--btn-blue) !important;
+    color: white !important;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#sage-btn:hover {
+    background-color: var(--title-blue) !important;
+}
+
 /* Enseignements et Murmures */
 .teaching-article, .murmure-item {
     margin-bottom: 50px;
     padding-bottom: 30px;
     border-bottom: 1px dashed var(--border-color);
-}
-
-.teaching-article h3, .murmure-item h3 {
-    margin-bottom: 20px;
 }
 
 .zen-btn {
@@ -199,7 +235,7 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Customisation Parchemin pour Enseignement/Parabole */
+/* Customisation Parchemin */
 .parchment-text {
     text-align: justify;
     line-height: 1.8;

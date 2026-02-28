@@ -3,373 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Le Temple du Silence - Chemin AYP</title>
-    <meta name="description" content="Sanctuaire dédié à la pratique de la Méditation Profonde, de la Respiration Spinale et du Samyama. Explorez la mécanique de l'extase et de l'auto-rythme.">
-    <meta property="og:title" content="Le Temple du Silence - Lignée AYP">
-    <meta property="og:description" content="Découvrez les enseignements du silence intérieur, guidé par la mécanique du système nerveux.">
-    <meta property="og:image" content="kofi.jpg">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <meta name="theme-color" content="#0a0a0c">
-    <link rel="apple-touch-icon" href="signature-ayp.png">
-    <link rel="manifest" href="manifest.json">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
-
-    <style>
-        /* --- Variables d'Atmosphère --- */
-        :root {
-            --fond-voile: rgba(0, 0, 0, 0.82);
-            --texte-principal: #ffffff;
-            --texte-secondaire: #e5e5e5;
-            --couleur-accent: #d4af37;
-            --fond-conteneur: rgba(10, 10, 12, 0.55);
-            --fond-nav: rgba(0, 0, 0, 0.92);
-            --fond-input: rgba(17, 17, 17, 0.8);
-            --bordure-input: #222;
-        }
-
-        body.theme-clarte {
-            --fond-voile: rgba(245, 245, 240, 0.88);
-            --texte-principal: #1a1a1a;
-            --texte-secondaire: #2c2c2c;
-            --couleur-accent: #b8860b;
-            --fond-conteneur: rgba(255, 255, 255, 0.65);
-            --fond-nav: rgba(245, 245, 240, 0.95);
-            --fond-input: rgba(255, 255, 255, 0.9);
-            --bordure-input: #cccccc;
-        }
-
-        /* --- Esthétique & Immersion --- */
-        body { 
-            color: var(--texte-principal); 
-            font-family: 'Cormorant Garamond', serif; 
-            margin: 0;
-            text-align: center;
-            overflow-x: hidden;
-            background-color: #000;
-            transition: color 0.8s ease, background-color 0.8s ease;
-        }
-
-        /* --- Fond Vivant --- */
-        #bg-image {
-            position: fixed;
-            top: 0; left: 0; width: 100vw; height: 100vh;
-            background: url('kofi.jpg') no-repeat center center;
-            background-size: cover;
-            z-index: -3;
-            animation: slowZoom 60s alternate infinite ease-in-out;
-            transition: opacity 1s ease;
-        }
-
-        @keyframes slowZoom {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.08); }
-        }
-        
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: var(--fond-voile); 
-            z-index: -2;
-            transition: background 1s ease, opacity 1s ease;
-        }
-
-        /* --- Particules --- */
-        .particle {
-            position: fixed;
-            bottom: -10px;
-            background-color: rgba(212, 175, 55, 0.6);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: -1;
-            animation: floatUp linear infinite;
-            transition: opacity 0.5s ease;
-        }
-
-        @keyframes floatUp {
-            0% { transform: translateY(0) scale(1); opacity: 0; }
-            20% { opacity: 0.8; }
-            80% { opacity: 0.4; }
-            100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
-        }
-
-        /* --- Navigation --- */
-        nav { background: var(--fond-nav); padding: 15px 20px; border-bottom: 1px solid rgba(212,175,55,0.25); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; transition: background 0.8s ease, opacity 0.8s ease; }
-        .nav-brand { color: var(--couleur-accent); font-weight:700; letter-spacing:3px; font-family: 'Cinzel', serif; }
-        .nav-links { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
-        .nav-links a { color: var(--texte-principal); text-decoration: none; font-weight: 600; cursor: pointer; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; font-family: 'Cinzel', serif;}
-        .nav-links a:hover { color: var(--couleur-accent); }
-        .lang-btn { background: none; border: 1px solid var(--couleur-accent); color: var(--couleur-accent); cursor: pointer; padding: 5px 10px; font-weight: bold; border-radius: 4px; transition: 0.3s; font-family: 'Cinzel', serif;}
-        .lang-btn:hover { background: var(--couleur-accent); color: var(--fond-voile); box-shadow: 0 0 10px rgba(212,175,55,0.5); }
-        
-        /* --- Conteneurs --- */
-        .container { 
-            max-width: 900px; 
-            margin: 60px auto; 
-            padding: 40px; 
-            background: var(--fond-conteneur); 
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            border-radius: 12px;
-            box-shadow: 0 20px 45px rgba(0,0,0,0.4);
-            box-sizing: border-box;
-            backdrop-filter: blur(4px);
-            text-align: justify;
-            display: none;
-            transition: all 0.8s ease;
-        }
-        
-        h1, h2, h3 { color: var(--couleur-accent); letter-spacing: 2px; text-align: center; font-family: 'Cinzel', serif; }
-        #parable-body { text-align: justify; line-height: 1.9; font-size: 1.2rem; color: var(--texte-secondaire); margin-top: 15px; transition: color 0.8s ease;}
-        
-        /* --- Inputs --- */
-        input, textarea {
-            width: 90%; padding: 15px; margin-bottom: 20px; border-radius: 8px;
-            border: 1px solid var(--bordure-input); background: var(--fond-input); color: var(--texte-principal);
-            font-size: 1.1rem; text-align: center; outline: none; box-sizing: border-box; font-family: 'Cormorant Garamond', serif; transition: border 0.3s, background 0.8s ease, color 0.8s ease;
-        }
-        input:focus, textarea:focus { border-color: var(--couleur-accent); }
-        textarea { min-height: 120px; text-align: left; }
-        
-        /* --- Boutons Intéractifs --- */
-        .btn-action {
-            display: block; margin: 0 auto;
-            background: #2b57e5; color: white; border: none; padding: 16px 45px;
-            border-radius: 35px; cursor: pointer; 
-            font-weight: 600; font-size: 1rem; letter-spacing: 2px;
-            transition: all 0.4s ease; text-transform: uppercase; font-family: 'Cinzel', serif;
-            box-shadow: 0 0 10px rgba(43, 87, 229, 0.2);
-        }
-        .btn-action:hover { 
-            background: #3b67f5; 
-            transform: translateY(-2px); 
-            box-shadow: 0 0 15px rgba(43, 87, 229, 0.8), 0 0 30px rgba(43, 87, 229, 0.4); 
-        }
-
-        /* --- Mode Zen --- */
-        .zen-btn {
-            background: none; border: 1px solid var(--couleur-accent); color: var(--couleur-accent); 
-            padding: 8px 15px; border-radius: 20px; cursor: pointer; 
-            font-family: 'Cinzel', serif; font-size: 0.9rem; transition: 0.3s; 
-            display: flex; align-items: center; gap: 8px; margin: 0 auto 30px auto;
-        }
-        .zen-btn:hover { background: var(--couleur-accent); color: var(--fond-voile); }
-        
-        body.zen-active #bg-image { opacity: 0.05; }
-        body.zen-active nav, body.zen-active footer, body.zen-active .signature-area, body.zen-active .particle { opacity: 0; pointer-events: none; }
-        body.zen-active .container { background: var(--fond-voile); border-color: transparent; box-shadow: none; max-width: 800px; }
-
-        /* --- Audio Players --- */
-        audio { width: 100%; border-radius: 30px; outline: none; }
-
-        /* --- Sections Listes --- */
-        .murmure-item, .teaching-item { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid rgba(212,175,55,0.2); text-align: justify; line-height: 1.8; font-size: 1.15rem; color: var(--texte-secondaire); transition: color 0.8s ease; }
-        .teaching-item:last-child { border-bottom: none; }
-
-        /* --- Citation Blanche --- */
-        #silence-quote {
-            text-align: center; margin-top: 50px; font-style: italic; color: var(--texte-principal); font-size: 1.2rem; letter-spacing: 1px; opacity: 0.9;
-            transition: color 0.8s ease;
-        }
-
-        /* --- Mémoire du Sage & Curseur --- */
-        #response-area {
-            margin-top: 40px; text-align: justify; padding: 0 5%;
-        }
-        .sage-response {
-            font-style: italic; color: var(--couleur-accent); font-size: 1.4rem; line-height: 1.8;
-            padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid rgba(212,175,55,0.1);
-            transition: all 1s ease-in-out;
-        }
-        .sage-response:last-child { border-bottom: none; }
-        .sage-response.faded {
-            opacity: 0.35; font-size: 1.1rem; color: var(--texte-secondaire); transform: translateY(10px);
-        }
-
-        .curseur-reflexion {
-            display: inline-block;
-            width: 2px;
-            height: 1.1em;
-            background-color: var(--couleur-accent);
-            vertical-align: text-bottom;
-            margin-left: 4px;
-            animation: battement-coeur 1s infinite;
-        }
-
-        @keyframes battement-coeur {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        .signature-area { margin: 50px 0; display: flex; justify-content: center; transition: opacity 0.8s ease; }
-        .signature-area img { width: 140px; filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.4)); opacity: 0.9; }
-        
-        footer { padding: 30px; color: var(--couleur-accent); font-size: 0.9rem; font-family: 'Cinzel', serif; border-top: 1px solid rgba(212,175,55,0.1); letter-spacing: 1px; text-align: center; transition: opacity 0.8s ease; }
-
-        @media (max-width: 768px) {
-            nav { flex-direction: column; gap: 10px; }
-            .container { width: 95%; padding: 25px; margin-top: 30px; }
-            .sage-response { font-size: 1.2rem; }
-        }
-    </style>
+    <title>Le Temple du Silence</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div id="bg-image"></div>
-    <audio id="sage-resonance" src="resonance.mp3" loop preload="auto"></audio>
-
-    <nav>
-        <span class="nav-brand">CHEMIN AYP</span>
-        <div class="nav-links">
-            <a onclick="showSection('sage')" id="nav-sage">LE SAGE</a>
-            <a onclick="showSection('parabole')" id="nav-parabole">LA PARABOLE</a>
-            <a onclick="showSection('enseignements')" id="nav-teachings">ENSEIGNEMENTS</a>
-            <a onclick="showSection('murmures')" id="nav-murmures">MURMURES</a>
-            <a onclick="showSection('contact')" id="nav-contact">CONTACT</a>
-            <button class="lang-btn" onclick="toggleLanguage()">FR / EN</button>
-            <button class="lang-btn" onclick="toggleTheme()" id="theme-btn">🌙 PROFONDEUR</button>
+    <header>
+        <h1>Le Temple du Silence</h1>
+        <div class="controls">
+            <button id="lang-fr" class="active" onclick="switchLang('fr')">Français</button>
+            <button id="lang-en" onclick="switchLang('en')">English</button>
+            <button id="theme-toggle" onclick="toggleTheme()">Clarté</button>
         </div>
-    </nav>
+        <nav>
+            <button id="nav-enseignements" class="active" onclick="showSection('enseignements')">
+                <span class="fr">Enseignements</span>
+                <span class="en" style="display:none;">Teachings</span>
+            </button>
+            <button id="nav-murmures" onclick="showSection('murmures')">
+                <span class="fr">Murmures</span>
+                <span class="en" style="display:none;">Whispers</span>
+            </button>
+            <button id="nav-parabole" onclick="showSection('parabole')">
+                <span class="fr">La Parabole</span>
+                <span class="en" style="display:none;">The Parable</span>
+            </button>
+            <button id="nav-sage" onclick="showSection('sage')">
+                <span class="fr">Le Sage</span>
+                <span class="en" style="display:none;">The Sage</span>
+            </button>
+        </nav>
+    </header>
 
-    <div class="container" id="sage">
-        <h1 id="sage-title">Le Temple du Silence</h1>
-        <input type="text" id="user-question" placeholder="Posez votre question (Samyama, Kundalini, Méditation...)">
-        <button class="btn-action" id="sage-btn" onclick="askSage()">INTERROGER</button>
-        <div id="silence-quote">La régularité est le lit du silence.</div>
-        <div id="response-area"></div>
-    </div>
+    <main>
+        <section id="enseignements" class="section active">
+            <div id="enseignements-container" class="parchment-text"></div>
+        </section>
 
-    <div class="container" id="parabole">
-        <button class="zen-btn" onclick="toggleZen()">👁️ <span class="zen-text">Mode Zen</span></button>
-        <h1 id="para-main-title">La Parabole</h1>
-        <h2 id="para-title" style="font-style:italic; font-size: 1.4rem;">Au-delà de la Rivière</h2>
-        <audio id="parable-audio" controls src="parabole.mp3" style="margin-top: 15px;"></audio>
-        <div id="parable-body"></div>
-    </div>
+        <section id="murmures" class="section">
+            <div id="murmures-list-container"></div>
+        </section>
 
-    <div class="container" id="enseignements">
-        <button class="zen-btn" onclick="toggleZen()">👁️ <span class="zen-text">Mode Zen</span></button>
-        <h1 id="teachings-title">Enseignements</h1>
-        <p style="text-align:center; font-style:italic; opacity:0.8; margin-bottom: 40px;" id="teachings-intro">La bibliothèque des fondations. Lisez, respirez, intégrez.</p>
-        
-        <div id="teachings-list-container"></div>
+        <section id="parabole" class="section">
+            <div class="teaching-article parchment-text">
+                <h2 id="parabole-title" style="text-align:center;"></h2>
+                
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <video id="parabole-video" controls style="width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); display: none;">
+                        <source src="" type="video/mp4">
+                        Votre navigateur ne supporte pas la vidéo.
+                    </video>
+                </div>
+                
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <audio id="parabole-audio" controls style="width: 100%; display: none;">
+                        <source src="" type="audio/mpeg">
+                        Votre navigateur ne supporte pas l'audio.
+                    </audio>
+                </div>
 
-        <div style="text-align:center; line-height:2.5; font-size:1.2rem; border-top: 1px solid rgba(212,175,55,0.2); padding-top: 30px; margin-top: 50px;">
-            <p id="pod-intro">Pour approfondir la technique, la source est immuable :</p>
-            <a href="https://aypsite.org/" target="_blank" style="color:var(--couleur-accent); text-decoration:none; font-weight:bold; font-size:1.3rem; font-family:'Cinzel',serif;" id="pod-link">→ Les Leçons de Yogani (Source Originale)</a>
-            <p style="margin-top:40px; font-style:italic; opacity:0.7;" id="book-placeholder">Bientôt : La Bibliothèque de la Lignée (Livres & Écrits).</p>
-        </div>
-    </div>
+                <div id="parabole-text"></div>
+            </div>
+        </section>
 
-    <div class="container" id="murmures">
-        <button class="zen-btn" onclick="toggleZen()">👁️ <span class="zen-text">Mode Zen</span></button>
-        <h1 id="murmures-main-title">Murmures de la Lignée</h1>
-        <p style="text-align:center; font-style:italic; opacity:0.8; margin-bottom: 40px;" id="murmures-intro">Graines de sagesse et courtes réflexions pour l'esprit en marche.</p>
-        <div id="murmures-list-container"></div>
-    </div>
-
-    <div class="container" id="contact">
-        <h1 id="contact-title">Contact</h1>
-        <p id="contact-sub" style="text-align:center; margin-bottom: 30px; font-size: 1.2rem;">Un doute sur la pratique ? Écrivez au Gardien du Temple.</p>
-        <form action="mailto:contact@votre-domaine.com" method="post" enctype="text/plain">
-            <input type="text" id="contact-name" name="name" placeholder="Votre nom" required>
-            <textarea id="contact-msg" name="message" placeholder="Votre message..." required></textarea>
-            <button type="submit" class="btn-action" id="contact-btn">ENVOYER</button>
-        </form>
-    </div>
-
-    <div class="signature-area">
-        <img src="signature-ayp.png" alt="Signature AYP"> 
-    </div>
+        <section id="sage" class="section">
+            <div id="chat-container">
+                <div id="chat-log"></div>
+                <div class="input-area">
+                    <input type="text" id="sage-input" placeholder="Posez votre question à l'Univers...">
+                    <button id="sage-btn" onclick="askSage()">
+                        <span class="fr">Interroger</span>
+                        <span class="en" style="display:none;">Ask</span>
+                    </button>
+                </div>
+            </div>
+            <audio id="sage-resonance" src="resonance.mp3" loop></audio>
+        </section>
+    </main>
 
     <footer>
-        <span id="footer-text">PROPRIÉTÉ & LIGNÉE 🪷 ॐ</span> | PASSANTS : <span id="count">0000</span>
+        <p>© 2026 Le Temple du Silence. <span class="en" style="display:none;">All rights reserved.</span><span class="fr">Tous droits réservés.</span></p>
     </footer>
 
     <script src="contenu.js"></script>
 
     <script>
     let currentLang = 'fr';
-    let isFirstQuestion = true;
-    let typingTimeout; 
-    let isZen = false;
-    let lastAphorism = ""; 
+    let isTyping = false;
 
-    /* ==========================
-       GESTION DE L'ATMOSPHÈRE
-    ========================== */
-    let isClarte = localStorage.getItem('theme') === 'clarte';
-    if (isClarte) document.body.classList.add('theme-clarte');
+    /* Données de la Parabole */
+    const PARABOLE_DATA = {
+        fr: {
+            title: "Le Gardien du Silence",
+            text: "<p style='font-style:italic; opacity:0.7; text-align:center;'>La Parabole sera bientôt révélée.</p>"
+        },
+        en: {
+            title: "The Guardian of Silence",
+            text: "<p style='font-style:italic; opacity:0.7; text-align:center;'>The Parable will be revealed soon.</p>"
+        }
+    };
+
+    function switchLang(lang) {
+        currentLang = lang;
+        
+        document.getElementById('lang-fr').classList.remove('active');
+        document.getElementById('lang-en').classList.remove('active');
+        document.getElementById(`lang-${lang}`).classList.add('active');
+
+        document.querySelectorAll('.fr').forEach(el => el.style.display = lang === 'fr' ? 'inline' : 'none');
+        document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? 'inline' : 'none');
+
+        const inputPlaceholder = lang === 'fr' ? "Posez votre question à l'Univers..." : "Ask your question to the Universe...";
+        document.getElementById('sage-input').placeholder = inputPlaceholder;
+
+        renderEnseignements();
+        renderMurmures();
+        renderParabole();
+    }
 
     function toggleTheme() {
         const body = document.body;
-        body.classList.toggle('theme-clarte');
-        isClarte = body.classList.contains('theme-clarte');
-        localStorage.setItem('theme', isClarte ? 'clarte' : 'profondeur');
-        updateThemeButton();
-    }
-
-    function updateThemeButton() {
-        const btn = document.getElementById("theme-btn");
-        const isEn = currentLang === 'en';
-        if (isClarte) {
-            btn.innerHTML = isEn ? "☀️ CLARITY" : "☀️ CLARTÉ";
-        } else {
-            btn.innerHTML = isEn ? "🌙 DEPTH" : "🌙 PROFONDEUR";
-        }
-    }
-
-    function toggleZen() {
-        isZen = !isZen;
-        if(isZen) {
-            document.body.classList.add('zen-active');
-        } else {
-            document.body.classList.remove('zen-active');
-        }
-    }
-
-    /* ==========================
-       AFFICHAGE DES ENSEIGNEMENTS (NOUVEAU MOTEUR)
-    ========================== */
-    function renderTeachings() {
-        const container = document.getElementById("teachings-list-container");
-        container.innerHTML = "";
+        const btn = document.getElementById('theme-toggle');
+        body.classList.toggle('light-mode');
         
-        // On récupère toutes les leçons
-        const currentTeachings = TEACHINGS_DATABASE[currentLang];
+        if (body.classList.contains('light-mode')) {
+            btn.innerText = currentLang === 'fr' ? 'Obscurité' : 'Darkness';
+        } else {
+            btn.innerText = currentLang === 'fr' ? 'Clarté' : 'Light';
+        }
+    }
 
-        if (!currentTeachings || currentTeachings.length === 0) {
+    function showSection(sectionId) {
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.getElementById(sectionId).classList.add('active');
+
+        document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+        document.getElementById(`nav-${sectionId}`).classList.add('active');
+    }
+
+    /* Rendu des bases de données */
+    function renderEnseignements() {
+        const container = document.getElementById("enseignements-container");
+        container.innerHTML = ""; 
+        const currentData = TEACHINGS_DATABASE[currentLang];
+
+        if (currentData.length === 0) {
             container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${currentLang === 'fr' ? "Bientôt disponible." : "Coming soon."}</p>`;
             return;
         }
 
-        // On affiche chaque leçon l'une après l'autre
-        currentTeachings.forEach((teaching) => {
-            const teachingHTML = `
-                <div class="teaching-item">
-                    <div style="text-align: center;">
-                        <h2 style="background: #2b57e5; color: white; display: inline-block; padding: 12px 35px; border-radius: 30px; font-size: 1.5rem; font-style: normal; letter-spacing: 2px; box-shadow: 0 0 15px rgba(43, 87, 229, 0.3); margin-top: 20px; margin-bottom: 30px; font-family: 'Cinzel', serif;">
-                            ${teaching.title}
-                        </h2>
-                    </div>
-                    <div style="text-align: justify; line-height: 1.9; font-size: 1.2rem; color: var(--texte-secondaire); transition: color 0.8s ease;">
-                        ${teaching.body}
-                    </div>
-                </div>
-            `;
-            container.innerHTML += teachingHTML;
+        currentData.forEach((item) => {
+            const article = document.createElement("div");
+            article.className = "teaching-article";
+            article.innerHTML = `<h2>${item.title}</h2>${item.body}`;
+            container.appendChild(article);
         });
     }
 
-    /* ==========================
-       AFFICHAGE DES MURMURES ET PARTAGE
-    ========================== */
-   function renderMurmures() {
+    function renderMurmures() {
         const container = document.getElementById("murmures-list-container");
         container.innerHTML = ""; 
         const currentMurmures = MURMURES_DATABASE[currentLang];
@@ -381,12 +173,10 @@
 
         currentMurmures.forEach((murmure, index) => {
             let mediaHTML = "";
-            let downloadBtnHTML = ""; // On prépare un espace pour le bouton de téléchargement
+            let downloadBtnHTML = ""; 
             
             if (murmure.videoFile && murmure.videoFile !== "") {
                 mediaHTML = `<video controls src="${murmure.videoFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></video>`;
-                
-                // Le bouton magique pour télécharger la vidéo
                 let downloadText = currentLang === 'fr' ? "Télécharger la vidéo" : "Download video";
                 downloadBtnHTML = `<a href="${murmure.videoFile}" download class="zen-btn" style="font-size: 0.8rem; opacity: 0.7; text-decoration: none;">📥 ${downloadText}</a>`;
             } 
@@ -418,232 +208,193 @@
             container.innerHTML += murmureHTML;
         });
     }
+
+    function renderParabole() {
+        document.getElementById("parabole-title").innerText = PARABOLE_DATA[currentLang].title;
+        document.getElementById("parabole-text").innerHTML = PARABOLE_DATA[currentLang].text;
+    }
+
     function partagerMurmure(index) {
-        const murmure = MURMURES_DATABASE[currentLang][index];
-        const titre = murmure.title;
-        const texte = document.getElementById(`texte-murmure-${index}`).innerText;
-        const lienSite = window.location.href; 
+        const texteBrut = document.getElementById(`texte-murmure-${index}`).innerText;
+        const titre = MURMURES_DATABASE[currentLang][index].title;
+        const lienSite = window.location.href.split('#')[0]; 
         
-        const texteAPartager = `« ${texte} »\n\n- ${titre}\nDécouvert sur Le Temple du Silence : ${lienSite}`;
+        const texteAPartager = `✨ ${titre} ✨\n\n"${texteBrut}"\n\nDécouvert sur : ${lienSite}`;
 
         if (navigator.share) {
-            navigator.share({ title: titre, text: texteAPartager }).catch(console.error);
+            navigator.share({
+                title: titre,
+                text: texteAPartager,
+            }).catch(console.error);
         } else {
             navigator.clipboard.writeText(texteAPartager).then(() => {
-                alert(currentLang === 'fr' ? "Le texte a été copié pour être partagé !" : "Text copied to clipboard!");
-            }).catch(err => console.error("Erreur lors de la copie :", err));
+                const msg = currentLang === 'fr' ? "Texte copié dans le presse-papiers !" : "Text copied to clipboard!";
+                alert(msg);
+            });
         }
     }
 
-    /* ==========================
-       PARTICULES ET FONCTIONS DU SAGE
-    ========================== */
-    function createParticles() {
-        const numParticles = 40;
-        const body = document.body;
-        for(let i=0; i<numParticles; i++) {
-            let p = document.createElement('div');
-            p.className = 'particle';
-            let size = Math.random() * 3 + 1;
-            p.style.width = size + 'px';
-            p.style.height = size + 'px';
-            p.style.left = Math.random() * 100 + 'vw';
-            p.style.animationDuration = (Math.random() * 10 + 15) + 's';
-            p.style.animationDelay = (Math.random() * 10) + 's';
-            body.appendChild(p);
-        }
-    }
-
-    function getRandom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
-
-    function getUniqueCore(arr) {
-        let res;
-        do {
-            res = arr[Math.floor(Math.random() * arr.length)];
-        } while (res === lastAphorism && arr.length > 1);
-        lastAphorism = res;
-        return res;
-    }
-
+    /* Le Cerveau du Sage */
     function askSage() {
-        const q = document.getElementById("user-question").value.toLowerCase();
-        const area = document.getElementById("response-area");
-        const resonance = document.getElementById("sage-resonance");
+        if (isTyping) return;
+        const inputEl = document.getElementById("sage-input");
+        const logEl = document.getElementById("chat-log");
+        const audioResonance = document.getElementById("sage-resonance");
         
-        if (!q.trim()) return;
+        let q = inputEl.value.trim().toLowerCase();
+        if (!q) return;
 
-        const oldResponses = area.querySelectorAll('.sage-response');
-        oldResponses.forEach(el => el.classList.add('faded'));
-        
-        if (oldResponses.length >= 3) {
-            oldResponses[oldResponses.length - 1].remove();
-        }
+        isTyping = true;
+        inputEl.value = "";
+        logEl.innerHTML = "";
 
-        clearTimeout(typingTimeout);
-        
-        resonance.volume = 0.15;
-        let playPromise = resonance.play();
-        if (playPromise !== undefined) {
-            playPromise.catch(error => console.log("L'audio a été bloqué par le navigateur."));
-        }
+        // Allumage du son (doucement)
+        audioResonance.volume = 0;
+        audioResonance.play();
+        let fadeAudioIn = setInterval(() => {
+            if (audioResonance.volume < 0.15) {
+                audioResonance.volume += 0.01;
+            } else {
+                clearInterval(fadeAudioIn);
+            }
+        }, 100);
 
         let topic = "universel"; 
         
-        if (q.includes("kundalini") || q.includes("energie") || q.includes("energy")) {
+        if (q.includes("kundalini") || q.includes("energie") || q.includes("energy") || q.includes("shakti") || q.includes("shiva")) {
             topic = "kundalini";
+        } else if (q.includes("samyama cosmique") || q.includes("yoga nidra") || q.includes("nidra") || q.includes("cosmique") || q.includes("coucher") || q.includes("dormir") || q.includes("savasana") || q.includes("cosmic")) {
+            topic = "samyama_cosmique";
         } else if (q.includes("samyama") || q.includes("sutra") || q.includes("intention")) {
             topic = "samyama";
-        } else if (q.includes("respiration") || q.includes("spinale") || q.includes("pranayama") || q.includes("souffle") || q.includes("breathing")) {
+        } else if (q.includes("respiration") || q.includes("spinale") || q.includes("pranayama") || q.includes("souffle") || q.includes("breathing") || q.includes("prana") || q.includes("colonne") || q.includes("ujjayi") || q.includes("hyperventilation") || q.includes("oxygène") || q.includes("oxygen")) {
             topic = "respiration";
-        } else if (q.includes("kechari") || q.includes("mudra")) {
+        } else if (q.includes("kechari") || q.includes("mudra") || q.includes("langue") || q.includes("frein") || q.includes("hymen") || q.includes("tongue") || q.includes("entailles") || q.includes("snips")) {
             topic = "kechari";
-        } else if (q.includes("meditation") || q.includes("silence") || q.includes("temoin") || q.includes("témoin") || q.includes("soi")) {
+        } else if (q.includes("meditation") || q.includes("silence") || q.includes("soi") || q.includes("turiya") || q.includes("sommeil") || q.includes("rêve") || q.includes("reve") || q.includes("écran") || q.includes("ecran") || q.includes("espace entre") || q.includes("sleep") || q.includes("dream") || q.includes("screen")) {
             topic = "meditation"; 
+        } else if (q.includes("prière") || q.includes("priere") || q.includes("prier") || q.includes("guérir") || q.includes("malade") || q.includes("prayer") || q.includes("heal")) {
+            topic = "priere";
+        } else if (q.includes("drogue") || q.includes("hallucinogène") || q.includes("lsd") || q.includes("champignon") || q.includes("alcool") || q.includes("tabac") || q.includes("drugs") || q.includes("marijuana")) {
+            topic = "drogues";
+        } else if (q.includes("souffrance") || q.includes("douleur") || q.includes("peine") || q.includes("blessure") || q.includes("suffering") || q.includes("pain")) {
+            topic = "souffrance";
+        } else if (q.includes("recherche du soi") || q.includes("qui suis-je") || q.includes("jnana") || q.includes("advaita") || q.includes("neti") || q.includes("affirmation") || q.includes("sedona") || q.includes("lâcher-prise") || q.includes("lacher-prise") || q.includes("inquiry")) {
+            topic = "recherche_soi";
+        } else if (q.includes("étape") || q.includes("action") || q.includes("détachement") || q.includes("detachement") || q.includes("discrimination") || q.includes("karma yoga") || q.includes("servir") || q.includes("service") || q.includes("stage")) {
+            topic = "etapes_action";
+        } else if (q.includes("paradoxe") || q.includes("faire sans faire") || q.includes("ne rien faire") || q.includes("paradox")) {
+            topic = "paradoxe";
+        } else if (q.includes("yoga") || q.includes("éveil") || q.includes("eveil") || q.includes("pratique") || q.includes("awakening") || q.includes("practice")) {
+            topic = "yoga";
+        } else if (q.includes("dieu") || q.includes("religion") || q.includes("athée") || q.includes("athee") || q.includes("croyance") || q.includes("foi") || q.includes("god") || q.includes("belief")) {
+            topic = "croyance";
+        } else if (q.includes("ego") || q.includes("séparation") || q.includes("separation") || q.includes("illusion") || q.includes("corps") || q.includes("mental") || q.includes("body") || q.includes("mind")) {
+            topic = "illusion";
+        } else if (q.includes("chakra") || q.includes("centre") || q.includes("capot") || q.includes("moteur")) {
+            topic = "chakra";
+        } else if (q.includes("mantra") || q.includes("bougie") || q.includes("technique") || q.includes("objet") || q.includes("méthode") || q.includes("methode") || q.includes("candle") || q.includes("object") || q.includes("comment") || q.includes("krishnamurti") || q.includes("effort")) {
+            topic = "technique";
+        } else if (q.includes("illumination") || q.includes("but") || q.includes("destination") || q.includes("temps") || q.includes("enlightenment") || q.includes("goal") || q.includes("time") || q.includes("unité") || q.includes("unite") || q.includes("unity")) {
+            topic = "illumination";
+        } else if (q.includes("végétarien") || q.includes("vegetarien") || q.includes("régime") || q.includes("regime") || q.includes("alimentation") || q.includes("nourriture") || q.includes("manger") || q.includes("diet") || q.includes("food") || q.includes("viande")) {
+            topic = "alimentation";
+        } else if (q.includes("monde") || q.includes("problème") || q.includes("probleme") || q.includes("guerre") || q.includes("terrorisme") || q.includes("fuite") || q.includes("réalité") || q.includes("realite") || q.includes("world") || q.includes("reality") || q.includes("escape") || q.includes("pauvreté")) {
+            topic = "monde";
+        } else if (q.includes("sexe") || q.includes("sexuel") || q.includes("sexualité") || q.includes("sexualite") || q.includes("sex") || q.includes("abstinence")) {
+            topic = "sexualite";
+        } else if (q.includes("posture") || q.includes("siddhasana") || q.includes("assise") || q.includes("périnée") || q.includes("perinee") || q.includes("cheval") || q.includes("talon")) {
+            topic = "posture";
+        } else if (q.includes("symptôme") || q.includes("symptome") || q.includes("brûlure") || q.includes("brulure") || q.includes("folie") || q.includes("ancrage") || q.includes("ayurveda") || q.includes("déséquilibre") || q.includes("desequilibre") || q.includes("grounding") || q.includes("peur")) {
+            topic = "ancrage";
+        } else if (q.includes("pouvoir") || q.includes("miracle") || q.includes("siddhi") || q.includes("magie") || q.includes("voler") || q.includes("power") || q.includes("magic") || q.includes("télépathie") || q.includes("telepathie") || q.includes("hypnose")) {
+            topic = "siddhis";
+        } else if (q.includes("couronne") || q.includes("sahasrar") || q.includes("haut") || q.includes("tête") || q.includes("tete") || q.includes("crown") || q.includes("sommet") || q.includes("spontané") || q.includes("spontane")) {
+            topic = "sahasrar";
+        } else if (q.includes("vision") || q.includes("étoile") || q.includes("etoile") || q.includes("lumière") || q.includes("lumiere") || q.includes("tunnel") || q.includes("star") || q.includes("light") || q.includes("paysage") || q.includes("aura") || q.includes("clairvoyance")) {
+            topic = "vision";
+        } else if (q.includes("bhakti") || q.includes("impatience") || q.includes("dévotion") || q.includes("devotion") || q.includes("coeur") || q.includes("heart") || q.includes("nouvel âge") || q.includes("désir") || q.includes("desire")) {
+            topic = "bhakti";
+        } else if (q.includes("yoni") || q.includes("kumbhaka") || q.includes("rétention") || q.includes("retention") || q.includes("bandha") || q.includes("jalandhara") || q.includes("uddiyana")) {
+            topic = "yoni_mudra";
+        } else if (q.includes("brahmacharya") || q.includes("célibat") || q.includes("celibat") || q.includes("tantra") || q.includes("semence") || q.includes("créatrice")) {
+            topic = "brahmacharya";
+        } else if (q.includes("karma") || q.includes("destin") || q.includes("libre arbitre") || q.includes("choix") || q.includes("samskara") || q.includes("péché") || q.includes("peche") || q.includes("pardon") || q.includes("coupable") || q.includes("sin") || q.includes("guilt")) {
+            topic = "karma";
+        } else if (q.includes("félicité") || q.includes("felicite") || q.includes("extase") || q.includes("bliss") || q.includes("ecstasy") || q.includes("différence") || q.includes("plaisir")) {
+            topic = "felicite";
+        } else if (q.includes("témoin") || q.includes("temoin") || q.includes("indifférence") || q.includes("indifference") || q.includes("vide") || q.includes("déconnecté") || q.includes("spectateur") || q.includes("mort") || q.includes("émotion") || q.includes("emotion")) {
+            topic = "temoin";
+        } else if (q.includes("intellect") || q.includes("comprendre") || q.includes("analyser") || q.includes("raison") || q.includes("qui suis-je") || q.includes("jnana")) {
+            topic = "intellect";
+        } else if (q.includes("nauli") || q.includes("ventre") || q.includes("abdomen") || q.includes("barattage") || q.includes("diaphragme") || q.includes("intestin") || q.includes("abdominaux")) {
+            topic = "nauli";
+        } else if (q.includes("navi") || q.includes("kriya") || q.includes("nombril") || q.includes("navel") || q.includes("bateau") || q.includes("milieu")) {
+            topic = "navi_kriya";
+        } else if (q.includes("pratyahara") || q.includes("sens") || q.includes("sons") || q.includes("son intérieur") || q.includes("om") || q.includes("aum") || q.includes("sensualité") || q.includes("empathie")) {
+            topic = "pratyahara";
+        } else if (q.includes("traduire") || q.includes("traduction") || q.includes("langue") || q.includes("i am") || q.includes("ayam") || q.includes("signification") || q.includes("meaning") || q.includes("translate")) {
+            topic = "mantra_traduction";
+        } else if (q.includes("nectar") || q.includes("sucré") || q.includes("sucre") || q.includes("amrita") || q.includes("soma") || q.includes("goût") || q.includes("gout") || q.includes("sweet") || q.includes("taste")) {
+            topic = "nectar";
+        } else if (q.includes("psychologie") || q.includes("psychanalyse") || q.includes("comprendre émotion") || q.includes("psychology") || q.includes("analysis")) {
+            topic = "psychologie";
+        } else if (q.includes("pompe") || q.includes("cervicale") || q.includes("menton") || q.includes("cou") || q.includes("chin pump") || q.includes("neck") || q.includes("dynamique")) {
+            topic = "pompe_cervicale";
+        } else if (q.includes("patanjali") || q.includes("huit") || q.includes("membres") || q.includes("yama") || q.includes("niyama") || q.includes("asana") || q.includes("huit branches") || q.includes("limbs")) {
+            topic = "huit_membres";
+        } else if (q.includes("bastrika") || q.includes("soufflet") || q.includes("halètement") || q.includes("haletement") || q.includes("chien") || q.includes("rapide") || q.includes("bellows") || q.includes("panting")) {
+            topic = "bastrika";
+        } else if (q.includes("sceptique") || q.includes("scepticisme") || q.includes("science") || q.includes("doute") || q.includes("croire") || q.includes("skeptic") || q.includes("doubt") || q.includes("believe")) {
+            topic = "scepticisme";
+        } else if (q.includes("troisième") || q.includes("troisieme") || q.includes("oeil") || q.includes("third eye") || q.includes("medulla") || q.includes("pinéale") || q.includes("pineal") || q.includes("pituitaire") || q.includes("pituitary")) {
+            topic = "troisieme_oeil";
+        } else if (q.includes("amour divin") || q.includes("compassion") || q.includes("karuna") || q.includes("divine love")) {
+            topic = "amour_divin";
+        } else if (q.includes("secret") || q.includes("caché") || q.includes("cache") || q.includes("divulguer") || q.includes("hidden")) {
+            topic = "secret";
+        } else if (q.includes("granthi") || q.includes("nœud") || q.includes("noeud") || q.includes("brahma") || q.includes("vishnu") || q.includes("rudra") || q.includes("knot")) {
+            topic = "granthis";
+        } else if (q.includes("histoire") || q.includes("occident") || q.includes("vivekananda") || q.includes("yogananda") || q.includes("maharishi") || q.includes("history") || q.includes("west")) {
+            topic = "histoire_yoga";
         }
 
-        let b = sageBrain[currentLang][topic];
-        
-        let fullResponse = `${getUniqueCore(b.core)}<br><br>${getRandom(b.science)}<br><br>${getRandom(b.pacing)}`;
+        const data = sageBrain[currentLang][topic];
+        let randomCore = data.core[Math.floor(Math.random() * data.core.length)];
+        let randomScience = data.science[Math.floor(Math.random() * data.science.length)];
+        let randomPacing = data.pacing[Math.floor(Math.random() * data.pacing.length)];
 
-        let suffix = "";
-        if (topic === "universel") {
-             suffix = currentLang === 'fr' 
-                ? (Math.random() > 0.5 ? "La vérité est un miroir brisé ; chacun en possède un petit éclat." : "Que ton chemin soit éclairé par ta propre lumière.")
-                : (Math.random() > 0.5 ? "Truth is a shattered mirror; everyone holds a small piece." : "May your path be lit by your own light.");
-        } else {
-            suffix = currentLang === 'fr' 
-                ? (Math.random() > 0.5 ? "La patience est l'eau douce qui nourrit la graine." : "Acceptez le mystère de votre propre lenteur.")
-                : (Math.random() > 0.5 ? "Patience is the sweet water that nourishes the seed." : "Embrace the mystery of your own slowness.");
-        }
-        
-        fullResponse += `<br><br><em>${suffix}</em>`;
+        let finalResponse = `« ${randomCore}\n\n${randomScience}\n\n${randomPacing} »`;
 
-        const introsFr = ["Comprends ceci :", "Médite sur cette vérité :", "Entends la voix du silence :", "Observe cette mécanique :", "Voici ce que l'expérience révèle :"];
-        const introsEn = ["Understand this:", "Meditate on this truth:", "Hear the voice of silence:", "Observe this mechanic:", "Here is what experience reveals:"];
-
-        let prefix = "";
-        if (isFirstQuestion) {
-            prefix = currentLang === "fr" ? "Bienvenue, voyageur." : "Welcome, traveler.";
-            isFirstQuestion = false;
-        } else {
-            prefix = currentLang === "fr" ? getRandom(introsFr) : getRandom(introsEn);
-        }
-
-        const newResp = document.createElement('div');
-        newResp.className = 'sage-response';
-        
-        newResp.innerHTML = `<strong>${prefix}</strong><br><br>« <span class="texte-sage"></span><span class="curseur-reflexion"></span>`;
-        area.prepend(newResp);
-        
-        const zoneTexte = newResp.querySelector('.texte-sage');
-        const curseur = newResp.querySelector('.curseur-reflexion');
-        
-        let i = 0;
-        function typeWriter() {
-            if (i < fullResponse.length) {
-                if (fullResponse.substring(i, i+4) === "<br>") {
-                    zoneTexte.innerHTML += "<br>";
-                    i += 4;
-                } else if (fullResponse.substring(i, i+4) === "<em>") {
-                    zoneTexte.innerHTML += "<em>";
-                    i += 4;
-                } else if (fullResponse.substring(i, i+5) === "</em>") {
-                    zoneTexte.innerHTML += "</em>";
-                    i += 5;
+        typeWriter(finalResponse, 0, logEl, () => {
+            isTyping = false;
+            // Extinction du son (doucement)
+            let fadeAudioOut = setInterval(() => {
+                if (audioResonance.volume > 0.01) {
+                    audioResonance.volume -= 0.01;
                 } else {
-                    zoneTexte.innerHTML += fullResponse.charAt(i);
-                    i++;
+                    audioResonance.pause();
+                    clearInterval(fadeAudioOut);
                 }
+            }, 100);
+        });
+    }
 
-                let delay = 35; 
-                let lastChar = fullResponse.charAt(i-1);
-                if (['.', '!', '?'].includes(lastChar)) delay = 600; 
-                if (lastChar === ',') delay = 250; 
-
-                typingTimeout = setTimeout(typeWriter, delay);
-            } else {
-                zoneTexte.innerHTML += " »"; 
-                curseur.style.display = "none";
-                let fadeOut = setInterval(() => {
-                    if(resonance.volume > 0.05) resonance.volume -= 0.05;
-                    else { clearInterval(fadeOut); resonance.pause(); }
-                }, 200);
-            }
+    function typeWriter(text, i, el, callback) {
+        if (i < text.length) {
+            el.innerHTML += text.charAt(i);
+            setTimeout(() => typeWriter(text, i + 1, el, callback), 25);
+        } else {
+            callback();
         }
-        typeWriter(); 
     }
 
-    function toggleLanguage() {
-        const newLang = currentLang === 'fr' ? 'en' : 'fr';
-        setLanguage(newLang);
-    }
-
-    function setLanguage(lang) {
-        currentLang = lang;
-        const isEn = lang === 'en';
-        
-        document.getElementById("nav-sage").textContent = isEn ? "THE SAGE" : "LE SAGE";
-        document.getElementById("nav-parabole").textContent = isEn ? "THE PARABLE" : "LA PARABOLE";
-        document.getElementById("nav-teachings").textContent = isEn ? "TEACHINGS" : "ENSEIGNEMENTS";
-        document.getElementById("nav-murmures").textContent = isEn ? "WHISPERS" : "MURMURES";
-        document.getElementById("nav-contact").textContent = isEn ? "CONTACT" : "CONTACT";
-        
-        document.getElementById("sage-title").textContent = isEn ? "The Temple of Silence" : "Le Temple du Silence";
-        document.getElementById("user-question").placeholder = isEn ? "Ask your question (Samyama, Kundalini...)" : "Posez votre question (Samyama, Kundalini...)";
-        document.getElementById("sage-btn").textContent = isEn ? "INQUIRE" : "INTERROGER";
-        document.getElementById("silence-quote").textContent = isEn ? "Regularity is the bed of silence." : "La régularité est le lit du silence.";
-        
-        updateThemeButton(); 
-
-        document.getElementById("para-main-title").textContent = isEn ? "The Parable" : "La Parabole";
-        document.getElementById("para-title").textContent = parableData[lang].title;
-        document.getElementById("parable-body").innerHTML = parableData[lang].body;
-
-        document.getElementById("teachings-title").textContent = isEn ? "Teachings" : "Enseignements";
-        document.getElementById("teachings-intro").textContent = isEn ? "The library of foundations. Read, breathe, integrate." : "La bibliothèque des fondations. Lisez, respirez, intégrez.";
-
-        document.getElementById("pod-intro").textContent = isEn ? "To deepen the technique, the source is immutable:" : "Pour approfondir la technique, la source est immuable :";
-        document.getElementById("pod-link").textContent = isEn ? "→ Yogani's Lessons (Original Source)" : "→ Les Leçons de Yogani (Source Originale)";
-        document.getElementById("book-placeholder").textContent = isEn ? "Coming soon: The Lineage Library." : "Bientôt : La Bibliothèque de la Lignée.";
-
-        document.getElementById("murmures-main-title").textContent = isEn ? "Lineage Whispers" : "Murmures de la Lignée";
-        document.getElementById("murmures-intro").textContent = isEn ? "Seeds of wisdom and short reflections for the wandering mind." : "Graines de sagesse et courtes réflexions pour l'esprit en marche.";
-        
-        document.querySelectorAll(".zen-text").forEach(el => el.textContent = isEn ? "Zen Mode" : "Mode Zen");
-
-        document.getElementById("contact-title").textContent = isEn ? "Contact" : "Contact";
-        document.getElementById("contact-sub").textContent = isEn ? "Any doubt? Write to the Temple Guardian." : "Un doute sur la pratique ? Écrivez au Gardien du Temple.";
-        document.getElementById("contact-name").placeholder = isEn ? "Your name" : "Votre nom";
-        document.getElementById("contact-msg").placeholder = isEn ? "Your message..." : "Votre message...";
-        document.getElementById("contact-btn").textContent = isEn ? "SEND" : "ENVOYER";
-
-        document.getElementById("footer-text").innerHTML = isEn ? "PROPERTY & LINEAGE 🪷 ॐ" : "PROPRIÉTÉ & LIGNÉE 🪷 ॐ";
-
-        renderMurmures();
-        renderTeachings(); // On appelle la nouvelle fonction qui affiche toutes les leçons !
-
-        clearTimeout(typingTimeout);
-        document.getElementById("response-area").innerHTML = "";
-        isFirstQuestion = true; 
-    }
-
-    function showSection(id) {
-        document.querySelectorAll(".container").forEach(c => c.style.display = "none");
-        document.getElementById(id).style.display = "block";
-    }
-
+    /* Initialisation */
     window.onload = () => {
-        createParticles(); 
-        setLanguage("fr");
-        updateThemeButton();
-        showSection("sage");
-        
-        let count = localStorage.getItem('visits') || 0;
-        localStorage.setItem('visits', ++count);
-        document.getElementById('count').textContent = count.toString().padStart(4, '0');
+        renderEnseignements();
+        renderMurmures();
+        renderParabole();
     };
     </script>
-
 </body>
 </html>
-

@@ -20,9 +20,9 @@ const MURMURES_DATABASE = {
     fr: [
         {
             title: "La Boussole du Silence",
-            audioFile: "boussole.mp3", // <-- Ton fichier audio
-            imageFile: "paysage.jpg",  // <-- Ton fichier image
-            videoFile: "",             // <-- Laisse vide si tu n'as pas de vidéo mp4
+            audioFile: "",                     // On vide l'audio pour laisser place à la vidéo
+            imageFile: "",                     // On laisse vide
+            videoFile: "video_boussole.mp4",   // Ta vidéo est maintenant appelée !
             text: "Voyageur, ne cherche pas ta voie dans le tumulte de la tempête. Une direction intérieure véritable ne hurle jamais avec l'émotion. L'urgence et la peur ne t'offrent qu'une clarté illusoire qui s'évapore avec le vent. La boussole du Soi se lit dans l'immobilité : la voie juste est celle qui demeure intelligible lorsque ton cœur cesse de s'emballer."
         },
         {
@@ -168,3 +168,4 @@ const sageBrain = {
     }
 
 };
+

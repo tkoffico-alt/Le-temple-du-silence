@@ -27,7 +27,6 @@ body.light-mode {
 }
 
 body {
-    /* L'image de fond est maintenant kofi.jpg */
     background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('kofi.jpg') no-repeat center center fixed; 
     background-size: cover;
     color: var(--text-color);
@@ -39,37 +38,55 @@ body {
 /* Typographie spécifique */
 h1, h2, h3, h4, .serif {
     font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
 }
 
 h1 {
     font-size: 2.8rem;
+    font-weight: 700;
     color: var(--accent-color);
     margin-bottom: 5px;
     letter-spacing: 2px;
 }
 
-/* Sous-titre Chemin AYP avec police style sanskrit (Yatra One) */
-.site-subtitle {
-    font-family: 'Yatra One', cursive; 
-    font-size: 1.6rem;
-    color: var(--title-blue);
+/* Conteneur pour le sous-titre et le logo alignés */
+.subtitle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
     margin-bottom: 20px;
-    letter-spacing: 2px;
 }
 
-/* Titres principaux (H2) - Plus grands et Bleus */
+/* Sous-titre CHEMIN AYP (Couleur Or, Majuscules, Police Yatra One) */
+.site-subtitle {
+    font-family: 'Yatra One', cursive; 
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--accent-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0; /* Annule la marge par défaut pour l'alignement */
+}
+
+.header-signature {
+    height: 45px;
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
+}
+
+/* Titres principaux des leçons (Plus grands, Bleus, Très Gras) */
 h2 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
+    font-weight: 700; /* Gras */
     margin-bottom: 25px;
     color: var(--title-blue) !important;
     border-bottom: 1px solid var(--title-blue);
     padding-bottom: 10px;
 }
 
-/* Sous-titres (H3) - Plus petits et Dorés */
+/* Sous-titres dans les leçons (Plus petits, Dorés, Gras) */
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 700; /* Gras */
     color: var(--accent-color) !important;
     margin-top: 30px;
     margin-bottom: 15px;
@@ -91,7 +108,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 button {
@@ -124,6 +141,7 @@ nav button {
     border: none;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.2rem;
+    font-weight: 600;
     font-style: italic;
     border-radius: 0;
     border-bottom: 1px solid transparent;

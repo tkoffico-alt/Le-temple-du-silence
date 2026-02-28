@@ -13,7 +13,7 @@
         <h1>Le Temple du Silence</h1>
         <div class="subtitle-container">
             <p class="site-subtitle">CHEMIN AYP</p>
-            <img src="signature-ayp.png" alt="Signature Lignée" class="header-signature">
+            <img src="signature-ayp.png" alt="Signature Lignée" class="header-signature" style="height: 100px; margin-left: -10px; opacity: 0.9; filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));">
         </div>
         
         <div class="controls">
@@ -171,6 +171,7 @@
         });
     }
 
+    // Modification majeure ici pour intégrer le partage de vidéo et d'audio
     function renderMurmures() {
         const container = document.getElementById("murmures-list-container");
         container.innerHTML = ""; 
@@ -200,6 +201,23 @@
             }
 
             let shareText = currentLang === 'fr' ? "Partager l'enseignement" : "Share teaching";
+            let shareVideoBtnHTML = "";
+            let shareAudioBtnHTML = "";
+            let textShareLabel = currentLang === 'fr' ? 'Partager le texte' : 'Share text';
+            let videoShareLabel = currentLang === 'fr' ? 'Partager la vidéo' : 'Share video';
+            let audioShareLabel = currentLang === 'fr' ? 'Partager l\'audio' : 'Share audio';
+            
+            if (murmure.videoFile) {
+                shareVideoBtnHTML = `<button class="zen-btn sharing-btn video-share-btn" style="font-size: 0.8rem; opacity: 0.7; margin: 0; padding: 5px 10px;" onclick="partagerVideoMurmure(${index})">
+                    🎥 ${videoShareLabel}
+                </button>`;
+            }
+            
+            if (murmure.audioFile) {
+                shareAudioBtnHTML = `<button class="zen-btn sharing-btn audio-share-btn" style="font-size: 0.8rem; opacity: 0.7; margin: 0; padding: 5px 10px;" onclick="partagerAudioMurmure(${index})">
+                    🎵 ${audioShareLabel}
+                </button>`;
+            }
 
             const murmureHTML = `
                 <div class="murmure-item">
@@ -207,10 +225,12 @@
                     ${mediaHTML}
                     <div id="texte-murmure-${index}">${murmure.text}</div>
                     ${getSignatureHTML()} 
-                    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 25px;">
-                        <button class="zen-btn" style="font-size: 0.8rem; opacity: 0.7; margin: 0; padding: 5px 10px;" onclick="partagerMurmure(${index})">
-                            ✨ ${shareText}
+                    <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 25px; padding: 0 15px;">
+                        <button class="zen-btn sharing-btn" style="font-size: 0.8rem; opacity: 0.7; margin: 0; padding: 5px 10px;" onclick="partagerMurmure(${index})">
+                            ✨ ${textShareLabel}
                         </button>
+                        ${shareVideoBtnHTML}
+                        ${shareAudioBtnHTML}
                         ${downloadBtnHTML}
                     </div>
                 </div>
@@ -235,11 +255,8 @@
         // Permet d'avoir l'URL du site
         const lienSite = window.location.href.split('#')[0]; 
         
-        let liensMedia = "";
-        if (murmure.videoFile) liensMedia += `\n🎥 Vidéo : ${lienSite}${murmure.videoFile}`;
-        if (murmure.audioFile) liensMedia += `\n🎵 Audio : ${lienSite}${murmure.audioFile}`;
-
-        const texteAPartager = `✨ ${titre} ✨\n\n"${texteBrut}"${liensMedia}\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
+        // Enlever les liens média ici pour ne partager que le texte brut et le lien vers le site
+        const texteAPartager = `✨ ${titre} ✨\n\n"${texteBrut}"\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
 
         if (navigator.share) {
             navigator.share({
@@ -248,7 +265,48 @@
             }).catch(console.error);
         } else {
             navigator.clipboard.writeText(texteAPartager).then(() => {
-                const msg = currentLang === 'fr' ? "Texte et liens copiés dans le presse-papiers !" : "Text and links copied to clipboard!";
+                const msg = currentLang === 'fr' ? "Texte copié dans le presse-papiers !" : "Text copied to clipboard!";
+                alert(msg);
+            });
+        }
+    }
+
+    // Nouvelles fonctions pour partager spécifiquement les médias
+    function partagerVideoMurmure(index) {
+        const murmure = MURMURES_DATABASE[currentLang][index];
+        const titre = murmure.title;
+        const lienSite = window.location.href.split('#')[0]; 
+        const lienVideo = lienSite + murmure.videoFile;
+        const texteAPartager = `🎥 ${titre} ✨ Vidéo\n\nLien : ${lienVideo}\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
+        
+        if (navigator.share) {
+            navigator.share({
+                title: titre,
+                text: texteAPartager,
+            }).catch(console.error);
+        } else {
+            navigator.clipboard.writeText(texteAPartager).then(() => {
+                const msg = currentLang === 'fr' ? "Lien vidéo copié !" : "Video link copied!";
+                alert(msg);
+            });
+        }
+    }
+    
+    function partagerAudioMurmure(index) {
+        const murmure = MURMURES_DATABASE[currentLang][index];
+        const titre = murmure.title;
+        const lienSite = window.location.href.split('#')[0]; 
+        const lienAudio = lienSite + murmure.audioFile;
+        const texteAPartager = `🎵 ${titre} ✨ Audio\n\nLien : ${lienAudio}\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
+        
+        if (navigator.share) {
+            navigator.share({
+                title: titre,
+                text: texteAPartager,
+            }).catch(console.error);
+        } else {
+            navigator.clipboard.writeText(texteAPartager).then(() => {
+                const msg = currentLang === 'fr' ? "Lien audio copié !" : "Audio link copied!";
                 alert(msg);
             });
         }

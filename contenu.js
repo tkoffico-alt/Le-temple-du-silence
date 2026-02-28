@@ -177,11 +177,56 @@ const TEACHINGS_DATABASE = {
         },
         {
             title: "The Mechanics of Ecstasy: A Progressive Understanding of Awakening",
-            body: `<p style="font-style:italic; opacity:0.7; text-align:center;">Translation coming soon...</p>
-            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 50px; opacity: 0.95;">
-                <img src="sceau-gardien.png" alt="Guardian Seal" style="width: 45px; margin-right: 15px; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));">
-                <span style="font-style: italic; font-size: 1.1rem; color: var(--couleur-accent);">Original Work & Property</span>
-            </div>`
+            body: `
+                <p>In the spiritual journey, ecstasy is often misunderstood. It is sometimes sought as an exceptional mystical experience, feared as a loss of control, or idealized as the privilege of a chosen few. In reality, ecstasy is none of these. It is the natural result of a precise mechanism, inscribed in human neurobiological functioning, which activates when certain conditions are met.</p>
+                <p>Understanding this mechanic does not serve to provoke ecstasy — for it can never be forced — but to allow the purification process to unfold without confusion or excess, until its harmonious integration into daily life.</p>
+                <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">1. What ecstasy is not (and what it is)</h3>
+                <p>In everyday language, ecstasy is confused with mental exaltation or a fleeting emotion triggered by an external event. In the yogic perspective, it is something entirely different:</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>A neurobiological feeling:</strong> It is a stable current of bliss, felt directly in the body and the nervous system.</li>
+                    <li><strong>A constant signature:</strong> Whether gentle or powerful, subtle or expansive, it manifests as a sensation of intensified life, calm, silent, and deeply nourishing.</li>
+                    <li><strong>A functional sign:</strong> It is not the mind that becomes exalted, it is the body that becomes the living conductor of an energy freed from its shackles. Ecstasy simply indicates that something has cleared inside.</li>
+                </ul>
+                <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">2. The indispensable foundation: Inner Silence</h3>
+                <p>All authentic ecstasy and deep transformation rest on a primordial base: inner silence. This silence is not an absence of activity or a withdrawal from the world, but a conscious, stable, and witnessing presence, independent of thoughts and emotions.</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>The role of conductor:</strong> This silence acts as a natural regulator. Without it, any energetic stimulation becomes unstable, agitated, or even disruptive.</li>
+                    <li><strong>The alchemy of energy:</strong> Without silence, energy excites. With silence, energy induces ecstasy. Vital energy can then circulate without causing overheating.</li>
+                </ul>
+                <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">3. Purification and Conductivity of the Nervous System</h3>
+                <p>Ecstasy appears as the internal channels clear. This purification is not an addition, but a removal:</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>The dissolution of resistances:</strong> Each practice session removes a thin layer of old tensions, emotional blockages, and deep inertias.</li>
+                    <li><strong>The increase in conductivity:</strong> Like an electrical wire cleaned of its impurities, the nervous system lets the vital current pass with less and less resistance.</li>
+                    <li><strong>Natural manifestations:</strong> This nascent conductivity is perceived through sensations of heat, subtle thrills, waves of pure pleasure, or the perception of a living axis along the spine.</li>
+                </ul>
+                <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">4. Union: The Two Dimensions of Awakening</h3>
+                <p>Inner experience truly matures when two complementary qualities meet:</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>Silence (peace):</strong> If it develops alone, it can become dry, static, or detached.</li>
+                    <li><strong>Energy (movement):</strong> If it awakens without sufficient silence, it becomes unstable and excessive.</li>
+                </ul>
+                <p>When the peace of silence and the movement of energy advance together, a conscious, embodied, and lasting bliss appears. Movement finds its rest, and stillness becomes creative.</p>
+                <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">5. The Tools of the Mechanic</h3>
+                <p>Ecstasy is never a goal to be sought directly; chasing it creates tension that hinders it. It is the fruit of an automatic process nourished by precise tools:</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>Deep meditation:</strong> Installs inner silence through release (and not through effort).</li>
+                    <li><strong>Spinal breathing:</strong> Purifies and activates the central channels, preparing the ground for stable conductivity.</li>
+                    <li><strong>Internal gestures (mudras/bandhas):</strong> Intensify the process by applying targeted pressure when the body is ready.</li>
+                    <li><strong>Intention (samyama):</strong> Allows the transformation to be integrated into daily life from silence.</li>
+                    <li><strong>Transmutation of energy:</strong> Channels natural vitality (including sexual) to feed the inner current.</li>
+                </ul>
+                <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">6. The Art of Self-Regulation</h3>
+                <p>In this mechanic, one principle is non-negotiable: balance always takes precedence over intensity.</p>
+                <p>If the energy becomes too strong or uncomfortable, this indicates an excess of stimulation compared to the available level of silence. The right response is never to force, but to slow down, adjust one's practice time, and ground oneself. The path is not a race, it is a maturation.</p>
+                <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">7. From Ecstasy to Living Action</h3>
+                <p>At maturity, ecstasy ceases to be an isolated experience on a meditation cushion. It no longer distracts from the world, but irrigates ordinary life. It becomes an objectless joy, stable and reliable, which nourishes the clarity, compassion, and rightness of our actions.</p>
+                <p>Yoga then ceases to be a separate practice to become a living way of being in the world: life finally flows unhindered.</p>
+                <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 50px; opacity: 0.95;">
+                    <img src="sceau-gardien.png" alt="Guardian Seal" style="width: 45px; margin-right: 15px; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));">
+                    <span style="font-style: italic; font-size: 1.1rem; color: var(--couleur-accent);">Original Work & Property</span>
+                </div>
+            `
         }
     ]
 };
@@ -279,6 +324,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

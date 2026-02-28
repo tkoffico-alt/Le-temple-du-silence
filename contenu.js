@@ -78,17 +78,17 @@ const teachingData = {
             
             <p>Ce silence n'est ni une concentration tendue, ni un retrait du monde. C'est une présence dynamique, un roc de conscience pure qui réside naturellement en nous. En chacun existe une zone intacte, stable, qui n'a jamais été perturbée par les événements ou les blessures. Elle n'est pas produite par la pratique : la pratique ne fait que la révéler.</p>
 
-            <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left;">La Mécanique de l'Éveil : Régularité avant Intensité</h3>
+            <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">La Mécanique de l'Éveil : Régularité avant Intensité</h3>
             <p>La graine de ce silence se dévoile progressivement. L’éveil repose sur un principe physiologique fondamental : la régularité est bien plus importante que l’intensité.</p>
             <p><strong>La Méditation Profonde :</strong> L'outil pour éveiller ce silence est une pratique simple et sans effort. En utilisant doucement un mantra, l'esprit est autorisé à plonger vers l'intérieur, transcendant l'agitation de surface.</p>
             <p><strong>L'Effet Cumulatif :</strong> Un peu de pratique, chaque jour, permet au système nerveux de s'habituer à un état de repos conscient très profond. Le silence s'installe par gouttes. Il ne surgit pas comme une rupture violente, mais comme une évidence tranquille qui devient familière.</p>
 
-            <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left;">Purification et Émergence du Témoin</h3>
+            <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">Purification et Émergence du Témoin</h3>
             <p>L'éveil n'est pas qu'un concept psychologique, c'est un nettoyage biologique. À mesure que l'on descend dans le silence, le système nerveux dissout ses blocages accumulés.</p>
             <p><strong>Le Processus de Libération :</strong> Ce repos profond met en lumière ce qui était enfoui. Anciennes tensions et résistances peuvent remonter à la surface. Le Silence n'élimine pas immédiatement les conditionnements, il les dévoile pour qu'ils se dissolvent. Il n'y a rien à analyser ; il suffit de continuer la pratique avec douceur et de laisser le Silence faire son travail.</p>
             <p><strong>Le Témoin Inébranlable :</strong> À mesure que le système nerveux se purifie, un changement subtil se produit : nous cessons de nous identifier entièrement à la surface de la vie. Quelque chose en nous observe, sans juger. Les pensées passent, les émotions circulent, mais le témoin demeure, profondément vivant et disponible.</p>
 
-            <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left;">Le Silence en Action : Une Base, Pas un Sommet</h3>
+            <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">Le Silence en Action : Une Base, Pas un Sommet</h3>
             <p>Le véritable test du silence ne se fait pas les yeux fermés sur un coussin, mais au cœur de l'activité quotidienne.</p>
             <p><strong>Le Cycle Pratique-Action :</strong> L'action permet au système nerveux de métaboliser l'énergie libérée en méditation. Avec le temps, le Silence ne reste plus confiné aux moments formels ; il accompagne la parole, le travail et les relations.</p>
             <p><strong>La Cohérence Intérieure :</strong> L'action devient plus simple, les décisions émergent avec moins de conflit. La vie est vécue avec plus de fluidité.</p>
@@ -102,14 +102,34 @@ const teachingData = {
     },
     en: {
         title: "The Awakening of Inner Silence: The Unshakable Foundation",
-        body: `<p style="font-style:italic; opacity:0.7; text-align:center;">Translation coming soon...</p>
-        <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 50px; opacity: 0.95;">
-            <img src="sceau-gardien.png" alt="Guardian Seal" style="width: 45px; margin-right: 15px; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));">
-            <span style="font-style: italic; font-size: 1.1rem; color: var(--couleur-accent);">Original Work & Property</span>
-        </div>`
+        body: `
+            <p>Inner silence is not something we create. It is neither the result of mental effort nor a state of emptiness imposed by force. At the beginning of the path, we often try to discipline the mind, to force it to be quiet, but this strategy produces the opposite effect.</p>
+
+            <p>This silence is neither tense concentration nor a withdrawal from the world. It is a dynamic presence, a rock of pure consciousness that naturally resides within us. In everyone, there is an intact, stable zone that has never been disturbed by events or wounds. It is not produced by practice: practice merely reveals it.</p>
+
+            <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">The Mechanics of Awakening: Regularity over Intensity</h3>
+            <p>The seed of this silence unfolds gradually. Awakening rests on a fundamental physiological principle: regularity is far more important than intensity.</p>
+            <p><strong>Deep Meditation:</strong> The tool to awaken this silence is a simple, effortless practice. By gently using a mantra, the mind is allowed to dive inward, transcending surface agitation.</p>
+            <p><strong>The Cumulative Effect:</strong> A little practice, every day, allows the nervous system to accustom itself to a state of very deep conscious rest. Silence settles in drops. It does not emerge as a violent rupture, but as a quiet evidence that becomes familiar.</p>
+
+            <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">Purification and Emergence of the Witness</h3>
+            <p>Awakening is not just a psychological concept; it is a biological cleansing. As we descend into silence, the nervous system dissolves its accumulated blockages.</p>
+            <p><strong>The Liberation Process:</strong> This deep rest brings to light what was buried. Old tensions and resistances may rise to the surface. Silence does not immediately eliminate conditioning; it reveals them so they can dissolve. There is nothing to analyze; simply continue the practice gently and let Silence do its work.</p>
+            <p><strong>The Unshakable Witness:</strong> As the nervous system purifies, a subtle shift occurs: we cease to identify entirely with the surface of life. Something within us observes, without judging. Thoughts pass, emotions circulate, but the witness remains, deeply alive and available.</p>
+
+            <h3 style="color: var(--couleur-accent); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">Silence in Action: A Foundation, Not a Peak</h3>
+            <p>The true test of silence is not done with eyes closed on a cushion, but in the heart of daily activity.</p>
+            <p><strong>The Practice-Action Cycle:</strong> Action allows the nervous system to metabolize the energy released in meditation. Over time, Silence is no longer confined to formal moments; it accompanies speech, work, and relationships.</p>
+            <p><strong>Inner Coherence:</strong> Action becomes simpler, decisions emerge with less conflict. Life is lived with more fluidity.</p>
+            <p><strong>The Foundation:</strong> Inner silence is not the end of the path; it is the stable base. From it, love expresses itself more freely and intelligence becomes sharper. It takes nothing away from life; it finally allows it to flow unhindered.</p>
+
+            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 50px; opacity: 0.95;">
+                <img src="sceau-gardien.png" alt="Guardian Seal" style="width: 45px; margin-right: 15px; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));">
+                <span style="font-style: italic; font-size: 1.1rem; color: var(--couleur-accent);">Original Work & Property</span>
+            </div>
+        `
     }
 };
-
 const sageBrain = {
     fr: {
         meditation: {
@@ -204,3 +224,4 @@ const sageBrain = {
         }
     }
 };
+

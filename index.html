@@ -143,14 +143,13 @@
         document.getElementById(`nav-${sectionId}`).classList.add('active');
     }
 
-    /* Fonction qui génère la signature automatiquement avec le texte ET les deux logos */
+    /* Fonction qui génère la signature automatiquement avec ton image combinée */
     function getSignatureHTML() {
         const signatureText = currentLang === 'fr' ? "Œuvre Originale & Propriété de la Lignée" : "Original Work & Lineage Property";
         return `
             <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 40px; opacity: 0.85;">
                 <span style="font-style: italic; font-size: 1rem; color: var(--accent-color); margin-right: 15px;">${signatureText}</span>
-                <img src="logo-ayp.png" alt="Logo AYP" style="height: 40px; margin-right: 10px; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));">
-                <img src="sceau-gardien.png" alt="Sceau du Gardien" style="height: 40px; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));">
+                <img src="signature-ayp.png" alt="Signature Lignée" style="height: 45px; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));">
             </div>
         `;
     }

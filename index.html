@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Temple du Silence</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Lora:ital,wght@0,400;0,600;1,400&family=Yatra+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Lora:ital,wght@0,400;0,600;1,400&family=Yatra+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -74,21 +74,6 @@
         <section id="parabole" class="section">
             <div class="teaching-article parchment-text">
                 <h2 id="parabole-title" style="text-align:center;"></h2>
-                
-                <div style="text-align: center; margin-bottom: 30px;">
-                    <video id="parabole-video" controls style="width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); display: none;">
-                        <source src="" type="video/mp4">
-                        Votre navigateur ne supporte pas la vidéo.
-                    </video>
-                </div>
-                
-                <div style="text-align: center; margin-bottom: 30px;">
-                    <audio id="parabole-audio" controls style="width: 100%; display: none;">
-                        <source src="" type="audio/mpeg">
-                        Votre navigateur ne supporte pas l'audio.
-                    </audio>
-                </div>
-
                 <div id="parabole-text"></div>
             </div>
         </section>
@@ -104,17 +89,6 @@
     let currentLang = 'fr';
     let isTyping = false;
     let isFirstQuestion = true; 
-
-    const PARABOLE_DATA = {
-        fr: {
-            title: "Le Gardien du Silence",
-            text: "<p>Il était une fois, dans une vallée oubliée par le tumulte du monde, un Gardien qui veillait sur une source intarissable. Ce n'était pas une source d'eau, mais une source de silence. Ceux qui s'y abreuvaient ne gagnaient ni pouvoirs extraordinaires ni réponses magiques, ils trouvaient simplement l'apaisement de leur propre esprit.</p><p>Le Gardien ne parlait jamais le premier. Il attendait que le voyageur pose sa question, non pas pour lui dicter une vérité, mais pour lui renvoyer la sagesse qui sommeillait déjà en lui.</p>"
-        },
-        en: {
-            title: "The Guardian of Silence",
-            text: "<p>Once upon a time, in a valley forgotten by the tumult of the world, a Guardian watched over an inexhaustible spring. It was not a spring of water, but a spring of silence. Those who drank from it gained neither extraordinary powers nor magical answers; they simply found the pacification of their own minds.</p><p>The Guardian never spoke first. He waited for the traveler to ask their question, not to dictate a truth, but to reflect the wisdom that already slumbered within them.</p>"
-        }
-    };
 
     // Fonction Bouton Unique de Langue
     function toggleLang() {
@@ -136,7 +110,6 @@
         const inputPlaceholder = lang === 'fr' ? "Posez votre question à l'Univers..." : "Ask your question to the Universe...";
         document.getElementById('sage-input').placeholder = inputPlaceholder;
 
-        // Mise à jour du bouton thème selon la langue
         const themeBtn = document.getElementById('theme-toggle');
         const isLight = document.body.classList.contains('light-mode');
         if (lang === 'fr') {
@@ -170,7 +143,6 @@
         document.getElementById(`nav-${sectionId}`).classList.add('active');
     }
 
-    /* Fonction qui génère la signature automatiquement pour les textes */
     function getSignatureHTML() {
         const signatureText = currentLang === 'fr' ? "Œuvre Originale & Propriété de la Lignée" : "Original Work & Lineage Property";
         return `
@@ -227,7 +199,7 @@
                 }
             }
 
-            let shareText = currentLang === 'fr' ? "Partager le texte" : "Share text";
+            let shareText = currentLang === 'fr' ? "Partager l'enseignement" : "Share teaching";
 
             const murmureHTML = `
                 <div class="murmure-item">
@@ -249,19 +221,25 @@
 
     function renderParabole() {
         document.getElementById("parabole-title").innerText = PARABOLE_DATA[currentLang].title;
-        // On injecte le texte de la parabole + la signature
         document.getElementById("parabole-text").innerHTML = PARABOLE_DATA[currentLang].text + getSignatureHTML();
     }
 
+    // Le partage inclut désormais l'URL du site et indique s'il y a un média
     function partagerMurmure(index) {
+        const murmure = MURMURES_DATABASE[currentLang][index];
         let tempDiv = document.createElement("div");
         tempDiv.innerHTML = document.getElementById(`texte-murmure-${index}`).innerHTML.replace(/<br>/g, '\n');
         const texteBrut = tempDiv.innerText || tempDiv.textContent;
         
-        const titre = MURMURES_DATABASE[currentLang][index].title;
+        const titre = murmure.title;
+        // Permet d'avoir l'URL du site
         const lienSite = window.location.href.split('#')[0]; 
         
-        const texteAPartager = `✨ ${titre} ✨\n\n"${texteBrut}"\n\nDécouvert sur : ${lienSite}`;
+        let liensMedia = "";
+        if (murmure.videoFile) liensMedia += `\n🎥 Vidéo : ${lienSite}${murmure.videoFile}`;
+        if (murmure.audioFile) liensMedia += `\n🎵 Audio : ${lienSite}${murmure.audioFile}`;
+
+        const texteAPartager = `✨ ${titre} ✨\n\n"${texteBrut}"${liensMedia}\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
 
         if (navigator.share) {
             navigator.share({
@@ -270,13 +248,12 @@
             }).catch(console.error);
         } else {
             navigator.clipboard.writeText(texteAPartager).then(() => {
-                const msg = currentLang === 'fr' ? "Texte copié dans le presse-papiers !" : "Text copied to clipboard!";
+                const msg = currentLang === 'fr' ? "Texte et liens copiés dans le presse-papiers !" : "Text and links copied to clipboard!";
                 alert(msg);
             });
         }
     }
 
-    /* Le Cerveau du Sage */
     function askSage() {
         if (isTyping) return;
         const inputEl = document.getElementById("sage-input");
@@ -290,7 +267,6 @@
         inputEl.value = "";
         logEl.innerHTML = "";
 
-        // Allumage du son
         audioResonance.volume = 0;
         audioResonance.play();
         let fadeAudioIn = setInterval(() => {
@@ -416,7 +392,6 @@
 
         typeWriter(finalResponse, 0, logEl, () => {
             isTyping = false;
-            // Extinction du son (doucement)
             let fadeAudioOut = setInterval(() => {
                 if (audioResonance.volume > 0.01) {
                     audioResonance.volume -= 0.01;
@@ -437,7 +412,6 @@
         }
     }
 
-    /* Initialisation */
     window.onload = () => {
         renderEnseignements();
         renderMurmures();

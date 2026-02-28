@@ -369,7 +369,7 @@
     /* ==========================
        AFFICHAGE DES MURMURES ET PARTAGE
     ========================== */
-    function renderMurmures() {
+   function renderMurmures() {
         const container = document.getElementById("murmures-list-container");
         container.innerHTML = ""; 
         const currentMurmures = MURMURES_DATABASE[currentLang];
@@ -381,9 +381,14 @@
 
         currentMurmures.forEach((murmure, index) => {
             let mediaHTML = "";
+            let downloadBtnHTML = ""; // On prépare un espace pour le bouton de téléchargement
             
             if (murmure.videoFile && murmure.videoFile !== "") {
                 mediaHTML = `<video controls src="${murmure.videoFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></video>`;
+                
+                // Le bouton magique pour télécharger la vidéo
+                let downloadText = currentLang === 'fr' ? "Télécharger la vidéo" : "Download video";
+                downloadBtnHTML = `<a href="${murmure.videoFile}" download class="zen-btn" style="font-size: 0.8rem; opacity: 0.7; text-decoration: none;">📥 ${downloadText}</a>`;
             } 
             else {
                 if (murmure.imageFile && murmure.imageFile !== "") {
@@ -394,7 +399,7 @@
                 }
             }
 
-            let shareText = currentLang === 'fr' ? "Partager cette graine" : "Share this seed";
+            let shareText = currentLang === 'fr' ? "Partager le texte" : "Share text";
 
             const murmureHTML = `
                 <div class="murmure-item">
@@ -402,15 +407,17 @@
                     ${mediaHTML}
                     <div id="texte-murmure-${index}">${murmure.text}</div>
                     
-                    <button class="zen-btn" style="margin: 20px auto 0 auto; font-size: 0.8rem; opacity: 0.7;" onclick="partagerMurmure(${index})">
-                        ✨ ${shareText}
-                    </button>
+                    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 25px;">
+                        <button class="zen-btn" style="font-size: 0.8rem; opacity: 0.7; margin: 0;" onclick="partagerMurmure(${index})">
+                            ✨ ${shareText}
+                        </button>
+                        ${downloadBtnHTML}
+                    </div>
                 </div>
             `;
             container.innerHTML += murmureHTML;
         });
     }
-
     function partagerMurmure(index) {
         const murmure = MURMURES_DATABASE[currentLang][index];
         const titre = murmure.title;
@@ -639,3 +646,4 @@
 
 </body>
 </html>
+

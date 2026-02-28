@@ -1,7 +1,7 @@
 :root {
     --bg-overlay: rgba(26, 28, 35, 0.75); 
     --text-color: #e4e4e4;
-    --accent-color: #d4af37; /* Or */
+    --accent-color: #d4af37; /* Or pour correspondre au logo */
     --title-blue: #5b8cba; /* Bleu doux pour les titres */
     --btn-blue: #2c5282; /* Bleu profond pour le bouton interroger */
     --box-bg: rgba(255, 255, 255, 0.05);
@@ -53,30 +53,31 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     margin-bottom: 20px;
 }
 
 /* Sous-titre CHEMIN AYP (Couleur Or, Majuscules, Police Yatra One) */
 .site-subtitle {
-    font-family: 'Yatra One', cursive; 
+    font-family: 'Yatra One', system-ui, cursive; 
     font-size: 1.8rem;
     font-weight: 400;
     color: var(--accent-color);
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    margin: 0; /* Annule la marge par défaut pour l'alignement */
+    margin: 0; 
 }
 
+/* Logo AYP agrandi */
 .header-signature {
-    height: 45px;
+    height: 65px; /* Plus grand que le texte */
     filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
 }
 
 /* Titres principaux des leçons (Plus grands, Bleus, Très Gras) */
 h2 {
     font-size: 2.4rem;
-    font-weight: 700; /* Gras */
+    font-weight: 700 !important; 
     margin-bottom: 25px;
     color: var(--title-blue) !important;
     border-bottom: 1px solid var(--title-blue);
@@ -86,7 +87,7 @@ h2 {
 /* Sous-titres dans les leçons (Plus petits, Dorés, Gras) */
 h3 {
     font-size: 1.6rem;
-    font-weight: 700; /* Gras */
+    font-weight: 700 !important; 
     color: var(--accent-color) !important;
     margin-top: 30px;
     margin-bottom: 15px;
@@ -140,7 +141,7 @@ nav {
 nav button {
     border: none;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     font-style: italic;
     border-radius: 0;
@@ -186,7 +187,7 @@ main {
     flex-grow: 1;
     margin-bottom: 20px;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-style: italic;
     white-space: pre-wrap;
     min-height: 150px;
@@ -212,7 +213,7 @@ input[type="text"]:focus {
     border-color: var(--accent-color);
 }
 
-/* Bouton Spécifique Interroger (Bleu) */
+/* Bouton Spécifique Interroger (Bleu et Gras) */
 #sage-btn {
     background-color: var(--btn-blue) !important;
     color: white !important;

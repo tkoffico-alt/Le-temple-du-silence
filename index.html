@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Temple du Silence</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lora:ital,wght@0,400;1,400&family=Yatra+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Lora:ital,wght@0,400;0,600;1,400&family=Yatra+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <h1>Le Temple du Silence</h1>
-        <p class="site-subtitle">Chemin AYP</p>
+        <div class="subtitle-container">
+            <p class="site-subtitle">CHEMIN AYP</p>
+            <img src="signature-ayp.png" alt="Signature Lignée" class="header-signature">
+        </div>
+        
         <div class="controls">
-            <button id="lang-fr" class="active" onclick="switchLang('fr')">Français</button>
-            <button id="lang-en" onclick="switchLang('en')">English</button>
+            <button id="lang-toggle" onclick="toggleLang()">English</button>
             <button id="theme-toggle" onclick="toggleTheme()">Clarté</button>
         </div>
+        
         <nav>
             <button id="nav-sage" class="active" onclick="showSection('sage')">
                 <span class="fr">Le Sage</span>
@@ -104,26 +108,42 @@
     const PARABOLE_DATA = {
         fr: {
             title: "Le Gardien du Silence",
-            text: "<p style='font-style:italic; opacity:0.7; text-align:center;'>La Parabole sera bientôt révélée.</p>"
+            text: "<p>Il était une fois, dans une vallée oubliée par le tumulte du monde, un Gardien qui veillait sur une source intarissable. Ce n'était pas une source d'eau, mais une source de silence. Ceux qui s'y abreuvaient ne gagnaient ni pouvoirs extraordinaires ni réponses magiques, ils trouvaient simplement l'apaisement de leur propre esprit.</p><p>Le Gardien ne parlait jamais le premier. Il attendait que le voyageur pose sa question, non pas pour lui dicter une vérité, mais pour lui renvoyer la sagesse qui sommeillait déjà en lui.</p>"
         },
         en: {
             title: "The Guardian of Silence",
-            text: "<p style='font-style:italic; opacity:0.7; text-align:center;'>The Parable will be revealed soon.</p>"
+            text: "<p>Once upon a time, in a valley forgotten by the tumult of the world, a Guardian watched over an inexhaustible spring. It was not a spring of water, but a spring of silence. Those who drank from it gained neither extraordinary powers nor magical answers; they simply found the pacification of their own minds.</p><p>The Guardian never spoke first. He waited for the traveler to ask their question, not to dictate a truth, but to reflect the wisdom that already slumbered within them.</p>"
         }
     };
 
+    // Fonction Bouton Unique de Langue
+    function toggleLang() {
+        if (currentLang === 'fr') {
+            switchLang('en');
+            document.getElementById('lang-toggle').innerText = 'Français';
+        } else {
+            switchLang('fr');
+            document.getElementById('lang-toggle').innerText = 'English';
+        }
+    }
+
     function switchLang(lang) {
         currentLang = lang;
-        
-        document.getElementById('lang-fr').classList.remove('active');
-        document.getElementById('lang-en').classList.remove('active');
-        document.getElementById(`lang-${lang}`).classList.add('active');
 
         document.querySelectorAll('.fr').forEach(el => el.style.display = lang === 'fr' ? 'inline' : 'none');
         document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? 'inline' : 'none');
 
         const inputPlaceholder = lang === 'fr' ? "Posez votre question à l'Univers..." : "Ask your question to the Universe...";
         document.getElementById('sage-input').placeholder = inputPlaceholder;
+
+        // Mise à jour du bouton thème selon la langue
+        const themeBtn = document.getElementById('theme-toggle');
+        const isLight = document.body.classList.contains('light-mode');
+        if (lang === 'fr') {
+            themeBtn.innerText = isLight ? 'Obscurité' : 'Clarté';
+        } else {
+            themeBtn.innerText = isLight ? 'Darkness' : 'Light';
+        }
 
         renderEnseignements();
         renderMurmures();
@@ -229,6 +249,7 @@
 
     function renderParabole() {
         document.getElementById("parabole-title").innerText = PARABOLE_DATA[currentLang].title;
+        // On injecte le texte de la parabole + la signature
         document.getElementById("parabole-text").innerHTML = PARABOLE_DATA[currentLang].text + getSignatureHTML();
     }
 
@@ -346,7 +367,7 @@
             topic = "felicite";
         } else if (q.includes("témoin") || q.includes("temoin") || q.includes("indifférence") || q.includes("indifference") || q.includes("vide") || q.includes("déconnecté") || q.includes("spectateur") || q.includes("mort") || q.includes("émotion") || q.includes("emotion")) {
             topic = "temoin";
-        } else if (q.includes("intellect") || q.includes("comprendre") || q.includes("analyser") || q.includes("raison") || q.includes("qui suis-je") || q.includes("jnana")) {
+        } else if (q.includes("intellect") || q.includes("comprendre") || q.includes("analyser") || q.includes("raison") || q.includes("qui suis-je") || q.includes("jnana") || q.includes("mental") || q.includes("pensée")) {
             topic = "intellect";
         } else if (q.includes("nauli") || q.includes("ventre") || q.includes("abdomen") || q.includes("barattage") || q.includes("diaphragme") || q.includes("intestin") || q.includes("abdominaux")) {
             topic = "nauli";

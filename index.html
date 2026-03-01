@@ -193,11 +193,15 @@
         }
     }
 
+    // Le Compteur repart à 0 proprement
     function initVisitorCounter() {
-        let count = localStorage.getItem('templeVisitorCount');
-        if (!count) { count = 1408; } 
-        else { count = parseInt(count) + Math.floor(Math.random() * 3) + 1; }
-        localStorage.setItem('templeVisitorCount', count);
+        let count = localStorage.getItem('templeVisitorCount_v2');
+        if (!count) { 
+            count = 0; 
+        } else { 
+            count = parseInt(count) + 1; 
+        }
+        localStorage.setItem('templeVisitorCount_v2', count);
         document.getElementById('visitor-count').innerText = count;
     }
 
@@ -433,9 +437,9 @@
             }, 100);
         }
 
-        let topic = "soi_atman"; 
+        // --- MOTS-CLÉS DE ROUTAGE ---
+        let topic = "universel"; // Par défaut, la nouvelle catégorie Universelle
 
-        // DÉTECTION DES MOTS-CLÉS (ROUTAGE AVANCÉ)
         if (q.includes("suicide") || q.includes("panique") || q.includes("dépression") || q.includes("douleur") || q.includes("médecin") || q.includes("malade") || q.includes("hôpital") || q.includes("panic") || q.includes("pain")) {
             topic = "ethique_securite";
         }
@@ -467,9 +471,9 @@
             topic = "routine_base";
         }
 
-        // SÉCURITÉ ANTI-CRASH
-        if (!sageBrain[currentLang][topic]) {
-             topic = "soi_atman";
+        // Sécurité supplémentaire au cas où
+        if (!sageBrain[currentLang] || !sageBrain[currentLang][topic]) {
+            topic = "universel";
         }
 
         const data = sageBrain[currentLang][topic];
@@ -496,13 +500,12 @@
             prefix = introArray[Math.floor(Math.random() * introArray.length)];
         }
 
-        let signature = currentLang === 'fr' ? "<br><br>🪷 <i>Le Temple du Silence</i>" : "<br><br>🪷 <i>The Temple of Silence</i>";
+        // --- LA VRAIE IMAGE EN SIGNATURE ---
+        let signature = `<br><br><div style="text-align: right;"><img src="signature-ayp.png" alt="Signature" style="height: 40px; opacity: 0.9; filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));"></div>`;
 
         let finalResponse = `« ${prefix}${randomCore}<br><br>${randomScience}<br><br>${randomPacing} »${signature}`;
 
-        // Remplacement de \n par <br> dans le texte s'il y en a
-        finalResponse = finalResponse.replace(/\n/g, "<br>");
-
+        // Permet d'afficher correctement les sauts de ligne
         typeWriter(finalResponse, 0, logEl, () => {
             isTyping = false;
             if (audioResonance) {
@@ -518,9 +521,9 @@
         });
     }
 
+    // Le script de la machine à écrire qui laisse passer les images et balises HTML
     function typeWriter(text, i, el, callback) {
         if (i < text.length) {
-            // Gérer les balises HTML comme <br> ou <i>
             if (text.charAt(i) === '<') {
                 let tag = "";
                 while (text.charAt(i) !== '>' && i < text.length) {

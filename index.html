@@ -193,15 +193,12 @@
         }
     }
 
-    // Le Compteur repart à 0 proprement
     function initVisitorCounter() {
-        let count = localStorage.getItem('templeVisitorCount_v2');
-        if (!count) { 
-            count = 0; 
-        } else { 
-            count = parseInt(count) + 1; 
-        }
-        localStorage.setItem('templeVisitorCount_v2', count);
+        // Le compteur est réinitialisé à 0 avec une nouvelle clé locale
+        let count = localStorage.getItem('templeVisitorCount_v3');
+        if (!count) { count = 0; } 
+        else { count = parseInt(count) + 1; }
+        localStorage.setItem('templeVisitorCount_v3', count);
         document.getElementById('visitor-count').innerText = count;
     }
 
@@ -437,43 +434,38 @@
             }, 100);
         }
 
-        // --- MOTS-CLÉS DE ROUTAGE ---
-        let topic = "universel"; // Par défaut, la nouvelle catégorie Universelle
+        let topic = "universel"; // Par défaut
 
-        if (q.includes("suicide") || q.includes("panique") || q.includes("dépression") || q.includes("douleur") || q.includes("médecin") || q.includes("malade") || q.includes("hôpital") || q.includes("panic") || q.includes("pain")) {
+        // --- DICTIONNAIRE ÉLARGI DE MOTS-CLÉS ---
+        if (q.includes("suicide") || q.includes("panique") || q.includes("dépression") || q.includes("douleur") || q.includes("médecin") || q.includes("malade") || q.includes("hôpital") || q.includes("mort") || q.includes("mourir") || q.includes("grave")) {
             topic = "ethique_securite";
         }
-        else if (q.includes("insomnie") || q.includes("dors mal") || q.includes("agité") || q.includes("nerveux") || q.includes("pression") || q.includes("surcharge") || q.includes("trop") || q.includes("ancrage") || q.includes("grounding") || q.includes("fatigue") || q.includes("insomnia")) {
+        else if (q.includes("insomnie") || q.includes("dors mal") || q.includes("agité") || q.includes("nerveux") || q.includes("pression") || q.includes("surcharge") || q.includes("trop") || q.includes("ancrage") || q.includes("grounding") || q.includes("fatigue") || q.includes("épuisé") || q.includes("fou") || q.includes("craquer") || q.includes("bizarre")) {
             topic = "surcharge_ancrage";
         }
-        else if (q.includes("corps") || q.includes("tension") || q.includes("respiration") || q.includes("souffle") || q.includes("sensation") || q.includes("stress") || q.includes("nuque") || q.includes("ventre") || q.includes("breath") || q.includes("body")) {
+        else if (q.includes("corps") || q.includes("tension") || q.includes("respiration") || q.includes("souffle") || q.includes("sensation") || q.includes("stress") || q.includes("nuque") || q.includes("ventre") || q.includes("physique") || q.includes("mal") || q.includes("ressens") || q.includes("cœur") || q.includes("coeur") || q.includes("tête") || q.includes("tete")) {
             topic = "interoception";
         }
-        else if (q.includes("touché") || q.includes("brisé") || q.includes("critique") || q.includes("échec") || q.includes("déception") || q.includes("choc") || q.includes("triste") || q.includes("colère") || q.includes("peur") || q.includes("courage") || q.includes("resilience")) {
+        else if (q.includes("touché") || q.includes("brisé") || q.includes("critique") || q.includes("échec") || q.includes("déception") || q.includes("choc") || q.includes("triste") || q.includes("colère") || q.includes("peur") || q.includes("courage") || q.includes("resilience") || q.includes("perdu") || q.includes("pleurer") || q.includes("souffrance") || q.includes("malheureux") || q.includes("dur") || q.includes("difficile") || q.includes("abandonner")) {
             topic = "resilience";
         }
-        else if (q.includes("action") || q.includes("choix") || q.includes("résultat") || q.includes("attente") || q.includes("détachement") || q.includes("lâcher") || q.includes("karma") || q.includes("travail")) {
+        else if (q.includes("action") || q.includes("choix") || q.includes("résultat") || q.includes("attente") || q.includes("détachement") || q.includes("lâcher") || q.includes("karma") || q.includes("travail") || q.includes("pourquoi") || q.includes("sens") || q.includes("but") || q.includes("vouloir") || q.includes("désir") || q.includes("ego") || q.includes("égo")) {
             topic = "detachement";
-            if (q.includes("karma") || q.includes("juste") || q.includes("décision")) topic = "karma_action";
+            if (q.includes("karma") || q.includes("juste") || q.includes("décision") || q.includes("choisir")) topic = "karma_action";
         }
-        else if (q.includes("motivation") || q.includes("élan") || q.includes("fuite") || q.includes("illusion") || q.includes("maya") || q.includes("plaisir") || q.includes("conditionnement") || q.includes("habitude")) {
+        else if (q.includes("motivation") || q.includes("élan") || q.includes("fuite") || q.includes("illusion") || q.includes("maya") || q.includes("plaisir") || q.includes("conditionnement") || q.includes("habitude") || q.includes("faire") || q.includes("agir") || q.includes("projet") || q.includes("bloqué")) {
             topic = "elan_vital";
-            if (q.includes("illusion") || q.includes("maya") || q.includes("habitude")) topic = "maya_illusion";
+            if (q.includes("illusion") || q.includes("maya") || q.includes("habitude") || q.includes("faux")) topic = "maya_illusion";
         }
-        else if (q.includes("unité") || q.includes("séparation") || q.includes("absolu") || q.includes("brahman") || q.includes("dieu") || q.includes("tout") || q.includes("non-dualité") || q.includes("advaita")) {
+        else if (q.includes("unité") || q.includes("séparation") || q.includes("absolu") || q.includes("brahman") || q.includes("dieu") || q.includes("tout") || q.includes("non-dualité") || q.includes("advaita") || q.includes("monde") || q.includes("univers") || q.includes("vérité") || q.includes("vrai") || q.includes("vie")) {
             topic = "brahman_absolu";
             if (q.includes("séparation") || q.includes("advaita") || q.includes("non-dualité")) topic = "advaita_non_dualite";
         }
-        else if (q.includes("méditation") || q.includes("silence") || q.includes("présence") || q.includes("samadhi") || q.includes("absorption") || q.includes("calme") || q.includes("esprit") || q.includes("meditation")) {
+        else if (q.includes("méditation") || q.includes("silence") || q.includes("présence") || q.includes("samadhi") || q.includes("absorption") || q.includes("calme") || q.includes("esprit") || q.includes("paix") || q.includes("tranquille") || q.includes("penser") || q.includes("pensées") || q.includes("mental") || q.includes("cerveau")) {
             topic = "meditation_presence";
         }
-        else if (q.includes("routine") || q.includes("pratique") || q.includes("commencer") || q.includes("temps") || q.includes("régulier")) {
+        else if (q.includes("routine") || q.includes("pratique") || q.includes("commencer") || q.includes("temps") || q.includes("régulier") || q.includes("comment") || q.includes("aide") || q.includes("conseil") || q.includes("débutant") || q.includes("apprendre") || q.includes("jour")) {
             topic = "routine_base";
-        }
-
-        // Sécurité supplémentaire au cas où
-        if (!sageBrain[currentLang] || !sageBrain[currentLang][topic]) {
-            topic = "universel";
         }
 
         const data = sageBrain[currentLang][topic];
@@ -500,12 +492,11 @@
             prefix = introArray[Math.floor(Math.random() * introArray.length)];
         }
 
-        // --- LA VRAIE IMAGE EN SIGNATURE ---
+        // --- SIGNATURE AVEC IMAGE ---
         let signature = `<br><br><div style="text-align: right;"><img src="signature-ayp.png" alt="Signature" style="height: 40px; opacity: 0.9; filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));"></div>`;
 
         let finalResponse = `« ${prefix}${randomCore}<br><br>${randomScience}<br><br>${randomPacing} »${signature}`;
 
-        // Permet d'afficher correctement les sauts de ligne
         typeWriter(finalResponse, 0, logEl, () => {
             isTyping = false;
             if (audioResonance) {
@@ -521,9 +512,9 @@
         });
     }
 
-    // Le script de la machine à écrire qui laisse passer les images et balises HTML
     function typeWriter(text, i, el, callback) {
         if (i < text.length) {
+            // Permet au texte de s'afficher sans casser les balises HTML de l'image
             if (text.charAt(i) === '<') {
                 let tag = "";
                 while (text.charAt(i) !== '>' && i < text.length) {

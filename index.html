@@ -304,7 +304,7 @@
     }
 
     // --- CORRECTION : Rendu des Murmures ---
-    function renderMurmures() {
+  function renderMurmures() {
         const container = document.getElementById("murmures-list-container");
         container.innerHTML = ""; 
         const currentMurmures = MURMURES_DATABASE[currentLang];
@@ -319,12 +319,19 @@
             let downloadBtnHTML = ""; 
             
             if (murmure.videoFile && murmure.videoFile !== "") {
-                mediaHTML = `<video controls src="${murmure.videoFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></video>`;
+                // S'il y a une vidéo
+                mediaHTML += `<video controls src="${murmure.videoFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></video>`;
                 let downloadText = currentLang === 'fr' ? "Télécharger" : "Download";
-                downloadBtnHTML = `<a href="${murmure.videoFile}" download class="zen-btn" style="font-size: 0.8rem; padding: 5px 10px;">📥 ${downloadText}</a>`;
+                downloadBtnHTML = `<a href="${murmure.videoFile}" download class="zen-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;">📥 ${downloadText}</a>`;
             } 
-            else if (murmure.audioFile && murmure.audioFile !== "") {
-                mediaHTML = `<audio controls src="${murmure.audioFile}" style="width: 100%; margin-bottom: 15px;"></audio>`;
+            else {
+                // S'il n'y a pas de vidéo, on affiche l'image ET l'audio s'ils existent
+                if (murmure.imageFile && murmure.imageFile !== "") {
+                    mediaHTML += `<img src="${murmure.imageFile}" alt="Illustration" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">`;
+                }
+                if (murmure.audioFile && murmure.audioFile !== "") {
+                    mediaHTML += `<audio controls src="${murmure.audioFile}" style="width: 100%; margin-bottom: 15px;"></audio>`;
+                }
             }
 
             let textShareLabel = currentLang === 'fr' ? 'Partager texte' : 'Share text';
@@ -334,7 +341,6 @@
             if (murmure.videoFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerVideoMurmure(${index})">🎥 ${mediaShareLabel}</button>`;
             else if (murmure.audioFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerAudioMurmure(${index})">🎵 ${mediaShareLabel}</button>`;
 
-            // On injecte murmure.text correctement ici
             const murmureHTML = `
                 <details class="teaching-accordion">
                     <summary class="accordion-title">${index + 1}. ${murmure.title}</summary>
@@ -527,3 +533,4 @@
     </script>
 </body>
 </html>
+

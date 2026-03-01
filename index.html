@@ -169,379 +169,371 @@
 
     <script src="contenu.js"></script>
 
-<script>
-        let currentLang = 'fr';
-        let isTyping = false;
-        let isFirstQuestion = true;
+    <script>
+    let currentLang = 'fr';
+    let isTyping = false;
+    let isFirstQuestion = true; 
 
-        const UI_TEXTS = {
-            fr: {
-                sagePlaceholder: "Confiez votre doute au silence...",
-                shareText: "Partager texte",
-                shareMedia: "Partager média",
-                downloadBtn: "Télécharger",
-                comingSoon: "Bientôt disponible."
-            },
-            en: {
-                sagePlaceholder: "Confide your doubt to the silence...",
-                shareText: "Share text",
-                shareMedia: "Share media",
-                downloadBtn: "Download",
-                comingSoon: "Coming soon."
+    function createDustParticles() {
+        const container = document.getElementById('particles-container');
+        const particleCount = 40;
+        container.innerHTML = ''; 
+        
+        for(let i = 0; i < particleCount; i++) {
+            let particle = document.createElement('div');
+            particle.className = 'dust-particle';
+            let size = Math.random() * 3 + 1; 
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDuration = (Math.random() * 15 + 10) + 's'; 
+            particle.style.animationDelay = (Math.random() * 10) + 's';
+            container.appendChild(particle);
+        }
+    }
+
+    function initVisitorCounter() {
+        let count = localStorage.getItem('templeVisitorCount');
+        if (!count) { count = 1408; } 
+        else { count = parseInt(count) + Math.floor(Math.random() * 3) + 1; }
+        localStorage.setItem('templeVisitorCount', count);
+        document.getElementById('visitor-count').innerText = count;
+    }
+
+    function toggleParaboleAudio() {
+        const player = document.getElementById('audio-parabole-player');
+        const icon = document.getElementById('parabole-icon');
+        const targetSrc = currentLang === 'fr' ? 'parabole_fr.mp3' : 'parabole_en.mp3';
+        
+        if (!player.src.endsWith(targetSrc)) { player.src = targetSrc; }
+
+        if (player.paused) {
+            player.play().catch(e => {
+                alert(currentLang === 'fr' ? "Le fichier audio (parabole_fr.mp3 ou parabole_en.mp3) est introuvable sur le serveur." : "The audio file is missing on the server.");
+            });
+            icon.innerText = "⏸️";
+        } else {
+            player.pause();
+            icon.innerText = "🎧";
+        }
+        player.onended = () => { icon.innerText = "🎧"; };
+    }
+
+    function toggleLang() {
+        if (currentLang === 'fr') {
+            switchLang('en');
+            document.getElementById('lang-toggle').innerText = 'Français';
+        } else {
+            switchLang('fr');
+            document.getElementById('lang-toggle').innerText = 'English';
+        }
+    }
+
+    function switchLang(lang) {
+        currentLang = lang;
+        document.querySelectorAll('.fr').forEach(el => el.style.display = lang === 'fr' ? 'inline' : 'none');
+        document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? 'inline' : 'none');
+
+        const inputPlaceholder = lang === 'fr' ? "Posez votre question à l'Univers..." : "Ask your question to the Universe...";
+        document.getElementById('sage-input').placeholder = inputPlaceholder;
+
+        const themeBtn = document.getElementById('theme-toggle');
+        const isLight = document.body.classList.contains('light-mode');
+        themeBtn.innerText = lang === 'fr' ? (isLight ? 'Obscurité' : 'Clarté') : (isLight ? 'Darkness' : 'Light');
+
+        const player = document.getElementById('audio-parabole-player');
+        if (!player.paused) {
+            player.pause();
+            document.getElementById('parabole-icon').innerText = "🎧";
+        }
+
+        // Réinitialise le chat si on change de langue
+        const logEl = document.getElementById("chat-log");
+        if(logEl) logEl.innerHTML = "";
+        isFirstQuestion = true; 
+
+        renderEnseignements();
+        renderMurmures();
+        renderParabole();
+    }
+
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-toggle');
+        body.classList.toggle('light-mode');
+        btn.innerText = currentLang === 'fr' ? (body.classList.contains('light-mode') ? 'Obscurité' : 'Clarté') : (body.classList.contains('light-mode') ? 'Darkness' : 'Light');
+    }
+
+    function showSection(sectionId) {
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.getElementById(sectionId).classList.add('active');
+        document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+        document.getElementById(`nav-${sectionId}`).classList.add('active');
+    }
+
+    function getSignatureHTML() {
+        const signatureText = currentLang === 'fr' ? "Œuvre Originale & Propriété de la Lignée" : "Original Work & Lineage Property";
+        return `
+            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 40px; opacity: 0.85;">
+                <span style="font-style: italic; font-size: 1rem; color: var(--accent-color); margin-right: 15px;">${signatureText}</span>
+                <img src="signature-ayp.png" alt="Signature Lignée" style="height: 45px; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));">
+            </div>
+        `;
+    }
+
+    function renderEnseignements() {
+        const container = document.getElementById("enseignements-container");
+        container.innerHTML = ""; 
+        const currentData = TEACHINGS_DATABASE[currentLang];
+
+        if (currentData.length === 0) {
+            container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${currentLang === 'fr' ? "Bientôt disponible." : "Coming soon."}</p>`;
+            return;
+        }
+
+        currentData.forEach((item) => {
+            const article = document.createElement("details");
+            article.className = "teaching-accordion";
+            article.innerHTML = `
+                <summary class="accordion-title">${item.title}</summary>
+                <div class="accordion-content parchment-text">
+                    ${item.body}
+                    ${getSignatureHTML()}
+                </div>
+            `;
+            container.appendChild(article);
+        });
+    }
+
+    function renderMurmures() {
+        const container = document.getElementById("murmures-list-container");
+        container.innerHTML = ""; 
+        const currentMurmures = MURMURES_DATABASE[currentLang];
+
+        if (currentMurmures.length === 0) {
+            container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${currentLang === 'fr' ? "Bientôt disponible." : "Coming soon."}</p>`;
+            return;
+        }
+
+        currentMurmures.forEach((murmure, index) => {
+            let mediaHTML = "";
+            let downloadBtnHTML = ""; 
+            
+            if (murmure.videoFile && murmure.videoFile !== "") {
+                mediaHTML += `<video controls src="${murmure.videoFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></video>`;
+                let downloadText = currentLang === 'fr' ? "Télécharger" : "Download";
+                downloadBtnHTML = `<a href="${murmure.videoFile}" download class="zen-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;">📥 ${downloadText}</a>`;
+            } 
+            else {
+                if (murmure.imageFile && murmure.imageFile !== "") {
+                    mediaHTML += `<img src="${murmure.imageFile}" alt="Illustration" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">`;
+                }
+                if (murmure.audioFile && murmure.audioFile !== "") {
+                    mediaHTML += `<audio controls src="${murmure.audioFile}" style="width: 100%; margin-bottom: 15px;"></audio>`;
+                }
             }
-        };
 
-        // --- FONCTIONS DE NAVIGATION ET THÈME (Restaurées) ---
-
-        function showSection(sectionId) {
-            // Cacher toutes les sections
-            document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-            // Désactiver tous les boutons du menu
-            document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+            let textShareLabel = currentLang === 'fr' ? 'Partager texte' : 'Share text';
+            let mediaShareLabel = currentLang === 'fr' ? 'Partager média' : 'Share media';
             
-            // Activer la bonne section et le bon bouton
-            document.getElementById(sectionId).classList.add('active');
-            const navBtn = document.getElementById('nav-' + sectionId);
-            if (navBtn) navBtn.classList.add('active');
+            let shareMediaBtn = "";
+            if (murmure.videoFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerVideoMurmure(${index})">🎥 ${mediaShareLabel}</button>`;
+            else if (murmure.audioFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerAudioMurmure(${index})">🎵 ${mediaShareLabel}</button>`;
+
+            const murmureHTML = `
+                <details class="teaching-accordion">
+                    <summary class="accordion-title">${index + 1}. ${murmure.title}</summary>
+                    <div class="accordion-content">
+                        ${mediaHTML}
+                        <div id="texte-murmure-${index}" class="parchment-text">${murmure.text}</div>
+                        ${getSignatureHTML()} 
+                        <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 25px;">
+                            <button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerMurmure(${index})">✨ ${textShareLabel}</button>
+                            ${shareMediaBtn}
+                            ${downloadBtnHTML}
+                        </div>
+                    </div>
+                </details>
+            `;
+            container.innerHTML += murmureHTML;
+        });
+    }
+
+    function renderParabole() {
+        document.getElementById("parabole-title").innerText = PARABOLE_DATA[currentLang].title;
+        document.getElementById("parabole-text").innerHTML = PARABOLE_DATA[currentLang].text + getSignatureHTML();
+    }
+
+    function partagerMurmure(index) {
+        const murmure = MURMURES_DATABASE[currentLang][index];
+        let tempDiv = document.createElement("div");
+        tempDiv.innerHTML = document.getElementById(`texte-murmure-${index}`).innerHTML.replace(/<br>/g, '\n');
+        const texteBrut = tempDiv.innerText || tempDiv.textContent;
+        const titre = murmure.title;
+        const lienSite = window.location.href.split('#')[0]; 
+        const texteAPartager = `✨ ${titre} ✨\n\n"${texteBrut}"\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
+
+        if (navigator.share) {
+            navigator.share({ title: titre, text: texteAPartager }).catch(console.error);
+        } else {
+            navigator.clipboard.writeText(texteAPartager).then(() => {
+                alert(currentLang === 'fr' ? "Texte copié dans le presse-papiers !" : "Text copied to clipboard!");
+            });
         }
+    }
 
-        function toggleLang() {
-            const newLang = currentLang === 'fr' ? 'en' : 'fr';
-            const langBtn = document.getElementById('lang-toggle');
-            // Le bouton affiche la langue vers laquelle on PEUT aller
-            langBtn.innerText = newLang === 'fr' ? 'English' : 'Français';
-            switchLanguage(newLang);
+    function partagerVideoMurmure(index) {
+        const murmure = MURMURES_DATABASE[currentLang][index];
+        const lienSite = window.location.href.split('#')[0]; 
+        const lienVideo = lienSite + murmure.videoFile;
+        const texteAPartager = `🎥 ${murmure.title} ✨ Vidéo\n\nLien : ${lienVideo}\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
+        
+        if (navigator.share) {
+            navigator.share({ title: murmure.title, text: texteAPartager }).catch(console.error);
+        } else {
+            navigator.clipboard.writeText(texteAPartager).then(() => {
+                alert(currentLang === 'fr' ? "Lien vidéo copié !" : "Video link copied!");
+            });
         }
-
-        function toggleTheme() {
-            document.body.classList.toggle('light-theme');
-            const themeBtn = document.getElementById('theme-toggle');
-            if (document.body.classList.contains('light-theme')) {
-                themeBtn.innerText = currentLang === 'fr' ? 'Obscurité' : 'Darkness';
-            } else {
-                themeBtn.innerText = currentLang === 'fr' ? 'Clarté' : 'Light';
-            }
+    }
+    
+    function partagerAudioMurmure(index) {
+        const murmure = MURMURES_DATABASE[currentLang][index];
+        const lienSite = window.location.href.split('#')[0]; 
+        const lienAudio = lienSite + murmure.audioFile;
+        const texteAPartager = `🎵 ${murmure.title} ✨ Audio\n\nLien : ${lienAudio}\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
+        
+        if (navigator.share) {
+            navigator.share({ title: murmure.title, text: texteAPartager }).catch(console.error);
+        } else {
+            navigator.clipboard.writeText(texteAPartager).then(() => {
+                alert(currentLang === 'fr' ? "Lien audio copié !" : "Audio link copied!");
+            });
         }
+    }
 
-        function toggleParaboleAudio() {
-            const player = document.getElementById("audio-parabole-player");
-            const icon = document.getElementById("parabole-icon");
-            if (player.paused) {
-                player.play();
-                icon.innerText = "⏸️";
-            } else {
-                player.pause();
-                icon.innerText = "🎧";
-            }
-        }
+    // --- LE NOUVEAU SAGE INTELLIGENT ---
+    function askSage() {
+        if (isTyping) return;
+        const inputEl = document.getElementById("sage-input");
+        const logEl = document.getElementById("chat-log");
+        const audioResonance = document.getElementById("sage-resonance");
+        
+        let q = inputEl.value.trim().toLowerCase();
+        if (!q) return;
 
-        // --- GESTION DE LA LANGUE ET DE L'INTERFACE ---
+        isTyping = true;
+        inputEl.value = "";
+        logEl.innerHTML = "";
 
-        function switchLanguage(lang) {
-            currentLang = lang;
-            
-            updateUILanguage();
-            
-            if (typeof MURMURES_DATABASE !== 'undefined') renderMurmures();
-            if (typeof TEACHINGS_DATABASE !== 'undefined') renderTeachings();
-            
-            // Réinitialise le chat si on change de langue
-            const logEl = document.getElementById("chat-log");
-            if(logEl) logEl.innerHTML = "";
-            isFirstQuestion = true; 
-        }
-
-        function updateUILanguage() {
-            const texts = UI_TEXTS[currentLang];
-            
-            // Mettre à jour le placeholder du sage
-            const sageInput = document.getElementById('sage-input');
-            if (sageInput) sageInput.placeholder = texts.sagePlaceholder;
-
-            // Mettre à jour le bouton de thème
-            const themeBtn = document.getElementById('theme-toggle');
-            if (themeBtn) {
-                if (document.body.classList.contains('light-theme')) {
-                    themeBtn.innerText = currentLang === 'fr' ? 'Obscurité' : 'Darkness';
+        if (audioResonance) {
+            audioResonance.volume = 0;
+            audioResonance.play();
+            let fadeAudioIn = setInterval(() => {
+                if (audioResonance.volume < 0.15) {
+                    audioResonance.volume += 0.01;
                 } else {
-                    themeBtn.innerText = currentLang === 'fr' ? 'Clarté' : 'Light';
+                    clearInterval(fadeAudioIn);
                 }
-            }
-
-            // Bascule de l'affichage global via tes classes .fr et .en
-            document.querySelectorAll('.fr').forEach(el => el.style.display = currentLang === 'fr' ? '' : 'none');
-            document.querySelectorAll('.en').forEach(el => el.style.display = currentLang === 'en' ? '' : 'none');
+            }, 100);
         }
 
-        function getSignatureHTML() {
-            return `<div class="signature" style="text-align: right; margin-top: 20px; font-style: italic; opacity: 0.8;">🪷 ${currentLang === 'fr' ? 'Le Temple du Silence' : 'The Temple of Silence'}</div>`;
+        let topic = "soi_atman"; // Sujet par défaut
+
+        // DÉTECTION DES MOTS-CLÉS (ROUTAGE AVANCÉ)
+        if (q.includes("suicide") || q.includes("panique") || q.includes("dépression") || q.includes("douleur") || q.includes("médecin") || q.includes("malade") || q.includes("hôpital") || q.includes("panic") || q.includes("pain")) {
+            topic = "ethique_securite";
+        }
+        else if (q.includes("insomnie") || q.includes("dors mal") || q.includes("agité") || q.includes("nerveux") || q.includes("pression") || q.includes("surcharge") || q.includes("trop") || q.includes("ancrage") || q.includes("grounding") || q.includes("fatigue") || q.includes("insomnia")) {
+            topic = "surcharge_ancrage";
+        }
+        else if (q.includes("corps") || q.includes("tension") || q.includes("respiration") || q.includes("souffle") || q.includes("sensation") || q.includes("stress") || q.includes("nuque") || q.includes("ventre") || q.includes("breath") || q.includes("body")) {
+            topic = "interoception";
+        }
+        else if (q.includes("touché") || q.includes("brisé") || q.includes("critique") || q.includes("échec") || q.includes("déception") || q.includes("choc") || q.includes("triste") || q.includes("colère") || q.includes("peur") || q.includes("courage") || q.includes("resilience")) {
+            topic = "resilience";
+        }
+        else if (q.includes("action") || q.includes("choix") || q.includes("résultat") || q.includes("attente") || q.includes("détachement") || q.includes("lâcher") || q.includes("karma") || q.includes("travail")) {
+            topic = "detachement";
+            if (q.includes("karma") || q.includes("juste") || q.includes("décision")) topic = "karma_action";
+        }
+        else if (q.includes("motivation") || q.includes("élan") || q.includes("fuite") || q.includes("illusion") || q.includes("maya") || q.includes("plaisir") || q.includes("conditionnement") || q.includes("habitude")) {
+            topic = "elan_vital";
+            if (q.includes("illusion") || q.includes("maya") || q.includes("habitude")) topic = "maya_illusion";
+        }
+        else if (q.includes("unité") || q.includes("séparation") || q.includes("absolu") || q.includes("brahman") || q.includes("dieu") || q.includes("tout") || q.includes("non-dualité") || q.includes("advaita")) {
+            topic = "brahman_absolu";
+            if (q.includes("séparation") || q.includes("advaita") || q.includes("non-dualité")) topic = "advaita_non_dualite";
+        }
+        else if (q.includes("méditation") || q.includes("silence") || q.includes("présence") || q.includes("samadhi") || q.includes("absorption") || q.includes("calme") || q.includes("esprit") || q.includes("meditation")) {
+            topic = "meditation_presence";
+        }
+        else if (q.includes("routine") || q.includes("pratique") || q.includes("commencer") || q.includes("temps") || q.includes("régulier")) {
+            topic = "routine_base";
         }
 
-        // --- RENDU DES CONTENUS ---
+        const data = sageBrain[currentLang][topic];
+        let randomCore = data.core[Math.floor(Math.random() * data.core.length)];
+        let randomScience = data.science[Math.floor(Math.random() * data.science.length)];
+        let randomPacing = data.pacing[Math.floor(Math.random() * data.pacing.length)];
 
-        function renderMurmures() {
-            const container = document.getElementById("murmures-list-container");
-            if (!container) return;
-            container.innerHTML = ""; 
-            const currentMurmures = MURMURES_DATABASE[currentLang];
-
-            if (!currentMurmures || currentMurmures.length === 0) {
-                container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${UI_TEXTS[currentLang].comingSoon}</p>`;
-                return;
-            }
-
-            currentMurmures.forEach((murmure, index) => {
-                let mediaHTML = "";
-                let downloadBtnHTML = ""; 
-                
-                if (murmure.videoFile && murmure.videoFile !== "") {
-                    mediaHTML += `<video controls src="${murmure.videoFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></video>`;
-                    downloadBtnHTML = `<a href="${murmure.videoFile}" download class="zen-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;">📥 ${UI_TEXTS[currentLang].downloadBtn}</a>`;
-                } 
-                else {
-                    if (murmure.imageFile && murmure.imageFile !== "") {
-                        mediaHTML += `<img src="${murmure.imageFile}" alt="Illustration" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">`;
-                    }
-                    if (murmure.audioFile && murmure.audioFile !== "") {
-                        mediaHTML += `<audio controls src="${murmure.audioFile}" style="width: 100%; margin-bottom: 15px;"></audio>`;
-                    }
-                }
-
-                let shareMediaBtn = "";
-                if (murmure.videoFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerVideoMurmure(${index})">🎥 ${UI_TEXTS[currentLang].shareMedia}</button>`;
-                else if (murmure.audioFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerAudioMurmure(${index})">🎵 ${UI_TEXTS[currentLang].shareMedia}</button>`;
-
-                const murmureHTML = `
-                    <details class="teaching-accordion">
-                        <summary class="accordion-title">${index + 1}. ${murmure.title}</summary>
-                        <div class="accordion-content">
-                            ${mediaHTML}
-                            <div id="texte-murmure-${index}" class="parchment-text">${murmure.text}</div>
-                            ${getSignatureHTML()} 
-                            <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 25px;">
-                                <button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerMurmure(${index})">✨ ${UI_TEXTS[currentLang].shareText}</button>
-                                ${shareMediaBtn}
-                                ${downloadBtnHTML}
-                            </div>
-                        </div>
-                    </details>
-                `;
-                container.innerHTML += murmureHTML;
-            });
+        let prefix = "";
+        if (isFirstQuestion) {
+            prefix = currentLang === 'fr' ? "Bienvenue. Ce lieu invite à l'expérience directe.\n\n" : "Welcome. This place invites direct experience.\n\n";
+            isFirstQuestion = false; 
+        } else {
+            let introsFr = [
+                "Ce que tu pointes touche à quelque chose de très courant...\n\n",
+                "Derrière cette question, il y a souvent une sensation précise...\n\n",
+                "Ta question parle moins d'un concept que d'une expérience vécue...\n\n"
+            ];
+            let introsEn = [
+                "What you point out touches on something very common...\n\n",
+                "Behind this question, there is often a specific sensation...\n\n",
+                "Your question speaks less of a concept than of a lived experience...\n\n"
+            ];
+            let introArray = currentLang === 'fr' ? introsFr : introsEn;
+            prefix = introArray[Math.floor(Math.random() * introArray.length)];
         }
 
-        function renderTeachings() {
-            const container = document.getElementById("teachings-list-container");
-            if (!container) return;
-            container.innerHTML = "";
-            const currentTeachings = TEACHINGS_DATABASE[currentLang];
+        // Signature du texte du Sage
+        let signature = currentLang === 'fr' ? "\n\n🪷 <i>Le Temple du Silence</i>" : "\n\n🪷 <i>The Temple of Silence</i>";
 
-            if (!currentTeachings || currentTeachings.length === 0) {
-                container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${UI_TEXTS[currentLang].comingSoon}</p>`;
-                return;
-            }
+        let finalResponse = `« ${prefix}${randomCore}\n\n${randomScience}\n\n${randomPacing} »${signature}`;
 
-            currentTeachings.forEach((teaching, index) => {
-                const html = `
-                    <details class="teaching-accordion">
-                        <summary class="accordion-title">${index + 1}. ${teaching.title}</summary>
-                        <div class="accordion-content">
-                            <div id="texte-teaching-${index}" class="parchment-text">${teaching.content}</div>
-                            ${getSignatureHTML()}
-                            <div style="display: flex; justify-content: center; margin-top: 20px;">
-                                <button class="zen-btn sharing-btn" style="font-size: 0.8rem; padding: 5px 15px;" onclick="partagerTeaching(${index})">✨ ${UI_TEXTS[currentLang].shareText}</button>
-                            </div>
-                        </div>
-                    </details>
-                `;
-                container.innerHTML += html;
-            });
-        }
-
-        // --- PARTAGE ---
-
-        function partagerTexte(titre, texte) {
-            const texteNettoye = texte.replace(/<br\s*[\/]?>/gi, "\n").replace(/<\/?[^>]+(>|$)/g, "");
-            const signature = currentLang === 'fr' ? "🪷 Le Temple du Silence" : "🪷 The Temple of Silence";
-            const texteComplet = `${titre}\n\n${texteNettoye}\n\n${signature}\n👉 ${window.location.href}`;
-
-            if (navigator.share) {
-                navigator.share({
-                    title: titre,
-                    text: texteComplet
-                }).catch(console.error);
-            } else {
-                navigator.clipboard.writeText(texteComplet).then(() => {
-                    alert(currentLang === 'fr' ? "Texte copié dans le presse-papiers !" : "Text copied to clipboard!");
-                }).catch(err => {
-                    console.error('Erreur de copie', err);
-                });
-            }
-        }
-
-        function partagerMurmure(index) {
-            const murmure = MURMURES_DATABASE[currentLang][index];
-            partagerTexte(murmure.title, murmure.text);
-        }
-
-        function partagerTeaching(index) {
-            const teaching = TEACHINGS_DATABASE[currentLang][index];
-            partagerTexte(teaching.title, teaching.content);
-        }
-
-        function partagerVideoMurmure(index) {
-            const murmure = MURMURES_DATABASE[currentLang][index];
-            const urlAbsolue = new URL(murmure.videoFile, window.location.href).href;
-            const texte = currentLang === 'fr' ? 
-                `Découvrez cette vidéo : ${murmure.title}\n🪷 Le Temple du Silence\n👉 ${urlAbsolue}` : 
-                `Discover this video: ${murmure.title}\n🪷 The Temple of Silence\n👉 ${urlAbsolue}`;
-
-            if (navigator.share) {
-                navigator.share({ title: murmure.title, text: texte }).catch(console.error);
-            } else {
-                navigator.clipboard.writeText(texte).then(() => {
-                    alert(currentLang === 'fr' ? "Lien de la vidéo copié !" : "Video link copied!");
-                });
-            }
-        }
-
-        function partagerAudioMurmure(index) {
-            const murmure = MURMURES_DATABASE[currentLang][index];
-            const urlAbsolue = new URL(murmure.audioFile, window.location.href).href;
-            const texte = currentLang === 'fr' ? 
-                `Écoutez ceci : ${murmure.title}\n🪷 Le Temple du Silence\n👉 ${urlAbsolue}` : 
-                `Listen to this: ${murmure.title}\n🪷 The Temple of Silence\n👉 ${urlAbsolue}`;
-
-            if (navigator.share) {
-                navigator.share({ title: murmure.title, text: texte }).catch(console.error);
-            } else {
-                navigator.clipboard.writeText(texte).then(() => {
-                    alert(currentLang === 'fr' ? "Lien de l'audio copié !" : "Audio link copied!");
-                });
-            }
-        }
-
-        // --- L'INTELLIGENCE DU SAGE ---
-
-        function typeWriter(text, i, element, callback) {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i) === '\n' ? '<br>' : text.charAt(i);
-                setTimeout(() => typeWriter(text, i + 1, element, callback), 20); 
-            } else if (callback) {
-                callback();
-            }
-        }
-
-        function askSage() {
-            if (isTyping) return;
-            const inputEl = document.getElementById("sage-input");
-            const logEl = document.getElementById("chat-log");
-            const audioResonance = document.getElementById("sage-resonance");
-            
-            let q = inputEl.value.trim().toLowerCase();
-            if (!q) return;
-
-            isTyping = true;
-            inputEl.value = "";
-            logEl.innerHTML = "";
-
+        typeWriter(finalResponse, 0, logEl, () => {
+            isTyping = false;
             if (audioResonance) {
-                audioResonance.volume = 0;
-                audioResonance.play();
-                let fadeAudioIn = setInterval(() => {
-                    if (audioResonance.volume < 0.15) {
-                        audioResonance.volume += 0.01;
+                let fadeAudioOut = setInterval(() => {
+                    if (audioResonance.volume > 0.01) {
+                        audioResonance.volume -= 0.01;
                     } else {
-                        clearInterval(fadeAudioIn);
+                        audioResonance.pause();
+                        clearInterval(fadeAudioOut);
                     }
                 }, 100);
             }
+        });
+    }
 
-            let topic = "soi_atman"; 
-
-            // DÉTECTION DES MOTS-CLÉS
-            if (q.includes("suicide") || q.includes("panique") || q.includes("dépression") || q.includes("douleur") || q.includes("médecin") || q.includes("malade") || q.includes("hôpital") || q.includes("panic") || q.includes("pain")) {
-                topic = "ethique_securite";
-            }
-            else if (q.includes("insomnie") || q.includes("dors mal") || q.includes("agité") || q.includes("nerveux") || q.includes("pression") || q.includes("surcharge") || q.includes("trop") || q.includes("ancrage") || q.includes("grounding") || q.includes("fatigue") || q.includes("insomnia")) {
-                topic = "surcharge_ancrage";
-            }
-            else if (q.includes("corps") || q.includes("tension") || q.includes("respiration") || q.includes("souffle") || q.includes("sensation") || q.includes("stress") || q.includes("nuque") || q.includes("ventre") || q.includes("breath") || q.includes("body")) {
-                topic = "interoception";
-            }
-            else if (q.includes("touché") || q.includes("brisé") || q.includes("critique") || q.includes("échec") || q.includes("déception") || q.includes("choc") || q.includes("triste") || q.includes("colère") || q.includes("peur") || q.includes("courage") || q.includes("resilience")) {
-                topic = "resilience";
-            }
-            else if (q.includes("action") || q.includes("choix") || q.includes("résultat") || q.includes("attente") || q.includes("détachement") || q.includes("lâcher") || q.includes("karma") || q.includes("travail")) {
-                topic = "detachement";
-                if (q.includes("karma") || q.includes("juste") || q.includes("décision")) topic = "karma_action";
-            }
-            else if (q.includes("motivation") || q.includes("élan") || q.includes("fuite") || q.includes("illusion") || q.includes("maya") || q.includes("plaisir") || q.includes("conditionnement") || q.includes("habitude")) {
-                topic = "elan_vital";
-                if (q.includes("illusion") || q.includes("maya") || q.includes("habitude")) topic = "maya_illusion";
-            }
-            else if (q.includes("unité") || q.includes("séparation") || q.includes("absolu") || q.includes("brahman") || q.includes("dieu") || q.includes("tout") || q.includes("non-dualité") || q.includes("advaita")) {
-                topic = "brahman_absolu";
-                if (q.includes("séparation") || q.includes("advaita") || q.includes("non-dualité")) topic = "advaita_non_dualite";
-            }
-            else if (q.includes("méditation") || q.includes("silence") || q.includes("présence") || q.includes("samadhi") || q.includes("absorption") || q.includes("calme") || q.includes("esprit") || q.includes("meditation")) {
-                topic = "meditation_presence";
-            }
-            else if (q.includes("routine") || q.includes("pratique") || q.includes("commencer") || q.includes("temps") || q.includes("régulier")) {
-                topic = "routine_base";
-            }
-
-            const data = sageBrain[currentLang][topic];
-            let randomCore = data.core[Math.floor(Math.random() * data.core.length)];
-            let randomScience = data.science[Math.floor(Math.random() * data.science.length)];
-            let randomPacing = data.pacing[Math.floor(Math.random() * data.pacing.length)];
-
-            // GESTION DE L'ACCUEIL
-            let prefix = "";
-            if (isFirstQuestion) {
-                prefix = currentLang === 'fr' ? "Bienvenue. Ce lieu invite à l'expérience directe.\n\n" : "Welcome. This place invites direct experience.\n\n";
-                isFirstQuestion = false; 
-            } else {
-                let introsFr = [
-                    "Ce que tu pointes touche à quelque chose de très courant...\n\n",
-                    "Derrière cette question, il y a souvent une sensation précise...\n\n",
-                    "Ta question parle moins d'un concept que d'une expérience vécue...\n\n"
-                ];
-                let introsEn = [
-                    "What you point out touches on something very common...\n\n",
-                    "Behind this question, there is often a specific sensation...\n\n",
-                    "Your question speaks less of a concept than of a lived experience...\n\n"
-                ];
-                let introArray = currentLang === 'fr' ? introsFr : introsEn;
-                prefix = introArray[Math.floor(Math.random() * introArray.length)];
-            }
-
-            // SIGNATURE
-            let signature = currentLang === 'fr' ? "\n\n🪷 <i>Le Temple du Silence</i>" : "\n\n🪷 <i>The Temple of Silence</i>";
-
-            let finalResponse = `« ${prefix}${randomCore}\n\n${randomScience}\n\n${randomPacing} »${signature}`;
-
-            typeWriter(finalResponse, 0, logEl, () => {
-                isTyping = false;
-                if (audioResonance) {
-                    let fadeAudioOut = setInterval(() => {
-                        if (audioResonance.volume > 0.01) {
-                            audioResonance.volume -= 0.01;
-                        } else {
-                            audioResonance.pause();
-                            clearInterval(fadeAudioOut);
-                        }
-                    }, 100);
-                }
-            });
+    // Effet machine à écrire modifié pour supporter les sauts de ligne (\n)
+    function typeWriter(text, i, el, callback) {
+        if (i < text.length) {
+            el.innerHTML += text.charAt(i) === '\n' ? '<br>' : text.charAt(i);
+            setTimeout(() => typeWriter(text, i + 1, el, callback), 25);
+        } else {
+            if(callback) callback();
         }
+    }
 
-        window.onload = () => {
-            switchLanguage('fr');
-        };
+    window.onload = () => {
+        createDustParticles();
+        initVisitorCounter();
+        renderEnseignements();
+        renderMurmures();
+        renderParabole();
+    };
     </script>
 </body>
 </html>
-
-
-

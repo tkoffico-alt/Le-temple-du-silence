@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Temple du Silence</title>
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Lora:ital,wght@0,400;0,600;1,400&family=Yatra+One&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -42,6 +42,10 @@
                 <span class="fr">La Bibliothèque</span>
                 <span class="en" style="display:none;">The Library</span>
             </button>
+            <button id="nav-contact" onclick="showSection('contact')">
+                <span class="fr">Contact</span>
+                <span class="en" style="display:none;">Contact</span>
+            </button>
         </nav>
     </header>
 
@@ -69,9 +73,9 @@
             <audio id="sage-resonance" src="resonance.mp3" loop></audio>
         </section>
 
-      <section id="enseignements" class="section">
+        <section id="enseignements" class="section">
             <div class="ayp-gateway parchment-text" style="text-align: center; margin-bottom: 40px; border: 2px solid var(--accent-color); padding: 25px; border-radius: 8px; background: rgba(20, 20, 20, 0.6);">
-                <h2 style="margin-top: 0;">
+                <h2 style="margin-top: 0; border:none;">
                     <span class="fr">Aller plus loin : Les Enseignements Originels</span>
                     <span class="en" style="display:none;">Go Deeper: The Original Teachings</span>
                 </h2>
@@ -79,7 +83,7 @@
                     <span class="fr">Ce temple est une porte d'entrée. Pour étudier la science spirituelle complète, la mécanique du système nerveux et accéder à l'intégralité des leçons fondatrices, nous vous invitons à visiter la source.</span>
                     <span class="en" style="display:none;">This temple is a gateway. To study the complete spiritual science, the mechanics of the nervous system, and access all foundational lessons, we invite you to visit the source.</span>
                 </p>
-                <a href="https://www.aypsite.org/" target="_blank" class="zen-btn" style="display: inline-block; text-decoration: none; margin-top: 15px;">
+                <a href="https://www.aypsite.org/" target="_blank" class="zen-btn" style="display: inline-block; text-decoration: none; margin-top: 15px; padding: 10px 20px; font-weight:bold;">
                     <span class="fr">Visiter AYP (Yogani)</span>
                     <span class="en" style="display:none;">Visit AYP (Yogani)</span>
                 </a>
@@ -88,11 +92,15 @@
             <div id="enseignements-container"></div>
         </section>
 
+        <section id="murmures" class="section">
+            <div id="murmures-list-container"></div>
+        </section>
+
         <section id="parabole" class="section">
             <div class="teaching-article parchment-text">
-                <h2 id="parabole-title" style="text-align:center;"></h2>
+                <h2 id="parabole-title" style="text-align:center; border:none; font-size:2rem; margin-bottom:10px;"></h2>
                 
-                <div class="audio-parabole-container">
+                <div class="audio-parabole-container" style="margin-bottom: 30px;">
                     <audio id="audio-parabole-player" preload="none"></audio>
                     <button id="btn-play-parabole" class="zen-btn" style="font-size: 1.1rem; padding: 10px 20px;" onclick="toggleParaboleAudio()">
                         <span id="parabole-icon">🎧</span> 
@@ -104,9 +112,10 @@
                 <div id="parabole-text"></div>
             </div>
         </section>
+
         <section id="bibliotheque" class="section">
             <div class="teaching-article parchment-text" style="text-align: center;">
-                <h2 style="margin-bottom: 30px;">
+                <h2 style="margin-bottom: 30px; border:none;">
                     <span class="fr">Les Manuscrits à Venir</span>
                     <span class="en" style="display:none;">Upcoming Manuscripts</span>
                 </h2>
@@ -124,15 +133,32 @@
                 </div>
             </div>
         </section>
+
+        <section id="contact" class="section">
+            <div class="teaching-article parchment-text" style="text-align: center; max-width: 600px; margin: 0 auto; background: var(--box-bg); padding: 40px; border-radius: 8px;">
+                <h2 style="border:none; color: var(--accent-color);">
+                    <span class="fr">Écrire au Gardien</span>
+                    <span class="en" style="display:none;">Write to the Guardian</span>
+                </h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">
+                    <span class="fr">Si votre pratique nécessite un éclaircissement ou si vous souhaitez partager une réflexion issue du silence, vous pouvez contacter le gardien du temple.</span>
+                    <span class="en" style="display:none;">If your practice requires clarification or if you wish to share a reflection born from silence, you may contact the temple's guardian.</span>
+                </p>
+                
+                <a href="mailto:constanttanoh@yahoo.com?subject=Un%20murmure%20depuis%20le%20Temple" class="zen-btn" style="text-decoration: none; font-size: 1.2rem; padding: 15px 30px; font-weight: bold; background: var(--btn-blue); color: white; border: none;">
+                    <span class="fr">✉️ Envoyer un message</span>
+                    <span class="en" style="display:none;">✉️ Send a message</span>
+                </a>
+                <p style="margin-top: 30px; font-style: italic; opacity: 0.7; font-size: 0.9rem;">
+                    <span class="fr">Note : Le temps de réponse s'accorde au rythme de la méditation.</span>
+                    <span class="en" style="display:none;">Note: Response time aligns with the rhythm of meditation.</span>
+                </p>
+            </div>
+        </section>
     </main>
 
-   <footer style="display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 30px 10px;">
+    <footer style="display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 30px 10px;">
         <p>© 2026 Le Temple du Silence. <span class="en" style="display:none;">All rights reserved.</span><span class="fr">Tous droits réservés.</span></p>
-        
-        <a href="mailto:constanttanoh@yahoo.com?subject=Un%20murmure%20depuis%20le%20Temple" class="zen-btn" style="text-decoration: none; font-size: 0.9rem; opacity: 0.8;">
-            <span class="fr">✉️ Écrire au Gardien du Temple</span>
-            <span class="en" style="display:none;">✉️ Write to the Guardian</span>
-        </a>
 
         <div style="font-family: 'Cormorant Garamond', serif; color: var(--accent-color); font-size: 1.1rem; opacity: 0.8; letter-spacing: 1px;">
             <span class="fr">Âmes ayant traversé le pont : </span>
@@ -148,68 +174,52 @@
     let isTyping = false;
     let isFirstQuestion = true; 
 
-    // --- LOGIQUE DE LA POUSSIÈRE MAGIQUE ---
     function createDustParticles() {
         const container = document.getElementById('particles-container');
-        const particleCount = 40; // Nombre de particules
-        container.innerHTML = ''; // Nettoyer
+        const particleCount = 40;
+        container.innerHTML = ''; 
         
         for(let i = 0; i < particleCount; i++) {
             let particle = document.createElement('div');
             particle.className = 'dust-particle';
-            
-            // Propriétés aléatoires
-            let size = Math.random() * 3 + 1; // Taille entre 1 et 4px
+            let size = Math.random() * 3 + 1; 
             particle.style.width = size + 'px';
             particle.style.height = size + 'px';
             particle.style.left = Math.random() * 100 + '%';
             particle.style.top = Math.random() * 100 + '%';
-            particle.style.animationDuration = (Math.random() * 15 + 10) + 's'; // Vitesse lente
+            particle.style.animationDuration = (Math.random() * 15 + 10) + 's'; 
             particle.style.animationDelay = (Math.random() * 10) + 's';
-            
             container.appendChild(particle);
         }
     }
 
-    // --- LOGIQUE DU COMPTEUR ---
     function initVisitorCounter() {
-        // Base fictive qui s'incrémente doucement pour simuler la vie du temple
         let count = localStorage.getItem('templeVisitorCount');
-        if (!count) {
-            count = 1408; // Chiffre de départ symbolique
-        } else {
-            // Petite incrémentation aléatoire pour donner l'illusion d'un flux
-            count = parseInt(count) + Math.floor(Math.random() * 3) + 1;
-        }
+        if (!count) { count = 1408; } 
+        else { count = parseInt(count) + Math.floor(Math.random() * 3) + 1; }
         localStorage.setItem('templeVisitorCount', count);
         document.getElementById('visitor-count').innerText = count;
     }
 
-    // --- LOGIQUE AUDIO DE LA PARABOLE ---
     function toggleParaboleAudio() {
         const player = document.getElementById('audio-parabole-player');
         const icon = document.getElementById('parabole-icon');
-        
-        // Assigner le bon fichier selon la langue si ce n'est pas déjà fait
         const targetSrc = currentLang === 'fr' ? 'parabole_fr.mp3' : 'parabole_en.mp3';
-        if (!player.src.endsWith(targetSrc)) {
-            player.src = targetSrc;
-        }
+        
+        if (!player.src.endsWith(targetSrc)) { player.src = targetSrc; }
 
         if (player.paused) {
             player.play().catch(e => {
-                alert(currentLang === 'fr' ? "Le fichier audio n'a pas encore été déposé sur le serveur." : "The audio file has not yet been uploaded to the server.");
+                alert(currentLang === 'fr' ? "Le fichier audio (parabole_fr.mp3 ou parabole_en.mp3) est introuvable sur le serveur." : "The audio file is missing on the server.");
             });
             icon.innerText = "⏸️";
         } else {
             player.pause();
             icon.innerText = "🎧";
         }
-        
         player.onended = () => { icon.innerText = "🎧"; };
     }
 
-    // Fonction Bouton Unique de Langue
     function toggleLang() {
         if (currentLang === 'fr') {
             switchLang('en');
@@ -222,7 +232,6 @@
 
     function switchLang(lang) {
         currentLang = lang;
-
         document.querySelectorAll('.fr').forEach(el => el.style.display = lang === 'fr' ? 'inline' : 'none');
         document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? 'inline' : 'none');
 
@@ -231,13 +240,8 @@
 
         const themeBtn = document.getElementById('theme-toggle');
         const isLight = document.body.classList.contains('light-mode');
-        if (lang === 'fr') {
-            themeBtn.innerText = isLight ? 'Obscurité' : 'Clarté';
-        } else {
-            themeBtn.innerText = isLight ? 'Darkness' : 'Light';
-        }
+        themeBtn.innerText = lang === 'fr' ? (isLight ? 'Obscurité' : 'Clarté') : (isLight ? 'Darkness' : 'Light');
 
-        // Arrêter l'audio s'il tourne pendant le changement de langue
         const player = document.getElementById('audio-parabole-player');
         if (!player.paused) {
             player.pause();
@@ -253,18 +257,12 @@
         const body = document.body;
         const btn = document.getElementById('theme-toggle');
         body.classList.toggle('light-mode');
-        
-        if (body.classList.contains('light-mode')) {
-            btn.innerText = currentLang === 'fr' ? 'Obscurité' : 'Darkness';
-        } else {
-            btn.innerText = currentLang === 'fr' ? 'Clarté' : 'Light';
-        }
+        btn.innerText = currentLang === 'fr' ? (body.classList.contains('light-mode') ? 'Obscurité' : 'Clarté') : (body.classList.contains('light-mode') ? 'Darkness' : 'Light');
     }
 
     function showSection(sectionId) {
         document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
         document.getElementById(sectionId).classList.add('active');
-
         document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
         document.getElementById(`nav-${sectionId}`).classList.add('active');
     }
@@ -279,7 +277,8 @@
         `;
     }
 
-   function renderEnseignements() {
+    // --- CORRECTION : Rendu des Enseignements ---
+    function renderEnseignements() {
         const container = document.getElementById("enseignements-container");
         container.innerHTML = ""; 
         const currentData = TEACHINGS_DATABASE[currentLang];
@@ -292,6 +291,7 @@
         currentData.forEach((item) => {
             const article = document.createElement("details");
             article.className = "teaching-accordion";
+            // On injecte le Body correctement ici
             article.innerHTML = `
                 <summary class="accordion-title">${item.title}</summary>
                 <div class="accordion-content parchment-text">
@@ -303,6 +303,7 @@
         });
     }
 
+    // --- CORRECTION : Rendu des Murmures ---
     function renderMurmures() {
         const container = document.getElementById("murmures-list-container");
         container.innerHTML = ""; 
@@ -330,9 +331,10 @@
             let mediaShareLabel = currentLang === 'fr' ? 'Partager média' : 'Share media';
             
             let shareMediaBtn = "";
-            if (murmure.videoFile) shareMediaBtn = `<button class="zen-btn sharing-btn" onclick="partagerVideoMurmure(${index})">🎥 ${mediaShareLabel}</button>`;
-            else if (murmure.audioFile) shareMediaBtn = `<button class="zen-btn sharing-btn" onclick="partagerAudioMurmure(${index})">🎵 ${mediaShareLabel}</button>`;
+            if (murmure.videoFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerVideoMurmure(${index})">🎥 ${mediaShareLabel}</button>`;
+            else if (murmure.audioFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerAudioMurmure(${index})">🎵 ${mediaShareLabel}</button>`;
 
+            // On injecte murmure.text correctement ici
             const murmureHTML = `
                 <details class="teaching-accordion">
                     <summary class="accordion-title">${index + 1}. ${murmure.title}</summary>
@@ -341,7 +343,7 @@
                         <div id="texte-murmure-${index}" class="parchment-text">${murmure.text}</div>
                         ${getSignatureHTML()} 
                         <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 25px;">
-                            <button class="zen-btn sharing-btn" onclick="partagerMurmure(${index})">✨ ${textShareLabel}</button>
+                            <button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerMurmure(${index})">✨ ${textShareLabel}</button>
                             ${shareMediaBtn}
                             ${downloadBtnHTML}
                         </div>
@@ -351,8 +353,11 @@
             container.innerHTML += murmureHTML;
         });
     }
+
+    // --- CORRECTION : Rendu de la Parabole ---
     function renderParabole() {
         document.getElementById("parabole-title").innerText = PARABOLE_DATA[currentLang].title;
+        // On injecte le texte de la parabole ici
         document.getElementById("parabole-text").innerHTML = PARABOLE_DATA[currentLang].text + getSignatureHTML();
     }
 
@@ -428,104 +433,54 @@
         }, 100);
 
         let topic = "universel"; 
-        
-        if (q.includes("kundalini") || q.includes("energie") || q.includes("energy") || q.includes("shakti") || q.includes("shiva")) {
-            topic = "kundalini";
-        } else if (q.includes("samyama cosmique") || q.includes("yoga nidra") || q.includes("nidra") || q.includes("cosmique") || q.includes("coucher") || q.includes("dormir") || q.includes("savasana") || q.includes("cosmic")) {
-            topic = "samyama_cosmique";
-        } else if (q.includes("samyama") || q.includes("sutra") || q.includes("intention")) {
-            topic = "samyama";
-        } else if (q.includes("respiration") || q.includes("spinale") || q.includes("pranayama") || q.includes("souffle") || q.includes("breathing") || q.includes("prana") || q.includes("colonne") || q.includes("ujjayi") || q.includes("hyperventilation") || q.includes("oxygène") || q.includes("oxygen")) {
-            topic = "respiration";
-        } else if (q.includes("kechari") || q.includes("mudra") || q.includes("langue") || q.includes("frein") || q.includes("hymen") || q.includes("tongue") || q.includes("entailles") || q.includes("snips")) {
-            topic = "kechari";
-        } else if (q.includes("meditation") || q.includes("silence") || q.includes("soi") || q.includes("turiya") || q.includes("sommeil") || q.includes("rêve") || q.includes("reve") || q.includes("écran") || q.includes("ecran") || q.includes("espace entre") || q.includes("sleep") || q.includes("dream") || q.includes("screen")) {
-            topic = "meditation"; 
-        } else if (q.includes("prière") || q.includes("priere") || q.includes("prier") || q.includes("guérir") || q.includes("malade") || q.includes("prayer") || q.includes("heal")) {
-            topic = "priere";
-        } else if (q.includes("drogue") || q.includes("hallucinogène") || q.includes("lsd") || q.includes("champignon") || q.includes("alcool") || q.includes("tabac") || q.includes("drugs") || q.includes("marijuana")) {
-            topic = "drogues";
-        } else if (q.includes("souffrance") || q.includes("douleur") || q.includes("peine") || q.includes("blessure") || q.includes("suffering") || q.includes("pain")) {
-            topic = "souffrance";
-        } else if (q.includes("recherche du soi") || q.includes("qui suis-je") || q.includes("jnana") || q.includes("advaita") || q.includes("neti") || q.includes("affirmation") || q.includes("sedona") || q.includes("lâcher-prise") || q.includes("lacher-prise") || q.includes("inquiry")) {
-            topic = "recherche_soi";
-        } else if (q.includes("étape") || q.includes("action") || q.includes("détachement") || q.includes("detachement") || q.includes("discrimination") || q.includes("karma yoga") || q.includes("servir") || q.includes("service") || q.includes("stage")) {
-            topic = "etapes_action";
-        } else if (q.includes("paradoxe") || q.includes("faire sans faire") || q.includes("ne rien faire") || q.includes("paradox")) {
-            topic = "paradoxe";
-        } else if (q.includes("yoga") || q.includes("éveil") || q.includes("eveil") || q.includes("pratique") || q.includes("awakening") || q.includes("practice")) {
-            topic = "yoga";
-        } else if (q.includes("dieu") || q.includes("religion") || q.includes("athée") || q.includes("athee") || q.includes("croyance") || q.includes("foi") || q.includes("god") || q.includes("belief")) {
-            topic = "croyance";
-        } else if (q.includes("ego") || q.includes("séparation") || q.includes("separation") || q.includes("illusion") || q.includes("corps") || q.includes("mental") || q.includes("body") || q.includes("mind")) {
-            topic = "illusion";
-        } else if (q.includes("chakra") || q.includes("centre") || q.includes("capot") || q.includes("moteur")) {
-            topic = "chakra";
-        } else if (q.includes("mantra") || q.includes("bougie") || q.includes("technique") || q.includes("objet") || q.includes("méthode") || q.includes("methode") || q.includes("candle") || q.includes("object") || q.includes("comment") || q.includes("krishnamurti") || q.includes("effort")) {
-            topic = "technique";
-        } else if (q.includes("illumination") || q.includes("but") || q.includes("destination") || q.includes("temps") || q.includes("enlightenment") || q.includes("goal") || q.includes("time") || q.includes("unité") || q.includes("unite") || q.includes("unity")) {
-            topic = "illumination";
-        } else if (q.includes("végétarien") || q.includes("vegetarien") || q.includes("régime") || q.includes("regime") || q.includes("alimentation") || q.includes("nourriture") || q.includes("manger") || q.includes("diet") || q.includes("food") || q.includes("viande")) {
-            topic = "alimentation";
-        } else if (q.includes("monde") || q.includes("problème") || q.includes("probleme") || q.includes("guerre") || q.includes("terrorisme") || q.includes("fuite") || q.includes("réalité") || q.includes("realite") || q.includes("world") || q.includes("reality") || q.includes("escape") || q.includes("pauvreté")) {
-            topic = "monde";
-        } else if (q.includes("sexe") || q.includes("sexuel") || q.includes("sexualité") || q.includes("sexualite") || q.includes("sex") || q.includes("abstinence")) {
-            topic = "sexualite";
-        } else if (q.includes("posture") || q.includes("siddhasana") || q.includes("assise") || q.includes("périnée") || q.includes("perinee") || q.includes("cheval") || q.includes("talon")) {
-            topic = "posture";
-        } else if (q.includes("symptôme") || q.includes("symptome") || q.includes("brûlure") || q.includes("brulure") || q.includes("folie") || q.includes("ancrage") || q.includes("ayurveda") || q.includes("déséquilibre") || q.includes("desequilibre") || q.includes("grounding") || q.includes("peur")) {
-            topic = "ancrage";
-        } else if (q.includes("pouvoir") || q.includes("miracle") || q.includes("siddhi") || q.includes("magie") || q.includes("voler") || q.includes("power") || q.includes("magic") || q.includes("télépathie") || q.includes("telepathie") || q.includes("hypnose")) {
-            topic = "siddhis";
-        } else if (q.includes("couronne") || q.includes("sahasrar") || q.includes("haut") || q.includes("tête") || q.includes("tete") || q.includes("crown") || q.includes("sommet") || q.includes("spontané") || q.includes("spontane")) {
-            topic = "sahasrar";
-        } else if (q.includes("vision") || q.includes("étoile") || q.includes("etoile") || q.includes("lumière") || q.includes("lumiere") || q.includes("tunnel") || q.includes("star") || q.includes("light") || q.includes("paysage") || q.includes("aura") || q.includes("clairvoyance")) {
-            topic = "vision";
-        } else if (q.includes("bhakti") || q.includes("impatience") || q.includes("dévotion") || q.includes("devotion") || q.includes("coeur") || q.includes("heart") || q.includes("nouvel âge") || q.includes("désir") || q.includes("desire")) {
-            topic = "bhakti";
-        } else if (q.includes("yoni") || q.includes("kumbhaka") || q.includes("rétention") || q.includes("retention") || q.includes("bandha") || q.includes("jalandhara") || q.includes("uddiyana")) {
-            topic = "yoni_mudra";
-        } else if (q.includes("brahmacharya") || q.includes("célibat") || q.includes("celibat") || q.includes("tantra") || q.includes("semence") || q.includes("créatrice")) {
-            topic = "brahmacharya";
-        } else if (q.includes("karma") || q.includes("destin") || q.includes("libre arbitre") || q.includes("choix") || q.includes("samskara") || q.includes("péché") || q.includes("peche") || q.includes("pardon") || q.includes("coupable") || q.includes("sin") || q.includes("guilt")) {
-            topic = "karma";
-        } else if (q.includes("félicité") || q.includes("felicite") || q.includes("extase") || q.includes("bliss") || q.includes("ecstasy") || q.includes("différence") || q.includes("plaisir")) {
-            topic = "felicite";
-        } else if (q.includes("témoin") || q.includes("temoin") || q.includes("indifférence") || q.includes("indifference") || q.includes("vide") || q.includes("déconnecté") || q.includes("spectateur") || q.includes("mort") || q.includes("émotion") || q.includes("emotion")) {
-            topic = "temoin";
-        } else if (q.includes("intellect") || q.includes("comprendre") || q.includes("analyser") || q.includes("raison") || q.includes("qui suis-je") || q.includes("jnana") || q.includes("mental") || q.includes("pensée")) {
-            topic = "intellect";
-        } else if (q.includes("nauli") || q.includes("ventre") || q.includes("abdomen") || q.includes("barattage") || q.includes("diaphragme") || q.includes("intestin") || q.includes("abdominaux")) {
-            topic = "nauli";
-        } else if (q.includes("navi") || q.includes("kriya") || q.includes("nombril") || q.includes("navel") || q.includes("bateau") || q.includes("milieu")) {
-            topic = "navi_kriya";
-        } else if (q.includes("pratyahara") || q.includes("sens") || q.includes("sons") || q.includes("son intérieur") || q.includes("om") || q.includes("aum") || q.includes("sensualité") || q.includes("empathie")) {
-            topic = "pratyahara";
-        } else if (q.includes("traduire") || q.includes("traduction") || q.includes("langue") || q.includes("i am") || q.includes("ayam") || q.includes("signification") || q.includes("meaning") || q.includes("translate")) {
-            topic = "mantra_traduction";
-        } else if (q.includes("nectar") || q.includes("sucré") || q.includes("sucre") || q.includes("amrita") || q.includes("soma") || q.includes("goût") || q.includes("gout") || q.includes("sweet") || q.includes("taste")) {
-            topic = "nectar";
-        } else if (q.includes("psychologie") || q.includes("psychanalyse") || q.includes("comprendre émotion") || q.includes("psychology") || q.includes("analysis")) {
-            topic = "psychologie";
-        } else if (q.includes("pompe") || q.includes("cervicale") || q.includes("menton") || q.includes("cou") || q.includes("chin pump") || q.includes("neck") || q.includes("dynamique")) {
-            topic = "pompe_cervicale";
-        } else if (q.includes("patanjali") || q.includes("huit") || q.includes("membres") || q.includes("yama") || q.includes("niyama") || q.includes("asana") || q.includes("huit branches") || q.includes("limbs")) {
-            topic = "huit_membres";
-        } else if (q.includes("bastrika") || q.includes("soufflet") || q.includes("halètement") || q.includes("haletement") || q.includes("chien") || q.includes("rapide") || q.includes("bellows") || q.includes("panting")) {
-            topic = "bastrika";
-        } else if (q.includes("sceptique") || q.includes("scepticisme") || q.includes("science") || q.includes("doute") || q.includes("croire") || q.includes("skeptic") || q.includes("doubt") || q.includes("believe")) {
-            topic = "scepticisme";
-        } else if (q.includes("troisième") || q.includes("troisieme") || q.includes("oeil") || q.includes("third eye") || q.includes("medulla") || q.includes("pinéale") || q.includes("pineal") || q.includes("pituitaire") || q.includes("pituitary")) {
-            topic = "troisieme_oeil";
-        } else if (q.includes("amour divin") || q.includes("compassion") || q.includes("karuna") || q.includes("divine love")) {
-            topic = "amour_divin";
-        } else if (q.includes("secret") || q.includes("caché") || q.includes("cache") || q.includes("divulguer") || q.includes("hidden")) {
-            topic = "secret";
-        } else if (q.includes("granthi") || q.includes("nœud") || q.includes("noeud") || q.includes("brahma") || q.includes("vishnu") || q.includes("rudra") || q.includes("knot")) {
-            topic = "granthis";
-        } else if (q.includes("histoire") || q.includes("occident") || q.includes("vivekananda") || q.includes("yogananda") || q.includes("maharishi") || q.includes("history") || q.includes("west")) {
-            topic = "histoire_yoga";
-        }
+        if (q.includes("kundalini") || q.includes("energie") || q.includes("energy") || q.includes("shakti") || q.includes("shiva")) { topic = "kundalini"; } 
+        else if (q.includes("samyama cosmique") || q.includes("yoga nidra") || q.includes("nidra") || q.includes("cosmique") || q.includes("coucher") || q.includes("dormir") || q.includes("savasana") || q.includes("cosmic")) { topic = "samyama_cosmique"; } 
+        else if (q.includes("samyama") || q.includes("sutra") || q.includes("intention")) { topic = "samyama"; } 
+        else if (q.includes("respiration") || q.includes("spinale") || q.includes("pranayama") || q.includes("souffle") || q.includes("breathing") || q.includes("prana") || q.includes("colonne") || q.includes("ujjayi") || q.includes("hyperventilation") || q.includes("oxygène") || q.includes("oxygen")) { topic = "respiration"; } 
+        else if (q.includes("kechari") || q.includes("mudra") || q.includes("langue") || q.includes("frein") || q.includes("hymen") || q.includes("tongue") || q.includes("entailles") || q.includes("snips")) { topic = "kechari"; } 
+        else if (q.includes("meditation") || q.includes("silence") || q.includes("soi") || q.includes("turiya") || q.includes("sommeil") || q.includes("rêve") || q.includes("reve") || q.includes("écran") || q.includes("ecran") || q.includes("espace entre") || q.includes("sleep") || q.includes("dream") || q.includes("screen")) { topic = "meditation"; } 
+        else if (q.includes("prière") || q.includes("priere") || q.includes("prier") || q.includes("guérir") || q.includes("malade") || q.includes("prayer") || q.includes("heal")) { topic = "priere"; } 
+        else if (q.includes("drogue") || q.includes("hallucinogène") || q.includes("lsd") || q.includes("champignon") || q.includes("alcool") || q.includes("tabac") || q.includes("drugs") || q.includes("marijuana")) { topic = "drogues"; } 
+        else if (q.includes("souffrance") || q.includes("douleur") || q.includes("peine") || q.includes("blessure") || q.includes("suffering") || q.includes("pain")) { topic = "souffrance"; } 
+        else if (q.includes("recherche du soi") || q.includes("qui suis-je") || q.includes("jnana") || q.includes("advaita") || q.includes("neti") || q.includes("affirmation") || q.includes("sedona") || q.includes("lâcher-prise") || q.includes("lacher-prise") || q.includes("inquiry")) { topic = "recherche_soi"; } 
+        else if (q.includes("étape") || q.includes("action") || q.includes("détachement") || q.includes("detachement") || q.includes("discrimination") || q.includes("karma yoga") || q.includes("servir") || q.includes("service") || q.includes("stage")) { topic = "etapes_action"; } 
+        else if (q.includes("paradoxe") || q.includes("faire sans faire") || q.includes("ne rien faire") || q.includes("paradox")) { topic = "paradoxe"; } 
+        else if (q.includes("yoga") || q.includes("éveil") || q.includes("eveil") || q.includes("pratique") || q.includes("awakening") || q.includes("practice")) { topic = "yoga"; } 
+        else if (q.includes("dieu") || q.includes("religion") || q.includes("athée") || q.includes("athee") || q.includes("croyance") || q.includes("foi") || q.includes("god") || q.includes("belief")) { topic = "croyance"; } 
+        else if (q.includes("ego") || q.includes("séparation") || q.includes("separation") || q.includes("illusion") || q.includes("corps") || q.includes("mental") || q.includes("body") || q.includes("mind")) { topic = "illusion"; } 
+        else if (q.includes("chakra") || q.includes("centre") || q.includes("capot") || q.includes("moteur")) { topic = "chakra"; } 
+        else if (q.includes("mantra") || q.includes("bougie") || q.includes("technique") || q.includes("objet") || q.includes("méthode") || q.includes("methode") || q.includes("candle") || q.includes("object") || q.includes("comment") || q.includes("krishnamurti") || q.includes("effort")) { topic = "technique"; } 
+        else if (q.includes("illumination") || q.includes("but") || q.includes("destination") || q.includes("temps") || q.includes("enlightenment") || q.includes("goal") || q.includes("time") || q.includes("unité") || q.includes("unite") || q.includes("unity")) { topic = "illumination"; } 
+        else if (q.includes("végétarien") || q.includes("vegetarien") || q.includes("régime") || q.includes("regime") || q.includes("alimentation") || q.includes("nourriture") || q.includes("manger") || q.includes("diet") || q.includes("food") || q.includes("viande")) { topic = "alimentation"; } 
+        else if (q.includes("monde") || q.includes("problème") || q.includes("probleme") || q.includes("guerre") || q.includes("terrorisme") || q.includes("fuite") || q.includes("réalité") || q.includes("realite") || q.includes("world") || q.includes("reality") || q.includes("escape") || q.includes("pauvreté")) { topic = "monde"; } 
+        else if (q.includes("sexe") || q.includes("sexuel") || q.includes("sexualité") || q.includes("sexualite") || q.includes("sex") || q.includes("abstinence")) { topic = "sexualite"; } 
+        else if (q.includes("posture") || q.includes("siddhasana") || q.includes("assise") || q.includes("périnée") || q.includes("perinee") || q.includes("cheval") || q.includes("talon")) { topic = "posture"; } 
+        else if (q.includes("symptôme") || q.includes("symptome") || q.includes("brûlure") || q.includes("brulure") || q.includes("folie") || q.includes("ancrage") || q.includes("ayurveda") || q.includes("déséquilibre") || q.includes("desequilibre") || q.includes("grounding") || q.includes("peur")) { topic = "ancrage"; } 
+        else if (q.includes("pouvoir") || q.includes("miracle") || q.includes("siddhi") || q.includes("magie") || q.includes("voler") || q.includes("power") || q.includes("magic") || q.includes("télépathie") || q.includes("telepathie") || q.includes("hypnose")) { topic = "siddhis"; } 
+        else if (q.includes("couronne") || q.includes("sahasrar") || q.includes("haut") || q.includes("tête") || q.includes("tete") || q.includes("crown") || q.includes("sommet") || q.includes("spontané") || q.includes("spontane")) { topic = "sahasrar"; } 
+        else if (q.includes("vision") || q.includes("étoile") || q.includes("etoile") || q.includes("lumière") || q.includes("lumiere") || q.includes("tunnel") || q.includes("star") || q.includes("light") || q.includes("paysage") || q.includes("aura") || q.includes("clairvoyance")) { topic = "vision"; } 
+        else if (q.includes("bhakti") || q.includes("impatience") || q.includes("dévotion") || q.includes("devotion") || q.includes("coeur") || q.includes("heart") || q.includes("nouvel âge") || q.includes("désir") || q.includes("desire")) { topic = "bhakti"; } 
+        else if (q.includes("yoni") || q.includes("kumbhaka") || q.includes("rétention") || q.includes("retention") || q.includes("bandha") || q.includes("jalandhara") || q.includes("uddiyana")) { topic = "yoni_mudra"; } 
+        else if (q.includes("brahmacharya") || q.includes("célibat") || q.includes("celibat") || q.includes("tantra") || q.includes("semence") || q.includes("créatrice")) { topic = "brahmacharya"; } 
+        else if (q.includes("karma") || q.includes("destin") || q.includes("libre arbitre") || q.includes("choix") || q.includes("samskara") || q.includes("péché") || q.includes("peche") || q.includes("pardon") || q.includes("coupable") || q.includes("sin") || q.includes("guilt")) { topic = "karma"; } 
+        else if (q.includes("félicité") || q.includes("felicite") || q.includes("extase") || q.includes("bliss") || q.includes("ecstasy") || q.includes("différence") || q.includes("plaisir")) { topic = "felicite"; } 
+        else if (q.includes("témoin") || q.includes("temoin") || q.includes("indifférence") || q.includes("indifference") || q.includes("vide") || q.includes("déconnecté") || q.includes("spectateur") || q.includes("mort") || q.includes("émotion") || q.includes("emotion")) { topic = "temoin"; } 
+        else if (q.includes("intellect") || q.includes("comprendre") || q.includes("analyser") || q.includes("raison") || q.includes("qui suis-je") || q.includes("jnana") || q.includes("mental") || q.includes("pensée")) { topic = "intellect"; } 
+        else if (q.includes("nauli") || q.includes("ventre") || q.includes("abdomen") || q.includes("barattage") || q.includes("diaphragme") || q.includes("intestin") || q.includes("abdominaux")) { topic = "nauli"; } 
+        else if (q.includes("navi") || q.includes("kriya") || q.includes("nombril") || q.includes("navel") || q.includes("bateau") || q.includes("milieu")) { topic = "navi_kriya"; } 
+        else if (q.includes("pratyahara") || q.includes("sens") || q.includes("sons") || q.includes("son intérieur") || q.includes("om") || q.includes("aum") || q.includes("sensualité") || q.includes("empathie")) { topic = "pratyahara"; } 
+        else if (q.includes("traduire") || q.includes("traduction") || q.includes("langue") || q.includes("i am") || q.includes("ayam") || q.includes("signification") || q.includes("meaning") || q.includes("translate")) { topic = "mantra_traduction"; } 
+        else if (q.includes("nectar") || q.includes("sucré") || q.includes("sucre") || q.includes("amrita") || q.includes("soma") || q.includes("goût") || q.includes("gout") || q.includes("sweet") || q.includes("taste")) { topic = "nectar"; } 
+        else if (q.includes("psychologie") || q.includes("psychanalyse") || q.includes("comprendre émotion") || q.includes("psychology") || q.includes("analysis")) { topic = "psychologie"; } 
+        else if (q.includes("pompe") || q.includes("cervicale") || q.includes("menton") || q.includes("cou") || q.includes("chin pump") || q.includes("neck") || q.includes("dynamique")) { topic = "pompe_cervicale"; } 
+        else if (q.includes("patanjali") || q.includes("huit") || q.includes("membres") || q.includes("yama") || q.includes("niyama") || q.includes("asana") || q.includes("huit branches") || q.includes("limbs")) { topic = "huit_membres"; } 
+        else if (q.includes("bastrika") || q.includes("soufflet") || q.includes("halètement") || q.includes("haletement") || q.includes("chien") || q.includes("rapide") || q.includes("bellows") || q.includes("panting")) { topic = "bastrika"; } 
+        else if (q.includes("sceptique") || q.includes("scepticisme") || q.includes("science") || q.includes("doute") || q.includes("croire") || q.includes("skeptic") || q.includes("doubt") || q.includes("believe")) { topic = "scepticisme"; } 
+        else if (q.includes("troisième") || q.includes("troisieme") || q.includes("oeil") || q.includes("third eye") || q.includes("medulla") || q.includes("pinéale") || q.includes("pineal") || q.includes("pituitaire") || q.includes("pituitary")) { topic = "troisieme_oeil"; } 
+        else if (q.includes("amour divin") || q.includes("compassion") || q.includes("karuna") || q.includes("divine love")) { topic = "amour_divin"; } 
+        else if (q.includes("secret") || q.includes("caché") || q.includes("cache") || q.includes("divulguer") || q.includes("hidden")) { topic = "secret"; } 
+        else if (q.includes("granthi") || q.includes("nœud") || q.includes("noeud") || q.includes("brahma") || q.includes("vishnu") || q.includes("rudra") || q.includes("knot")) { topic = "granthis"; } 
+        else if (q.includes("histoire") || q.includes("occident") || q.includes("vivekananda") || q.includes("yogananda") || q.includes("maharishi") || q.includes("history") || q.includes("west")) { topic = "histoire_yoga"; }
 
         const data = sageBrain[currentLang][topic];
         let randomCore = data.core[Math.floor(Math.random() * data.core.length)];
@@ -572,6 +527,3 @@
     </script>
 </body>
 </html>
-
-
-

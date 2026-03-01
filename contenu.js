@@ -220,8 +220,74 @@ const MURMURES_DATABASE = {
     ]
 };
 
+const PARABOLE_DATA = {
+    fr: {
+        title: "Au-delà de la Rivière — Une Parabole sur l’Appel Intérieur",
+        text: `
+            <p>Il y a des lieux où personne n’ose plus aller. Des frontières invisibles, marquées non par des murs, mais par des récits anciens — des récits de peur.</p>
+            <p>Dans un village reculé, au cœur de la savane, vivait un jeune homme nommé Kofi. Il n’avait ni la stature des guerriers, ni le prestige des anciens. Mais il portait en lui une question qui ne le quittait jamais : que se cache-t-il au-delà de ce que l’on croit savoir ?</p>
+            <p>Un jour, cette question prit chair.</p>
+            <p>La fille du chef, Adwoa, fut frappée d’un mal mystérieux. Les prières, les soins, rien n’y faisait. Le guérisseur consulta les oracles, qui désignèrent un remède oublié : une plante rare, cachée au plus profond de la forêt, de l’autre côté de la rivière sacrée. Mais cette forêt, disaient les anciens, était hantée. Un territoire d’esprits dévoreurs d’âmes, que l’homme sage ne franchit pas.</p>
+            <p>Le chef promit richesses et honneurs à quiconque oserait s’y aventurer. Les plus braves reculèrent. La peur, nourrie de récits, était plus forte que la promesse d’or.</p>
+            <p>Tous refusèrent.<br>Tous, sauf Kofi.</p>
+            <p>Il ne demandait rien. Ni gloire, ni récompense. Ce qu’il entendait en lui, c’était ce silence profond, qui ne marchande pas, mais qui dit simplement : avance.</p>
+            <p>Il prit une gourde d’eau, une amulette offerte par sa mère, et marcha vers la rivière. Là, il s’arrêta. L’eau était limpide, mais à ses yeux, elle était autre chose : une frontière symbolique. La limite entre le connu et l’inconnu.</p>
+            <p>Il ferma les yeux. Non pour fuir, mais pour écouter plus loin que ses pensées. Puis il traversa.</p>
+            <p>De l’autre côté, la forêt l’enveloppa. Mais il n’y trouva ni esprits, ni cris. Seulement une présence. La terre sous ses pas était dense, vivante. Le vent chantait dans les feuillages. Ce qui devait être un territoire d’ombres était en réalité un sanctuaire oublié.</p>
+            <p>Au cœur de cette paix, Kofi rencontra un vieil homme, assis au pied d’un arbre immense. Sa peau semblait sculptée par le temps. Ses yeux portaient la lumière des nuits sans nuages.</p>
+            <p>— Pourquoi viens-tu, marcheur ? demanda-t-il.</p>
+            <p>Kofi raconta son histoire.</p>
+            <p>Le sage écouta, puis montra une plante discrète à ses pieds.<br>
+            — Voici ce que tu cherches. Mais souviens-toi : ce n’est pas la forêt qui dévore les âmes. Ce sont les désirs non maîtrisés des hommes. Les anciens ont semé des récits de peur pour protéger ce lieu sacré de la convoitise. Mais ceux qui viennent avec un cœur pur n’y trouvent rien d’autre que ce qu’ils portent déjà en eux.</p>
+            <p>Kofi prit la plante, remercia et repartit. Lorsqu’il franchit à nouveau la rivière, un silence épais s’abattit sur le village. Adwoa fut guérie. Les anciens, d’un regard fuyant, comprirent ce qu’ils avaient oublié.</p>
+            <p>Ce jour-là, le village reçut une vérité simple, qui passa de bouche en bouche, mais dont la compréhension appartient à ceux qui osent la vivre :</p>
+            <blockquote style="font-style: italic; border-left: 2px solid var(--accent-color); padding-left: 15px; margin: 25px 0; opacity: 0.9;">
+            “Les oreilles entendent les peurs des autres, mais seuls les yeux du cœur voient la vérité.”
+            </blockquote>
+            <p>Chacun d’entre nous est appelé, un jour ou l’autre, à s’approcher de cette rivière intérieure. À franchir la frontière des peurs héritées. À entrer dans cette forêt qui, derrière les ombres projetées par notre mental, cache un espace de paix inaltérable.</p>
+            <p>La véritable initiation commence là.</p>
+            <p>La forêt n’a jamais été dangereuse. Ce sont nos histoires qui l’ont rendue hostile. Ce que nous cherchons ne se trouve pas ailleurs. Il est en nous, depuis toujours, mais voilé par le tumulte de nos désirs et de nos résistances.</p>
+            <p>Traverse. Écoute. Pratique.<br>Le reste suivra.</p>
+        `
+    },
+    en: {
+        title: "Beyond the River — A Parable on the Inner Call",
+        text: `
+            <p>There are places where no one dares to go anymore. Invisible borders, marked not by walls, but by ancient tales — tales of fear.</p>
+            <p>In a remote village, in the heart of the savanna, lived a young man named Kofi. He had neither the stature of warriors nor the prestige of the elders. But he carried within him a question that never left him: what lies beyond what we think we know?</p>
+            <p>One day, this question took flesh.</p>
+            <p>The chief's daughter, Adwoa, was struck by a mysterious illness. Prayers, treatments, nothing worked. The healer consulted the oracles, who pointed to a forgotten remedy: a rare plant, hidden deep within the forest, on the other side of the sacred river. But this forest, the elders said, was haunted. A territory of soul-devouring spirits, which a wise man does not cross.</p>
+            <p>The chief promised riches and honors to anyone who dared to venture there. The bravest stepped back. Fear, fed by tales, was stronger than the promise of gold.</p>
+            <p>All refused.<br>All, except Kofi.</p>
+            <p>He asked for nothing. Neither glory nor reward. What he heard within himself was that deep silence, which does not bargain, but simply says: go forward.</p>
+            <p>He took a gourd of water, an amulet offered by his mother, and walked towards the river. There, he stopped. The water was clear, but in his eyes, it was something else: a symbolic border. The limit between the known and the unknown.</p>
+            <p>He closed his eyes. Not to flee, but to listen further than his thoughts. Then he crossed.</p>
+            <p>On the other side, the forest enveloped him. But he found no spirits, no screams. Only a presence. The earth beneath his feet was dense, alive. The wind sang in the leaves. What was supposed to be a territory of shadows was in reality a forgotten sanctuary.</p>
+            <p>In the heart of this peace, Kofi met an old man, sitting at the foot of an immense tree. His skin seemed sculpted by time. His eyes carried the light of cloudless nights.</p>
+            <p>— "Why do you come, walker?" he asked.</p>
+            <p>Kofi told his story.</p>
+            <p>The sage listened, then pointed to a discreet plant at his feet.<br>
+            — "Here is what you seek. But remember: it is not the forest that devours souls. It is the unmastered desires of men. The elders sowed tales of fear to protect this sacred place from greed. But those who come with a pure heart find nothing else there but what they already carry within them."</p>
+            <p>Kofi took the plant, gave thanks, and left. When he crossed the river again, a thick silence fell upon the village. Adwoa was healed. The elders, with evasive eyes, understood what they had forgotten.</p>
+            <p>That day, the village received a simple truth, which passed from mouth to mouth, but whose understanding belongs to those who dare to live it:</p>
+            <blockquote style="font-style: italic; border-left: 2px solid var(--accent-color); padding-left: 15px; margin: 25px 0; opacity: 0.9;">
+            “Ears hear the fears of others, but only the eyes of the heart see the truth.”
+            </blockquote>
+            <p>Each of us is called, one day or another, to approach this inner river. To cross the border of inherited fears. To enter this forest which, behind the shadows cast by our mind, hides a space of unalterable peace.</p>
+            <p>True initiation begins there.</p>
+            <p>The forest was never dangerous. It is our stories that made it hostile. What we seek is not found elsewhere. It has been within us all along, but veiled by the tumult of our desires and our resistances.</p>
+            <p>Cross. Listen. Practice.<br>The rest will follow.</p>
+        `
+    }
+};
+
 const sageBrain = {
     fr: {
+        universel: {
+            core: ["La véritable sagesse commence là où s'arrête la certitude intellectuelle.", "Ce à quoi tu résistes persiste et se renforce. L'acceptation de l'expérience présente est toujours la première étape du yogi.", "Le silence intérieur n'est pas l'absence de bruit autour de toi, mais l'absence d'agitation en toi."],
+            science: ["Ton système nerveux perçoit le monde à travers ses propres filtres accumulés. Purifier doucement ces canaux change littéralement ta réalité biologique.", "La quête de sens n'est pas juste une fantaisie de l'esprit, c'est une nécessité neurobiologique profonde pour l'équilibre humain."],
+            pacing: ["Ne cherche pas toutes les réponses aujourd'hui. Pratique avec régularité, reste ancré dans la matière, et laisse le silence dissoudre tes questions une à une."]
+        },
         routine_base: {
             core: ["La pratique n'a pas besoin d'être spectaculaire pour être efficace. On vise une vie plus stable, pas une séance parfaite.", "Une routine minimum viable vaut mille fois mieux qu'une heure de pratique irrégulière."],
             science: ["Chaque pratique agit comme un entraînement de fond sur ton système nerveux. C'est comme régler un thermostat : tu ajustes doucement la chaleur au lieu d'ouvrir le four au maximum."],
@@ -289,6 +355,11 @@ const sageBrain = {
         }
     },
     en: {
+        universel: {
+            core: ["True wisdom begins where intellectual certainty ends.", "What you resist persists and strengthens. Acceptance of the present experience is always the first step of the yogi.", "Inner silence is not the absence of noise around you, but the absence of agitation within you."],
+            science: ["Your nervous system perceives the world through its own accumulated filters. Gently purifying these channels literally changes your biological reality.", "The quest for meaning is not just a fantasy of the mind, it is a deep neurobiological necessity for human balance."],
+            pacing: ["Do not seek all the answers today. Practice with regularity, stay grounded in matter, and let the silence dissolve your questions one by one."]
+        },
         routine_base: {
             core: ["Practice doesn't need to be spectacular to be effective. We aim for a more stable life, not a perfect session.", "A minimum viable routine is worth a thousand times more than an irregular hour of practice."],
             science: ["Each practice trains your nervous system. It's like adjusting a thermostat: you gently regulate the heat instead of turning the oven on max."],
@@ -354,66 +425,5 @@ const sageBrain = {
             science: ["The training is direct: sit silently. Absorption (Samādhi) is not an escape far from the world, but the mechanical revelation of the stability of your own nervous system."],
             pacing: ["Sitting without any goal is already, in itself, an act of immense clarity. Let silence do its cleaning work without trying to control the process."]
         }
-    }
-};
-
-const PARABOLE_DATA = {
-    fr: {
-        title: "Au-delà de la Rivière — Une Parabole sur l’Appel Intérieur",
-        text: `
-            <p>Il y a des lieux où personne n’ose plus aller. Des frontières invisibles, marquées non par des murs, mais par des récits anciens — des récits de peur.</p>
-            <p>Dans un village reculé, au cœur de la savane, vivait un jeune homme nommé Kofi. Il n’avait ni la stature des guerriers, ni le prestige des anciens. Mais il portait en lui une question qui ne le quittait jamais : que se cache-t-il au-delà de ce que l’on croit savoir ?</p>
-            <p>Un jour, cette question prit chair.</p>
-            <p>La fille du chef, Adwoa, fut frappée d’un mal mystérieux. Les prières, les soins, rien n’y faisait. Le guérisseur consulta les oracles, qui désignèrent un remède oublié : une plante rare, cachée au plus profond de la forêt, de l’autre côté de la rivière sacrée. Mais cette forêt, disaient les anciens, était hantée. Un territoire d’esprits dévoreurs d’âmes, que l’homme sage ne franchit pas.</p>
-            <p>Le chef promit richesses et honneurs à quiconque oserait s’y aventurer. Les plus braves reculèrent. La peur, nourrie de récits, était plus forte que la promesse d’or.</p>
-            <p>Tous refusèrent.<br>Tous, sauf Kofi.</p>
-            <p>Il ne demandait rien. Ni gloire, ni récompense. Ce qu’il entendait en lui, c’était ce silence profond, qui ne marchande pas, mais qui dit simplement : avance.</p>
-            <p>Il prit une gourde d’eau, une amulette offerte par sa mère, et marcha vers la rivière. Là, il s’arrêta. L’eau était limpide, mais à ses yeux, elle était autre chose : une frontière symbolique. La limite entre le connu et l’inconnu.</p>
-            <p>Il ferma les yeux. Non pour fuir, mais pour écouter plus loin que ses pensées. Puis il traversa.</p>
-            <p>De l’autre côté, la forêt l’enveloppa. Mais il n’y trouva ni esprits, ni cris. Seulement une présence. La terre sous ses pas était dense, vivante. Le vent chantait dans les feuillages. Ce qui devait être un territoire d’ombres était en réalité un sanctuaire oublié.</p>
-            <p>Au cœur de cette paix, Kofi rencontra un vieil homme, assis au pied d’un arbre immense. Sa peau semblait sculptée par le temps. Ses yeux portaient la lumière des nuits sans nuages.</p>
-            <p>— Pourquoi viens-tu, marcheur ? demanda-t-il.</p>
-            <p>Kofi raconta son histoire.</p>
-            <p>Le sage écouta, puis montra une plante discrète à ses pieds.<br>
-            — Voici ce que tu cherches. Mais souviens-toi : ce n’est pas la forêt qui dévore les âmes. Ce sont les désirs non maîtrisés des hommes. Les anciens ont semé des récits de peur pour protéger ce lieu sacré de la convoitise. Mais ceux qui viennent avec un cœur pur n’y trouvent rien d’autre que ce qu’ils portent déjà en eux.</p>
-            <p>Kofi prit la plante, remercia et repartit. Lorsqu’il franchit à nouveau la rivière, un silence épais s’abattit sur le village. Adwoa fut guérie. Les anciens, d’un regard fuyant, comprirent ce qu’ils avaient oublié.</p>
-            <p>Ce jour-là, le village reçut une vérité simple, qui passa de bouche en bouche, mais dont la compréhension appartient à ceux qui osent la vivre :</p>
-            <blockquote style="font-style: italic; border-left: 2px solid var(--accent-color); padding-left: 15px; margin: 25px 0; opacity: 0.9;">
-            “Les oreilles entendent les peurs des autres, mais seuls les yeux du cœur voient la vérité.”
-            </blockquote>
-            <p>Chacun d’entre nous est appelé, un jour ou l’autre, à s’approcher de cette rivière intérieure. À franchir la frontière des peurs héritées. À entrer dans cette forêt qui, derrière les ombres projetées par notre mental, cache un espace de paix inaltérable.</p>
-            <p>La véritable initiation commence là.</p>
-            <p>La forêt n’a jamais été dangereuse. Ce sont nos histoires qui l’ont rendue hostile. Ce que nous cherchons ne se trouve pas ailleurs. Il est en nous, depuis toujours, mais voilé par le tumulte de nos désirs et de nos résistances.</p>
-            <p>Traverse. Écoute. Pratique.<br>Le reste suivra.</p>
-        `
-    },
-    en: {
-        title: "Beyond the River — A Parable on the Inner Call",
-        text: `
-            <p>There are places where no one dares to go anymore. Invisible borders, marked not by walls, but by ancient tales — tales of fear.</p>
-            <p>In a remote village, in the heart of the savanna, lived a young man named Kofi. He had neither the stature of warriors nor the prestige of the elders. But he carried within him a question that never left him: what lies beyond what we think we know?</p>
-            <p>One day, this question took flesh.</p>
-            <p>The chief's daughter, Adwoa, was struck by a mysterious illness. Prayers, treatments, nothing worked. The healer consulted the oracles, who pointed to a forgotten remedy: a rare plant, hidden deep within the forest, on the other side of the sacred river. But this forest, the elders said, was haunted. A territory of soul-devouring spirits, which a wise man does not cross.</p>
-            <p>The chief promised riches and honors to anyone who dared to venture there. The bravest stepped back. Fear, fed by tales, was stronger than the promise of gold.</p>
-            <p>All refused.<br>All, except Kofi.</p>
-            <p>He asked for nothing. Neither glory nor reward. What he heard within himself was that deep silence, which does not bargain, but simply says: go forward.</p>
-            <p>He took a gourd of water, an amulet offered by his mother, and walked towards the river. There, he stopped. The water was clear, but in his eyes, it was something else: a symbolic border. The limit between the known and the unknown.</p>
-            <p>He closed his eyes. Not to flee, but to listen further than his thoughts. Then he crossed.</p>
-            <p>On the other side, the forest enveloped him. But he found no spirits, no screams. Only a presence. The earth beneath his feet was dense, alive. The wind sang in the leaves. What was supposed to be a territory of shadows was in reality a forgotten sanctuary.</p>
-            <p>In the heart of this peace, Kofi met an old man, sitting at the foot of an immense tree. His skin seemed sculpted by time. His eyes carried the light of cloudless nights.</p>
-            <p>— "Why do you come, walker?" he asked.</p>
-            <p>Kofi told his story.</p>
-            <p>The sage listened, then pointed to a discreet plant at his feet.<br>
-            — "Here is what you seek. But remember: it is not the forest that devours souls. It is the unmastered desires of men. The elders sowed tales of fear to protect this sacred place from greed. But those who come with a pure heart find nothing else there but what they already carry within them."</p>
-            <p>Kofi took the plant, gave thanks, and left. When he crossed the river again, a thick silence fell upon the village. Adwoa was healed. The elders, with evasive eyes, understood what they had forgotten.</p>
-            <p>That day, the village received a simple truth, which passed from mouth to mouth, but whose understanding belongs to those who dare to live it:</p>
-            <blockquote style="font-style: italic; border-left: 2px solid var(--accent-color); padding-left: 15px; margin: 25px 0; opacity: 0.9;">
-            “Ears hear the fears of others, but only the eyes of the heart see the truth.”
-            </blockquote>
-            <p>Each of us is called, one day or another, to approach this inner river. To cross the border of inherited fears. To enter this forest which, behind the shadows cast by our mind, hides a space of unalterable peace.</p>
-            <p>True initiation begins there.</p>
-            <p>The forest was never dangerous. It is our stories that made it hostile. What we seek is not found elsewhere. It has been within us all along, but veiled by the tumult of our desires and our resistances.</p>
-            <p>Cross. Listen. Practice.<br>The rest will follow.</p>
-        `
     }
 };

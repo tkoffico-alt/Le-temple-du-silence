@@ -169,29 +169,21 @@
 
     <script src="contenu.js"></script>
 
-  <script>
+<script>
         let currentLang = 'fr';
         let isTyping = false;
         let isFirstQuestion = true;
 
         const UI_TEXTS = {
             fr: {
-                navMurmures: "Murmures",
-                navEnseignements: "Enseignements",
-                navSage: "Le Sage",
                 sagePlaceholder: "Confiez votre doute au silence...",
-                sageBtn: "Demander",
                 shareText: "Partager texte",
                 shareMedia: "Partager média",
                 downloadBtn: "Télécharger",
                 comingSoon: "Bientôt disponible."
             },
             en: {
-                navMurmures: "Whispers",
-                navEnseignements: "Teachings",
-                navSage: "The Sage",
                 sagePlaceholder: "Confide your doubt to the silence...",
-                sageBtn: "Ask",
                 shareText: "Share text",
                 shareMedia: "Share media",
                 downloadBtn: "Download",
@@ -199,41 +191,101 @@
             }
         };
 
+        // --- FONCTIONS DE NAVIGATION ET THÈME (Restaurées) ---
+
+        function showSection(sectionId) {
+            // Cacher toutes les sections
+            document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+            // Désactiver tous les boutons du menu
+            document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+            
+            // Activer la bonne section et le bon bouton
+            document.getElementById(sectionId).classList.add('active');
+            const navBtn = document.getElementById('nav-' + sectionId);
+            if (navBtn) navBtn.classList.add('active');
+        }
+
+        function toggleLang() {
+            const newLang = currentLang === 'fr' ? 'en' : 'fr';
+            const langBtn = document.getElementById('lang-toggle');
+            // Le bouton affiche la langue vers laquelle on PEUT aller
+            langBtn.innerText = newLang === 'fr' ? 'English' : 'Français';
+            switchLanguage(newLang);
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('light-theme');
+            const themeBtn = document.getElementById('theme-toggle');
+            if (document.body.classList.contains('light-theme')) {
+                themeBtn.innerText = currentLang === 'fr' ? 'Obscurité' : 'Darkness';
+            } else {
+                themeBtn.innerText = currentLang === 'fr' ? 'Clarté' : 'Light';
+            }
+        }
+
+        function toggleParaboleAudio() {
+            const player = document.getElementById("audio-parabole-player");
+            const icon = document.getElementById("parabole-icon");
+            if (player.paused) {
+                player.play();
+                icon.innerText = "⏸️";
+            } else {
+                player.pause();
+                icon.innerText = "🎧";
+            }
+        }
+
+        // --- GESTION DE LA LANGUE ET DE L'INTERFACE ---
+
         function switchLanguage(lang) {
             currentLang = lang;
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById('btn-' + lang).classList.add('active');
+            
             updateUILanguage();
-            renderMurmures();
-            renderTeachings();
+            
+            if (typeof MURMURES_DATABASE !== 'undefined') renderMurmures();
+            if (typeof TEACHINGS_DATABASE !== 'undefined') renderTeachings();
             
             // Réinitialise le chat si on change de langue
-            document.getElementById("chat-log").innerHTML = "";
+            const logEl = document.getElementById("chat-log");
+            if(logEl) logEl.innerHTML = "";
             isFirstQuestion = true; 
         }
 
         function updateUILanguage() {
             const texts = UI_TEXTS[currentLang];
-            document.querySelector('a[href="#murmures"]').innerText = texts.navMurmures;
-            document.querySelector('a[href="#enseignements"]').innerText = texts.navEnseignements;
-            document.querySelector('a[href="#sage"]').innerText = texts.navSage;
-            document.getElementById('sage-input').placeholder = texts.sagePlaceholder;
-            document.querySelector('#sage button').innerText = texts.sageBtn;
-            document.querySelector('#murmures h2').innerText = texts.navMurmures;
-            document.querySelector('#enseignements h2').innerText = texts.navEnseignements;
-            document.querySelector('#sage h2').innerText = texts.navSage;
+            
+            // Mettre à jour le placeholder du sage
+            const sageInput = document.getElementById('sage-input');
+            if (sageInput) sageInput.placeholder = texts.sagePlaceholder;
+
+            // Mettre à jour le bouton de thème
+            const themeBtn = document.getElementById('theme-toggle');
+            if (themeBtn) {
+                if (document.body.classList.contains('light-theme')) {
+                    themeBtn.innerText = currentLang === 'fr' ? 'Obscurité' : 'Darkness';
+                } else {
+                    themeBtn.innerText = currentLang === 'fr' ? 'Clarté' : 'Light';
+                }
+            }
+
+            // Bascule de l'affichage global via tes classes .fr et .en
+            document.querySelectorAll('.fr').forEach(el => el.style.display = currentLang === 'fr' ? '' : 'none');
+            document.querySelectorAll('.en').forEach(el => el.style.display = currentLang === 'en' ? '' : 'none');
         }
 
         function getSignatureHTML() {
             return `<div class="signature" style="text-align: right; margin-top: 20px; font-style: italic; opacity: 0.8;">🪷 ${currentLang === 'fr' ? 'Le Temple du Silence' : 'The Temple of Silence'}</div>`;
         }
 
+        // --- RENDU DES CONTENUS ---
+
         function renderMurmures() {
             const container = document.getElementById("murmures-list-container");
+            if (!container) return;
             container.innerHTML = ""; 
             const currentMurmures = MURMURES_DATABASE[currentLang];
 
-            if (currentMurmures.length === 0) {
+            if (!currentMurmures || currentMurmures.length === 0) {
                 container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${UI_TEXTS[currentLang].comingSoon}</p>`;
                 return;
             }
@@ -280,10 +332,11 @@
 
         function renderTeachings() {
             const container = document.getElementById("teachings-list-container");
+            if (!container) return;
             container.innerHTML = "";
             const currentTeachings = TEACHINGS_DATABASE[currentLang];
 
-            if (currentTeachings.length === 0) {
+            if (!currentTeachings || currentTeachings.length === 0) {
                 container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${UI_TEXTS[currentLang].comingSoon}</p>`;
                 return;
             }
@@ -304,6 +357,8 @@
                 container.innerHTML += html;
             });
         }
+
+        // --- PARTAGE ---
 
         function partagerTexte(titre, texte) {
             const texteNettoye = texte.replace(/<br\s*[\/]?>/gi, "\n").replace(/<\/?[^>]+(>|$)/g, "");
@@ -366,6 +421,8 @@
             }
         }
 
+        // --- L'INTELLIGENCE DU SAGE ---
+
         function typeWriter(text, i, element, callback) {
             if (i < text.length) {
                 element.innerHTML += text.charAt(i) === '\n' ? '<br>' : text.charAt(i);
@@ -402,7 +459,7 @@
 
             let topic = "soi_atman"; 
 
-            // --- DÉTECTION DES MOTS-CLÉS (ROUTAGE) ---
+            // DÉTECTION DES MOTS-CLÉS
             if (q.includes("suicide") || q.includes("panique") || q.includes("dépression") || q.includes("douleur") || q.includes("médecin") || q.includes("malade") || q.includes("hôpital") || q.includes("panic") || q.includes("pain")) {
                 topic = "ethique_securite";
             }
@@ -439,7 +496,7 @@
             let randomScience = data.science[Math.floor(Math.random() * data.science.length)];
             let randomPacing = data.pacing[Math.floor(Math.random() * data.pacing.length)];
 
-            // --- GESTION DE L'ACCUEIL ---
+            // GESTION DE L'ACCUEIL
             let prefix = "";
             if (isFirstQuestion) {
                 prefix = currentLang === 'fr' ? "Bienvenue. Ce lieu invite à l'expérience directe.\n\n" : "Welcome. This place invites direct experience.\n\n";
@@ -459,7 +516,7 @@
                 prefix = introArray[Math.floor(Math.random() * introArray.length)];
             }
 
-            // --- SIGNATURE ---
+            // SIGNATURE
             let signature = currentLang === 'fr' ? "\n\n🪷 <i>Le Temple du Silence</i>" : "\n\n🪷 <i>The Temple of Silence</i>";
 
             let finalResponse = `« ${prefix}${randomCore}\n\n${randomScience}\n\n${randomPacing} »${signature}`;
@@ -485,5 +542,6 @@
     </script>
 </body>
 </html>
+
 
 

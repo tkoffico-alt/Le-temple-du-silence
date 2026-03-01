@@ -38,6 +38,10 @@
                 <span class="fr">La Parabole</span>
                 <span class="en" style="display:none;">The Parable</span>
             </button>
+            <button id="nav-bibliotheque" onclick="showSection('bibliotheque')">
+                <span class="fr">La Bibliothèque</span>
+                <span class="en" style="display:none;">The Library</span>
+            </button>
         </nav>
     </header>
 
@@ -100,10 +104,36 @@
                 <div id="parabole-text"></div>
             </div>
         </section>
+        <section id="bibliotheque" class="section">
+            <div class="teaching-article parchment-text" style="text-align: center;">
+                <h2 style="margin-bottom: 30px;">
+                    <span class="fr">Les Manuscrits à Venir</span>
+                    <span class="en" style="display:none;">Upcoming Manuscripts</span>
+                </h2>
+                <p style="font-style: italic; opacity: 0.8;">
+                    <span class="fr">Les ouvrages sont en cours de rédaction dans le silence...</span>
+                    <span class="en" style="display:none;">The works are being written in silence...</span>
+                </p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px;">
+                    <div style="width: 150px; height: 220px; border: 2px dashed var(--accent-color); border-radius: 5px; display: flex; align-items: center; justify-content: center; opacity: 0.5;">
+                        <span>Tome I</span>
+                    </div>
+                    <div style="width: 150px; height: 220px; border: 2px dashed var(--accent-color); border-radius: 5px; display: flex; align-items: center; justify-content: center; opacity: 0.3;">
+                        <span>Tome II</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+   <footer style="display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 30px 10px;">
         <p>© 2026 Le Temple du Silence. <span class="en" style="display:none;">All rights reserved.</span><span class="fr">Tous droits réservés.</span></p>
+        
+        <a href="mailto:constanttanoh@yahoo.com?subject=Un%20murmure%20depuis%20le%20Temple" class="zen-btn" style="text-decoration: none; font-size: 0.9rem; opacity: 0.8;">
+            <span class="fr">✉️ Écrire au Gardien du Temple</span>
+            <span class="en" style="display:none;">✉️ Write to the Guardian</span>
+        </a>
+
         <div style="font-family: 'Cormorant Garamond', serif; color: var(--accent-color); font-size: 1.1rem; opacity: 0.8; letter-spacing: 1px;">
             <span class="fr">Âmes ayant traversé le pont : </span>
             <span class="en" style="display:none;">Souls who crossed the bridge: </span>
@@ -542,5 +572,6 @@
     </script>
 </body>
 </html>
+
 
 

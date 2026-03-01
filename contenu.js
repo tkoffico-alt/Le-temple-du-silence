@@ -161,7 +161,7 @@ const MURMURES_DATABASE = {
         },
         {
             title: "Ce qui m’attire vraiment : vrai désir ou envie de fuir ?",
-            audioFile: "", 
+            audioFile: "audio_desir_fuite_fr.mp3", 
             imageFile: "",
             videoFile: "",
             text: "Quand on a très envie de faire quelque chose, le plus important n'est pas de savoir ce que c'est, mais pourquoi on veut le faire. Il ne s'agit pas de trouver de belles excuses intellectuelles, mais de regarder l'effet concret que cette envie a sur notre vie de tous les jours.<br><br>Un désir sincère (un vrai élan vital) nous donne de l'énergie. Il ne fait pas disparaître nos problèmes, mais il nous rend plus forts pour les affronter. Même si l'activité est difficile, on se sent aligné : on s'éparpille moins, on n'a plus besoin de se trouver des excuses, et on reste concentré sur ce qu'on a à faire.<br><br>Une envie de fuir, au contraire, agit comme un pansement rapide. Elle nous attire parce qu'elle promet de faire baisser le stress tout de suite. Mais on s'en rend compte après coup : nos problèmes n'ont pas bougé, et on se sent vidé de notre énergie. On se met alors à chercher des justifications ou à sauter sur une autre distraction pour tenir le coup.<br><br>Notre rapport au temps est aussi un bon indice. Un vrai désir s'installe dans la durée. On accepte d'avancer doucement, de faire des erreurs et de recommencer. La fuite, elle, est très impatiente : on veut que ça change tout de suite, maintenant, sinon on se lasse et on passe vite à autre chose.<br><br>Un autre signe facile à repérer est notre façon de nous justifier. Quand l'élan est sincère, on n'a pas besoin de se raconter une histoire héroïque. Ça peut même paraître très banal. Quand on fuit, par contre, on se construit souvent tout un scénario pour se convaincre : on se dit que c'est une urgence absolue, qu'on n'a pas le choix, ou que c'est pour la bonne cause.<br><br>Enfin, le meilleur test est celui de la durée. Après quelques semaines ou quelques mois, un vrai désir apporte plus de stabilité dans nos actions, même si tout n'est pas parfait. Une fuite laisse derrière elle plein de projets inachevés, de départs enthousiastes et de brusques arrêts, sans jamais vraiment améliorer notre vie de tous les jours.<br><br>Faire la différence entre les deux n'est donc pas un don magique ou une intuition mystérieuse. C'est juste une question d'observation. Il faut juger nos envies comme on juge un remède : on ne regarde pas les belles promesses sur la boîte, on regarde si cela nous fait vraiment du bien sur le long terme."
@@ -757,5 +757,6 @@ const PARABOLE_DATA = {
         `
     }
 };
+
 
 

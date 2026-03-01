@@ -284,9 +284,25 @@ const PARABOLE_DATA = {
 const sageBrain = {
     fr: {
         universel: {
-            core: ["La véritable sagesse commence là où s'arrête la certitude intellectuelle.", "Ce à quoi tu résistes persiste et se renforce. L'acceptation de l'expérience présente est toujours la première étape du yogi.", "Le silence intérieur n'est pas l'absence de bruit autour de toi, mais l'absence d'agitation en toi."],
-            science: ["Ton système nerveux perçoit le monde à travers ses propres filtres accumulés. Purifier doucement ces canaux change littéralement ta réalité biologique.", "La quête de sens n'est pas juste une fantaisie de l'esprit, c'est une nécessité neurobiologique profonde pour l'équilibre humain."],
-            pacing: ["Ne cherche pas toutes les réponses aujourd'hui. Pratique avec régularité, reste ancré dans la matière, et laisse le silence dissoudre tes questions une à une."]
+            core: [
+                "La véritable sagesse commence là où s'arrête la certitude intellectuelle.",
+                "Ce à quoi tu résistes persiste et se renforce. L'acceptation de l'expérience présente est toujours la première étape du yogi.",
+                "Le silence intérieur n'est pas l'absence de bruit autour de toi, mais l'absence d'agitation en toi.",
+                "Chercher la réponse à l'extérieur ne fait souvent que repousser la découverte de ce qui est déjà là.",
+                "La paix ne se trouve pas en fuyant la vie, mais en plongeant calmement au cœur de l'expérience."
+            ],
+            science: [
+                "Ton système nerveux perçoit le monde à travers ses propres filtres accumulés. Purifier doucement ces canaux change littéralement ta réalité biologique.",
+                "La quête de sens n'est pas juste une fantaisie de l'esprit, c'est une nécessité neurobiologique profonde pour l'équilibre humain.",
+                "Le mental analytique est une machine à résoudre des problèmes. S'il n'en trouve pas, il s'empresse d'en créer un. Reviens à la sensation corporelle.",
+                "Respirer consciemment, ne serait-ce qu'une minute, court-circuite instantanément la boucle de stress du cerveau."
+            ],
+            pacing: [
+                "Ne cherche pas toutes les réponses aujourd'hui. Pratique avec régularité, reste ancré dans la matière, et laisse le silence agir.",
+                "Pose-toi simplement la question, puis lâche-la dans l'espace de ton cœur sans exiger de réponse immédiate.",
+                "Tourne ton attention vers la sensation physique de l'instant. C'est là que se trouve ton seul et vrai point d'ancrage.",
+                "La patience est la plus haute des pratiques. Laisse les choses se décanter d'elles-mêmes à leur propre rythme."
+            ]
         },
         routine_base: {
             core: ["La pratique n'a pas besoin d'être spectaculaire pour être efficace. On vise une vie plus stable, pas une séance parfaite.", "Une routine minimum viable vaut mille fois mieux qu'une heure de pratique irrégulière."],
@@ -356,9 +372,25 @@ const sageBrain = {
     },
     en: {
         universel: {
-            core: ["True wisdom begins where intellectual certainty ends.", "What you resist persists and strengthens. Acceptance of the present experience is always the first step of the yogi.", "Inner silence is not the absence of noise around you, but the absence of agitation within you."],
-            science: ["Your nervous system perceives the world through its own accumulated filters. Gently purifying these channels literally changes your biological reality.", "The quest for meaning is not just a fantasy of the mind, it is a deep neurobiological necessity for human balance."],
-            pacing: ["Do not seek all the answers today. Practice with regularity, stay grounded in matter, and let the silence dissolve your questions one by one."]
+            core: [
+                "True wisdom begins where intellectual certainty ends.",
+                "What you resist persists and strengthens. Acceptance is the first step.",
+                "Inner silence is not the absence of noise around you, but the absence of agitation within you.",
+                "Seeking the answer outside often merely postpones discovering what is already there.",
+                "Peace is not found by fleeing life, but by diving calmly into the heart of experience."
+            ],
+            science: [
+                "Your nervous system perceives the world through its own accumulated filters. Purifying these channels changes your reality.",
+                "The quest for meaning is not a fantasy, it is a neurobiological necessity for human balance.",
+                "The analytical mind is a problem-solving machine. If it finds none, it creates one. Return to the body.",
+                "Breathing consciously instantly short-circuits the brain's stress loop."
+            ],
+            pacing: [
+                "Do not seek all the answers today. Practice with regularity and let the silence act.",
+                "Simply ask the question, then drop it into the space of your heart without demanding an immediate answer.",
+                "Turn your attention to the physical sensation of the moment. That is where your anchor lies.",
+                "Patience is the highest of practices. Let things settle on their own."
+            ]
         },
         routine_base: {
             core: ["Practice doesn't need to be spectacular to be effective. We aim for a more stable life, not a perfect session.", "A minimum viable routine is worth a thousand times more than an irregular hour of practice."],

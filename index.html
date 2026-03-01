@@ -173,6 +173,10 @@
     let currentLang = 'fr';
     let isTyping = false;
     let isFirstQuestion = true; 
+    
+    // --- 🧠 PILIER 1 : LA MÉMOIRE DU SAGE ---
+    // Cette variable va retenir le dernier sujet abordé
+    let previousTopic = "universel"; 
 
     function createDustParticles() {
         const container = document.getElementById('particles-container');
@@ -194,7 +198,6 @@
     }
 
     function initVisitorCounter() {
-        // Nouvelle clé pour forcer le redémarrage à 0
         let count = localStorage.getItem('templeVisitorCount_v4');
         if (!count) { count = 0; } 
         else { count = parseInt(count) + 1; }
@@ -434,7 +437,7 @@
             }, 100);
         }
 
-        // --- 1. SÉCURITÉ ABSOLUE (Override d'urgence) ---
+        // --- 1. SÉCURITÉ ABSOLUE ---
         const motsUrgence = ["suicide", "panique", "dépression", "depression", "hôpital", "hospital", "mourir", "tuer", "grave"];
         let urgenceDetectee = motsUrgence.some(mot => q.includes(mot));
 
@@ -442,8 +445,9 @@
 
         if (urgenceDetectee) {
             topic = "ethique_securite";
+            previousTopic = topic; // Mise à jour de la mémoire en cas d'urgence
         } else {
-            // --- 2. ANALYSE SÉMANTIQUE PAR PONDÉRATION (SCORING) ---
+            // --- 2. SCORING SÉMANTIQUE ---
             const scores = {
                 surcharge_ancrage: 0,
                 interoception: 0,
@@ -481,18 +485,33 @@
             }
 
             let maxScore = 0;
+            let detectedTopic = "";
+            
             for (let categorie in scores) {
                 if (scores[categorie] > maxScore) {
                     maxScore = scores[categorie];
-                    topic = categorie;
+                    detectedTopic = categorie;
                 }
+            }
+
+            // --- 3. L'APPLICATION DU PILIER 1 (MÉMOIRE) ---
+            if (maxScore > 0) {
+                // Si le Sage a trouvé un thème dans la phrase du visiteur, il l'adopte et s'en souvient
+                topic = detectedTopic;
+                previousTopic = topic; 
+            } else {
+                // Si la phrase ne contient aucun mot clé (ex: "Pourquoi ?", "C'est difficile"), 
+                // le Sage ressort le dernier thème abordé depuis sa mémoire pour faire un suivi logique !
+                topic = previousTopic;
             }
         }
 
+        // Sécurité ultime au cas où
         if (!sageBrain[currentLang] || !sageBrain[currentLang][topic]) {
             topic = "universel";
         }
 
+        // --- GÉNÉRATION DE LA RÉPONSE ---
         const data = sageBrain[currentLang][topic];
         let randomCore = data.core[Math.floor(Math.random() * data.core.length)];
         let randomScience = data.science[Math.floor(Math.random() * data.science.length)];
@@ -517,7 +536,6 @@
             prefix = introArray[Math.floor(Math.random() * introArray.length)];
         }
 
-        // --- LE SCEAU DU GARDIEN (.png) ---
         let signatureText = currentLang === 'fr' ? "Le Temple du Silence" : "The Temple of Silence";
         let signature = `<br><br><div style="display: flex; justify-content: flex-end; align-items: center; opacity: 0.9; font-style: italic;">
             <span style="color: var(--accent-color); margin-right: 12px;">${signatureText}</span>

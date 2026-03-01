@@ -194,11 +194,11 @@
     }
 
     function initVisitorCounter() {
-        // Le compteur est réinitialisé à 0 avec une nouvelle clé locale
-        let count = localStorage.getItem('templeVisitorCount_v3');
+        // Nouvelle clé pour forcer le redémarrage à 0
+        let count = localStorage.getItem('templeVisitorCount_v4');
         if (!count) { count = 0; } 
         else { count = parseInt(count) + 1; }
-        localStorage.setItem('templeVisitorCount_v3', count);
+        localStorage.setItem('templeVisitorCount_v4', count);
         document.getElementById('visitor-count').innerText = count;
     }
 
@@ -409,7 +409,7 @@
         }
     }
 
-  function askSage() {
+    function askSage() {
         if (isTyping) return;
         const inputEl = document.getElementById("sage-input");
         const logEl = document.getElementById("chat-log");
@@ -472,17 +472,14 @@
                 routine_base: ["routine", "pratique", "commencer", "temps", "régulier", "comment", "aide", "conseil", "débutant", "apprendre", "jour", "méthode", "technique"]
             };
 
-            // On attribue des points selon les mots trouvés
             for (let categorie in dictionnaires) {
                 dictionnaires[categorie].forEach(mot => {
-                    // On ajoute des espaces pour éviter qu'un bout de mot valide le score (ex: "mal" dans "animal")
                     if (q.includes(mot) || q.includes(" " + mot + " ")) {
                         scores[categorie] += 1;
                     }
                 });
             }
 
-            // On trouve la catégorie avec le plus gros score (le centre de la préoccupation)
             let maxScore = 0;
             for (let categorie in scores) {
                 if (scores[categorie] > maxScore) {
@@ -490,16 +487,12 @@
                     topic = categorie;
                 }
             }
-
-            // Si le score est 0 (aucun mot du dictionnaire n'a été tapé), il reste sur "universel"
         }
 
-        // Sécurité anti-crash
         if (!sageBrain[currentLang] || !sageBrain[currentLang][topic]) {
             topic = "universel";
         }
 
-        // --- GÉNÉRATION DE LA RÉPONSE ---
         const data = sageBrain[currentLang][topic];
         let randomCore = data.core[Math.floor(Math.random() * data.core.length)];
         let randomScience = data.science[Math.floor(Math.random() * data.science.length)];
@@ -524,8 +517,12 @@
             prefix = introArray[Math.floor(Math.random() * introArray.length)];
         }
 
-        // Signature du Temple
-        let signature = currentLang === 'fr' ? "<br><br>🪷 <i>Le Temple du Silence</i>" : "<br><br>🪷 <i>The Temple of Silence</i>";
+        // --- LE SCEAU DU GARDIEN (.png) ---
+        let signatureText = currentLang === 'fr' ? "Le Temple du Silence" : "The Temple of Silence";
+        let signature = `<br><br><div style="display: flex; justify-content: flex-end; align-items: center; opacity: 0.9; font-style: italic;">
+            <span style="color: var(--accent-color); margin-right: 12px;">${signatureText}</span>
+            <img src="sceau-gardien.png" alt="Sceau du Gardien" style="height: 35px; border-radius: 50%; box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);">
+        </div>`;
 
         let finalResponse = `« ${prefix}${randomCore}<br><br>${randomScience}<br><br>${randomPacing} »${signature}`;
 
@@ -543,9 +540,9 @@
             }
         });
     }
+
     function typeWriter(text, i, el, callback) {
         if (i < text.length) {
-            // Permet au texte de s'afficher sans casser les balises HTML de l'image
             if (text.charAt(i) === '<') {
                 let tag = "";
                 while (text.charAt(i) !== '>' && i < text.length) {
@@ -573,4 +570,3 @@
     </script>
 </body>
 </html>
-

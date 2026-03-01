@@ -248,11 +248,6 @@
             document.getElementById('parabole-icon').innerText = "🎧";
         }
 
-        // Réinitialise le chat si on change de langue
-        const logEl = document.getElementById("chat-log");
-        if(logEl) logEl.innerHTML = "";
-        isFirstQuestion = true; 
-
         renderEnseignements();
         renderMurmures();
         renderParabole();
@@ -413,7 +408,6 @@
         }
     }
 
-    // --- LE NOUVEAU SAGE INTELLIGENT ---
     function askSage() {
         if (isTyping) return;
         const inputEl = document.getElementById("sage-input");
@@ -439,9 +433,9 @@
             }, 100);
         }
 
-        let topic = "soi_atman"; // Sujet par défaut
+        let topic = "soi_atman"; 
 
-        // DÉTECTION DES MOTS-CLÉS (ROUTAGE AVANCÉ)
+        // --- NOUVELLE DÉTECTION DES MOTS-CLÉS ---
         if (q.includes("suicide") || q.includes("panique") || q.includes("dépression") || q.includes("douleur") || q.includes("médecin") || q.includes("malade") || q.includes("hôpital") || q.includes("panic") || q.includes("pain")) {
             topic = "ethique_securite";
         }
@@ -473,6 +467,12 @@
             topic = "routine_base";
         }
 
+        // --- SÉCURITÉ SUPPLÉMENTAIRE ---
+        // Si le mot-clé n'est pas trouvé dans sageBrain, on force un sujet par défaut
+        if (!sageBrain[currentLang][topic]) {
+            topic = "soi_atman";
+        }
+
         const data = sageBrain[currentLang][topic];
         let randomCore = data.core[Math.floor(Math.random() * data.core.length)];
         let randomScience = data.science[Math.floor(Math.random() * data.science.length)];
@@ -497,11 +497,12 @@
             prefix = introArray[Math.floor(Math.random() * introArray.length)];
         }
 
-        // Signature du texte du Sage
+        // Ajout de la signature
         let signature = currentLang === 'fr' ? "\n\n🪷 <i>Le Temple du Silence</i>" : "\n\n🪷 <i>The Temple of Silence</i>";
 
         let finalResponse = `« ${prefix}${randomCore}\n\n${randomScience}\n\n${randomPacing} »${signature}`;
 
+        // Modification mineure de typeWriter pour accepter les retours à la ligne (\n)
         typeWriter(finalResponse, 0, logEl, () => {
             isTyping = false;
             if (audioResonance) {
@@ -520,7 +521,11 @@
     // Effet machine à écrire modifié pour supporter les sauts de ligne (\n)
     function typeWriter(text, i, el, callback) {
         if (i < text.length) {
-            el.innerHTML += text.charAt(i) === '\n' ? '<br>' : text.charAt(i);
+            if (text.charAt(i) === '\n') {
+                el.innerHTML += '<br>';
+            } else {
+                el.innerHTML += text.charAt(i);
+            }
             setTimeout(() => typeWriter(text, i + 1, el, callback), 25);
         } else {
             if(callback) callback();

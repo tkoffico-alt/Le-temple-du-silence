@@ -155,7 +155,7 @@ const MURMURES_DATABASE = {
         {
             title: "Le Roseau et l'Orage",
             audioFile: "", 
-            imageFile: "",
+            imageFile: "roseau_sumie.webp",
             videoFile: "",
             text: "Tu t'épuises à bâtir des forteresses. Dans ton effort constant pour te rendre invulnérable, ton corps se crispe et ton souffle se verrouille. Comprends ceci : la véritable force ne réside pas dans l'armure. Elle s'éveille à l'instant même où tu cesses de lutter contre le fait d'être affecté. Laisse l'impact traverser ton système nerveux comme le vent traverse les feuilles."
         },
@@ -192,7 +192,7 @@ const MURMURES_DATABASE = {
         {
             title: "The Reed and the Storm",
             audioFile: "",
-            imageFile: "",
+            imageFile: "roseau_sumie.webp",
             videoFile: "",
             text: "You exhaust yourself building fortresses. In your constant effort to make yourself invulnerable, your body tenses and your breath locks. Understand this: true strength does not reside in armor. It awakens the very moment you stop fighting the fact of being affected. Let the impact pass through your nervous system like the wind through the leaves."
         },
@@ -757,3 +757,4 @@ const PARABOLE_DATA = {
         `
     }
 };
+

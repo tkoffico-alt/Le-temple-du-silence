@@ -169,13 +169,12 @@
 
     <script src="contenu.js"></script>
 
-    <script>
+ <script>
     let currentLang = 'fr';
     let isTyping = false;
     let isFirstQuestion = true; 
     
     // --- 🧠 PILIER 1 : LA MÉMOIRE DU SAGE ---
-    // Cette variable va retenir le dernier sujet abordé
     let previousTopic = "universel"; 
 
     function createDustParticles() {
@@ -214,7 +213,7 @@
 
         if (player.paused) {
             player.play().catch(e => {
-                alert(currentLang === 'fr' ? "Le fichier audio (parabole_fr.mp3 ou parabole_en.mp3) est introuvable sur le serveur." : "The audio file is missing on the server.");
+                alert(currentLang === 'fr' ? "Le fichier audio est introuvable." : "The audio file is missing.");
             });
             icon.innerText = "⏸️";
         } else {
@@ -445,43 +444,43 @@
 
         if (urgenceDetectee) {
             topic = "ethique_securite";
-            previousTopic = topic; // Mise à jour de la mémoire en cas d'urgence
+            previousTopic = topic; 
         } else {
-            // --- 2. SCORING SÉMANTIQUE ---
+            
+            // --- 🧠 PILIER 2 : SCORING AVANCÉ AVEC REGEX & NÉGATIONS ---
             const scores = {
-                surcharge_ancrage: 0,
-                interoception: 0,
-                resilience: 0,
-                detachement: 0,
-                karma_action: 0,
-                elan_vital: 0,
-                maya_illusion: 0,
-                brahman_absolu: 0,
-                advaita_non_dualite: 0,
-                meditation_presence: 0,
-                routine_base: 0
+                surcharge_ancrage: 0, interoception: 0, resilience: 0, detachement: 0,
+                karma_action: 0, elan_vital: 0, maya_illusion: 0, brahman_absolu: 0,
+                advaita_non_dualite: 0, meditation_presence: 0, routine_base: 0
             };
 
-            const dictionnaires = {
-                surcharge_ancrage: ["insomnie", "dors mal", "agité", "nerveux", "pression", "surcharge", "trop", "ancrage", "grounding", "fatigue", "épuisé", "fou", "craquer", "bizarre", "sommeil", "dors", "nuit", "détendre"],
-                interoception: ["corps", "tension", "respiration", "souffle", "sensation", "stress", "nuque", "ventre", "physique", "mal", "ressens", "cœur", "coeur", "tête", "tete", "douleur"],
-                resilience: ["touché", "brisé", "critique", "échec", "déception", "choc", "triste", "colère", "peur", "courage", "resilience", "perdu", "pleurer", "souffrance", "malheureux", "dur", "difficile", "abandonner", "pleure"],
-                detachement: ["attente", "détachement", "lâcher", "travail", "pourquoi", "sens", "but", "vouloir", "désir", "ego", "égo", "attachement", "attendre", "futur", "passé", "contrôle"],
-                karma_action: ["action", "choix", "résultat", "karma", "juste", "décision", "choisir", "faire", "agir", "dilemme", "devoir"],
-                elan_vital: ["motivation", "élan", "projet", "bloqué", "envie", "énergie", "avancer", "force", "procrastination"],
-                maya_illusion: ["fuite", "illusion", "maya", "plaisir", "conditionnement", "habitude", "faux", "mensonge", "matériel", "société", "matrice"],
-                brahman_absolu: ["dieu", "absolu", "brahman", "univers", "créateur", "tout", "divin", "vérité", "vrai"],
-                advaita_non_dualite: ["unité", "séparation", "non-dualité", "advaita", "seul", "autre", "monde", "vie", "relié", "ensemble"],
-                meditation_presence: ["méditation", "silence", "présence", "samadhi", "absorption", "calme", "esprit", "paix", "tranquille", "penser", "pensées", "mental", "cerveau", "vide", "méditer", "assis"],
-                routine_base: ["routine", "pratique", "commencer", "temps", "régulier", "comment", "aide", "conseil", "débutant", "apprendre", "jour", "méthode", "technique"]
+            // ÉTAPE A : Filtrage intelligent des négations
+            // Si le visiteur dit "Je n'ai pas peur", le code efface "pas peur" pour ne pas compter le mot "peur" par erreur.
+            let phraseAnalysee = q.replace(/\b(pas|plus|sans|aucun|aucune|jamais)\s+([a-zà-ÿ]+)/gi, "");
+
+            // ÉTAPE B : Dictionnaires par Racines (Stemming)
+            // Le code "\b" signifie que le mot doit commencer par ces lettres. "[a-zà-ÿ]*" attrape le reste du mot.
+            // Ex: "médit" capte automatiquement méditer, méditation, méditant...
+            const dictionnairesRegex = {
+                surcharge_ancrage: /\b(insomni|dor|agit|nerveu|pression|surcharg|trop|ancrag|grounding|fatigu|épuis|epuis|fou|craqu|bizarr|sommeil|nuit|détend)[a-zà-ÿ]*/gi,
+                interoception: /\b(corps|tension|respir|souffl|sensation|stress|nuqu|ventr|physiqu|mal|ressens|cœur|coeur|têt|tet|douleur)[a-zà-ÿ]*/gi,
+                resilience: /\b(touch|bris|critiqu|échec|echec|décept|decept|choc|trist|colèr|coler|peur|courag|resilien|perdu|pleur|souffr|malheureu|dur|difficil|abandon)[a-zà-ÿ]*/gi,
+                detachement: /\b(attent|détach|detach|lâch|lach|travail|pourquoi|sens|but|vouloir|désir|desir|ego|égo|attach|futur|passé|passe|contrôl|control)[a-zà-ÿ]*/gi,
+                karma_action: /\b(action|choix|résultat|resultat|karma|juste|décision|decision|choisi|fair|agir|dilemm|devoir)[a-zà-ÿ]*/gi,
+                elan_vital: /\b(motiv|élan|elan|projet|bloqu|envi|énergi|energi|avanc|forc|procrastin)[a-zà-ÿ]*/gi,
+                maya_illusion: /\b(fuit|illusion|maya|plaisir|conditionnement|habitud|faux|mensong|matériel|materiel|sociét|societ|matric)[a-zà-ÿ]*/gi,
+                brahman_absolu: /\b(dieu|absolu|brahman|univers|créateur|createur|tout|divin|vérit|verit|vrai)[a-zà-ÿ]*/gi,
+                advaita_non_dualite: /\b(unité|unite|séparat|separat|non-dual|advaita|seul|autr|mond|vie|relié|ensembl)[a-zà-ÿ]*/gi,
+                meditation_presence: /\b(médit|medit|silenc|présenc|presence|samadhi|absorpt|calm|esprit|paix|tranquil|pens|mental|cerveau|vid|assis)[a-zà-ÿ]*/gi,
+                routine_base: /\b(routin|pratiqu|commenc|temps|régulier|regulier|comment|aid|conseil|début|debut|apprend|jour|méthod|method|techniqu)[a-zà-ÿ]*/gi
             };
 
-            for (let categorie in dictionnaires) {
-                dictionnaires[categorie].forEach(mot => {
-                    if (q.includes(mot) || q.includes(" " + mot + " ")) {
-                        scores[categorie] += 1;
-                    }
-                });
+            // ÉTAPE C : Comptage des points
+            for (let categorie in dictionnairesRegex) {
+                let correspondances = phraseAnalysee.match(dictionnairesRegex[categorie]);
+                if (correspondances) {
+                    scores[categorie] += correspondances.length;
+                }
             }
 
             let maxScore = 0;
@@ -494,24 +493,19 @@
                 }
             }
 
-            // --- 3. L'APPLICATION DU PILIER 1 (MÉMOIRE) ---
+            // --- PILIER 1 (MÉMOIRE) : Conservation du sujet ---
             if (maxScore > 0) {
-                // Si le Sage a trouvé un thème dans la phrase du visiteur, il l'adopte et s'en souvient
                 topic = detectedTopic;
                 previousTopic = topic; 
             } else {
-                // Si la phrase ne contient aucun mot clé (ex: "Pourquoi ?", "C'est difficile"), 
-                // le Sage ressort le dernier thème abordé depuis sa mémoire pour faire un suivi logique !
-                topic = previousTopic;
+                topic = previousTopic; // Le Sage se souvient de quoi on parlait !
             }
         }
 
-        // Sécurité ultime au cas où
         if (!sageBrain[currentLang] || !sageBrain[currentLang][topic]) {
             topic = "universel";
         }
 
-        // --- GÉNÉRATION DE LA RÉPONSE ---
         const data = sageBrain[currentLang][topic];
         let randomCore = data.core[Math.floor(Math.random() * data.core.length)];
         let randomScience = data.science[Math.floor(Math.random() * data.science.length)];
@@ -536,6 +530,7 @@
             prefix = introArray[Math.floor(Math.random() * introArray.length)];
         }
 
+        // Le Sceau
         let signatureText = currentLang === 'fr' ? "Le Temple du Silence" : "The Temple of Silence";
         let signature = `<br><br><div style="display: flex; justify-content: flex-end; align-items: center; opacity: 0.9; font-style: italic;">
             <span style="color: var(--accent-color); margin-right: 12px;">${signatureText}</span>
@@ -586,5 +581,7 @@
         renderParabole();
     };
     </script>
+    </script>
 </body>
 </html>
+

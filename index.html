@@ -43,6 +43,8 @@
 
     <main>
         <section id="sage" class="section active">
+            <div id="particles-container"></div>
+
             <div id="chat-container">
                 <div id="chat-log"></div>
                 <div class="input-area">
@@ -54,7 +56,7 @@
                 </div>
             </div>
             
-            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 20px; opacity: 0.85;">
+            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 20px; opacity: 0.85; position: relative; z-index: 1;">
                 <span class="fr" style="font-style: italic; font-size: 1rem; color: var(--accent-color); margin-right: 15px;">Œuvre Originale & Propriété de la Lignée</span>
                 <span class="en" style="display:none; font-style: italic; font-size: 1rem; color: var(--accent-color); margin-right: 15px;">Original Work & Lineage Property</span>
                 <img src="signature-ayp.png" alt="Signature Lignée" style="height: 45px; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));">
@@ -74,13 +76,28 @@
         <section id="parabole" class="section">
             <div class="teaching-article parchment-text">
                 <h2 id="parabole-title" style="text-align:center;"></h2>
+                
+                <div class="audio-parabole-container">
+                    <audio id="audio-parabole-player" preload="none"></audio>
+                    <button id="btn-play-parabole" class="zen-btn" style="font-size: 1.1rem; padding: 10px 20px;" onclick="toggleParaboleAudio()">
+                        <span id="parabole-icon">🎧</span> 
+                        <span id="parabole-text-fr" class="fr">Écouter la voix du pèlerin</span>
+                        <span id="parabole-text-en" class="en" style="display:none;">Listen to the pilgrim's voice</span>
+                    </button>
+                </div>
+
                 <div id="parabole-text"></div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
         <p>© 2026 Le Temple du Silence. <span class="en" style="display:none;">All rights reserved.</span><span class="fr">Tous droits réservés.</span></p>
+        <div style="font-family: 'Cormorant Garamond', serif; color: var(--accent-color); font-size: 1.1rem; opacity: 0.8; letter-spacing: 1px;">
+            <span class="fr">Âmes ayant traversé le pont : </span>
+            <span class="en" style="display:none;">Souls who crossed the bridge: </span>
+            <span id="visitor-count" style="font-weight: bold; border-bottom: 1px solid var(--accent-color);">--</span>
+        </div>
     </footer>
 
     <script src="contenu.js"></script>
@@ -89,6 +106,67 @@
     let currentLang = 'fr';
     let isTyping = false;
     let isFirstQuestion = true; 
+
+    // --- LOGIQUE DE LA POUSSIÈRE MAGIQUE ---
+    function createDustParticles() {
+        const container = document.getElementById('particles-container');
+        const particleCount = 40; // Nombre de particules
+        container.innerHTML = ''; // Nettoyer
+        
+        for(let i = 0; i < particleCount; i++) {
+            let particle = document.createElement('div');
+            particle.className = 'dust-particle';
+            
+            // Propriétés aléatoires
+            let size = Math.random() * 3 + 1; // Taille entre 1 et 4px
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDuration = (Math.random() * 15 + 10) + 's'; // Vitesse lente
+            particle.style.animationDelay = (Math.random() * 10) + 's';
+            
+            container.appendChild(particle);
+        }
+    }
+
+    // --- LOGIQUE DU COMPTEUR ---
+    function initVisitorCounter() {
+        // Base fictive qui s'incrémente doucement pour simuler la vie du temple
+        let count = localStorage.getItem('templeVisitorCount');
+        if (!count) {
+            count = 1408; // Chiffre de départ symbolique
+        } else {
+            // Petite incrémentation aléatoire pour donner l'illusion d'un flux
+            count = parseInt(count) + Math.floor(Math.random() * 3) + 1;
+        }
+        localStorage.setItem('templeVisitorCount', count);
+        document.getElementById('visitor-count').innerText = count;
+    }
+
+    // --- LOGIQUE AUDIO DE LA PARABOLE ---
+    function toggleParaboleAudio() {
+        const player = document.getElementById('audio-parabole-player');
+        const icon = document.getElementById('parabole-icon');
+        
+        // Assigner le bon fichier selon la langue si ce n'est pas déjà fait
+        const targetSrc = currentLang === 'fr' ? 'parabole_fr.mp3' : 'parabole_en.mp3';
+        if (!player.src.endsWith(targetSrc)) {
+            player.src = targetSrc;
+        }
+
+        if (player.paused) {
+            player.play().catch(e => {
+                alert(currentLang === 'fr' ? "Le fichier audio n'a pas encore été déposé sur le serveur." : "The audio file has not yet been uploaded to the server.");
+            });
+            icon.innerText = "⏸️";
+        } else {
+            player.pause();
+            icon.innerText = "🎧";
+        }
+        
+        player.onended = () => { icon.innerText = "🎧"; };
+    }
 
     // Fonction Bouton Unique de Langue
     function toggleLang() {
@@ -116,6 +194,13 @@
             themeBtn.innerText = isLight ? 'Obscurité' : 'Clarté';
         } else {
             themeBtn.innerText = isLight ? 'Darkness' : 'Light';
+        }
+
+        // Arrêter l'audio s'il tourne pendant le changement de langue
+        const player = document.getElementById('audio-parabole-player');
+        if (!player.paused) {
+            player.pause();
+            document.getElementById('parabole-icon').innerText = "🎧";
         }
 
         renderEnseignements();
@@ -171,7 +256,6 @@
         });
     }
 
-    // Modification majeure ici pour intégrer le partage de vidéo et d'audio
     function renderMurmures() {
         const container = document.getElementById("murmures-list-container");
         container.innerHTML = ""; 
@@ -200,24 +284,12 @@
                 }
             }
 
-            let shareText = currentLang === 'fr' ? "Partager l'enseignement" : "Share teaching";
-            let shareVideoBtnHTML = "";
-            let shareAudioBtnHTML = "";
             let textShareLabel = currentLang === 'fr' ? 'Partager le texte' : 'Share text';
             let videoShareLabel = currentLang === 'fr' ? 'Partager la vidéo' : 'Share video';
             let audioShareLabel = currentLang === 'fr' ? 'Partager l\'audio' : 'Share audio';
             
-            if (murmure.videoFile) {
-                shareVideoBtnHTML = `<button class="zen-btn sharing-btn video-share-btn" style="font-size: 0.8rem; opacity: 0.7; margin: 0; padding: 5px 10px;" onclick="partagerVideoMurmure(${index})">
-                    🎥 ${videoShareLabel}
-                </button>`;
-            }
-            
-            if (murmure.audioFile) {
-                shareAudioBtnHTML = `<button class="zen-btn sharing-btn audio-share-btn" style="font-size: 0.8rem; opacity: 0.7; margin: 0; padding: 5px 10px;" onclick="partagerAudioMurmure(${index})">
-                    🎵 ${audioShareLabel}
-                </button>`;
-            }
+            let shareVideoBtnHTML = murmure.videoFile ? `<button class="zen-btn sharing-btn video-share-btn" style="font-size: 0.8rem; opacity: 0.7; margin: 0; padding: 5px 10px;" onclick="partagerVideoMurmure(${index})">🎥 ${videoShareLabel}</button>` : "";
+            let shareAudioBtnHTML = murmure.audioFile ? `<button class="zen-btn sharing-btn audio-share-btn" style="font-size: 0.8rem; opacity: 0.7; margin: 0; padding: 5px 10px;" onclick="partagerAudioMurmure(${index})">🎵 ${audioShareLabel}</button>` : "";
 
             const murmureHTML = `
                 <div class="murmure-item">
@@ -244,70 +316,50 @@
         document.getElementById("parabole-text").innerHTML = PARABOLE_DATA[currentLang].text + getSignatureHTML();
     }
 
-    // Le partage inclut désormais l'URL du site et indique s'il y a un média
     function partagerMurmure(index) {
         const murmure = MURMURES_DATABASE[currentLang][index];
         let tempDiv = document.createElement("div");
         tempDiv.innerHTML = document.getElementById(`texte-murmure-${index}`).innerHTML.replace(/<br>/g, '\n');
         const texteBrut = tempDiv.innerText || tempDiv.textContent;
-        
         const titre = murmure.title;
-        // Permet d'avoir l'URL du site
         const lienSite = window.location.href.split('#')[0]; 
-        
-        // Enlever les liens média ici pour ne partager que le texte brut et le lien vers le site
         const texteAPartager = `✨ ${titre} ✨\n\n"${texteBrut}"\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
 
         if (navigator.share) {
-            navigator.share({
-                title: titre,
-                text: texteAPartager,
-            }).catch(console.error);
+            navigator.share({ title: titre, text: texteAPartager }).catch(console.error);
         } else {
             navigator.clipboard.writeText(texteAPartager).then(() => {
-                const msg = currentLang === 'fr' ? "Texte copié dans le presse-papiers !" : "Text copied to clipboard!";
-                alert(msg);
+                alert(currentLang === 'fr' ? "Texte copié dans le presse-papiers !" : "Text copied to clipboard!");
             });
         }
     }
 
-    // Nouvelles fonctions pour partager spécifiquement les médias
     function partagerVideoMurmure(index) {
         const murmure = MURMURES_DATABASE[currentLang][index];
-        const titre = murmure.title;
         const lienSite = window.location.href.split('#')[0]; 
         const lienVideo = lienSite + murmure.videoFile;
-        const texteAPartager = `🎥 ${titre} ✨ Vidéo\n\nLien : ${lienVideo}\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
+        const texteAPartager = `🎥 ${murmure.title} ✨ Vidéo\n\nLien : ${lienVideo}\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
         
         if (navigator.share) {
-            navigator.share({
-                title: titre,
-                text: texteAPartager,
-            }).catch(console.error);
+            navigator.share({ title: murmure.title, text: texteAPartager }).catch(console.error);
         } else {
             navigator.clipboard.writeText(texteAPartager).then(() => {
-                const msg = currentLang === 'fr' ? "Lien vidéo copié !" : "Video link copied!";
-                alert(msg);
+                alert(currentLang === 'fr' ? "Lien vidéo copié !" : "Video link copied!");
             });
         }
     }
     
     function partagerAudioMurmure(index) {
         const murmure = MURMURES_DATABASE[currentLang][index];
-        const titre = murmure.title;
         const lienSite = window.location.href.split('#')[0]; 
         const lienAudio = lienSite + murmure.audioFile;
-        const texteAPartager = `🎵 ${titre} ✨ Audio\n\nLien : ${lienAudio}\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
+        const texteAPartager = `🎵 ${murmure.title} ✨ Audio\n\nLien : ${lienAudio}\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
         
         if (navigator.share) {
-            navigator.share({
-                title: titre,
-                text: texteAPartager,
-            }).catch(console.error);
+            navigator.share({ title: murmure.title, text: texteAPartager }).catch(console.error);
         } else {
             navigator.clipboard.writeText(texteAPartager).then(() => {
-                const msg = currentLang === 'fr' ? "Lien audio copié !" : "Audio link copied!";
-                alert(msg);
+                alert(currentLang === 'fr' ? "Lien audio copié !" : "Audio link copied!");
             });
         }
     }
@@ -471,6 +523,8 @@
     }
 
     window.onload = () => {
+        createDustParticles();
+        initVisitorCounter();
         renderEnseignements();
         renderMurmures();
         renderParabole();

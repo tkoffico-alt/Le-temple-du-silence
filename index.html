@@ -435,7 +435,7 @@
 
         let topic = "soi_atman"; 
 
-        // --- NOUVELLE DÉTECTION DES MOTS-CLÉS ---
+        // --- NOUVEAU ROUTAGE (Mots-clés) ---
         if (q.includes("suicide") || q.includes("panique") || q.includes("dépression") || q.includes("douleur") || q.includes("médecin") || q.includes("malade") || q.includes("hôpital") || q.includes("panic") || q.includes("pain")) {
             topic = "ethique_securite";
         }
@@ -467,10 +467,11 @@
             topic = "routine_base";
         }
 
-        // --- SÉCURITÉ SUPPLÉMENTAIRE ---
-        // Si le mot-clé n'est pas trouvé dans sageBrain, on force un sujet par défaut
-        if (!sageBrain[currentLang][topic]) {
-            topic = "soi_atman";
+        // --- SÉCURITÉ ANTI-CRASH : Fallback si le nouveau cerveau n'est pas encore dans contenu.js ---
+        if (sageBrain[currentLang]["universel"] && !sageBrain[currentLang][topic]) {
+             topic = "universel"; // Si l'ancien cerveau est détecté
+        } else if (!sageBrain[currentLang][topic]) {
+             topic = Object.keys(sageBrain[currentLang])[0]; // Sécurité maximale
         }
 
         const data = sageBrain[currentLang][topic];
@@ -497,12 +498,10 @@
             prefix = introArray[Math.floor(Math.random() * introArray.length)];
         }
 
-        // Ajout de la signature
         let signature = currentLang === 'fr' ? "\n\n🪷 <i>Le Temple du Silence</i>" : "\n\n🪷 <i>The Temple of Silence</i>";
 
         let finalResponse = `« ${prefix}${randomCore}\n\n${randomScience}\n\n${randomPacing} »${signature}`;
 
-        // Modification mineure de typeWriter pour accepter les retours à la ligne (\n)
         typeWriter(finalResponse, 0, logEl, () => {
             isTyping = false;
             if (audioResonance) {
@@ -518,7 +517,6 @@
         });
     }
 
-    // Effet machine à écrire modifié pour supporter les sauts de ligne (\n)
     function typeWriter(text, i, el, callback) {
         if (i < text.length) {
             if (text.charAt(i) === '\n') {

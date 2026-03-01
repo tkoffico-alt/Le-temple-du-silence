@@ -302,3 +302,52 @@ footer {
     position: relative;
     z-index: 1;
 }
+/* --- ACCORDÉONS POUR ENSEIGNEMENTS & MURMURES --- */
+.teaching-accordion {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.accordion-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    color: var(--accent-color);
+    cursor: pointer;
+    padding: 15px 0;
+    list-style: none; /* Enlève la flèche par défaut */
+    transition: color 0.3s ease;
+}
+
+.accordion-title::-webkit-details-marker {
+    display: none; /* Enlève la flèche sur Chrome/Safari */
+}
+
+.accordion-title:hover {
+    color: #fff;
+}
+
+/* Ajout d'un symbole "+" ou "-" personnalisé */
+.accordion-title::before {
+    content: '+ ';
+    font-size: 1.8rem;
+    margin-right: 10px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+details[open] .accordion-title::before {
+    content: '- ';
+}
+
+.accordion-content {
+    padding: 20px;
+    background: rgba(10, 10, 10, 0.4);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

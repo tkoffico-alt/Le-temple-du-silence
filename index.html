@@ -169,368 +169,321 @@
 
     <script src="contenu.js"></script>
 
-    <script>
-    let currentLang = 'fr';
-    let isTyping = false;
-    let isFirstQuestion = true; 
+  <script>
+        let currentLang = 'fr';
+        let isTyping = false;
+        let isFirstQuestion = true;
 
-    function createDustParticles() {
-        const container = document.getElementById('particles-container');
-        const particleCount = 40;
-        container.innerHTML = ''; 
-        
-        for(let i = 0; i < particleCount; i++) {
-            let particle = document.createElement('div');
-            particle.className = 'dust-particle';
-            let size = Math.random() * 3 + 1; 
-            particle.style.width = size + 'px';
-            particle.style.height = size + 'px';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = Math.random() * 100 + '%';
-            particle.style.animationDuration = (Math.random() * 15 + 10) + 's'; 
-            particle.style.animationDelay = (Math.random() * 10) + 's';
-            container.appendChild(particle);
-        }
-    }
+        const UI_TEXTS = {
+            fr: {
+                navMurmures: "Murmures",
+                navEnseignements: "Enseignements",
+                navSage: "Le Sage",
+                sagePlaceholder: "Confiez votre doute au silence...",
+                sageBtn: "Demander",
+                shareText: "Partager texte",
+                shareMedia: "Partager média",
+                downloadBtn: "Télécharger",
+                comingSoon: "Bientôt disponible."
+            },
+            en: {
+                navMurmures: "Whispers",
+                navEnseignements: "Teachings",
+                navSage: "The Sage",
+                sagePlaceholder: "Confide your doubt to the silence...",
+                sageBtn: "Ask",
+                shareText: "Share text",
+                shareMedia: "Share media",
+                downloadBtn: "Download",
+                comingSoon: "Coming soon."
+            }
+        };
 
-    function initVisitorCounter() {
-        let count = localStorage.getItem('templeVisitorCount');
-        if (!count) { count = 1408; } 
-        else { count = parseInt(count) + Math.floor(Math.random() * 3) + 1; }
-        localStorage.setItem('templeVisitorCount', count);
-        document.getElementById('visitor-count').innerText = count;
-    }
-
-    function toggleParaboleAudio() {
-        const player = document.getElementById('audio-parabole-player');
-        const icon = document.getElementById('parabole-icon');
-        const targetSrc = currentLang === 'fr' ? 'parabole_fr.mp3' : 'parabole_en.mp3';
-        
-        if (!player.src.endsWith(targetSrc)) { player.src = targetSrc; }
-
-        if (player.paused) {
-            player.play().catch(e => {
-                alert(currentLang === 'fr' ? "Le fichier audio (parabole_fr.mp3 ou parabole_en.mp3) est introuvable sur le serveur." : "The audio file is missing on the server.");
-            });
-            icon.innerText = "⏸️";
-        } else {
-            player.pause();
-            icon.innerText = "🎧";
-        }
-        player.onended = () => { icon.innerText = "🎧"; };
-    }
-
-    function toggleLang() {
-        if (currentLang === 'fr') {
-            switchLang('en');
-            document.getElementById('lang-toggle').innerText = 'Français';
-        } else {
-            switchLang('fr');
-            document.getElementById('lang-toggle').innerText = 'English';
-        }
-    }
-
-    function switchLang(lang) {
-        currentLang = lang;
-        document.querySelectorAll('.fr').forEach(el => el.style.display = lang === 'fr' ? 'inline' : 'none');
-        document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? 'inline' : 'none');
-
-        const inputPlaceholder = lang === 'fr' ? "Posez votre question à l'Univers..." : "Ask your question to the Universe...";
-        document.getElementById('sage-input').placeholder = inputPlaceholder;
-
-        const themeBtn = document.getElementById('theme-toggle');
-        const isLight = document.body.classList.contains('light-mode');
-        themeBtn.innerText = lang === 'fr' ? (isLight ? 'Obscurité' : 'Clarté') : (isLight ? 'Darkness' : 'Light');
-
-        const player = document.getElementById('audio-parabole-player');
-        if (!player.paused) {
-            player.pause();
-            document.getElementById('parabole-icon').innerText = "🎧";
-        }
-
-        renderEnseignements();
-        renderMurmures();
-        renderParabole();
-    }
-
-    function toggleTheme() {
-        const body = document.body;
-        const btn = document.getElementById('theme-toggle');
-        body.classList.toggle('light-mode');
-        btn.innerText = currentLang === 'fr' ? (body.classList.contains('light-mode') ? 'Obscurité' : 'Clarté') : (body.classList.contains('light-mode') ? 'Darkness' : 'Light');
-    }
-
-    function showSection(sectionId) {
-        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-        document.getElementById(sectionId).classList.add('active');
-        document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-        document.getElementById(`nav-${sectionId}`).classList.add('active');
-    }
-
-    function getSignatureHTML() {
-        const signatureText = currentLang === 'fr' ? "Œuvre Originale & Propriété de la Lignée" : "Original Work & Lineage Property";
-        return `
-            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 40px; opacity: 0.85;">
-                <span style="font-style: italic; font-size: 1rem; color: var(--accent-color); margin-right: 15px;">${signatureText}</span>
-                <img src="signature-ayp.png" alt="Signature Lignée" style="height: 45px; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));">
-            </div>
-        `;
-    }
-
-    // --- CORRECTION : Rendu des Enseignements ---
-    function renderEnseignements() {
-        const container = document.getElementById("enseignements-container");
-        container.innerHTML = ""; 
-        const currentData = TEACHINGS_DATABASE[currentLang];
-
-        if (currentData.length === 0) {
-            container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${currentLang === 'fr' ? "Bientôt disponible." : "Coming soon."}</p>`;
-            return;
-        }
-
-        currentData.forEach((item) => {
-            const article = document.createElement("details");
-            article.className = "teaching-accordion";
-            // On injecte le Body correctement ici
-            article.innerHTML = `
-                <summary class="accordion-title">${item.title}</summary>
-                <div class="accordion-content parchment-text">
-                    ${item.body}
-                    ${getSignatureHTML()}
-                </div>
-            `;
-            container.appendChild(article);
-        });
-    }
-
-    // --- CORRECTION : Rendu des Murmures ---
-  function renderMurmures() {
-        const container = document.getElementById("murmures-list-container");
-        container.innerHTML = ""; 
-        const currentMurmures = MURMURES_DATABASE[currentLang];
-
-        if (currentMurmures.length === 0) {
-            container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${currentLang === 'fr' ? "Bientôt disponible." : "Coming soon."}</p>`;
-            return;
-        }
-
-        currentMurmures.forEach((murmure, index) => {
-            let mediaHTML = "";
-            let downloadBtnHTML = ""; 
+        function switchLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + lang).classList.add('active');
+            updateUILanguage();
+            renderMurmures();
+            renderTeachings();
             
-            if (murmure.videoFile && murmure.videoFile !== "") {
-                // S'il y a une vidéo
-                mediaHTML += `<video controls src="${murmure.videoFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></video>`;
-                let downloadText = currentLang === 'fr' ? "Télécharger" : "Download";
-                downloadBtnHTML = `<a href="${murmure.videoFile}" download class="zen-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;">📥 ${downloadText}</a>`;
-            } 
-            else {
-                // S'il n'y a pas de vidéo, on affiche l'image ET l'audio s'ils existent
-                if (murmure.imageFile && murmure.imageFile !== "") {
-                    mediaHTML += `<img src="${murmure.imageFile}" alt="Illustration" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">`;
-                }
-                if (murmure.audioFile && murmure.audioFile !== "") {
-                    mediaHTML += `<audio controls src="${murmure.audioFile}" style="width: 100%; margin-bottom: 15px;"></audio>`;
-                }
+            // Réinitialise le chat si on change de langue
+            document.getElementById("chat-log").innerHTML = "";
+            isFirstQuestion = true; 
+        }
+
+        function updateUILanguage() {
+            const texts = UI_TEXTS[currentLang];
+            document.querySelector('a[href="#murmures"]').innerText = texts.navMurmures;
+            document.querySelector('a[href="#enseignements"]').innerText = texts.navEnseignements;
+            document.querySelector('a[href="#sage"]').innerText = texts.navSage;
+            document.getElementById('sage-input').placeholder = texts.sagePlaceholder;
+            document.querySelector('#sage button').innerText = texts.sageBtn;
+            document.querySelector('#murmures h2').innerText = texts.navMurmures;
+            document.querySelector('#enseignements h2').innerText = texts.navEnseignements;
+            document.querySelector('#sage h2').innerText = texts.navSage;
+        }
+
+        function getSignatureHTML() {
+            return `<div class="signature" style="text-align: right; margin-top: 20px; font-style: italic; opacity: 0.8;">🪷 ${currentLang === 'fr' ? 'Le Temple du Silence' : 'The Temple of Silence'}</div>`;
+        }
+
+        function renderMurmures() {
+            const container = document.getElementById("murmures-list-container");
+            container.innerHTML = ""; 
+            const currentMurmures = MURMURES_DATABASE[currentLang];
+
+            if (currentMurmures.length === 0) {
+                container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${UI_TEXTS[currentLang].comingSoon}</p>`;
+                return;
             }
 
-            let textShareLabel = currentLang === 'fr' ? 'Partager texte' : 'Share text';
-            let mediaShareLabel = currentLang === 'fr' ? 'Partager média' : 'Share media';
-            
-            let shareMediaBtn = "";
-            if (murmure.videoFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerVideoMurmure(${index})">🎥 ${mediaShareLabel}</button>`;
-            else if (murmure.audioFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerAudioMurmure(${index})">🎵 ${mediaShareLabel}</button>`;
+            currentMurmures.forEach((murmure, index) => {
+                let mediaHTML = "";
+                let downloadBtnHTML = ""; 
+                
+                if (murmure.videoFile && murmure.videoFile !== "") {
+                    mediaHTML += `<video controls src="${murmure.videoFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></video>`;
+                    downloadBtnHTML = `<a href="${murmure.videoFile}" download class="zen-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;">📥 ${UI_TEXTS[currentLang].downloadBtn}</a>`;
+                } 
+                else {
+                    if (murmure.imageFile && murmure.imageFile !== "") {
+                        mediaHTML += `<img src="${murmure.imageFile}" alt="Illustration" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">`;
+                    }
+                    if (murmure.audioFile && murmure.audioFile !== "") {
+                        mediaHTML += `<audio controls src="${murmure.audioFile}" style="width: 100%; margin-bottom: 15px;"></audio>`;
+                    }
+                }
 
-            const murmureHTML = `
-                <details class="teaching-accordion">
-                    <summary class="accordion-title">${index + 1}. ${murmure.title}</summary>
-                    <div class="accordion-content">
-                        ${mediaHTML}
-                        <div id="texte-murmure-${index}" class="parchment-text">${murmure.text}</div>
-                        ${getSignatureHTML()} 
-                        <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 25px;">
-                            <button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerMurmure(${index})">✨ ${textShareLabel}</button>
-                            ${shareMediaBtn}
-                            ${downloadBtnHTML}
+                let shareMediaBtn = "";
+                if (murmure.videoFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerVideoMurmure(${index})">🎥 ${UI_TEXTS[currentLang].shareMedia}</button>`;
+                else if (murmure.audioFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerAudioMurmure(${index})">🎵 ${UI_TEXTS[currentLang].shareMedia}</button>`;
+
+                const murmureHTML = `
+                    <details class="teaching-accordion">
+                        <summary class="accordion-title">${index + 1}. ${murmure.title}</summary>
+                        <div class="accordion-content">
+                            ${mediaHTML}
+                            <div id="texte-murmure-${index}" class="parchment-text">${murmure.text}</div>
+                            ${getSignatureHTML()} 
+                            <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 25px;">
+                                <button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerMurmure(${index})">✨ ${UI_TEXTS[currentLang].shareText}</button>
+                                ${shareMediaBtn}
+                                ${downloadBtnHTML}
+                            </div>
                         </div>
-                    </div>
-                </details>
-            `;
-            container.innerHTML += murmureHTML;
-        });
-    }
-
-    // --- CORRECTION : Rendu de la Parabole ---
-    function renderParabole() {
-        document.getElementById("parabole-title").innerText = PARABOLE_DATA[currentLang].title;
-        // On injecte le texte de la parabole ici
-        document.getElementById("parabole-text").innerHTML = PARABOLE_DATA[currentLang].text + getSignatureHTML();
-    }
-
-    function partagerMurmure(index) {
-        const murmure = MURMURES_DATABASE[currentLang][index];
-        let tempDiv = document.createElement("div");
-        tempDiv.innerHTML = document.getElementById(`texte-murmure-${index}`).innerHTML.replace(/<br>/g, '\n');
-        const texteBrut = tempDiv.innerText || tempDiv.textContent;
-        const titre = murmure.title;
-        const lienSite = window.location.href.split('#')[0]; 
-        const texteAPartager = `✨ ${titre} ✨\n\n"${texteBrut}"\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
-
-        if (navigator.share) {
-            navigator.share({ title: titre, text: texteAPartager }).catch(console.error);
-        } else {
-            navigator.clipboard.writeText(texteAPartager).then(() => {
-                alert(currentLang === 'fr' ? "Texte copié dans le presse-papiers !" : "Text copied to clipboard!");
+                    </details>
+                `;
+                container.innerHTML += murmureHTML;
             });
         }
-    }
 
-    function partagerVideoMurmure(index) {
-        const murmure = MURMURES_DATABASE[currentLang][index];
-        const lienSite = window.location.href.split('#')[0]; 
-        const lienVideo = lienSite + murmure.videoFile;
-        const texteAPartager = `🎥 ${murmure.title} ✨ Vidéo\n\nLien : ${lienVideo}\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
-        
-        if (navigator.share) {
-            navigator.share({ title: murmure.title, text: texteAPartager }).catch(console.error);
-        } else {
-            navigator.clipboard.writeText(texteAPartager).then(() => {
-                alert(currentLang === 'fr' ? "Lien vidéo copié !" : "Video link copied!");
-            });
-        }
-    }
-    
-    function partagerAudioMurmure(index) {
-        const murmure = MURMURES_DATABASE[currentLang][index];
-        const lienSite = window.location.href.split('#')[0]; 
-        const lienAudio = lienSite + murmure.audioFile;
-        const texteAPartager = `🎵 ${murmure.title} ✨ Audio\n\nLien : ${lienAudio}\n\nDécouvert sur le Temple du Silence : ${lienSite}`;
-        
-        if (navigator.share) {
-            navigator.share({ title: murmure.title, text: texteAPartager }).catch(console.error);
-        } else {
-            navigator.clipboard.writeText(texteAPartager).then(() => {
-                alert(currentLang === 'fr' ? "Lien audio copié !" : "Audio link copied!");
-            });
-        }
-    }
+        function renderTeachings() {
+            const container = document.getElementById("teachings-list-container");
+            container.innerHTML = "";
+            const currentTeachings = TEACHINGS_DATABASE[currentLang];
 
-    function askSage() {
-        if (isTyping) return;
-        const inputEl = document.getElementById("sage-input");
-        const logEl = document.getElementById("chat-log");
-        const audioResonance = document.getElementById("sage-resonance");
-        
-        let q = inputEl.value.trim().toLowerCase();
-        if (!q) return;
-
-        isTyping = true;
-        inputEl.value = "";
-        logEl.innerHTML = "";
-
-        audioResonance.volume = 0;
-        audioResonance.play();
-        let fadeAudioIn = setInterval(() => {
-            if (audioResonance.volume < 0.15) {
-                audioResonance.volume += 0.01;
-            } else {
-                clearInterval(fadeAudioIn);
+            if (currentTeachings.length === 0) {
+                container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${UI_TEXTS[currentLang].comingSoon}</p>`;
+                return;
             }
-        }, 100);
 
-        let topic = "universel"; 
-        if (q.includes("kundalini") || q.includes("energie") || q.includes("energy") || q.includes("shakti") || q.includes("shiva")) { topic = "kundalini"; } 
-        else if (q.includes("samyama cosmique") || q.includes("yoga nidra") || q.includes("nidra") || q.includes("cosmique") || q.includes("coucher") || q.includes("dormir") || q.includes("savasana") || q.includes("cosmic")) { topic = "samyama_cosmique"; } 
-        else if (q.includes("samyama") || q.includes("sutra") || q.includes("intention")) { topic = "samyama"; } 
-        else if (q.includes("respiration") || q.includes("spinale") || q.includes("pranayama") || q.includes("souffle") || q.includes("breathing") || q.includes("prana") || q.includes("colonne") || q.includes("ujjayi") || q.includes("hyperventilation") || q.includes("oxygène") || q.includes("oxygen")) { topic = "respiration"; } 
-        else if (q.includes("kechari") || q.includes("mudra") || q.includes("langue") || q.includes("frein") || q.includes("hymen") || q.includes("tongue") || q.includes("entailles") || q.includes("snips")) { topic = "kechari"; } 
-        else if (q.includes("meditation") || q.includes("silence") || q.includes("soi") || q.includes("turiya") || q.includes("sommeil") || q.includes("rêve") || q.includes("reve") || q.includes("écran") || q.includes("ecran") || q.includes("espace entre") || q.includes("sleep") || q.includes("dream") || q.includes("screen")) { topic = "meditation"; } 
-        else if (q.includes("prière") || q.includes("priere") || q.includes("prier") || q.includes("guérir") || q.includes("malade") || q.includes("prayer") || q.includes("heal")) { topic = "priere"; } 
-        else if (q.includes("drogue") || q.includes("hallucinogène") || q.includes("lsd") || q.includes("champignon") || q.includes("alcool") || q.includes("tabac") || q.includes("drugs") || q.includes("marijuana")) { topic = "drogues"; } 
-        else if (q.includes("souffrance") || q.includes("douleur") || q.includes("peine") || q.includes("blessure") || q.includes("suffering") || q.includes("pain")) { topic = "souffrance"; } 
-        else if (q.includes("recherche du soi") || q.includes("qui suis-je") || q.includes("jnana") || q.includes("advaita") || q.includes("neti") || q.includes("affirmation") || q.includes("sedona") || q.includes("lâcher-prise") || q.includes("lacher-prise") || q.includes("inquiry")) { topic = "recherche_soi"; } 
-        else if (q.includes("étape") || q.includes("action") || q.includes("détachement") || q.includes("detachement") || q.includes("discrimination") || q.includes("karma yoga") || q.includes("servir") || q.includes("service") || q.includes("stage")) { topic = "etapes_action"; } 
-        else if (q.includes("paradoxe") || q.includes("faire sans faire") || q.includes("ne rien faire") || q.includes("paradox")) { topic = "paradoxe"; } 
-        else if (q.includes("yoga") || q.includes("éveil") || q.includes("eveil") || q.includes("pratique") || q.includes("awakening") || q.includes("practice")) { topic = "yoga"; } 
-        else if (q.includes("dieu") || q.includes("religion") || q.includes("athée") || q.includes("athee") || q.includes("croyance") || q.includes("foi") || q.includes("god") || q.includes("belief")) { topic = "croyance"; } 
-        else if (q.includes("ego") || q.includes("séparation") || q.includes("separation") || q.includes("illusion") || q.includes("corps") || q.includes("mental") || q.includes("body") || q.includes("mind")) { topic = "illusion"; } 
-        else if (q.includes("chakra") || q.includes("centre") || q.includes("capot") || q.includes("moteur")) { topic = "chakra"; } 
-        else if (q.includes("mantra") || q.includes("bougie") || q.includes("technique") || q.includes("objet") || q.includes("méthode") || q.includes("methode") || q.includes("candle") || q.includes("object") || q.includes("comment") || q.includes("krishnamurti") || q.includes("effort")) { topic = "technique"; } 
-        else if (q.includes("illumination") || q.includes("but") || q.includes("destination") || q.includes("temps") || q.includes("enlightenment") || q.includes("goal") || q.includes("time") || q.includes("unité") || q.includes("unite") || q.includes("unity")) { topic = "illumination"; } 
-        else if (q.includes("végétarien") || q.includes("vegetarien") || q.includes("régime") || q.includes("regime") || q.includes("alimentation") || q.includes("nourriture") || q.includes("manger") || q.includes("diet") || q.includes("food") || q.includes("viande")) { topic = "alimentation"; } 
-        else if (q.includes("monde") || q.includes("problème") || q.includes("probleme") || q.includes("guerre") || q.includes("terrorisme") || q.includes("fuite") || q.includes("réalité") || q.includes("realite") || q.includes("world") || q.includes("reality") || q.includes("escape") || q.includes("pauvreté")) { topic = "monde"; } 
-        else if (q.includes("sexe") || q.includes("sexuel") || q.includes("sexualité") || q.includes("sexualite") || q.includes("sex") || q.includes("abstinence")) { topic = "sexualite"; } 
-        else if (q.includes("posture") || q.includes("siddhasana") || q.includes("assise") || q.includes("périnée") || q.includes("perinee") || q.includes("cheval") || q.includes("talon")) { topic = "posture"; } 
-        else if (q.includes("symptôme") || q.includes("symptome") || q.includes("brûlure") || q.includes("brulure") || q.includes("folie") || q.includes("ancrage") || q.includes("ayurveda") || q.includes("déséquilibre") || q.includes("desequilibre") || q.includes("grounding") || q.includes("peur")) { topic = "ancrage"; } 
-        else if (q.includes("pouvoir") || q.includes("miracle") || q.includes("siddhi") || q.includes("magie") || q.includes("voler") || q.includes("power") || q.includes("magic") || q.includes("télépathie") || q.includes("telepathie") || q.includes("hypnose")) { topic = "siddhis"; } 
-        else if (q.includes("couronne") || q.includes("sahasrar") || q.includes("haut") || q.includes("tête") || q.includes("tete") || q.includes("crown") || q.includes("sommet") || q.includes("spontané") || q.includes("spontane")) { topic = "sahasrar"; } 
-        else if (q.includes("vision") || q.includes("étoile") || q.includes("etoile") || q.includes("lumière") || q.includes("lumiere") || q.includes("tunnel") || q.includes("star") || q.includes("light") || q.includes("paysage") || q.includes("aura") || q.includes("clairvoyance")) { topic = "vision"; } 
-        else if (q.includes("bhakti") || q.includes("impatience") || q.includes("dévotion") || q.includes("devotion") || q.includes("coeur") || q.includes("heart") || q.includes("nouvel âge") || q.includes("désir") || q.includes("desire")) { topic = "bhakti"; } 
-        else if (q.includes("yoni") || q.includes("kumbhaka") || q.includes("rétention") || q.includes("retention") || q.includes("bandha") || q.includes("jalandhara") || q.includes("uddiyana")) { topic = "yoni_mudra"; } 
-        else if (q.includes("brahmacharya") || q.includes("célibat") || q.includes("celibat") || q.includes("tantra") || q.includes("semence") || q.includes("créatrice")) { topic = "brahmacharya"; } 
-        else if (q.includes("karma") || q.includes("destin") || q.includes("libre arbitre") || q.includes("choix") || q.includes("samskara") || q.includes("péché") || q.includes("peche") || q.includes("pardon") || q.includes("coupable") || q.includes("sin") || q.includes("guilt")) { topic = "karma"; } 
-        else if (q.includes("félicité") || q.includes("felicite") || q.includes("extase") || q.includes("bliss") || q.includes("ecstasy") || q.includes("différence") || q.includes("plaisir")) { topic = "felicite"; } 
-        else if (q.includes("témoin") || q.includes("temoin") || q.includes("indifférence") || q.includes("indifference") || q.includes("vide") || q.includes("déconnecté") || q.includes("spectateur") || q.includes("mort") || q.includes("émotion") || q.includes("emotion")) { topic = "temoin"; } 
-        else if (q.includes("intellect") || q.includes("comprendre") || q.includes("analyser") || q.includes("raison") || q.includes("qui suis-je") || q.includes("jnana") || q.includes("mental") || q.includes("pensée")) { topic = "intellect"; } 
-        else if (q.includes("nauli") || q.includes("ventre") || q.includes("abdomen") || q.includes("barattage") || q.includes("diaphragme") || q.includes("intestin") || q.includes("abdominaux")) { topic = "nauli"; } 
-        else if (q.includes("navi") || q.includes("kriya") || q.includes("nombril") || q.includes("navel") || q.includes("bateau") || q.includes("milieu")) { topic = "navi_kriya"; } 
-        else if (q.includes("pratyahara") || q.includes("sens") || q.includes("sons") || q.includes("son intérieur") || q.includes("om") || q.includes("aum") || q.includes("sensualité") || q.includes("empathie")) { topic = "pratyahara"; } 
-        else if (q.includes("traduire") || q.includes("traduction") || q.includes("langue") || q.includes("i am") || q.includes("ayam") || q.includes("signification") || q.includes("meaning") || q.includes("translate")) { topic = "mantra_traduction"; } 
-        else if (q.includes("nectar") || q.includes("sucré") || q.includes("sucre") || q.includes("amrita") || q.includes("soma") || q.includes("goût") || q.includes("gout") || q.includes("sweet") || q.includes("taste")) { topic = "nectar"; } 
-        else if (q.includes("psychologie") || q.includes("psychanalyse") || q.includes("comprendre émotion") || q.includes("psychology") || q.includes("analysis")) { topic = "psychologie"; } 
-        else if (q.includes("pompe") || q.includes("cervicale") || q.includes("menton") || q.includes("cou") || q.includes("chin pump") || q.includes("neck") || q.includes("dynamique")) { topic = "pompe_cervicale"; } 
-        else if (q.includes("patanjali") || q.includes("huit") || q.includes("membres") || q.includes("yama") || q.includes("niyama") || q.includes("asana") || q.includes("huit branches") || q.includes("limbs")) { topic = "huit_membres"; } 
-        else if (q.includes("bastrika") || q.includes("soufflet") || q.includes("halètement") || q.includes("haletement") || q.includes("chien") || q.includes("rapide") || q.includes("bellows") || q.includes("panting")) { topic = "bastrika"; } 
-        else if (q.includes("sceptique") || q.includes("scepticisme") || q.includes("science") || q.includes("doute") || q.includes("croire") || q.includes("skeptic") || q.includes("doubt") || q.includes("believe")) { topic = "scepticisme"; } 
-        else if (q.includes("troisième") || q.includes("troisieme") || q.includes("oeil") || q.includes("third eye") || q.includes("medulla") || q.includes("pinéale") || q.includes("pineal") || q.includes("pituitaire") || q.includes("pituitary")) { topic = "troisieme_oeil"; } 
-        else if (q.includes("amour divin") || q.includes("compassion") || q.includes("karuna") || q.includes("divine love")) { topic = "amour_divin"; } 
-        else if (q.includes("secret") || q.includes("caché") || q.includes("cache") || q.includes("divulguer") || q.includes("hidden")) { topic = "secret"; } 
-        else if (q.includes("granthi") || q.includes("nœud") || q.includes("noeud") || q.includes("brahma") || q.includes("vishnu") || q.includes("rudra") || q.includes("knot")) { topic = "granthis"; } 
-        else if (q.includes("histoire") || q.includes("occident") || q.includes("vivekananda") || q.includes("yogananda") || q.includes("maharishi") || q.includes("history") || q.includes("west")) { topic = "histoire_yoga"; }
-
-        const data = sageBrain[currentLang][topic];
-        let randomCore = data.core[Math.floor(Math.random() * data.core.length)];
-        let randomScience = data.science[Math.floor(Math.random() * data.science.length)];
-        let randomPacing = data.pacing[Math.floor(Math.random() * data.pacing.length)];
-
-        let prefixFr = isFirstQuestion ? "Bienvenue, voyageur...\n\n" : "Voici ce qui émerge du silence...\n\n";
-        let prefixEn = isFirstQuestion ? "Welcome, traveler...\n\n" : "Here is what emerges from the silence...\n\n";
-        let prefix = currentLang === 'fr' ? prefixFr : prefixEn;
-        
-        isFirstQuestion = false;
-
-        let finalResponse = `« ${prefix}${randomCore}\n\n${randomScience}\n\n${randomPacing} »`;
-
-        typeWriter(finalResponse, 0, logEl, () => {
-            isTyping = false;
-            let fadeAudioOut = setInterval(() => {
-                if (audioResonance.volume > 0.01) {
-                    audioResonance.volume -= 0.01;
-                } else {
-                    audioResonance.pause();
-                    clearInterval(fadeAudioOut);
-                }
-            }, 100);
-        });
-    }
-
-    function typeWriter(text, i, el, callback) {
-        if (i < text.length) {
-            el.innerHTML += text.charAt(i);
-            setTimeout(() => typeWriter(text, i + 1, el, callback), 25);
-        } else {
-            callback();
+            currentTeachings.forEach((teaching, index) => {
+                const html = `
+                    <details class="teaching-accordion">
+                        <summary class="accordion-title">${index + 1}. ${teaching.title}</summary>
+                        <div class="accordion-content">
+                            <div id="texte-teaching-${index}" class="parchment-text">${teaching.content}</div>
+                            ${getSignatureHTML()}
+                            <div style="display: flex; justify-content: center; margin-top: 20px;">
+                                <button class="zen-btn sharing-btn" style="font-size: 0.8rem; padding: 5px 15px;" onclick="partagerTeaching(${index})">✨ ${UI_TEXTS[currentLang].shareText}</button>
+                            </div>
+                        </div>
+                    </details>
+                `;
+                container.innerHTML += html;
+            });
         }
-    }
 
-    window.onload = () => {
-        createDustParticles();
-        initVisitorCounter();
-        renderEnseignements();
-        renderMurmures();
-        renderParabole();
-    };
+        function partagerTexte(titre, texte) {
+            const texteNettoye = texte.replace(/<br\s*[\/]?>/gi, "\n").replace(/<\/?[^>]+(>|$)/g, "");
+            const signature = currentLang === 'fr' ? "🪷 Le Temple du Silence" : "🪷 The Temple of Silence";
+            const texteComplet = `${titre}\n\n${texteNettoye}\n\n${signature}\n👉 ${window.location.href}`;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: titre,
+                    text: texteComplet
+                }).catch(console.error);
+            } else {
+                navigator.clipboard.writeText(texteComplet).then(() => {
+                    alert(currentLang === 'fr' ? "Texte copié dans le presse-papiers !" : "Text copied to clipboard!");
+                }).catch(err => {
+                    console.error('Erreur de copie', err);
+                });
+            }
+        }
+
+        function partagerMurmure(index) {
+            const murmure = MURMURES_DATABASE[currentLang][index];
+            partagerTexte(murmure.title, murmure.text);
+        }
+
+        function partagerTeaching(index) {
+            const teaching = TEACHINGS_DATABASE[currentLang][index];
+            partagerTexte(teaching.title, teaching.content);
+        }
+
+        function partagerVideoMurmure(index) {
+            const murmure = MURMURES_DATABASE[currentLang][index];
+            const urlAbsolue = new URL(murmure.videoFile, window.location.href).href;
+            const texte = currentLang === 'fr' ? 
+                `Découvrez cette vidéo : ${murmure.title}\n🪷 Le Temple du Silence\n👉 ${urlAbsolue}` : 
+                `Discover this video: ${murmure.title}\n🪷 The Temple of Silence\n👉 ${urlAbsolue}`;
+
+            if (navigator.share) {
+                navigator.share({ title: murmure.title, text: texte }).catch(console.error);
+            } else {
+                navigator.clipboard.writeText(texte).then(() => {
+                    alert(currentLang === 'fr' ? "Lien de la vidéo copié !" : "Video link copied!");
+                });
+            }
+        }
+
+        function partagerAudioMurmure(index) {
+            const murmure = MURMURES_DATABASE[currentLang][index];
+            const urlAbsolue = new URL(murmure.audioFile, window.location.href).href;
+            const texte = currentLang === 'fr' ? 
+                `Écoutez ceci : ${murmure.title}\n🪷 Le Temple du Silence\n👉 ${urlAbsolue}` : 
+                `Listen to this: ${murmure.title}\n🪷 The Temple of Silence\n👉 ${urlAbsolue}`;
+
+            if (navigator.share) {
+                navigator.share({ title: murmure.title, text: texte }).catch(console.error);
+            } else {
+                navigator.clipboard.writeText(texte).then(() => {
+                    alert(currentLang === 'fr' ? "Lien de l'audio copié !" : "Audio link copied!");
+                });
+            }
+        }
+
+        function typeWriter(text, i, element, callback) {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i) === '\n' ? '<br>' : text.charAt(i);
+                setTimeout(() => typeWriter(text, i + 1, element, callback), 20); 
+            } else if (callback) {
+                callback();
+            }
+        }
+
+        function askSage() {
+            if (isTyping) return;
+            const inputEl = document.getElementById("sage-input");
+            const logEl = document.getElementById("chat-log");
+            const audioResonance = document.getElementById("sage-resonance");
+            
+            let q = inputEl.value.trim().toLowerCase();
+            if (!q) return;
+
+            isTyping = true;
+            inputEl.value = "";
+            logEl.innerHTML = "";
+
+            if (audioResonance) {
+                audioResonance.volume = 0;
+                audioResonance.play();
+                let fadeAudioIn = setInterval(() => {
+                    if (audioResonance.volume < 0.15) {
+                        audioResonance.volume += 0.01;
+                    } else {
+                        clearInterval(fadeAudioIn);
+                    }
+                }, 100);
+            }
+
+            let topic = "soi_atman"; 
+
+            // --- DÉTECTION DES MOTS-CLÉS (ROUTAGE) ---
+            if (q.includes("suicide") || q.includes("panique") || q.includes("dépression") || q.includes("douleur") || q.includes("médecin") || q.includes("malade") || q.includes("hôpital") || q.includes("panic") || q.includes("pain")) {
+                topic = "ethique_securite";
+            }
+            else if (q.includes("insomnie") || q.includes("dors mal") || q.includes("agité") || q.includes("nerveux") || q.includes("pression") || q.includes("surcharge") || q.includes("trop") || q.includes("ancrage") || q.includes("grounding") || q.includes("fatigue") || q.includes("insomnia")) {
+                topic = "surcharge_ancrage";
+            }
+            else if (q.includes("corps") || q.includes("tension") || q.includes("respiration") || q.includes("souffle") || q.includes("sensation") || q.includes("stress") || q.includes("nuque") || q.includes("ventre") || q.includes("breath") || q.includes("body")) {
+                topic = "interoception";
+            }
+            else if (q.includes("touché") || q.includes("brisé") || q.includes("critique") || q.includes("échec") || q.includes("déception") || q.includes("choc") || q.includes("triste") || q.includes("colère") || q.includes("peur") || q.includes("courage") || q.includes("resilience")) {
+                topic = "resilience";
+            }
+            else if (q.includes("action") || q.includes("choix") || q.includes("résultat") || q.includes("attente") || q.includes("détachement") || q.includes("lâcher") || q.includes("karma") || q.includes("travail")) {
+                topic = "detachement";
+                if (q.includes("karma") || q.includes("juste") || q.includes("décision")) topic = "karma_action";
+            }
+            else if (q.includes("motivation") || q.includes("élan") || q.includes("fuite") || q.includes("illusion") || q.includes("maya") || q.includes("plaisir") || q.includes("conditionnement") || q.includes("habitude")) {
+                topic = "elan_vital";
+                if (q.includes("illusion") || q.includes("maya") || q.includes("habitude")) topic = "maya_illusion";
+            }
+            else if (q.includes("unité") || q.includes("séparation") || q.includes("absolu") || q.includes("brahman") || q.includes("dieu") || q.includes("tout") || q.includes("non-dualité") || q.includes("advaita")) {
+                topic = "brahman_absolu";
+                if (q.includes("séparation") || q.includes("advaita") || q.includes("non-dualité")) topic = "advaita_non_dualite";
+            }
+            else if (q.includes("méditation") || q.includes("silence") || q.includes("présence") || q.includes("samadhi") || q.includes("absorption") || q.includes("calme") || q.includes("esprit") || q.includes("meditation")) {
+                topic = "meditation_presence";
+            }
+            else if (q.includes("routine") || q.includes("pratique") || q.includes("commencer") || q.includes("temps") || q.includes("régulier")) {
+                topic = "routine_base";
+            }
+
+            const data = sageBrain[currentLang][topic];
+            let randomCore = data.core[Math.floor(Math.random() * data.core.length)];
+            let randomScience = data.science[Math.floor(Math.random() * data.science.length)];
+            let randomPacing = data.pacing[Math.floor(Math.random() * data.pacing.length)];
+
+            // --- GESTION DE L'ACCUEIL ---
+            let prefix = "";
+            if (isFirstQuestion) {
+                prefix = currentLang === 'fr' ? "Bienvenue. Ce lieu invite à l'expérience directe.\n\n" : "Welcome. This place invites direct experience.\n\n";
+                isFirstQuestion = false; 
+            } else {
+                let introsFr = [
+                    "Ce que tu pointes touche à quelque chose de très courant...\n\n",
+                    "Derrière cette question, il y a souvent une sensation précise...\n\n",
+                    "Ta question parle moins d'un concept que d'une expérience vécue...\n\n"
+                ];
+                let introsEn = [
+                    "What you point out touches on something very common...\n\n",
+                    "Behind this question, there is often a specific sensation...\n\n",
+                    "Your question speaks less of a concept than of a lived experience...\n\n"
+                ];
+                let introArray = currentLang === 'fr' ? introsFr : introsEn;
+                prefix = introArray[Math.floor(Math.random() * introArray.length)];
+            }
+
+            // --- SIGNATURE ---
+            let signature = currentLang === 'fr' ? "\n\n🪷 <i>Le Temple du Silence</i>" : "\n\n🪷 <i>The Temple of Silence</i>";
+
+            let finalResponse = `« ${prefix}${randomCore}\n\n${randomScience}\n\n${randomPacing} »${signature}`;
+
+            typeWriter(finalResponse, 0, logEl, () => {
+                isTyping = false;
+                if (audioResonance) {
+                    let fadeAudioOut = setInterval(() => {
+                        if (audioResonance.volume > 0.01) {
+                            audioResonance.volume -= 0.01;
+                        } else {
+                            audioResonance.pause();
+                            clearInterval(fadeAudioOut);
+                        }
+                    }, 100);
+                }
+            });
+        }
+
+        window.onload = () => {
+            switchLanguage('fr');
+        };
     </script>
 </body>
 </html>
+
 

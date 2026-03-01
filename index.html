@@ -435,7 +435,7 @@
 
         let topic = "soi_atman"; 
 
-        // --- NOUVEAU ROUTAGE (Mots-clés) ---
+        // DÉTECTION DES MOTS-CLÉS (ROUTAGE AVANCÉ)
         if (q.includes("suicide") || q.includes("panique") || q.includes("dépression") || q.includes("douleur") || q.includes("médecin") || q.includes("malade") || q.includes("hôpital") || q.includes("panic") || q.includes("pain")) {
             topic = "ethique_securite";
         }
@@ -467,11 +467,9 @@
             topic = "routine_base";
         }
 
-        // --- SÉCURITÉ ANTI-CRASH : Fallback si le nouveau cerveau n'est pas encore dans contenu.js ---
-        if (sageBrain[currentLang]["universel"] && !sageBrain[currentLang][topic]) {
-             topic = "universel"; // Si l'ancien cerveau est détecté
-        } else if (!sageBrain[currentLang][topic]) {
-             topic = Object.keys(sageBrain[currentLang])[0]; // Sécurité maximale
+        // SÉCURITÉ ANTI-CRASH
+        if (!sageBrain[currentLang][topic]) {
+             topic = "soi_atman";
         }
 
         const data = sageBrain[currentLang][topic];
@@ -481,26 +479,29 @@
 
         let prefix = "";
         if (isFirstQuestion) {
-            prefix = currentLang === 'fr' ? "Bienvenue. Ce lieu invite à l'expérience directe.\n\n" : "Welcome. This place invites direct experience.\n\n";
+            prefix = currentLang === 'fr' ? "Bienvenue. Ce lieu invite à l'expérience directe.<br><br>" : "Welcome. This place invites direct experience.<br><br>";
             isFirstQuestion = false; 
         } else {
             let introsFr = [
-                "Ce que tu pointes touche à quelque chose de très courant...\n\n",
-                "Derrière cette question, il y a souvent une sensation précise...\n\n",
-                "Ta question parle moins d'un concept que d'une expérience vécue...\n\n"
+                "Ce que tu pointes touche à quelque chose de très courant...<br><br>",
+                "Derrière cette question, il y a souvent une sensation précise...<br><br>",
+                "Ta question parle moins d'un concept que d'une expérience vécue...<br><br>"
             ];
             let introsEn = [
-                "What you point out touches on something very common...\n\n",
-                "Behind this question, there is often a specific sensation...\n\n",
-                "Your question speaks less of a concept than of a lived experience...\n\n"
+                "What you point out touches on something very common...<br><br>",
+                "Behind this question, there is often a specific sensation...<br><br>",
+                "Your question speaks less of a concept than of a lived experience...<br><br>"
             ];
             let introArray = currentLang === 'fr' ? introsFr : introsEn;
             prefix = introArray[Math.floor(Math.random() * introArray.length)];
         }
 
-        let signature = currentLang === 'fr' ? "\n\n🪷 <i>Le Temple du Silence</i>" : "\n\n🪷 <i>The Temple of Silence</i>";
+        let signature = currentLang === 'fr' ? "<br><br>🪷 <i>Le Temple du Silence</i>" : "<br><br>🪷 <i>The Temple of Silence</i>";
 
-        let finalResponse = `« ${prefix}${randomCore}\n\n${randomScience}\n\n${randomPacing} »${signature}`;
+        let finalResponse = `« ${prefix}${randomCore}<br><br>${randomScience}<br><br>${randomPacing} »${signature}`;
+
+        // Remplacement de \n par <br> dans le texte s'il y en a
+        finalResponse = finalResponse.replace(/\n/g, "<br>");
 
         typeWriter(finalResponse, 0, logEl, () => {
             isTyping = false;
@@ -519,8 +520,15 @@
 
     function typeWriter(text, i, el, callback) {
         if (i < text.length) {
-            if (text.charAt(i) === '\n') {
-                el.innerHTML += '<br>';
+            // Gérer les balises HTML comme <br> ou <i>
+            if (text.charAt(i) === '<') {
+                let tag = "";
+                while (text.charAt(i) !== '>' && i < text.length) {
+                    tag += text.charAt(i);
+                    i++;
+                }
+                tag += '>';
+                el.innerHTML += tag;
             } else {
                 el.innerHTML += text.charAt(i);
             }

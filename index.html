@@ -174,10 +174,27 @@
  <script>
     let currentLang = 'fr';
     let isTyping = false;
-    let hasAskedQuestion = false; // Remplace isFirstQuestion
+    let hasAskedQuestion = false; 
     
-    // --- 🧠 PILIER 1 : LA MÉMOIRE DU SAGE ---
+    // --- 🧠 PILIER 1.5 : LA MÉMOIRE LONG-TERME & CONTEXTUELLE ---
     let previousTopic = "universel"; 
+    let lastIntroIndex = -1; // Verrou anti-répétition
+
+    // Fonctions pour lire et écrire dans la mémoire du navigateur
+    function getSageHistory() {
+        let history = localStorage.getItem('temple_sage_history');
+        return history ? JSON.parse(history) : [];
+    }
+
+    function saveSageHistory(topic) {
+        let history = getSageHistory();
+        // On n'enregistre que si c'est un nouveau sujet pour ne pas saturer la mémoire
+        if (history.length === 0 || history[history.length - 1] !== topic) {
+            history.push(topic);
+            if(history.length > 5) history.shift(); // On garde en mémoire les 5 derniers sujets
+            localStorage.setItem('temple_sage_history', JSON.stringify(history));
+        }
+    }
 
     function createDustParticles() {
         const container = document.getElementById('particles-container');
@@ -257,13 +274,12 @@
         renderMurmures();
         renderParabole();
 
-        // Gérer le changement de langue pour le message d'accueil ou l'historique
         const logEl = document.getElementById("chat-log");
         if(logEl) {
             logEl.innerHTML = "";
-            isTyping = false; // Stoppe l'effet machine à écrire s'il était en cours
+            isTyping = false; 
             if (!hasAskedQuestion) {
-                sageWelcome(); // Relance l'accueil dans la bonne langue
+                sageWelcome(); 
             }
         }
     }
@@ -283,11 +299,11 @@
     }
 
     function getSignatureHTML() {
-        const signatureText = currentLang === 'fr' ? "Œuvre Originale & Propriété de la Lignée" : "Original Work & Lineage Property";
+        const signatureText = currentLang === 'fr' ? "Le Temple du Silence" : "The Temple of Silence";
         return `
-            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 40px; opacity: 0.85;">
-                <span style="font-style: italic; font-size: 1rem; color: var(--accent-color); margin-right: 15px;">${signatureText}</span>
-                <img src="signature-ayp.png" alt="Signature Lignée" style="height: 45px; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));">
+            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 40px; opacity: 0.9; font-style: italic;">
+                <span style="color: var(--accent-color); margin-right: 12px;">${signatureText}</span>
+                <img src="sceau-gardien.png" alt="Sceau du Gardien" style="height: 35px; border-radius: 50%; box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);">
             </div>
         `;
     }
@@ -423,7 +439,7 @@
         }
     }
 
-    // --- ACCUEIL PROACTIF DU SAGE ---
+    // --- ACCUEIL INTELLIGENT ---
     function sageWelcome() {
         if (hasAskedQuestion) return;
         
@@ -431,9 +447,18 @@
         logEl.innerHTML = "";
         isTyping = true;
         
-        let msgFr = "« Bienvenue, voyageur. Tu viens de franchir les portes du Temple du Silence. Ici, tu ne trouveras ni dogmes, ni promesses hâtives, mais une invitation à l'expérience directe. Ces murs virtuels abritent les Enseignements de la lignée, des Murmures pour t'orienter, et la sagesse d'une ancienne Parabole.<br><br>Prends un instant pour te poser. Que cherches-tu aujourd'hui ? Confie ta question au silence... »";
-        
-        let msgEn = "« Welcome, traveler. You have just crossed the doors of the Temple of Silence. Here, you will find neither dogmas nor hasty promises, but an invitation to direct experience. These virtual walls house the Teachings of the lineage, Whispers to guide you, and the wisdom of an ancient Parable.<br><br>Take a moment to settle in. What are you seeking today? Confide your question to the silence... »";
+        let history = getSageHistory();
+        let msgFr, msgEn;
+
+        if (history.length > 0) {
+            // Le visiteur est déjà venu par le passé !
+            msgFr = "« Te revoilà, voyageur. Le Temple a gardé la trace de tes pas. Que souhaites-tu explorer aujourd'hui ? Confie ta pensée au silence... »";
+            msgEn = "« Welcome back, traveler. The Temple has kept the trace of your steps. What do you wish to explore today? Confide your thought to the silence... »";
+        } else {
+            // C'est un tout nouveau visiteur
+            msgFr = "« Bienvenue, voyageur. Tu viens de franchir les portes du Temple du Silence. Ici, tu ne trouveras ni dogmes, ni promesses hâtives, mais une invitation à l'expérience directe. Ces murs virtuels abritent les Enseignements de la lignée, des Murmures pour t'orienter, et la sagesse d'une ancienne Parabole.<br><br>Prends un instant pour te poser. Que cherches-tu aujourd'hui ? Confie ta question au silence... »";
+            msgEn = "« Welcome, traveler. You have just crossed the doors of the Temple of Silence. Here, you will find neither dogmas nor hasty promises, but an invitation to direct experience. These virtual walls house the Teachings of the lineage, Whispers to guide you, and the wisdom of an ancient Parable.<br><br>Take a moment to settle in. What are you seeking today? Confide your question to the silence... »";
+        }
         
         let signatureText = currentLang === 'fr' ? "Le Temple du Silence" : "The Temple of Silence";
         let signature = `<br><br><div style="display: flex; justify-content: flex-end; align-items: center; opacity: 0.9; font-style: italic;">
@@ -458,7 +483,7 @@
         if (!q) return;
 
         isTyping = true;
-        hasAskedQuestion = true; // Le visiteur a posé une question
+        hasAskedQuestion = true; 
         inputEl.value = "";
         logEl.innerHTML = "";
 
@@ -474,28 +499,23 @@
             }, 100);
         }
 
-        // --- 1. SÉCURITÉ ABSOLUE ---
         const motsUrgence = ["suicide", "panique", "dépression", "depression", "hôpital", "hospital", "mourir", "tuer", "grave"];
         let urgenceDetectee = motsUrgence.some(mot => q.includes(mot));
 
         let topic = "universel";
+        let isContinuingTopic = false;
 
         if (urgenceDetectee) {
             topic = "ethique_securite";
-            previousTopic = topic; 
         } else {
-            
-            // --- 🧠 PILIER 2 : SCORING AVANCÉ AVEC REGEX & NÉGATIONS ---
             const scores = {
                 surcharge_ancrage: 0, interoception: 0, resilience: 0, detachement: 0,
                 karma_action: 0, elan_vital: 0, maya_illusion: 0, brahman_absolu: 0,
                 advaita_non_dualite: 0, meditation_presence: 0, routine_base: 0
             };
 
-            // Filtrage intelligent des négations
             let phraseAnalysee = q.replace(/\b(pas|plus|sans|aucun|aucune|jamais)\s+([a-zà-ÿ]+)/gi, "");
 
-            // Dictionnaires par Racines (Stemming)
             const dictionnairesRegex = {
                 surcharge_ancrage: /\b(insomni|dor|agit|nerveu|pression|surcharg|trop|ancrag|grounding|fatigu|épuis|epuis|fou|craqu|bizarr|sommeil|nuit|détend)[a-zà-ÿ]*/gi,
                 interoception: /\b(corps|tension|respir|souffl|sensation|stress|nuqu|ventr|physiqu|mal|ressens|cœur|coeur|têt|tet|douleur)[a-zà-ÿ]*/gi,
@@ -510,7 +530,6 @@
                 routine_base: /\b(routin|pratiqu|commenc|temps|régulier|regulier|comment|aid|conseil|début|debut|apprend|jour|méthod|method|techniqu)[a-zà-ÿ]*/gi
             };
 
-            // Comptage des points
             for (let categorie in dictionnairesRegex) {
                 let correspondances = phraseAnalysee.match(dictionnairesRegex[categorie]);
                 if (correspondances) {
@@ -520,7 +539,6 @@
 
             let maxScore = 0;
             let detectedTopic = "";
-            
             for (let categorie in scores) {
                 if (scores[categorie] > maxScore) {
                     maxScore = scores[categorie];
@@ -528,36 +546,79 @@
                 }
             }
 
-            // --- PILIER 1 (MÉMOIRE) : Conservation du sujet ---
+            // --- Logique de Continuité ---
             if (maxScore > 0) {
                 topic = detectedTopic;
-                previousTopic = topic; 
+                if (topic === previousTopic) {
+                    isContinuingTopic = true; // Le visiteur continue sur le même sujet
+                }
             } else {
-                topic = previousTopic; // Le Sage se souvient de quoi on parlait !
+                topic = previousTopic; 
+                isContinuingTopic = true; // S'il n'y a pas de mot clé, on suppose qu'il continue sa pensée
             }
         }
 
         if (!sageBrain[currentLang] || !sageBrain[currentLang][topic]) {
             topic = "universel";
+            isContinuingTopic = false;
         }
+
+        // On enregistre le sujet dans la mémoire
+        saveSageHistory(topic);
+        previousTopic = topic;
 
         const data = sageBrain[currentLang][topic];
         let randomCore = data.core[Math.floor(Math.random() * data.core.length)];
         let randomScience = data.science[Math.floor(Math.random() * data.science.length)];
         let randomPacing = data.pacing[Math.floor(Math.random() * data.pacing.length)];
 
-        let introsFr = [
-            "Ce que tu pointes touche à quelque chose de très courant...<br><br>",
-            "Derrière cette question, il y a souvent une sensation précise...<br><br>",
-            "Ta question parle moins d'un concept que d'une expérience vécue...<br><br>"
-        ];
-        let introsEn = [
-            "What you point out touches on something very common...<br><br>",
-            "Behind this question, there is often a specific sensation...<br><br>",
-            "Your question speaks less of a concept than of a lived experience...<br><br>"
-        ];
+        // --- CHOIX DYNAMIQUE DE L'INTRODUCTION ---
+        let prefix = "";
+        let introsFr = [];
+        let introsEn = [];
+
+        if (isContinuingTopic) {
+            introsFr = [
+                "Pour creuser ce point précis...<br><br>",
+                "En restant sur cette même dimension...<br><br>",
+                "Puisque nous explorons ce sujet...<br><br>",
+                "Allons un peu plus loin sur ce chemin...<br><br>",
+                "C'est une suite logique. Regarde bien...<br><br>"
+            ];
+            introsEn = [
+                "To dig deeper into this specific point...<br><br>",
+                "Staying within this same dimension...<br><br>",
+                "Since we are exploring this subject...<br><br>",
+                "Let's go a little further on this path...<br><br>",
+                "That is a logical continuation. Look closely...<br><br>"
+            ];
+        } else {
+            introsFr = [
+                "Ce que tu pointes touche à quelque chose de très profond...<br><br>",
+                "Derrière cette pensée, il y a souvent une sensation très claire...<br><br>",
+                "Regardons cela non pas comme un concept, mais comme une expérience vécue...<br><br>",
+                "C'est une observation très juste. Explorons cela...<br><br>",
+                "Ta question ouvre une excellente porte d'entrée...<br><br>"
+            ];
+            introsEn = [
+                "What you point out touches on something very deep...<br><br>",
+                "Behind this thought, there is often a very clear sensation...<br><br>",
+                "Let's look at this not as a concept, but as a lived experience...<br><br>",
+                "That is a very accurate observation. Let's explore this...<br><br>",
+                "Your question opens an excellent gateway...<br><br>"
+            ];
+        }
+
         let introArray = currentLang === 'fr' ? introsFr : introsEn;
-        let prefix = introArray[Math.floor(Math.random() * introArray.length)];
+        
+        // Verrou Anti-Répétition : on s'assure de ne jamais tirer le même index deux fois de suite
+        let randomIndex;
+        do {
+            randomIndex = Math.floor(Math.random() * introArray.length);
+        } while (randomIndex === lastIntroIndex && introArray.length > 1);
+        
+        lastIntroIndex = randomIndex;
+        prefix = introArray[randomIndex];
 
         let signatureText = currentLang === 'fr' ? "Le Temple du Silence" : "The Temple of Silence";
         let signature = `<br><br><div style="display: flex; justify-content: flex-end; align-items: center; opacity: 0.9; font-style: italic;">
@@ -608,7 +669,6 @@
         renderMurmures();
         renderParabole();
         
-        // Lance le message de bienvenue avec un léger délai pour la fluidité
         setTimeout(() => {
             if(!hasAskedQuestion) sageWelcome();
         }, 1500);
@@ -616,5 +676,6 @@
     </script>
 </body>
 </html>
+
 
 

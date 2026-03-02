@@ -171,10 +171,10 @@
 
     <script src="contenu.js"></script>
 
-    <script>
+ <script>
     let currentLang = 'fr';
     let isTyping = false;
-    let isFirstQuestion = true; 
+    let hasAskedQuestion = false; // Remplace isFirstQuestion
     
     // --- 🧠 PILIER 1 : LA MÉMOIRE DU SAGE ---
     let previousTopic = "universel"; 
@@ -256,6 +256,16 @@
         renderEnseignements();
         renderMurmures();
         renderParabole();
+
+        // Gérer le changement de langue pour le message d'accueil ou l'historique
+        const logEl = document.getElementById("chat-log");
+        if(logEl) {
+            logEl.innerHTML = "";
+            isTyping = false; // Stoppe l'effet machine à écrire s'il était en cours
+            if (!hasAskedQuestion) {
+                sageWelcome(); // Relance l'accueil dans la bonne langue
+            }
+        }
     }
 
     function toggleTheme() {
@@ -272,13 +282,12 @@
         document.getElementById(`nav-${sectionId}`).classList.add('active');
     }
 
-    // --- MISE À JOUR : Le sceau du Gardien signe les Enseignements et Murmures ---
     function getSignatureHTML() {
-        const signatureText = currentLang === 'fr' ? "Le Temple du Silence" : "The Temple of Silence";
+        const signatureText = currentLang === 'fr' ? "Œuvre Originale & Propriété de la Lignée" : "Original Work & Lineage Property";
         return `
-            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 40px; opacity: 0.9; font-style: italic;">
-                <span style="color: var(--accent-color); margin-right: 12px;">${signatureText}</span>
-                <img src="sceau-gardien.png" alt="Sceau du Gardien" style="height: 35px; border-radius: 50%; box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);">
+            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 40px; opacity: 0.85;">
+                <span style="font-style: italic; font-size: 1rem; color: var(--accent-color); margin-right: 15px;">${signatureText}</span>
+                <img src="signature-ayp.png" alt="Signature Lignée" style="height: 45px; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));">
             </div>
         `;
     }
@@ -414,6 +423,31 @@
         }
     }
 
+    // --- ACCUEIL PROACTIF DU SAGE ---
+    function sageWelcome() {
+        if (hasAskedQuestion) return;
+        
+        const logEl = document.getElementById("chat-log");
+        logEl.innerHTML = "";
+        isTyping = true;
+        
+        let msgFr = "« Bienvenue, voyageur. Tu viens de franchir les portes du Temple du Silence. Ici, tu ne trouveras ni dogmes, ni promesses hâtives, mais une invitation à l'expérience directe. Ces murs virtuels abritent les Enseignements de la lignée, des Murmures pour t'orienter, et la sagesse d'une ancienne Parabole.<br><br>Prends un instant pour te poser. Que cherches-tu aujourd'hui ? Confie ta question au silence... »";
+        
+        let msgEn = "« Welcome, traveler. You have just crossed the doors of the Temple of Silence. Here, you will find neither dogmas nor hasty promises, but an invitation to direct experience. These virtual walls house the Teachings of the lineage, Whispers to guide you, and the wisdom of an ancient Parable.<br><br>Take a moment to settle in. What are you seeking today? Confide your question to the silence... »";
+        
+        let signatureText = currentLang === 'fr' ? "Le Temple du Silence" : "The Temple of Silence";
+        let signature = `<br><br><div style="display: flex; justify-content: flex-end; align-items: center; opacity: 0.9; font-style: italic;">
+            <span style="color: var(--accent-color); margin-right: 12px;">${signatureText}</span>
+            <img src="sceau-gardien.png" alt="Sceau du Gardien" style="height: 35px; border-radius: 50%; box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);">
+        </div>`;
+
+        let finalResponse = (currentLang === 'fr' ? msgFr : msgEn) + signature;
+        
+        typeWriter(finalResponse, 0, logEl, () => {
+            isTyping = false;
+        });
+    }
+
     function askSage() {
         if (isTyping) return;
         const inputEl = document.getElementById("sage-input");
@@ -424,6 +458,7 @@
         if (!q) return;
 
         isTyping = true;
+        hasAskedQuestion = true; // Le visiteur a posé une question
         inputEl.value = "";
         logEl.innerHTML = "";
 
@@ -457,10 +492,10 @@
                 advaita_non_dualite: 0, meditation_presence: 0, routine_base: 0
             };
 
-            // ÉTAPE A : Filtrage intelligent des négations
+            // Filtrage intelligent des négations
             let phraseAnalysee = q.replace(/\b(pas|plus|sans|aucun|aucune|jamais)\s+([a-zà-ÿ]+)/gi, "");
 
-            // ÉTAPE B : Dictionnaires par Racines (Stemming)
+            // Dictionnaires par Racines (Stemming)
             const dictionnairesRegex = {
                 surcharge_ancrage: /\b(insomni|dor|agit|nerveu|pression|surcharg|trop|ancrag|grounding|fatigu|épuis|epuis|fou|craqu|bizarr|sommeil|nuit|détend)[a-zà-ÿ]*/gi,
                 interoception: /\b(corps|tension|respir|souffl|sensation|stress|nuqu|ventr|physiqu|mal|ressens|cœur|coeur|têt|tet|douleur)[a-zà-ÿ]*/gi,
@@ -475,7 +510,7 @@
                 routine_base: /\b(routin|pratiqu|commenc|temps|régulier|regulier|comment|aid|conseil|début|debut|apprend|jour|méthod|method|techniqu)[a-zà-ÿ]*/gi
             };
 
-            // ÉTAPE C : Comptage des points
+            // Comptage des points
             for (let categorie in dictionnairesRegex) {
                 let correspondances = phraseAnalysee.match(dictionnairesRegex[categorie]);
                 if (correspondances) {
@@ -511,30 +546,23 @@
         let randomScience = data.science[Math.floor(Math.random() * data.science.length)];
         let randomPacing = data.pacing[Math.floor(Math.random() * data.pacing.length)];
 
-        let prefix = "";
-        if (isFirstQuestion) {
-            prefix = currentLang === 'fr' ? "Bienvenue. Ce lieu invite à l'expérience directe.<br><br>" : "Welcome. This place invites direct experience.<br><br>";
-            isFirstQuestion = false; 
-        } else {
-            let introsFr = [
-                "Ce que tu pointes touche à quelque chose de très courant...<br><br>",
-                "Derrière cette question, il y a souvent une sensation précise...<br><br>",
-                "Ta question parle moins d'un concept que d'une expérience vécue...<br><br>"
-            ];
-            let introsEn = [
-                "What you point out touches on something very common...<br><br>",
-                "Behind this question, there is often a specific sensation...<br><br>",
-                "Your question speaks less of a concept than of a lived experience...<br><br>"
-            ];
-            let introArray = currentLang === 'fr' ? introsFr : introsEn;
-            prefix = introArray[Math.floor(Math.random() * introArray.length)];
-        }
+        let introsFr = [
+            "Ce que tu pointes touche à quelque chose de très courant...<br><br>",
+            "Derrière cette question, il y a souvent une sensation précise...<br><br>",
+            "Ta question parle moins d'un concept que d'une expérience vécue...<br><br>"
+        ];
+        let introsEn = [
+            "What you point out touches on something very common...<br><br>",
+            "Behind this question, there is often a specific sensation...<br><br>",
+            "Your question speaks less of a concept than of a lived experience...<br><br>"
+        ];
+        let introArray = currentLang === 'fr' ? introsFr : introsEn;
+        let prefix = introArray[Math.floor(Math.random() * introArray.length)];
 
-        // --- LE SCEAU DU GARDIEN ---
         let signatureText = currentLang === 'fr' ? "Le Temple du Silence" : "The Temple of Silence";
         let signature = `<br><br><div style="display: flex; justify-content: flex-end; align-items: center; opacity: 0.9; font-style: italic;">
             <span style="color: var(--accent-color); margin-right: 12px;">${signatureText}</span>
-            <img src="sceau-gardien.jpg" alt="Sceau du Gardien" style="height: 35px; border-radius: 50%; box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);">
+            <img src="sceau-gardien.png" alt="Sceau du Gardien" style="height: 35px; border-radius: 50%; box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);">
         </div>`;
 
         let finalResponse = `« ${prefix}${randomCore}<br><br>${randomScience}<br><br>${randomPacing} »${signature}`;
@@ -579,8 +607,14 @@
         renderEnseignements();
         renderMurmures();
         renderParabole();
+        
+        // Lance le message de bienvenue avec un léger délai pour la fluidité
+        setTimeout(() => {
+            if(!hasAskedQuestion) sageWelcome();
+        }, 1500);
     };
     </script>
 </body>
 </html>
+
 

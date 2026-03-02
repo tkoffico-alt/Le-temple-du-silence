@@ -283,26 +283,48 @@ const PARABOLE_DATA = {
 
 const sageBrain = {
     fr: {
+        // --- NOUVELLES DÉFINITIONS (Approche AYP / Yogani) ---
+        yoga_definition: {
+            core: ["Le mot Yoga signifie 'Union'. Ce n'est pas une simple gymnastique corporelle, ni une croyance aveugle.", "Le Yoga est la science précise, mécanique et empirique de la purification du système nerveux humain."],
+            science: ["L'équation de l'évolution est d'une grande simplicité : le Silence inébranlable (la paix du mental) marié à l'Extase dynamique (l'énergie vitale) donne naissance à l'Unité parfaite.", "La véritable transformation se mesure par une conductivité accrue de tes nerfs, créant une stabilité biologique face aux pressions extérieures."],
+            pacing: ["Ne crois rien sur parole. Fais de ton propre corps le laboratoire de cette science. Assieds-toi deux fois par jour et observe les résultats par toi-même."]
+        },
+        kundalini_extase: {
+            core: ["La Kundalini n'est pas un mythe ésotérique ou un concept magique. C'est l'éveil de la conductivité extatique naturelle à l'intérieur de ta colonne vertébrale.", "C'est l'expansion gigantesque de notre énergie vitale (et sexuelle) de base, redirigée pour illuminer le système nerveux central."],
+            science: ["Ce feu intérieur que l'on ressent parfois est la friction générée par le prana traversant des nerfs encore encombrés. L'éveil est une réorganisation physiologique impliquant fortement le nerf vague.", "L'énergie suit inévitablement l'attention. Cultive le silence par la méditation, et le flot divin (Shakti) trouvera naturellement son chemin vers le haut."],
+            pacing: ["Un avertissement capital : ne poursuis jamais avidement les frissons de la Kundalini. Si l'énergie devient trop forte ou inconfortable (insomnie, chaleur), réduis ta pratique et ancre-toi dans des activités physiques lourdes."]
+        },
+        chakra_anatomie: {
+            core: ["Les chakras sont de véritables mécanismes internes, des plexus nerveux majeurs. Mais rassure-toi : tu n'as absolument pas besoin de les analyser pour qu'ils s'ouvrent.", "Se focaliser intensément sur l'ouverture d'un chakra spécifique est une distraction mentale dangereuse. La pratique globale s'occupe de tout."],
+            science: ["En balayant simplement la moelle épinière de haut en bas avec la respiration spinale, tu purifies de manière automatique et douce tous les centres nerveux qui s'y rattachent.", "Forcer prématurément l'ouverture du chakra de la Couronne (Sahasrara) avant d'avoir nettoyé le bas du corps est la cause numéro un des déséquilibres énergétiques graves."],
+            pacing: ["Laisse la mystérieuse mécanique corporelle opérer 'sous le capot' en toute confiance. Ton seul travail est d'apporter le carburant régulier par ta pratique quotidienne."]
+        },
+        mantra_technique: {
+            core: ["Le mantra est un véhicule vibratoire. Il n'a aucun rapport avec une religion, une langue ou une signification intellectuelle.", "C'est une pensée très simple, dépourvue de sens, utilisée délibérément pour tromper l'intellect et permettre à l'esprit de plonger."],
+            science: ["La mécanique est infaillible : le sens garde l'esprit en mouvement à la surface ; le son pur et sans signification amène le mental à s'immobiliser par manque de 'prise' analytique.", "Le mantra ralentit le métabolisme et abaisse la fréquence cardiaque, ouvrant la porte à une guérison profonde des vieux traumatismes."],
+            pacing: ["Dès que tu te surprends perdu dans tes pensées, reviens au mantra avec une douceur infinie, presque négligente. Ne force jamais la concentration."]
+        },
+        pranayama_souffle: {
+            core: ["Le pranayama, et particulièrement la respiration spinale, n'est pas un exercice d'hyperventilation. C'est le grand pont invisible entre ton corps physique et ton système énergétique.", "Il prépare le terrain, purifie les canaux et réveille l'énergie en douceur avant que la méditation profonde n'installe le silence."],
+            science: ["Il existe une relation électromagnétique directe entre le rythme lent du souffle (Ujjayi) et l'intensité du courant nerveux généré le long de la sushumna (le canal central).", "Cette douce restriction de l'oxygène attire mécaniquement la force de vie vers le haut."],
+            pacing: ["Trace une fine ligne lumineuse mentale de ton périnée jusqu'au centre de ta tête à l'inspiration, et redescends à l'expiration. Fais cela confortablement pendant 10 minutes avant de méditer."]
+        },
+        illumination_eveil: {
+            core: ["L'illumination n'est pas une destination lointaine, une explosion mystique soudaine ou un état de perfection inhumaine. C'est simplement ta vie quotidienne qui gagne en clarté.", "L'éveil a trois stades mécaniques : le silence intérieur inébranlable (paix), l'extase continue (joie sans objet), et enfin l'amour divin débordant pour toute chose."],
+            science: ["L'union n'est pas un concept philosophique, c'est le changement de fonctionnement, mesurable et permanent, du système nerveux central, libéré de ses blocages.", "Le stéréotype du sage solitaire est faux. Un système nerveux pleinement purifié irradie naturellement et devient un canal actif pour aider les autres."],
+            pacing: ["Ne te fixe jamais sur une fin imaginaire. Ce qui compte n'est pas de savoir quand tu arriveras, mais simplement de t'asseoir aujourd'hui. Le voyage lui-même est la destination."]
+        },
+        karma_samskara: {
+            core: ["Le Karma n'est pas une punition divine ni un destin fatal. C'est la simple loi universelle de cause à effet : l'inertie de tes actions passées.", "Attendre que l'univers ou un maître te sauve magiquement de ton karma ne fait que repousser le travail à plus tard."],
+            science: ["Biologiquement parlant, les karmas sont des 'samskaras' : des obstructions réelles, des frictions et de vieilles mémoires cristallisées dans le câblage de ton système nerveux.", "La pratique de la méditation profonde génère la conscience pure nécessaire pour dissoudre et 'brûler' mécaniquement ces obstructions de l'intérieur."],
+            pacing: ["Ne te considère jamais comme coupable ou fautif. Assieds-toi, médite avec régularité, et tu nettoieras ton passé nerveux jour après jour."]
+        },
+
+        // --- LES CATÉGORIES PHILOSOPHIQUES PRÉCÉDENTES ---
         universel: {
-            core: [
-                "La véritable sagesse commence là où s'arrête la certitude intellectuelle.",
-                "Ce à quoi tu résistes persiste et se renforce. L'acceptation de l'expérience présente est toujours la première étape du yogi.",
-                "Le silence intérieur n'est pas l'absence de bruit autour de toi, mais l'absence d'agitation en toi.",
-                "Chercher la réponse à l'extérieur ne fait souvent que repousser la découverte de ce qui est déjà là.",
-                "La paix ne se trouve pas en fuyant la vie, mais en plongeant calmement au cœur de l'expérience."
-            ],
-            science: [
-                "Ton système nerveux perçoit le monde à travers ses propres filtres accumulés. Purifier doucement ces canaux change littéralement ta réalité biologique.",
-                "La quête de sens n'est pas juste une fantaisie de l'esprit, c'est une nécessité neurobiologique profonde pour l'équilibre humain.",
-                "Le mental analytique est une machine à résoudre des problèmes. S'il n'en trouve pas, il s'empresse d'en créer un. Reviens à la sensation corporelle.",
-                "Respirer consciemment, ne serait-ce qu'une minute, court-circuite instantanément la boucle de stress du cerveau."
-            ],
-            pacing: [
-                "Ne cherche pas toutes les réponses aujourd'hui. Pratique avec régularité, reste ancré dans la matière, et laisse le silence agir.",
-                "Pose-toi simplement la question, puis lâche-la dans l'espace de ton cœur sans exiger de réponse immédiate.",
-                "Tourne ton attention vers la sensation physique de l'instant. C'est là que se trouve ton seul et vrai point d'ancrage.",
-                "La patience est la plus haute des pratiques. Laisse les choses se décanter d'elles-mêmes à leur propre rythme."
-            ]
+            core: ["La véritable sagesse commence là où s'arrête la certitude intellectuelle.", "Ce à quoi tu résistes persiste et se renforce. L'acceptation de l'expérience présente est la première étape.", "Chercher la réponse à l'extérieur repousse souvent la découverte de ce qui est déjà là."],
+            science: ["Ton système nerveux perçoit le monde à travers ses propres filtres accumulés. Purifier ces canaux change ta réalité biologique.", "Le mental analytique est une machine à résoudre des problèmes. S'il n'en trouve pas, il en crée. Reviens à la sensation corporelle."],
+            pacing: ["Pose-toi simplement la question, puis lâche-la dans l'espace de ton cœur sans exiger de réponse immédiate.", "La patience est la plus haute des pratiques. Laisse les choses se décanter d'elles-mêmes à leur propre rythme."]
         },
         routine_base: {
             core: ["La pratique n'a pas besoin d'être spectaculaire pour être efficace. On vise une vie plus stable, pas une séance parfaite.", "Une routine minimum viable vaut mille fois mieux qu'une heure de pratique irrégulière."],
@@ -320,77 +342,98 @@ const sageBrain = {
             pacing: ["⚠️ Si tu ressens une détresse sévère, des idées sombres ou des douleurs aiguës, je te conseille vivement de cesser temporairement les pratiques et de consulter un professionnel de santé. Prends soin de toi."]
         },
         soi_atman: {
-            core: ["Le Soi n’est pas une idée à comprendre, mais une évidence qui demeure quand on cesse de s’agiter.", "Ce que tu es ne commence pas avec la pensée et ne s’arrête pas quand elle se tait.", "Le Soi n’est ni devant ni derrière : il est toujours présent, silencieux, et pourtant vivant à chaque instant."],
-            science: ["L'expérience commence par le corps : assieds-toi sans objectif précis. Observe simplement une pensée naître et mourir sans la suivre. Lorsque rien n’est recherché, la présence se révèle d’elle-même."],
+            core: ["Le Soi n’est pas une idée à comprendre, mais une évidence qui demeure quand on cesse de s’agiter.", "Ce que tu es ne commence pas avec la pensée et ne s’arrête pas quand elle se tait."],
+            science: ["L'expérience commence par le corps : assieds-toi sans objectif précis. Observe simplement une pensée naître et mourir sans la suivre. Lorsque rien n’est recherché, la présence se révèle."],
             pacing: ["Ne cherche pas un état mystique. Sois simplement présent au milieu d'une activité ordinaire. C'est là que réside la véritable conscience témoin."]
         },
         brahman_absolu: {
-            core: ["L’Absolu n’est pas ailleurs : il est ce dans quoi toute expérience apparaît.", "Ce que tu cherches comme but ultime est déjà ce par quoi tu cherches.", "L’unité ne s’ajoute pas au monde : elle en est le fond invisible et permanent."],
-            science: ["Fais l'expérience : contemple un paysage, un arbre ou le ciel sans y coller de commentaire mental. Laisse la perception exister d'elle-même. Tout ce que vous percevez est l’expression de cette totalité."],
+            core: ["L’Absolu n’est pas ailleurs : il est ce dans quoi toute expérience apparaît.", "L’unité ne s’ajoute pas au monde : elle en est le fond invisible et permanent."],
+            science: ["Contemple un arbre ou le ciel sans y coller de commentaire mental. Laisse la perception exister d'elle-même. Tout ce que vous percevez est l’expression de cette totalité."],
             pacing: ["Comprendre cela, c’est toucher la liberté. Cesse d'essayer de saisir l'Absolu avec l'intellect, et laisse ton système nerveux se reposer dans le fond commun de l'expérience."]
         },
         advaita_non_dualite: {
-            core: ["La non-dualité ne supprime pas les différences de la vie ; elle dissout simplement l’idée de séparation.", "Ce n’est pas toi luttant contre le monde, mais la vie se reconnaissant elle-même à travers toi.", "Il n’y a pas de séparé : chaque souffle, chaque sensation participe de la même essence."],
-            science: ["Pour le vivre corporellement : observe une émotion de tristesse ou de colère monter en toi, mais choisis de ne pas te définir par elle. Ressens la sensation brute sans dire 'moi' ou 'mien'."],
+            core: ["La non-dualité ne supprime pas les différences de la vie ; elle dissout simplement l’idée de séparation.", "Ce n’est pas toi luttant contre le monde, mais la vie se reconnaissant elle-même à travers toi."],
+            science: ["Observe une émotion de tristesse ou de colère monter en toi, mais choisis de ne pas te définir par elle. Ressens la sensation brute sans dire 'moi' ou 'mien'."],
             pacing: ["Laisse les pensées passer sans les combattre. Quand il n’y a plus d’ennemi à l'intérieur, l’extérieur se pacifie automatiquement."]
         },
         maya_illusion: {
-            core: ["L’illusion n’est pas un mensonge moral ou une erreur, mais une simple habitude de perception.", "Ce qui se répète mécaniquement dans ta vie n’est pas la vérité absolue, mais un conditionnement.", "L’illusion est un guide pour apprendre à distinguer le réel du superficiel."],
+            core: ["L’illusion n’est pas un mensonge moral ou une erreur, mais une simple habitude de perception.", "Ce qui se répète mécaniquement dans ta vie n’est pas la vérité absolue, mais un conditionnement."],
             science: ["Prends une réaction émotionnelle que tu répètes souvent (une peur, une attraction compulsive). Sens l'énergie qu'elle produit. Souvent, la simple lumière de ton observation attentive suffit à en affaiblir l'emprise."],
             pacing: ["Ne te juge pas d'être pris dans le voile mental. Voir l’illusion en action à l'intérieur de ton propre corps est le premier pas tangible vers la liberté."]
         },
         elan_vital: {
-            core: ["L’élan vital ne promet pas le confort immédiat, mais il augmente nettement ta capacité à faire face.", "Ce qui est juste énergétiquement simplifie la vie au lieu de la disperser.", "L’énergie alignée ne brûle pas, elle éclaire."],
+            core: ["L’élan vital ne promet pas le confort immédiat, mais il augmente nettement ta capacité à faire face.", "Ce qui est juste énergétiquement simplifie la vie au lieu de la disperser."],
             science: ["Observe ton corps quand tu commences une tâche exigeante : si l'action est guidée par l'élan vital, tu sentiras une force intérieure calme et stable, sans l'excitation nerveuse de la fuite."],
             pacing: ["Chaque action consciente, même modeste, augmente ta clarté. Persévère dans l'effort sans te laisser gagner par l'impatience."]
         },
         karma_action: {
-            core: ["L’action juste se reconnaît à la clarté et à la paix qu’elle laisse après elle.", "Agir sans s’accrocher au fruit de l'action libère infiniment plus d’énergie que l’inaction craintive.", "Le détachement ne retire rien à l’action, il la purifie de son angoisse."],
+            core: ["L’action juste se reconnaît à la clarté et à la paix qu’elle laisse après elle.", "Agir sans s’accrocher au fruit de l'action libère infiniment plus d’énergie que l’inaction craintive."],
             science: ["L'expérience directe : prends une décision difficile mais nécessaire au travail ou en famille. Fais le geste juste, termine la tâche, et coupe immédiatement l'attente de reconnaissance ou de validation."],
             pacing: ["L’action consciente, même si elle semble modeste de l'extérieur, construit un alignement intérieur inébranlable."]
         },
         detachement: {
-            core: ["Le détachement n’est pas de la froide indifférence, mais la liberté vis-à-vis du résultat.", "Ce à quoi tu t’accroches désespérément te tient bien plus que tu ne le tiens.", "Quand rien n’est possédé, alors tout peut enfin être pleinement vécu."],
-            science: ["Expérimente-le biologiquement : lorsque tu fais face à un échec, repère la tension de déception dans ton corps. Respire dedans, accepte l'événement sans te juger, et laisse l'attente se dissoudre."],
+            core: ["Le détachement n’est pas de la froide indifférence, mais la liberté vis-à-vis du résultat.", "Ce à quoi tu t’accroches désespérément te tient bien plus que tu ne le tiens."],
+            science: ["Lorsque tu fais face à un échec, repère la tension de déception dans ton corps. Respire dedans, accepte l'événement sans te juger, et laisse l'attente se dissoudre."],
             pacing: ["Agir sans attachement permet à l’énergie de circuler librement dans le système nerveux sans bloquer le cœur. Lâche prise et continue d'avancer sans amertume."]
         },
         interoception: {
-            core: ["Observer la tension avant de réagir, c’est écouter ce que le corps sait bien avant que l’esprit n’agisse.", "Le corps parle toujours avant que l’esprit ne justifie.", "Chaque souffle est un guide : il te montre avec précision là où l’énergie est bloquée et où la liberté peut se déployer."],
+            core: ["Observer la tension avant de réagir, c’est écouter ce que le corps sait bien avant que l’esprit n’agisse.", "Chaque souffle est un guide : il te montre avec précision là où l’énergie est bloquée."],
             science: ["L'interoception est mécanique : face au stress ou à une critique, remarque simplement la crispation dans ta nuque ou ton ventre. Respirer consciemment à cet instant interrompt la chaîne nerveuse automatique."],
             pacing: ["Rappelle-toi que la sensation physique est une information utile, pas un problème à fuir. Utilise cette écoute corporelle pour te recentrer à tout moment de la journée."]
         },
         resilience: {
-            core: ["La véritable stabilité ne vient pas de l’absence de choc, mais de ton incroyable capacité à l’intégrer.", "Le vrai courage est de rester entier lorsqu’on est touché, sans se dissoudre dans la douleur.", "Tenir bon, mais sans se durcir ni se barricader, est la forme la plus haute de la sagesse."],
-            science: ["Dans une période difficile ou face à une déception répétée, ton système nerveux est mis à l'épreuve. Ce qui est traversé consciemment et respiré corporellement ne laisse pas de cicatrice toxique inutile."],
+            core: ["La véritable stabilité ne vient pas de l’absence de choc, mais de ton incroyable capacité à l’intégrer.", "Le vrai courage est de rester entier lorsqu’on est touché, sans se dissoudre dans la douleur."],
+            science: ["Dans une période difficile, ton système nerveux est mis à l'épreuve. Ce qui est traversé consciemment et respiré corporellement ne laisse pas de cicatrice toxique inutile."],
             pacing: ["Ne t'épuise pas à bâtir des forteresses. Laisse l'impact traverser ton système comme le vent traverse les feuilles de l'arbre. C'est cela, la véritable résilience."]
         },
         meditation_presence: {
-            core: ["La méditation n’ajoute absolument rien à qui tu es : elle enlève simplement ce qui t'encombre.", "Le silence n’est pas un espace vide et mort, c'est une présence infiniment disponible.", "Le calme de l’esprit est le roc solide sur lequel toute action juste peut se construire."],
+            core: ["La méditation n’ajoute absolument rien à qui tu es : elle enlève simplement ce qui t'encombre.", "Le calme de l’esprit est le roc solide sur lequel toute action juste peut se construire."],
             science: ["L'entraînement est direct : assieds-toi silencieusement. L'absorption (Samādhi) n'est pas une fuite loin du monde, mais la révélation mécanique de la stabilité de ton propre système nerveux."],
             pacing: ["S’asseoir sans aucun but est déjà, en soi, un acte d'immense clarté. Laisse le silence faire son œuvre de nettoyage sans chercher à contrôler le processus."]
         }
     },
     en: {
+        yoga_definition: {
+            core: ["The word Yoga means 'Union'. It is not simply physical gymnastics, nor a blind belief.", "Yoga is the precise, mechanical, and empirical science of purifying the human nervous system."],
+            science: ["The equation of evolution is very simple: unshakable Silence (peace of mind) married to dynamic Ecstasy (vital energy) gives birth to perfect Unity.", "True transformation is measured by increased conductivity of your nerves, creating biological stability against external pressures."],
+            pacing: ["Do not take my word for it. Make your own body the laboratory of this science. Sit twice a day and observe the results for yourself."]
+        },
+        kundalini_extase: {
+            core: ["Kundalini is not an esoteric myth or a magical concept. It is the awakening of natural ecstatic conductivity within your spine.", "It is the gigantic expansion of our basic vital (and sexual) energy, redirected to illuminate the central nervous system."],
+            science: ["This inner fire that is sometimes felt is the friction generated by prana passing through nerves that are still congested. Awakening is a physiological reorganization heavily involving the vagus nerve.", "Energy inevitably follows attention. Cultivate silence through meditation, and the divine flow (Shakti) will naturally find its way up."],
+            pacing: ["A crucial warning: never eagerly chase the thrills of Kundalini. If the energy becomes too strong or uncomfortable (insomnia, heat), reduce your practice and ground yourself with heavy physical activities."]
+        },
+        chakra_anatomie: {
+            core: ["Chakras are real internal mechanisms, major nerve plexuses. But rest assured: you absolutely do not need to analyze them for them to open.", "Intensely focusing on opening a specific chakra is a dangerous mental distraction. Global practice takes care of everything."],
+            science: ["By simply sweeping the spinal cord up and down with spinal breathing, you automatically and gently purify all the nerve centers connected to it.", "Prematurely forcing the opening of the Crown chakra (Sahasrara) before clearing the lower body is the number one cause of severe energetic imbalances."],
+            pacing: ["Let the mysterious bodily mechanics operate 'under the hood' with complete confidence. Your only job is to provide the regular fuel through your daily practice."]
+        },
+        mantra_technique: {
+            core: ["The mantra is a vibratory vehicle. It has no connection to any religion, language, or intellectual meaning.", "It is a very simple thought, devoid of meaning, deliberately used to trick the intellect and allow the mind to dive."],
+            science: ["The mechanics are infallible: meaning keeps the mind moving on the surface; pure, meaningless sound causes the mind to still for lack of analytical 'grip'.", "The mantra slows the metabolism and lowers the heart rate, opening the door to deep healing of old traumas."],
+            pacing: ["As soon as you catch yourself lost in thought, return to the mantra with infinite gentleness, almost carelessly. Never force concentration."]
+        },
+        pranayama_souffle: {
+            core: ["Pranayama, and specifically spinal breathing, is not a hyperventilation exercise. It is the great invisible bridge between your physical body and your energetic system.", "It prepares the ground, purifies the channels, and gently awakens the energy before deep meditation installs silence."],
+            science: ["There is a direct electromagnetic relationship between the slow rhythm of the breath (Ujjayi) and the intensity of the nerve current generated along the sushumna (central channel).", "This gentle restriction of oxygen mechanically draws the life force upwards."],
+            pacing: ["Trace a thin mental luminous line from your perineum to the center of your head on the inhale, and back down on the exhale. Do this comfortably for 10 minutes before meditating."]
+        },
+        illumination_eveil: {
+            core: ["Enlightenment is not a distant destination, a sudden mystical explosion, or a state of inhuman perfection. It is simply your daily life gaining clarity.", "Awakening has three mechanical stages: unshakable inner silence (peace), continuous ecstasy (objectless joy), and finally overflowing divine love for all things."],
+            science: ["Union is not a philosophical concept, it is the measurable and permanent change in the functioning of the central nervous system, freed from its blockages.", "The stereotype of the solitary sage is false. A fully purified nervous system naturally radiates and becomes an active channel to help others."],
+            pacing: ["Never fixate on an imaginary end. What matters is not knowing when you will arrive, but simply sitting today. The journey itself is the destination."]
+        },
+        karma_samskara: {
+            core: ["Karma is not a divine punishment or a fatal destiny. It is the simple universal law of cause and effect: the inertia of your past actions.", "Waiting for the universe or a master to magically save you from your karma merely postpones the work."],
+            science: ["Biologically speaking, karmas are 'samskaras': real obstructions, frictions, and old memories crystallized in the wiring of your nervous system.", "The practice of deep meditation generates the pure consciousness necessary to mechanically dissolve and 'burn' these obstructions from the inside."],
+            pacing: ["Never consider yourself guilty or at fault. Sit down, meditate regularly, and you will clean your nervous past day after day."]
+        },
+
+        // --- PREVIOUS PHILOSOPHICAL CATEGORIES ---
         universel: {
-            core: [
-                "True wisdom begins where intellectual certainty ends.",
-                "What you resist persists and strengthens. Acceptance is the first step.",
-                "Inner silence is not the absence of noise around you, but the absence of agitation within you.",
-                "Seeking the answer outside often merely postpones discovering what is already there.",
-                "Peace is not found by fleeing life, but by diving calmly into the heart of experience."
-            ],
-            science: [
-                "Your nervous system perceives the world through its own accumulated filters. Purifying these channels changes your reality.",
-                "The quest for meaning is not a fantasy, it is a neurobiological necessity for human balance.",
-                "The analytical mind is a problem-solving machine. If it finds none, it creates one. Return to the body.",
-                "Breathing consciously instantly short-circuits the brain's stress loop."
-            ],
-            pacing: [
-                "Do not seek all the answers today. Practice with regularity and let the silence act.",
-                "Simply ask the question, then drop it into the space of your heart without demanding an immediate answer.",
-                "Turn your attention to the physical sensation of the moment. That is where your anchor lies.",
-                "Patience is the highest of practices. Let things settle on their own."
-            ]
+            core: ["True wisdom begins where intellectual certainty ends.", "What you resist persists and strengthens. Acceptance is the first step.", "Seeking the answer outside often merely postpones discovering what is already there."],
+            science: ["Your nervous system perceives the world through its own accumulated filters. Purifying these channels changes your reality.", "The analytical mind is a problem-solving machine. If it finds none, it creates one. Return to the body."],
+            pacing: ["Simply ask the question, then drop it into the space of your heart without demanding an immediate answer.", "Patience is the highest of practices. Let things settle on their own."]
         },
         routine_base: {
             core: ["Practice doesn't need to be spectacular to be effective. We aim for a more stable life, not a perfect session.", "A minimum viable routine is worth a thousand times more than an irregular hour of practice."],
@@ -408,52 +451,52 @@ const sageBrain = {
             pacing: ["⚠️ If you experience severe distress, dark thoughts, or acute pain, I strongly advise you to temporarily stop the practices and consult a healthcare professional. Take care of yourself."]
         },
         soi_atman: {
-            core: ["The Self is not an idea to understand, but an evidence that remains when agitation ceases.", "What you are doesn't begin with thought and doesn't stop when it silences.", "The Self is neither in front nor behind: it is always present, silent, and yet alive at every moment."],
+            core: ["The Self is not an idea to understand, but an evidence that remains when agitation ceases.", "What you are doesn't begin with thought and doesn't stop when it silences."],
             science: ["Experience begins with the body: sit without a specific goal. Simply observe a thought arise and pass without following it. When nothing is sought, presence reveals itself."],
             pacing: ["Do not seek a mystical state. Simply be present in the midst of an ordinary activity. That is where true witnessing consciousness resides."]
         },
         brahman_absolu: {
-            core: ["The Absolute is not elsewhere: it is that within which all experience appears.", "What you seek as the ultimate goal is already that by which you seek.", "Unity is not added to the world: it is its invisible and permanent background."],
-            science: ["Experience it: contemplate a landscape, a tree, or the sky without attaching mental commentary to it. Let perception exist on its own. All that you perceive is the expression of this totality."],
+            core: ["The Absolute is not elsewhere: it is that within which all experience appears.", "Unity is not added to the world: it is its invisible and permanent background."],
+            science: ["Experience it: contemplate a landscape, a tree, or the sky without attaching mental commentary to it. Let perception exist on its own."],
             pacing: ["Understanding this is touching freedom. Stop trying to grasp the Absolute with the intellect, and let your nervous system rest in the common ground of experience."]
         },
         advaita_non_dualite: {
-            core: ["Non-duality does not suppress the differences of life; it simply dissolves the idea of separation.", "It's not you fighting against the world, but life recognizing itself through you.", "There is no separation: every breath, every sensation participates in the same essence."],
-            science: ["To live it bodily: observe an emotion of sadness or anger rise within you, but choose not to define yourself by it. Feel the raw sensation without saying 'me' or 'mine'."],
+            core: ["Non-duality does not suppress the differences of life; it simply dissolves the idea of separation.", "It's not you fighting against the world, but life recognizing itself through you."],
+            science: ["Observe an emotion of sadness or anger rise within you, but choose not to define yourself by it. Feel the raw sensation without saying 'me' or 'mine'."],
             pacing: ["Let thoughts pass without fighting them. When there is no longer an inner enemy, the outside automatically pacifies itself."]
         },
         maya_illusion: {
-            core: ["Illusion is not a moral lie or a mistake, but a simple habit of perception.", "What repeats mechanically in your life is not the absolute truth, but conditioning.", "Illusion is a guide to learning how to distinguish the real from the superficial."],
+            core: ["Illusion is not a moral lie or a mistake, but a simple habit of perception.", "What repeats mechanically in your life is not the absolute truth, but conditioning."],
             science: ["Take an emotional reaction that you often repeat (a fear, a compulsive attraction). Feel the energy it produces. Often, the simple light of your attentive observation is enough to weaken its grip."],
             pacing: ["Do not judge yourself for being caught in the mental veil. Seeing illusion in action within your own body is the first tangible step towards freedom."]
         },
         elan_vital: {
-            core: ["The vital urge does not promise immediate comfort, but it clearly increases your ability to cope.", "What is energetically right simplifies life instead of scattering it.", "Aligned energy does not burn, it illuminates."],
+            core: ["The vital urge does not promise immediate comfort, but it clearly increases your ability to cope.", "What is energetically right simplifies life instead of scattering it."],
             science: ["Observe your body when you start a demanding task: if the action is guided by the vital urge, you will feel a calm and stable inner strength, without the nervous excitement of escape."],
             pacing: ["Every conscious action, however modest, increases your clarity. Persevere in effort without letting impatience win you over."]
         },
         karma_action: {
-            core: ["Right action is recognized by the clarity and peace it leaves behind.", "Acting without clinging to the fruit of the action releases infinitely more energy than fearful inaction.", "Detachment takes nothing away from the action, it purifies it of its anxiety."],
+            core: ["Right action is recognized by the clarity and peace it leaves behind.", "Acting without clinging to the fruit of the action releases infinitely more energy than fearful inaction."],
             science: ["Direct experience: make a difficult but necessary decision at work or with family. Make the right gesture, finish the task, and immediately cut the expectation of recognition or validation."],
             pacing: ["Conscious action, even if it seems modest from the outside, builds an unshakable inner alignment."]
         },
         detachement: {
-            core: ["Detachment is not cold indifference, but freedom from the result.", "What you cling to desperately holds you much more than you hold it.", "When nothing is possessed, then everything can finally be fully lived."],
-            science: ["Experience it biologically: when facing a failure, spot the tension of disappointment in your body. Breathe into it, accept the event without judging yourself, and let the expectation dissolve."],
+            core: ["Detachment is not cold indifference, but freedom from the result.", "What you cling to desperately holds you much more than you hold it."],
+            science: ["When facing a failure, spot the tension of disappointment in your body. Breathe into it, accept the event without judging yourself, and let the expectation dissolve."],
             pacing: ["Acting without attachment allows energy to flow freely in the nervous system without blocking the heart. Let go and continue moving forward without bitterness."]
         },
         interoception: {
-            core: ["Observing tension before reacting is listening to what the body knows long before the mind acts.", "The body always speaks before the mind justifies.", "Every breath is a guide: it shows you exactly where energy is blocked and where freedom can unfold."],
+            core: ["Observing tension before reacting is listening to what the body knows long before the mind acts.", "Every breath is a guide: it shows you exactly where energy is blocked and where freedom can unfold."],
             science: ["Interoception is mechanical: faced with stress or criticism, simply notice the tension in your neck or stomach. Breathing consciously at that moment interrupts the automatic nerve chain."],
             pacing: ["Remember that physical sensation is useful information, not a problem to flee from. Use this bodily listening to center yourself at any time of the day."]
         },
         resilience: {
-            core: ["True stability does not come from the absence of shock, but from your incredible ability to integrate it.", "True courage is to remain whole when touched, without dissolving into the pain.", "Holding firm, but without hardening or barricading oneself, is the highest form of wisdom."],
-            science: ["In a difficult period or faced with repeated disappointment, your nervous system is put to the test. What is traversed consciously and breathed bodily leaves no useless toxic scar."],
+            core: ["True stability does not come from the absence of shock, but from your incredible ability to integrate it.", "True courage is to remain whole when touched, without dissolving into the pain."],
+            science: ["In a difficult period, your nervous system is put to the test. What is traversed consciously and breathed bodily leaves no useless toxic scar."],
             pacing: ["Do not exhaust yourself building fortresses. Let the impact pass through your system like the wind through the leaves of a tree. That is true resilience."]
         },
         meditation_presence: {
-            core: ["Meditation adds absolutely nothing to who you are: it simply removes what clutters you.", "Silence is not an empty and dead space, it is an infinitely available presence.", "The calm of the mind is the solid rock upon which all right action can be built."],
+            core: ["Meditation adds absolutely nothing to who you are: it simply removes what clutters you.", "The calm of the mind is the solid rock upon which all right action can be built."],
             science: ["The training is direct: sit silently. Absorption (Samādhi) is not an escape far from the world, but the mechanical revelation of the stability of your own nervous system."],
             pacing: ["Sitting without any goal is already, in itself, an act of immense clarity. Let silence do its cleaning work without trying to control the process."]
         }

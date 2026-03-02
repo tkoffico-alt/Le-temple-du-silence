@@ -175,6 +175,7 @@
     let currentLang = 'fr';
     let isTyping = false;
     let hasAskedQuestion = false; 
+    let sessionQuestionCount = 0; // <--- NOUVELLE MÉMOIRE DU NOMBRE DE QUESTIONS
     
     // --- 🧠 MÉMOIRE DU SAGE ---
     let previousTopic = "universel"; 
@@ -494,7 +495,6 @@
             }, 100);
         }
 
-        // --- 1. SÉCURITÉ ABSOLUE ---
         const motsUrgence = ["suicide", "panique", "dépression", "depression", "hôpital", "hospital", "mourir", "tuer", "grave"];
         let urgenceDetectee = motsUrgence.some(mot => q.includes(mot));
 
@@ -506,8 +506,6 @@
             topic = "ethique_securite";
         } else {
             
-            // --- 🧠 LA MATRICE DE CONTEXTE CROISÉE ---
-            // Intercepte les pronoms (le premier, la suite) en fonction du sujet précédent
             const matriceContexte = {
                 "illumination_eveil": [
                     { mots: ["premier", "première", "premiere", "1er", "un", "silence"], cible: "meditation_presence" },
@@ -530,13 +528,12 @@
                     if (regle.mots.some(mot => q.includes(mot))) {
                         topic = regle.cible;
                         contextMatchFound = true;
-                        isContinuingTopic = true; // On suit le fil logique !
+                        isContinuingTopic = true; 
                         break;
                     }
                 }
             }
 
-            // --- SCORING SÉMANTIQUE DYNAMIQUE (Si la matrice n'a rien trouvé) ---
             if (!contextMatchFound) {
                 const dictionnairesRegex = {
                     yoga_definition: /\b(yoga|yogi|union|voie|chemin)[a-zà-ÿ]*/gi,
@@ -655,7 +652,24 @@
             <img src="sceau-gardien.png" alt="Sceau du Gardien" style="height: 35px; border-radius: 50%; box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);">
         </div>`;
 
-        let finalResponse = `« ${prefix}${randomCore}<br><br>${randomScience}<br><br>${randomPacing} »${signature}`;
+        let finalResponse = "";
+
+        // --- 🧠 LE COUP DE GRÂCE : L'INTERCEPTION DU SAGE ---
+        sessionQuestionCount++; // Le Sage compte les questions dans cette session
+        
+        // Si plus de 4 questions, 50% de chance que le Sage te demande d'arrêter de réfléchir
+        if (sessionQuestionCount > 4 && Math.random() > 0.5) {
+            let interceptionFr = "Ton esprit est très actif aujourd'hui, et ton intellect a soif de réponses. Mais rappelle-toi la grande règle : l'intellect ne peut pas résoudre l'intellect. Une once de pratique vaudra toujours des tonnes de théorie. Je t'invite à lâcher ces mots, à fermer les yeux, et à plonger dans le silence de ton propre corps...";
+            
+            let interceptionEn = "Your mind is very active today, and your intellect thirsts for answers. But remember the great rule: the intellect cannot solve the intellect. An ounce of practice will always be worth tons of theory. I invite you to let go of these words, close your eyes, and dive into the silence of your own body...";
+            
+            let msg = currentLang === 'fr' ? interceptionFr : interceptionEn;
+            finalResponse = `« ${msg} »${signature}`;
+            sessionQuestionCount = 0; // Il remet le compteur à zéro pour te laisser respirer
+        } else {
+            // Réponse normale s'il n'y a pas d'interception
+            finalResponse = `« ${prefix}${randomCore}<br><br>${randomScience}<br><br>${randomPacing} »${signature}`;
+        }
 
         typeWriter(finalResponse, 0, logEl, () => {
             isTyping = false;

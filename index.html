@@ -176,7 +176,7 @@
     let isTyping = false;
     let hasAskedQuestion = false; 
     
-    // --- 🧠 PILIER 1.5 : LA MÉMOIRE LONG-TERME & CONTEXTUELLE ---
+    // --- 🧠 MÉMOIRE DU SAGE ---
     let previousTopic = "universel"; 
     let lastIntroIndex = -1; 
 
@@ -494,73 +494,99 @@
             }, 100);
         }
 
+        // --- 1. SÉCURITÉ ABSOLUE ---
         const motsUrgence = ["suicide", "panique", "dépression", "depression", "hôpital", "hospital", "mourir", "tuer", "grave"];
         let urgenceDetectee = motsUrgence.some(mot => q.includes(mot));
 
         let topic = "universel";
         let isContinuingTopic = false;
+        let contextMatchFound = false;
 
         if (urgenceDetectee) {
             topic = "ethique_securite";
         } else {
             
-            // --- SCORING SÉMANTIQUE DYNAMIQUE ---
-            const dictionnairesRegex = {
-                // --- NOUVEAUX MOTS-CLÉS DE DÉFINITION (AYP) ---
-                yoga_definition: /\b(yoga|yogi|union|voie|chemin)[a-zà-ÿ]*/gi,
-                kundalini_extase: /\b(kundalini|extas|shakti|serpent|énergi|energi|vibrat|frisson)[a-zà-ÿ]*/gi,
-                chakra_anatomie: /\b(chakra|centre|sahasrar|couronn|ajn|œil|oeil|gland|pinéal|pineal|troisième|troisieme)[a-zà-ÿ]*/gi,
-                mantra_technique: /\b(mantr|son|ayam|i am|répét|repet|techniqu|méthod)[a-zà-ÿ]*/gi,
-                pranayama_souffle: /\b(pranayam|respir|souffl|colonn|spinal|nadi|sushumn)[a-zà-ÿ]*/gi,
-                illumination_eveil: /\b(illumin|éveil|eveil|libérat|liberat|nirvan|samadhi|but|fin)[a-zà-ÿ]*/gi,
-                karma_samskara: /\b(karma|destin|vies|antérieur|samskar|péché|peche)[a-zà-ÿ]*/gi,
-
-                // --- MOTS-CLÉS PHILOSOPHIQUES PRÉCÉDENTS ---
-                surcharge_ancrage: /\b(insomni|dor|agit|nerveu|pression|surcharg|trop|ancrag|grounding|fatigu|épuis|epuis|fou|craqu|bizarr|sommeil|nuit|détend)[a-zà-ÿ]*/gi,
-                interoception: /\b(corps|tension|sensation|stress|nuqu|ventr|physiqu|mal|ressens|cœur|coeur|têt|tet|douleur)[a-zà-ÿ]*/gi,
-                resilience: /\b(touch|bris|critiqu|échec|echec|décept|decept|choc|trist|colèr|coler|peur|courag|resilien|perdu|pleur|souffr|malheureu|dur|difficil|abandon)[a-zà-ÿ]*/gi,
-                detachement: /\b(attent|détach|detach|lâch|lach|travail|pourquoi|sens|vouloir|désir|desir|ego|égo|attach|futur|passé|passe|contrôl|control)[a-zà-ÿ]*/gi,
-                karma_action: /\b(action|choix|résultat|resultat|juste|décision|decision|choisi|fair|agir|dilemm|devoir)[a-zà-ÿ]*/gi,
-                elan_vital: /\b(motiv|élan|elan|projet|bloqu|envi|avanc|forc|procrastin)[a-zà-ÿ]*/gi,
-                maya_illusion: /\b(fuit|illusion|maya|plaisir|conditionnement|habitud|faux|mensong|matériel|materiel|sociét|societ|matric)[a-zà-ÿ]*/gi,
-                brahman_absolu: /\b(dieu|absolu|brahman|univers|créateur|createur|tout|divin|vérit|verit|vrai)[a-zà-ÿ]*/gi,
-                advaita_non_dualite: /\b(unité|unite|séparat|separat|non-dual|advaita|seul|autr|mond|vie|relié|ensembl)[a-zà-ÿ]*/gi,
-                meditation_presence: /\b(médit|medit|silenc|présenc|presence|absorpt|calm|esprit|paix|tranquil|pens|mental|cerveau|vid|assis)[a-zà-ÿ]*/gi,
-                routine_base: /\b(routin|pratiqu|commenc|temps|régulier|regulier|comment|aid|conseil|début|debut|apprend|jour)[a-zà-ÿ]*/gi
+            // --- 🧠 LA MATRICE DE CONTEXTE CROISÉE ---
+            // Intercepte les pronoms (le premier, la suite) en fonction du sujet précédent
+            const matriceContexte = {
+                "illumination_eveil": [
+                    { mots: ["premier", "première", "premiere", "1er", "un", "silence"], cible: "meditation_presence" },
+                    { mots: ["deuxième", "deuxieme", "second", "2ème", "extase", "joie"], cible: "kundalini_extase" },
+                    { mots: ["troisième", "troisieme", "3ème", "amour", "divin"], cible: "advaita_non_dualite" }
+                ],
+                "yoga_definition": [
+                    { mots: ["premier", "première", "silence", "paix"], cible: "meditation_presence" },
+                    { mots: ["deuxième", "deuxieme", "extase", "énergie", "energi"], cible: "kundalini_extase" },
+                    { mots: ["union", "unité", "unite"], cible: "advaita_non_dualite" }
+                ],
+                "karma_samskara": [
+                    { mots: ["comment", "pratique", "technique", "faire", "laquelle"], cible: "routine_base" }
+                ]
             };
 
-            // INITIALISATION AUTOMATIQUE DES SCORES (Corrige le bug de la Kundalini)
-            const scores = {};
-            for (let categorie in dictionnairesRegex) {
-                scores[categorie] = 0;
-            }
-
-            let phraseAnalysee = q.replace(/\b(pas|plus|sans|aucun|aucune|jamais)\s+([a-zà-ÿ]+)/gi, "");
-
-            for (let categorie in dictionnairesRegex) {
-                let correspondances = phraseAnalysee.match(dictionnairesRegex[categorie]);
-                if (correspondances) {
-                    scores[categorie] += correspondances.length;
+            if (matriceContexte[previousTopic]) {
+                for (let i = 0; i < matriceContexte[previousTopic].length; i++) {
+                    let regle = matriceContexte[previousTopic][i];
+                    if (regle.mots.some(mot => q.includes(mot))) {
+                        topic = regle.cible;
+                        contextMatchFound = true;
+                        isContinuingTopic = true; // On suit le fil logique !
+                        break;
+                    }
                 }
             }
 
-            let maxScore = 0;
-            let detectedTopic = "";
-            for (let categorie in scores) {
-                if (scores[categorie] > maxScore) {
-                    maxScore = scores[categorie];
-                    detectedTopic = categorie;
-                }
-            }
+            // --- SCORING SÉMANTIQUE DYNAMIQUE (Si la matrice n'a rien trouvé) ---
+            if (!contextMatchFound) {
+                const dictionnairesRegex = {
+                    yoga_definition: /\b(yoga|yogi|union|voie|chemin)[a-zà-ÿ]*/gi,
+                    kundalini_extase: /\b(kundalini|extas|shakti|serpent|énergi|energi|vibrat|frisson)[a-zà-ÿ]*/gi,
+                    chakra_anatomie: /\b(chakra|centre|sahasrar|couronn|ajn|œil|oeil|gland|pinéal|pineal|troisième|troisieme)[a-zà-ÿ]*/gi,
+                    mantra_technique: /\b(mantr|son|ayam|i am|répét|repet|techniqu|méthod)[a-zà-ÿ]*/gi,
+                    pranayama_souffle: /\b(pranayam|respir|souffl|colonn|spinal|nadi|sushumn)[a-zà-ÿ]*/gi,
+                    illumination_eveil: /\b(illumin|éveil|eveil|libérat|liberat|nirvan|samadhi|but|fin)[a-zà-ÿ]*/gi,
+                    karma_samskara: /\b(karma|destin|vies|antérieur|samskar|péché|peche)[a-zà-ÿ]*/gi,
+                    surcharge_ancrage: /\b(insomni|dor|agit|nerveu|pression|surcharg|trop|ancrag|grounding|fatigu|épuis|epuis|fou|craqu|bizarr|sommeil|nuit|détend)[a-zà-ÿ]*/gi,
+                    interoception: /\b(corps|tension|sensation|stress|nuqu|ventr|physiqu|mal|ressens|cœur|coeur|têt|tet|douleur)[a-zà-ÿ]*/gi,
+                    resilience: /\b(touch|bris|critiqu|échec|echec|décept|decept|choc|trist|colèr|coler|peur|courag|resilien|perdu|pleur|souffr|malheureu|dur|difficil|abandon)[a-zà-ÿ]*/gi,
+                    detachement: /\b(attent|détach|detach|lâch|lach|travail|pourquoi|sens|vouloir|désir|desir|ego|égo|attach|futur|passé|passe|contrôl|control)[a-zà-ÿ]*/gi,
+                    karma_action: /\b(action|choix|résultat|resultat|juste|décision|decision|choisi|fair|agir|dilemm|devoir)[a-zà-ÿ]*/gi,
+                    elan_vital: /\b(motiv|élan|elan|projet|bloqu|envi|avanc|forc|procrastin)[a-zà-ÿ]*/gi,
+                    maya_illusion: /\b(fuit|illusion|maya|plaisir|conditionnement|habitud|faux|mensong|matériel|materiel|sociét|societ|matric)[a-zà-ÿ]*/gi,
+                    brahman_absolu: /\b(dieu|absolu|brahman|univers|créateur|createur|tout|divin|vérit|verit|vrai)[a-zà-ÿ]*/gi,
+                    advaita_non_dualite: /\b(unité|unite|séparat|separat|non-dual|advaita|seul|autr|mond|vie|relié|ensembl)[a-zà-ÿ]*/gi,
+                    meditation_presence: /\b(médit|medit|silenc|présenc|presence|absorpt|calm|esprit|paix|tranquil|pens|mental|cerveau|vid|assis)[a-zà-ÿ]*/gi,
+                    routine_base: /\b(routin|pratiqu|commenc|temps|régulier|regulier|comment|aid|conseil|début|debut|apprend|jour)[a-zà-ÿ]*/gi
+                };
 
-            if (maxScore > 0) {
-                topic = detectedTopic;
-                if (topic === previousTopic) {
-                    isContinuingTopic = true;
+                const scores = {};
+                for (let categorie in dictionnairesRegex) { scores[categorie] = 0; }
+
+                let phraseAnalysee = q.replace(/\b(pas|plus|sans|aucun|aucune|jamais)\s+([a-zà-ÿ]+)/gi, "");
+
+                for (let categorie in dictionnairesRegex) {
+                    let correspondances = phraseAnalysee.match(dictionnairesRegex[categorie]);
+                    if (correspondances) {
+                        scores[categorie] += correspondances.length;
+                    }
                 }
-            } else {
-                topic = previousTopic; 
-                isContinuingTopic = true; 
+
+                let maxScore = 0;
+                let detectedTopic = "";
+                for (let categorie in scores) {
+                    if (scores[categorie] > maxScore) {
+                        maxScore = scores[categorie];
+                        detectedTopic = categorie;
+                    }
+                }
+
+                if (maxScore > 0) {
+                    topic = detectedTopic;
+                    if (topic === previousTopic) { isContinuingTopic = true; }
+                } else {
+                    topic = previousTopic; 
+                    isContinuingTopic = true; 
+                }
             }
         }
 

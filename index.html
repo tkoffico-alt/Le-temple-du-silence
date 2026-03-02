@@ -512,18 +512,28 @@
 
             let phraseAnalysee = q.replace(/\b(pas|plus|sans|aucun|aucune|jamais)\s+([a-zà-ÿ]+)/gi, "");
 
-            const dictionnairesRegex = {
+       const dictionnairesRegex = {
+                // --- NOUVEAUX MOTS-CLÉS DE DÉFINITION (AYP) ---
+                yoga_definition: /\b(yoga|yogi|union|voie|chemin)[a-zà-ÿ]*/gi,
+                kundalini_extase: /\b(kundalini|extas|shakti|serpent|énergi|energi|vibrat|frisson)[a-zà-ÿ]*/gi,
+                chakra_anatomie: /\b(chakra|centre|sahasrar|couronn|ajn|œil|oeil|gland|pinéal|pineal|troisième|troisieme)[a-zà-ÿ]*/gi,
+                mantra_technique: /\b(mantr|son|ayam|i am|répét|repet|techniqu|méthod)[a-zà-ÿ]*/gi,
+                pranayama_souffle: /\b(pranayam|respir|souffl|colonn|spinal|nadi|sushumn)[a-zà-ÿ]*/gi,
+                illumination_eveil: /\b(illumin|éveil|eveil|libérat|liberat|nirvan|samadhi|but|fin)[a-zà-ÿ]*/gi,
+                karma_samskara: /\b(karma|destin|vies|antérieur|samskar|péché|peche)[a-zà-ÿ]*/gi,
+
+                // --- MOTS-CLÉS PHILOSOPHIQUES PRÉCÉDENTS ---
                 surcharge_ancrage: /\b(insomni|dor|agit|nerveu|pression|surcharg|trop|ancrag|grounding|fatigu|épuis|epuis|fou|craqu|bizarr|sommeil|nuit|détend)[a-zà-ÿ]*/gi,
-                interoception: /\b(corps|tension|respir|souffl|sensation|stress|nuqu|ventr|physiqu|mal|ressens|cœur|coeur|têt|tet|douleur)[a-zà-ÿ]*/gi,
+                interoception: /\b(corps|tension|sensation|stress|nuqu|ventr|physiqu|mal|ressens|cœur|coeur|têt|tet|douleur)[a-zà-ÿ]*/gi,
                 resilience: /\b(touch|bris|critiqu|échec|echec|décept|decept|choc|trist|colèr|coler|peur|courag|resilien|perdu|pleur|souffr|malheureu|dur|difficil|abandon)[a-zà-ÿ]*/gi,
-                detachement: /\b(attent|détach|detach|lâch|lach|travail|pourquoi|sens|but|vouloir|désir|desir|ego|égo|attach|futur|passé|passe|contrôl|control)[a-zà-ÿ]*/gi,
-                karma_action: /\b(action|choix|résultat|resultat|karma|juste|décision|decision|choisi|fair|agir|dilemm|devoir)[a-zà-ÿ]*/gi,
-                elan_vital: /\b(motiv|élan|elan|projet|bloqu|envi|énergi|energi|avanc|forc|procrastin)[a-zà-ÿ]*/gi,
+                detachement: /\b(attent|détach|detach|lâch|lach|travail|pourquoi|sens|vouloir|désir|desir|ego|égo|attach|futur|passé|passe|contrôl|control)[a-zà-ÿ]*/gi,
+                karma_action: /\b(action|choix|résultat|resultat|juste|décision|decision|choisi|fair|agir|dilemm|devoir)[a-zà-ÿ]*/gi,
+                elan_vital: /\b(motiv|élan|elan|projet|bloqu|envi|avanc|forc|procrastin)[a-zà-ÿ]*/gi,
                 maya_illusion: /\b(fuit|illusion|maya|plaisir|conditionnement|habitud|faux|mensong|matériel|materiel|sociét|societ|matric)[a-zà-ÿ]*/gi,
                 brahman_absolu: /\b(dieu|absolu|brahman|univers|créateur|createur|tout|divin|vérit|verit|vrai)[a-zà-ÿ]*/gi,
                 advaita_non_dualite: /\b(unité|unite|séparat|separat|non-dual|advaita|seul|autr|mond|vie|relié|ensembl)[a-zà-ÿ]*/gi,
-                meditation_presence: /\b(médit|medit|silenc|présenc|presence|samadhi|absorpt|calm|esprit|paix|tranquil|pens|mental|cerveau|vid|assis)[a-zà-ÿ]*/gi,
-                routine_base: /\b(routin|pratiqu|commenc|temps|régulier|regulier|comment|aid|conseil|début|debut|apprend|jour|méthod|method|techniqu)[a-zà-ÿ]*/gi
+                meditation_presence: /\b(médit|medit|silenc|présenc|presence|absorpt|calm|esprit|paix|tranquil|pens|mental|cerveau|vid|assis)[a-zà-ÿ]*/gi,
+                routine_base: /\b(routin|pratiqu|commenc|temps|régulier|regulier|comment|aid|conseil|début|debut|apprend|jour)[a-zà-ÿ]*/gi
             };
 
             for (let categorie in dictionnairesRegex) {
@@ -668,3 +678,4 @@
     </script>
 </body>
 </html>
+

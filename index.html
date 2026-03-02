@@ -296,7 +296,6 @@
         document.getElementById(`nav-${sectionId}`).classList.add('active');
     }
 
-    // --- LE SCEAU DU GARDIEN POUR LES TEXTES ---
     function getSignatureHTML() {
         const signatureText = currentLang === 'fr' ? "Le Temple du Silence" : "The Temple of Silence";
         return `
@@ -504,15 +503,9 @@
         if (urgenceDetectee) {
             topic = "ethique_securite";
         } else {
-            const scores = {
-                surcharge_ancrage: 0, interoception: 0, resilience: 0, detachement: 0,
-                karma_action: 0, elan_vital: 0, maya_illusion: 0, brahman_absolu: 0,
-                advaita_non_dualite: 0, meditation_presence: 0, routine_base: 0
-            };
-
-            let phraseAnalysee = q.replace(/\b(pas|plus|sans|aucun|aucune|jamais)\s+([a-zà-ÿ]+)/gi, "");
-
-       const dictionnairesRegex = {
+            
+            // --- SCORING SÉMANTIQUE DYNAMIQUE ---
+            const dictionnairesRegex = {
                 // --- NOUVEAUX MOTS-CLÉS DE DÉFINITION (AYP) ---
                 yoga_definition: /\b(yoga|yogi|union|voie|chemin)[a-zà-ÿ]*/gi,
                 kundalini_extase: /\b(kundalini|extas|shakti|serpent|énergi|energi|vibrat|frisson)[a-zà-ÿ]*/gi,
@@ -535,6 +528,14 @@
                 meditation_presence: /\b(médit|medit|silenc|présenc|presence|absorpt|calm|esprit|paix|tranquil|pens|mental|cerveau|vid|assis)[a-zà-ÿ]*/gi,
                 routine_base: /\b(routin|pratiqu|commenc|temps|régulier|regulier|comment|aid|conseil|début|debut|apprend|jour)[a-zà-ÿ]*/gi
             };
+
+            // INITIALISATION AUTOMATIQUE DES SCORES (Corrige le bug de la Kundalini)
+            const scores = {};
+            for (let categorie in dictionnairesRegex) {
+                scores[categorie] = 0;
+            }
+
+            let phraseAnalysee = q.replace(/\b(pas|plus|sans|aucun|aucune|jamais)\s+([a-zà-ÿ]+)/gi, "");
 
             for (let categorie in dictionnairesRegex) {
                 let correspondances = phraseAnalysee.match(dictionnairesRegex[categorie]);
@@ -678,4 +679,3 @@
     </script>
 </body>
 </html>
-

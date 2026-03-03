@@ -1,6 +1,28 @@
 const TEACHINGS_DATABASE = {
     fr: [
         {
+            title: "La Respiration Spinale : Le Pont entre la Matière et l'Énergie",
+            body: `
+                <h3 style="color: var(--accent-color); margin-top: 10px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">La Mécanique de l'Éveil</h3>
+                <p>L'évolution spirituelle n'est pas un concept philosophique abstrait ni une récompense divine. C'est un processus mécanique, biologique et mesurable. Au cœur de ce processus se trouve votre système nerveux central. Imaginez-le comme un vaste réseau électrique. Au fil des années, les traumatismes, le stress et les habitudes ont créé des "résistances" sur ces câbles, limitant la quantité d'énergie vitale (Prana) qui peut y circuler librement.</p>
+                <p>La Respiration Spinale est l'outil le plus direct pour nettoyer ce réseau. Ce n'est pas un simple exercice de relaxation pulmonaire, mais une technique d'ingénierie intérieure conçue pour purifier le canal principal de votre corps : <em>la Sushumna</em>, un fil subtil qui traverse le centre de votre colonne vertébrale, du périnée jusqu'au centre du cerveau.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">La Pratique : Le Fil de Lumière</h3>
+                <p>La beauté de cette pratique réside dans son extrême simplicité. Voici comment l'aborder :</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>L'Assise :</strong> Installez-vous confortablement, le dos soutenu. Fermez les yeux. Il n'est pas nécessaire de croiser les jambes dans des postures douloureuses. Le confort physique est essentiel pour que le système nerveux puisse se relâcher.</li>
+                    <li><strong>L'Inspiration :</strong> Inspirez lentement par le nez. En même temps, faites monter votre attention le long d'un fil subtil (comme une fine ligne lumineuse) qui part de votre périnée, remonte à l'intérieur de la colonne vertébrale, et s'arrête au centre de votre tête (derrière le point entre les sourcils).</li>
+                    <li><strong>L'Expiration :</strong> Expirez lentement par le nez. Faites redescendre cette ligne lumineuse du centre de la tête, le long de la colonne, pour revenir au périnée.</li>
+                    <li><strong>Le Son Ujjayi :</strong> Pour allonger le souffle sans effort, créez une très légère restriction au fond de votre gorge, produisant un doux son de murmure (comme la respiration d'un bébé qui dort). Cela ralentit l'air et stimule puissamment le nerf vague, plongeant le corps dans un état parasympathique profond.</li>
+                </ul>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">La Loi du Moindre Effort</h3>
+                <p>Il y a une règle d'or sur le Chemin AYP : <strong>Moins vous forcez, plus le nettoyage est profond.</strong> Ne cherchez pas à visualiser parfaitement la ligne lumineuse. Une vague intention de la trajectoire suffit amplement. L'énergie suit naturellement l'attention.</p>
+                <p>Si vous perdez le fil de votre respiration, ou si vous vous surprenez perdu dans vos pensées, ne vous jugez pas. La libération des pensées est le signe même que le stress quitte votre corps. Revenez simplement à la ligne lumineuse, avec une douceur infinie.</p>
+                <p style="font-style: italic; opacity: 0.9; margin-top: 20px; border-left: 2px solid var(--accent-color); padding-left: 15px;">Pratiquez ce balayage intérieur pendant 5 à 10 minutes avant votre méditation silencieuse. Ce simple mouvement prépare la terre, l'assouplit et l'irrigue, permettant aux graines du silence de germer avec une force inouïe.</p>
+            `
+        },
+        {
             title: "L’éveil du Silence Intérieur : La Fondation Inébranlable",
             body: `
                 <p>Le Silence intérieur n’est pas quelque chose que l’on crée. Il n’est ni le résultat d’un effort mental, ni un état de vide que l'on imposerait par la force. Au début du chemin, nous cherchons souvent à discipliner l'esprit, à le forcer à se taire, mais cette stratégie produit l'effet inverse.</p>
@@ -71,80 +93,19 @@ const TEACHINGS_DATABASE = {
         }
     ],
     en: [
-        {
-            title: "The Awakening of Inner Silence: The Unshakable Foundation",
-            body: `
-                <p>Inner silence is not something we create. It is neither the result of mental effort nor a state of emptiness imposed by force. At the beginning of the path, we often try to discipline the mind, to force it to be quiet, but this strategy produces the opposite effect.</p>
-                <p>This silence is neither tense concentration nor a withdrawal from the world. It is a dynamic presence, a rock of pure consciousness that naturally resides within us. In everyone, there is an intact, stable zone that has never been disturbed by events or wounds. It is not produced by practice: practice merely reveals it.</p>
-                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">The Mechanics of Awakening: Regularity over Intensity</h3>
-                <p>The seed of this silence unfolds gradually. Awakening rests on a fundamental physiological principle: regularity is far more important than intensity.</p>
-                <p><strong>Deep Meditation:</strong> The tool to awaken this silence is a simple, effortless practice. By gently using a mantra, the mind is allowed to dive inward, transcending surface agitation.</p>
-                <p><strong>The Cumulative Effect:</strong> A little practice, every day, allows the nervous system to accustom itself to a state of very deep conscious rest. Silence settles in drops. It does not emerge as a violent rupture, but as a quiet evidence that becomes familiar.</p>
-                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">Purification and Emergence of the Witness</h3>
-                <p>Awakening is not just a psychological concept; it is a biological cleansing. As we descend into silence, the nervous system dissolves its accumulated blockages.</p>
-                <p><strong>The Liberation Process:</strong> This deep rest brings to light what was buried. Old tensions and resistances may rise to the surface. Silence does not immediately eliminate conditioning; it reveals them so they can dissolve. There is nothing to analyze; simply continue the practice gently and let Silence do its work.</p>
-                <p><strong>The Unshakable Witness:</strong> As the nervous system purifies, a subtle shift occurs: we cease to identify entirely with the surface of life. Something within us observes, without judging. Thoughts pass, emotions circulate, but the witness remains, deeply alive and available.</p>
-                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">Silence in Action: A Foundation, Not a Peak</h3>
-                <p>The true test of silence is not done with eyes closed on a cushion, but in the heart of daily activity.</p>
-                <p><strong>The Practice-Action Cycle:</strong> Action allows the nervous system to metabolize the energy released in meditation. Over time, Silence is no longer confined to formal moments; it accompanies speech, work, and relationships.</p>
-                <p><strong>Inner Coherence:</strong> Action becomes simpler, decisions emerge with less conflict. Life is lived with more fluidity.</p>
-                <p><strong>The Foundation:</strong> Inner silence is not the end of the path; it is the stable base. From it, love expresses itself more freely and intelligence becomes sharper. It takes nothing away from life; it finally allows it to flow unhindered.</p>
-            `
-        },
-        {
-            title: "The Mechanics of Ecstasy: A Progressive Understanding of Awakening",
-            body: `
-                <p>In the spiritual journey, ecstasy is often misunderstood. It is sometimes sought as an exceptional mystical experience, feared as a loss of control, or idealized as the privilege of a chosen few. In reality, ecstasy is none of these. It is the natural result of a precise mechanism, inscribed in human neurobiological functioning, which activates when certain conditions are met.</p>
-                <p>Understanding this mechanic does not serve to provoke ecstasy — for it can never be forced — but to allow the purification process to unfold without confusion or excess, until its harmonious integration into daily life.</p>
-                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">1. What ecstasy is not (and what it is)</h3>
-                <p>In everyday language, ecstasy is confused with mental exaltation or a fleeting emotion triggered by an external event. In the yogic perspective, it is something entirely different:</p>
-                <ul style="line-height: 1.8; margin-bottom: 20px;">
-                    <li><strong>A neurobiological feeling:</strong> It is a stable current of bliss, felt directly in the body and the nervous system.</li>
-                    <li><strong>A constant signature:</strong> Whether gentle or powerful, subtle or expansive, it manifests as a sensation of intensified life, calm, silent, and deeply nourishing.</li>
-                    <li><strong>A functional sign:</strong> It is not the mind that becomes exalted, it is the body that becomes the living conductor of an energy freed from its shackles. Ecstasy simply indicates that something has cleared inside.</li>
-                </ul>
-                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">2. The indispensable foundation: Inner Silence</h3>
-                <p>All authentic ecstasy and deep transformation rest on a primordial base: inner silence. This silence is not an absence of activity or a withdrawal from the world, but a conscious, stable, and witnessing presence, independent of thoughts and emotions.</p>
-                <ul style="line-height: 1.8; margin-bottom: 20px;">
-                    <li><strong>The role of conductor:</strong> This silence acts as a natural regulator. Without it, any energetic stimulation becomes unstable, agitated, or even disruptive.</li>
-                    <li><strong>The alchemy of energy:</strong> Without silence, energy excites. With silence, energy induces ecstasy. Vital energy can then circulate without causing overheating.</li>
-                </ul>
-                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">3. Purification and Conductivity of the Nervous System</h3>
-                <p>Ecstasy appears as the internal channels clear. This purification is not an addition, but a removal:</p>
-                <ul style="line-height: 1.8; margin-bottom: 20px;">
-                    <li><strong>The dissolution of resistances:</strong> Each practice session removes a thin layer of old tensions, emotional blockages, and deep inertias.</li>
-                    <li><strong>The increase in conductivity:</strong> Like an electrical wire cleaned of its impurities, the nervous system lets the vital current pass with less and less resistance.</li>
-                    <li><strong>Natural manifestations:</strong> This nascent conductivity is perceived through sensations of heat, subtle thrills, waves of pure pleasure, or the perception of a living axis along the spine.</li>
-                </ul>
-                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">4. Union: The Two Dimensions of Awakening</h3>
-                <p>Inner experience truly matures when two complementary qualities meet:</p>
-                <ul style="line-height: 1.8; margin-bottom: 20px;">
-                    <li><strong>Silence (peace):</strong> If it develops alone, it can become dry, static, or detached.</li>
-                    <li><strong>Energy (movement):</strong> If it awakens without sufficient silence, it becomes unstable and excessive.</li>
-                </ul>
-                <p>When the peace of silence and the movement of energy advance together, a conscious, embodied, and lasting bliss appears. Movement finds its rest, and stillness becomes creative.</p>
-                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">5. The Tools of the Mechanic</h3>
-                <p>Ecstasy is never a goal to be sought directly; chasing it creates tension that hinders it. It is the fruit of an automatic process nourished by precise tools:</p>
-                <ul style="line-height: 1.8; margin-bottom: 20px;">
-                    <li><strong>Deep meditation:</strong> Installs inner silence through release (and not through effort).</li>
-                    <li><strong>Spinal breathing:</strong> Purifies and activates the central channels, preparing the ground for stable conductivity.</li>
-                    <li><strong>Internal gestures (mudras/bandhas):</strong> Intensify the process by applying targeted pressure when the body is ready.</li>
-                    <li><strong>Intention (samyama):</strong> Allows the transformation to be integrated into daily life from silence.</li>
-                    <li><strong>Transmutation of energy:</strong> Channels natural vitality (including sexual) to feed the inner current.</li>
-                </ul>
-                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">6. The Art of Self-Regulation</h3>
-                <p>In this mechanic, one principle is non-negotiable: balance always takes precedence over intensity.</p>
-                <p>If the energy becomes too strong or uncomfortable, this indicates an excess of stimulation compared to the available level of silence. The right response is never to force, but to slow down, adjust one's practice time, and ground oneself. The path is not a race, it is a maturation.</p>
-                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">7. From Ecstasy to Living Action</h3>
-                <p>At maturity, ecstasy ceases to be an isolated experience on a meditation cushion. It no longer distracts from the world, but irrigates ordinary life. It becomes an objectless joy, stable and reliable, which nourishes the clarity, compassion, and rightness of our actions.</p>
-                <p>Yoga then ceases to be a separate practice to become a living way of being in the world: life finally flows unhindered.</p>
-            `
-        }
+        // Traduction anglaise à venir
     ]
 };
 
 const MURMURES_DATABASE = {
     fr: [
+        {
+            title: "Le Maître et l'Eau Boueuse",
+            audioFile: "",
+            imageFile: "",
+            videoFile: "",
+            text: "<strong>Le Conte :</strong><br>Un jeune chercheur, épuisé par le tumulte de ses pensées, vint trouver un vieux sage au bord d'un lac. <em>« Maître, mon esprit est un chaos perpétuel. J'ai lutté contre mes démons, forcé ma concentration, mais mes pensées tourbillonnent encore plus fort. Comment puis-je forcer mon esprit à trouver la paix ? »</em> Le vieux sage ne répondit pas. Il puisa de l'eau boueuse dans un seau et le posa aux pieds du jeune homme. <em>« Rends cette eau claire »</em>, ordonna-t-il. Le jeune homme plongea ses mains pour retirer la boue. L'eau s'agita. Il essaya de lisser la surface. De nouvelles vagues apparurent. Désespéré, il s'arrêta. Le sage sourit, s'assit et attendit. Après quelques minutes d'immobilité, la terre tomba doucement au fond par son propre poids, et l'eau devint d'une pureté cristalline.<br><br><strong>L'Essence :</strong><br><em>La méditation n'est pas l'art de combattre l'esprit, car combattre la pensée crée de nouvelles vagues. Ton système nerveux est cette eau troublée par l'agitation de la vie. Ne plonge pas tes mains dans l'eau pour forcer le calme. Assieds-toi simplement, utilise la douceur de ton mantra, et laisse l'inertie de la boue retomber d'elle-même au fond de ton être. La clarté n'est pas quelque chose que l'on fabrique ; c'est ce qui reste quand on arrête de s'agiter.</em>"
+        },
         {
             title: "La Boussole du Silence",
             audioFile: "",
@@ -182,41 +143,7 @@ const MURMURES_DATABASE = {
         }
     ],
     en: [
-        {
-            title: "The Compass of Silence",
-            audioFile: "",
-            imageFile: "",
-            videoFile: "video_boussole.mp4",
-            text: "<strong>Traveler, do not seek your path in the tumult of the storm. A true inner direction never howls with emotion. Urgency and fear offer only an illusory clarity that evaporates with the wind. The compass of the Self is read in stillness: the right path is the one that remains intelligible when your heart stops racing.</strong><br><br>When faced with an important decision, the problem is often not a lack of choices. What is difficult is knowing which one to follow. We think a lot, listen to the opinions of others, weigh the pros and cons... and despite everything, the blur remains. So an essential question arises: what can we truly rely on to move forward?<br><br>A reliable inner direction is not recognized by a strong emotion. Enthusiasm, fear, or a sense of urgency can give the impression that everything is clear, but these states pass quickly. A more accurate decision remains valid even when the emotion subsides. If we return to it calmly, without telling ourselves stories, it continues to seem coherent and possible.<br><br>A good benchmark is to observe what the decision provokes within oneself, immediately. Not in terms of pleasure or comfort, but of inner stability. Do we feel tense, obliged to convince ourselves, to justify ourselves constantly? Or, despite the uncertainties, is there a form of appeasement, as if we knew what to do, without making a drama out of it?<br><br>A true inner direction does not eliminate all doubts, but it calms the inner noise. It does not push one to seek endless opinions or to postpone action again and again. It allows taking a concrete step—sometimes very simple—without later feeling a sense of self-betrayal.<br><br>It is also useful to look at what the decision concretely requires. If it relies mostly on flight, avoidance, or the need to keep up appearances, it likely responds to a fear or an external pressure. Conversely, a more accurate direction often requires regularity, simplicity, and personal responsibility. Nothing spectacular, but something solid.<br><br>Finally, an internally aligned decision does not try to control everything in advance. It accepts not knowing the entire rest of the path, while clearly knowing the next action to take. Not the whole road, only the next step.<br><br>In practice, recognizing a true inner direction does not, therefore, consist of waiting for absolute certainty. It is rather about identifying what allows one to act without scattering, without tensing up, and without lying to oneself. When these three elements are present, the decision can be made, even if the outcome remains open."
-        },
-        {
-            title: "The Reed and the Storm",
-            audioFile: "audio_roseau_en.mp3",
-            imageFile: "roseau_sumie.webp",
-            videoFile: "",
-            text: "You exhaust yourself building fortresses. In your constant effort to make yourself invulnerable, your body tenses and your breath locks. Understand this: true strength does not reside in armor. It awakens the very moment you stop fighting the fact of being affected. Let the impact pass through your nervous system like the wind through the leaves."
-        },
-        {
-            title: "What truly attracts me: a genuine desire or an urge to escape?",
-            audioFile: "audio_desir_fuite_en.mp3", 
-            imageFile: "",
-            videoFile: "",
-            text: "When we really want to do something, the most important thing isn't knowing what it is, but why we want to do it. It's not about finding beautiful intellectual excuses, but about looking at the concrete effect this desire has on our daily life.<br><br>A sincere desire (a true vital urge) gives us energy. It doesn't make our problems disappear, but it makes us stronger to face them. Even if the activity is difficult, we feel aligned: we scatter less, we no longer need to find excuses, and we stay focused on what needs to be done.<br><br>An urge to escape, on the contrary, acts as a quick band-aid. It attracts us because it promises to lower stress immediately. But we realize it afterward: our problems haven't changed, and we feel drained of our energy. We then start looking for justifications or jumping onto another distraction to keep going.<br><br>Our relationship with time is also a good clue. A true desire settles in over time. We accept moving forward slowly, making mistakes, and starting over. Escaping, however, is very impatient: we want things to change right now, otherwise we get bored and quickly move on to something else.<br><br>Another easy sign to spot is how we justify ourselves. When the urge is sincere, we don't need to tell ourselves a heroic story. It can even seem very mundane. When we are escaping, on the other hand, we often build a whole scenario to convince ourselves: we say it's an absolute emergency, that we have no choice, or that it's for a good cause.<br><br>Finally, the best test is the test of time. After a few weeks or months, a true desire brings more stability to our actions, even if everything isn't perfect. An escape leaves behind plenty of unfinished projects, enthusiastic starts, and sudden stops, without ever truly improving our daily life.<br><br>Telling the difference between the two is therefore not a magical gift or a mysterious intuition. It's just a matter of observation. We must judge our desires like we judge a remedy: we don't look at the beautiful promises on the box, we look at whether it truly does us good in the long run."
-        },
-        {
-            title: "To be touched without breaking",
-            audioFile: "audio_touche_en.mp3", 
-            imageFile: "",
-            videoFile: "",
-            text: "Being able to be touched by events without falling apart means letting emotion, criticism, or sadness pass through us without destroying us from the inside. It's not a magical gift. It's simply a habit we develop by paying attention to our body, our breath, and our nervous system.<br><br>Life pushes us around every day. If we barricade ourselves behind armor to stop feeling anything, we become rigid and often end up cracking much harder. Accepting that we can be hurt without being ruined allows us to choose our response, rather than reacting impulsively. Taking a hit is inevitable; breaking into a thousand pieces is not.<br><br>In reality, our sensitivity is a strength: it helps us feel and adjust to the world. We only collapse when we lose our inner calm. The whole trick is to let the sensation exist without handing it the keys to our mind. Sensitivity then becomes a useful message, rather than a threat we need to run from or numb.<br><br>Practically speaking, how do we stay whole when things get rough? First, simply observe what is happening inside you (a tension, a flush of heat, a knot in your stomach) and accept it without judging yourself. Next, slow down your breathing to calm the machine's racing. From this little space of calm, you can then act without giving in to panic. This might mean taking a pause, setting a boundary, or responding carefully. Finally, use this pain as a signpost to adjust your habits or relationships.<br><br>This approach avoids two big traps: wallowing in suffering, or trying to numb ourselves to ignore it. It is a very concrete training. There is nothing mystical about it: it's just a practical technique to stay stable in the face of storms.<br><br>To be touched without breaking is therefore not a passive attitude. It is an active choice based on presence and breath. It turns our fragility into adaptability. We take the hit without disappearing, and we can continue to move forward with clarity and integrity."
-        },
-        {
-            title: "What I still carry without knowing it",
-            audioFile: "audio_traces_en.mp3", 
-            imageFile: "",
-            videoFile: "",
-            text: "Without us realizing it, our body and mind accumulate footprints: a way of breathing, a frozen posture, an emotional reaction that keeps repeating. These traces are not mystical. They are simply silent habits that guide our choices and relationships. Seeing them is not discovering a burden; it is finding a compass to move forward better.<br><br>They hide everywhere. In that familiar tension at the back of the neck, in that fear that always surfaces at the same moment, in our invisible beliefs. They run in the background, like background music, dictating our reactions without even asking our opinion.<br><br>The more we repeat them, the deeper they carve. Our body loves what is familiar, even if it causes us suffering, simply because it requires less effort. As long as we don't pay attention to them, these habits rule in the shadows. But as soon as we shine the gentle light of consciousness upon them, the spell is broken: what was automatic can finally be changed.<br><br>In truth, these tensions are trying to talk to us. They show us where energy is blocked and what old armor is limiting us today. We absolutely must not judge ourselves or make a drama out of it. We simply need to listen to them like we listen to good advice to readjust our lives.<br><br>To free ourselves from them, very simple gestures are enough. When discomfort rises, find where it hides in the body. Feel it, name it, but don't tell yourself a whole dramatic story about it. Breathe gently so as not to let the emotion ignite. Then, one small step at a time, gently change your posture or your reaction. No brutal revolution, just gentleness and clarity.<br><br>The fruits of this patience arrive slowly, but surely. We become less reactive, more settled. Our decisions become clearer, and our presence in the world becomes deeply anchored. It is not an overnight firework display; it is the art of a gardener watching nature do its work.<br><br>What we still carry without knowing it is not a curse, nor a punishment. They are just old suitcases left there, waiting to be opened. With a calm gaze and a steady breath, these old blockages turn into wisdom, allowing us to navigate life with much more lightness."
-        }
+        // Traductions anglaises à venir
     ]
 };
 
@@ -304,6 +231,8 @@ const sageBrain = {
             science: ["La mécanique est infaillible : le sens garde l'esprit en mouvement à la surface ; le son pur et sans signification amène le mental à s'immobiliser par manque de 'prise' analytique.", "Le mantra ralentit le métabolisme et abaisse la fréquence cardiaque, ouvrant la porte à une guérison profonde des vieux traumatismes."],
             pacing: ["Dès que tu te surprends perdu dans tes pensées, reviens au mantra avec une douceur infinie, presque négligente. Ne force jamais la concentration."]
         },
+        
+        // --- ENCYCLOPÉDIE DES PRATIQUES AYP ---
         tuto_meditation: {
             core: ["La technique de la Méditation Profonde est d'une simplicité absolue. Assieds-toi confortablement le dos soutenu, ferme les yeux, et laisse ton esprit se calmer pendant environ une minute.", "Le secret n'est pas de bloquer les pensées, mais d'introduire doucement le mantra, comme une pensée parmi d'autres."],
             science: ["Pense mentalement le son 'I AM' (ou AYAM). Ne le prononce pas à voix haute, ne le synchronise pas avec ta respiration. Laisse-le simplement être là, même s'il devient flou ou indistinct.", "Quand tu te rends compte que tu es parti dans tes pensées (ce qui est normal et fait partie du processus de nettoyage), reviens au mantra avec une douceur infinie, sans aucune frustration."],
@@ -314,6 +243,28 @@ const sageBrain = {
             science: ["Respire lentement par le nez. À l'inspiration, trace mentalement une fine ligne lumineuse depuis ton périnée (à la base de la colonne) jusqu'au centre de ta tête (au niveau du troisième œil).", "À l'expiration, redescends cette même ligne lumineuse du centre de la tête jusqu'au périnée. Accompagne ce mouvement d'une très légère restriction dans la gorge (respiration Ujjayi) pour ralentir le souffle."],
             pacing: ["Fais ces allers-retours confortablement pendant 5 à 10 minutes. Ne force jamais. Si tu manques de souffle, respire normalement un instant. C'est le confort qui crée l'ouverture des nerfs, pas l'effort."]
         },
+        tuto_bandhas: {
+            core: ["Les Bandhas et Mudras sont des verrous et sceaux physiques qui stimulent mécaniquement le flux d'énergie (prana) dans le système nerveux.", "Mulabandha (contraction douce du périnée) et Asvini Mudra (contraction du sphincter) agissent comme une pompe pour pousser l'énergie vers le haut de la colonne."],
+            science: ["Ces micro-contractions stimulent les terminaisons du nerf vague à la base de la colonne, créant une boucle de rétroaction extatique avec le cerveau.", "On ne force jamais ces verrous. Ils doivent devenir une douce habitude accompagnant la respiration spinale."],
+            pacing: ["Introduis ces pratiques très progressivement, plusieurs mois après avoir stabilisé ta méditation et ta respiration. Si l'énergie devient trop erratique, relâche immédiatement toutes les contractions."]
+        },
+        tuto_kumbhaka: {
+            core: ["Kumbhaka est la rétention ciblée du souffle. Ce n'est pas un concours d'apnée, mais une méthode pour accumuler et diriger le prana purifié.", "Il s'ajoute à la respiration spinale, souvent couplé aux bandhas, pour pressuriser doucement l'énergie dans le canal central de la Sushumna."],
+            science: ["La rétention du souffle augmente l'accumulation de dioxyde de carbone, ce qui dilate les vaisseaux sanguins et pousse l'énergie nerveuse à pénétrer plus profondément dans les tissus.", "Cela brûle les blocages karmiques (Samskaras) à un rythme considérablement accéléré."],
+            pacing: ["⚠️ Prudence absolue. La rétention ne doit jamais forcer le halètement ou la panique. C'est l'outil le plus puissant d'AYP, mais aussi celui qui peut surcharger ton système le plus vite."]
+        },
+        tuto_samyama: {
+            core: ["Le Samyama est la pratique de l'intégration. C'est l'art de lâcher une pensée spécifique (un sutra) dans le silence profond de ton esprit.", "Au lieu de répéter un mantra de façon continue, on laisse tomber doucement un mot (comme 'Amour' ou 'Joie') dans le vide intérieur pour qu'il irradie."],
+            science: ["En méditation, nous nettoyons le silence. En Samyama, nous mettons ce silence en mouvement. C'est le pont neurobiologique entre le repos profond et l'action dynamique dans le monde.", "Cela cultive les 'siddhis' (capacités d'expansion), non pas comme des pouvoirs magiques, mais comme un fonctionnement naturel et sans entrave du système nerveux."],
+            pacing: ["Le Samyama se pratique toujours juste après la méditation, pendant environ 10 à 15 minutes, quand l'esprit est déjà gorgé de silence."]
+        },
+        tuto_yoni_mudra: {
+            core: ["Yoni Mudra (ou Kumbhaka avec Yoni Mudra) est une technique avancée pour nettoyer le canal du troisième œil (Ajna) et le chakra de la couronne.", "Elle combine la rétention du souffle avec une douce pression physique des doigts sur les yeux et les oreilles fermées."],
+            science: ["La fermeture physique des sens (Pratyahara) couplée à la rétention force l'attention et l'énergie à converger vers le centre de la tête, inondant le cerveau de lumière intérieure.", "Cela scelle le prana à l'intérieur de la tête, purifiant directement les glandes pinéale et pituitaire."],
+            pacing: ["C'est une pratique de fin de parcours, très stimulante. Ne l'aborde que lorsque la respiration spinale, la méditation et les bandhas sont parfaitement stables et confortables dans ta routine."]
+        },
+
+        // --- CONCEPTS THÉORIQUES ---
         pranayama_souffle: {
             core: ["Le pranayama, et particulièrement la respiration spinale, n'est pas un exercice d'hyperventilation. C'est le grand pont invisible entre ton corps physique et ton système énergétique.", "Il prépare le terrain, purifie les canaux et réveille l'énergie en douceur avant que la méditation profonde n'installe le silence."],
             science: ["Il existe une relation électromagnétique directe entre le rythme lent du souffle (Ujjayi) et l'intensité du courant nerveux généré le long de la sushumna (le canal central).", "Cette douce restriction de l'oxygène attire mécaniquement la force de vie vers le haut."],
@@ -362,154 +313,4 @@ const sageBrain = {
             pacing: ["Comprendre cela, c’est toucher la liberté. Cesse d'essayer de saisir l'Absolu avec l'intellect, et laisse ton système nerveux se reposer dans le fond commun de l'expérience."]
         },
         advaita_non_dualite: {
-            core: ["La non-dualité ne supprime pas les différences de la vie ; elle dissout simplement l’idée de séparation.", "Ce n’est pas toi luttant contre le monde, mais la vie se reconnaissant elle-même à travers toi."],
-            science: ["Observe une émotion de tristesse ou de colère monter en toi, mais choisis de ne pas te définir par elle. Ressens la sensation brute sans dire 'moi' ou 'mien'."],
-            pacing: ["Laisse les pensées passer sans les combattre. Quand il n’y a plus d’ennemi à l'intérieur, l’extérieur se pacifie automatiquement."]
-        },
-        maya_illusion: {
-            core: ["L’illusion n’est pas un mensonge moral ou une erreur, mais une simple habitude de perception.", "Ce qui se répète mécaniquement dans ta vie n’est pas la vérité absolue, mais un conditionnement."],
-            science: ["Prends une réaction émotionnelle que tu répètes souvent (une peur, une attraction compulsive). Sens l'énergie qu'elle produit. Souvent, la simple lumière de ton observation attentive suffit à en affaiblir l'emprise."],
-            pacing: ["Ne te juge pas d'être pris dans le voile mental. Voir l’illusion en action à l'intérieur de ton propre corps est le premier pas tangible vers la liberté."]
-        },
-        elan_vital: {
-            core: ["L’élan vital ne promet pas le confort immédiat, mais il augmente nettement ta capacité à faire face.", "Ce qui est juste énergétiquement simplifie la vie au lieu de la disperser."],
-            science: ["Observe ton corps quand tu commences une tâche exigeante : si l'action est guidée par l'élan vital, tu sentiras une force intérieure calme et stable, sans l'excitation nerveuse de la fuite."],
-            pacing: ["Chaque action consciente, même modeste, augmente ta clarté. Persévère dans l'effort sans te laisser gagner par l'impatience."]
-        },
-        karma_action: {
-            core: ["L’action juste se reconnaît à la clarté et à la paix qu’elle laisse après elle.", "Agir sans s’accrocher au fruit de l'action libère infiniment plus d’énergie que l’inaction craintive."],
-            science: ["L'expérience directe : prends une décision difficile mais nécessaire au travail ou en famille. Fais le geste juste, termine la tâche, et coupe immédiatement l'attente de reconnaissance ou de validation."],
-            pacing: ["L’action consciente, même si elle semble modeste de l'extérieur, construit un alignement intérieur inébranlable."]
-        },
-        detachement: {
-            core: ["Le détachement n’est pas de la froide indifférence, mais la liberté vis-à-vis du résultat.", "Ce à quoi tu t’accroches désespérément te tient bien plus que tu ne le tiens."],
-            science: ["Lorsque tu fais face à un échec, repère la tension de déception dans ton corps. Respire dedans, accepte l'événement sans te juger, et laisse l'attente se dissoudre."],
-            pacing: ["Agir sans attachement permet à l’énergie de circuler librement dans le système nerveux sans bloquer le cœur. Lâche prise et continue d'avancer sans amertume."]
-        },
-        interoception: {
-            core: ["Observer la tension avant de réagir, c’est écouter ce que le corps sait bien avant que l’esprit n’agisse.", "Chaque souffle est un guide : il te montre avec précision là où l’énergie est bloquée."],
-            science: ["L'interoception est mécanique : face au stress ou à une critique, remarque simplement la crispation dans ta nuque ou ton ventre. Respirer consciemment à cet instant interrompt la chaîne nerveuse automatique."],
-            pacing: ["Rappelle-toi que la sensation physique est une information utile, pas un problème à fuir. Utilise cette écoute corporelle pour te recentrer à tout moment de la journée."]
-        },
-        resilience: {
-            core: ["La véritable stabilité ne vient pas de l’absence de choc, mais de ton incroyable capacité à l’intégrer.", "Le vrai courage est de rester entier lorsqu’on est touché, sans se dissoudre dans la douleur."],
-            science: ["Dans une période difficile, ton système nerveux est mis à l'épreuve. Ce qui est traversé consciemment et respiré corporellement ne laisse pas de cicatrice toxique inutile."],
-            pacing: ["Ne t'épuise pas à bâtir des forteresses. Laisse l'impact traverser ton système comme le vent traverse les feuilles de l'arbre. C'est cela, la véritable résilience."]
-        },
-        meditation_presence: {
-            core: ["La méditation n’ajoute absolument rien à qui tu es : elle enlève simplement ce qui t'encombre.", "Le calme de l’esprit est le roc solide sur lequel toute action juste peut se construire."],
-            science: ["L'entraînement est direct : assieds-toi silencieusement. L'absorption (Samādhi) n'est pas une fuite loin du monde, mais la révélation mécanique de la stabilité de ton propre système nerveux."],
-            pacing: ["S’asseoir sans aucun but est déjà, en soi, un acte d'immense clarté. Laisse le silence faire son œuvre de nettoyage sans chercher à contrôler le processus."]
-        }
-    },
-    en: {
-        yoga_definition: {
-            core: ["The word Yoga means 'Union'. It is not simply physical gymnastics, nor a blind belief.", "Yoga is the precise, mechanical, and empirical science of purifying the human nervous system."],
-            science: ["The equation of evolution is very simple: unshakable Silence (peace of mind) married to dynamic Ecstasy (vital energy) gives birth to perfect Unity.", "True transformation is measured by increased conductivity of your nerves, creating biological stability against external pressures."],
-            pacing: ["Do not take my word for it. Make your own body the laboratory of this science. Sit twice a day and observe the results for yourself."]
-        },
-        kundalini_extase: {
-            core: ["Kundalini is not an esoteric myth or a magical concept. It is the awakening of natural ecstatic conductivity within your spine.", "It is the gigantic expansion of our basic vital (and sexual) energy, redirected to illuminate the central nervous system."],
-            science: ["This inner fire that is sometimes felt is the friction generated by prana passing through nerves that are still congested. Awakening is a physiological reorganization heavily involving the vagus nerve.", "Energy inevitably follows attention. Cultivate silence through meditation, and the divine flow (Shakti) will naturally find its way up."],
-            pacing: ["A crucial warning: never eagerly chase the thrills of Kundalini. If the energy becomes too strong or uncomfortable (insomnia, heat), reduce your practice and ground yourself with heavy physical activities."]
-        },
-        chakra_anatomie: {
-            core: ["Chakras are real internal mechanisms, major nerve plexuses. But rest assured: you absolutely do not need to analyze them for them to open.", "Intensely focusing on opening a specific chakra is a dangerous mental distraction. Global practice takes care of everything."],
-            science: ["By simply sweeping the spinal cord up and down with spinal breathing, you automatically and gently purify all the nerve centers connected to it.", "Prematurely forcing the opening of the Crown chakra (Sahasrara) before clearing the lower body is the number one cause of severe energetic imbalances."],
-            pacing: ["Let the mysterious bodily mechanics operate 'under the hood' with complete confidence. Your only job is to provide the regular fuel through your daily practice."]
-        },
-        mantra_technique: {
-            core: ["The mantra is a vibratory vehicle. It has no connection to any religion, language, or intellectual meaning.", "It is a very simple thought, devoid of meaning, deliberately used to trick the intellect and allow the mind to dive."],
-            science: ["The mechanics are infallible: meaning keeps the mind moving on the surface; pure, meaningless sound causes the mind to still for lack of analytical 'grip'.", "The mantra slows the metabolism and lowers the heart rate, opening the door to deep healing of old traumas."],
-            pacing: ["As soon as you catch yourself lost in thought, return to the mantra with infinite gentleness, almost carelessly. Never force concentration."]
-        },
-        pranayama_souffle: {
-            core: ["Pranayama, and specifically spinal breathing, is not a hyperventilation exercise. It is the great invisible bridge between your physical body and your energetic system.", "It prepares the ground, purifies the channels, and gently awakens the energy before deep meditation installs silence."],
-            science: ["There is a direct electromagnetic relationship between the slow rhythm of the breath (Ujjayi) and the intensity of the nerve current generated along the sushumna (central channel).", "This gentle restriction of oxygen mechanically draws the life force upwards."],
-            pacing: ["Trace a thin mental luminous line from your perineum to the center of your head on the inhale, and back down on the exhale. Do this comfortably for 10 minutes before meditating."]
-        },
-        illumination_eveil: {
-            core: ["Enlightenment is not a distant destination, a sudden mystical explosion, or a state of inhuman perfection. It is simply your daily life gaining clarity.", "Awakening has three mechanical stages: unshakable inner silence (peace), continuous ecstasy (objectless joy), and finally overflowing divine love for all things."],
-            science: ["Union is not a philosophical concept, it is the measurable and permanent change in the functioning of the central nervous system, freed from its blockages.", "The stereotype of the solitary sage is false. A fully purified nervous system naturally radiates and becomes an active channel to help others."],
-            pacing: ["Never fixate on an imaginary end. What matters is not knowing when you will arrive, but simply sitting today. The journey itself is the destination."]
-        },
-        karma_samskara: {
-            core: ["Karma is not a divine punishment or a fatal destiny. It is the simple universal law of cause and effect: the inertia of your past actions.", "Waiting for the universe or a master to magically save you from your karma merely postpones the work."],
-            science: ["Biologically speaking, karmas are 'samskaras': real obstructions, frictions, and old memories crystallized in the wiring of your nervous system.", "The practice of deep meditation generates the pure consciousness necessary to mechanically dissolve and 'burn' these obstructions from the inside."],
-            pacing: ["Never consider yourself guilty or at fault. Sit down, meditate regularly, and you will clean your nervous past day after day."]
-        },
-
-        // --- PREVIOUS PHILOSOPHICAL CATEGORIES ---
-        universel: {
-            core: ["True wisdom begins where intellectual certainty ends.", "What you resist persists and strengthens. Acceptance is the first step.", "Seeking the answer outside often merely postpones discovering what is already there."],
-            science: ["Your nervous system perceives the world through its own accumulated filters. Purifying these channels changes your reality.", "The analytical mind is a problem-solving machine. If it finds none, it creates one. Return to the body."],
-            pacing: ["Simply ask the question, then drop it into the space of your heart without demanding an immediate answer.", "Patience is the highest of practices. Let things settle on their own."]
-        },
-        routine_base: {
-            core: ["Practice doesn't need to be spectacular to be effective. We aim for a more stable life, not a perfect session.", "A minimum viable routine is worth a thousand times more than an irregular hour of practice."],
-            science: ["Each practice trains your nervous system. It's like adjusting a thermostat: you gently regulate the heat instead of turning the oven on max."],
-            pacing: ["In practice: choose a time slot you can keep on 'average' days. Change only one variable at a time, otherwise you'll never know what helps or overstimulates you."]
-        },
-        surcharge_ancrage: {
-            core: ["If practice makes you irritable or 'wired', it's not a failure; it's a sign of overload. Your daily life is the ultimate judge.", "Reducing is not retreating; it's protecting your trajectory."],
-            science: ["Grounding acts like opening a pressure valve. Walking, cooking, or cleaning brings energy back down into the legs and calms the rumination circuit."],
-            pacing: ["When in doubt or agitated: cut your time in half, remove intense breathing, and walk for 30 minutes. Grounding first, intensity second."]
-        },
-        ethique_securite: {
-            core: ["I am here to guide you in the structure of your practice, to help you pace yourself and find stability. But I in no way replace medical advice."],
-            science: ["The body is a complex system. Persistent pain or deep psychological distress are not solved by more meditation, but by appropriate professional care."],
-            pacing: ["⚠️ If you experience severe distress, dark thoughts, or acute pain, I strongly advise you to temporarily stop the practices and consult a healthcare professional. Take care of yourself."]
-        },
-        soi_atman: {
-            core: ["The Self is not an idea to understand, but an evidence that remains when agitation ceases.", "What you are doesn't begin with thought and doesn't stop when it silences."],
-            science: ["Experience begins with the body: sit without a specific goal. Simply observe a thought arise and pass without following it. When nothing is sought, presence reveals itself."],
-            pacing: ["Do not seek a mystical state. Simply be present in the midst of an ordinary activity. That is where true witnessing consciousness resides."]
-        },
-        brahman_absolu: {
-            core: ["The Absolute is not elsewhere: it is that within which all experience appears.", "Unity is not added to the world: it is its invisible and permanent background."],
-            science: ["Experience it: contemplate a landscape, a tree, or the sky without attaching mental commentary to it. Let perception exist on its own."],
-            pacing: ["Understanding this is touching freedom. Stop trying to grasp the Absolute with the intellect, and let your nervous system rest in the common ground of experience."]
-        },
-        advaita_non_dualite: {
-            core: ["Non-duality does not suppress the differences of life; it simply dissolves the idea of separation.", "It's not you fighting against the world, but life recognizing itself through you."],
-            science: ["Observe an emotion of sadness or anger rise within you, but choose not to define yourself by it. Feel the raw sensation without saying 'me' or 'mine'."],
-            pacing: ["Let thoughts pass without fighting them. When there is no longer an inner enemy, the outside automatically pacifies itself."]
-        },
-        maya_illusion: {
-            core: ["Illusion is not a moral lie or a mistake, but a simple habit of perception.", "What repeats mechanically in your life is not the absolute truth, but conditioning."],
-            science: ["Take an emotional reaction that you often repeat (a fear, a compulsive attraction). Feel the energy it produces. Often, the simple light of your attentive observation is enough to weaken its grip."],
-            pacing: ["Do not judge yourself for being caught in the mental veil. Seeing illusion in action within your own body is the first tangible step towards freedom."]
-        },
-        elan_vital: {
-            core: ["The vital urge does not promise immediate comfort, but it clearly increases your ability to cope.", "What is energetically right simplifies life instead of scattering it."],
-            science: ["Observe your body when you start a demanding task: if the action is guided by the vital urge, you will feel a calm and stable inner strength, without the nervous excitement of escape."],
-            pacing: ["Every conscious action, however modest, increases your clarity. Persevere in effort without letting impatience win you over."]
-        },
-        karma_action: {
-            core: ["Right action is recognized by the clarity and peace it leaves behind.", "Acting without clinging to the fruit of the action releases infinitely more energy than fearful inaction."],
-            science: ["Direct experience: make a difficult but necessary decision at work or with family. Make the right gesture, finish the task, and immediately cut the expectation of recognition or validation."],
-            pacing: ["Conscious action, even if it seems modest from the outside, builds an unshakable inner alignment."]
-        },
-        detachement: {
-            core: ["Detachment is not cold indifference, but freedom from the result.", "What you cling to desperately holds you much more than you hold it."],
-            science: ["When facing a failure, spot the tension of disappointment in your body. Breathe into it, accept the event without judging yourself, and let the expectation dissolve."],
-            pacing: ["Acting without attachment allows energy to flow freely in the nervous system without blocking the heart. Let go and continue moving forward without bitterness."]
-        },
-        interoception: {
-            core: ["Observing tension before reacting is listening to what the body knows long before the mind acts.", "Every breath is a guide: it shows you exactly where energy is blocked and where freedom can unfold."],
-            science: ["Interoception is mechanical: faced with stress or criticism, simply notice the tension in your neck or stomach. Breathing consciously at that moment interrupts the automatic nerve chain."],
-            pacing: ["Remember that physical sensation is useful information, not a problem to flee from. Use this bodily listening to center yourself at any time of the day."]
-        },
-        resilience: {
-            core: ["True stability does not come from the absence of shock, but from your incredible ability to integrate it.", "True courage is to remain whole when touched, without dissolving into the pain."],
-            science: ["In a difficult period, your nervous system is put to the test. What is traversed consciously and breathed bodily leaves no useless toxic scar."],
-            pacing: ["Do not exhaust yourself building fortresses. Let the impact pass through your system like the wind through the leaves of a tree. That is true resilience."]
-        },
-        meditation_presence: {
-            core: ["Meditation adds absolutely nothing to who you are: it simply removes what clutters you.", "The calm of the mind is the solid rock upon which all right action can be built."],
-            science: ["The training is direct: sit silently. Absorption (Samādhi) is not an escape far from the world, but the mechanical revelation of the stability of your own nervous system."],
-            pacing: ["Sitting without any goal is already, in itself, an act of immense clarity. Let silence do its cleaning work without trying to control the process."]
-        }
-    }
-};
-
+            core: ["La non-dualité

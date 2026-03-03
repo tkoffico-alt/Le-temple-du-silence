@@ -536,6 +536,8 @@
 
             if (!contextMatchFound) {
                 const dictionnairesRegex = {
+                    tuto_meditation: /\b(comment médit|comment medit|pratiqu.*médit|techniqu.*médit|apprendr.*médit|comment faire.*médit|instruction.*médit)[a-zà-ÿ]*/gi,
+                tuto_respiration: /\b(comment respir|pratiqu.*respir|techniqu.*respir|apprendr.*respir|comment faire.*respir|instruction.*respir|comment.*spinal)[a-zà-ÿ]*/gi,
                     yoga_definition: /\b(yoga|yogi|union|voie|chemin)[a-zà-ÿ]*/gi,
                     kundalini_extase: /\b(kundalini|extas|shakti|serpent|énergi|energi|vibrat|frisson)[a-zà-ÿ]*/gi,
                     chakra_anatomie: /\b(chakra|centre|sahasrar|couronn|ajn|œil|oeil|gland|pinéal|pineal|troisième|troisieme)[a-zà-ÿ]*/gi,
@@ -719,3 +721,4 @@
     </script>
 </body>
 </html>
+

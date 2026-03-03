@@ -175,7 +175,7 @@
     let currentLang = 'fr';
     let isTyping = false;
     let hasAskedQuestion = false; 
-    let sessionQuestionCount = 0; // <--- NOUVELLE MÉMOIRE DU NOMBRE DE QUESTIONS
+    let sessionQuestionCount = 0;
     
     // --- 🧠 MÉMOIRE DU SAGE ---
     let previousTopic = "universel"; 
@@ -506,6 +506,7 @@
             topic = "ethique_securite";
         } else {
             
+            // La Matrice de Contexte
             const matriceContexte = {
                 "illumination_eveil": [
                     { mots: ["premier", "première", "premiere", "1er", "un", "silence"], cible: "meditation_presence" },
@@ -519,6 +520,12 @@
                 ],
                 "karma_samskara": [
                     { mots: ["comment", "pratique", "technique", "faire", "laquelle"], cible: "routine_base" }
+                ],
+                "pranayama_souffle": [
+                    { mots: ["comment", "pratique", "technique", "faire"], cible: "tuto_respiration" }
+                ],
+                "meditation_presence": [
+                    { mots: ["comment", "pratique", "technique", "faire"], cible: "tuto_meditation" }
                 ]
             };
 
@@ -535,16 +542,26 @@
             }
 
             if (!contextMatchFound) {
+                // C'est ICI que se trouve le grand dictionnaire avec toutes les nouvelles pratiques !
                 const dictionnairesRegex = {
+                    // --- NOUVEAUX TUTOS TECHNIQUES AYP ---
                     tuto_meditation: /\b(comment médit|comment medit|pratiqu.*médit|techniqu.*médit|apprendr.*médit|comment faire.*médit|instruction.*médit)[a-zà-ÿ]*/gi,
-                tuto_respiration: /\b(comment respir|pratiqu.*respir|techniqu.*respir|apprendr.*respir|comment faire.*respir|instruction.*respir|comment.*spinal)[a-zà-ÿ]*/gi,
+                    tuto_respiration: /\b(comment respir|pratiqu.*respir|techniqu.*respir|apprendr.*respir|comment faire.*respir|instruction.*respir|comment.*spinal|respiration spinale)[a-zà-ÿ]*/gi,
+                    tuto_bandhas: /\b(bandha|mudra|mulabandha|asvini|périnée|sphincter|contraction|verrou)[a-zà-ÿ]*/gi,
+                    tuto_kumbhaka: /\b(kumbhaka|rétention|retention|retenir|apnée|apnee)[a-zà-ÿ]*/gi,
+                    tuto_samyama: /\b(samyama|sutra|intégration|integration|siddhi)[a-zà-ÿ]*/gi,
+                    tuto_yoni_mudra: /\b(yoni|boucher les oreilles|yeux fermés|boucher les yeux)[a-zà-ÿ]*/gi,
+
+                    // --- CONCEPTS THÉORIQUES AYP ---
                     yoga_definition: /\b(yoga|yogi|union|voie|chemin)[a-zà-ÿ]*/gi,
                     kundalini_extase: /\b(kundalini|extas|shakti|serpent|énergi|energi|vibrat|frisson)[a-zà-ÿ]*/gi,
                     chakra_anatomie: /\b(chakra|centre|sahasrar|couronn|ajn|œil|oeil|gland|pinéal|pineal|troisième|troisieme)[a-zà-ÿ]*/gi,
-                    mantra_technique: /\b(mantr|son|ayam|i am|répét|repet|techniqu|méthod)[a-zà-ÿ]*/gi,
+                    mantra_technique: /\b(mantr|son|ayam|i am|répét|repet)[a-zà-ÿ]*/gi,
                     pranayama_souffle: /\b(pranayam|respir|souffl|colonn|spinal|nadi|sushumn)[a-zà-ÿ]*/gi,
                     illumination_eveil: /\b(illumin|éveil|eveil|libérat|liberat|nirvan|samadhi|but|fin)[a-zà-ÿ]*/gi,
                     karma_samskara: /\b(karma|destin|vies|antérieur|samskar|péché|peche)[a-zà-ÿ]*/gi,
+
+                    // --- MOTS-CLÉS PHILOSOPHIQUES ---
                     surcharge_ancrage: /\b(insomni|dor|agit|nerveu|pression|surcharg|trop|ancrag|grounding|fatigu|épuis|epuis|fou|craqu|bizarr|sommeil|nuit|détend)[a-zà-ÿ]*/gi,
                     interoception: /\b(corps|tension|sensation|stress|nuqu|ventr|physiqu|mal|ressens|cœur|coeur|têt|tet|douleur)[a-zà-ÿ]*/gi,
                     resilience: /\b(touch|bris|critiqu|échec|echec|décept|decept|choc|trist|colèr|coler|peur|courag|resilien|perdu|pleur|souffr|malheureu|dur|difficil|abandon)[a-zà-ÿ]*/gi,
@@ -656,10 +673,8 @@
 
         let finalResponse = "";
 
-        // --- 🧠 LE COUP DE GRÂCE : L'INTERCEPTION DU SAGE ---
-        sessionQuestionCount++; // Le Sage compte les questions dans cette session
+        sessionQuestionCount++; 
         
-        // Si plus de 4 questions, 50% de chance que le Sage te demande d'arrêter de réfléchir
         if (sessionQuestionCount > 4 && Math.random() > 0.5) {
             let interceptionFr = "Ton esprit est très actif aujourd'hui, et ton intellect a soif de réponses. Mais rappelle-toi la grande règle : l'intellect ne peut pas résoudre l'intellect. Une once de pratique vaudra toujours des tonnes de théorie. Je t'invite à lâcher ces mots, à fermer les yeux, et à plonger dans le silence de ton propre corps...";
             
@@ -667,9 +682,8 @@
             
             let msg = currentLang === 'fr' ? interceptionFr : interceptionEn;
             finalResponse = `« ${msg} »${signature}`;
-            sessionQuestionCount = 0; // Il remet le compteur à zéro pour te laisser respirer
+            sessionQuestionCount = 0; 
         } else {
-            // Réponse normale s'il n'y a pas d'interception
             finalResponse = `« ${prefix}${randomCore}<br><br>${randomScience}<br><br>${randomPacing} »${signature}`;
         }
 
@@ -721,4 +735,3 @@
     </script>
 </body>
 </html>
-

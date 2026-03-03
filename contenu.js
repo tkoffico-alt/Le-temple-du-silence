@@ -304,6 +304,16 @@ const sageBrain = {
             science: ["La mécanique est infaillible : le sens garde l'esprit en mouvement à la surface ; le son pur et sans signification amène le mental à s'immobiliser par manque de 'prise' analytique.", "Le mantra ralentit le métabolisme et abaisse la fréquence cardiaque, ouvrant la porte à une guérison profonde des vieux traumatismes."],
             pacing: ["Dès que tu te surprends perdu dans tes pensées, reviens au mantra avec une douceur infinie, presque négligente. Ne force jamais la concentration."]
         },
+        tuto_meditation: {
+            core: ["La technique de la Méditation Profonde est d'une simplicité absolue. Assieds-toi confortablement le dos soutenu, ferme les yeux, et laisse ton esprit se calmer pendant environ une minute.", "Le secret n'est pas de bloquer les pensées, mais d'introduire doucement le mantra, comme une pensée parmi d'autres."],
+            science: ["Pense mentalement le son 'I AM' (ou AYAM). Ne le prononce pas à voix haute, ne le synchronise pas avec ta respiration. Laisse-le simplement être là, même s'il devient flou ou indistinct.", "Quand tu te rends compte que tu es parti dans tes pensées (ce qui est normal et fait partie du processus de nettoyage), reviens au mantra avec une douceur infinie, sans aucune frustration."],
+            pacing: ["Pratique cela pendant 20 minutes, deux fois par jour. À la fin, ne te lève pas d'un coup. Prends 2 à 3 minutes de repos les yeux fermés pour laisser ton système nerveux se stabiliser."]
+        },
+        tuto_respiration: {
+            core: ["La Respiration Spinale (Pranayama) se pratique juste avant la méditation. Assieds-toi confortablement et ferme les yeux.", "Elle consiste à faire voyager ton attention à l'intérieur du canal central de ta colonne vertébrale, appelé Sushumna."],
+            science: ["Respire lentement par le nez. À l'inspiration, trace mentalement une fine ligne lumineuse depuis ton périnée (à la base de la colonne) jusqu'au centre de ta tête (au niveau du troisième œil).", "À l'expiration, redescends cette même ligne lumineuse du centre de la tête jusqu'au périnée. Accompagne ce mouvement d'une très légère restriction dans la gorge (respiration Ujjayi) pour ralentir le souffle."],
+            pacing: ["Fais ces allers-retours confortablement pendant 5 à 10 minutes. Ne force jamais. Si tu manques de souffle, respire normalement un instant. C'est le confort qui crée l'ouverture des nerfs, pas l'effort."]
+        },
         pranayama_souffle: {
             core: ["Le pranayama, et particulièrement la respiration spinale, n'est pas un exercice d'hyperventilation. C'est le grand pont invisible entre ton corps physique et ton système énergétique.", "Il prépare le terrain, purifie les canaux et réveille l'énergie en douceur avant que la méditation profonde n'installe le silence."],
             science: ["Il existe une relation électromagnétique directe entre le rythme lent du souffle (Ujjayi) et l'intensité du courant nerveux généré le long de la sushumna (le canal central).", "Cette douce restriction de l'oxygène attire mécaniquement la force de vie vers le haut."],
@@ -502,3 +512,4 @@ const sageBrain = {
         }
     }
 };
+

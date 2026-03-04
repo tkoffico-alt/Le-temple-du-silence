@@ -411,9 +411,35 @@
         renderMurmures();
         renderParabole();
     };
+      // --- 🎧 SYNCHRONISATION SONORE ---
+const resonance = document.getElementById("sage-resonance");
+
+window.addEventListener('message', function(event) {
+    // Dify envoie des événements de rendu
+    if (event.data.event === 'thought' || event.data.event === 'message') {
+        if (resonance.paused) {
+            resonance.volume = 0;
+            resonance.play();
+            // Montée progressive
+            let fadeIn = setInterval(() => {
+                if (resonance.volume < 0.2) resonance.volume += 0.01;
+                else clearInterval(fadeIn);
+            }, 50);
+        }
+    }
+    
+    // Arrêt du son à la fin du message
+    if (event.data.event === 'message_end') {
+        let fadeOut = setInterval(() => {
+            if (resonance.volume > 0.01) resonance.volume -= 0.01;
+            else { resonance.pause(); clearInterval(fadeOut); }
+        }, 50);
+    }
+});
     </script>
 </body>
 </html>
+
 
 
 

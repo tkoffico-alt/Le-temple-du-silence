@@ -170,30 +170,9 @@
 
     <script src="contenu.js"></script>
 
-    <script>
+  <script>
     let currentLang = 'fr';
-    let isTyping = false;
-    let hasAskedQuestion = false; 
-    let sessionQuestionCount = 0; 
     
-    // --- 🧠 MÉMOIRE DU SAGE ---
-    let previousTopic = "universel"; 
-    let lastIntroIndex = -1; 
-
-    function getSageHistory() {
-        let history = localStorage.getItem('temple_sage_history');
-        return history ? JSON.parse(history) : [];
-    }
-
-    function saveSageHistory(topic) {
-        let history = getSageHistory();
-        if (history.length === 0 || history[history.length - 1] !== topic) {
-            history.push(topic);
-            if(history.length > 5) history.shift();
-            localStorage.setItem('temple_sage_history', JSON.stringify(history));
-        }
-    }
-
     function createDustParticles() {
         const container = document.getElementById('particles-container');
         const particleCount = 40;
@@ -255,9 +234,6 @@
         document.querySelectorAll('.fr').forEach(el => el.style.display = lang === 'fr' ? 'inline' : 'none');
         document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? 'inline' : 'none');
 
-        const inputPlaceholder = lang === 'fr' ? "Posez votre question à l'Univers..." : "Ask your question to the Universe...";
-        document.getElementById('sage-input').placeholder = inputPlaceholder;
-
         const themeBtn = document.getElementById('theme-toggle');
         const isLight = document.body.classList.contains('light-mode');
         themeBtn.innerText = lang === 'fr' ? (isLight ? 'Obscurité' : 'Clarté') : (isLight ? 'Darkness' : 'Light');
@@ -271,15 +247,6 @@
         renderEnseignements();
         renderMurmures();
         renderParabole();
-
-        const logEl = document.getElementById("chat-log");
-        if(logEl) {
-            logEl.innerHTML = "";
-            isTyping = false; 
-            if (!hasAskedQuestion) {
-                sageWelcome(); 
-            }
-        }
     }
 
     function toggleTheme() {
@@ -437,294 +404,6 @@
         }
     }
 
-    function sageWelcome() {
-        if (hasAskedQuestion) return;
-        
-        const logEl = document.getElementById("chat-log");
-        logEl.innerHTML = "";
-        isTyping = true;
-        
-        let history = getSageHistory();
-        let msgFr, msgEn;
-
-        if (history.length > 0) {
-            msgFr = "« Te revoilà, voyageur. Le Temple a gardé la trace de tes pas. Que souhaites-tu explorer aujourd'hui ? Confie ta pensée au silence... »";
-            msgEn = "« Welcome back, traveler. The Temple has kept the trace of your steps. What do you wish to explore today? Confide your thought to the silence... »";
-        } else {
-            msgFr = "« Bienvenue, voyageur. Tu viens de franchir les portes du Temple du Silence. Ici, tu ne trouveras ni dogmes, ni promesses hâtives, mais une invitation à l'expérience directe. Ces murs virtuels abritent les Enseignements de la lignée, des Murmures pour t'orienter, et la sagesse d'une ancienne Parabole.<br><br>Prends un instant pour te poser. Que cherches-tu aujourd'hui ? Confie ta question au silence... »";
-            msgEn = "« Welcome, traveler. You have just crossed the doors of the Temple of Silence. Here, you will find neither dogmas nor hasty promises, but an invitation to direct experience. These virtual walls house the Teachings of the lineage, Whispers to guide you, and the wisdom of an ancient Parable.<br><br>Take a moment to settle in. What are you seeking today? Confide your question to the silence... »";
-        }
-        
-        let signatureText = currentLang === 'fr' ? "Le Temple du Silence" : "The Temple of Silence";
-        let signature = `<br><br><div style="display: flex; justify-content: flex-end; align-items: center; opacity: 0.9; font-style: italic;">
-            <span style="color: var(--accent-color); margin-right: 12px;">${signatureText}</span>
-            <img src="sceau-gardien.png" alt="Sceau du Gardien" style="height: 35px; border-radius: 50%; box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);">
-        </div>`;
-
-        let finalResponse = (currentLang === 'fr' ? msgFr : msgEn) + signature;
-        
-        typeWriter(finalResponse, 0, logEl, () => {
-            isTyping = false;
-        });
-    }
-
-    function askSage() {
-        if (isTyping) return;
-        const inputEl = document.getElementById("sage-input");
-        const logEl = document.getElementById("chat-log");
-        const audioResonance = document.getElementById("sage-resonance");
-        
-        let q = inputEl.value.trim().toLowerCase();
-        if (!q) return;
-
-        isTyping = true;
-        hasAskedQuestion = true; 
-        inputEl.value = "";
-        logEl.innerHTML = "";
-
-        if (audioResonance) {
-            audioResonance.volume = 0;
-            audioResonance.play();
-            let fadeAudioIn = setInterval(() => {
-                if (audioResonance.volume < 0.15) {
-                    audioResonance.volume += 0.01;
-                } else {
-                    clearInterval(fadeAudioIn);
-                }
-            }, 100);
-        }
-
-        const motsUrgence = ["suicide", "panique", "dépression", "depression", "hôpital", "hospital", "mourir", "tuer", "grave"];
-        let urgenceDetectee = motsUrgence.some(mot => q.includes(mot));
-
-        let topic = "universel";
-        let isContinuingTopic = false;
-
-        if (urgenceDetectee) {
-            topic = "ethique_securite";
-        } else {
-            
-            // --- 1. SCORING SÉMANTIQUE DYNAMIQUE (PRIORITÉ AUX MOTS-CLÉS FORTS) ---
-            const dictionnairesRegex = {
-                // J'ai mis les techniques précises en premier !
-                tuto_yoni_mudra: /\b(yoni|boucher les oreilles|yeux fermés|boucher les yeux)[a-zà-ÿ]*/gi,
-                tuto_kumbhaka: /\b(kumbhaka|kumbakha|rétention|retention|retenir|apnée|apnee)[a-zà-ÿ]*/gi,
-                tuto_samyama: /\b(samyama|sutra|intégration|integration|siddhi)[a-zà-ÿ]*/gi,
-                tuto_bandhas: /\b(bandha|mudra|mulabandha|asvini|périnée|sphincter|contraction|verrou)[a-zà-ÿ]*/gi,
-                tuto_meditation: /\b(comment médit|comment medit|pratiqu.*médit|techniqu.*médit|apprendr.*médit|comment faire.*médit|instruction.*médit)[a-zà-ÿ]*/gi,
-                tuto_respiration: /\b(comment respir|pratiqu.*respir|techniqu.*respir|apprendr.*respir|comment faire.*respir|instruction.*respir|comment.*spinal|respiration spinale)[a-zà-ÿ]*/gi,
-                
-                yoga_definition: /\b(yoga|yogi|union|voie|chemin)[a-zà-ÿ]*/gi,
-                kundalini_extase: /\b(kundalini|extas|shakti|serpent|énergi|energi|vibrat|frisson)[a-zà-ÿ]*/gi,
-                chakra_anatomie: /\b(chakra|centre|sahasrar|couronn|ajn|œil|oeil|gland|pinéal|pineal|troisième|troisieme)[a-zà-ÿ]*/gi,
-                mantra_technique: /\b(mantr|son|ayam|i am|répét|repet)[a-zà-ÿ]*/gi,
-                pranayama_souffle: /\b(pranayam|respir|souffl|colonn|spinal|nadi|sushumn)[a-zà-ÿ]*/gi,
-                illumination_eveil: /\b(illumin|éveil|eveil|libérat|liberat|nirvan|samadhi|but|fin)[a-zà-ÿ]*/gi,
-                karma_samskara: /\b(karma|destin|vies|antérieur|samskar|péché|peche)[a-zà-ÿ]*/gi,
-                
-                surcharge_ancrage: /\b(insomni|dor|agit|nerveu|pression|surcharg|trop|ancrag|grounding|fatigu|épuis|epuis|fou|craqu|bizarr|sommeil|nuit|détend)[a-zà-ÿ]*/gi,
-                interoception: /\b(corps|tension|sensation|stress|nuqu|ventr|physiqu|mal|ressens|cœur|coeur|têt|tet|douleur)[a-zà-ÿ]*/gi,
-                resilience: /\b(touch|bris|critiqu|échec|echec|décept|decept|choc|trist|colèr|coler|peur|courag|resilien|perdu|pleur|souffr|malheureu|dur|difficil|abandon)[a-zà-ÿ]*/gi,
-                detachement: /\b(attent|détach|detach|lâch|lach|travail|pourquoi|sens|vouloir|désir|desir|ego|égo|attach|futur|passé|passe|contrôl|control)[a-zà-ÿ]*/gi,
-                karma_action: /\b(action|choix|résultat|resultat|juste|décision|decision|choisi|fair|agir|dilemm|devoir)[a-zà-ÿ]*/gi,
-                elan_vital: /\b(motiv|élan|elan|projet|bloqu|envi|avanc|forc|procrastin)[a-zà-ÿ]*/gi,
-                maya_illusion: /\b(fuit|illusion|maya|plaisir|conditionnement|habitud|faux|mensong|matériel|materiel|sociét|societ|matric)[a-zà-ÿ]*/gi,
-                brahman_absolu: /\b(dieu|absolu|brahman|univers|créateur|createur|tout|divin|vérit|verit|vrai)[a-zà-ÿ]*/gi,
-                advaita_non_dualite: /\b(unité|unite|séparat|separat|non-dual|advaita|seul|autr|mond|vie|relié|ensembl)[a-zà-ÿ]*/gi,
-                meditation_presence: /\b(médit|medit|silenc|présenc|presence|absorpt|calm|esprit|paix|tranquil|pens|mental|cerveau|vid|assis)[a-zà-ÿ]*/gi,
-                routine_base: /\b(routin|pratiqu|commenc|temps|régulier|regulier|comment|aid|conseil|début|debut|apprend|jour)[a-zà-ÿ]*/gi
-            };
-
-            const scores = {};
-            for (let categorie in dictionnairesRegex) { scores[categorie] = 0; }
-
-            let phraseAnalysee = q.replace(/\b(pas|plus|sans|aucun|aucune|jamais)\s+([a-zà-ÿ]+)/gi, "");
-
-            for (let categorie in dictionnairesRegex) {
-                let correspondances = phraseAnalysee.match(dictionnairesRegex[categorie]);
-                if (correspondances) {
-                    let multiplier = 1;
-                    // LE SECRET DE L'INTELLIGENCE : On multiplie par 10 si c'est un mot AYP !
-                    if (["tuto_yoni_mudra", "tuto_kumbhaka", "tuto_samyama", "tuto_bandhas", "tuto_respiration", "tuto_meditation", "kundalini_extase", "chakra_anatomie", "pranayama_souffle"].includes(categorie)) {
-                        multiplier = 10;
-                    }
-                    scores[categorie] += (correspondances.length * multiplier);
-                }
-            }
-
-            let maxScore = 0;
-            let detectedTopic = "";
-            for (let categorie in scores) {
-                if (scores[categorie] > maxScore) {
-                    maxScore = scores[categorie];
-                    detectedTopic = categorie;
-                }
-            }
-
-            // --- 2. LA DÉCISION (Priorité aux mots précis, Matrice en dernier recours) ---
-            if (maxScore > 0) {
-                // S'il a trouvé un sujet (ex: il a vu Yoni avec ses 10 points)
-                topic = detectedTopic;
-                if (topic === previousTopic) { isContinuingTopic = true; }
-            } else {
-                // S'il n'a trouvé AUCUN mot clé dans la phrase (ex: "Et le deuxième ?") -> Il utilise sa matrice !
-                const matriceContexte = {
-                    "illumination_eveil": [
-                        { mots: ["premier", "première", "premiere", "1er", "un", "silence"], cible: "meditation_presence" },
-                        { mots: ["deuxième", "deuxieme", "second", "2ème", "extase", "joie"], cible: "kundalini_extase" },
-                        { mots: ["troisième", "troisieme", "3ème", "amour", "divin"], cible: "advaita_non_dualite" }
-                    ],
-                    "yoga_definition": [
-                        { mots: ["premier", "première", "silence", "paix"], cible: "meditation_presence" },
-                        { mots: ["deuxième", "deuxieme", "extase", "énergie", "energi"], cible: "kundalini_extase" },
-                        { mots: ["union", "unité", "unite"], cible: "advaita_non_dualite" }
-                    ],
-                    "karma_samskara": [
-                        { mots: ["comment", "pratique", "technique", "faire", "laquelle"], cible: "routine_base" }
-                    ],
-                    "pranayama_souffle": [
-                        { mots: ["comment", "pratique", "technique", "faire"], cible: "tuto_respiration" }
-                    ],
-                    "meditation_presence": [
-                        { mots: ["comment", "pratique", "technique", "faire"], cible: "tuto_meditation" }
-                    ]
-                };
-
-                let contextMatchFound = false;
-                if (matriceContexte[previousTopic]) {
-                    for (let i = 0; i < matriceContexte[previousTopic].length; i++) {
-                        let regle = matriceContexte[previousTopic][i];
-                        if (regle.mots.some(mot => q.includes(mot))) {
-                            topic = regle.cible;
-                            contextMatchFound = true;
-                            isContinuingTopic = true; 
-                            break;
-                        }
-                    }
-                }
-
-                if (!contextMatchFound) {
-                    topic = previousTopic; 
-                    isContinuingTopic = true; 
-                }
-            }
-        }
-
-        if (!sageBrain[currentLang] || !sageBrain[currentLang][topic]) {
-            topic = "universel";
-            isContinuingTopic = false;
-        }
-
-        saveSageHistory(topic);
-        previousTopic = topic;
-
-        const data = sageBrain[currentLang][topic];
-        let randomCore = data.core[Math.floor(Math.random() * data.core.length)];
-        let randomScience = data.science[Math.floor(Math.random() * data.science.length)];
-        let randomPacing = data.pacing[Math.floor(Math.random() * data.pacing.length)];
-
-        let prefix = "";
-        let introsFr = [];
-        let introsEn = [];
-
-        if (isContinuingTopic) {
-            introsFr = [
-                "Pour creuser ce point précis...<br><br>",
-                "En restant sur cette même dimension...<br><br>",
-                "Puisque nous explorons ce sujet...<br><br>",
-                "Allons un peu plus loin sur ce chemin...<br><br>",
-                "C'est une suite logique. Regarde bien...<br><br>"
-            ];
-            introsEn = [
-                "To dig deeper into this specific point...<br><br>",
-                "Staying within this same dimension...<br><br>",
-                "Since we are exploring this subject...<br><br>",
-                "Let's go a little further on this path...<br><br>",
-                "That is a logical continuation. Look closely...<br><br>"
-            ];
-        } else {
-            introsFr = [
-                "Ce que tu pointes touche à quelque chose de très profond...<br><br>",
-                "Derrière cette pensée, il y a souvent une sensation très claire...<br><br>",
-                "Regardons cela non pas comme un concept, mais comme une expérience vécue...<br><br>",
-                "C'est une observation très juste. Explorons cela...<br><br>",
-                "Ta question ouvre une excellente porte d'entrée...<br><br>"
-            ];
-            introsEn = [
-                "What you point out touches on something very deep...<br><br>",
-                "Behind this thought, there is often a very clear sensation...<br><br>",
-                "Let's look at this not as a concept, but as a lived experience...<br><br>",
-                "That is a very accurate observation. Let's explore this...<br><br>",
-                "Your question opens an excellent gateway...<br><br>"
-            ];
-        }
-
-        let introArray = currentLang === 'fr' ? introsFr : introsEn;
-        
-        let randomIndex;
-        do {
-            randomIndex = Math.floor(Math.random() * introArray.length);
-        } while (randomIndex === lastIntroIndex && introArray.length > 1);
-        
-        lastIntroIndex = randomIndex;
-        prefix = introArray[randomIndex];
-
-        let signatureText = currentLang === 'fr' ? "Le Temple du Silence" : "The Temple of Silence";
-        let signature = `<br><br><div style="display: flex; justify-content: flex-end; align-items: center; opacity: 0.9; font-style: italic;">
-            <span style="color: var(--accent-color); margin-right: 12px;">${signatureText}</span>
-            <img src="sceau-gardien.png" alt="Sceau du Gardien" style="height: 35px; border-radius: 50%; box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);">
-        </div>`;
-
-        let finalResponse = "";
-
-        sessionQuestionCount++; 
-        
-        if (sessionQuestionCount > 4 && Math.random() > 0.5) {
-            let interceptionFr = "Ton esprit est très actif aujourd'hui, et ton intellect a soif de réponses. Mais rappelle-toi la grande règle : l'intellect ne peut pas résoudre l'intellect. Une once de pratique vaudra toujours des tonnes de théorie. Je t'invite à lâcher ces mots, à fermer les yeux, et à plonger dans le silence de ton propre corps...";
-            
-            let interceptionEn = "Your mind is very active today, and your intellect thirsts for answers. But remember the great rule: the intellect cannot solve the intellect. An ounce of practice will always be worth tons of theory. I invite you to let go of these words, close your eyes, and dive into the silence of your own body...";
-            
-            let msg = currentLang === 'fr' ? interceptionFr : interceptionEn;
-            finalResponse = `« ${msg} »${signature}`;
-            sessionQuestionCount = 0; 
-        } else {
-            finalResponse = `« ${prefix}${randomCore}<br><br>${randomScience}<br><br>${randomPacing} »${signature}`;
-        }
-
-        typeWriter(finalResponse, 0, logEl, () => {
-            isTyping = false;
-            if (audioResonance) {
-                let fadeAudioOut = setInterval(() => {
-                    if (audioResonance.volume > 0.01) {
-                        audioResonance.volume -= 0.01;
-                    } else {
-                        audioResonance.pause();
-                        clearInterval(fadeAudioOut);
-                    }
-                }, 100);
-            }
-        });
-    }
-
-    function typeWriter(text, i, el, callback) {
-        if (i < text.length) {
-            if (text.charAt(i) === '<') {
-                let tag = "";
-                while (text.charAt(i) !== '>' && i < text.length) {
-                    tag += text.charAt(i);
-                    i++;
-                }
-                tag += '>';
-                el.innerHTML += tag;
-            } else {
-                el.innerHTML += text.charAt(i);
-            }
-            setTimeout(() => typeWriter(text, i + 1, el, callback), 25);
-        } else {
-            if(callback) callback();
-        }
-    }
-
     window.onload = () => {
         createDustParticles();
         initVisitorCounter();
@@ -735,5 +414,6 @@
     </script>
 </body>
 </html>
+
 
 

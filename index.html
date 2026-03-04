@@ -412,26 +412,42 @@
         renderParabole();
     };
       // --- 🎧 SYNCHRONISATION SONORE MISE À JOUR ---
-const resonance = document.getElementById("sage-resonance");
+<script>
+    const resonance = document.getElementById("sage-resonance");
+    const chatIframe = document.querySelector('#chat-container iframe');
 
-window.addEventListener('message', function(event) {
-    // Détection de tout début de génération de texte
-    if (event.data.event === 'message' || event.data.event === 'agent_message') {
-        if (resonance.paused) {
-            resonance.volume = 0.15; // Volume constant pour la dactylographie
-            resonance.play().catch(e => console.log("Attente d'interaction utilisateur pour le son"));
+    // Forçage de la transparence via le CSS de la page parente
+    if(chatIframe) {
+        chatIframe.style.backgroundColor = "transparent";
+        chatIframe.allowTransparency = "true";
+    }
+
+    // Détection des messages pour la résonance sonore
+    window.addEventListener('message', function(event) {
+        // Dify envoie 'workflow_started' ou 'message' au début
+        if (event.data.event === 'message' || event.data.event === 'agent_message') {
+            if (resonance.paused) {
+                resonance.volume = 0;
+                resonance.play().catch(e => console.log("Interaction requise pour le son"));
+                let fadeIn = setInterval(() => {
+                    if (resonance.volume < 0.2) resonance.volume += 0.02;
+                    else clearInterval(fadeIn);
+                }, 50);
+            }
         }
-    }
-    
-    // Arrêt net dès que le message est terminé
-    if (event.data.event === 'message_end' || event.data.event === 'workflow_finished') {
-        resonance.pause();
-        resonance.currentTime = 0; // Réinitialise pour la prochaine fois
-    }
-});
-    </script>
+        
+        // Arrêt du son à la fin
+        if (event.data.event === 'message_end' || event.data.event === 'workflow_finished') {
+            let fadeOut = setInterval(() => {
+                if (resonance.volume > 0.02) resonance.volume -= 0.02;
+                else { resonance.pause(); clearInterval(fadeOut); }
+            }, 50);
+        }
+    });
+</script>
 </body>
 </html>
+
 
 
 

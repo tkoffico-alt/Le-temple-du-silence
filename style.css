@@ -371,7 +371,7 @@ iframe[src*="udify.app"] img,
     margin: 15px auto;
     filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
 }
-
+#chat-container iframe img { max-width: 100px !important; height: auto !important; margin: 10px auto; display: block; }
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }

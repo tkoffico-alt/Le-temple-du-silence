@@ -168,9 +168,9 @@
         </div>
     </footer>
 
-    <script src="contenu.js"></script>
+   <script src="contenu.js"></script>
 
-  <script>
+    <script>
     let currentLang = 'fr';
     
     function createDustParticles() {
@@ -411,15 +411,15 @@
         renderMurmures();
         renderParabole();
     };
-      // --- 🎧 SYNCHRONISATION SONORE MISE À JOUR ---
-<script>
+
+    // --- 🎧 SYNCHRONISATION SONORE MISE À JOUR ---
     const resonance = document.getElementById("sage-resonance");
     const chatIframe = document.querySelector('#chat-container iframe');
 
     // Forçage de la transparence via le CSS de la page parente
     if(chatIframe) {
         chatIframe.style.backgroundColor = "transparent";
-        chatIframe.allowTransparency = "true";
+        chatIframe.setAttribute("allowtransparency", "true");
     }
 
     // Détection des messages pour la résonance sonore
@@ -444,9 +444,10 @@
             }, 50);
         }
     });
-</script>
+    </script>
 </body>
 </html>
+
 
 
 

@@ -1,3 +1,19 @@
+/* FORCE LE REDIMENSIONNEMENT DU SCEAU DANS L'IFRAME */
+div#chat-container iframe, 
+iframe[src*="udify.app"] {
+    /* On cible les images à l'intérieur de l'iframe si le navigateur le permet */
+    --seal-size: 100px; 
+}
+
+/* Règle de secours pour le conteneur */
+#chat-container img[alt*="Sceau"], 
+#chat-container img {
+    width: 100px !important; 
+    height: auto !important;
+    max-width: 100px !important;
+    margin: 10px auto !important;
+    display: block !important;
+}
 :root {
     --bg-overlay: rgba(26, 28, 35, 0.75); 
     --text-color: #e4e4e4;

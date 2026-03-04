@@ -346,6 +346,15 @@ details[open] .accordion-title::before {
     margin-bottom: 20px;
     animation: fadeIn 0.5s ease-in-out;
 }
+/* Ajustement du Sceau du Gardien dans le Sage */
+iframe[src*="udify.app"] img, 
+#chat-container img {
+    max-width: 120px !important; /* Cette taille est idéale pour rester élégante */
+    height: auto !important;
+    display: block;
+    margin: 15px auto;
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
+}
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }

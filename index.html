@@ -55,16 +55,15 @@
         <section id="sage" class="section active">
             <div id="particles-container"></div>
 
-            <div id="chat-container">
-                <div id="chat-log"></div>
-                <div class="input-area">
-                    <input type="text" id="sage-input" placeholder="Posez votre question à l'Univers...">
-                    <button id="sage-btn" onclick="askSage()">
-                        <span class="fr">Interroger</span>
-                        <span class="en" style="display:none;">Ask</span>
-                    </button>
+           <div id="chat-container" style="width: 100%; display: flex; justify-content: center;">
+                
+                <iframe 
+                    src="https://udify.app/chatbot/TFkbLNLitsHkzVxf" 
+                    style="width: 100%; max-width: 800px; height: 100%; min-height: 700px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);" 
+                    frameborder="0" 
+                    allow="microphone">
+                </iframe>
                 </div>
-            </div>
             
             <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 20px; opacity: 0.85; position: relative; z-index: 1;">
                 <span class="fr" style="font-style: italic; font-size: 1rem; color: var(--accent-color); margin-right: 15px;">Œuvre Originale & Propriété de la Lignée</span>
@@ -740,3 +739,4 @@
     </script>
 </body>
 </html>
+

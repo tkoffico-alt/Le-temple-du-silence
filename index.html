@@ -411,34 +411,28 @@
         renderMurmures();
         renderParabole();
     };
-      // --- 🎧 SYNCHRONISATION SONORE ---
+      // --- 🎧 SYNCHRONISATION SONORE MISE À JOUR ---
 const resonance = document.getElementById("sage-resonance");
 
 window.addEventListener('message', function(event) {
-    // Dify envoie des événements de rendu
-    if (event.data.event === 'thought' || event.data.event === 'message') {
+    // Détection de tout début de génération de texte
+    if (event.data.event === 'message' || event.data.event === 'agent_message') {
         if (resonance.paused) {
-            resonance.volume = 0;
-            resonance.play();
-            // Montée progressive
-            let fadeIn = setInterval(() => {
-                if (resonance.volume < 0.2) resonance.volume += 0.01;
-                else clearInterval(fadeIn);
-            }, 50);
+            resonance.volume = 0.15; // Volume constant pour la dactylographie
+            resonance.play().catch(e => console.log("Attente d'interaction utilisateur pour le son"));
         }
     }
     
-    // Arrêt du son à la fin du message
-    if (event.data.event === 'message_end') {
-        let fadeOut = setInterval(() => {
-            if (resonance.volume > 0.01) resonance.volume -= 0.01;
-            else { resonance.pause(); clearInterval(fadeOut); }
-        }, 50);
+    // Arrêt net dès que le message est terminé
+    if (event.data.event === 'message_end' || event.data.event === 'workflow_finished') {
+        resonance.pause();
+        resonance.currentTime = 0; // Réinitialise pour la prochaine fois
     }
 });
     </script>
 </body>
 </html>
+
 
 
 

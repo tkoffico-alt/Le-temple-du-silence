@@ -75,7 +75,7 @@
         </section>
 
         <section id="enseignements" class="section">
-            <div class="ayp-gateway parchment-text" style="text-align: center; margin-bottom: 40px; border: 2px solid var(--accent-color); padding: 25px; border-radius: 8px; background: rgba(20, 20, 20, 0.6);">
+           <div class="ayp-gateway parchment-text" style="text-align: center; margin-bottom: 20px; border: 2px solid var(--accent-color); padding: 12px 20px; border-radius: 8px; background: rgba(20, 20, 20, 0.6);">
                 <h2 style="margin-top: 0; border:none;">
                     <span class="fr">Aller plus loin : Les Enseignements Originels</span>
                     <span class="en" style="display:none;">Go Deeper: The Original Teachings</span>
@@ -412,23 +412,36 @@
         renderParabole();
     };
 
-    // --- 🎧 SYNCHRONISATION SONORE MISE À JOUR ---
+ // --- 🎧 SYNCHRONISATION SONORE ULTIME ---
     const resonance = document.getElementById("sage-resonance");
     const chatIframe = document.querySelector('#chat-container iframe');
 
-    // Forçage de la transparence via le CSS de la page parente
+    // 1. Déverrouillage silencieux du son au premier clic sur le site
+    document.body.addEventListener('click', function() {
+        if (resonance.paused && resonance.volume === 1) { // 1 est le volume par défaut
+            resonance.volume = 0;
+            resonance.play().then(() => { resonance.pause(); }).catch(e => console.log("Son bloqué"));
+        }
+    }, { once: true });
+
+    // 2. Transparence
     if(chatIframe) {
         chatIframe.style.backgroundColor = "transparent";
         chatIframe.setAttribute("allowtransparency", "true");
     }
 
-    // Détection des messages pour la résonance sonore
+    // 3. Écoute du Sage
     window.addEventListener('message', function(event) {
-        // Dify envoie 'workflow_started' ou 'message' au début
-        if (event.data.event === 'message' || event.data.event === 'agent_message') {
+        let eData = event.data;
+        if (typeof eData === 'string') {
+            try { eData = JSON.parse(eData); } catch(e) {}
+        }
+        
+        // Si le Sage envoie une réponse
+        if (eData && (eData.event === 'message' || eData.type === 'message' || eData === 'start_typing')) {
             if (resonance.paused) {
                 resonance.volume = 0;
-                resonance.play().catch(e => console.log("Interaction requise pour le son"));
+                resonance.play().catch(e => console.log("Le visiteur doit cliquer sur la page d'abord"));
                 let fadeIn = setInterval(() => {
                     if (resonance.volume < 0.2) resonance.volume += 0.02;
                     else clearInterval(fadeIn);
@@ -436,8 +449,8 @@
             }
         }
         
-        // Arrêt du son à la fin
-        if (event.data.event === 'message_end' || event.data.event === 'workflow_finished') {
+        // Si le Sage a fini de parler
+        if (eData && (eData.event === 'message_end' || eData.type === 'message_end' || eData === 'stop_typing')) {
             let fadeOut = setInterval(() => {
                 if (resonance.volume > 0.02) resonance.volume -= 0.02;
                 else { resonance.pause(); clearInterval(fadeOut); }
@@ -447,6 +460,7 @@
     </script>
 </body>
 </html>
+
 
 
 

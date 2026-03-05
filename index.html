@@ -256,11 +256,22 @@
         btn.innerText = currentLang === 'fr' ? (body.classList.contains('light-mode') ? 'Obscurité' : 'Clarté') : (body.classList.contains('light-mode') ? 'Darkness' : 'Light');
     }
 
-    function showSection(sectionId) {
+  function showSection(sectionId) {
         document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
         document.getElementById(sectionId).classList.add('active');
         document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
         document.getElementById(`nav-${sectionId}`).classList.add('active');
+
+        // --- 🎧 GESTION INTELLIGENTE DE L'AMBIANCE ---
+        const resonance = document.getElementById("sage-resonance");
+        if (resonance) {
+            if (sectionId === 'sage') {
+                resonance.volume = 0.08; // Volume très doux (8%)
+                resonance.play().catch(e => console.log("Attente du premier clic"));
+            } else {
+                resonance.pause(); // Le son s'arrête instantanément en quittant le Sage
+            }
+        }
     }
 
     function getSignatureHTML() {
@@ -412,55 +423,24 @@
         renderParabole();
     };
 
- // --- 🎧 SYNCHRONISATION SONORE ULTIME ---
+ // --- 🎧 DÉVERROUILLAGE INITIAL DU SON ---
     const resonance = document.getElementById("sage-resonance");
     const chatIframe = document.querySelector('#chat-container iframe');
 
-    // 1. Déverrouillage silencieux du son au premier clic sur le site
+    // Déclenchement au tout premier clic sur le site (uniquement si le Sage est affiché)
     document.body.addEventListener('click', function() {
-        if (resonance.paused) {
-            resonance.volume = 0;
-            resonance.play().then(() => { resonance.pause(); }).catch(e => console.log("Attente d'interaction"));
+        if (document.getElementById('sage').classList.contains('active') && resonance.paused) {
+            resonance.volume = 0.08;
+            resonance.play().catch(e => console.log("Attente d'interaction"));
         }
     }, { once: true });
 
-    // 2. Transparence de l'Iframe
+    // Forçage de la transparence de l'Iframe
     if(chatIframe) {
         chatIframe.style.backgroundColor = "transparent";
         chatIframe.setAttribute("allowtransparency", "true");
     }
-
-    // 3. Écoute du souffle du Sage
-    window.addEventListener('message', function(event) {
-        let eData = event.data;
-        // Décodage si Dify envoie le message sous forme de texte brut
-        if (typeof eData === 'string') {
-            try { eData = JSON.parse(eData); } catch(e) {}
-        }
-        
-        // Le Sage commence à murmurer
-        if (eData && (eData.event === 'message' || eData.type === 'message' || eData.event === 'agent_message' || eData === 'start_typing')) {
-            if (resonance.paused) {
-                resonance.volume = 0;
-                let playPromise = resonance.play();
-                if (playPromise !== undefined) {
-                    playPromise.catch(error => console.log("Le visiteur n'a pas encore cliqué sur la page."));
-                }
-                let fadeIn = setInterval(() => {
-                    if (resonance.volume < 0.2) resonance.volume += 0.02;
-                    else clearInterval(fadeIn);
-                }, 50);
-            }
-        }
-        
-        // Le Sage retourne au silence
-        if (eData && (eData.event === 'message_end' || eData.type === 'message_end' || eData.event === 'workflow_finished' || eData === 'stop_typing')) {
-            let fadeOut = setInterval(() => {
-                if (resonance.volume > 0.02) resonance.volume -= 0.02;
-                else { resonance.pause(); clearInterval(fadeOut); }
-            }, 50);
-        }
-    });
     </script>
 </body>
 </html>
+

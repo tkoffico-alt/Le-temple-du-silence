@@ -266,7 +266,7 @@ const MURMURES_DATABASE = {
         {
             title: "Le Conte du Bambou Creux",
             audioFile: "",
-            imageFile: "",
+            imageFile: "bambou-creux.jpg",
             videoFile: "",
             text: "Un pèlerin, épuisé par le tumulte de ses propres pensées, se présenta un jour devant un ancien. « Maître, demanda-t-il, comment puis-je trouver le silence alors que mon esprit est empli de bruits et de désirs ? »<br><br>L'ancien ne répondit pas immédiatement. Il ramassa une tige de bambou sur le sol, la tailla délicatement pour en évider le centre, puis la porta à ses lèvres. Une mélodie d'une pureté bouleversante s'éleva dans l'air du soir.<br><br>Lorsqu'il abaissa l'instrument, l'ancien murmura : « Regarde ce bambou. S'il était plein, il serait lourd et muet. C'est précisément parce qu'il a accepté de se vider, de devenir un simple canal creux, que le souffle de la vie peut chanter à travers lui. »<br><br>Dans notre pratique, le fil subtil de la respiration spinale est ce bambou. Ne cherchez pas à retenir le monde, ni à visualiser quoi que ce soit. Laissez simplement votre attention glisser de la racine jusqu'au front, encore et encore. Devenez ce canal creux, et le silence chantera de lui-même."
         }
@@ -317,7 +317,7 @@ const MURMURES_DATABASE = {
         {
             title: "The Tale of the Hollow Bamboo",
             audioFile: "",
-            imageFile: "",
+            imageFile: "bambou-creux.jpg",
             videoFile: "",
             text: "A pilgrim, exhausted by the tumult of his own thoughts, one day presented himself before an elder. 'Master,' he asked, 'how can I find silence when my mind is filled with noise and desires?'<br><br>The elder did not answer immediately. He picked up a bamboo stalk from the ground, carefully carved it to hollow out the center, and then brought it to his lips. A melody of breathtaking purity rose into the evening air.<br><br>When he lowered the instrument, the elder whispered: 'Look at this bamboo. If it were full, it would be heavy and mute. It is precisely because it agreed to empty itself, to become a simple hollow channel, that the breath of life can sing through it.'<br><br>In our practice, the subtle thread of spinal breathing is this bamboo. Do not try to hold onto the world, nor visualize anything. Simply let your attention glide from the root to the brow, over and over again. Become this hollow channel, and silence will sing of its own accord."
         }
@@ -661,6 +661,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

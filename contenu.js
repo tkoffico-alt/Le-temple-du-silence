@@ -90,6 +90,22 @@ const TEACHINGS_DATABASE = {
                 <p>Si vous perdez le fil de votre respiration, ou si vous vous surprenez perdu dans vos pensées, ne vous jugez pas. La libération des pensées est le signe même que le stress quitte votre corps. Revenez simplement à la ligne lumineuse, avec une douceur infinie.</p>
                 <p style="font-style: italic; opacity: 0.9; margin-top: 20px; border-left: 2px solid var(--accent-color); padding-left: 15px;">Pratiquez ce balayage intérieur pendant 5 à 10 minutes avant votre méditation silencieuse. Ce simple mouvement prépare la terre, l'assouplit et l'irrigue, permettant aux graines du silence de germer avec une force inouïe.</p>
             `
+        }, // <--- N'oubliez pas la virgule après la leçon sur la Respiration Spinale !
+        {
+            title: "L'Art de l'Auto-Régulation (Self-Pacing)",
+            body: `
+                <p style="font-weight: bold; font-style: italic; text-align: center; margin-bottom: 25px; color: var(--accent-color);">"Le pratiquant est le seul maître de son rythme."</p>
+                <p>L'auto-régulation, ou <em>self-pacing</em>, n'est pas simplement un conseil ; c'est la règle d'or universelle qui soutient l'intégralité de la pratique yoganienne complète. Dans notre quête de silence intérieur, nous n'essayons pas de forcer la porte, mais de déblayer patiemment le chemin pour que la lumière puisse passer.</p>
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">Le Principe : Écouter la Conductivité Extatique</h3>
+                <p>Les pratiques puissantes comme la respiration spinale et le Chin Pump stimulent directement la conductivité extatique dans le système nerveux. Ce sont des outils alchimiques. Mais si le "bambou" n'est pas encore prêt à accueillir une telle intensité, une surcharge peut survenir. L'auto-régulation est votre baromètre. Elle vous demande d'observer votre état, non seulement pendant la séance, mais dans votre vie de tous les jours.</p>
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">Symptômes de Surcharge et Solutions Pratiques</h3>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>Symptômes :</strong> Irritabilité, insomnie, maux de tête persistants, rêves trop intenses, fatigue inexpliquée ou anxiété soudaine.</li>
+                    <li><strong>La Règle Immédiate :</strong> Si l'un de ces signes apparaît, la première action est TOUJOURS de réduire la durée de vos pratiques principales (respiration et méditation).</li>
+                    <li><strong>Techniques d'Ancrage :</strong> Il est crucial de s'ancrer au sol. Marcher pieds nus dans la nature, prendre un repas plus lourd, effectuer des travaux manuels, ou simplement suspendre la pratique pendant quelques jours sont des actions concrètes pour rééquilibrer le système.</li>
+                </ul>
+                <p style="font-style: italic; opacity: 0.9; margin-top: 20px; border-left: 2px solid var(--accent-color); padding-left: 15px;">Rappelez-vous les avertissements de la lignée : pour des techniques avancées, si une surcharge survient, n'hésitez pas à passer à la version "Lite" ou à limiter les cycles. La douceur et la régularité l'emportent toujours sur l'ambition spirituelle.</p>
+            `
         }
     ],
     en: [
@@ -182,6 +198,22 @@ const TEACHINGS_DATABASE = {
                 <p>There is a golden rule on the AYP Path: <strong>The less you force, the deeper the cleansing.</strong> Do not try to perfectly visualize the luminous line. A vague intention of the trajectory is more than enough. Energy naturally follows attention.</p>
                 <p>If you lose the thread of your breath, or if you catch yourself lost in thoughts, do not judge yourself. The release of thoughts is the very sign that stress is leaving your body. Simply return to the luminous line, with infinite gentleness.</p>
                 <p style="font-style: italic; opacity: 0.9; margin-top: 20px; border-left: 2px solid var(--accent-color); padding-left: 15px;">Practice this internal sweeping for 5 to 10 minutes before your silent meditation. This simple movement prepares the soil, softens and irrigates it, allowing the seeds of silence to sprout with incredible strength.</p>
+            `
+        }, // <--- N'oubliez pas la virgule après la 3ème leçon anglaise !
+        {
+            title: "The Art of Self-Regulation (Self-Pacing)",
+            body: `
+                <p style="font-weight: bold; font-style: italic; text-align: center; margin-bottom: 25px; color: var(--accent-color);">"The practitioner is the sole master of their pace."</p>
+                <p>Self-pacing is not just advice; it is the universal golden rule that supports the entirety of deep yogic practice. In our quest for inner silence, we do not attempt to force the door, but patiently clear the path so that the light may pass.</p>
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">The Principle: Listening to Ecstatic Conductivity</h3>
+                <p>Powerful practices like spinal breathing and Chin Pump directly stimulate ecstatic conductivity in the nervous system. These are alchemical tools. But if the "bamboo" is not yet ready to accommodate such intensity, an overload can occur. Self-pacing is your barometer. It requires you to observe your state, not just during the session, but in your daily life.</p>
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">Overload Symptoms and Practical Solutions</h3>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>Symptoms:</strong> Irritability, insomnia, persistent headaches, over-intense dreams, unexplained fatigue, or sudden anxiety.</li>
+                    <li><strong>The Immediate Rule:</strong> If any of these signs appear, the first action is ALWAYS to reduce the duration of your main practices (breathing and meditation).</li>
+                    <li><strong>Grounding Techniques:</strong> It is crucial to ground yourself to the earth. Walking barefoot in nature, eating a heavier meal, performing manual labor, or simply suspending practice for a few days are concrete actions to rebalance the system.</li>
+                </ul>
+                <p style="font-style: italic; opacity: 0.9; margin-top: 20px; border-left: 2px solid var(--accent-color); padding-left: 15px;">Remember the warnings of the lineage: for advanced techniques, if an overload occurs, do not hesitate to switch to a "Lite" version or limit your cycles. Gentleness and regularity always prevail over spiritual ambition.</p>
             `
         }
     ]
@@ -629,5 +661,6 @@ const sageBrain = {
         }
     }
 };
+
 
 

@@ -26,13 +26,32 @@ iframe[src*="udify.app"] {
 }
 
 body.light-mode {
-    --bg-overlay: rgba(245, 242, 235, 0.85);
-    --text-color: #2c2c2c;
-    --accent-color: #9c7c1f;
-    --title-blue: #2b6cb0;
-    --btn-blue: #3182ce;
-    --box-bg: rgba(0, 0, 0, 0.04);
-    --border-color: rgba(156, 124, 31, 0.3);
+    --bg-overlay: rgba(245, 242, 235, 0.92); /* Un parchemin légèrement plus opaque */
+    --text-color: #1a1a1a; /* Un noir presque pur pour une lecture parfaite */
+    --accent-color: #856404; /* Un or plus sombre et terreux pour le contraste */
+    --title-blue: #004085; /* Un bleu marine profond pour les titres de leçons */
+    --box-bg: rgba(0, 0, 0, 0.07);
+    --border-color: rgba(133, 100, 4, 0.4);
+}
+
+/* Correction spécifique pour les accordéons en mode clarté */
+body.light-mode .accordion-content {
+    background: rgba(255, 255, 255, 0.5); /* Fond de texte plus blanc pour détacher du fond */
+    color: #1a1a1a;
+}
+
+body.light-mode .accordion-title {
+    color: var(--accent-color);
+}
+
+body.light-mode .accordion-title:hover {
+    color: #000; /* Le titre devient noir au survol pour bien le voir */
+}
+
+/* Correction pour les textes dorés dans les cartes (Murmures et Enseignements) */
+body.light-mode .teaching-accordion {
+    background: rgba(255, 255, 255, 0.6);
+    border-color: var(--border-color);
 }
 
 * {

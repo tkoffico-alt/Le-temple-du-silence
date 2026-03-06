@@ -89,7 +89,14 @@
                 </a>
             </div>
 
-           <div id="enseignements-container"></div> 
+           <div id="enseignements-piliers" class="piliers-grid"></div>
+
+            <h3 class="enseignements-separator" style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin: 50px 0 30px; border-bottom: 1px dashed var(--border-color); padding-bottom: 15px;">
+                <span class="fr">Les Explorations Pratiques</span>
+                <span class="en" style="display:none;">Practical Explorations</span>
+            </h3>
+
+            <div id="enseignements-grille" class="creatif-grid"></div>
             
         </section> <section id="murmures" class="section">
             <div class="creatif-header" style="text-align: center; margin-bottom: 40px;">
@@ -293,17 +300,23 @@
         `;
     }
 
-    function renderEnseignements() {
-        const container = document.getElementById("enseignements-container");
-        container.innerHTML = ""; 
+   function renderEnseignements() {
+        const piliersContainer = document.getElementById("enseignements-piliers");
+        const grilleContainer = document.getElementById("enseignements-grille");
+        
+        // On vide les deux espaces avant de les remplir
+        piliersContainer.innerHTML = ""; 
+        grilleContainer.innerHTML = ""; 
+        
         const currentData = TEACHINGS_DATABASE[currentLang];
 
         if (currentData.length === 0) {
-            container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${currentLang === 'fr' ? "Bientôt disponible." : "Coming soon."}</p>`;
+            piliersContainer.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${currentLang === 'fr' ? "Bientôt disponible." : "Coming soon."}</p>`;
+            document.querySelector('.enseignements-separator').style.display = 'none';
             return;
         }
 
-        currentData.forEach((item) => {
+        currentData.forEach((item, index) => {
             const article = document.createElement("details");
             article.className = "teaching-accordion";
             article.innerHTML = `
@@ -313,7 +326,13 @@
                     ${getSignatureHTML()}
                 </div>
             `;
-            container.appendChild(article);
+            
+            // Le Tri Magique : Les 2 premières leçons vont dans les Piliers, le reste dans la Grille
+            if (index < 2) {
+                piliersContainer.appendChild(article);
+            } else {
+                grilleContainer.appendChild(article);
+            }
         });
     }
 
@@ -452,6 +471,7 @@
     </script>
 </body>
 </html>
+
 
 
 

@@ -399,3 +399,25 @@ iframe[src*="udify.app"] img,
     transform: translateY(-5px);
     border-color: rgba(212, 175, 55, 0.6);
 }
+/* --- LES DEUX PILIERS DES ENSEIGNEMENTS --- */
+.piliers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Cartes plus larges */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.piliers-grid .teaching-accordion {
+    margin: 0; 
+    height: fit-content;
+    background: rgba(30, 30, 30, 0.8); /* Fond très légèrement plus sombre pour le contraste */
+    border: 2px solid rgba(212, 175, 55, 0.4); /* Bordure dorée plus épaisse (2px) */
+    border-radius: 8px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.piliers-grid .teaching-accordion:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.8);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Ombre plus majestueuse */
+}

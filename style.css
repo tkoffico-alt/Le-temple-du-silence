@@ -1,7 +1,6 @@
 /* FORCE LE REDIMENSIONNEMENT DU SCEAU DANS L'IFRAME */
 div#chat-container iframe, 
 iframe[src*="udify.app"] {
-    /* On cible les images à l'intérieur de l'iframe si le navigateur le permet */
     --seal-size: 100px; 
 }
 
@@ -14,6 +13,7 @@ iframe[src*="udify.app"] {
     margin: 10px auto !important;
     display: block !important;
 }
+
 :root {
     --bg-overlay: rgba(26, 28, 35, 0.75); 
     --text-color: #e4e4e4;
@@ -26,17 +26,20 @@ iframe[src*="udify.app"] {
 }
 
 body.light-mode {
-    --bg-overlay: rgba(245, 242, 235, 0.92); /* Un parchemin légèrement plus opaque */
-    --text-color: #1a1a1a; /* Un noir presque pur pour une lecture parfaite */
-    --accent-color: #856404; /* Un or plus sombre et terreux pour le contraste */
-    --title-blue: #004085; /* Un bleu marine profond pour les titres de leçons */
+    --bg-overlay: rgba(245, 242, 235, 0.92); 
+    --text-color: #1a1a1a; 
+    --accent-color: #856404; 
+    --title-blue: #004085; 
     --box-bg: rgba(0, 0, 0, 0.07);
     --border-color: rgba(133, 100, 4, 0.4);
 }
 
 /* Correction spécifique pour les accordéons en mode clarté */
 body.light-mode .accordion-content {
-    background: rgba(255, 255, 255, 0.5); /* Fond de texte plus blanc pour détacher du fond */
+    background: rgba(255, 255, 255, 0.9); /* Fond très clair pour masquer l'image derrière */
+    color: #1a1a1a;
+}
+body.light-mode .accordion-content p {
     color: #1a1a1a;
 }
 
@@ -45,10 +48,9 @@ body.light-mode .accordion-title {
 }
 
 body.light-mode .accordion-title:hover {
-    color: #000; /* Le titre devient noir au survol pour bien le voir */
+    color: #000; 
 }
 
-/* Correction pour les textes dorés dans les cartes (Murmures et Enseignements) */
 body.light-mode .teaching-accordion {
     background: rgba(255, 255, 255, 0.6);
     border-color: var(--border-color);
@@ -70,7 +72,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Typographie spécifique */
 h1, h2, h3, h4, .serif {
     font-family: 'Cormorant Garamond', serif;
 }
@@ -83,7 +84,6 @@ h1 {
     letter-spacing: 2px;
 }
 
-/* Conteneur pour le sous-titre et le logo alignés */
 .subtitle-container {
     display: flex;
     justify-content: center;
@@ -92,7 +92,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Sous-titre CHEMIN AYP (Couleur Or, Majuscules, Police Yatra One) */
 .site-subtitle {
     font-family: 'Yatra One', system-ui, cursive; 
     font-size: 1.8rem;
@@ -103,13 +102,11 @@ h1 {
     margin: 0; 
 }
 
-/* Logo AYP agrandi */
 .header-signature {
-    height: 65px; /* Plus grand que le texte */
+    height: 65px; 
     filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
 }
 
-/* Titres principaux des leçons (Plus grands, Bleus, Très Gras) */
 h2 {
     font-size: 2.4rem;
     font-weight: 700 !important; 
@@ -119,7 +116,6 @@ h2 {
     padding-bottom: 10px;
 }
 
-/* Sous-titres dans les leçons (Plus petits, Dorés, Gras) */
 h3 {
     font-size: 1.6rem;
     font-weight: 700 !important; 
@@ -133,7 +129,6 @@ p {
     margin-bottom: 15px;
 }
 
-/* En-tête et Navigation */
 header {
     text-align: center;
     padding: 40px 20px 20px;
@@ -189,7 +184,6 @@ nav button:hover, nav button.active {
     border-bottom: 1px solid var(--accent-color);
 }
 
-/* Conteneur principal */
 main {
     max-width: 800px;
     margin: 0 auto;
@@ -197,7 +191,6 @@ main {
     min-height: 60vh;
 }
 
-/* Sections */
 .section {
     display: none;
     animation: fadeIn 1s ease-in-out;
@@ -207,7 +200,6 @@ main {
     display: block;
 }
 
-/* Interface du Sage (Chatbot) */
 #chat-container {
     background: var(--box-bg);
     border: 1px solid var(--border-color);
@@ -248,7 +240,6 @@ input[type="text"]:focus {
     border-color: var(--accent-color);
 }
 
-/* Bouton Spécifique Interroger (Bleu et Gras) */
 #sage-btn {
     background-color: var(--btn-blue) !important;
     color: white !important;
@@ -261,7 +252,6 @@ input[type="text"]:focus {
     background-color: var(--title-blue) !important;
 }
 
-/* Enseignements et Murmures */
 .teaching-article, .murmure-item {
     margin-bottom: 50px;
     padding-bottom: 30px;
@@ -275,7 +265,6 @@ input[type="text"]:focus {
     border: 1px solid var(--accent-color);
 }
 
-/* Pied de page */
 footer {
     text-align: center;
     padding: 30px;
@@ -289,7 +278,6 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Customisation Parchemin */
 .parchment-text {
     text-align: justify;
     line-height: 1.8;
@@ -297,21 +285,21 @@ footer {
 .parchment-text p {
     margin-bottom: 25px;
 }
-/* --- EFFET POUSSIÈRE DU TEMPLE --- */
+
 #particles-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Pour ne pas gêner les clics */
+    pointer-events: none; 
     overflow: hidden;
-    z-index: 0; /* Derrière le texte */
+    z-index: 0; 
 }
 
 .dust-particle {
     position: absolute;
-    background: rgba(212, 175, 55, 0.4); /* Couleur dorée très douce */
+    background: rgba(212, 175, 55, 0.4); 
     border-radius: 50%;
     box-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
     animation: float-dust linear infinite;
@@ -324,7 +312,6 @@ footer {
     100% { transform: translateY(-150px) translateX(30px); opacity: 0; }
 }
 
-/* --- LECTEUR AUDIO PARABOLE --- */
 .audio-parabole-container {
     text-align: center;
     margin-bottom: 40px;
@@ -332,12 +319,11 @@ footer {
     z-index: 1;
 }
 
-/* Assurons-nous que le contenu du chat reste devant la poussière */
 #chat-container, .teaching-article {
     position: relative;
     z-index: 1;
 }
-/* --- ACCORDÉONS POUR ENSEIGNEMENTS & MURMURES --- */
+
 .teaching-accordion {
     margin-bottom: 20px;
     border-bottom: 1px solid rgba(212, 175, 55, 0.3);
@@ -349,19 +335,18 @@ footer {
     color: var(--accent-color);
     cursor: pointer;
     padding: 15px 0;
-    list-style: none; /* Enlève la flèche par défaut */
+    list-style: none; 
     transition: color 0.3s ease;
 }
 
 .accordion-title::-webkit-details-marker {
-    display: none; /* Enlève la flèche sur Chrome/Safari */
+    display: none; 
 }
 
 .accordion-title:hover {
     color: #fff;
 }
 
-/* Ajout d'un symbole "+" ou "-" personnalisé */
 .accordion-title::before {
     content: '+ ';
     font-size: 1.8rem;
@@ -374,28 +359,40 @@ details[open] .accordion-title::before {
     content: '- ';
 }
 
+/* LUMINOSITÉ DU TEXTE DES ENSEIGNEMENTS */
 .accordion-content {
-    padding: 20px;
-    background: rgba(10, 10, 10, 0.4);
+    padding: 25px;
+    background: rgba(15, 15, 15, 0.9); /* Fond plus sombre et opaque */
     border-radius: 8px;
     margin-bottom: 20px;
     animation: fadeIn 0.5s ease-in-out;
+    color: #f4f1ea; /* Texte ivoire lumineux */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
 }
-/* Ajustement du Sceau du Gardien dans le Sage */
+
+.accordion-content p {
+    color: #f4f1ea; /* Force la couleur ivoire sur les paragraphes */
+    margin-bottom: 15px;
+}
+
 iframe[src*="udify.app"] img, 
 #chat-container img {
-    max-width: 120px !important; /* Cette taille est idéale pour rester élégante */
+    max-width: 120px !important; 
     height: auto !important;
     display: block;
     margin: 15px auto;
     filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
 }
-#chat-container iframe img { max-width: 100px !important; height: auto !important; margin: 10px auto; display: block; }
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+
+#chat-container iframe img { 
+    max-width: 100px !important; 
+    height: auto !important; 
+    margin: 10px auto; 
+    display: block; 
 }
-/* --- ESPACE CRÉATIF (MURMURES) --- */
+
 .creatif-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -403,7 +400,6 @@ iframe[src*="udify.app"] img,
     margin-top: 20px;
 }
 
-/* Transformation des accordéons en cartes */
 .creatif-grid .teaching-accordion {
     margin: 0; 
     height: fit-content;
@@ -413,15 +409,14 @@ iframe[src*="udify.app"] img,
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Effet de lévitation au survol */
 .creatif-grid .teaching-accordion:hover {
     transform: translateY(-5px);
     border-color: rgba(212, 175, 55, 0.6);
 }
-/* --- LES DEUX PILIERS DES ENSEIGNEMENTS --- */
+
 .piliers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Cartes plus larges */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
     gap: 30px;
     margin-top: 30px;
 }
@@ -429,8 +424,8 @@ iframe[src*="udify.app"] img,
 .piliers-grid .teaching-accordion {
     margin: 0; 
     height: fit-content;
-    background: rgba(30, 30, 30, 0.8); /* Fond très légèrement plus sombre pour le contraste */
-    border: 2px solid rgba(212, 175, 55, 0.4); /* Bordure dorée plus épaisse (2px) */
+    background: rgba(30, 30, 30, 0.8); 
+    border: 2px solid rgba(212, 175, 55, 0.4); 
     border-radius: 8px;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -438,5 +433,5 @@ iframe[src*="udify.app"] img,
 .piliers-grid .teaching-accordion:hover {
     transform: translateY(-5px);
     border-color: rgba(212, 175, 55, 0.8);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Ombre plus majestueuse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
 }

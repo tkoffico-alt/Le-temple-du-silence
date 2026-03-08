@@ -327,8 +327,6 @@ const MURMURES_DATABASE = {
 
 const BIBLIOTHEQUE_DATABASE = {
     fr: {
-        const BIBLIOTHEQUE_DATABASE = {
-    fr: {
         histoire: [
             {
                 title: "L'Émergence d'AYP et le Mystère Yogani",
@@ -362,7 +360,6 @@ const BIBLIOTHEQUE_DATABASE = {
                 `
             }
         ],
-// ... (LE RESTE DE VOTRE CODE EXISTANT RESTE INTACT ICI) ...
         cartographie: [
             {
                 title: "Introduction : L'Appel des Deux Infinis",
@@ -986,6 +983,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

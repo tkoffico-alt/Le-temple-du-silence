@@ -23,8 +23,12 @@
             <button id="theme-toggle" onclick="toggleTheme()">Clarté</button>
         </div>
         
-        <nav>
-            <button id="nav-sage" class="active" onclick="showSection('sage')">
+       <nav>
+            <button id="nav-accueil" class="active" onclick="showSection('accueil')">
+                <span class="fr">Le Parvis</span>
+                <span class="en" style="display:none;">The Forecourt</span>
+            </button>
+            <button id="nav-sage" onclick="showSection('sage')">
                 <span class="fr">Le Sage</span>
                 <span class="en" style="display:none;">The Sage</span>
             </button>
@@ -52,7 +56,85 @@
     </header>
 
     <main>
-        <section id="sage" class="section active">
+        <section id="accueil" class="section active">
+            
+            <div class="teaching-article parchment-text" style="text-align: center; max-width: 750px; margin: 0 auto 50px; padding: 40px; background: var(--box-bg); border-radius: 12px; border: 1px solid var(--border-color);">
+                <h2 style="border: none; margin-bottom: 20px;">
+                    <span class="fr">Bienvenue au Temple</span>
+                    <span class="en" style="display:none;">Welcome to the Temple</span>
+                </h2>
+                <p style="font-size: 1.25rem; font-style: italic; line-height: 1.8;">
+                    <span class="fr">Ici, nul besoin de forcer le pas ni de retenir son souffle. Ce domaine est dédié à la mécanique de l'éveil et à la science de la douceur. Entrez, déposez vos fardeaux de voyageur, et laissez la pratique du silence vous guider.</span>
+                    <span class="en" style="display:none;">Here, there is no need to force your pace or hold your breath. This domain is dedicated to the mechanics of awakening and the science of gentleness. Enter, set down your traveler's burdens, and let the practice of silence guide you.</span>
+                </p>
+                <img src="sceau-gardien.png" alt="Sceau" style="height: 50px; margin-top: 15px; opacity: 0.8; filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.4));">
+            </div>
+
+            <div class="creatif-grid">
+                
+                <div class="teaching-accordion" style="text-align: center; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <h3 style="margin-top: 0; font-size: 1.8rem;">
+                        <span class="fr">La Bibliothèque</span>
+                        <span class="en" style="display:none;">The Library</span>
+                    </h3>
+                    <p style="opacity: 0.9; flex-grow: 1;">
+                        <span class="fr">Lisez la Cartographie de l'éveil, explorez notre lexique et trouvez réponse à vos doutes.</span>
+                        <span class="en" style="display:none;">Read the Cartography of awakening, explore our lexicon, and find answers to your doubts.</span>
+                    </p>
+                    <button class="zen-btn" onclick="showSection('bibliotheque')">
+                        <span class="fr">Ouvrir les textes</span>
+                        <span class="en" style="display:none;">Open the texts</span>
+                    </button>
+                </div>
+
+                <div class="teaching-accordion" style="text-align: center; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <h3 style="margin-top: 0; font-size: 1.8rem;">
+                        <span class="fr">Le Sage Interne</span>
+                        <span class="en" style="display:none;">The Inner Sage</span>
+                    </h3>
+                    <p style="opacity: 0.9; flex-grow: 1;">
+                        <span class="fr">Un guide interactif imprégné de la lignée pour répondre à vos questions sur la pratique.</span>
+                        <span class="en" style="display:none;">An interactive guide imbued with the lineage to answer your practice questions.</span>
+                    </p>
+                    <button class="zen-btn" onclick="showSection('sage')">
+                        <span class="fr">Interroger le Sage</span>
+                        <span class="en" style="display:none;">Ask the Sage</span>
+                    </button>
+                </div>
+
+                <div class="teaching-accordion" style="text-align: center; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <h3 style="margin-top: 0; font-size: 1.8rem;">
+                        <span class="fr">Les Enseignements</span>
+                        <span class="en" style="display:none;">The Teachings</span>
+                    </h3>
+                    <p style="opacity: 0.9; flex-grow: 1;">
+                        <span class="fr">Plongez dans les fondations mécaniques de la méditation profonde et du souffle.</span>
+                        <span class="en" style="display:none;">Dive into the mechanical foundations of deep meditation and breath.</span>
+                    </p>
+                    <button class="zen-btn" onclick="showSection('enseignements')">
+                        <span class="fr">Étudier la pratique</span>
+                        <span class="en" style="display:none;">Study the practice</span>
+                    </button>
+                </div>
+
+                <div class="teaching-accordion" style="text-align: center; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <h3 style="margin-top: 0; font-size: 1.8rem;">
+                        <span class="fr">Les Murmures</span>
+                        <span class="en" style="display:none;">The Whispers</span>
+                    </h3>
+                    <p style="opacity: 0.9; flex-grow: 1;">
+                        <span class="fr">Découvrez les contes, réflexions et chroniques nés de l'expérience du silence.</span>
+                        <span class="en" style="display:none;">Discover tales, reflections, and chronicles born from the experience of silence.</span>
+                    </p>
+                    <button class="zen-btn" onclick="showSection('murmures')">
+                        <span class="fr">Écouter les contes</span>
+                        <span class="en" style="display:none;">Listen to the tales</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+        <section id="sage" class="section">
             <div id="particles-container"></div>
 
            <div id="chat-container" style="width: 100%; display: flex; justify-content: center;">
@@ -544,6 +626,7 @@
     </script>
 </body>
 </html>
+
 
 
 

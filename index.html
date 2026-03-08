@@ -131,24 +131,34 @@
         </section>
 
         <section id="bibliotheque" class="section">
-            <div class="teaching-article parchment-text" style="text-align: center;">
-                <h2 style="margin-bottom: 30px; border:none;">
-                    <span class="fr">Les Manuscrits à Venir</span>
-                    <span class="en" style="display:none;">Upcoming Manuscripts</span>
+            <div class="creatif-header" style="text-align: center; margin-bottom: 40px;">
+                <h2 style="font-size: 2.4rem; color: var(--accent-color); border: none; margin-bottom: 10px;">
+                    <span class="fr">La Bibliothèque</span>
+                    <span class="en" style="display:none;">The Library</span>
                 </h2>
-                <p style="font-style: italic; opacity: 0.8;">
-                    <span class="fr">Les ouvrages sont en cours de rédaction dans le silence...</span>
-                    <span class="en" style="display:none;">The works are being written in silence...</span>
+                <p style="font-style: italic; opacity: 0.8; font-size: 1.1rem;">
+                    <span class="fr">Les fondations, les mots et les réponses pour guider votre pratique.</span>
+                    <span class="en" style="display:none;">The foundations, words, and answers to guide your practice.</span>
                 </p>
-                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px;">
-                    <div style="width: 150px; height: 220px; border: 2px dashed var(--accent-color); border-radius: 5px; display: flex; align-items: center; justify-content: center; opacity: 0.5;">
-                        <span>Tome I</span>
-                    </div>
-                    <div style="width: 150px; height: 220px; border: 2px dashed var(--accent-color); border-radius: 5px; display: flex; align-items: center; justify-content: center; opacity: 0.3;">
-                        <span>Tome II</span>
-                    </div>
-                </div>
             </div>
+
+            <h3 style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin: 40px 0 20px;">
+                <span class="fr">I. La Cartographie de l'Éveil</span>
+                <span class="en" style="display:none;">I. The Cartography of Awakening</span>
+            </h3>
+            <div id="biblio-cartographie" style="max-width: 800px; margin: 0 auto;"></div>
+
+            <h3 style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin: 60px 0 20px; border-top: 1px dashed var(--border-color); padding-top: 30px;">
+                <span class="fr">II. Le Lexique du Gardien</span>
+                <span class="en" style="display:none;">II. The Guardian's Lexicon</span>
+            </h3>
+            <div id="biblio-lexique" class="creatif-grid"></div>
+
+            <h3 style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin: 60px 0 20px; border-top: 1px dashed var(--border-color); padding-top: 30px;">
+                <span class="fr">III. Les Réponses aux Murmures</span>
+                <span class="en" style="display:none;">III. Answers to Whispers</span>
+            </h3>
+            <div id="biblio-faq" style="max-width: 800px; margin: 0 auto; margin-bottom: 50px;"></div>
         </section>
 
         <section id="contact" class="section">
@@ -277,6 +287,7 @@
         renderEnseignements();
         renderMurmures();
         renderParabole();
+        renderBibliotheque();
     }
 
     function toggleTheme() {
@@ -408,6 +419,53 @@
         document.getElementById("parabole-title").innerText = PARABOLE_DATA[currentLang].title;
         document.getElementById("parabole-text").innerHTML = PARABOLE_DATA[currentLang].text + getSignatureHTML();
     }
+        function renderBibliotheque() {
+        const data = BIBLIOTHEQUE_DATABASE[currentLang];
+        
+        // 1. Cartographie
+        const cartoContainer = document.getElementById("biblio-cartographie");
+        cartoContainer.innerHTML = "";
+        data.cartographie.forEach(chapitre => {
+            cartoContainer.innerHTML += `
+                <details class="teaching-accordion">
+                    <summary class="accordion-title">${chapitre.title}</summary>
+                    <div class="accordion-content parchment-text">
+                        ${chapitre.body}
+                        ${getSignatureHTML()}
+                    </div>
+                </details>
+            `;
+        });
+
+        // 2. Lexique
+        const lexiqueContainer = document.getElementById("biblio-lexique");
+        lexiqueContainer.innerHTML = "";
+        data.lexique.forEach(mot => {
+            lexiqueContainer.innerHTML += `
+                <div class="teaching-accordion" style="padding: 20px; text-align: justify; display: flex; flex-direction: column; justify-content: center;">
+                    <h4 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 10px;">${mot.term}</h4>
+                    <p style="font-size: 1rem; opacity: 0.9; line-height: 1.6; margin-bottom: 0;">${mot.definition}</p>
+                </div>
+            `;
+        });
+
+        // 3. FAQ
+        const faqContainer = document.getElementById("biblio-faq");
+        faqContainer.innerHTML = "";
+        data.faq.forEach(item => {
+            let labelGardiens = currentLang === 'fr' ? 'La Réponse du Gardien :' : 'The Guardian\'s Answer:';
+            faqContainer.innerHTML += `
+                <details class="teaching-accordion">
+                    <summary class="accordion-title" style="font-size: 1.3rem;">${item.question}</summary>
+                    <div class="accordion-content parchment-text">
+                        <p style="color: var(--accent-color); font-style: italic;"><strong>${labelGardiens}</strong></p>
+                        <p>${item.answer}</p>
+                        ${getSignatureHTML()}
+                    </div>
+                </details>
+            `;
+        });
+    }
 
     function partagerMurmure(index) {
         const murmure = MURMURES_DATABASE[currentLang][index];
@@ -463,6 +521,7 @@
         renderEnseignements();
         renderMurmures();
         renderParabole();
+        renderBibliotheque();
     };
 
  // --- 🎧 DÉVERROUILLAGE INITIAL DU SON ---
@@ -485,6 +544,7 @@
     </script>
 </body>
 </html>
+
 
 
 

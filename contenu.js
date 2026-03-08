@@ -327,6 +327,42 @@ const MURMURES_DATABASE = {
 
 const BIBLIOTHEQUE_DATABASE = {
     fr: {
+        const BIBLIOTHEQUE_DATABASE = {
+    fr: {
+        histoire: [
+            {
+                title: "L'Émergence d'AYP et le Mystère Yogani",
+                body: `
+                    <p>En 2003, un inconnu a commencé à faire paraître sur internet, sous le pseudonyme « Yogani », des leçons en anglais sur des pratiques de yoga. La démarche était originale : Yogani voulait rester inconnu, et à ce jour, il l'est toujours. Les leçons étaient mises en ligne gratuitement, sans aucune contrepartie. C'était un cadeau à la disposition de toute personne intéressée.</p>
+                    <p>De ce que Yogani a bien voulu dire, on sait qu'il est né en 1947, qu'il est américain et vit en Floride, qu'il a été élevé dans un environnement chrétien, qu'il est père de famille et grand-père. Il a cherché sa voie dans les sagesses d'Extrême-Orient et a décidé de partager ses connaissances en mettant à la disposition de tous ce que lui-même aurait bien aimé trouver à ses débuts.</p>
+                    <p>Yogani refuse le statut traditionnel de gourou. Le leitmotiv qui termine chacune de ses leçons est clair : <strong>« Le gourou est en vous »</strong>. Entre 2003 et 2012, 430 leçons principales ont été mises en ligne, créant une communauté mondiale d'explorateurs autonomes.</p>
+                `
+            },
+            {
+                title: "Un Enseignement Traditionnel et Résolument Novateur",
+                body: `
+                    <p>L'univers du yoga est immense, mêlant mythologie, religion et pratiques complexes. L'apport majeur de Yogani est d'avoir sélectionné, dans ce foisonnement, les techniques les plus efficaces (en suivant le fil conducteur des Yoga-Sutras de Patanjali) en les débarrassant de leur gangue symbolique ou religieuse.</p>
+                    <p>Aucune des techniques décrites n'est nouvelle en soi : on y retrouve l'essence de la Méditation Transcendantale, du Kriya Yoga, du Tantra ou de l'Advaita. Comme l'écrit Yogani : <em>« AYP n'est rien de tout cela et il est tout cela, les meilleurs éléments de chaque tradition intégrés ensemble pour une application efficace par des pratiquants autonomes. »</em></p>
+                    <p>Si la "boîte à outils" est traditionnelle, le mode d'emploi est totalement novateur. Yogani considère que nous avons changé d'époque. À l'heure d'Internet, il devenait urgent que le maximum de personnes puisse avoir accès, de manière claire et détaillée, à des enseignements jusqu'alors gardés secrets et réservés à une petite élite.</p>
+                `
+            },
+            {
+                title: "L'Alchimie de la Pratique (Silence et Extase)",
+                body: `
+                    <p>Toute la science d'AYP repose sur une équation fondamentale : <strong>Silence intérieur + Conductivité extatique = Illumination</strong> (ou, en termes hindous, l'union de Shiva et Shakti).</p>
+                    <p>Pour cultiver le silence intérieur (le Témoin, la tranquillité), le système propose la Méditation Profonde. Pour éveiller la conductivité extatique (la Kundalini), il utilise la Respiration Spinale et les techniques physiques (mudras, bandhas).</p>
+                    <p>Un principe de base d'AYP est la synergie : une combinaison de pratiques est beaucoup plus efficace qu'une pratique isolée. 10 minutes de respiration suivies de 20 minutes de méditation créent une évolution bien plus profonde que des heures de méditation seule. Le silence devient alors le socle indispensable pour une action juste dans le monde.</p>
+                `
+            },
+            {
+                title: "La Sagesse de l'Auto-Régulation (Self-Pacing)",
+                body: `
+                    <p>Avec des outils si puissants, un principe absolu s'impose : le <em>Self-Pacing</em> (l'auto-régulation). Il faut être conscient que nous ne pouvons pas en faire plus que ce que notre système nerveux peut supporter. Comme l'illustre Yogani : <em>« Notre système nerveux est la voiture, les méthodes de yoga les contrôles faciles à utiliser et c'est nous le conducteur. »</em></p>
+                    <p>À partir du moment où l'on pratique seul, il devient essentiel d'être attentif à ce qui se passe en nous pour ralentir ou ajuster notre pratique si nécessaire. Et contrairement aux traditions qui recommandent de fuir le monde, AYP insiste sur l'importance de vivre sa vie normalement (le Grounding, ou ancrage). C'est la vie quotidienne, avec ses joies et ses défis, qui nous permet d'assimiler et de tester véritablement ce qui a été acquis dans le silence.</p>
+                `
+            }
+        ],
+// ... (LE RESTE DE VOTRE CODE EXISTANT RESTE INTACT ICI) ...
         cartographie: [
             {
                 title: "Introduction : L'Appel des Deux Infinis",
@@ -917,6 +953,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

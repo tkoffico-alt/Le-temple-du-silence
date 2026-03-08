@@ -324,6 +324,7 @@ const MURMURES_DATABASE = {
     ]
 };
 // ... Ne touche surtout pas au code qui se trouve en dessous de cette ligne (La Parabole et le cerveau du Sage restent identiques) ...
+
 const BIBLIOTHEQUE_DATABASE = {
     fr: {
         cartographie: [
@@ -916,6 +917,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

@@ -490,6 +490,39 @@ const BIBLIOTHEQUE_DATABASE = {
         ]
     },
     en: {
+        histoire: [
+            {
+                title: "The Emergence of AYP and the Yogani Mystery",
+                body: `
+                    <p>In 2003, an unknown person began publishing yoga practice lessons in English on the internet under the pseudonym "Yogani". The approach was original: Yogani wanted to remain anonymous, and to this day, he still is. The lessons were posted online for free, without any compensation. It was a gift available to anyone interested.</p>
+                    <p>From what Yogani has shared, we know he was born in 1947, is American and lives in Florida, was raised in a Christian environment, and is a father and grandfather. He sought his path in Far Eastern wisdom and decided to share his knowledge by making available to everyone what he himself would have liked to find when he started.</p>
+                    <p>Yogani refuses the traditional status of a guru. The leitmotif that ends each of his lessons is clear: <strong>"The guru is within you"</strong>. Between 2003 and 2012, 430 main lessons were published online, creating a global community of autonomous explorers.</p>
+                `
+            },
+            {
+                title: "A Traditional and Resolutely Innovative Teaching",
+                body: `
+                    <p>The universe of yoga is immense, blending mythology, religion, and complex practices. Yogani's major contribution is having selected, from this abundance, the most effective techniques (following the guiding thread of Patanjali's Yoga Sutras) while stripping them of their symbolic or religious encumbrances.</p>
+                    <p>None of the described techniques are new in themselves: one can find the essence of Transcendental Meditation, Kriya Yoga, Tantra, or Advaita. As Yogani writes: <em>"AYP is none of these and it is all of these, the best elements of each tradition integrated together for effective application by self-directed practitioners."</em></p>
+                    <p>While the "toolbox" is traditional, the instruction manual is entirely innovative. Yogani considers that times have changed. In the internet age, it became urgent that as many people as possible could have clear and detailed access to teachings previously kept secret and reserved for a small elite.</p>
+                `
+            },
+            {
+                title: "The Alchemy of Practice (Silence and Ecstasy)",
+                body: `
+                    <p>The entire science of AYP rests on a fundamental equation: <strong>Inner Silence + Ecstatic Conductivity = Enlightenment</strong> (or, in Hindu terms, the union of Shiva and Shakti).</p>
+                    <p>To cultivate inner silence (the Witness, stillness), the system offers Deep Meditation. To awaken ecstatic conductivity (Kundalini), it uses Spinal Breathing and physical techniques (mudras, bandhas).</p>
+                    <p>A basic principle of AYP is synergy: a combination of practices is much more effective than an isolated practice. 10 minutes of breathing followed by 20 minutes of meditation create a much deeper evolution than hours of meditation alone. Silence then becomes the indispensable foundation for right action in the world.</p>
+                `
+            },
+            {
+                title: "The Wisdom of Self-Pacing",
+                body: `
+                    <p>With such powerful tools, an absolute principle is required: <em>Self-Pacing</em>. We must be aware that we cannot do more than our nervous system can handle. As Yogani illustrates: <em>"Our nervous system is the car, the yoga methods are the easy-to-use controls, and we are the driver."</em></p>
+                    <p>Since we are practicing alone, it becomes essential to be attentive to what is happening within us to slow down or adjust our practice if necessary. And contrary to traditions that recommend fleeing the world, AYP insists on the importance of living life normally (Grounding). It is daily life, with its joys and challenges, that allows us to truly assimilate and test what has been acquired in silence.</p>
+                `
+            }
+        ],
         cartographie: [
             {
                 title: "Introduction: The Call of the Two Infinities",
@@ -953,6 +986,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

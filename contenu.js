@@ -73,7 +73,7 @@ const TEACHINGS_DATABASE = {
             title: "La Respiration Spinale : Le Pont entre la Matière et l'Énergie",
             body: `
                 <h3 style="color: var(--accent-color); margin-top: 10px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">La Mécanique de l'Éveil</h3>
-                <p>L'évolution spirituelle n'est pas un concept philosophique abstrait ni une récompense divine. C'est un processus mécanique, biologique et mesurable. Au cœur de ce processus se trouve votre système nerveux central. Imaginez-le comme un vaste réseau électrique. Au fil des années, les traumatismes, le stress et les habitudes ont créé des "résistances" sur ces câbles, limitant la quantité d'énergie vitale (Prana) qui peut y circuler librement.</p>
+                <p>L'évolution spirituelle n'est pas un concept philosophique abstrait ni une récompense divine. C'est un processus mécanique, biologique et mesurable. Au cœur de ce processus se trouve votre système nerveux central. Imaginez-le comme un vaste réseau électrique. Au fil des années, les traumatismes, le stress et les habitudes ont créé des "résistances" sur ces cables, limitant la quantité d'énergie vitale (Prana) qui peut y circuler librement.</p>
                 <p>La Respiration Spinale est l'outil le plus direct pour nettoyer ce réseau. Ce n'est pas un simple exercice de relaxation pulmonaire, mais une technique d'ingénierie intérieure conçue pour purifier le canal principal de votre corps : <em>la Sushumna</em>, un fil subtil qui traverse le centre de votre colonne vertébrale, du périnée jusqu'au centre du cerveau.</p>
 
                 <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">La Pratique : Le Fil de Lumière</h3>
@@ -90,7 +90,7 @@ const TEACHINGS_DATABASE = {
                 <p>Si vous perdez le fil de votre respiration, ou si vous vous surprenez perdu dans vos pensées, ne vous jugez pas. La libération des pensées est le signe même que le stress quitte votre corps. Revenez simplement à la ligne lumineuse, avec une douceur infinie.</p>
                 <p style="font-style: italic; opacity: 0.9; margin-top: 20px; border-left: 2px solid var(--accent-color); padding-left: 15px;">Pratiquez ce balayage intérieur pendant 5 à 10 minutes avant votre méditation silencieuse. Ce simple mouvement prépare la terre, l'assouplit et l'irrigue, permettant aux graines du silence de germer avec une force inouïe.</p>
             `
-        }, // <--- N'oubliez pas la virgule après la leçon sur la Respiration Spinale !
+        },
         {
             title: "L'Art de l'Auto-Régulation (Self-Pacing)",
             body: `
@@ -199,7 +199,7 @@ const TEACHINGS_DATABASE = {
                 <p>If you lose the thread of your breath, or if you catch yourself lost in thoughts, do not judge yourself. The release of thoughts is the very sign that stress is leaving your body. Simply return to the luminous line, with infinite gentleness.</p>
                 <p style="font-style: italic; opacity: 0.9; margin-top: 20px; border-left: 2px solid var(--accent-color); padding-left: 15px;">Practice this internal sweeping for 5 to 10 minutes before your silent meditation. This simple movement prepares the soil, softens and irrigates it, allowing the seeds of silence to sprout with incredible strength.</p>
             `
-        }, // <--- N'oubliez pas la virgule après la 3ème leçon anglaise !
+        },
         {
             title: "The Art of Self-Regulation (Self-Pacing)",
             body: `
@@ -269,6 +269,34 @@ const MURMURES_DATABASE = {
             imageFile: "bambou-creux.jpg",
             videoFile: "",
             text: "Un pèlerin, épuisé par le tumulte de ses propres pensées, se présenta un jour devant un ancien. « Maître, demanda-t-il, comment puis-je trouver le silence alors que mon esprit est empli de bruits et de désirs ? »<br><br>L'ancien ne répondit pas immédiatement. Il ramassa une tige de bambou sur le sol, la tailla délicatement pour en évider le centre, puis la porta à ses lèvres. Une mélodie d'une pureté bouleversante s'éleva dans l'air du soir.<br><br>Lorsqu'il abaissa l'instrument, l'ancien murmura : « Regarde ce bambou. S'il était plein, il serait lourd et muet. C'est précisément parce qu'il a accepté de se vider, de devenir un simple canal creux, que le souffle de la vie peut chanter à travers lui. »<br><br>Dans notre pratique, le fil subtil de la respiration spinale est ce bambou. Ne cherchez pas à retenir le monde, ni à visualiser quoi que ce soit. Laissez simplement votre attention glisser de la racine jusqu'au front, encore et encore. Devenez ce canal creux, et le silence chantera de lui-même."
+        },
+        {
+            title: "L'Attente de l'Eau Claire",
+            audioFile: "",
+            imageFile: "",
+            videoFile: "",
+            text: "<strong>Le Conte :</strong><br>Un jeune voyageur s'assit un jour au bord d'un ruisseau tumultueux, attendant patiemment. Un vieillard, le voyant immobile depuis l'aube, s'approcha :<br>— <em>Que fais-tu là, les yeux fixés sur l'écume ?</em><br>— <em>J'attends que le courant s'arrête et que l'eau devienne parfaitement calme pour pouvoir traverser sans me salir,</em> répondit le jeune homme avec sérieux.<br>Le vieillard sourit avec une infinie tendresse.<br>— <em>Si tu attends que l'eau s'arrête, tu mourras sur cette rive. Le propre de la rivière est de couler. Apprends à marcher dans le tumulte, et la boue lavera tes pieds.</em><br><br><strong>L'Alchimie cachée :</strong><br>Ce conte illustre le plus grand malentendu de la méditation. Le chercheur s'assoit, ferme les yeux, et attend que ses pensées s'arrêtent pour « commencer » à méditer. Mais l'esprit est conçu pour secréter des pensées, tout comme la rivière est conçue pour couler. Le mantra n'est pas un barrage pour arrêter l'eau ; c'est le pont qui vous permet de traverser <em>pendant</em> que l'eau coule. Laissez le bruit exister, et traversez."
+        },
+        {
+            title: "Le Foyer et l'Incendie",
+            audioFile: "",
+            imageFile: "",
+            videoFile: "",
+            text: "<strong>Le Conte :</strong><br>Au cœur de l'hiver, un novice préparait son repas sur le feu. Affamé et pressé par le froid, il se mit à souffler sur les braises avec une force désespérée, empilant branche sur branche pour forcer la flamme à grandir. Le feu, rendu furieux par tant d'air, s'éleva brusquement, calcina son repas et mit le feu au toit de sa hutte.<br>Son maître, observant les cendres fumantes, posa une main sur son épaule : <br>— <em>L'énergie a fait exactement ce que tu lui as demandé. Mais souviens-toi : un feu doux cuit le repas de l'alchimiste. Un feu forcé détruit sa maison.</em><br><br><strong>L'Alchimie cachée :</strong><br>C'est la loi absolue de l'Auto-Régulation (<em>Self-Pacing</em>). La Respiration Spinale attise la foudre douce de la Kundalini. L'ego, pressé de connaître l'illumination, veut toujours souffler plus fort, pratiquer plus longtemps, forcer les verrous physiques. Mais le système nerveux est une maison de bois. Si la chaleur devient une tension (irritabilité, insomnie), il faut cesser d'attiser le feu, et laisser la douce chaleur cuire lentement nos vieilles mémoires."
+        },
+        {
+            title: "Les Paradoxes du Chemin",
+            audioFile: "",
+            imageFile: "",
+            videoFile: "",
+            text: "Ces phrases courtes sont conçues pour briser les idées reçues de la spiritualité classique.<br><br><ul style='line-height: 1.8; margin-bottom: 20px;'><li style='margin-bottom: 10px;'><strong>Sur l'Ego :</strong> Celui qui déclare la guerre à son ego lui donne la solidité d'un roc. Celui qui l'observe avec la tendresse du Témoin le voit fondre comme de la neige au soleil.</li><li style='margin-bottom: 10px;'><strong>Sur le Silence :</strong> Le véritable silence intérieur n'est pas l'absence de bruit. C'est l'espace vaste et majestueux qui permet au vacarme du monde d'exister sans nous déranger.</li><li style='margin-bottom: 10px;'><strong>Sur l'Effort :</strong> Tant que vous cherchez l'éveil avec l'acharnement d'un conquérant, il vous fuira. L'effort perpétue la tension ; c'est dans l'abandon que la porte s'ouvre.</li><li style='margin-bottom: 10px;'><strong>Sur la Purification :</strong> Ne soyez pas surpris si de vieilles colères refont surface alors que vous pratiquez la paix. La vase ne remonte du fond que lorsque l'eau commence enfin à s'éclaircir.</li></ul>"
+        },
+        {
+            title: "Les Échos de la Matière (Ancrage)",
+            audioFile: "",
+            imageFile: "",
+            videoFile: "",
+            text: "Ces pensées visent à sacraliser l'acte profane. Elles rappellent l'importance vitale du <em>Grounding</em> (l'ancrage) pour stabiliser le système nerveux.<br><br><ul style='line-height: 1.8; margin-bottom: 20px;'><li style='margin-bottom: 10px;'><strong>Le Paratonnerre :</strong> Sentir le froid du sol sous ses pieds nus n'est pas une distraction pour l'esprit. C'est le paratonnerre indispensable qui protège le système nerveux de ses propres foudres.</li><li style='margin-bottom: 10px;'><strong>La Digestion Sacrée :</strong> Un repas chaud, dense et lourd, mangé en pleine conscience lors d'une tempête émotionnelle, ancre l'âme bien plus efficacement qu'une heure de lévitation imaginaire.</li><li style='margin-bottom: 10px;'><strong>L'Action Sereine (Samyama) :</strong> Laver une assiette ou balayer une chambre depuis l'espace du Témoin silencieux est la plus haute expression du yoga. Le sacré ne réside pas dans la noblesse de l'acte, mais dans l'espace depuis lequel il est accompli.</li><li style='margin-bottom: 10px;'><strong>La Médecine du Repos :</strong> S'endormir par épuisement sur son coussin de méditation n'est pas un échec spirituel. C'est le corps qui réclame la plus ancienne des médecines. Acceptez le sommeil ; le repos est le premier des miracles.</li></ul>"
         }
     ],
     en: [
@@ -320,10 +348,98 @@ const MURMURES_DATABASE = {
             imageFile: "bambou-creux.jpg",
             videoFile: "",
             text: "A pilgrim, exhausted by the tumult of his own thoughts, one day presented himself before an elder. 'Master,' he asked, 'how can I find silence when my mind is filled with noise and desires?'<br><br>The elder did not answer immediately. He picked up a bamboo stalk from the ground, carefully carved it to hollow out the center, and then brought it to his lips. A melody of breathtaking purity rose into the evening air.<br><br>When he lowered the instrument, the elder whispered: 'Look at this bamboo. If it were full, it would be heavy and mute. It is precisely because it agreed to empty itself, to become a simple hollow channel, that the breath of life can sing through it.'<br><br>In our practice, the subtle thread of spinal breathing is this bamboo. Do not try to hold onto the world, nor visualize anything. Simply let your attention glide from the root to the brow, over and over again. Become this hollow channel, and silence will sing of its own accord."
+        },
+        {
+            title: "Waiting for Clear Water",
+            audioFile: "",
+            imageFile: "",
+            videoFile: "",
+            text: "<strong>The Tale:</strong><br>A young traveler sat one day by the edge of a tumultuous stream, waiting patiently. An old man, seeing him motionless since dawn, approached:<br>— <em>\"What are you doing there, your eyes fixed on the foam?\"</em><br>— <em>\"I am waiting for the current to stop and for the water to become perfectly calm so I can cross without getting dirty,\"</em> the young man answered seriously.<br>The old man smiled with infinite tenderness.<br>— <em>\"If you wait for the water to stop, you will die on this shore. The nature of the river is to flow. Learn to walk in the tumult, and the mud will wash your feet.\"</em><br><br><strong>The Hidden Alchemy:</strong><br>This tale illustrates the greatest misunderstanding of meditation. The seeker sits, closes their eyes, and waits for their thoughts to stop in order to \"begin\" meditating. But the mind is designed to secrete thoughts, just as the river is designed to flow. The mantra is not a dam to stop the water; it is the bridge that allows you to cross <em>while</em> the water flows. Let the noise exist, and cross over."
+        },
+        {
+            title: "The Hearth and the Fire",
+            audioFile: "",
+            imageFile: "",
+            videoFile: "",
+            text: "<strong>The Tale:</strong><br>In the dead of winter, a novice was preparing his meal over the fire. Hungry and pressed by the cold, he began to blow on the embers with desperate force, piling branch upon branch to force the flame to grow. The fire, infuriated by so much air, rose abruptly, charred his meal, and set fire to the roof of his hut.<br>His master, observing the smoking ashes, placed a hand on his shoulder:<br>— <em>\"The energy did exactly what you asked of it. But remember: a gentle fire cooks the alchemist's meal. A forced fire destroys his house.\"</em><br><br><strong>The Hidden Alchemy:</strong><br>This is the absolute law of Self-Pacing. Spinal Breathing fans the gentle lightning of Kundalini. The ego, in a hurry to experience enlightenment, always wants to blow harder, practice longer, and force the physical locks. But the nervous system is a wooden house. If the heat becomes tension (irritability, insomnia), one must stop fanning the fire, and let the gentle warmth slowly cook our old memories."
+        },
+        {
+            title: "The Paradoxes of the Path",
+            audioFile: "",
+            imageFile: "",
+            videoFile: "",
+            text: "These short phrases are designed to shatter the preconceived ideas of classical spirituality.<br><br><ul style='line-height: 1.8; margin-bottom: 20px;'><li style='margin-bottom: 10px;'><strong>On the Ego:</strong> He who declares war on his ego gives it the solidity of a rock. He who observes it with the tenderness of the Witness sees it melt like snow in the sun.</li><li style='margin-bottom: 10px;'><strong>On Silence:</strong> True inner silence is not the absence of noise. It is the vast and majestic space that allows the din of the world to exist without disturbing us.</li><li style='margin-bottom: 10px;'><strong>On Effort:</strong> As long as you seek awakening with the relentlessness of a conqueror, it will elude you. Effort perpetuates tension; it is in surrender that the door opens.</li><li style='margin-bottom: 10px;'><strong>On Purification:</strong> Do not be surprised if old angers resurface while you are practicing peace. The mud only rises from the bottom when the water finally begins to clear.</li></ul>"
+        },
+        {
+            title: "The Echoes of Matter (Grounding)",
+            audioFile: "",
+            imageFile: "",
+            videoFile: "",
+            text: "These thoughts aim to sacralize the profane act and remind us of the vital importance of Grounding.<br><br><ul style='line-height: 1.8; margin-bottom: 20px;'><li style='margin-bottom: 10px;'><strong>The Lightning Rod:</strong> Feeling the cold ground beneath your bare feet is not a distraction for the mind. It is the indispensable lightning rod that protects the nervous system from its own lightning strikes.</li><li style='margin-bottom: 10px;'><strong>Sacred Digestion:</strong> A hot, dense, and heavy meal, eaten mindfully during an emotional storm, grounds the soul much more effectively than an hour of imaginary levitation.</li><li style='margin-bottom: 10px;'><strong>Serene Action (Samyama):</strong> Washing a plate or sweeping a room from the space of the silent Witness is the highest expression of yoga. The sacred does not lie in the nobility of the act, but in the space from which it is accomplished.</li><li style='margin-bottom: 10px;'><strong>The Medicine of Rest:</strong> Falling asleep from exhaustion on your meditation cushion is not a spiritual failure. It is the body claiming the oldest of medicines. Accept sleep; rest is the first of miracles.</li></ul>"
         }
     ]
 };
-// ... Ne touche surtout pas au code qui se trouve en dessous de cette ligne (La Parabole et le cerveau du Sage restent identiques) ...
+
+const PARABOLE_DATA = {
+    fr: {
+        title: "Au-delà de la Rivière — Une Parabole sur l’Appel Intérieur",
+        text: `
+            <p>Il y a des lieux où personne n’ose plus aller. Des frontières invisibles, marquées non par des murs, mais par des récits anciens — des récits de peur.</p>
+            <p>Dans un village reculé, au cœur de la savane, vivait un jeune homme nommé Kofi. Il n’avait ni la stature des guerriers, ni le prestige des anciens. Mais il portait en lui une question qui ne le quittait jamais : que se cache-t-il au-delà de ce que l’on croit savoir ?</p>
+            <p>Un jour, cette question prit chair.</p>
+            <p>La fille du chef, Adwoa, fut frappée d’un mal mystérieux. Les prières, les soins, rien n’y faisait. Le guérisseur consulta les oracles, qui désignèrent un remède oublié : une plante rare, cachée au plus profond de la forêt, de l’autre côté de la rivière sacrée. Mais cette forêt, disaient les anciens, était hantée. Un territoire d’esprits dévoreurs d’âmes, que l’homme sage ne franchit pas.</p>
+            <p>Le chef promit richesses et honneurs à quiconque oserait s’y aventurer. Les plus braves reculèrent. La peur, nourrie de récits, était plus forte que la promesse d’or.</p>
+            <p>Tous refusèrent.<br>Tous, sauf Kofi.</p>
+            <p>Il ne demandait rien. Ni gloire, ni récompense. Ce qu’il entendait en lui, c’était ce silence profond, qui ne marchande pas, mais qui dit simplement : avance.</p>
+            <p>Il prit une gourde d’eau, une amulette offerte par sa mère, et marcha vers la rivière. Là, il s’arrêta. L’eau était limpide, mais à ses yeux, elle était autre chose : une frontière symbolique. La limite entre le connu et l’inconnu.</p>
+            <p>Il ferma les yeux. Non pour fuir, mais pour écouter plus loin que ses pensées. Puis il traversa.</p>
+            <p>De l’autre côté, la forêt l’enveloppa. Mais il n’y trouva ni esprits, ni cris. Seulement une présence. La terre sous ses pas était dense, vivante. Le vent chantait dans les feuillages. Ce qui devait être un territoire d’ombres était en réalité un sanctuaire oublié.</p>
+            <p>Au cœur de cette paix, Kofi rencontra un vieil homme, assis au pied d’un arbre immense. Sa peau semblait sculptée par le temps. Ses yeux portaient la lumière des nuits sans nuages.</p>
+            <p>— Pourquoi viens-tu, marcheur ? demanda-t-il.</p>
+            <p>Kofi raconta son histoire.</p>
+            <p>Le sage écouta, puis montra une plante discrète à ses pieds.<br>
+            — Voici ce que tu cherches. Mais souviens-toi : ce n’est pas la forêt qui dévore les âmes. Ce sont les désirs non maîtrisés des hommes. Les anciens ont semé des récits de peur pour protéger ce lieu sacré de la convoitise. Mais ceux qui viennent avec un cœur pur n’y trouvent rien d’autre que ce qu’ils portent déjà en eux.</p>
+            <p>Kofi prit la plante, remercia et repartit. Lorsqu’il franchit à nouveau la rivière, un silence épais s’abattit sur le village. Adwoa fut guérie. Les anciens, d’un regard fuyant, comprirent ce qu’ils avaient oublié.</p>
+            <p>Ce jour-là, le village reçut une vérité simple, qui passa de bouche en bouche, mais dont la compréhension appartient à ceux qui osent la vivre :</p>
+            <blockquote style="font-style: italic; border-left: 2px solid var(--accent-color); padding-left: 15px; margin: 25px 0; opacity: 0.9;">
+            “Les oreilles entendent les peurs des autres, mais seuls les yeux du cœur voient la vérité.”
+            </blockquote>
+            <p>Chacun d’entre nous est appelé, un jour ou l’autre, à s’approcher de cette rivière intérieure. À franchir la frontière des peurs héritées. À entrer dans cette forêt qui, derrière les ombres projetées par notre mental, cache un espace de paix inaltérable.</p>
+            <p>La véritable initiation commence là.</p>
+            <p>La forêt n’a jamais été dangereuse. Ce sont nos histoires qui l’ont rendue hostile. Ce que nous cherchons ne se trouve pas ailleurs. Il est en nous, depuis toujours, mais voilé par le tumulte de nos désirs et de nos résistances.</p>
+            <p>Traverse. Écoute. Pratique.<br>Le reste suivra.</p>
+        `
+    },
+    en: {
+        title: "Beyond the River — A Parable on the Inner Call",
+        text: `
+            <p>There are places where no one dares to go anymore. Invisible borders, marked not by walls, but by ancient tales — tales of fear.</p>
+            <p>In a remote village, in the heart of the savanna, lived a young man named Kofi. He had neither the stature of warriors nor the prestige of the elders. But he carried within him a question that never left him: what lies beyond what we think we know?</p>
+            <p>One day, this question took flesh.</p>
+            <p>The chief's daughter, Adwoa, was struck by a mysterious illness. Prayers, treatments, nothing worked. The healer consulted the oracles, who pointed to a forgotten remedy: a rare plant, hidden deep within the forest, on the other side of the sacred river. But this forest, the elders said, was haunted. A territory of soul-devouring spirits, which a wise man does not cross.</p>
+            <p>The chief promised riches and honors to anyone who dared to venture there. The bravest stepped back. Fear, fed by tales, was stronger than the promise of gold.</p>
+            <p>All refused.<br>All, except Kofi.</p>
+            <p>He asked for nothing. Neither glory nor reward. What he heard within himself was that deep silence, which does not bargain, but simply says: go forward.</p>
+            <p>He took a gourd of water, an amulet offered by his mother, and walked towards the river. There, he stopped. The water was clear, but in his eyes, it was something else: a symbolic border. The limit between the known and the unknown.</p>
+            <p>He closed his eyes. Not to flee, but to listen further than his thoughts. Then he crossed.</p>
+            <p>On the other side, the forest enveloped him. But he found no spirits, no screams. Only a presence. The earth beneath his feet was dense, alive. The wind sang in the leaves. What was supposed to be a territory of shadows was in reality a forgotten sanctuary.</p>
+            <p>In the heart of this peace, Kofi met an old man, sitting at the foot of an immense tree. His skin seemed sculpted by time. His eyes carried the light of cloudless nights.</p>
+            <p>— "Why do you come, walker?" he asked.</p>
+            <p>Kofi told his story.</p>
+            <p>The sage listened, then pointed to a discreet plant at his feet.<br>
+            — "Here is what you seek. But remember: it is not the forest that devours souls. It is the unmastered desires of men. The elders sowed tales of fear to protect this sacred place from greed. But those who come with a pure heart find nothing else there but what they already carry within them."</p>
+            <p>Kofi took the plant, gave thanks, and left. When he crossed the river again, a thick silence fell upon the village. Adwoa was healed. The elders, with evasive eyes, understood what they had forgotten.</p>
+            <p>That day, the village received a simple truth, which passed from mouth to mouth, but whose understanding belongs to those who dare to live it:</p>
+            <blockquote style="font-style: italic; border-left: 2px solid var(--accent-color); padding-left: 15px; margin: 25px 0; opacity: 0.9;">
+            “Ears hear the fears of others, but only the eyes of the heart see the truth.”
+            </blockquote>
+            <p>Each of us is called, one day or another, to approach this inner river. To cross the border of inherited fears. To enter this forest which, behind the shadows cast by our mind, hides a space of unalterable peace.</p>
+            <p>True initiation begins there.</p>
+            <p>The forest was never dangerous. It is our stories that made it hostile. What we seek is not found elsewhere. It has been within us all along, but veiled by the tumult of our desires and our resistances.</p>
+            <p>Cross. Listen. Practice.<br>The rest will follow.</p>
+        `
+    }
+};
 
 const BIBLIOTHEQUE_DATABASE = {
     fr: {
@@ -647,66 +763,7 @@ const BIBLIOTHEQUE_DATABASE = {
         ]
     }
 };
-const PARABOLE_DATA = {
-    fr: {
-        title: "Au-delà de la Rivière — Une Parabole sur l’Appel Intérieur",
-        text: `
-            <p>Il y a des lieux où personne n’ose plus aller. Des frontières invisibles, marquées non par des murs, mais par des récits anciens — des récits de peur.</p>
-            <p>Dans un village reculé, au cœur de la savane, vivait un jeune homme nommé Kofi. Il n’avait ni la stature des guerriers, ni le prestige des anciens. Mais il portait en lui une question qui ne le quittait jamais : que se cache-t-il au-delà de ce que l’on croit savoir ?</p>
-            <p>Un jour, cette question prit chair.</p>
-            <p>La fille du chef, Adwoa, fut frappée d’un mal mystérieux. Les prières, les soins, rien n’y faisait. Le guérisseur consulta les oracles, qui désignèrent un remède oublié : une plante rare, cachée au plus profond de la forêt, de l’autre côté de la rivière sacrée. Mais cette forêt, disaient les anciens, était hantée. Un territoire d’esprits dévoreurs d’âmes, que l’homme sage ne franchit pas.</p>
-            <p>Le chef promit richesses et honneurs à quiconque oserait s’y aventurer. Les plus braves reculèrent. La peur, nourrie de récits, était plus forte que la promesse d’or.</p>
-            <p>Tous refusèrent.<br>Tous, sauf Kofi.</p>
-            <p>Il ne demandait rien. Ni gloire, ni récompense. Ce qu’il entendait en lui, c’était ce silence profond, qui ne marchande pas, mais qui dit simplement : avance.</p>
-            <p>Il prit une gourde d’eau, une amulette offerte par sa mère, et marcha vers la rivière. Là, il s’arrêta. L’eau était limpide, mais à ses yeux, elle était autre chose : une frontière symbolique. La limite entre le connu et l’inconnu.</p>
-            <p>Il ferma les yeux. Non pour fuir, mais pour écouter plus loin que ses pensées. Puis il traversa.</p>
-            <p>De l’autre côté, la forêt l’enveloppa. Mais il n’y trouva ni esprits, ni cris. Seulement une présence. La terre sous ses pas était dense, vivante. Le vent chantait dans les feuillages. Ce qui devait être un territoire d’ombres était en réalité un sanctuaire oublié.</p>
-            <p>Au cœur de cette paix, Kofi rencontra un vieil homme, assis au pied d’un arbre immense. Sa peau semblait sculptée par le temps. Ses yeux portaient la lumière des nuits sans nuages.</p>
-            <p>— Pourquoi viens-tu, marcheur ? demanda-t-il.</p>
-            <p>Kofi raconta son histoire.</p>
-            <p>Le sage écouta, puis montra une plante discrète à ses pieds.<br>
-            — Voici ce que tu cherches. Mais souviens-toi : ce n’est pas la forêt qui dévore les âmes. Ce sont les désirs non maîtrisés des hommes. Les anciens ont semé des récits de peur pour protéger ce lieu sacré de la convoitise. Mais ceux qui viennent avec un cœur pur n’y trouvent rien d’autre que ce qu’ils portent déjà en eux.</p>
-            <p>Kofi prit la plante, remercia et repartit. Lorsqu’il franchit à nouveau la rivière, un silence épais s’abattit sur le village. Adwoa fut guérie. Les anciens, d’un regard fuyant, comprirent ce qu’ils avaient oublié.</p>
-            <p>Ce jour-là, le village reçut une vérité simple, qui passa de bouche en bouche, mais dont la compréhension appartient à ceux qui osent la vivre :</p>
-            <blockquote style="font-style: italic; border-left: 2px solid var(--accent-color); padding-left: 15px; margin: 25px 0; opacity: 0.9;">
-            “Les oreilles entendent les peurs des autres, mais seuls les yeux du cœur voient la vérité.”
-            </blockquote>
-            <p>Chacun d’entre nous est appelé, un jour ou l’autre, à s’approcher de cette rivière intérieure. À franchir la frontière des peurs héritées. À entrer dans cette forêt qui, derrière les ombres projetées par notre mental, cache un espace de paix inaltérable.</p>
-            <p>La véritable initiation commence là.</p>
-            <p>La forêt n’a jamais été dangereuse. Ce sont nos histoires qui l’ont rendue hostile. Ce que nous cherchons ne se trouve pas ailleurs. Il est en nous, depuis toujours, mais voilé par le tumulte de nos désirs et de nos résistances.</p>
-            <p>Traverse. Écoute. Pratique.<br>Le reste suivra.</p>
-        `
-    },
-    en: {
-        title: "Beyond the River — A Parable on the Inner Call",
-        text: `
-            <p>There are places where no one dares to go anymore. Invisible borders, marked not by walls, but by ancient tales — tales of fear.</p>
-            <p>In a remote village, in the heart of the savanna, lived a young man named Kofi. He had neither the stature of warriors nor the prestige of the elders. But he carried within him a question that never left him: what lies beyond what we think we know?</p>
-            <p>One day, this question took flesh.</p>
-            <p>The chief's daughter, Adwoa, was struck by a mysterious illness. Prayers, treatments, nothing worked. The healer consulted the oracles, who pointed to a forgotten remedy: a rare plant, hidden deep within the forest, on the other side of the sacred river. But this forest, the elders said, was haunted. A territory of soul-devouring spirits, which a wise man does not cross.</p>
-            <p>The chief promised riches and honors to anyone who dared to venture there. The bravest stepped back. Fear, fed by tales, was stronger than the promise of gold.</p>
-            <p>All refused.<br>All, except Kofi.</p>
-            <p>He asked for nothing. Neither glory nor reward. What he heard within himself was that deep silence, which does not bargain, but simply says: go forward.</p>
-            <p>He took a gourd of water, an amulet offered by his mother, and walked towards the river. There, he stopped. The water was clear, but in his eyes, it was something else: a symbolic border. The limit between the known and the unknown.</p>
-            <p>He closed his eyes. Not to flee, but to listen further than his thoughts. Then he crossed.</p>
-            <p>On the other side, the forest enveloped him. But he found no spirits, no screams. Only a presence. The earth beneath his feet was dense, alive. The wind sang in the leaves. What was supposed to be a territory of shadows was in reality a forgotten sanctuary.</p>
-            <p>In the heart of this peace, Kofi met an old man, sitting at the foot of an immense tree. His skin seemed sculpted by time. His eyes carried the light of cloudless nights.</p>
-            <p>— "Why do you come, walker?" he asked.</p>
-            <p>Kofi told his story.</p>
-            <p>The sage listened, then pointed to a discreet plant at his feet.<br>
-            — "Here is what you seek. But remember: it is not the forest that devours souls. It is the unmastered desires of men. The elders sowed tales of fear to protect this sacred place from greed. But those who come with a pure heart find nothing else there but what they already carry within them."</p>
-            <p>Kofi took the plant, gave thanks, and left. When he crossed the river again, a thick silence fell upon the village. Adwoa was healed. The elders, with evasive eyes, understood what they had forgotten.</p>
-            <p>That day, the village received a simple truth, which passed from mouth to mouth, but whose understanding belongs to those who dare to live it:</p>
-            <blockquote style="font-style: italic; border-left: 2px solid var(--accent-color); padding-left: 15px; margin: 25px 0; opacity: 0.9;">
-            “Ears hear the fears of others, but only the eyes of the heart see the truth.”
-            </blockquote>
-            <p>Each of us is called, one day or another, to approach this inner river. To cross the border of inherited fears. To enter this forest which, behind the shadows cast by our mind, hides a space of unalterable peace.</p>
-            <p>True initiation begins there.</p>
-            <p>The forest was never dangerous. It is our stories that made it hostile. What we seek is not found elsewhere. It has been within us all along, but veiled by the tumult of our desires and our resistances.</p>
-            <p>Cross. Listen. Practice.<br>The rest will follow.</p>
-        `
-    }
-};
+
 const sageBrain = {
     fr: {
         yoga_definition: {
@@ -740,7 +797,7 @@ const sageBrain = {
             pacing: ["Fais ces allers-retours confortablement pendant 5 à 10 minutes. Ne force jamais. Si tu manques de souffle, respire normalement un instant. C'est le confort qui crée l'ouverture des nerfs, pas l'effort."]
         },
         tuto_bandhas: {
-            core: ["Les Bandhas et Mudras sont des verrous et sceaux physiques qui stimulent mécaniquement le flux d'énergie (prana) dans le système nerveux.", "Mulabandha (contraction douce du périnée) et Asvini Mudra (contraction du sphincter) agissent comme une pompe pour pousser l'énergie vers le haut de la colonne."],
+            core: ["Les Bandhas et Mudras sont des verrous et sceaux physiques qui stimulent mécaniquement le flux d'énergie (prana) dans le système nerveux.", "Mulabandha (contraction douce du périnée) et Asvini Mudra (contraction du sphincter) act as a pump to push energy up the spine."],
             science: ["Ces micro-contractions stimulent les terminaisons du nerf vague à la base de la colonne, créant une boucle de rétroaction extatique avec le cerveau.", "On ne force jamais ces verrous. Ils doivent devenir une douce habitude accompagnant la respiration spinale."],
             pacing: ["Introduis ces pratiques très progressivement, plusieurs mois après avoir stabilisé ta méditation et ta respiration. Si l'énergie devient trop erratique, relâche immédiatement toutes les contractions."]
         },
@@ -983,12 +1040,3 @@ const sageBrain = {
         }
     }
 };
-
-
-
-
-
-
-
-
-

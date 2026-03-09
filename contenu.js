@@ -223,163 +223,178 @@ const MURMURES_DATABASE = {
     fr: [
         {
             title: "Le Maître et l'Eau Boueuse",
-            audioFile: "",
-            imageFile: "",
-            videoFile: "",
+            audioFile: "", imageFile: "", videoFile: "",
             text: "<strong>Le Conte :</strong><br>Un jeune chercheur, épuisé par le tumulte de ses pensées, vint trouver un vieux sage au bord d'un lac. <em>« Maître, mon esprit est un chaos perpétuel. J'ai lutté contre mes démons, forcé ma concentration, mais mes pensées tourbillonnent encore plus fort. Comment puis-je forcer mon esprit à trouver la paix ? »</em> Le vieux sage ne répondit pas. Il puisa de l'eau boueuse dans un seau et le posa aux pieds du jeune homme. <em>« Rends cette eau claire »</em>, ordonna-t-il. Le jeune homme plongea ses mains pour retirer la boue. L'eau s'agita. Il essaya de lisser la surface. De nouvelles vagues apparurent. Désespéré, il s'arrêta. Le sage sourit, s'assit et attendit. Après quelques minutes d'immobilité, la terre tomba doucement au fond par son propre poids, et l'eau devint d'une pureté cristalline.<br><br><strong>L'Essence :</strong><br><em>La méditation n'est pas l'art de combattre l'esprit, car combattre la pensée crée de nouvelles vagues. Ton système nerveux est cette eau troublée par l'agitation de la vie. Ne plonge pas tes mains dans l'eau pour forcer le calme. Assieds-toi simplement, utilise la douceur de ton mantra, et laisse l'inertie de la boue retomber d'elle-même au fond de ton être. La clarté n'est pas quelque chose que l'on fabrique ; c'est ce qui reste quand on arrête de s'agiter.</em>"
         },
         {
             title: "La Boussole du Silence",
-            audioFile: "",
-            imageFile: "",
-            videoFile: "video_boussole.mp4",
+            audioFile: "", imageFile: "", videoFile: "video_boussole.mp4",
             text: "<strong>Voyageur, ne cherche pas ta voie dans le tumulte de la tempête. Une direction intérieure véritable ne hurle jamais avec l'émotion. L'urgence et la peur ne t'offrent qu'une clarté illusoire qui s'évapore avec le vent. La boussole du Soi se lit dans l'immobilité : la voie juste est celle qui demeure intelligible lorsque ton cœur cesse de s'emballer.</strong><br><br>Quand on doit prendre une décision importante, le problème n’est souvent pas le manque de choix. Ce qui est difficile, c’est de savoir lequel suivre. On réfléchit beaucoup, on écoute les avis des autres, on pèse le pour et le contre… et malgré tout, le flou reste. Alors une question essentielle se pose : sur quoi peut-on vraiment s’appuyer pour avancer ?<br><br>Une direction intérieure fiable ne se reconnaît pas à une forte émotion. L’enthousiasme, la peur ou le sentiment d’urgence peuvent donner l’impression que tout est clair, mais ces états passent vite. Une décision plus juste, elle, reste valable même quand l’émotion retombe. Si l’on y revient calmement, sans se raconter d’histoire, elle continue de sembler cohérente et possible.<br><br>Un bon repère consiste à observer ce que la décision provoque en soi, immédiatement. Pas en termes de plaisir ou de confort, mais de stabilité intérieure. Est-ce que l’on se sent tendu, obligé de se convaincre, de se justifier sans cesse ? Ou bien, malgré les incertitudes, est-ce qu’il y a une forme d’apaisement, comme si l’on savait quoi faire, sans en faire tout un drame ?<br><br>Une vraie direction intérieure n’élimine pas tous les doutes, mais elle calme le brouhaha intérieur. Elle ne pousse pas à demander des avis à l’infini ni à repousser l’action encore et encore. Elle permet de faire un pas concret — parfois très simple — sans avoir ensuite le sentiment de s’être trahi.<br><br>Il est aussi utile de regarder ce que la décision demande concrètement. Si elle repose surtout sur la fuite, l’évitement ou le besoin de paraître, il est probable qu’elle réponde à une peur ou à une pression extérieure. À l’inverse, une direction plus juste demande souvent de la régularité, de la simplicité et une responsabilité personnelle. Rien de spectaculaire, mais quelque chose de solide.<br><br>Enfin, une décision intérieurement alignée n’essaie pas de tout contrôler à l’avance. Elle accepte de ne pas connaître toute la suite du chemin, tout en sachant clairement quelle est la prochaine action à poser. Pas toute la route, seulement le pas suivant.<br><br>En pratique, reconnaître une vraie direction intérieure ne consiste donc pas à attendre une certitude absolue. Il s’agit plutôt de repérer ce qui permet d’agir sans se disperser, sans se crisper et sans se mentir. Quand ces trois éléments sont là, la décision peut être prise, même si l’issue reste ouverte."
         },
         {
             title: "Le Roseau et l'Orage",
-            audioFile: "audio_roseau_fr.mp3", 
-            imageFile: "roseau_sumie.webp",
-            videoFile: "",
+            audioFile: "audio_roseau_fr.mp3", imageFile: "roseau_sumie.webp", videoFile: "",
             text: "Tu t'épuises à bâtir des forteresses. Dans ton effort constant pour te rendre invulnérable, ton corps se crispe et ton souffle se verrouille. Comprends ceci : la véritable force ne réside pas dans l'armure. Elle s'éveille à l'instant même où tu cesses de lutter contre le fait d'être affecté. Laisse l'impact traverser ton système nerveux comme le vent traverse les feuilles."
         },
         {
             title: "Ce qui m’attire vraiment : vrai désir ou envie de fuir ?",
-            audioFile: "audio_desir_fuite_fr.mp3", 
-            imageFile: "",
-            videoFile: "",
+            audioFile: "audio_desir_fuite_fr.mp3", imageFile: "", videoFile: "",
             text: "Quand on a très envie de faire quelque chose, le plus important n'est pas de savoir ce que c'est, mais pourquoi on veut le faire. Il ne s'agit pas de trouver de belles excuses intellectuelles, mais de regarder l'effet concret que cette envie a sur notre vie de tous les jours.<br><br>Un désir sincère (un vrai élan vital) nous donne de l'énergie. Il ne fait pas disparaître nos problèmes, mais il nous rend plus forts pour les affronter. Même si l'activité est difficile, on se sent aligné : on s'éparpille moins, on n'a plus besoin de se trouver des excuses, et on reste concentré sur ce qu'on a à faire.<br><br>Une envie de fuir, au contraire, agit comme un pansement rapide. Elle nous attire parce qu'elle promet de faire baisser le stress tout de suite. Mais on s'en rend compte après coup : nos problèmes n'ont pas bougé, et on se sent vidé de notre énergie. On se met alors à chercher des justifications ou à sauter sur une autre distraction pour tenir le coup.<br><br>Notre rapport au temps est aussi un bon indice. Un vrai désir s'installe dans la durée. On accepte d'avancer doucement, de faire des erreurs et de recommencer. La fuite, elle, est très impatiente : on veut que ça change tout de suite, maintenant, sinon on se lasse et on passe vite à autre chose.<br><br>Un autre signe facile à repérer est notre façon de nous justifier. Quand l'élan est sincère, on n'a pas besoin de se raconter une histoire héroïque. Ça peut même paraître très banal. Quand on fuit, par contre, on se construit souvent tout un scénario pour se convaincre : on se dit que c'est une urgence absolue, qu'on n'a pas le choix, ou que c'est pour la bonne cause.<br><br>Enfin, le meilleur test est celui de la durée. Après quelques semaines ou quelques mois, un vrai désir apporte plus de stabilité dans nos actions, même si tout n'est pas parfait. Une fuite laisse derrière elle plein de projets inachevés, de départs enthousiastes et de brusques arrêts, sans jamais vraiment améliorer notre vie de tous les jours.<br><br>Faire la différence entre les deux n'est donc pas un don magique ou une intuition mystérieuse. C'est juste une question d'observation. Il faut juger nos envies comme on juge un remède : on ne regarde pas les belles promesses sur la boîte, on regarde si cela nous fait vraiment du bien sur le long terme."
         },
         {
             title: "Être touché sans se briser",
-            audioFile: "audio_touche_fr.mp3", 
-            imageFile: "",
-            videoFile: "",
+            audioFile: "audio_touche_fr.mp3", imageFile: "", videoFile: "",
             text: "Pouvoir être touché par les événements sans s'effondrer, c'est laisser l'émotion, la critique ou la tristesse nous traverser sans nous détruire de l'intérieur. Ce n'est pas un don magique. C'est simplement une habitude que l'on développe en prêtant attention à son corps, à sa respiration et à son système nerveux.<br><br>La vie nous bouscule tous les jours. Si on se barricade derrière une armure pour ne plus rien sentir, on devient rigide et on finit souvent par craquer beaucoup plus fort. Accepter que l'on puisse avoir mal sans être anéanti permet de choisir sa réponse, au lieu de réagir de façon impulsive. Recevoir un choc est inévitable ; se briser en mille morceaux ne l'est pas.<br><br>En réalité, notre sensibilité est une force : elle nous aide à ressentir et à nous ajuster au monde. On s'effondre seulement quand on perd notre calme intérieur. Tout l'art consiste à laisser la sensation exister sans lui donner les clés de notre esprit. La sensibilité devient alors un message utile, et non plus une menace qu'il faudrait fuir ou endormir.<br><br>En pratique, comment rester entier quand ça secoue ? D'abord, observez simplement ce qui se passe en vous (une tension, un coup de chaud, une boule au ventre) et acceptez-le sans vous juger. Ensuite, ralentissez votre respiration pour calmer l'emballement de la machine. À partir de ce petit espace de calme, vous pouvez alors agir sans céder à la panique. Cela peut vouloir dire prendre une pause, mettre une limite, ou répondre avec prudence. Enfin, utilisez cette douleur comme un panneau indicateur pour ajuster vos habitudes ou vos relations.<br><br>Cette façon de faire évite deux grands pièges : se complaire dans la souffrance, ou chercher à s'étourdir pour l'ignorer. C'est un entraînement très concret. Il n'y a rien de mystique là-dedans : c'est juste une technique pratique pour rester stable face aux tempêtes.<br><br>Être touché sans se briser n'est donc pas une attitude passive. C'est un choix actif qui s'appuie sur la présence et le souffle. Cela transforme notre fragilité en capacité d'adaptation. On encaisse le choc sans disparaître, et on peut continuer à avancer avec clarté et intégrité."
         },
         {
             title: "Ce que je porte encore sans le savoir",
-            audioFile: "audio_traces_fr.mp3", 
-            imageFile: "",
-            videoFile: "",
+            audioFile: "audio_traces_fr.mp3", imageFile: "", videoFile: "",
             text: "Sans que nous nous en rendions compte, notre corps et notre esprit accumulent des empreintes : une façon de respirer, une posture figée, une réaction émotionnelle qui se répète. Ces traces n'ont rien de mystique. Ce sont de simples habitudes silencieuses qui dirigent nos choix et nos relations. Les voir, ce n'est pas découvrir un fardeau, c'est trouver une boussole pour mieux avancer.<br><br>Elles se cachent partout. Dans cette tension familière au fond de la nuque, dans cette peur qui surgit toujours au même moment, dans nos croyances invisibles. Elles tournent en arrière-plan, comme une musique de fond, dictant nos réactions sans même nous demander notre avis.<br><br>Plus on les répète, plus elles se creusent. Notre corps adore ce qu'il connaît, même si cela nous fait souffrir, simplement parce que cela lui demande moins d'effort. Tant qu'on n'y prête pas attention, ces habitudes commandent dans l'ombre. Mais dès que l'on braque la douce lumière de la conscience sur elles, le sortilège se brise : ce qui était automatique peut enfin être changé.<br><br>En vérité, ces tensions essaient de nous parler. Elles nous montrent où l'énergie est bloquée et quelles vieilles armures nous limitent aujourd'hui. Il ne faut surtout pas se juger ou en faire un drame. Il suffit de les écouter comme on écoute un bon conseil pour réajuster sa vie.<br><br>Pour s'en libérer, des gestes très simples suffisent. Quand l'inconfort monte, trouvez où il se cache dans le corps. Sentez-le, nommez-le, mais ne vous racontez pas toute une histoire dramatique autour. Respirez doucement pour ne pas laisser l'émotion s'enflammer. Puis, un petit pas après l'autre, changez doucement votre posture ou votre réaction. Pas de révolution brutale, juste de la douceur et de la clarté.<br><br>Les fruits de cette patience arrivent doucement, mais sûrement. On devient moins réactif, plus posé. Nos décisions deviennent plus claires, et notre présence au monde s'ancre profondément. Ce n'est pas un feu d'artifice du jour au lendemain, c'est l'art d'un jardinier qui observe la nature faire son œuvre.<br><br>Ce que l'on porte encore sans le savoir n'est pas une fatalité, ni une punition. Ce sont juste de vieilles valises posées là, qui attendent d'être ouvertes. Avec un regard tranquille et un souffle régulier, ces anciens blocages se transforment en sagesse, nous permettant de naviguer dans la vie avec beaucoup plus de légèreté."
         },
         {
             title: "Le Conte du Bambou Creux",
-            audioFile: "",
-            imageFile: "bambou-creux.jpg",
-            videoFile: "",
+            audioFile: "", imageFile: "bambou-creux.jpg", videoFile: "",
             text: "Un pèlerin, épuisé par le tumulte de ses propres pensées, se présenta un jour devant un ancien. « Maître, demanda-t-il, comment puis-je trouver le silence alors que mon esprit est empli de bruits et de désirs ? »<br><br>L'ancien ne répondit pas immédiatement. Il ramassa une tige de bambou sur le sol, la tailla délicatement pour en évider le centre, puis la porta à ses lèvres. Une mélodie d'une pureté bouleversante s'éleva dans l'air du soir.<br><br>Lorsqu'il abaissa l'instrument, l'ancien murmura : « Regarde ce bambou. S'il était plein, il serait lourd et muet. C'est précisément parce qu'il a accepté de se vider, de devenir un simple canal creux, que le souffle de la vie peut chanter à travers lui. »<br><br>Dans notre pratique, le fil subtil de la respiration spinale est ce bambou. Ne cherchez pas à retenir le monde, ni à visualiser quoi que ce soit. Laissez simplement votre attention glisser de la racine jusqu'au front, encore et encore. Devenez ce canal creux, et le silence chantera de lui-même."
         },
         {
             title: "L'Attente de l'Eau Claire",
-            audioFile: "",
-            imageFile: "",
-            videoFile: "",
-            text: "<strong>Le Conte :</strong><br>Un jeune voyageur s'assit un jour au bord d'un ruisseau tumultueux, attendant patiemment. Un vieillard, le voyant immobile depuis l'aube, s'approcha :<br>— <em>Que fais-tu là, les yeux fixés sur l'écume ?</em><br>— <em>J'attends que le courant s'arrête et que l'eau devienne parfaitement calme pour pouvoir traverser sans me salir,</em> répondit le jeune homme avec sérieux.<br>Le vieillard sourit avec une infinie tendresse.<br>— <em>Si tu attends que l'eau s'arrête, tu mourras sur cette rive. Le propre de la rivière est de couler. Apprends à marcher dans le tumulte, et la boue lavera tes pieds.</em><br><br><strong>L'Alchimie cachée :</strong><br>Ce conte illustre le plus grand malentendu de la méditation. Le chercheur s'assoit, ferme les yeux, et attend que ses pensées s'arrêtent pour « commencer » à méditer. Mais l'esprit est conçu pour secréter des pensées, tout comme la rivière est conçue pour couler. Le mantra n'est pas un barrage pour arrêter l'eau ; c'est le pont qui vous permet de traverser <em>pendant</em> que l'eau coule. Laissez le bruit exister, et traversez."
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "<strong>Le Conte :</strong><br>Un jeune voyageur s'assit un jour au bord d'un ruisseau tumultueux, attendant patiemment. Un vieillard, le voyant immobile depuis l'aube, s'approcha :<br>— <em>Que fais-tu là, les yeux fixés sur l'écume ?</em><br>— <em>J'attends que le courant s'arrête et que l'eau devienne parfaitement calme pour pouvoir traverser sans me salir,</em> répondit le jeune homme avec sérieux.<br>Le vieillard sourit avec une infinie tendresse.<br>— <em>Si tu attends que l'eau s'arrête, tu mourras sur cette rive. Le propre de la rivière est de couler. Apprends à marcher dans le tumulte, et la boue lavera tes pieds.</em><br><br><strong>L'Alchimie cachée :</strong><br>Ce conte illustre le plus grand malentendu de la méditation. Le chercheur s'assoit, ferme les yeux, et attend que ses pensées s'arrêtent pour « commencer » à méditer. Mais l'esprit est conçu pour secréter pensées, tout comme la rivière est conçue pour couler. Le mantra n'est pas un barrage pour arrêter l'eau ; c'est le pont qui vous permet de traverser <em>pendant</em> que l'eau coule. Laissez le bruit exister, et traversez."
         },
         {
             title: "Le Foyer et l'Incendie",
-            audioFile: "",
-            imageFile: "",
-            videoFile: "",
+            audioFile: "", imageFile: "", videoFile: "",
             text: "<strong>Le Conte :</strong><br>Au cœur de l'hiver, un novice préparait son repas sur le feu. Affamé et pressé par le froid, il se mit à souffler sur les braises avec une force désespérée, empilant branche sur branche pour forcer la flamme à grandir. Le feu, rendu furieux par tant d'air, s'éleva brusquement, calcina son repas et mit le feu au toit de sa hutte.<br>Son maître, observant les cendres fumantes, posa une main sur son épaule : <br>— <em>L'énergie a fait exactement ce que tu lui as demandé. Mais souviens-toi : un feu doux cuit le repas de l'alchimiste. Un feu forcé détruit sa maison.</em><br><br><strong>L'Alchimie cachée :</strong><br>C'est la loi absolue de l'Auto-Régulation (<em>Self-Pacing</em>). La Respiration Spinale attise la foudre douce de la Kundalini. L'ego, pressé de connaître l'illumination, veut toujours souffler plus fort, pratiquer plus longtemps, forcer les verrous physiques. Mais le système nerveux est une maison de bois. Si la chaleur devient une tension (irritabilité, insomnie), il faut cesser d'attiser le feu, et laisser la douce chaleur cuire lentement nos vieilles mémoires."
         },
         {
-            title: "Les Paradoxes du Chemin",
-            audioFile: "",
-            imageFile: "",
-            videoFile: "",
-            text: "Ces phrases courtes sont conçues pour briser les idées reçues de la spiritualité classique.<br><br><ul style='line-height: 1.8; margin-bottom: 20px;'><li style='margin-bottom: 10px;'><strong>Sur l'Ego :</strong> Celui qui déclare la guerre à son ego lui donne la solidité d'un roc. Celui qui l'observe avec la tendresse du Témoin le voit fondre comme de la neige au soleil.</li><li style='margin-bottom: 10px;'><strong>Sur le Silence :</strong> Le véritable silence intérieur n'est pas l'absence de bruit. C'est l'espace vaste et majestueux qui permet au vacarme du monde d'exister sans nous déranger.</li><li style='margin-bottom: 10px;'><strong>Sur l'Effort :</strong> Tant que vous cherchez l'éveil avec l'acharnement d'un conquérant, il vous fuira. L'effort perpétue la tension ; c'est dans l'abandon que la porte s'ouvre.</li><li style='margin-bottom: 10px;'><strong>Sur la Purification :</strong> Ne soyez pas surpris si de vieilles colères refont surface alors que vous pratiquez la paix. La vase ne remonte du fond que lorsque l'eau commence enfin à s'éclaircir.</li></ul>"
+            title: "Paradoxe : La Guerre de l'Ego",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "Celui qui déclare la guerre à son ego lui donne la solidité d'un roc. Celui qui l'observe avec la tendresse du Témoin le voit fondre comme de la neige au soleil."
         },
         {
-            title: "Les Échos de la Matière (Ancrage)",
-            audioFile: "",
-            imageFile: "",
-            videoFile: "",
-            text: "Ces pensées visent à sacraliser l'acte profane. Elles rappellent l'importance vitale du <em>Grounding</em> (l'ancrage) pour stabiliser le système nerveux.<br><br><ul style='line-height: 1.8; margin-bottom: 20px;'><li style='margin-bottom: 10px;'><strong>Le Paratonnerre :</strong> Sentir le froid du sol sous ses pieds nus n'est pas une distraction pour l'esprit. C'est le paratonnerre indispensable qui protège le système nerveux de ses propres foudres.</li><li style='margin-bottom: 10px;'><strong>La Digestion Sacrée :</strong> Un repas chaud, dense et lourd, mangé en pleine conscience lors d'une tempête émotionnelle, ancre l'âme bien plus efficacement qu'une heure de lévitation imaginaire.</li><li style='margin-bottom: 10px;'><strong>L'Action Sereine (Samyama) :</strong> Laver une assiette ou balayer une chambre depuis l'espace du Témoin silencieux est la plus haute expression du yoga. Le sacré ne réside pas dans la noblesse de l'acte, mais dans l'espace depuis lequel il est accompli.</li><li style='margin-bottom: 10px;'><strong>La Médecine du Repos :</strong> S'endormir par épuisement sur son coussin de méditation n'est pas un échec spirituel. C'est le corps qui réclame la plus ancienne des médecines. Acceptez le sommeil ; le repos est le premier des miracles.</li></ul>"
+            title: "Paradoxe : Le Véritable Silence",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "Le véritable silence intérieur n'est pas l'absence de bruit. C'est l'espace vaste et majestueux qui permet au vacarme du monde d'exister sans nous déranger."
+        },
+        {
+            title: "Paradoxe : L'Illusion de l'Effort",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "Tant que vous cherchez l'éveil avec l'acharnement d'un conquérant, il vous fuira. L'effort perpétue la tension ; c'est dans l'abandon que la porte s'ouvre."
+        },
+        {
+            title: "Paradoxe : La Vase et l'Eau Claire",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "Ne soyez pas surpris si de vieilles colères refont surface alors que vous pratiquez la paix. La vase ne remonte du fond que lorsque l'eau commence enfin à s'éclaircir."
+        },
+        {
+            title: "Écho : Le Paratonnerre",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "Sentir le froid du sol sous ses pieds nus n'est pas une distraction pour l'esprit. C'est le paratonnerre indispensable qui protège le système nerveux de ses propres foudres."
+        },
+        {
+            title: "Écho : La Digestion Sacrée",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "Un repas chaud, dense et lourd, mangé en pleine conscience lors d'une tempête émotionnelle, ancre l'âme bien plus efficacement qu'une heure de lévitation imaginaire."
+        },
+        {
+            title: "Écho : L'Action Sereine",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "Laver une assiette ou balayer une chambre depuis l'espace du Témoin silencieux est la plus haute expression du yoga. Le sacré ne réside pas dans la noblesse de l'acte, mais dans l'espace depuis lequel il est accompli."
+        },
+        {
+            title: "Écho : La Médecine du Repos",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "S'endormir par épuisement sur son coussin de méditation n'est pas un échec spirituel. C'est le corps qui réclame la plus ancienne des médecines. Acceptez le sommeil ; le repos est le premier des miracles."
         }
     ],
     en: [
         {
             title: "The Master and the Muddy Water",
-            audioFile: "",
-            imageFile: "",
-            videoFile: "",
+            audioFile: "", imageFile: "", videoFile: "",
             text: "<strong>The Tale:</strong><br>A young seeker, exhausted by the tumult of his thoughts, came to an old sage by a lake. <em>« Master, my mind is a perpetual chaos. I have fought my demons, forced my concentration, but my thoughts swirl even harder. How can I force my mind to find peace? »</em> The old sage did not answer. He drew muddy water into a bucket and placed it at the young man's feet. <em>« Make this water clear »</em>, he ordered. The young man plunged his hands in to remove the mud. The water became agitated. He tried to smooth the surface. New waves appeared. Desperate, he stopped. The sage smiled, sat down and waited. After a few minutes of stillness, the dirt fell gently to the bottom by its own weight, and the water became crystal clear.<br><br><strong>The Essence:</strong><br><em>Meditation is not the art of fighting the mind, for fighting thought creates new waves. Your nervous system is this water troubled by the agitation of life. Do not plunge your hands into the water to force calm. Simply sit, use the gentleness of your mantra, and let the inertia of the mud fall back to the bottom of your being on its own. Clarity is not something we manufacture; it is what remains when we stop agitating.</em>"
         },
         {
             title: "The Compass of Silence",
-            audioFile: "",
-            imageFile: "",
-            videoFile: "video_boussole.mp4",
+            audioFile: "", imageFile: "", videoFile: "video_boussole.mp4",
             text: "<strong>Traveler, do not seek your path in the tumult of the storm. A true inner direction never howls with emotion. Urgency and fear offer only an illusory clarity that evaporates with the wind. The compass of the Self is read in stillness: the right path is the one that remains intelligible when your heart stops racing.</strong><br><br>When faced with an important decision, the problem is often not a lack of choices. What is difficult is knowing which one to follow. We think a lot, listen to the opinions of others, weigh the pros and cons... and despite everything, the blur remains. So an essential question arises: what can we truly rely on to move forward?<br><br>A reliable inner direction is not recognized by a strong emotion. Enthusiasm, fear, or a sense of urgency can give the impression that everything is clear, but these states pass quickly. A more accurate decision remains valid even when the emotion subsides. If we return to it calmly, without telling ourselves stories, it continues to seem coherent and possible.<br><br>A good benchmark is to observe what the decision provokes within oneself, immediately. Not in terms of pleasure or comfort, but of inner stability. Do we feel tense, obliged to convince ourselves, to justify ourselves constantly? Or, despite the uncertainties, is there a form of appeasement, as if we knew what to do, without making a drama out of it?<br><br>A true inner direction does not eliminate all doubts, but it calms the inner noise. It does not push one to seek endless opinions or to postpone action again and again. It allows taking a concrete step—sometimes very simple—without later feeling a sense of self-betrayal.<br><br>It is also useful to look at what the decision concretely requires. If it relies mostly on flight, avoidance, or the need to keep up appearances, it likely responds to a fear or an external pressure. Conversely, a more accurate direction often requires regularity, simplicity, and personal responsibility. Nothing spectacular, but something solid.<br><br>Finally, an internally aligned decision does not try to control everything in advance. It accepts not knowing the entire rest of the path, while clearly knowing the next action to take. Not the whole road, only the next step.<br><br>In practice, recognizing a true inner direction does not, therefore, consist of waiting for absolute certainty. It is rather about identifying what allows one to act without scattering, without tensing up, and without lying to oneself. When these three elements are present, the decision can be made, even if the outcome remains open."
         },
         {
             title: "The Reed and the Storm",
-            audioFile: "audio_roseau_en.mp3",
-            imageFile: "roseau_sumie.webp",
-            videoFile: "",
+            audioFile: "audio_roseau_en.mp3", imageFile: "roseau_sumie.webp", videoFile: "",
             text: "You exhaust yourself building fortresses. In your constant effort to make yourself invulnerable, your body tenses and your breath locks. Understand this: true strength does not reside in armor. It awakens the very moment you stop fighting the fact of being affected. Let the impact pass through your nervous system like the wind through the leaves."
         },
         {
             title: "What truly attracts me: a genuine desire or an urge to escape?",
-            audioFile: "audio_desir_fuite_en.mp3", 
-            imageFile: "",
-            videoFile: "",
+            audioFile: "audio_desir_fuite_en.mp3", imageFile: "", videoFile: "",
             text: "When we really want to do something, the most important thing isn't knowing what it is, but why we want to do it. It's not about finding beautiful intellectual excuses, but about looking at the concrete effect this desire has on our daily life.<br><br>A sincere desire (a true vital urge) gives us energy. It doesn't make our problems disappear, but it makes us stronger to face them. Even if the activity is difficult, we feel aligned: we scatter less, we no longer need to find excuses, and we stay focused on what needs to be done.<br><br>An urge to escape, on the contrary, acts as a quick band-aid. It attracts us because it promises to lower stress immediately. But we realize it afterward: our problems haven't changed, and we feel drained of our energy. We then start looking for justifications or jumping onto another distraction to keep going.<br><br>Our relationship with time is also a good clue. A true desire settles in over time. We accept moving forward slowly, making mistakes, and starting over. Escaping, however, is very impatient: we want things to change right now, otherwise we get bored and quickly move on to something else.<br><br>Another easy sign to spot is how we justify ourselves. When the urge is sincere, we don't need to tell ourselves a heroic story. It can even seem very mundane. When we are escaping, on the other hand, we often build a whole scenario to convince ourselves: we say it's an absolute emergency, that we have no choice, or that it's for a good cause.<br><br>Finally, the best test is the test of time. After a few weeks or months, a true desire brings more stability to our actions, even if everything isn't perfect. An escape leaves behind plenty of unfinished projects, enthusiastic starts, and sudden stops, without ever truly improving our daily life.<br><br>Telling the difference between the two is therefore not a magical gift or a mysterious intuition. It's just a matter of observation. We must judge our desires like we judge a remedy: we don't look at the beautiful promises on the box, we look at whether it truly does us good in the long run."
         },
         {
             title: "To be touched without breaking",
-            audioFile: "audio_touche_en.mp3", 
-            imageFile: "",
-            videoFile: "",
+            audioFile: "audio_touche_en.mp3", imageFile: "", videoFile: "",
             text: "Being able to be touched by events without falling apart means letting emotion, criticism, or sadness pass through us without destroying us from the inside. It's not a magical gift. It's simply a habit we develop by paying attention to our body, our breath, and our nervous system.<br><br>Life pushes us around every day. If we barricade ourselves behind armor to stop feeling anything, we become rigid and often end up cracking much harder. Accepting that we can be hurt without being ruined allows us to choose our response, rather than reacting impulsively. Taking a hit is inevitable; breaking into a thousand pieces is not.<br><br>In reality, our sensitivity is a strength: it helps us feel and adjust to the world. We only collapse when we lose our inner calm. The whole trick is to let the sensation exist without handing it the keys to our mind. Sensitivity then becomes a useful message, rather than a threat we need to run from or numb.<br><br>Practically speaking, how do we stay whole when things get rough? First, simply observe what is happening inside you (a tension, a flush of heat, a knot in your stomach) and accept it without judging yourself. Next, slow down your breathing to calm the machine's racing. From this little space of calm, you can then act without giving in to panic. This might mean taking a pause, setting a boundary, or responding carefully. Finally, use this pain as a signpost to adjust your habits or relationships.<br><br>This approach avoids two big traps: wallowing in suffering, or trying to numb ourselves to ignore it. It is a very concrete training. There is nothing mystical about it: it's just a practical technique to stay stable in the face of storms.<br><br>To be touched without breaking is therefore not a passive attitude. It is an active choice based on presence and breath. It turns our fragility into adaptability. We take the hit without disappearing, and we can continue to move forward with clarity and integrity."
         },
         {
             title: "What I still carry without knowing it",
-            audioFile: "audio_traces_en.mp3", 
-            imageFile: "",
-            videoFile: "",
+            audioFile: "audio_traces_en.mp3", imageFile: "", videoFile: "",
             text: "Without us realizing it, our body and mind accumulate footprints: a way of breathing, a frozen posture, an emotional reaction that keeps repeating. These traces are not mystical. They are simply silent habits that guide our choices and relationships. Seeing them is not discovering a burden; it is finding a compass to move forward better.<br><br>They hide everywhere. In that familiar tension at the back of the neck, in that fear that always surfaces at the same moment, in our invisible beliefs. They run in the background, like background music, dictating our reactions without even asking our opinion.<br><br>The more we repeat them, the deeper they carve. Our body loves what is familiar, even if it causes us suffering, simply because it requires less effort. As long as we don't pay attention to them, these habits rule in the shadows. But as soon as we shine the gentle light of consciousness upon them, the spell is broken: what was automatic can finally be changed.<br><br>In truth, these tensions are trying to talk to us. They show us where energy is blocked and what old armor is limiting us today. We absolutely must not judge ourselves or make a drama out of it. We simply need to listen to them like we listen to good advice to readjust our lives.<br><br>To free ourselves from them, very simple gestures are enough. When discomfort rises, find where it hides in the body. Feel it, name it, but don't tell yourself a whole dramatic story about it. Breathe gently so as not to let the emotion ignite. Then, one small step at a time, gently change your posture or your reaction. No brutal revolution, just gentleness and clarity.<br><br>The fruits of this patience arrive slowly, but surely. We become less reactive, more settled. Our decisions become clearer, and our presence in the world becomes deeply anchored. It is not an overnight firework display; it is the art of a gardener watching nature do its work.<br><br>What we still carry without knowing it is not a curse, nor a punishment. They are just old suitcases left there, waiting to be opened. With a calm gaze and a steady breath, these old blockages turn into wisdom, allowing us to navigate life with much more lightness."
         },
         {
             title: "The Tale of the Hollow Bamboo",
-            audioFile: "",
-            imageFile: "bambou-creux.jpg",
-            videoFile: "",
+            audioFile: "", imageFile: "bambou-creux.jpg", videoFile: "",
             text: "A pilgrim, exhausted by the tumult of his own thoughts, one day presented himself before an elder. 'Master,' he asked, 'how can I find silence when my mind is filled with noise and desires?'<br><br>The elder did not answer immediately. He picked up a bamboo stalk from the ground, carefully carved it to hollow out the center, and then brought it to his lips. A melody of breathtaking purity rose into the evening air.<br><br>When he lowered the instrument, the elder whispered: 'Look at this bamboo. If it were full, it would be heavy and mute. It is precisely because it agreed to empty itself, to become a simple hollow channel, that the breath of life can sing through it.'<br><br>In our practice, the subtle thread of spinal breathing is this bamboo. Do not try to hold onto the world, nor visualize anything. Simply let your attention glide from the root to the brow, over and over again. Become this hollow channel, and silence will sing of its own accord."
         },
         {
             title: "Waiting for Clear Water",
-            audioFile: "",
-            imageFile: "",
-            videoFile: "",
+            audioFile: "", imageFile: "", videoFile: "",
             text: "<strong>The Tale:</strong><br>A young traveler sat one day by the edge of a tumultuous stream, waiting patiently. An old man, seeing him motionless since dawn, approached:<br>— <em>\"What are you doing there, your eyes fixed on the foam?\"</em><br>— <em>\"I am waiting for the current to stop and for the water to become perfectly calm so I can cross without getting dirty,\"</em> the young man answered seriously.<br>The old man smiled with infinite tenderness.<br>— <em>\"If you wait for the water to stop, you will die on this shore. The nature of the river is to flow. Learn to walk in the tumult, and the mud will wash your feet.\"</em><br><br><strong>The Hidden Alchemy:</strong><br>This tale illustrates the greatest misunderstanding of meditation. The seeker sits, closes their eyes, and waits for their thoughts to stop in order to \"begin\" meditating. But the mind is designed to secrete thoughts, just as the river is designed to flow. The mantra is not a dam to stop the water; it is the bridge that allows you to cross <em>while</em> the water flows. Let the noise exist, and cross over."
         },
         {
             title: "The Hearth and the Fire",
-            audioFile: "",
-            imageFile: "",
-            videoFile: "",
+            audioFile: "", imageFile: "", videoFile: "",
             text: "<strong>The Tale:</strong><br>In the dead of winter, a novice was preparing his meal over the fire. Hungry and pressed by the cold, he began to blow on the embers with desperate force, piling branch upon branch to force the flame to grow. The fire, infuriated by so much air, rose abruptly, charred his meal, and set fire to the roof of his hut.<br>His master, observing the smoking ashes, placed a hand on his shoulder:<br>— <em>\"The energy did exactly what you asked of it. But remember: a gentle fire cooks the alchemist's meal. A forced fire destroys his house.\"</em><br><br><strong>The Hidden Alchemy:</strong><br>This is the absolute law of Self-Pacing. Spinal Breathing fans the gentle lightning of Kundalini. The ego, in a hurry to experience enlightenment, always wants to blow harder, practice longer, and force the physical locks. But the nervous system is a wooden house. If the heat becomes tension (irritability, insomnia), one must stop fanning the fire, and let the gentle warmth slowly cook our old memories."
         },
         {
-            title: "The Paradoxes of the Path",
-            audioFile: "",
-            imageFile: "",
-            videoFile: "",
-            text: "These short phrases are designed to shatter the preconceived ideas of classical spirituality.<br><br><ul style='line-height: 1.8; margin-bottom: 20px;'><li style='margin-bottom: 10px;'><strong>On the Ego:</strong> He who declares war on his ego gives it the solidity of a rock. He who observes it with the tenderness of the Witness sees it melt like snow in the sun.</li><li style='margin-bottom: 10px;'><strong>On Silence:</strong> True inner silence is not the absence of noise. It is the vast and majestic space that allows the din of the world to exist without disturbing us.</li><li style='margin-bottom: 10px;'><strong>On Effort:</strong> As long as you seek awakening with the relentlessness of a conqueror, it will elude you. Effort perpetuates tension; it is in surrender that the door opens.</li><li style='margin-bottom: 10px;'><strong>On Purification:</strong> Do not be surprised if old angers resurface while you are practicing peace. The mud only rises from the bottom when the water finally begins to clear.</li></ul>"
+            title: "Paradox: The War of the Ego",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "He who declares war on his ego gives it the solidity of a rock. He who observes it with the tenderness of the Witness sees it melt like snow in the sun."
         },
         {
-            title: "The Echoes of Matter (Grounding)",
-            audioFile: "",
-            imageFile: "",
-            videoFile: "",
-            text: "These thoughts aim to sacralize the profane act and remind us of the vital importance of Grounding.<br><br><ul style='line-height: 1.8; margin-bottom: 20px;'><li style='margin-bottom: 10px;'><strong>The Lightning Rod:</strong> Feeling the cold ground beneath your bare feet is not a distraction for the mind. It is the indispensable lightning rod that protects the nervous system from its own lightning strikes.</li><li style='margin-bottom: 10px;'><strong>Sacred Digestion:</strong> A hot, dense, and heavy meal, eaten mindfully during an emotional storm, grounds the soul much more effectively than an hour of imaginary levitation.</li><li style='margin-bottom: 10px;'><strong>Serene Action (Samyama):</strong> Washing a plate or sweeping a room from the space of the silent Witness is the highest expression of yoga. The sacred does not lie in the nobility of the act, but in the space from which it is accomplished.</li><li style='margin-bottom: 10px;'><strong>The Medicine of Rest:</strong> Falling asleep from exhaustion on your meditation cushion is not a spiritual failure. It is the body claiming the oldest of medicines. Accept sleep; rest is the first of miracles.</li></ul>"
+            title: "Paradox: True Silence",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "True inner silence is not the absence of noise. It is the vast and majestic space that allows the din of the world to exist without disturbing us."
+        },
+        {
+            title: "Paradox: The Illusion of Effort",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "As long as you seek awakening with the relentlessness of a conqueror, it will elude you. Effort perpetuates tension; it is in surrender that the door opens."
+        },
+        {
+            title: "Paradox: Mud and Clear Water",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "Do not be surprised if old angers resurface while you are practicing peace. The mud only rises from the bottom when the water finally begins to clear."
+        },
+        {
+            title: "Echo: The Lightning Rod",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "Feeling the cold ground beneath your bare feet is not a distraction for the mind. It is the indispensable lightning rod that protects the nervous system from its own lightning strikes."
+        },
+        {
+            title: "Echo: Sacred Digestion",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "A hot, dense, and heavy meal, eaten mindfully during an emotional storm, grounds the soul much more effectively than an hour of imaginary levitation."
+        },
+        {
+            title: "Echo: Serene Action",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "Washing a plate or sweeping a room from the space of the silent Witness is the highest expression of yoga. The sacred does not lie in the nobility of the act, but in the space from which it is accomplished."
+        },
+        {
+            title: "Echo: The Medicine of Rest",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "Falling asleep from exhaustion on your meditation cushion is not a spiritual failure. It is the body claiming the oldest of medicines. Accept sleep; rest is the first of miracles."
         }
     ]
 };
-
 const PARABOLE_DATA = {
     fr: {
         title: "Au-delà de la Rivière — Une Parabole sur l’Appel Intérieur",
@@ -1040,3 +1055,4 @@ const sageBrain = {
         }
     }
 };
+

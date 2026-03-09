@@ -462,7 +462,7 @@
         });
     }
 
-    function renderMurmures() {
+   function renderMurmures() {
         const container = document.getElementById("murmures-list-container");
         container.innerHTML = ""; 
         const currentMurmures = MURMURES_DATABASE[currentLang];
@@ -497,9 +497,16 @@
             if (murmure.videoFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerVideoMurmure(${index})">🎥 ${mediaShareLabel}</button>`;
             else if (murmure.audioFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerAudioMurmure(${index})">🎵 ${mediaShareLabel}</button>`;
 
+            // --- NOUVEAU : Changement de couleur dynamique ---
+            let titleColorStyle = "";
+            if (murmure.title.includes("Paradoxe") || murmure.title.includes("Paradox") || murmure.title.includes("Écho") || murmure.title.includes("Echo")) {
+                // J'ai choisi un "Bleu Céleste" (#5DADE2) qui est lisible sur fond sombre comme sur fond clair
+                titleColorStyle = "color: #5DADE2;"; 
+            }
+
             const murmureHTML = `
                 <details class="teaching-accordion">
-                    <summary class="accordion-title">${index + 1}. ${murmure.title}</summary>
+                    <summary class="accordion-title" style="${titleColorStyle}">${index + 1}. ${murmure.title}</summary>
                     <div class="accordion-content">
                         ${mediaHTML}
                         <div id="texte-murmure-${index}" class="parchment-text">${murmure.text}</div>
@@ -665,6 +672,7 @@
     </script>
 </body>
 </html>
+
 
 
 

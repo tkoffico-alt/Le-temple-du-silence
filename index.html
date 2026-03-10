@@ -298,7 +298,7 @@
             </div>
         </section>
     </main>
-<div class="teaching-article parchment-text" style="text-align: center; max-width: 600px; margin: 60px auto 40px; padding: 40px; background: var(--box-bg); border-radius: 12px; border: 1px solid var(--accent-color); box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+<div class="teaching-article parchment-text sib-form" style="text-align: center; max-width: 600px; margin: 60px auto 40px; padding: 40px; background: var(--box-bg); border-radius: 12px; border: 1px solid var(--accent-color); box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
     <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-top: 0; margin-bottom: 15px;">
         <span class="fr">Les Lettres du Gardien</span>
         <span class="en" style="display:none;">The Guardian's Letters</span>
@@ -307,19 +307,49 @@
         <span class="fr">Inscrivez votre nom dans le registre du Temple pour recevoir, au rythme lent de la pratique, une chronique inédite. Une réflexion intime sur l'ancrage, l'ego et le silence dans le tumulte du quotidien.</span>
         <span class="en" style="display:none;">Enter your name in the Temple's register to receive, at the slow pace of practice, an unreleased chronicle. An intimate reflection on grounding, the ego, and silence in the tumult of daily life.</span>
     </p>
-    
-    <form action="#" method="POST" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-        <input type="email" placeholder="Votre adresse e-mail..." required style="width: 80%; padding: 12px 15px; border-radius: 6px; border: 1px solid var(--accent-color); background: rgba(20, 20, 20, 0.8); color: #fff; font-family: 'Lora', serif; font-size: 1rem; text-align: center; outline: none;">
-        <button type="submit" class="zen-btn" style="font-size: 1.1rem; padding: 10px 25px;">
+
+    <div id="error-message" class="sib-form-message-panel" style="display:none; color: #ff6b6b; margin-bottom: 15px; font-family: 'Lora', serif; font-style: italic;">
+        <span class="sib-form-message-panel__inner-text">
+            <span class="fr">Une erreur est survenue. Le registre n'a pu recueillir votre adresse.</span>
+            <span class="en" style="display:none;">An error occurred. The register could not record your address.</span>
+        </span>
+    </div>
+    <div id="success-message" class="sib-form-message-panel" style="display:none; color: var(--accent-color); margin-bottom: 15px; font-family: 'Lora', serif; font-style: italic;">
+        <span class="sib-form-message-panel__inner-text">
+            <span class="fr">Votre inscription est scellée. Le Gardien vous écrira.</span>
+            <span class="en" style="display:none;">Your inscription is sealed. The Guardian will write to you.</span>
+        </span>
+    </div>
+
+    <form id="sib-form" method="POST" action="https://9d51a948.sibforms.com/serve/MUIFAP_wRM9Lwa2apAvhfb56Id1T-v6wx6-hz7g6a6PEWxSGQ5ISk3i4Ql1rr97yd-MthZJo2VDJ8OR_PpNck7doF8QFe58ykGDac1YlMPa9Blks06lB0KO0dQ5szkZUnneMNCAb2oNOAWO7ZY6G7gyAj3CJkHijbufqDeL3CCFeHwmYx_d1LVtgogam5lh6P0vMEoXd_96hF-9S2w==" data-type="subscription" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+        
+        <input class="input" type="email" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="Votre adresse e-mail..." data-required="true" required style="width: 80%; padding: 12px 15px; border-radius: 6px; border: 1px solid var(--accent-color); background: rgba(20, 20, 20, 0.8); color: #fff; font-family: 'Lora', serif; font-size: 1rem; text-align: center; outline: none;">
+        
+        <button class="zen-btn sib-form-block__button" form="sib-form" type="submit" style="font-size: 1.1rem; padding: 10px 25px;">
             <span class="fr">Recevoir les Lettres</span>
             <span class="en" style="display:none;">Receive the Letters</span>
         </button>
+
+        <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none;">
+        <input type="hidden" name="locale" value="fr">
     </form>
+    
     <p style="margin-top: 20px; font-style: italic; opacity: 0.6; font-size: 0.85rem;">
         <span class="fr">Aucun bruit inutile. Seulement l'essentiel.</span>
         <span class="en" style="display:none;">No unnecessary noise. Only the essential.</span>
     </p>
 </div>
+
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Erreur';
+  window.LOCALE = 'fr';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Adresse invalide.";
+  window.REQUIRED_ERROR_MESSAGE = "Vous devez renseigner ce champ.";
+  window.GENERIC_INVALID_MESSAGE = "Adresse invalide.";
+  window.translation = { common: { selectedList: '{quantity} liste', selectedLists: '{quantity} listes', selectedOption: '{quantity} sélectionné', selectedOptions: '{quantity} sélectionnés', } };
+  var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
     
     <footer style="display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 30px 10px;">
         <p>© 2026 Le Temple du Silence. <span class="en" style="display:none;">All rights reserved.</span><span class="fr">Tous droits réservés.</span></p>
@@ -699,6 +729,7 @@
     </script>
 </body>
 </html>
+
 
 
 

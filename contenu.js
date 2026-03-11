@@ -108,6 +108,14 @@ const TEACHINGS_DATABASE = {
             `
         }
     ],
+    {
+    title: "La Sushumna : L'Axe Vivant de la Transformation",
+    body: `
+        <p>La <em>sushumna</em> (le canal central de la colonne vertébrale) n'est pas une structure mystique figée, mais une possibilité fonctionnelle du système nerveux de s'organiser autour d'un centre stable. Au départ, l'expérience intérieure est fragmentée et la respiration irrégulière ; l'axe existe en potentiel, mais demeure inutilisé.</p>
+        <p>Elle se manifeste par la fonction : lorsqu'une continuité s'installe entre la respiration et l'attention, le corps s'aligne doucement. La respiration lente et fluide entraîne naturellement le système nerveux à reconnaître cette trajectoire.</p>
+        <p>Il est vital de comprendre que toute tentative de forcer, de contracter ou de contrôler rigidement ce trajet ne fait que renforcer les tensions. L'axe central se révèle uniquement lorsque le système apprend à <em>faire moins</em>, à laisser l'attention et le souffle coopérer sans contrainte. À mesure que cette trajectoire se stabilise, les tensions chroniques se relâchent, car elles ne sont plus nécessaires pour maintenir une cohérence artificielle. Le chemin naturel de la vie intérieure s'organise et s'exprime alors dans l'action avec justesse.</p>
+    `
+}
     en: [
         {
             title: "The Awakening of Inner Silence: The Unshakable Foundation",
@@ -215,7 +223,15 @@ const TEACHINGS_DATABASE = {
                 </ul>
                 <p style="font-style: italic; opacity: 0.9; margin-top: 20px; border-left: 2px solid var(--accent-color); padding-left: 15px;">Remember the warnings of the lineage: for advanced techniques, if an overload occurs, do not hesitate to switch to a "Lite" version or limit your cycles. Gentleness and regularity always prevail over spiritual ambition.</p>
             `
-        }
+        },
+        {
+    title: "Sushumna: The Living Axis of Transformation",
+    body: `
+        <p>The <em>sushumna</em> (the central spinal channel) is not a rigid mystical structure, but a functional possibility for the nervous system to organize itself around a stable center. Initially, inner experience is fragmented and breathing is irregular; the axis exists in potential but remains unused.</p>
+        <p>It manifests through function: when continuity settles between breath and attention, the body gently aligns. Slow, fluid breathing naturally trains the nervous system to recognize this trajectory.</p>
+        <p>It is vital to understand that any attempt to force, contract, or rigidly control this path only reinforces tension. The central axis reveals itself only when the system learns to <em>do less</em>, to let attention and breath cooperate without constraint. As this trajectory stabilizes, chronic tensions release, for they are no longer necessary to maintain an artificial coherence. The natural path of the inner life then organizes and accurately expresses itself in action.</p>
+    `
+}
     ]
 };
 
@@ -305,7 +321,17 @@ const MURMURES_DATABASE = {
             title: "Écho : La Médecine du Repos",
             audioFile: "", imageFile: "", videoFile: "",
             text: "S'endormir par épuisement sur son coussin de méditation n'est pas un échec spirituel. C'est le corps qui réclame la plus ancienne des médecines. Acceptez le sommeil ; le repos est le premier des miracles."
-        }
+        },
+        {
+    title: "La Porte Étroite de la Simplicité",
+    audioFile: "", imageFile: "", videoFile: "",
+    text: "Nous savons tous, au fond, que revenir à soi est simple. Il suffit d’un instant d’attention pour sentir le souffle, écouter le silence, et se rappeler que nous ne sommes pas nos pensées. Mais nous préférons souvent le tumulte de l'esprit au vide apparent, car le tumulte nous flatte et nous raconte une histoire où nous sommes les héros, les victimes ou les auteurs.<br><br>Revenir au centre exige un renoncement subtil : celui de ne plus se nourrir de ces drames intérieurs. L'ego se sent menacé par ce retour à la paix, car il se nourrit de ces remous. L'ancien nous rassure, même quand il nous fait souffrir.<br><br>Ce que l'ego redoute comme un vide est en réalité une plénitude vibrante. Retrouver son centre n'est pas une lutte supplémentaire, c'est une détente ; c'est oser ne rien ajouter, ne rien forcer, et se laisser doucement ramener vers la Présence silencieuse."
+},
+{
+    title: "Paradoxe : La Force de la Vulnérabilité",
+    audioFile: "", imageFile: "", videoFile: "",
+    text: "Dans l'effort constant pour se durcir, se protéger et se rendre invulnérable, le corps se crispe et les émotions se verrouillent. Cette stratégie de défense consomme une énergie immense et finit inévitablement par nous isoler.<br><br>La véritable vulnérabilité commence précisément quand on cesse de lutter contre le fait d’être affecté. Être touché par le monde n’implique pas automatiquement de s’effondrer. La force réelle réside dans cette capacité à rester présent à ce qui se passe sans se fermer ni se dissoudre.<br><br>Lorsque l'on cesse de masquer ce qui est sensible, la respiration redevient naturelle et les réactions automatiques perdent de leur brutalité. La vraie force n’est pas de ne rien sentir, mais de pouvoir sentir sans se perdre."
+}
     ],
     en: [
         {
@@ -392,7 +418,17 @@ const MURMURES_DATABASE = {
             title: "Echo: The Medicine of Rest",
             audioFile: "", imageFile: "", videoFile: "",
             text: "Falling asleep from exhaustion on your meditation cushion is not a spiritual failure. It is the body claiming the oldest of medicines. Accept sleep; rest is the first of miracles."
-        }
+        },
+        {
+    title: "The Narrow Gate of Simplicity",
+    audioFile: "", imageFile: "", videoFile: "",
+    text: "We all know, deep down, that returning to oneself is simple. A moment of attention is enough to feel the breath, listen to the silence, and remember that we are not our thoughts. But we often prefer the tumult of the mind to the apparent emptiness, for the tumult flatters us and tells a story where we are the heroes, the victims, or the authors.<br><br>Returning to the center requires a subtle renunciation: that of no longer feeding on these inner dramas. The ego feels threatened by this return to peace, for it feeds on these disturbances. The old reassures us, even when it causes us to suffer.<br><br>What the ego dreads as an emptiness is actually a vibrant fullness. Finding one's center is not an additional struggle, it is a relaxation; it is daring to add nothing, to force nothing, and to let oneself be gently drawn back to the silent Presence."
+},
+{
+    title: "Paradox: The Strength of Vulnerability",
+    audioFile: "", imageFile: "", videoFile: "",
+    text: "In the constant effort to harden, protect oneself, and become invulnerable, the body tenses and emotions lock up. This defensive strategy consumes immense energy and inevitably ends up isolating us.<br><br>True vulnerability begins precisely when we stop fighting against the fact of being affected. Being touched by the world does not automatically imply collapsing. Real strength lies in this ability to remain present to what is happening without closing off or dissolving.<br><br>When we stop masking what is sensitive, breathing becomes natural again and automatic reactions lose their brutality. True strength is not feeling nothing, but being able to feel without losing oneself."
+}
     ]
 };
 const PARABOLE_DATA = {
@@ -885,4 +921,5 @@ const sageBrain = {
         }
     }
 };
+
 

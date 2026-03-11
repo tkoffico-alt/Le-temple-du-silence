@@ -91,7 +91,7 @@ const TEACHINGS_DATABASE = {
                 <p style="font-style: italic; opacity: 0.9; margin-top: 20px; border-left: 2px solid var(--accent-color); padding-left: 15px;">Pratiquez ce balayage intérieur pendant 5 à 10 minutes avant votre méditation silencieuse. Ce simple mouvement prépare la terre, l'assouplit et l'irrigue, permettant aux graines du silence de germer avec une force inouïe.</p>
             `
         },
-        {
+      {
             title: "L'Art de l'Auto-Régulation (Self-Pacing)",
             body: `
                 <p style="font-weight: bold; font-style: italic; text-align: center; margin-bottom: 25px; color: var(--accent-color);">"Le pratiquant est le seul maître de son rythme."</p>
@@ -106,16 +106,16 @@ const TEACHINGS_DATABASE = {
                 </ul>
                 <p style="font-style: italic; opacity: 0.9; margin-top: 20px; border-left: 2px solid var(--accent-color); padding-left: 15px;">Rappelez-vous les avertissements de la lignée : pour des techniques avancées, si une surcharge survient, n'hésitez pas à passer à la version "Lite" ou à limiter les cycles. La douceur et la régularité l'emportent toujours sur l'ambition spirituelle.</p>
             `
+        }, // <--- LA VIRGULE EST CRUCIALE ICI
+        {
+            title: "La Sushumna : L'Axe Vivant de la Transformation",
+            body: `
+                <p>La <em>sushumna</em> (le canal central de la colonne vertébrale) n'est pas une structure mystique figée, mais une possibilité fonctionnelle du système nerveux de s'organiser autour d'un centre stable. Au départ, l'expérience intérieure est fragmentée et la respiration irrégulière ; l'axe existe en potentiel, mais demeure inutilisé.</p>
+                <p>Elle se manifeste par la fonction : lorsqu'une continuité s'installe entre la respiration et l'attention, le corps s'aligne doucement. La respiration lente et fluide entraîne naturellement le système nerveux à reconnaître cette trajectoire.</p>
+                <p>Il est vital de comprendre que toute tentative de forcer, de contracter ou de contrôler rigidement ce trajet ne fait que renforcer les tensions. L'axe central se révèle uniquement lorsque le système apprend à <em>faire moins</em>, à laisser l'attention et le souffle coopérer sans contrainte. À mesure que cette trajectoire se stabilise, les tensions chroniques se relâchent, car elles ne sont plus nécessaires pour maintenir une cohérence artificielle. Le chemin naturel de la vie intérieure s'organise et s'exprime alors dans l'action avec justesse.</p>
+            `
         }
-    ],
-    {
-    title: "La Sushumna : L'Axe Vivant de la Transformation",
-    body: `
-        <p>La <em>sushumna</em> (le canal central de la colonne vertébrale) n'est pas une structure mystique figée, mais une possibilité fonctionnelle du système nerveux de s'organiser autour d'un centre stable. Au départ, l'expérience intérieure est fragmentée et la respiration irrégulière ; l'axe existe en potentiel, mais demeure inutilisé.</p>
-        <p>Elle se manifeste par la fonction : lorsqu'une continuité s'installe entre la respiration et l'attention, le corps s'aligne doucement. La respiration lente et fluide entraîne naturellement le système nerveux à reconnaître cette trajectoire.</p>
-        <p>Il est vital de comprendre que toute tentative de forcer, de contracter ou de contrôler rigidement ce trajet ne fait que renforcer les tensions. L'axe central se révèle uniquement lorsque le système apprend à <em>faire moins</em>, à laisser l'attention et le souffle coopérer sans contrainte. À mesure que cette trajectoire se stabilise, les tensions chroniques se relâchent, car elles ne sont plus nécessaires pour maintenir une cohérence artificielle. Le chemin naturel de la vie intérieure s'organise et s'exprime alors dans l'action avec justesse.</p>
-    `
-}
+    ], // <--- LE CROCHET FERMANT EST ICI, AVANT LE "en:"
     en: [
         {
             title: "The Awakening of Inner Silence: The Unshakable Foundation",
@@ -921,5 +921,6 @@ const sageBrain = {
         }
     }
 };
+
 
 

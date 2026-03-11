@@ -110,6 +110,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "La Sushumna : L'Axe Vivant de la Transformation",
             body: `
+                <img src="la-sushumna.png" alt="L'Axe de la Sushumna" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>La <em>sushumna</em> (le canal central de la colonne vertébrale) n'est pas une structure mystique figée, mais une possibilité fonctionnelle du système nerveux de s'organiser autour d'un centre stable. Au départ, l'expérience intérieure est fragmentée et la respiration irrégulière ; l'axe existe en potentiel, mais demeure inutilisé.</p>
                 <p>Elle se manifeste par la fonction : lorsqu'une continuité s'installe entre la respiration et l'attention, le corps s'aligne doucement. La respiration lente et fluide entraîne naturellement le système nerveux à reconnaître cette trajectoire.</p>
                 <p>Il est vital de comprendre que toute tentative de forcer, de contracter ou de contrôler rigidement ce trajet ne fait que renforcer les tensions. L'axe central se révèle uniquement lorsque le système apprend à <em>faire moins</em>, à laisser l'attention et le souffle coopérer sans contrainte. À mesure que cette trajectoire se stabilise, les tensions chroniques se relâchent, car elles ne sont plus nécessaires pour maintenir une cohérence artificielle. Le chemin naturel de la vie intérieure s'organise et s'exprime alors dans l'action avec justesse.</p>
@@ -225,13 +226,14 @@ const TEACHINGS_DATABASE = {
             `
         },
         {
-    title: "Sushumna: The Living Axis of Transformation",
-    body: `
-        <p>The <em>sushumna</em> (the central spinal channel) is not a rigid mystical structure, but a functional possibility for the nervous system to organize itself around a stable center. Initially, inner experience is fragmented and breathing is irregular; the axis exists in potential but remains unused.</p>
-        <p>It manifests through function: when continuity settles between breath and attention, the body gently aligns. Slow, fluid breathing naturally trains the nervous system to recognize this trajectory.</p>
-        <p>It is vital to understand that any attempt to force, contract, or rigidly control this path only reinforces tension. The central axis reveals itself only when the system learns to <em>do less</em>, to let attention and breath cooperate without constraint. As this trajectory stabilizes, chronic tensions release, for they are no longer necessary to maintain an artificial coherence. The natural path of the inner life then organizes and accurately expresses itself in action.</p>
-    `
-}
+            title: "Sushumna: The Living Axis of Transformation",
+            body: `
+                <img src="la-sushumna.png" alt="Sushumna Axis" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>The <em>sushumna</em> (the central spinal channel) is not a rigid mystical structure, but a functional possibility for the nervous system to organize itself around a stable center. Initially, inner experience is fragmented and breathing is irregular; the axis exists in potential but remains unused.</p>
+                <p>It manifests through function: when continuity settles between breath and attention, the body gently aligns. Slow, fluid breathing naturally trains the nervous system to recognize this trajectory.</p>
+                <p>It is vital to understand that any attempt to force, contract, or rigidly control this path only reinforces tension. The central axis reveals itself only when the system learns to <em>do less</em>, to let attention and breath cooperate without constraint. As this trajectory stabilizes, chronic tensions release, for they are no longer necessary to maintain an artificial coherence. The natural path of the inner life then organizes and accurately expresses itself in action.</p>
+            `
+        }
     ]
 };
 
@@ -921,6 +923,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

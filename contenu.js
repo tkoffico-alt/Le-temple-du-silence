@@ -110,10 +110,29 @@ const TEACHINGS_DATABASE = {
         {
             title: "La Sushumna : L'Axe Vivant de la Transformation",
             body: `
-                <img src="la-sushumna.png" alt="L'Axe de la Sushumna" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                <p>La <em>sushumna</em> (le canal central de la colonne vertébrale) n'est pas une structure mystique figée, mais une possibilité fonctionnelle du système nerveux de s'organiser autour d'un centre stable. Au départ, l'expérience intérieure est fragmentée et la respiration irrégulière ; l'axe existe en potentiel, mais demeure inutilisé.</p>
-                <p>Elle se manifeste par la fonction : lorsqu'une continuité s'installe entre la respiration et l'attention, le corps s'aligne doucement. La respiration lente et fluide entraîne naturellement le système nerveux à reconnaître cette trajectoire.</p>
-                <p>Il est vital de comprendre que toute tentative de forcer, de contracter ou de contrôler rigidement ce trajet ne fait que renforcer les tensions. L'axe central se révèle uniquement lorsque le système apprend à <em>faire moins</em>, à laisser l'attention et le souffle coopérer sans contrainte. À mesure que cette trajectoire se stabilise, les tensions chroniques se relâchent, car elles ne sont plus nécessaires pour maintenir une cohérence artificielle. Le chemin naturel de la vie intérieure s'organise et s'exprime alors dans l'action avec justesse.</p>
+                <img src="sushumna.png" alt="L'Axe de la Sushumna" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Dans la science de l'éveil, la <em>sushumna</em> (le nerf spinal) n'est pas un concept mystique abstrait. Elle est l'autoroute centrale, le "maître contrôleur" de votre système nerveux. C'est le canal vivant par lequel s'opère toute transformation profonde.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. L'Autoroute du Système Nerveux</h3>
+                <p>La sushumna s'étend de la racine (le périnée) jusqu'au centre de la tête, où elle fait un virage vers l'avant pour se terminer exactement au point situé entre les sourcils (le troisième œil). Elle est le tronc de l'arbre : en purifiant ce canal central, on nettoie et on apaise automatiquement les milliers d'autres nerfs qui y sont connectés. Travailler sur cet axe permet d'équilibrer naturellement les courants chauds et froids du corps, sans jamais avoir à les manipuler de force.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">2. Le Mariage du Silence et de l'Énergie</h3>
+                <p>C'est à l'intérieur de ce canal que le mot "Yoga" (qui signifie "joindre") prend tout son sens. La sushumna est le lieu de rencontre d'une alchimie silencieuse. À travers la pratique, l'énergie vitale frémissante (qui sommeille à la racine) remonte doucement pour s'unir à la conscience silencieuse et immobile. Cette union crée une "conductivité extatique" : vos nerfs deviennent capables de faire circuler une joie stable et sans objet, qui finit par irradier dans chaque cellule.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">3. Du Fil d'Attention à l'Espace Vaste</h3>
+                <p>Au début de votre pratique, la sushumna n'est perçue que par une simple intention tactile, comme un fil minuscule traversant le corps. Il n'y a aucune lumière à visualiser, juste une intention douce. Au fur et à mesure que les vieux blocages cèdent, ce fil se détend. Il s'élargit pour devenir comme une corde, puis une vaste colonne. En fin de compte, l'effacement des tensions est tel que cet axe central s'ouvre sur un espace de paix qui semble ne plus avoir de limites physiques.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">4. L'Entretien de l'Axe</h3>
+                <p>Puisque la sushumna est le cœur de la transformation, nos outils la ciblent avec une grande simplicité :</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>La Respiration Spinale :</strong> C'est le balayage direct. À l'inspiration, l'attention trace la route de la racine au troisième œil. À l'expiration, elle redescend. Ce simple mouvement nettoie le canal.</li>
+                    <li><strong>La Méditation Profonde :</strong> Le mantra AYAM, utilisé en silence, résonne naturellement sur toute la longueur de cet axe, dissolvant les nœuds de l'intérieur par le simple pouvoir du repos.</li>
+                    <li><strong>Les Verrous (Mudras/Bandhas) :</strong> Ajoutés très progressivement, ils créent une douce tension aux extrémités (périnée et regard) pour stimuler le nerf spinal sans le brusquer.</li>
+                </ul>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">5. La Règle d'Or : Le Terminus du Troisième Œil</h3>
+                <p>Il y a une consigne de sécurité absolue sur notre chemin : <strong>le trajet de votre attention ne doit jamais dépasser le point entre les sourcils</strong>. Tenter d'ouvrir prématurément le sommet du crâne (le chakra de la couronne) avant que le système nerveux ne soit purifié est la cause de surcharges énergétiques sévères (irritabilité, insomnies, anxiété).</p>
+                <p>En arrêtant toujours le souffle au milieu du front, votre système nerveux garde son équilibre. Le sommet de la tête s'ouvrira de lui-même, lentement et en toute sécurité, nourri par le rayonnement naturel d'une sushumna parfaitement nettoyée. Laissez la nature faire son œuvre.</p>
             `
         },
         {
@@ -239,10 +258,29 @@ const TEACHINGS_DATABASE = {
         {
             title: "Sushumna: The Living Axis of Transformation",
             body: `
-                <img src="la-sushumna.png" alt="Sushumna Axis" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                <p>The <em>sushumna</em> (the central spinal channel) is not a rigid mystical structure, but a functional possibility for the nervous system to organize itself around a stable center. Initially, inner experience is fragmented and breathing is irregular; the axis exists in potential but remains unused.</p>
-                <p>It manifests through function: when continuity settles between breath and attention, the body gently aligns. Slow, fluid breathing naturally trains the nervous system to recognize this trajectory.</p>
-                <p>It is vital to understand that any attempt to force, contract, or rigidly control this path only reinforces tension. The central axis reveals itself only when the system learns to <em>do less</em>, to let attention and breath cooperate without constraint. As this trajectory stabilizes, chronic tensions release, for they are no longer necessary to maintain an artificial coherence. The natural path of the inner life then organizes and accurately expresses itself in action.</p>
+                <img src="sushumna.png" alt="Sushumna Axis" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>In the science of awakening, the <em>sushumna</em> (the spinal nerve) is not an abstract mystical concept. It is the central highway, the "master controller" of your nervous system. It is the living channel through which all deep transformation takes place.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. The Highway of the Nervous System</h3>
+                <p>The sushumna extends from the root (the perineum) to the center of the head, where it makes a forward turn to end exactly at the point between the eyebrows (the third eye). It is the trunk of the tree: by purifying this central channel, we automatically cleanse and soothe the thousands of other nerves connected to it. Working on this axis allows the hot and cold currents of the body to balance naturally, without ever having to manipulate them by force.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">2. The Marriage of Silence and Energy</h3>
+                <p>It is within this channel that the word "Yoga" (which means "to join") takes on its full meaning. The sushumna is the meeting place of a silent alchemy. Through practice, the quivering vital energy (which slumbers at the root) gently rises to unite with silent, motionless consciousness. This union creates "ecstatic conductivity": your nerves become capable of circulating a stable, objectless joy that eventually radiates into every cell.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">3. From a Thread of Attention to Vast Space</h3>
+                <p>At the beginning of your practice, the sushumna is perceived only through a simple tactile intention, like a tiny thread crossing the body. There is no light to visualize, just a gentle intention. As old blockages give way, this thread relaxes. It widens to become like a cord, then a vast column. Ultimately, the fading of tensions is such that this central axis opens onto a space of peace that seems to no longer have physical limits.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">4. Maintaining the Axis</h3>
+                <p>Since the sushumna is the heart of transformation, our tools target it with great simplicity:</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>Spinal Breathing:</strong> This is the direct sweep. On the inhale, attention traces the path from the root to the third eye. On the exhale, it descends. This simple movement cleanses the channel.</li>
+                    <li><strong>Deep Meditation:</strong> The AYAM mantra, used in silence, naturally resonates along the entire length of this axis, dissolving knots from the inside through the simple power of rest.</li>
+                    <li><strong>The Locks (Mudras/Bandhas):</strong> Added very gradually, they create a gentle tension at the extremities (perineum and gaze) to stimulate the spinal nerve without rushing it.</li>
+                </ul>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">5. The Golden Rule: The Third Eye Terminus</h3>
+                <p>There is an absolute safety guideline on our path: <strong>the path of your attention must never go beyond the point between the eyebrows</strong>. Attempting to prematurely open the top of the skull (the crown chakra) before the nervous system is purified is the cause of severe energetic overloads (irritability, insomnia, anxiety).</p>
+                <p>By always stopping the breath in the middle of the forehead, your nervous system maintains its balance. The top of the head will open on its own, slowly and safely, nourished by the natural radiance of a perfectly cleansed sushumna. Let nature do its work.</p>
             `
         },
         {
@@ -945,6 +983,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

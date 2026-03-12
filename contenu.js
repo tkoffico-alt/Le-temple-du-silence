@@ -497,6 +497,16 @@ const MURMURES_DATABASE = {
             title: "Écho : La Constance Invisible",
             audioFile: "", imageFile: "", videoFile: "",
             text: "La véritable transformation spirituelle ne s'annonce jamais avec des trompettes ou des éclairs de lumière. Elle obéit à la loi de la nature, ressemblant à la croissance d'un arbre : totalement invisible au jour le jour, mais indéniable au fil des saisons.<br><br>L'erreur est de vouloir évaluer votre pratique méditative à la fin de chaque séance. Ne vous jugez pas si votre esprit a vagabondé, ne cherchez pas le silence parfait. La constance est la seule véritable magie. <br><br>C'est l'accumulation discrète de ces minutes passées à revenir doucement au centre, jour après jour, qui, goutte après goutte, finit par dissoudre le roc de vos plus anciennes tensions."
+        },
+        {
+            title: "Écho : Le Regard sans Intervention",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "L'une des pratiques les plus profondes ne demande aucun effort physique. C'est le simple fait d'observer.<br><br>Lorsque la tempête fait rage à l'intérieur — une émotion forte, une peur sourde ou une pensée obsédante —, notre réflexe mécanique est toujours d'intervenir. Nous voulons fuir, comprendre, analyser ou combattre ce qui nous dérange. La prochaine fois, essayez de ne rien faire. Contentez-vous d'observer le phénomène avec douceur, comme s'il s'agissait d'un nuage sombre traversant votre ciel intérieur.<br><br>Ce regard neutre, dénué de tout jugement et de toute volonté de modifier l'instant, est le scalpel le plus tranchant de la conscience. Sous la lumière de cette attention sans effort, les nœuds les plus anciens finissent toujours par se défaire d'eux-mêmes."
+        },
+        {
+            title: "Paradoxe : Oser Perdre pour Trouver",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "Le monde moderne nous vend souvent l'idée qu'il faut ajouter des qualités à notre personne : devenir plus fort, plus calme, plus sage. Nous abordons la spiritualité comme une accumulation de richesses supplémentaires.<br><br>La véritable libération obéit pourtant à la loi inverse : la soustraction. L'éveil n'est pas l'acquisition d'un état supérieur, mais la perte progressive de nos illusions, de nos tensions accumulées et de nos mécanismes de défense. C'est un effeuillage. <br><br>C'est en osant perdre cette fausse sécurité que nous offre le contrôle, et en acceptant d'être mis à nu par le silence, que l'on découvre la seule chose qui ne pourra jamais nous être enlevée : notre véritable nature."
         }
     ],
     en: [
@@ -604,6 +614,16 @@ const MURMURES_DATABASE = {
             title: "Echo: The Invisible Constancy",
             audioFile: "", imageFile: "", videoFile: "",
             text: "True spiritual transformation never announces itself with trumpets or flashes of light. It obeys the law of nature, resembling the growth of a tree: totally invisible day by day, but undeniable as the seasons pass.<br><br>The mistake is wanting to evaluate your meditation practice at the end of each session. Do not judge yourself if your mind has wandered, do not seek perfect silence. Constancy is the only real magic.<br><br>It is the quiet accumulation of these minutes spent gently returning to the center, day after day, that, drop by drop, eventually dissolves the rock of your oldest tensions."
+        },
+        {
+            title: "Echo: The Gaze Without Intervention",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "One of the most profound practices requires no physical effort. It is the simple act of observing.<br><br>When a storm rages inside—a strong emotion, a dull fear, or an obsessive thought—our mechanical reflex is always to intervene. We want to flee, understand, analyze, or fight what disturbs us. Next time, try doing nothing. Simply observe the phenomenon gently, as if it were a dark cloud crossing your inner sky.<br><br>This neutral gaze, devoid of any judgment and any desire to change the moment, is the sharpest scalpel of consciousness. Under the light of this effortless attention, the oldest knots always end up untying themselves."
+        },
+        {
+            title: "Paradox: Daring to Lose to Find",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "The modern world often sells us the idea that we must add qualities to our persona: becoming stronger, calmer, wiser. We approach spirituality as an accumulation of additional wealth.<br><br>True liberation, however, obeys the opposite law: subtraction. Awakening is not the acquisition of a higher state, but the gradual loss of our illusions, our accumulated tensions, and our defense mechanisms. It is a stripping away.<br><br>It is by daring to lose this false security offered by control, and by agreeing to be laid bare by silence, that we discover the only thing that can never be taken from us: our true nature."
         }
     ]
 };
@@ -1097,6 +1117,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

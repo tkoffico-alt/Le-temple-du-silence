@@ -169,7 +169,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Le Prana et le Souffle : L'Art du Forgeron",
             body: `
-                <img src="prana-souffle.jpg" alt="Le Feu du Prana" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="prana-souffle.png" alt="Le Feu du Prana" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Nous avons vu que la purification de notre système nerveux génère une friction, souvent ressentie comme une chaleur interne. Pour diriger cette énergie (le <em>prana</em>) sans se brûler, nous possédons un outil d'une précision absolue : le souffle.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. L'Aspiration : La loi du vide</h3>
@@ -383,7 +383,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Prana and the Breath: The Blacksmith's Art",
             body: `
-                <img src="prana-souffle.jpg" alt="The Fire of Prana" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="prana-souffle.png" alt="The Fire of Prana" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>We have seen that the purification of our nervous system generates friction, often felt as internal heat. To direct this energy (<em>prana</em>) without burning out, we possess a tool of absolute precision: the breath.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. The Vacuum Effect: Drawing the Energy</h3>
@@ -1155,6 +1155,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

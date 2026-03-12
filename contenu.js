@@ -167,6 +167,30 @@ const TEACHINGS_DATABASE = {
             `
         },
         {
+            title: "Éveiller l'Énergie ou Laisser Faire ? Le Chemin du Milieu",
+            body: `
+                <img src="chemin-milieu.png" alt="Le Chemin du Milieu" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Dans la quête spirituelle, une question revient sans cesse : devons-nous chercher activement à éveiller notre énergie intérieure (la Kundalini), ou devons-nous simplement lâcher prise et laisser la nature faire les choses à son propre rythme ?</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">L'Illusion de la Passivité</h3>
+                <p>L'idée qu'il suffit de "laisser faire la nature" est séduisante car elle flatte notre désir de confort. Cependant, la nature humaine, livrée à ses seules habitudes, a tendance à maintenir le <em>statu quo</em>. Si vous avez un champ et que vous laissez "la nature faire", vous n'obtiendrez pas un potager ordonné, mais des ronces et des mauvaises herbes. L'énergie vitale restera confinée dans le bassin, servant uniquement à la survie et à la reproduction. L'évolution spirituelle demande une intention et une action délibérées.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Le Danger du Forçage</h3>
+                <p>À l'extrême inverse, de nombreux chercheurs impatients tentent de forcer l'éveil. Par des exercices extrêmes ou une volonté de fer, ils essaient de tirer l'énergie vers le haut avant que le système nerveux ne soit prêt. C'est l'équivalent de faire passer une ligne à haute tension dans les fils électriques fragiles d'une vieille maison : les plombs sautent. C'est ainsi que naissent les crises énergétiques, l'anxiété et les surcharges nerveuses. L'énergie n'est pas un trophée que l'on arrache de force.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Le Chemin du Milieu : La Mécanique du Jardinier</h3>
+                <p>Notre pratique repose sur une mécanique douce. Nous n'essayons pas de tirer sur la tige pour faire pousser la plante plus vite. Nous préparons simplement le terrain.</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>L'Action juste :</strong> Chaque jour, nous nous asseyons. Nous utilisons la Respiration Spinale pour défricher lentement les nerfs (enlever les ronces). Nous utilisons la Méditation Profonde pour irriguer le sol avec le Silence.</li>
+                    <li><strong>L'Invitation :</strong> L'énergie n'est jamais poussée de force. Elle est doucement "aspirée" vers le haut par le vide naturel que crée notre souffle apaisé. Nous créons les conditions idéales, et nous l'invitons poliment à monter.</li>
+                </ul>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">La Part de la Nature : L'Auto-Régulation</h3>
+                <p>C'est ici que "laisser faire la nature" prend tout son sens. Une fois que nous avons appliqué nos pratiques, <strong>nous laissons notre système nerveux dicter le rythme de l'intégration.</strong></p>
+                <p>Si la friction devient trop intense (insomnie, irritabilité), la nature nous envoie un signal clair : "C'est trop rapide pour l'instant". Nous appliquons alors l'auto-régulation (<em>self-pacing</em>) en réduisant notre temps de pratique. Nous sommes actifs dans notre discipline quotidienne, mais nous sommes dans un lâcher-prise total quant à la vitesse des résultats. Le jardinier arrose chaque matin, mais il ne commande pas à la graine le jour de sa floraison.</p>
+            `
+        },
+        {
             title: "Le Prana et le Souffle : L'Art du Forgeron",
             body: `
                 <img src="prana-souffle.png" alt="Le Feu du Prana" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
@@ -378,6 +402,30 @@ const TEACHINGS_DATABASE = {
                     <li><strong>Self-pacing:</strong> If friction becomes too strong (insomnia, irritability, excessive heat), you must immediately reduce your practice time and <em>ground</em> yourself (walk in nature, eat heavier food).</li>
                 </ul>
                 <p>Kundalini is not magic, but a natural physiological potential. Once old blockages are cleared, nerve friction disappears. The conductivity then merges with your silence to become a peaceful radiance: pure love expressing itself in the serene action of daily life.</p>
+            `
+        },
+        {
+            title: "Awakening the Energy or Letting It Be? The Middle Path",
+            body: `
+                <img src="chemin-milieu.png" alt="The Middle Path" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>In the spiritual quest, one question constantly arises: should we actively seek to awaken our inner energy (Kundalini), or should we simply let go and allow nature to take its course at its own pace?</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">The Illusion of Passivity</h3>
+                <p>The idea that we should simply "let nature take its course" is seductive because it appeals to our desire for comfort. However, human nature, left to its own habits, tends to maintain the status quo. If you have a field and "let nature do its thing," you won't get an ordered vegetable garden; you'll get brambles and weeds. Vital energy will remain confined to the pelvis, serving only survival and reproduction. Spiritual evolution requires deliberate intention and action.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">The Danger of Forcing</h3>
+                <p>On the opposite extreme, many impatient seekers try to force the awakening. Through extreme exercises or sheer willpower, they try to pull the energy upwards before the nervous system is ready. This is the equivalent of running high-voltage power through the fragile wiring of an old house: the fuses blow. This is how energetic crises, anxiety, and nervous overloads occur. Energy is not a trophy to be seized by force.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">The Middle Path: The Mechanics of the Gardener</h3>
+                <p>Our practice relies on gentle mechanics. We don't try to pull on the stem to make the plant grow faster. We simply prepare the ground.</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>Right Action:</strong> Every day, we sit. We use Spinal Breathing to slowly clear the nerves (remove the brambles). We use Deep Meditation to irrigate the soil with Silence.</li>
+                    <li><strong>The Invitation:</strong> The energy is never forced up. It is gently "vacuumed" upwards by the natural void created by our calmed breath. We create the ideal conditions, and we politely invite it to rise.</li>
+                </ul>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Nature's Role: Self-Pacing</h3>
+                <p>This is where "letting nature take its course" takes on its true meaning. Once we have applied our practices, <strong>we let our nervous system dictate the pace of integration.</strong></p>
+                <p>If the friction becomes too intense (insomnia, irritability), nature sends us a clear signal: "This is too fast for now." We then apply self-pacing by reducing our practice time. We are active in our daily discipline, but we completely surrender to the timeline of the results. The gardener waters every morning, but does not command the seed when to bloom.</p>
             `
         },
         {
@@ -1155,6 +1203,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

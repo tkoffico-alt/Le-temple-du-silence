@@ -3,6 +3,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "L’éveil du Silence Intérieur : La Fondation Inébranlable",
             body: `
+            <img src="fondation-silence.png" alt="L'éveil du Silence Intérieur : La Fondation Inébranlable" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Le Silence intérieur n’est pas quelque chose que l’on crée. Il n’est ni le résultat d’un effort mental, ni un état de vide que l'on imposerait par la force. Au début du chemin, nous cherchons souvent à discipliner l'esprit, à le forcer à se taire, mais cette stratégie produit l'effet inverse.</p>
                 <p>Ce silence n'est ni une concentration tendue, ni un retrait du monde. C'est une présence dynamique, un roc de conscience pure qui réside naturellement en nous. En chacun existe une zone intacte, stable, qui n'a jamais été perturbée par les événements ou les blessures. Elle n'est pas produite par la pratique : la pratique ne fait que la révéler.</p>
                 <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">La Mécanique de l'Éveil : Régularité avant Intensité</h3>
@@ -23,6 +24,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "La Mécanique de l’Extase : Une Compréhension Progressive de l’Éveil",
             body: `
+            <img src="mecanique-extase.png" alt="La Mécanique de l'Extase : Compréhension de l'Éveil" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Dans le cheminement spirituel, l’extase est souvent mal comprise. Elle est parfois recherchée comme une expérience mystique exceptionnelle, redoutée comme une perte de contrôle, ou idéalisée comme l'apanage de quelques élus. En réalité, l’extase n’est rien de tout cela. Elle est le résultat naturel d’un mécanisme précis, inscrit dans le fonctionnement neurobiologique humain, qui s'active lorsque certaines conditions sont réunies.</p>
                 <p>Comprendre cette mécanique ne sert pas à provoquer l’extase — car elle ne se laisse jamais forcer — mais à laisser le processus de purification se déployer sans confusion ni excès, jusqu'à son intégration harmonieuse dans le quotidien.</p>
                 <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">1. Ce que l'extase n'est pas (et ce qu'elle est)</h3>
@@ -72,6 +74,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "La Respiration Spinale : Le Pont entre la Matière et l'Énergie",
             body: `
+            <img src="pont-respiration.png" alt="La Respiration Spinale : Le pont entre matière et énergie" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <h3 style="color: var(--accent-color); margin-top: 10px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">La Mécanique de l'Éveil</h3>
                 <p>L'évolution spirituelle n'est pas un concept philosophique abstrait ni une récompense divine. C'est un processus mécanique, biologique et mesurable. Au cœur de ce processus se trouve votre système nerveux central. Imaginez-le comme un vaste réseau électrique. Au fil des années, les traumatismes, le stress et les habitudes ont créé des "résistances" sur ces cables, limitant la quantité d'énergie vitale (Prana) qui peut y circuler librement.</p>
                 <p>La Respiration Spinale est l'outil le plus direct pour nettoyer ce réseau. Ce n'est pas un simple exercice de relaxation pulmonaire, mais une technique d'ingénierie intérieure conçue pour purifier le canal principal de votre corps : <em>la Sushumna</em>, un fil subtil qui traverse le centre de votre colonne vertébrale, du périnée jusqu'au centre du cerveau.</p>
@@ -94,6 +97,7 @@ const TEACHINGS_DATABASE = {
       {
             title: "L'Art de l'Auto-Régulation (Self-Pacing)",
             body: `
+            <img src="auto-regulation.png" alt="L'Art de l'Auto-Régulation et du Self-Pacing" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p style="font-weight: bold; font-style: italic; text-align: center; margin-bottom: 25px; color: var(--accent-color);">"Le pratiquant est le seul maître de son rythme."</p>
                 <p>L'auto-régulation, ou <em>self-pacing</em>, n'est pas simplement un conseil ; c'est la règle d'or universelle qui soutient l'intégralité de la pratique yoganienne complète. Dans notre quête de silence intérieur, nous n'essayons pas de forcer la porte, mais de déblayer patiemment le chemin pour que la lumière puisse passer.</p>
                 <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">Le Principe : Écouter la Conductivité Extatique</h3>
@@ -241,6 +245,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "The Awakening of Inner Silence: The Unshakable Foundation",
             body: `
+            <img src="fondation-silence.png" alt="The Awakening of Inner Silence: The Unshakeable Foundation" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Inner silence is not something we create. It is neither the result of mental effort nor a state of emptiness imposed by force. At the beginning of the path, we often try to discipline the mind, to force it to be quiet, but this strategy produces the opposite effect.</p>
                 <p>This silence is neither tense concentration nor a withdrawal from the world. It is a dynamic presence, a rock of pure consciousness that naturally resides within us. In everyone, there is an intact, stable zone that has never been disturbed by events or wounds. It is not produced by practice: practice merely reveals it.</p>
                 <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">The Mechanics of Awakening: Regularity over Intensity</h3>
@@ -261,6 +266,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "The Mechanics of Ecstasy: A Progressive Understanding of Awakening",
             body: `
+            <img src="mecanique-extase.png" alt="The Mechanics of Ecstasy: A Progressive Understanding of Awakening" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>In the spiritual journey, ecstasy is often misunderstood. It is sometimes sought as an exceptional mystical experience, feared as a loss of control, or idealized as the privilege of a chosen few. In reality, ecstasy is none of these. It is the natural result of a precise mechanism, inscribed in human neurobiological functioning, which activates when certain conditions are met.</p>
                 <p>Understanding this mechanic does not serve to provoke ecstasy — for it can never be forced — but to allow the purification process to unfold without confusion or excess, until its harmonious integration into daily life.</p>
                 <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">1. What ecstasy is not (and what it is)</h3>
@@ -310,6 +316,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Spinal Breathing: The Bridge Between Matter and Energy",
             body: `
+            <img src="pont-respiration.png" alt="Spinal Breathing: The Bridge Between Matter and Energy" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <h3 style="color: var(--accent-color); margin-top: 10px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">The Mechanics of Awakening</h3>
                 <p>Spinal evolution is not an abstract philosophical concept or a divine reward. It is a mechanical, biological, and measurable process. At the heart of this process lies your central nervous system. Imagine it as a vast electrical network. Over the years, trauma, stress, and habits have created "resistances" on these cables, limiting the amount of vital energy (Prana) that can flow freely.</p>
                 <p>Spinal Breathing is the most direct tool to clean this network. It is not a simple pulmonary relaxation exercise, but a technique of inner engineering designed to purify the main channel of your body: <em>the Sushumna</em>, a subtle thread that runs through the center of your spine, from the perineum to the center of the brain.</p>
@@ -332,6 +339,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "The Art of Self-Regulation (Self-Pacing)",
             body: `
+            <img src="auto-regulation.png" alt="The Art of Self-Pacing" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p style="font-weight: bold; font-style: italic; text-align: center; margin-bottom: 25px; color: var(--accent-color);">"The practitioner is the sole master of their pace."</p>
                 <p>Self-pacing is not just advice; it is the universal golden rule that supports the entirety of deep yogic practice. In our quest for inner silence, we do not attempt to force the door, but patiently clear the path so that the light may pass.</p>
                 <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">The Principle: Listening to Ecstatic Conductivity</h3>
@@ -1203,6 +1211,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

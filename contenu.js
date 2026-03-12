@@ -119,7 +119,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Démystifier la Kundalini : La Conductivité Extatique",
             body: `
-                <img src="kundalini-energie.jpg" alt="La Conductivité Extatique" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="kundalini-energie.png" alt="La Conductivité Extatique" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>La Kundalini est souvent entourée de mystère, perçue comme une force étrangère, un événement exceptionnel à provoquer ou un phénomène dangereux. Dans notre pratique, elle peut être comprise de manière très simple et physiologique : elle est <strong>la capacité du système nerveux à conduire l’énergie de façon stable et cohérente</strong>. Nous l'appelons la conductivité extatique.</p>
                 <p>Elle correspond à un processus de maturation progressive, dans lequel le corps et la conscience apprennent à fonctionner ensemble avec moins de friction. Tant que le système est encombré de tensions et de vieux conditionnements (les samskaras), l’énergie circule de manière fragmentée, produisant de l’agitation ou une surcharge. Le travail intérieur consiste avant tout à rendre le terrain plus clair et plus souple grâce à la Respiration Spinale.</p>
                 <p>Un point essentiel doit être compris : <strong>l’énergie, laissée à elle-même, ne libère rien</strong>. Elle se contente d'amplifier ce qui est déjà là. Si le système manque de stabilité, elle accentuera la confusion. C’est pourquoi la base du Silence Intérieur (la Méditation Profonde) est indispensable. Le silence agit comme un régulateur naturel, permettant à l’énergie de s’intégrer doucement au lieu de déborder.</p>
@@ -248,7 +248,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Demystifying Kundalini: Ecstatic Conductivity",
             body: `
-                <img src="kundalini-energie.jpg" alt="Ecstatic Conductivity" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="kundalini-energie.png" alt="Ecstatic Conductivity" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Kundalini is often shrouded in mystery, perceived as a foreign force, an exceptional event to be provoked, or a dangerous phenomenon. In our practice, it can be understood in a very simple and physiological way: it is <strong>the capacity of the nervous system to conduct energy in a stable and coherent manner</strong>. We call it ecstatic conductivity.</p>
                 <p>It corresponds to a process of gradual maturation, in which the body and consciousness learn to function together with less friction. As long as the system is cluttered with tensions and old conditioning (samskaras), the energy circulates in a fragmented way, producing agitation or overload. Inner work consists above all of clearing and softening the terrain through Spinal Breathing.</p>
                 <p>An essential point must be understood: <strong>energy, left to itself, liberates nothing</strong>. It merely amplifies what is already there. If the system lacks stability, it will accentuate confusion. This is why the foundation of Inner Silence (Deep Meditation) is indispensable. Silence acts as a natural regulator, allowing the energy to integrate gently instead of overflowing.</p>
@@ -945,6 +945,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

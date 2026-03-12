@@ -1,4 +1,4 @@
-const TEACHINGS_DATABASE = {
+
     const MANUEL_DATABASE = {
     fr: {
         title: "Le Manuel Opératoire : L'Échelle des Pratiques",
@@ -107,6 +107,8 @@ const TEACHINGS_DATABASE = {
         `
     }
 };
+
+const TEACHINGS_DATABASE = {
     fr: [
         {
             title: "L’éveil du Silence Intérieur : La Fondation Inébranlable",
@@ -1395,6 +1397,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

@@ -50,6 +50,10 @@
                 <span class="fr">Enseignements</span>
                 <span class="en" style="display:none;">Teachings</span>
             </button>
+           <button id="nav-manuel" onclick="showSection('manuel')">
+    <span class="fr">Le Manuel</span>
+    <span class="en" style="display:none;">The Manual</span>
+</button>
             <button id="nav-murmures" onclick="showSection('murmures')">
                 <span class="fr">Murmures</span>
                 <span class="en" style="display:none;">Whispers</span>
@@ -297,6 +301,10 @@
                 </p>
             </div>
         </section>
+        <section id="manuel" class="section" style="display: none;">
+    <div id="manuel-container" style="max-width: 800px; margin: 0 auto; background: var(--box-bg); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color);">
+        </div>
+</section>
     </main>
 <div class="teaching-article parchment-text" id="registre-container" style="text-align: center; max-width: 600px; margin: 60px auto 40px; padding: 40px; background: var(--box-bg); border-radius: 12px; border: 1px solid var(--accent-color); box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
     <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-top: 0; margin-bottom: 15px;">
@@ -433,6 +441,7 @@
         renderMurmures();
         renderParabole();
         renderBibliotheque();
+        renderManuel();
     }
 
     function toggleTheme() {
@@ -467,6 +476,20 @@
                 <span style="color: var(--accent-color); margin-right: 12px;">${signatureText}</span>
                 <img src="sceau-gardien.png" alt="Sceau du Gardien" style="height: 35px; border-radius: 50%; box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);">
             </div>
+        `;
+    }
+        function renderManuel() {
+        const container = document.getElementById('manuel-container');
+        if (!container) return;
+
+        // Récupère les données selon la langue active
+        const data = MANUEL_DATABASE[currentLang];
+        
+        container.innerHTML = `
+            <h2 style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; margin-bottom: 30px;">
+                ${data.title}
+            </h2>
+            <div>${data.body}</div>
         `;
     }
 
@@ -699,6 +722,7 @@
         renderMurmures();
         renderParabole();
         renderBibliotheque();
+        renderManuel();
     };
 
  // --- 🎧 DÉVERROUILLAGE INITIAL DU SON ---
@@ -721,6 +745,7 @@
     </script>
 </body>
 </html>
+
 
 
 

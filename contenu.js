@@ -1,4 +1,112 @@
 const TEACHINGS_DATABASE = {
+    const MANUEL_DATABASE = {
+    fr: {
+        title: "Le Manuel Opératoire : L'Échelle des Pratiques",
+        body: `
+            <img src="echelle-pratiques.png" alt="L'Échelle des Pratiques AYP" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            
+            <div style="text-align: center; margin-bottom: 30px;">
+                <button onclick="window.print()" style="background-color: var(--accent-color); color: #000; padding: 10px 20px; border: none; border-radius: 5px; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; cursor: pointer; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+                    📜 Sauvegarder ce Manuel en PDF
+                </button>
+                <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 10px;">(Cliquez pour imprimer ou enregistrer en PDF avec le Sceau du Temple)</p>
+            </div>
+
+            <div id="manuel-imprimable">
+                <p>Dans notre système, l'évolution spirituelle n'est pas un bloc rigide, mais un système modulaire. On ajoute les pratiques une à une, sur des mois ou des années. La règle absolue est l'auto-régulation (<em>Self-Pacing</em>) : ne forcez jamais. Voici l'ordre d'exécution d'une séance quotidienne complète.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Étape 1 : La Préparation (Asanas)</h3>
+                <p><strong>But :</strong> Assouplir le corps et préparer les nerfs.<br>
+                <strong>Durée :</strong> 5 à 10 minutes.<br>
+                <strong>Exécution :</strong> Effectuez une routine douce de flexions et d'étirements (genoux sur la poitrine, torsion spinale, cobra). Ne forcez jamais jusqu'à la douleur.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Étape 2 : L'Éveil (Respiration Spinale & Bandhas)</h3>
+                <p><strong>But :</strong> Nettoyer le canal central et éveiller l'énergie.<br>
+                <strong>Durée :</strong> 5 à 10 minutes.<br>
+                <strong>Exécution :</strong> Respirez lentement et profondément. À l'inspiration, tracez avec votre attention un fil allant du périnée jusqu'au centre des sourcils (le 3e œil). À l'expiration, redescendez par le même chemin.<br>
+                <strong>Les Accélérateurs (à ajouter progressivement) :</strong>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><em>Mulabandha :</em> Maintenez une légère contraction du sphincter anal pendant toute la respiration.</li>
+                    <li><em>Sambhavi :</em> Gardez les yeux fermés, doucement levés et centrés vers le troisième œil.</li>
+                    <li><em>Siddhasana :</em> Asseyez-vous avec un talon pressant doucement contre le périnée.</li>
+                </ul></p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Étape 3 : La Fondation (Méditation Profonde)</h3>
+                <p><strong>But :</strong> Cultiver le silence intérieur et le Témoin.<br>
+                <strong>Durée :</strong> 20 minutes (strictement).<br>
+                <strong>Exécution :</strong> Relâchez la respiration spinale et les verrous. Pensez doucement au mantra <strong>AYAM</strong> ("I AM"). S'il devient flou, laissez-le faire. Dès que vous réalisez que vous êtes perdu dans vos pensées, ramenez simplement et très doucement votre attention sur le mantra.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Étape 4 : L'Expansion (Samyama)</h3>
+                <p><strong>But :</strong> Faire rayonner le silence dans l'action.<br>
+                <strong>Durée :</strong> 5 à 10 minutes.<br>
+                <strong>Exécution :</strong> Reposez-vous 1 minute après la méditation. Pensez au premier sutra (Amour, Radiance, Unité...) de manière très faible et floue, sans réfléchir à son sens, puis relâchez-le dans le silence pendant 15 secondes. Répétez chaque sutra deux fois, puis passez au suivant.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Étape 5 : La Clôture (Repos Obligatoire)</h3>
+                <p><strong>But :</strong> Stabiliser l'énergie dans le système nerveux.<br>
+                <strong>Durée :</strong> 5 à 10 minutes.<br>
+                <strong>Exécution :</strong> Allongez-vous (Savasana) ou restez assis, les yeux fermés. Ne faites rien. Ce temps de repos est absolu et non négociable.</p>
+
+                <div align="center" style="margin-top: 50px;">
+                    <img src="sceau-gardien.png" width="80" alt="Sceau du Gardien">
+                    <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; opacity: 0.8;">Le Gardien du Temple</p>
+                </div>
+            </div>
+        `
+    },
+    en: {
+        title: "The Operating Manual: The Ladder of Practices",
+        body: `
+            <img src="echelle-pratiques.png" alt="The Ladder of AYP Practices" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            
+            <div style="text-align: center; margin-bottom: 30px;">
+                <button onclick="window.print()" style="background-color: var(--accent-color); color: #000; padding: 10px 20px; border: none; border-radius: 5px; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; cursor: pointer; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+                    📜 Save this Manual as PDF
+                </button>
+                <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 10px;">(Click to print or save as PDF with the Temple's Seal)</p>
+            </div>
+
+            <div id="manuel-imprimable">
+                <p>In our system, spiritual evolution is not a rigid block, but a modular system. We add practices one by one, over months or years. The absolute rule is self-pacing: never force. Here is the exact order of execution for a complete daily session.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Step 1: Preparation (Asanas)</h3>
+                <p><strong>Goal:</strong> Loosen the body and prepare the nerves.<br>
+                <strong>Duration:</strong> 5 to 10 minutes.<br>
+                <strong>Execution:</strong> Perform a gentle routine of bending and stretching. Never push to the point of pain.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Step 2: Awakening (Spinal Breathing & Bandhas)</h3>
+                <p><strong>Goal:</strong> Cleanse the central channel and awaken the energy.<br>
+                <strong>Duration:</strong> 5 to 10 minutes.<br>
+                <strong>Execution:</strong> Breathe slowly and deeply. On the inhale, trace a thread with your attention from the perineum to the center of the eyebrows (the 3rd eye). On the exhale, go back down the same path.<br>
+                <strong>Accelerators (to be added gradually):</strong>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><em>Mulabandha:</em> Maintain a slight contraction of the anal sphincter throughout the breathing.</li>
+                    <li><em>Sambhavi:</em> Keep your eyes closed, gently elevated and centered towards the third eye.</li>
+                    <li><em>Siddhasana:</em> Sit with one heel gently pressing against the perineum.</li>
+                </ul></p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Step 3: The Foundation (Deep Meditation)</h3>
+                <p><strong>Goal:</strong> Cultivate inner silence and the Witness.<br>
+                <strong>Duration:</strong> 20 minutes (strictly).<br>
+                <strong>Execution:</strong> Release the spinal breathing and the locks. Gently think the mantra <strong>AYAM</strong> ("I AM"). As soon as you realize you are lost in thought, simply and very gently bring your attention back to the mantra.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Step 4: Expansion (Samyama)</h3>
+                <p><strong>Goal:</strong> Radiate silence into action.<br>
+                <strong>Duration:</strong> 5 to 10 minutes.<br>
+                <strong>Execution:</strong> Rest for 1 minute after meditation. Think the first sutra in a very faint and fuzzy way, without thinking about its meaning, then release it into the silence for 15 seconds. Repeat each sutra twice, then move on to the next.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Step 5: Closing (Mandatory Rest)</h3>
+                <p><strong>Goal:</strong> Stabilize the energy in the nervous system.<br>
+                <strong>Duration:</strong> 5 to 10 minutes.<br>
+                <strong>Execution:</strong> Lie down (Savasana) or remain seated with your eyes closed. Do nothing. This rest time is absolute and non-negotiable.</p>
+
+                <div align="center" style="margin-top: 50px;">
+                    <img src="sceau-gardien.png" width="80" alt="Seal of the Guardian">
+                    <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; opacity: 0.8;">The Guardian of the Temple</p>
+                </div>
+            </div>
+        `
+    }
+};
     fr: [
         {
             title: "L’éveil du Silence Intérieur : La Fondation Inébranlable",
@@ -1287,6 +1395,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

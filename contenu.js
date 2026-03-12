@@ -115,6 +115,17 @@ const TEACHINGS_DATABASE = {
                 <p>Elle se manifeste par la fonction : lorsqu'une continuité s'installe entre la respiration et l'attention, le corps s'aligne doucement. La respiration lente et fluide entraîne naturellement le système nerveux à reconnaître cette trajectoire.</p>
                 <p>Il est vital de comprendre que toute tentative de forcer, de contracter ou de contrôler rigidement ce trajet ne fait que renforcer les tensions. L'axe central se révèle uniquement lorsque le système apprend à <em>faire moins</em>, à laisser l'attention et le souffle coopérer sans contrainte. À mesure que cette trajectoire se stabilise, les tensions chroniques se relâchent, car elles ne sont plus nécessaires pour maintenir une cohérence artificielle. Le chemin naturel de la vie intérieure s'organise et s'exprime alors dans l'action avec justesse.</p>
             `
+        },
+        {
+            title: "Démystifier la Kundalini : La Conductivité Extatique",
+            body: `
+                <img src="kundalini-energie.jpg" alt="La Conductivité Extatique" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>La Kundalini est souvent entourée de mystère, perçue comme une force étrangère, un événement exceptionnel à provoquer ou un phénomène dangereux. Dans notre pratique, elle peut être comprise de manière très simple et physiologique : elle est <strong>la capacité du système nerveux à conduire l’énergie de façon stable et cohérente</strong>. Nous l'appelons la conductivité extatique.</p>
+                <p>Elle correspond à un processus de maturation progressive, dans lequel le corps et la conscience apprennent à fonctionner ensemble avec moins de friction. Tant que le système est encombré de tensions et de vieux conditionnements (les samskaras), l’énergie circule de manière fragmentée, produisant de l’agitation ou une surcharge. Le travail intérieur consiste avant tout à rendre le terrain plus clair et plus souple grâce à la Respiration Spinale.</p>
+                <p>Un point essentiel doit être compris : <strong>l’énergie, laissée à elle-même, ne libère rien</strong>. Elle se contente d'amplifier ce qui est déjà là. Si le système manque de stabilité, elle accentuera la confusion. C’est pourquoi la base du Silence Intérieur (la Méditation Profonde) est indispensable. Le silence agit comme un régulateur naturel, permettant à l’énergie de s’intégrer doucement au lieu de déborder.</p>
+                <p>La Kundalini n’apparaît donc pas comme un « éveil » soudain et spectaculaire, mais comme une augmentation graduelle de la conductivité. À mesure que le système nerveux se purifie, l’énergie devient une qualité de circulation fluide, rarement envahissante. Les véritables signes de progrès ne sont pas des frissons mystiques, mais une plus grande clarté mentale, une action juste, et des émotions qui vous traversent sans monopoliser votre espace intérieur.</p>
+                <p>Lorsqu'une intensité excessive apparaît (irritabilité, insomnie), ce n'est jamais un accomplissement, mais le signal absolu qu'il faut ajuster votre rythme (l'auto-régulation). La maturation se fait par l'équilibre, jamais par l'accumulation. Comprise ainsi, la Kundalini cesse d'être un trophée spirituel ; elle devient le résultat naturel d'un système nerveux qui s'ordonne et soutient une vie lumineuse.</p>
+            `
         }
     ], // <--- LE CROCHET FERMANT EST ICI, AVANT LE "en:"
     en: [
@@ -232,6 +243,17 @@ const TEACHINGS_DATABASE = {
                 <p>The <em>sushumna</em> (the central spinal channel) is not a rigid mystical structure, but a functional possibility for the nervous system to organize itself around a stable center. Initially, inner experience is fragmented and breathing is irregular; the axis exists in potential but remains unused.</p>
                 <p>It manifests through function: when continuity settles between breath and attention, the body gently aligns. Slow, fluid breathing naturally trains the nervous system to recognize this trajectory.</p>
                 <p>It is vital to understand that any attempt to force, contract, or rigidly control this path only reinforces tension. The central axis reveals itself only when the system learns to <em>do less</em>, to let attention and breath cooperate without constraint. As this trajectory stabilizes, chronic tensions release, for they are no longer necessary to maintain an artificial coherence. The natural path of the inner life then organizes and accurately expresses itself in action.</p>
+            `
+        },
+        {
+            title: "Demystifying Kundalini: Ecstatic Conductivity",
+            body: `
+                <img src="kundalini-energie.jpg" alt="Ecstatic Conductivity" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Kundalini is often shrouded in mystery, perceived as a foreign force, an exceptional event to be provoked, or a dangerous phenomenon. In our practice, it can be understood in a very simple and physiological way: it is <strong>the capacity of the nervous system to conduct energy in a stable and coherent manner</strong>. We call it ecstatic conductivity.</p>
+                <p>It corresponds to a process of gradual maturation, in which the body and consciousness learn to function together with less friction. As long as the system is cluttered with tensions and old conditioning (samskaras), the energy circulates in a fragmented way, producing agitation or overload. Inner work consists above all of clearing and softening the terrain through Spinal Breathing.</p>
+                <p>An essential point must be understood: <strong>energy, left to itself, liberates nothing</strong>. It merely amplifies what is already there. If the system lacks stability, it will accentuate confusion. This is why the foundation of Inner Silence (Deep Meditation) is indispensable. Silence acts as a natural regulator, allowing the energy to integrate gently instead of overflowing.</p>
+                <p>Kundalini therefore does not appear as a sudden and spectacular "awakening," but as a gradual increase in conductivity. As the nervous system purifies, the energy becomes a fluid quality of circulation, rarely overwhelming. The true signs of progress are not mystical thrills, but greater mental clarity, right action, and emotions that pass through you without monopolizing your inner space.</p>
+                <p>When excessive intensity appears (irritability, insomnia), it is never an achievement, but the absolute signal that you must adjust your pace (self-pacing). Maturation happens through balance, never through accumulation. Understood in this way, Kundalini ceases to be a spiritual trophy; it becomes the natural result of an ordering nervous system that supports a luminous life.</p>
             `
         }
     ]
@@ -923,6 +945,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

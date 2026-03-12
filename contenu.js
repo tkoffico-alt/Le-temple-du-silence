@@ -167,6 +167,25 @@ const TEACHINGS_DATABASE = {
             `
         },
         {
+            title: "Le Prana et le Souffle : L'Art du Forgeron",
+            body: `
+                <img src="prana-souffle.jpg" alt="Le Feu du Prana" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Nous avons vu que la purification de notre système nerveux génère une friction, souvent ressentie comme une chaleur interne. Pour diriger cette énergie (le <em>prana</em>) sans se brûler, nous possédons un outil d'une précision absolue : le souffle.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. L'Aspiration : La loi du vide</h3>
+                <p>Comment faire monter l'énergie dormante vers le cerveau sans forcer ? En utilisant la loi naturelle du vide biologique.</p>
+                <p>Lorsque nous pratiquons la Respiration Spinale, nous ralentissons volontairement notre souffle. Cette douce restriction crée un léger déficit en oxygène. La nature ayant horreur du vide, le corps compense ce manque en "aspirant" naturellement le prana vers le haut du système nerveux. Le souffle est le levier silencieux qui tire l'énergie, sans aucun effort musculaire.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">2. Attiser avec sagesse : Le Soufflet (Bastrika)</h3>
+                <p>Si la Respiration Spinale est le balayage quotidien qui entretient le feu en douceur, il existe des pratiques physiques plus avancées pour traiter les blocages récalcitrants : le <em>Bastrika</em> (la respiration du soufflet).</p>
+                <p>Tout comme le forgeron utilise un soufflet pour attiser les braises, cette respiration rapide (semblable au halètement d'un chien) envoie de puissantes impulsions le long de la sushumna. C'est un nettoyeur haute pression conçu pour déloger les karmas (les tensions) les plus tenaces. Il peut même être "ciblé" comme un laser sur une zone spécifique (la gorge, le cœur) pour y concentrer toute la pression purificatrice.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">3. L'Alchimie Finale du Souffle</h3>
+                <p>Ce feu attisé par le souffle n'a pas vocation à brûler éternellement. Au fil du temps, à mesure que les vieux blocages sont réduits en cendres, le passage de l'énergie devient silencieux.</p>
+                <p>Vous remarquerez alors que votre souffle physique ralentit naturellement. Parfois, il semble même se suspendre de lui-même pendant la méditation, car la vitalité intérieure compense le besoin d'oxygène. Allié au Silence, ce souffle purifié devient le canal d'une paix inébranlable.</p>
+            `
+        },
+        {
             title: "L'Émergence du Soi : Du Témoin à l'Unité",
             body: `
                 <img src="emergence-soi.png" alt="L'Émergence du Soi" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
@@ -359,6 +378,25 @@ const TEACHINGS_DATABASE = {
                     <li><strong>Self-pacing:</strong> If friction becomes too strong (insomnia, irritability, excessive heat), you must immediately reduce your practice time and <em>ground</em> yourself (walk in nature, eat heavier food).</li>
                 </ul>
                 <p>Kundalini is not magic, but a natural physiological potential. Once old blockages are cleared, nerve friction disappears. The conductivity then merges with your silence to become a peaceful radiance: pure love expressing itself in the serene action of daily life.</p>
+            `
+        },
+        {
+            title: "Prana and the Breath: The Blacksmith's Art",
+            body: `
+                <img src="prana-souffle.jpg" alt="The Fire of Prana" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>We have seen that the purification of our nervous system generates friction, often felt as internal heat. To direct this energy (<em>prana</em>) without burning out, we possess a tool of absolute precision: the breath.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. The Vacuum Effect: Drawing the Energy</h3>
+                <p>How do we draw the dormant energy up to the brain without forcing it? By using the natural law of the biological vacuum.</p>
+                <p>When we practice Spinal Breathing, we deliberately slow down our breath. This gentle restriction creates a slight oxygen deficit. Since nature abhors a vacuum, the body compensates for this lack by naturally "vacuuming" the prana up into the higher nervous system. The breath is the silent lever that pulls the energy, without any muscular effort.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">2. Fanning Wisely: The Bellows (Bastrika)</h3>
+                <p>If Spinal Breathing is the daily sweep that gently maintains the fire, there are more advanced physical practices to deal with stubborn blockages: <em>Bastrika</em> (bellows breathing).</p>
+                <p>Just as a blacksmith uses a bellows to fan the embers, this rapid breathing (similar to a dog's panting) sends powerful impulses along the sushumna. It is a high-pressure cleaner designed to dislodge the most stubborn karmas (tensions). It can even be "targeted" like a laser on a specific area (the throat, the heart) to concentrate all the purifying pressure there.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">3. The Final Alchemy of Breath</h3>
+                <p>This fire, fanned by the breath, is not meant to burn forever. Over time, as old blockages are reduced to ashes, the passage of energy becomes silent.</p>
+                <p>You will then notice that your physical breath naturally slows down. Sometimes, it even seems to suspend itself during meditation, because the inner vitality compensates for the need for oxygen. Combined with Silence, this purified breath becomes the channel for unshakeable peace.</p>
             `
         },
         {
@@ -1117,6 +1155,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

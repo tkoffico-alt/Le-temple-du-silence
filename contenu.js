@@ -239,6 +239,44 @@ const TEACHINGS_DATABASE = {
                 </ul>
                 <p>En somme, l'illumination n'est pas une fuite. C'est un voyage "d'ici à ici". C'est célébrer le monde matériel non plus comme un piège, mais comme l'expression irradiante de la liberté absolue que nous avons toujours été.</p>
             `
+        },
+        {
+            title: "Le Samyama : L'Art de la Quiétude en Action",
+            body: `
+                <img src="samyama-quietude.png" alt="Le Samyama : La Quiétude en Action" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Le Samyama est une pratique avancée qui consiste à introduire une intention (un <em>sutra</em>) dans notre silence intérieur, puis à la relâcher complètement. Son but n'est pas de créer des pouvoirs magiques, mais de cultiver "la quiétude en action" : permettre à notre paix profonde de rayonner dans notre vie quotidienne. Pour qu'elle fonctionne, cette pratique mécanique obéit à des règles précises.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. Le Terreau Absolu : Le Silence Intérieur</h3>
+                <p>Le Samyama consiste à faire bouger le silence intérieur vers l'extérieur. Par conséquent, s'il n'y a pas de silence préétabli, la pratique tournera à vide. C'est pourquoi le Samyama ne s'aborde qu'après avoir cultivé le Témoin par plusieurs mois de Méditation Profonde régulière.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">2. Le Moment Juste et l'Approche "Floue"</h3>
+                <p>Le Samyama s'effectue <strong>immédiatement après</strong> la méditation, lorsque le silence est le plus vaste. Après une minute de repos neutre, nous utilisons les sutras. La clé absolue ici est d'abandonner l'intellect : il ne faut jamais contempler ou réfléchir au sens du mot. Pensez au sutra de manière très faible et "floue", puis relâchez-le totalement dans le silence pendant environ 15 secondes. Le Samyama réside à 99% dans l'acte de lâcher prise.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">3. La Constance de la Recette</h3>
+                <p>Pour que les sutras "cuisent" et s'ancrent dans le système nerveux, vous devez utiliser une liste fixe et équilibrée (comme : <em>Amour, Radiance, Unité...</em>) sans en changer tous les jours au gré de vos humeurs. C'est la régularité qui dissout la frontière entre la méditation et l'action.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">4. La Règle de Sécurité : Le Repos Final</h3>
+                <p>Le Samyama purge profondément le système nerveux et libère une vaste énergie. Il est <strong>impératif</strong> de prendre 5 à 10 minutes de repos (idéalement allongé) à la toute fin de la séance. Sauter ce repos conduit inévitablement à de l'irritabilité dans la journée. Si l'inconfort persiste, appliquez l'auto-régulation : réduisez le nombre de sutras ou le temps de pratique.</p>
+            `
+        },
+        {
+            title: "L'Enquête sur le Soi : Poser la Question dans le Silence",
+            body: `
+                <img src="enquete-soi.png" alt="L'Enquête sur le Soi : Le miroir du Silence" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>L'Enquête sur le Soi (demander <em>"Qui suis-je ?"</em>) est souvent mal comprise. On la confond avec une réflexion philosophique. Or, essayer de résoudre le problème de l'ego avec l'intellect revient à nommer le voleur comme chef de la police. C'est une boucle sans fin. L'Enquête est une pratique vibratoire qui exige une fondation solide.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. La Maturité du Témoin</h3>
+                <p>Pratiquer l'enquête sans avoir d'abord installé le silence intérieur (le Témoin) revient à bâtir des châteaux en l'air. Sans ce silence de fond cultivé par la méditation, répéter "Qui suis-je ?" ne produira que des maux de tête. Il faut être "mûr" pour que la question porte ses fruits.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">2. Une Approche Relationnelle et Silencieuse</h3>
+                <p>L'enquête véritable n'est pas de chercher une réponse mentale ("Aha ! je suis l'univers !"). La technique emprunte la mécanique du Samyama : on pose la question doucement, et on la relâche dans le silence. On ne cherche pas la réponse, <strong>on devient la réponse</strong>. C'est observer les pensées et les émotions depuis cet espace de silence, sans s'y accrocher.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">3. Le Moteur de la Dévotion (Bhakti)</h3>
+                <p>L'enquête n'est pas un exercice froid et clinique. Elle est propulsée par la <em>Bhakti</em> : le désir brûlant et sincère de connaître notre vraie nature. C'est cette ferveur silencieuse qui donne à la question tout son pouvoir de dissolution.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">4. L'Auto-Ajustement de l'Enquête</h3>
+                <p>Votre baromètre est simple : si l'enquête provoque de la tension, de la frustration ou le sentiment de juger vos pensées, vous forcez mentalement. Relâchez, et retournez à la simple méditation. L'enquête juste est toujours vécue comme une expansion joyeuse, légère et libératrice face aux aléas de la vie.</p>
+            `
         }
     ], // <--- LE CROCHET FERMANT EST ICI, AVANT LE "en:"
     en: [
@@ -480,6 +518,44 @@ const TEACHINGS_DATABASE = {
                     <li><strong>Outpouring love:</strong> Realizing that all beings are an expression of your own Self, the ego that sought to "get" disappears. It is replaced by a natural need to give oneself to the world, expecting nothing in return.</li>
                 </ul>
                 <p>In short, enlightenment is not an escape. It is a journey from "here to here". It is celebrating the material world no longer as a trap, but as the radiating expression of the absolute freedom we have always been.</p>
+            `
+        },
+        {
+            title: "Samyama: The Art of Stillness in Action",
+            body: `
+                <img src="samyama-quietude.png" alt="Samyama: Stillness in Action" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Samyama is an advanced practice that consists of introducing an intention (a <em>sutra</em>) into our inner silence, and then releasing it completely. Its goal is not to create magical powers, but to cultivate "stillness in action": allowing our deep peace to radiate into our daily life. For it to work, this mechanical practice obeys precise rules.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. The Absolute Soil: Inner Silence</h3>
+                <p>Samyama consists of moving inner silence outward. Therefore, if there is no pre-established silence, the practice will spin its wheels. This is why Samyama is only approached after cultivating the Witness through several months of regular Deep Meditation.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">2. The Right Timing and the "Fuzzy" Approach</h3>
+                <p>Samyama is performed <strong>immediately after</strong> meditation, when the silence is vastest. After a minute of neutral rest, we use the sutras. The absolute key here is to abandon the intellect: you must never contemplate or think about the meaning of the word. Think the sutra in a very "faint and fuzzy" way, then release it completely into the silence for about 15 seconds. Samyama is 99% letting go.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">3. The Constancy of the Recipe</h3>
+                <p>For the sutras to "bake" into the nervous system, you must use a fixed and balanced list (like: <em>Love, Radiance, Unity...</em>) without changing it every day according to your moods. It is regularity that dissolves the boundary between meditation and action.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">4. The Safety Rule: Final Rest</h3>
+                <p>Samyama deeply purges the nervous system and releases vast energy. It is <strong>imperative</strong> to take 5 to 10 minutes of rest (ideally lying down) at the very end of the session. Skipping this rest inevitably leads to irritability during the day. If discomfort persists, apply self-pacing: reduce the number of sutras or practice time.</p>
+            `
+        },
+        {
+            title: "Self-Inquiry: Dropping the Question into Silence",
+            body: `
+                <img src="enquete-soi.png" alt="Self-Inquiry: The Mirror of Silence" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Self-Inquiry (asking <em>"Who am I?"</em>) is often misunderstood. It is confused with philosophical reflection. However, trying to solve the problem of the ego with the intellect is like appointing the thief as the chief of police. It's an endless loop. Inquiry is a vibrational practice that requires a solid foundation.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. The Maturity of the Witness</h3>
+                <p>Practicing inquiry without first installing inner silence (the Witness) is like building castles in the air. Without this background silence cultivated by meditation, repeating "Who am I?" will only produce headaches. One must be "ripe" for the question to bear fruit.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">2. A Relational and Silent Approach</h3>
+                <p>True inquiry is not about looking for a mental answer ("Aha! I am the universe!"). The technique borrows the mechanics of Samyama: we drop the question gently, and release it into the silence. We don't look for the answer, <strong>we become the answer</strong>. It means observing thoughts and emotions from this space of silence, without clinging to them.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">3. The Engine of Devotion (Bhakti)</h3>
+                <p>Inquiry is not a cold and clinical exercise. It is propelled by <em>Bhakti</em>: the burning and sincere desire to know our true nature. It is this silent fervor that gives the question all its dissolving power.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">4. Self-Pacing the Inquiry</h3>
+                <p>Your barometer is simple: if inquiry causes tension, frustration, or the feeling of judging your thoughts, you are forcing it mentally. Let go, and return to simple meditation. Proper inquiry is always experienced as a joyful, light, and liberating expansion in the face of life's ups and downs.</p>
             `
         }
     ]
@@ -1211,6 +1287,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

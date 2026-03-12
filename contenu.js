@@ -487,7 +487,17 @@ const MURMURES_DATABASE = {
     title: "Paradoxe : La Force de la Vulnérabilité",
     audioFile: "", imageFile: "", videoFile: "",
     text: "Dans l'effort constant pour se durcir, se protéger et se rendre invulnérable, le corps se crispe et les émotions se verrouillent. Cette stratégie de défense consomme une énergie immense et finit inévitablement par nous isoler.<br><br>La véritable vulnérabilité commence précisément quand on cesse de lutter contre le fait d’être affecté. Être touché par le monde n’implique pas automatiquement de s’effondrer. La force réelle réside dans cette capacité à rester présent à ce qui se passe sans se fermer ni se dissoudre.<br><br>Lorsque l'on cesse de masquer ce qui est sensible, la respiration redevient naturelle et les réactions automatiques perdent de leur brutalité. La vraie force n’est pas de ne rien sentir, mais de pouvoir sentir sans se perdre."
-}
+},
+        {
+            title: "Paradoxe : L'Action qui naît du Non-Faire",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "Nous croyons souvent que l'inaction est une faiblesse et que seul l'effort forcé produit des résultats tangibles. Pourtant, dans la mécanique intime de notre système nerveux, c'est exactement l'inverse qui se produit : c'est lorsque nous cessons d'agiter l'esprit que l'action la plus puissante émerge.<br><br>Le non-faire (ou le lâcher-prise) n'est en aucun cas de la paresse ou de la résignation. C'est l'art subtil de laisser l'intelligence silencieuse du Soi prendre les commandes. Quand l'ego arrête de lutter pour tout contrôler, la tension tombe. L'action qui s'ensuit devient alors fluide, précise, et ne laisse aucun sillage d'épuisement derrière elle.<br><br>Cessez de pousser la rivière ; elle coule toute seule."
+        },
+        {
+            title: "Écho : La Constance Invisible",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "La véritable transformation spirituelle ne s'annonce jamais avec des trompettes ou des éclairs de lumière. Elle obéit à la loi de la nature, ressemblant à la croissance d'un arbre : totalement invisible au jour le jour, mais indéniable au fil des saisons.<br><br>L'erreur est de vouloir évaluer votre pratique méditative à la fin de chaque séance. Ne vous jugez pas si votre esprit a vagabondé, ne cherchez pas le silence parfait. La constance est la seule véritable magie. <br><br>C'est l'accumulation discrète de ces minutes passées à revenir doucement au centre, jour après jour, qui, goutte après goutte, finit par dissoudre le roc de vos plus anciennes tensions."
+        }
     ],
     en: [
         {
@@ -584,7 +594,17 @@ const MURMURES_DATABASE = {
     title: "Paradox: The Strength of Vulnerability",
     audioFile: "", imageFile: "", videoFile: "",
     text: "In the constant effort to harden, protect oneself, and become invulnerable, the body tenses and emotions lock up. This defensive strategy consumes immense energy and inevitably ends up isolating us.<br><br>True vulnerability begins precisely when we stop fighting against the fact of being affected. Being touched by the world does not automatically imply collapsing. Real strength lies in this ability to remain present to what is happening without closing off or dissolving.<br><br>When we stop masking what is sensitive, breathing becomes natural again and automatic reactions lose their brutality. True strength is not feeling nothing, but being able to feel without losing oneself."
-}
+},
+        {
+            title: "Paradox: Action Born from Non-Doing",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "We often believe that inaction is a weakness and that only forced effort produces tangible results. Yet, in the intimate mechanics of our nervous system, the exact opposite occurs: it is when we stop agitating the mind that the most powerful action emerges.<br><br>Non-doing (or letting go) is by no means laziness or resignation. It is the subtle art of letting the silent intelligence of the Self take the wheel. When the ego stops fighting to control everything, tension drops. The resulting action then becomes fluid, precise, and leaves no wake of exhaustion behind it.<br><br>Stop pushing the river; it flows by itself."
+        },
+        {
+            title: "Echo: The Invisible Constancy",
+            audioFile: "", imageFile: "", videoFile: "",
+            text: "True spiritual transformation never announces itself with trumpets or flashes of light. It obeys the law of nature, resembling the growth of a tree: totally invisible day by day, but undeniable as the seasons pass.<br><br>The mistake is wanting to evaluate your meditation practice at the end of each session. Do not judge yourself if your mind has wandered, do not seek perfect silence. Constancy is the only real magic.<br><br>It is the quiet accumulation of these minutes spent gently returning to the center, day after day, that, drop by drop, eventually dissolves the rock of your oldest tensions."
+        }
     ]
 };
 const PARABOLE_DATA = {
@@ -1077,6 +1097,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

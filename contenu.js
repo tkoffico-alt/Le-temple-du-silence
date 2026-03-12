@@ -139,11 +139,31 @@ const TEACHINGS_DATABASE = {
             title: "Démystifier la Kundalini : La Conductivité Extatique",
             body: `
                 <img src="kundalini-energie.png" alt="La Conductivité Extatique" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                <p>La Kundalini est souvent entourée de mystère, perçue comme une force étrangère, un événement exceptionnel à provoquer ou un phénomène dangereux. Dans notre pratique, elle peut être comprise de manière très simple et physiologique : elle est <strong>la capacité du système nerveux à conduire l’énergie de façon stable et cohérente</strong>. Nous l'appelons la conductivité extatique.</p>
-                <p>Elle correspond à un processus de maturation progressive, dans lequel le corps et la conscience apprennent à fonctionner ensemble avec moins de friction. Tant que le système est encombré de tensions et de vieux conditionnements (les samskaras), l’énergie circule de manière fragmentée, produisant de l’agitation ou une surcharge. Le travail intérieur consiste avant tout à rendre le terrain plus clair et plus souple grâce à la Respiration Spinale.</p>
-                <p>Un point essentiel doit être compris : <strong>l’énergie, laissée à elle-même, ne libère rien</strong>. Elle se contente d'amplifier ce qui est déjà là. Si le système manque de stabilité, elle accentuera la confusion. C’est pourquoi la base du Silence Intérieur (la Méditation Profonde) est indispensable. Le silence agit comme un régulateur naturel, permettant à l’énergie de s’intégrer doucement au lieu de déborder.</p>
-                <p>La Kundalini n’apparaît donc pas comme un « éveil » soudain et spectaculaire, mais comme une augmentation graduelle de la conductivité. À mesure que le système nerveux se purifie, l’énergie devient une qualité de circulation fluide, rarement envahissante. Les véritables signes de progrès ne sont pas des frissons mystiques, mais une plus grande clarté mentale, une action juste, et des émotions qui vous traversent sans monopoliser votre espace intérieur.</p>
-                <p>Lorsqu'une intensité excessive apparaît (irritabilité, insomnie), ce n'est jamais un accomplissement, mais le signal absolu qu'il faut ajuster votre rythme (l'auto-régulation). La maturation se fait par l'équilibre, jamais par l'accumulation. Comprise ainsi, la Kundalini cesse d'être un trophée spirituel ; elle devient le résultat naturel d'un système nerveux qui s'ordonne et soutient une vie lumineuse.</p>
+                <p>Pendant des siècles, la « Kundalini » a été entourée de mystère, souvent décrite comme un serpent lové à la base de la colonne vertébrale, attendant d'être éveillé avec un mélange de fascination et de peur. Notre approche dépouille cette énergie de son mysticisme intimidant pour la redéfinir en termes mécaniques simples : <strong>la conductivité extatique</strong>.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. La Racine de l'Énergie</h3>
+                <p>Le vaste réservoir de la force vitale (prana) chez l'être humain se trouve dans le bassin. À l'état dormant, cette énergie est perçue de manière purement physique ou érotique. La conductivité extatique n'est rien d'autre que l'expansion de cette même fonction vitale vers le haut. Guidée le long du nerf spinal (sushumna), cette énergie s'affine et se transforme pour devenir une expérience spirituellement extatique, nourrissant la biologie tout entière.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">2. Le Mythe des Symptômes (La Friction)</h3>
+                <p>L'une des plus grandes erreurs du chercheur spirituel est de confondre le processus de nettoyage avec le but final. L'éveil de l'énergie provoque parfois des symptômes spectaculaires : chaleur intense, secousses physiques, visions ou frissons. Ce n'est pas l'illumination. C'est simplement le résultat de la <strong>friction</strong> créée par une énergie massive essayant de traverser des nerfs encore encombrés par de vieux blocages.</p>
+                <p>Les visions et les sons intérieurs ne sont que le paysage (<em>scenery</em>) du voyage. Ne vous y attachez pas, car s'y arrêter retarde la purification. Le but n'est pas de trembler, mais d'atteindre une joie lisse, fluide et ininterrompue à l'échelle cellulaire.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">3. La Mécanique de l'Éveil</h3>
+                <p>Nous n'attendons pas un miracle extérieur. Nous cultivons cette conductivité de manière autonome et douce :</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>La Respiration Spinale :</strong> En traçant le nerf spinal avec l'attention et le souffle fluide, on agit comme une pompe qui attire doucement le prana pelvien vers le haut.</li>
+                    <li><strong>Les Interrupteurs (Mudras/Bandhas) :</strong> Les légères contractions aux extrémités (périnée et regard) ferment des circuits neurologiques qui amplifient et stabilisent cette énergie.</li>
+                    <li><strong>Le Cycle du Nectar :</strong> Avec le temps, ce flux ascendant met en place un processus biologique subtil, recyclant les essences vitales pour nourrir le corps de l'intérieur (le soma ou nectar).</li>
+                </ul>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">4. L'Équation Absolue et la Sécurité</h3>
+                <p>L'éveil de l'énergie seule n'est pas l'illumination. La véritable équation est la suivante : <strong>Silence + Énergie extatique = Unité.</strong></p>
+                <p>L'énergie a un besoin vital d'un conteneur stable. Ce conteneur est le Silence Intérieur, patiemment cultivé par la Méditation Profonde. Sans silence, l'énergie devient chaotique. C'est pourquoi deux règles de sécurité absolues s'imposent :</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>Éviter la couronne :</strong> Ne guidez <em>jamais</em> l'énergie jusqu'au sommet du crâne. Le point d'arrivée de l'attention est toujours le centre de commande entre les sourcils (le 3e œil), qui régule la pression en toute sécurité. L'ouverture prématurée du sommet du crâne est la cause principale des crises énergétiques.</li>
+                    <li><strong>L'Auto-régulation (Self-pacing) :</strong> Si la friction devient trop forte (insomnie, irritabilité, chaleur excessive), vous devez immédiatement réduire votre temps de pratique et vous <em>ancrer</em> (marcher dans la nature, manger plus lourd). </li>
+                </ul>
+                <p>La Kundalini n'est pas de la magie, mais un potentiel physiologique naturel. Une fois les vieux blocages nettoyés, la friction nerveuse disparaît. La conductivité se fond alors avec votre silence pour devenir une radiance paisible : l'amour pur s'exprimant dans l'action sereine du quotidien.</p>
             `
         }
     ], // <--- LE CROCHET FERMANT EST ICI, AVANT LE "en:"
@@ -287,11 +307,31 @@ const TEACHINGS_DATABASE = {
             title: "Demystifying Kundalini: Ecstatic Conductivity",
             body: `
                 <img src="kundalini-energie.png" alt="Ecstatic Conductivity" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                <p>Kundalini is often shrouded in mystery, perceived as a foreign force, an exceptional event to be provoked, or a dangerous phenomenon. In our practice, it can be understood in a very simple and physiological way: it is <strong>the capacity of the nervous system to conduct energy in a stable and coherent manner</strong>. We call it ecstatic conductivity.</p>
-                <p>It corresponds to a process of gradual maturation, in which the body and consciousness learn to function together with less friction. As long as the system is cluttered with tensions and old conditioning (samskaras), the energy circulates in a fragmented way, producing agitation or overload. Inner work consists above all of clearing and softening the terrain through Spinal Breathing.</p>
-                <p>An essential point must be understood: <strong>energy, left to itself, liberates nothing</strong>. It merely amplifies what is already there. If the system lacks stability, it will accentuate confusion. This is why the foundation of Inner Silence (Deep Meditation) is indispensable. Silence acts as a natural regulator, allowing the energy to integrate gently instead of overflowing.</p>
-                <p>Kundalini therefore does not appear as a sudden and spectacular "awakening," but as a gradual increase in conductivity. As the nervous system purifies, the energy becomes a fluid quality of circulation, rarely overwhelming. The true signs of progress are not mystical thrills, but greater mental clarity, right action, and emotions that pass through you without monopolizing your inner space.</p>
-                <p>When excessive intensity appears (irritability, insomnia), it is never an achievement, but the absolute signal that you must adjust your pace (self-pacing). Maturation happens through balance, never through accumulation. Understood in this way, Kundalini ceases to be a spiritual trophy; it becomes the natural result of an ordering nervous system that supports a luminous life.</p>
+                <p>For centuries, "Kundalini" has been shrouded in mystery, often described as a serpent coiled at the base of the spine, waiting to be awakened with a mix of fascination and fear. Our approach strips this energy of its intimidating mysticism to redefine it in simple mechanical terms: <strong>ecstatic conductivity</strong>.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. The Root of Energy</h3>
+                <p>The vast reservoir of vital force (prana) in the human being is located in the pelvic region. In its dormant state, this energy is perceived in a purely physical or erotic way. Ecstatic conductivity is nothing more than the upward expansion of this exact same vital function. Guided along the spinal nerve (sushumna), this energy refines and transforms to become a spiritually ecstatic experience, nourishing the entire biology.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">2. The Myth of Symptoms (Friction)</h3>
+                <p>One of the spiritual seeker's greatest mistakes is confusing the cleansing process with the final goal. The awakening of energy sometimes causes spectacular symptoms: intense heat, physical shaking, visions, or thrills. This is not enlightenment. It is simply the result of <strong>friction</strong> created by massive energy trying to push through nerves that are still cluttered with old blockages.</p>
+                <p>Inner visions and sounds are just the scenery of the journey. Do not become attached to them, as lingering there delays purification. The goal is not to shake, but to achieve a smooth, fluid, and unbroken joy at the cellular level.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">3. The Mechanics of Awakening</h3>
+                <p>We do not wait for an external miracle. We cultivate this conductivity autonomously and gently:</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>Spinal Breathing:</strong> By tracing the spinal nerve with attention and fluid breath, we act as a pump that gently draws pelvic prana upwards.</li>
+                    <li><strong>The Switches (Mudras/Bandhas):</strong> Slight contractions at the extremities (perineum and gaze) close neurological circuits that amplify and stabilize this energy.</li>
+                    <li><strong>The Nectar Cycle:</strong> Over time, this upward flow initiates a subtle biological process, recycling vital essences to nourish the body from within (soma or nectar).</li>
+                </ul>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">4. The Absolute Equation and Safety</h3>
+                <p>The awakening of energy alone is not enlightenment. The true equation is: <strong>Silence + Ecstatic Energy = Unity.</strong></p>
+                <p>Energy has a vital need for a stable container. This container is Inner Silence, patiently cultivated through Deep Meditation. Without silence, energy becomes chaotic. This is why two absolute safety rules apply:</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>Avoid the crown:</strong> <em>Never</em> guide the energy to the top of the skull. The endpoint of attention is always the command center between the eyebrows (the 3rd eye), which safely regulates pressure. Premature opening of the top of the head is the main cause of energetic crises.</li>
+                    <li><strong>Self-pacing:</strong> If friction becomes too strong (insomnia, irritability, excessive heat), you must immediately reduce your practice time and <em>ground</em> yourself (walk in nature, eat heavier food).</li>
+                </ul>
+                <p>Kundalini is not magic, but a natural physiological potential. Once old blockages are cleared, nerve friction disappears. The conductivity then merges with your silence to become a peaceful radiance: pure love expressing itself in the serene action of daily life.</p>
             `
         }
     ]
@@ -983,6 +1023,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

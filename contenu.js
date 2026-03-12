@@ -165,6 +165,33 @@ const TEACHINGS_DATABASE = {
                 </ul>
                 <p>La Kundalini n'est pas de la magie, mais un potentiel physiologique naturel. Une fois les vieux blocages nettoyés, la friction nerveuse disparaît. La conductivité se fond alors avec votre silence pour devenir une radiance paisible : l'amour pur s'exprimant dans l'action sereine du quotidien.</p>
             `
+        },
+        {
+            title: "L'Émergence du Soi : Du Témoin à l'Unité",
+            body: `
+                <img src="emergence-soi.png" alt="L'Émergence du Soi" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>L'évolution spirituelle n'est pas un saut aveugle dans le vide, ni une illumination magique et soudaine. C'est un processus conscient et mécanique de notre système nerveux qui traverse plusieurs stades naturels. Ce cheminement nous mène de l'agitation à la liberté absolue, en passant par trois grandes étapes.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. Le Témoin : Le fondement de la liberté</h3>
+                <p>C'est la première étape, cultivée chaque jour par la Méditation Profonde. Peu à peu, un "silence intérieur durable" s'installe. Vous commencez à ressentir une séparation entre vous et l'agitation du monde. Vos pensées, vos émotions et même votre corps deviennent des phénomènes que vous observez, plutôt que des choses que vous <em>êtes</em>.</p>
+                <p>Avant cela, nous étions ballottés par nos émotions car nous nous y identifiions totalement. Avec l'émergence du Témoin, nous trouvons un "roc" de conscience pure et inébranlable. Cependant, c'est encore un état de dualité : il y a toujours "moi" (le témoin silencieux à l'intérieur) et "le monde" (en mouvement à l'extérieur).</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">2. Le Soi : Le glissement de l'identité</h3>
+                <p>Une fois le Témoin devenu solide et familier, l'auto-enquête (se demander silencieusement <em>"À qui cette expérience arrive-t-elle ?"</em>) devient naturellement efficace. Notre sens de l'identité se déplace : il quitte le petit "moi" (l'ego) pour embrasser le grand "Soi".</p>
+                <p>On réalise alors par l'expérience directe que le Soi n'est pas une pensée. Il est l'écran vierge et silencieux sur lequel tout le film de l'existence est projeté. La réalisation du Soi n'est pas une conclusion intellectuelle, mais la perception intime que nous sommes l'espace même dans lequel la vie se déroule.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">3. L'Unité : La dissolution de la frontière</h3>
+                <p>L'Unité est la floraison ultime. Elle survient lorsque l'équation fondatrice de notre pratique se réalise pleinement : <strong>Silence + Conductivité Extatique = Unité</strong>.</p>
+                <p>Le silence immobile du Témoin fusionne avec l'énergie radieuse qui a été éveillée dans le système nerveux. À cet instant, la frontière s'effondre. Le sentiment d'être un observateur isolé disparaît. Vous ne vous percevez plus comme étant "dans" le monde ; vous réalisez que le monde tout entier est contenu "en vous". L'observateur et l'observé ne font plus qu'un.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">L'Unité au Quotidien : La Quiétude en Action</h3>
+                <p>La non-dualité n'est pas un retrait stérile dans une grotte. Au contraire, elle se décline de manière très active et joyeuse au quotidien :</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>L'Action sereine :</strong> C'est le paradoxe de "faire sans faire". Vous êtes pleinement engagé dans votre travail ou votre famille, mais chaque action émerge d'un silence absolu.</li>
+                    <li><strong>L'Amour débordant :</strong> En réalisant que tous les êtres sont une expression de votre propre Soi, l'ego qui cherchait à "obtenir" disparaît. Il est remplacé par un besoin naturel de se donner au monde, sans rien attendre en retour.</li>
+                </ul>
+                <p>En somme, l'illumination n'est pas une fuite. C'est un voyage "d'ici à ici". C'est célébrer le monde matériel non plus comme un piège, mais comme l'expression irradiante de la liberté absolue que nous avons toujours été.</p>
+            `
         }
     ], // <--- LE CROCHET FERMANT EST ICI, AVANT LE "en:"
     en: [
@@ -332,6 +359,33 @@ const TEACHINGS_DATABASE = {
                     <li><strong>Self-pacing:</strong> If friction becomes too strong (insomnia, irritability, excessive heat), you must immediately reduce your practice time and <em>ground</em> yourself (walk in nature, eat heavier food).</li>
                 </ul>
                 <p>Kundalini is not magic, but a natural physiological potential. Once old blockages are cleared, nerve friction disappears. The conductivity then merges with your silence to become a peaceful radiance: pure love expressing itself in the serene action of daily life.</p>
+            `
+        },
+        {
+            title: "The Emergence of the Self: From Witness to Unity",
+            body: `
+                <img src="emergence-soi.png" alt="Emergence of the Self" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Spiritual evolution is not a blind leap into the void, nor a sudden magical enlightenment. It is a conscious, mechanical process of our nervous system that passes through several natural stages. This journey leads us from inner turmoil to absolute freedom, crossing three major milestones.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. The Witness: The Foundation of Freedom</h3>
+                <p>This is the first stage, cultivated daily through Deep Meditation. Gradually, an "abiding inner silence" takes hold. You begin to feel a separation between yourself and the agitation of the world. Your thoughts, your emotions, and even your body become phenomena that you observe, rather than things that you <em>are</em>.</p>
+                <p>Before this, we were tossed about by our emotions because we identified entirely with them. With the emergence of the Witness, we find a "rock" of pure, unshakeable consciousness. However, this is still a state of duality: there is still "me" (the silent witness inside) and "the world" (in motion outside).</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">2. The Self: The Shift in Identity</h3>
+                <p>Once the Witness becomes solid and familiar, self-inquiry (silently asking <em>"To whom is this experience happening?"</em>) naturally becomes effective. Our sense of identity shifts: it leaves the small "me" (the ego) to embrace the grand "Self".</p>
+                <p>We then realize through direct experience that the Self is not a thought. It is the blank, silent screen upon which the entire movie of existence is projected. Self-realization is not an intellectual conclusion, but the intimate perception that we are the very space in which life unfolds.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">3. Unity: The Dissolution of the Boundary</h3>
+                <p>Unity is the ultimate flowering. It occurs when the foundational equation of our practice is fully realized: <strong>Silence + Ecstatic Conductivity = Unity</strong>.</p>
+                <p>The motionless silence of the Witness merges with the radiant energy that has been awakened in the nervous system. At this moment, the boundary collapses. The feeling of being an isolated observer disappears. You no longer perceive yourself as being "in" the world; you realize that the entire world is contained "within you". The observer and the observed become one.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Unity in Daily Life: Stillness in Action</h3>
+                <p>Non-duality is not a sterile retreat into a cave. On the contrary, it expresses itself in a very active and joyful way in daily life:</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>Stillness in action:</strong> This is the paradox of "doing without doing". You are fully engaged in your work or your family, but every action emerges from absolute silence.</li>
+                    <li><strong>Outpouring love:</strong> Realizing that all beings are an expression of your own Self, the ego that sought to "get" disappears. It is replaced by a natural need to give oneself to the world, expecting nothing in return.</li>
+                </ul>
+                <p>In short, enlightenment is not an escape. It is a journey from "here to here". It is celebrating the material world no longer as a trap, but as the radiating expression of the absolute freedom we have always been.</p>
             `
         }
     ]
@@ -1023,6 +1077,7 @@ const sageBrain = {
         }
     }
 };
+
 
 
 

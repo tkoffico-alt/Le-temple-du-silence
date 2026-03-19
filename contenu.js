@@ -387,6 +387,35 @@ const TEACHINGS_DATABASE = {
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">4. L'Auto-Ajustement de l'Enquête</h3>
                 <p>Votre baromètre est simple : si l'enquête provoque de la tension, de la frustration ou le sentiment de juger vos pensées, vous forcez mentalement. Relâchez, et retournez à la simple méditation. L'enquête juste est toujours vécue comme une expansion joyeuse, légère et libératrice face aux aléas de la vie.</p>
             `
+        },
+        {
+            title: "Les Signes de l'Aube : Reconnaître le Silence Intérieur",
+            body: `
+                <img src="signes-silence.png" alt="Les signes du Silence Intérieur" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Le silence intérieur n’est pas un objet que l’on possède, ni un exploit mystique. C'est un espace que l’on découvre — comme le ciel bleu qui se révèle enfin quand les nuages de l'esprit se dissipent. Cultivée jour après jour par la méditation profonde, l'émergence de ce silence (le Samadhi) se manifeste par des signes neurobiologiques et psychologiques très concrets. Voici les repères qui indiquent que l'aube se lève en vous.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. Le Vide Actif et le Roc Inébranlable</h3>
+                <p>Ce n’est pas un "vide mort" ou une indifférence froide, mais une présence légère et vibrante derrière le flot des pensées. Vous commencez à ressentir une sécurité inébranlable, semblable à une maison construite sur un roc. Les événements de la vie, le stress ou les bouleversements qui vous contrariaient auparavant vous traversent sans laisser de trace durable. L’océan existe sous les vagues, sans être perturbé par elles.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">2. L’Effacement des Réactions en Chaîne (L'état de Témoin)</h3>
+                <p>Une pensée ou une émotion surgit (colère, peur, désir), mais au lieu de déclencher une cascade de réactions musculaires ou mentales, elle se dissout d’elle-même. Ton système nerveux a intégré un nouveau réflexe : ne plus nourrir l’agitation. Vous devenez l'"écran de cinéma" infini sur lequel se projette le film de la vie, observant vos propres pensées comme des objets séparés de votre véritable Soi.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">3. La Physiologie du Silence (Le Souffle et le Mantra)</h3>
+                <p>Lors de la pratique assise, le corps témoigne physiquement de ce silence. Votre souffle devient si léger qu’il semble disparaître, témoignant de la baisse très profonde du métabolisme. Ce n'est pas une apnée forcée, mais un repos biologique absolu. Parallèlement, le mantra s'affine à l'extrême, devenant une impulsion lointaine et floue, jusqu'à s'évanouir complètement pour laisser place à une conscience pure, sans objet.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">4. L’Absence du "Chercheur" et la Perception Globale</h3>
+                <p>L’ego spirituel (le "moi" qui veut "réussir" sa méditation) se dissout. La question "Est-ce que j’y suis ?" cesse de se poser. Vous ne cherchez plus le silence : vous êtes dans l’espace où la question n’a plus de sens. La perception devient globale ; les sons et les sensations arrivent à vous sans que vous vous sentiez "au centre" de l'expérience, comme un miroir qui reflète le monde sans chercher à se l'approprier.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">5. La Compassion Spontanée et l'Action Juste</h3>
+                <p>Bien que le Témoin soit détaché des drames, il n'est pas insensible. Au contraire, ce silence éveille une empathie accrue et un amour débordant. Les comportements justes émergent naturellement, sans nécessiter de contrainte morale ou d'effort philosophique. L'intuition spirituelle grandit, guidant vos pas vers le service désintéressé.</p>
+
+                <div style="margin-top: 40px; padding: 20px; border: 1px solid var(--accent-color); border-radius: 8px; background: rgba(20, 20, 20, 0.4);">
+                    <h4 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; margin-top: 0; margin-bottom: 10px; font-size: 1.3rem;">Les Illusions à Éviter</h4>
+                    <p style="font-size: 0.95rem; margin-bottom: 10px;"><strong>Ce n'est pas un spectacle mystique :</strong> Pas de visions, de voix, ou de révélations spectaculaires. Le silence intérieur est merveilleusement ordinaire.</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 10px;"><strong>Ce n'est pas un état figé :</strong> Même les pratiquants avancés ont des jours où le silence semble "perdu". Le système nerveux a ses marées. L’important est la tendance : le silence revient de plus en plus vite.</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;"><strong>Que faire si ces signes n'y sont pas ?</strong> Surtout, ne changez rien. Asseyez-vous sans attente, comme un jardinier qui arrose une graine sans creuser la terre chaque matin pour voir si elle a poussé. Le silence émerge quand le système nerveux est prêt, jamais avant.</p>
+                </div>
+            `
         }
     ], // <--- LE CROCHET FERMANT EST ICI, AVANT LE "en:"
     en: [
@@ -666,6 +695,35 @@ const TEACHINGS_DATABASE = {
 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">4. Self-Pacing the Inquiry</h3>
                 <p>Your barometer is simple: if inquiry causes tension, frustration, or the feeling of judging your thoughts, you are forcing it mentally. Let go, and return to simple meditation. Proper inquiry is always experienced as a joyful, light, and liberating expansion in the face of life's ups and downs.</p>
+            `
+        },
+        {
+            title: "Signs of the Dawn: Recognizing Inner Silence",
+            body: `
+                <img src="signes-silence.png" alt="Signs of Inner Silence" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Inner silence is not an object to be possessed, nor a mystical achievement. It is a space to be discovered — like the blue sky that finally reveals itself when the clouds of the mind dissipate. Cultivated day after day through deep meditation, the emergence of this silence (Samadhi) manifests through very concrete neurobiological and psychological signs. Here are the markers that indicate the dawn is breaking within you.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. The Active Void and the Unshakable Rock</h3>
+                <p>It is not a "dead void" or a cold indifference, but a light, vibrant presence behind the flow of thoughts. You begin to feel an unshakable security, like a house built on a rock. Life events, stress, or upheavals that previously upset you now pass through without leaving a lasting trace. The ocean exists beneath the waves, undisturbed by them.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">2. The Fading of Chain Reactions (The Witness State)</h3>
+                <p>A thought or emotion arises (anger, fear, desire), but instead of triggering a cascade of muscular or mental reactions, it dissolves on its own. Your nervous system has integrated a new reflex: to no longer feed the agitation. You become the infinite "movie screen" on which the film of life is projected, observing your own thoughts as objects separate from your true Self.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">3. The Physiology of Silence (Breath and Mantra)</h3>
+                <p>During sitting practice, the body physically bears witness to this silence. Your breath becomes so light that it seems to disappear, testifying to the profound drop in metabolism. This is not forced breath-holding, but absolute biological rest. Simultaneously, the mantra refines to the extreme, becoming a distant, fuzzy impulse, until it vanishes completely to give way to pure, objectless consciousness.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">4. The Absence of the "Seeker" and Global Perception</h3>
+                <p>The spiritual ego (the "me" that wants to "succeed" in meditation) dissolves. The question "Am I there yet?" ceases to arise. You no longer seek silence: you are in the space where the question no longer makes sense. Perception becomes global; sounds and sensations come to you without you feeling "at the center" of the experience, like a mirror that reflects the world without trying to appropriate it.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">5. Spontaneous Compassion and Right Action</h3>
+                <p>Although the Witness is detached from dramas, it is not insensitive. On the contrary, this silence awakens increased empathy and overflowing love. Right behaviors emerge naturally, without requiring moral constraint or philosophical effort. Spiritual intuition grows, guiding your steps toward selfless service.</p>
+
+                <div style="margin-top: 40px; padding: 20px; border: 1px solid var(--accent-color); border-radius: 8px; background: rgba(20, 20, 20, 0.4);">
+                    <h4 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; margin-top: 0; margin-bottom: 10px; font-size: 1.3rem;">Illusions to Avoid</h4>
+                    <p style="font-size: 0.95rem; margin-bottom: 10px;"><strong>It is not a mystical show:</strong> No visions, voices, or spectacular revelations. Inner silence is wonderfully ordinary.</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 10px;"><strong>It is not a fixed state:</strong> Even advanced practitioners have days when silence seems "lost." The nervous system has its tides. The important thing is the trend: silence returns faster and faster.</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;"><strong>What if these signs are not there?</strong> Above all, change nothing. Sit without expectation, like a gardener who waters a seed without digging up the earth every morning to see if it has grown. Silence emerges when the nervous system is ready, never before.</p>
+                </div>
             `
         }
     ]

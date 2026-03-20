@@ -543,17 +543,31 @@
             let mediaHTML = "";
             let downloadBtnHTML = ""; 
             
-            if (murmure.videoFile && murmure.videoFile !== "") {
-                mediaHTML += `<video controls src="${murmure.videoFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></video>`;
-                let downloadText = currentLang === 'fr' ? "Télécharger" : "Download";
-                downloadBtnHTML = `<a href="${murmure.videoFile}" download class="zen-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;">📥 ${downloadText}</a>`;
+       if (murmure.videoFile && murmure.videoFile !== "") {
+                // Si c'est un lien YouTube
+                if (murmure.videoFile.includes("youtube.com") || murmure.videoFile.includes("youtu.be")) {
+                    mediaHTML += `<iframe width="100%" height="315" src="${murmure.videoFile}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></iframe>`;
+                } 
+                // Sinon, c'est un fichier MP4 classique
+                else {
+                    mediaHTML += `<video controls src="${murmure.videoFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></video>`;
+                    let downloadText = currentLang === 'fr' ? "Télécharger" : "Download";
+                    downloadBtnHTML = `<a href="${murmure.videoFile}" download class="zen-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;">📥 ${downloadText}</a>`;
+                }
             } 
             else {
                 if (murmure.imageFile && murmure.imageFile !== "") {
                     mediaHTML += `<img src="${murmure.imageFile}" alt="Illustration" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">`;
                 }
                 if (murmure.audioFile && murmure.audioFile !== "") {
-                    mediaHTML += `<audio controls src="${murmure.audioFile}" style="width: 100%; margin-bottom: 15px;"></audio>`;
+                    // Si c'est un code d'intégration (comme SoundCloud)
+                    if (murmure.audioFile.includes("<iframe")) {
+                        mediaHTML += `<div style="margin-bottom: 15px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">${murmure.audioFile}</div>`;
+                    } 
+                    // Sinon, c'est un fichier MP3 classique
+                    else {
+                        mediaHTML += `<audio controls src="${murmure.audioFile}" style="width: 100%; margin-bottom: 15px;"></audio>`;
+                    }
                 }
             }
 

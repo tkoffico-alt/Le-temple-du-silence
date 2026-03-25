@@ -435,3 +435,8 @@ iframe[src*="udify.app"] img,
     border-color: rgba(212, 175, 55, 0.8);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
 }
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}

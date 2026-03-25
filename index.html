@@ -256,40 +256,72 @@
             </div>
         </section>
 
-        <section id="bibliotheque" class="section">
-            <div class="creatif-header" style="text-align: center; margin-bottom: 40px;">
+    <section id="bibliotheque" class="section">
+            <div class="creatif-header" style="text-align: center; margin-bottom: 30px;">
                 <h2 style="font-size: 2.4rem; color: var(--accent-color); border: none; margin-bottom: 10px;">
                     <span class="fr">La Bibliothèque</span>
                     <span class="en" style="display:none;">The Library</span>
                 </h2>
                 <p style="font-style: italic; opacity: 0.8; font-size: 1.1rem;">
-                    <span class="fr">Les fondations, les mots et les réponses pour guider votre pratique.</span>
-                    <span class="en" style="display:none;">The foundations, words, and answers to guide your practice.</span>
+                    <span class="fr">Choisissez la salle où vous souhaitez entrer pour guider votre pratique.</span>
+                    <span class="en" style="display:none;">Choose the room you wish to enter to guide your practice.</span>
                 </p>
             </div>
-            <h3 style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin: 40px 0 20px;">
-                <span class="fr">Les Origines (Un peu d'histoire)</span>
-                <span class="en" style="display:none;">The Origins (A little history)</span>
-            </h3>
-            <div id="biblio-histoire" style="max-width: 800px; margin: 0 auto; margin-bottom: 50px;"></div>
 
-            <h3 style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin: 40px 0 20px;">
-                <span class="fr">I. La Cartographie de l'Éveil</span>
-                <span class="en" style="display:none;">I. The Cartography of Awakening</span>
-            </h3>
-            <div id="biblio-cartographie" style="max-width: 800px; margin: 0 auto;"></div>
+            <!-- MENU DES SALLES (ONGLETS) -->
+            <div class="biblio-tabs" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap;">
+                <button class="zen-btn active" onclick="openBiblioTab('cartographie', this)">
+                    <span class="fr">La Cartographie</span><span class="en" style="display:none;">Cartography</span>
+                </button>
+                <button class="zen-btn" onclick="openBiblioTab('origines', this)">
+                    <span class="fr">Les Origines</span><span class="en" style="display:none;">The Origins</span>
+                </button>
+                <button class="zen-btn" onclick="openBiblioTab('lexique', this)">
+                    <span class="fr">Lexique & FAQ</span><span class="en" style="display:none;">Lexicon & FAQ</span>
+                </button>
+            </div>
 
-            <h3 style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin: 60px 0 20px; border-top: 1px dashed var(--border-color); padding-top: 30px;">
-                <span class="fr">II. Le Lexique du Gardien</span>
-                <span class="en" style="display:none;">II. The Guardian's Lexicon</span>
-            </h3>
-            <div id="biblio-lexique" class="creatif-grid"></div>
+            <!-- SALLE 1 : LA CARTOGRAPHIE (Livre ouvert) -->
+            <div id="tab-cartographie" class="biblio-tab-content active">
+                <div class="book-layout">
+                    <!-- Sommaire Latéral -->
+                    <div class="book-sidebar" id="carto-sidebar">
+                        <!-- Généré par JS -->
+                    </div>
+                    <!-- Zone de lecture centrale -->
+                    <div class="book-content parchment-text" id="carto-content">
+                        <!-- Généré par JS -->
+                    </div>
+                </div>
+            </div>
 
-            <h3 style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin: 60px 0 20px; border-top: 1px dashed var(--border-color); padding-top: 30px;">
-                <span class="fr">III. Les Réponses aux Murmures</span>
-                <span class="en" style="display:none;">III. Answers to Whispers</span>
-            </h3>
-            <div id="biblio-faq" style="max-width: 800px; margin: 0 auto; margin-bottom: 50px;"></div>
+            <!-- SALLE 2 : LES ORIGINES (L'Histoire) -->
+            <div id="tab-origines" class="biblio-tab-content" style="display: none;">
+                <div id="biblio-histoire" style="max-width: 800px; margin: 0 auto;">
+                    <!-- Généré par JS -->
+                </div>
+            </div>
+
+            <!-- SALLE 3 : LEXIQUE & FAQ -->
+            <div id="tab-lexique" class="biblio-tab-content" style="display: none;">
+                <h3 style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin: 20px 0 30px;">
+                    <span class="fr">Le Lexique du Gardien</span>
+                    <span class="en" style="display:none;">The Guardian's Lexicon</span>
+                </h3>
+                
+                <!-- Grille des Cartes Mystiques -->
+                <div id="biblio-lexique" class="lexique-grid">
+                    <!-- Généré par JS -->
+                </div>
+
+                <h3 style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin: 60px 0 30px; border-top: 1px dashed var(--border-color); padding-top: 40px;">
+                    <span class="fr">Les Réponses aux Murmures</span>
+                    <span class="en" style="display:none;">Answers to Whispers</span>
+                </h3>
+                <div id="biblio-faq" style="max-width: 800px; margin: 0 auto; margin-bottom: 50px;">
+                    <!-- Généré par JS -->
+                </div>
+            </div>
         </section>
 
      <section id="contact" class="section">

@@ -780,7 +780,7 @@
         const faqContainer = document.getElementById("biblio-faq");
         faqContainer.innerHTML = "";
         data.faq.forEach(item => {
-            let labelGardiens = currentLang === 'fr' ? 'La Réponse du Gardien :' : 'The Guardian\\'s Answer:';
+           let labelGardiens = currentLang === 'fr' ? "La Réponse du Gardien :" : "The Guardian's Answer:";
             faqContainer.innerHTML += `
                 <details class="teaching-accordion">
                     <summary class="accordion-title" style="font-size: 1.25rem;">❓ ${item.question}</summary>

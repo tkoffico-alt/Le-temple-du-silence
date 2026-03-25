@@ -667,67 +667,120 @@
         document.getElementById("parabole-title").innerText = PARABOLE_DATA[currentLang].title;
         document.getElementById("parabole-text").innerHTML = PARABOLE_DATA[currentLang].text + getSignatureHTML();
     }
+ // --- NOUVELLE LOGIQUE DE LA BIBLIOTHÈQUE ---
+    let currentCartoChapter = 0;
+
+    // Fonction pour changer de Salle (Onglet)
+    function openBiblioTab(tabId, btnElement) {
+        document.querySelectorAll('.biblio-tab-content').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.biblio-tabs button').forEach(b => b.classList.remove('active'));
+        
+        document.getElementById('tab-' + tabId).style.display = 'block';
+        btnElement.classList.add('active');
+    }
+
+    // Fonction pour lire la Carte du Lexique
+    function toggleLexique(element) {
+        element.classList.toggle('open');
+    }
+
+    // Fonction pour charger un chapitre de la Cartographie dans le livre
+    function loadCartoChapter(index) {
+        currentCartoChapter = index;
+        const data = BIBLIOTHEQUE_DATABASE[currentLang].cartographie;
+        const chap = data[index];
+        const contentDiv = document.getElementById('carto-content');
+        
+        // Mettre en surbrillance le chapitre dans le sommaire latéral
+        document.querySelectorAll('.book-sidebar-item').forEach((el, i) => {
+            if (i === index) el.classList.add('active');
+            else el.classList.remove('active');
+        });
+
+        // Ajouter automatiquement une belle Lettrine dorée à la première lettre du texte
+        let formattedBody = chap.body.replace(/<p>([A-ZÉÀÎÔ])/i, '<p><span class="lettrine">$1</span>');
+
+        // Créer le bouton "Suivant" s'il reste des chapitres
+        let nextBtnHtml = '';
+        if (index < data.length - 1) {
+            let nextLabel = currentLang === 'fr' ? '✧ Poursuivre la lecture ✧' : '✧ Continue reading ✧';
+            nextBtnHtml = `
+            <div style="text-align: center; margin-top: 50px; border-top: 1px dashed var(--border-color); padding-top: 30px;">
+                <button class="zen-btn" onclick="loadCartoChapter(${index + 1})">${nextLabel}</button>
+            </div>`;
+        }
+
+        // Injecter le contenu
+        contentDiv.innerHTML = `
+            <h2 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; text-align: center; margin-bottom: 40px; border: none;">${chap.title}</h2>
+            ${formattedBody}
+            ${nextBtnHtml}
+            ${getSignatureHTML()}
+        `;
+        
+        // Sur mobile, faire remonter la page au début du texte lors du clic
+        if (window.innerWidth <= 768) {
+            contentDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // La fonction principale de rendu
     function renderBibliotheque() {
         const data = BIBLIOTHEQUE_DATABASE[currentLang];
         
-        // --- NOUVEAU : Style "Livre Ancien" pour les chapitres ---
-        const chapterStyle = "font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: var(--accent-color); letter-spacing: 0.5px;";
-        const chapterIcon = "✧"; // Symbole d'étincelle pour les chapitres
-
-        // 0. Histoire
+        // 1. Charger Les Origines (Accordéons classiques)
         const histoireContainer = document.getElementById("biblio-histoire");
-        if (histoireContainer) {
-            histoireContainer.innerHTML = "";
-            if (data.histoire) {
-                data.histoire.forEach(chapitre => {
-                    histoireContainer.innerHTML += `
-                        <details class="teaching-accordion">
-                            <summary class="accordion-title" style="${chapterStyle}">${chapterIcon} ${chapitre.title}</summary>
-                            <div class="accordion-content parchment-text">
-                                ${chapitre.body}
-                                <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 20px; opacity: 0.7; font-style: italic; font-size: 0.9rem;">
-                                    <span style="color: var(--accent-color);">Inspiré des écrits d'AYP</span>
-                                </div>
+        histoireContainer.innerHTML = "";
+        if (data.histoire) {
+            data.histoire.forEach(chapitre => {
+                histoireContainer.innerHTML += `
+                    <details class="teaching-accordion">
+                        <summary class="accordion-title" style="font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: var(--accent-color);">✧ ${chapitre.title}</summary>
+                        <div class="accordion-content parchment-text">
+                            ${chapitre.body}
+                            <div style="display: flex; justify-content: flex-end; margin-top: 20px; opacity: 0.7; font-style: italic; font-size: 0.9rem;">
+                                <span style="color: var(--accent-color);">Inspiré des écrits d'AYP</span>
                             </div>
-                        </details>
-                    `;
-                });
-            }
+                        </div>
+                    </details>
+                `;
+            });
         }
-        
-        // 1. Cartographie
-        const cartoContainer = document.getElementById("biblio-cartographie");
-        cartoContainer.innerHTML = "";
-        data.cartographie.forEach(chapitre => {
-            cartoContainer.innerHTML += `
-                <details class="teaching-accordion">
-                    <summary class="accordion-title" style="${chapterStyle}">${chapterIcon} ${chapitre.title}</summary>
-                    <div class="accordion-content parchment-text">
-                        ${chapitre.body}
-                        ${getSignatureHTML()}
-                    </div>
-                </details>
+
+        // 2. Charger La Cartographie (Le Livre et son Sommaire)
+        const sidebar = document.getElementById('carto-sidebar');
+        sidebar.innerHTML = '';
+        data.cartographie.forEach((chap, index) => {
+            // On extrait juste le numéro/titre court pour le menu latéral (ex: "Chapitre 1")
+            let shortTitle = chap.title.split(':')[0]; 
+            sidebar.innerHTML += `
+                <button class="book-sidebar-item" onclick="loadCartoChapter(${index})">
+                    ${shortTitle}
+                </button>
             `;
         });
+        // Charger le premier chapitre par défaut
+        if(data.cartographie.length > 0) {
+            loadCartoChapter(0);
+        }
 
-        // 2. Lexique
+        // 3. Charger le Lexique (Les Cartes)
         const lexiqueContainer = document.getElementById("biblio-lexique");
         lexiqueContainer.innerHTML = "";
         data.lexique.forEach(mot => {
             lexiqueContainer.innerHTML += `
-                <div class="teaching-accordion" style="padding: 20px; text-align: justify; display: flex; flex-direction: column; justify-content: center;">
-                    <h4 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 10px;">${chapterIcon} ${mot.term}</h4>
-                    <p style="font-size: 1rem; opacity: 0.9; line-height: 1.6; margin-bottom: 0;">${mot.definition}</p>
+                <div class="lexique-card" onclick="toggleLexique(this)">
+                    <h4>${mot.term}</h4>
+                    <div class="lexique-def">${mot.definition}</div>
                 </div>
             `;
         });
 
-        // 3. FAQ
+        // 4. Charger la FAQ (Accordéons)
         const faqContainer = document.getElementById("biblio-faq");
         faqContainer.innerHTML = "";
         data.faq.forEach(item => {
-            let labelGardiens = currentLang === 'fr' ? 'La Réponse du Gardien :' : 'The Guardian\'s Answer:';
-            // Ajout d'une petite icône de question subtile pour la FAQ
+            let labelGardiens = currentLang === 'fr' ? 'La Réponse du Gardien :' : 'The Guardian\\'s Answer:';
             faqContainer.innerHTML += `
                 <details class="teaching-accordion">
                     <summary class="accordion-title" style="font-size: 1.25rem;">❓ ${item.question}</summary>

@@ -56,7 +56,7 @@
     en: {
         title: "The Operating Manual: The Ladder of Practices",
         body: `
-            <img src="echelle-pratiques.png" alt="The Ladder of AYP Practices" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+           <img src="echelle-pratiques.png" alt="Diagram illustrating the ladder of AYP spiritual practices, including deep meditation and spinal breathing" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
             
             <div style="text-align: center; margin-bottom: 30px;">
                 <button onclick="window.print()" style="background-color: var(--accent-color); color: #000; padding: 10px 20px; border: none; border-radius: 5px; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; cursor: pointer; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">

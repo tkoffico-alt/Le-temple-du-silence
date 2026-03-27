@@ -856,6 +856,53 @@ const MURMURES_DATABASE = {
             audioFile: "", imageFile: "tempête-frappe.png", videoFile: "",
             text: "Il y a des moments dans la vie où tout semble basculer en même temps. Une perte, une erreur, une situation que l’on n’a pas vue venir. Soudain, ce qui paraissait stable se fissure.<br><br>Dans ces moments-là, l’esprit cherche immédiatement à comprendre : *Pourquoi ? Qu’ai-je fait pour mériter cela ? Quel est le sens caché derrière cette épreuve ?* Mais il arrive que la réponse ne soit pas là où l’on regarde.<br><br><strong>Ce qui est… simplement</strong><br>Parfois, ce qui survient n’est pas le fruit d’un karma mystérieux, ni d’une volonté supérieure à interpréter. C’est simplement un manque de discernement dans l’action, une confiance accordée trop vite, une vigilance qui n’a pas été suffisante. Cela peut sembler décevant pour l’esprit en quête de sens élevé. Mais c’est en réalité une porte vers une compréhension plus mature : la vie spirituelle ne nous éloigne pas du réel, elle nous y ramène avec plus de clarté.<br><br><strong>Le Choc et le Silence</strong><br>Lorsque l’épreuve frappe, deux mouvements apparaissent en nous. D’un côté, le mental s’agite : il projette l’avenir, amplifie la peur, imagine les conséquences sur des années. De l’autre, plus en profondeur, quelque chose reste intact. Un espace silencieux. Une présence qui ne s’effondre pas.<br><br>Ce Silence n’enlève pas la difficulté, mais il empêche qu’elle devienne totale. S’y appuyer ne consiste pas à fuir la réalité, mais à ne pas être englouti par elle.<br><br><strong>Responsabilité sans Écrasement</strong><br>Il est naturel, après coup, de voir ce qui n’a pas été fait : un doute non écouté, une vérification manquée. Cela peut faire naître un poids immense. Mais il y a une différence essentielle entre la culpabilité et la responsabilité. La culpabilité enferme ; la responsabilité éclaire. Reconnaître simplement : *« Je n’ai pas vu. J’apprends. »* ouvre la voie à une vigilance nouvelle, plus fine, plus stable.<br><br><strong>L’Épreuve dans le Lien</strong><br>Lorsque deux personnes traversent ensemble une difficulté, un autre enjeu apparaît. La tension peut rapprocher… ou séparer. Le véritable danger n’est pas toujours dans l’événement lui-même, mais dans la manière dont il affecte le lien. Dans ces moments, rester uni devient la plus haute pratique intérieure : ne pas se retourner contre l’autre, ne pas ajouter de la dureté à la douleur, et rester dans une présence partagée.<br><br><strong>Rester vivant au cœur de la tempête</strong><br>Ce qui est perdu est perdu, pour l’instant. Mais ce qui reste vivant — la présence, la conscience, la capacité d’aimer, d’agir, de se relever — n’a pas été atteint. L’épreuve ne demande pas toujours d’être comprise. Elle demande d’être traversée avec plus de justesse. Moins de projection. Plus de présence. Et, au cœur de tout cela, ce Silence discret qui ne résout pas tout, mais qui permet de ne pas se perdre."
         },
+        {
+            title: "La Question Vivante (Qui suis-je ?)",
+            audioFile: "", imageFile: "miroir-silence.webp", videoFile: "",
+            text: `Il y a des questions qui traversent le temps, qui ne se fanent pas. Parmi elles, « Qui suis-je ? » demeure comme une énigme qui ne cesse d’appeler. Ce n’est pas une curiosité intellectuelle, ni une formule philosophique abstraite. C’est un tremblement intime, un retournement qui nous pousse à regarder au-delà des apparences.<br><br>
+
+Un matin, en me regardant dans le miroir, j’ai eu un sursaut. Les traits avaient changé, marqués par les années. Pourtant, à l’intérieur, je me sentais toujours le même. Alors qui est ce « même » qui ne vieillit pas, même quand le visage se transforme ?<br><br>
+
+La question peut sembler banale, trop entendue… et pourtant, si je l’affronte sans détour, elle devient vertigineuse.
+Suis-je seulement le produit de mon éducation, de ma culture, de ma religion ?
+Suis-je la couleur de ma peau, mon sexe, mon âge, mes habitudes de penser ?
+Suis-je mes goûts, mes préférences, mes aversions ?<br><br>
+
+Ces réponses viennent vite, mais elles se fissurent aussitôt. Car tout cela change. Mon corps change, mes idées changent, mes croyances se transforment. Et pourtant, à travers tous ces changements, je reste.
+Alors… qu’est-ce qui reste ?<br><br>
+
+Il y a en moi quelque chose qui observe ces transformations. Une Présence qui ne vieillit pas, qui ne change pas. J’appelle cela Conscience.
+Mais est-ce que « moi », je suis cette Conscience ? Ou bien suis-je encore identifié aux formes qui apparaissent en elle — mes émotions, mes souvenirs, mes désirs ?<br><br>
+
+C’est là que le vertige recommence. Car si je ne suis pas ces couches accumulées, alors qui suis-je ?
+Je n’ai pas de réponse définitive. Mais je pressens qu’en suivant cette question, en l’habitant au lieu de la fuir, quelque chose peut se dévoiler.<br><br>
+
+À force de demeurer dans cette interrogation, un silence s’éclaire : je découvre que je ne suis pas mon corps (il se modifie), je ne suis pas mes pensées (elles surgissent et s’évanouissent), je ne suis pas mes émotions (elles traversent mon existence puis s’éteignent). Je suis ce qui voit, ce qui perçoit toutes ces formes sans jamais s’y confondre. La Conscience contemple le flux de la vie sans être altérée par lui.<br><br>
+
+Reconnaître cela ne signifie pas nier mes racines ou mes désirs. Mais je perçois qu’ils ne sont que des parures passagères, des vêtements de l’existence, et non mon essence.
+
+<h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic; margin-top: 30px;">Le Piège du Mental et l'Enquête Relationnelle</h3>
+
+C'est ici que le chercheur tombe souvent dans un piège épuisant. Face à ce vertige, l'ego tente de pousser la question plus loin par l’analyse. Le mental tourne en boucle, cherchant une conclusion logique, une illumination soudaine. La question « Qui suis-je ? » devient alors une source de tension, un fardeau intellectuel.<br><br>
+
+La pensée seule ne peut pas découvrir l’espace qui la contient. C'est comme demander à une lampe de poche d'éclairer sa propre ampoule.<br><br>
+
+C’est ici qu’une orientation précieuse, issue de la lignée, se révèle : <strong>la manière d’interroger est aussi importante que la question elle-même.</strong><br><br>
+
+Lorsque la question est posée dans l’agitation du mental, elle crée de l'incertitude. Mais lorsque nous laissons cette question reposer dans le calme du Témoin — ce silence préalablement cultivé par la méditation profonde — elle devient un instrument d'une douceur absolue.<br><br>
+
+C’est ce que l’on appelle : <strong>l’enquête relationnelle</strong>.<br><br>
+
+Dans cette approche, nous ne luttons plus pour obtenir une réponse. Nous prenons la question « Qui suis-je ? » et nous la laissons doucement tomber dans notre silence intérieur, comme on jette un caillou dans un lac immobile. Puis... nous ne faisons rien. Nous lâchons prise. Nous permettons à la question d’entrer en relation avec le silence, au lieu d’essayer de tout comprendre par la pensée.
+
+<h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic; margin-top: 30px;">L'Invitation au Silence</h3>
+
+Si aujourd'hui, en vous posant cette question, vous ne ressentez que du vide, de l'angoisse ou un brouillard mental, rassurez-vous. Cela signifie simplement que le miroir de votre esprit est encore agité par les vagues de la surface.<br><br>
+
+Ne forcez pas l'enquête. Laissez la question de côté. Revenez à la fondation absolue : asseyez-vous, fermez les yeux, et cultivez la tranquillité du Témoin à l'aide de votre mantra.<br><br>
+
+L'enquête sur le Soi n'est pas un devoir à réussir, c'est une floraison spontanée. Un jour, lorsque le système nerveux sera suffisamment purifié, la question cessera d’être une recherche angoissée pour devenir une présence vivante. Vous ne trouverez pas de réponse intellectuelle à formuler. Vous deviendrez simplement la Présence qui embrasse chaque instant.`
+        }
     ],
     en: [
         {
@@ -983,6 +1030,53 @@ const MURMURES_DATABASE = {
             audioFile: "", imageFile: "tempête-frappe.png", videoFile: "",
             text: "There are moments in life when everything seems to collapse at once. A loss, a mistake, a situation we didn't see coming. Suddenly, what seemed stable cracks.<br><br>In those moments, the mind immediately seeks to understand: *Why? What did I do to deserve this? What is the hidden meaning behind this ordeal?* But sometimes the answer isn't where we are looking.<br><br><strong>What is... simply</strong><br>Sometimes, what happens is not the result of a mysterious karma, nor a higher will to be interpreted. It is simply a lack of discernment in action, trust given too quickly, a vigilance that was not sufficient. This may seem disappointing for the mind in search of higher meaning. But it is actually a door to a more mature understanding: spiritual life does not distance us from reality; it brings us back to it with more clarity.<br><br><strong>The Shock and the Silence</strong><br>When hardship strikes, two movements appear within us. On the one hand, the mind becomes agitated: it projects the future, amplifies fear, imagines consequences years down the line. On the other, deeper down, something remains intact. A silent space. A presence that does not collapse.<br><br>This Silence does not remove the difficulty, but it prevents it from becoming total. Leaning on it is not about escaping reality, but about not being swallowed by it.<br><br><strong>Responsibility without Crushing</strong><br>It is natural, in hindsight, to see what was not done: an ignored doubt, a missed verification. This can give rise to an immense weight. But there is an essential difference between guilt and responsibility. Guilt imprisons; responsibility illuminates. Simply acknowledging: *'I didn't see. I am learning,'* opens the way to a new, finer, more stable vigilance.<br><br><strong>The Ordeal in Connection</strong><br>When two people go through a difficulty together, another challenge arises. Tension can bring them closer... or tear them apart. The real danger is not always in the event itself, but in how it affects the bond. In these moments, staying united becomes the highest inner practice: not turning against each other, not adding harshness to the pain, and remaining in a shared presence.<br><br><strong>Staying alive in the heart of the storm</strong><br>What is lost is lost, for now. But what remains alive—presence, consciousness, the ability to love, to act, to rise again—has not been touched. The ordeal does not always ask to be understood. It asks to be navigated with more accuracy. Less projection. More presence. And, at the heart of it all, this discreet Silence that doesn't solve everything, but allows us not to lose ourselves."
         },
+        {
+            title: "The Living Question (Who am I?)",
+            audioFile: "", imageFile: "miroir-silence.webp", videoFile: "",
+            text: `There are questions that span across time, that do not fade. Among them, "Who am I?" remains like an enigma that never ceases to call. It is not an intellectual curiosity, nor an abstract philosophical formula. It is an intimate tremor, an inward turning that pushes us to look beyond appearances.<br><br>
+
+One morning, looking at myself in the mirror, I was startled. My features had changed, marked by the years. Yet, inside, I still felt the same. So who is this "same" that does not age, even when the face transforms?<br><br>
+
+The question may seem banal, too often heard... and yet, if I face it head-on, it becomes dizzying.
+Am I merely the product of my education, my culture, my religion?
+Am I the color of my skin, my gender, my age, my thinking habits?
+Am I my tastes, my preferences, my aversions?<br><br>
+
+These answers come quickly, but they crack immediately. Because all of this changes. My body changes, my ideas change, my beliefs transform. And yet, through all these changes, I remain.
+So... what remains?<br><br>
+
+There is something in me that observes these transformations. A Presence that does not age, that does not change. I call this Consciousness.
+But am I, "me", this Consciousness? Or am I still identified with the forms that appear within it — my emotions, my memories, my desires?<br><br>
+
+This is where the vertigo begins again. For if I am not these accumulated layers, then who am I?
+I have no definitive answer. But I sense that by following this question, by inhabiting it instead of fleeing from it, something can be revealed.<br><br>
+
+By dwelling in this inquiry, a silence lights up: I discover that I am not my body (it changes), I am not my thoughts (they arise and vanish), I am not my emotions (they cross my existence and then fade). I am that which sees, that which perceives all these forms without ever merging with them. Consciousness contemplates the flow of life without being altered by it.<br><br>
+
+Recognizing this does not mean denying my roots or my desires. But I perceive that they are only passing adornments, garments of existence, and not my essence.
+
+<h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic; margin-top: 30px;">The Trap of the Mind and Relational Inquiry</h3>
+
+This is where the seeker often falls into an exhausting trap. Faced with this vertigo, the ego tries to push the question further through analysis. The mind loops, seeking a logical conclusion, a sudden illumination. The question "Who am I?" then becomes a source of tension, an intellectual burden.<br><br>
+
+Thought alone cannot discover the space that contains it. It is like asking a flashlight to illuminate its own bulb.<br><br>
+
+This is where a precious orientation, drawn from the lineage, reveals itself: <strong>the way of inquiring is as important as the question itself.</strong><br><br>
+
+When the question is asked in the agitation of the mind, it creates uncertainty. But when we let this question rest in the calm of the Witness — this silence previously cultivated by deep meditation — it becomes an instrument of absolute gentleness.<br><br>
+
+This is what we call: <strong>relational inquiry</strong>.<br><br>
+
+In this approach, we no longer fight to get an answer. We take the question "Who am I?" and we let it gently drop into our inner silence, like dropping a pebble into a still lake. Then... we do nothing. We let go. We allow the question to enter into a relationship with the silence, instead of trying to understand everything through thought.
+
+<h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic; margin-top: 30px;">The Invitation to Silence</h3>
+
+If today, when asking yourself this question, you feel only emptiness, anxiety, or mental fog, rest assured. This simply means that the mirror of your mind is still agitated by the waves on the surface.<br><br>
+
+Do not force the inquiry. Set the question aside. Return to the absolute foundation: sit down, close your eyes, and cultivate the tranquility of the Witness using your mantra.<br><br>
+
+Self-inquiry is not a task to succeed at; it is a spontaneous flowering. One day, when the nervous system is sufficiently purified, the question will cease to be an anxious search and become a living presence. You will not find an intellectual answer to formulate. You will simply become the Presence that embraces every moment.`
+        }
     ]
 };
 const PARABOLE_DATA = {

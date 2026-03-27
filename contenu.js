@@ -858,7 +858,7 @@ const MURMURES_DATABASE = {
         },
         {
             title: "La Question Vivante (Qui suis-je ?)",
-            audioFile: "", imageFile: "miroir-silence.webp", videoFile: "",
+            audioFile: "", imageFile: "dissolution-presence.png", videoFile: "",
             text: `Il y a des questions qui traversent le temps, qui ne se fanent pas. Parmi elles, « Qui suis-je ? » demeure comme une énigme qui ne cesse d’appeler. Ce n’est pas une curiosité intellectuelle, ni une formule philosophique abstraite. C’est un tremblement intime, un retournement qui nous pousse à regarder au-delà des apparences.<br><br>
 
 Un matin, en me regardant dans le miroir, j’ai eu un sursaut. Les traits avaient changé, marqués par les années. Pourtant, à l’intérieur, je me sentais toujours le même. Alors qui est ce « même » qui ne vieillit pas, même quand le visage se transforme ?<br><br>
@@ -1032,7 +1032,7 @@ L'enquête sur le Soi n'est pas un devoir à réussir, c'est une floraison spont
         },
         {
             title: "The Living Question (Who am I?)",
-            audioFile: "", imageFile: "miroir-silence.webp", videoFile: "",
+            audioFile: "", imageFile: "dissolution-presence.png", videoFile: "",
             text: `There are questions that span across time, that do not fade. Among them, "Who am I?" remains like an enigma that never ceases to call. It is not an intellectual curiosity, nor an abstract philosophical formula. It is an intimate tremor, an inward turning that pushes us to look beyond appearances.<br><br>
 
 One morning, looking at myself in the mirror, I was startled. My features had changed, marked by the years. Yet, inside, I still felt the same. So who is this "same" that does not age, even when the face transforms?<br><br>

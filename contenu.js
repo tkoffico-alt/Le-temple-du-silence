@@ -1173,6 +1173,51 @@ const BIBLIOTHEQUE_DATABASE = {
                     <p>C'est une aube douce, lente et persistante. Un jour, alors que vous êtes simplement en train de marcher dans la rue ou d'écouter un ami, vous réalisez que le silence n'est plus quelque chose que vous <em>pratiquez</em>, mais quelque chose que vous <em>êtes</em>. L'extase frémissante de la vie coule dans vos veines, mais elle est enveloppée d'une paix si vaste que rien ne semble pouvoir la briser. Les tempêtes émotionnelles et les défis continuent de se présenter, mais ils ne trouvent plus en vous de surface pour s'accrocher. Ils traversent votre ciel intérieur comme des nuages blancs, sans jamais en ternir la lumière.</p>
                     <p>C'est cela, le rayonnement serein. Le mariage consommé du Vide et du Plein. Vous n'êtes plus un chercheur spirituel ; vous êtes devenu l'espace même où la vie célèbre son propre mystère.</p>
                 `
+            },
+            {
+                title: "Livre II - Intro : L'Épreuve du Réel",
+                body: `
+                    <p>Le chercheur lit les textes sacrés, comprend la mécanique du souffle, s'assoit sur son coussin et goûte aux premières gouttes du silence intérieur. Il se croit alors arrivé. Mais la véritable initiation ne fait que commencer.</p>
+                    <p>Car le but de notre pratique n'est pas de créer une bulle de paix artificielle dans une chambre fermée, mais de forger un système nerveux capable de traverser le feu du monde sans se consumer. Dès que vous vous levez de votre coussin, la réalité vous attend. Les tempêtes émotionnelles, les désirs brûlants, le tumulte de la société et l'urgence des besoins matériels viennent frapper à la porte de votre sanctuaire.</p>
+                    <div class="exergue">"La boue du quotidien n'est pas un obstacle à l'éveil, mais la matière première de sa propre libération."</div>
+                    <p>Ce manuel est écrit pour cet instant précis. Il est le guide de l'alchimiste qui a compris comment transmuter l'agitation du monde en conductivité extatique.</p>
+                `
+            },
+            {
+                title: "Livre II - Chapitre 1 : Le Mirage du Magicien",
+                body: `
+                    <p>Il existe une tentation universelle, profondément ancrée dans le cœur humain face à la rudesse de la vie matérielle : celle de chercher dans la spiritualité une baguette magique. Beaucoup s'approchent du sanctuaire non pas pour se connaître, mais pour obtenir. Ils espèrent qu'un rituel, un mantra ou une prière viendra miraculeusement résoudre un problème d'argent, guérir une maladie ou plier la volonté des autres à leurs désirs.</p>
+                    <p>C'est le mirage du magicien. L'ego, accablé par ses peurs, cherche à manipuler l'univers. Or, utiliser la science spirituelle pour assouvir une soif matérielle revient à utiliser une épée d'or massif pour couper du bois : c'est un immense gâchis d'énergie qui ne produit que de la frustration.</p>
+                    <div class="exergue">"La véritable spiritualité ne vous donne pas le pouvoir de contrôler le monde extérieur ; elle vous donne le pouvoir de ne plus en être l'esclave."</div>
+                    <p>Les pouvoirs (ou <em>siddhis</em>) peuvent parfois émerger sur le chemin, mais ils ne sont que des effets secondaires de la purification nerveuse. Les poursuivre est une impasse. Le plus grand des miracles n'est pas de faire pleuvoir de l'or, mais de traverser le manque, la perte ou l'incertitude avec une paix intérieure si vaste que rien ne peut vous la voler. Ne cherchez pas à changer le monde par la magie ; purifiez votre système nerveux, et votre simple présence silencieuse transformera tout ce que vous toucherez.</p>
+                `
+            },
+            {
+                title: "Livre II - Chapitre 2 : La Traversée des Tempêtes",
+                body: `
+                    <p>L'un des chocs les plus rudes pour le pèlerin est de découvrir que la méditation, loin de le rendre immédiatement serein, le plonge parfois dans une profonde tristesse, une colère soudaine ou une apathie inexpliquée. Il se sent perdu et se dit : <em>"Ma pratique a échoué. J'étais plus calme avant de commencer."</em></p>
+                    <p>C'est une erreur de perspective. Lorsque vous lavez une vitre encrassée depuis des années, l'eau qui coule est noire. Votre système nerveux fonctionne de la même manière. Le silence de la méditation et la friction de la respiration spinale agissent comme un solvant puissant. Ils délogent vos vieilles mémoires, vos anciens traumatismes et vos peurs refoulées (les <em>samskaras</em>).</p>
+                    <div class="exergue">"Cette tempête intérieure n'est pas une punition, c'est le signe éclatant que la purification opère."</div>
+                    <p>Quand ces ombres remontent à la surface pour être évacuées, vous les ressentez. Quelle est la posture juste ? Ne fuyez pas. Ne luttez pas. Ne vous identifiez pas à la tristesse qui passe. Observez-la depuis le roc de votre Témoin intérieur. Et surtout, appliquez l'auto-régulation : si la tempête est trop forte, réduisez la méditation et ancrez-vous. Marchez sur la terre, mangez lourdement, reposez-vous. Laissez l'orage nettoyer votre ciel.</p>
+                `
+            },
+            {
+                title: "Livre II - Chapitre 3 : Le Feu Sacré",
+                body: `
+                    <p>Pendant des siècles, une fausse croyance a empoisonné la quête spirituelle : l'idée qu'il faudrait tuer ses désirs pour atteindre le divin. On a enseigné au chercheur à avoir honte de son corps, de sa sexualité, de sa gourmandise ou de son ambition.</p>
+                    <p>Mais réprimer un désir ne le fait pas disparaître ; cela le transforme en une bombe à retardement, une tension refoulée qui bloque la sushumna (le canal central). Notre voie, ancrée dans la mécanique de l'extase, ne détruit pas les passions : elle les transmute.</p>
+                    <div class="exergue">"Le chemin du milieu est celui de l'Alchimiste : accueillez l'énergie du désir lorsqu'elle s'embrase, mais observez cette chaleur pure sans vous jeter sur l'objet."</div>
+                    <p>Le désir est une énergie brute, un carburant surpuissant. Si vous le laissez exploser sans conscience (l'indulgence), il vous disperse et vous épuise. Si vous l'enfermez dans une cave (la répression), il vous rend amer. Laissez cette flamme remonter doucement le long de votre colonne vertébrale. Ce qui était une faim matérielle ou charnelle devient alors la source même de votre conductivité extatique. Le feu profane devient le feu sacré.</p>
+                `
+            },
+            {
+                title: "Livre II - Chapitre 4 : Le Sanctuaire du Marché",
+                body: `
+                    <p>Il est aisé d'être un saint au sommet d'une montagne, loin du bruit et des hommes. Le véritable test de l'éveil se passe dans les allées bondées d'un marché, dans les embouteillages d'une ville, ou face à l'injustice d'un supérieur hiérarchique.</p>
+                    <p>Beaucoup séparent leur journée en deux : le temps sacré (la méditation) et le temps profane (le travail, la famille). Cette division est une souffrance. Le monde n'est pas un obstacle à votre pratique, il en est le terrain d'entraînement. C'est ce que les anciens appellent le <em>Karma Yoga</em>.</p>
+                    <div class="exergue">"L'homme éveillé ne se retire pas du monde ; il plonge au cœur du marché, mais il n'est plus éclaboussé par sa boue."</div>
+                    <p>Lorsque vous balayez une cour, écoutez un ami en détresse ou affrontez une difficulté financière, faites-le sans quitter cet espace de silence que vous avez cultivé le matin sur votre coussin. Ne cherchez pas à être parfait ; cherchez à être présent. Si la colère monte face à une insulte, observez-la naître et mourir dans votre silence (c'est l'essence même du Samyama). La vie quotidienne devient alors une méditation ininterrompue.</p>
+                `
             }
         ],
         lexique: [
@@ -1332,6 +1377,51 @@ const BIBLIOTHEQUE_DATABASE = {
                     <p>Forget the legends that depict enlightenment as a blinding flash that would tear you from your human condition, suddenly endowing you with mystical powers and cutting you off from your fellow beings. True enlightenment is disarmingly simple.</p>
                     <p>It is a gentle, slow, and persistent dawn. One day, while you are simply walking down the street or listening to a friend, you realize that silence is no longer something you <em>practice</em>, but something you <em>are</em>. The quivering ecstasy of life flows in your veins, but it is enveloped in a peace so vast that nothing seems able to break it. Emotional storms and challenges continue to present themselves, but they no longer find a surface in you to cling to. They cross your inner sky like white clouds, without ever dulling its light.</p>
                     <p>This is serene radiance. The consummated marriage of the Void and the Fullness. You are no longer a spiritual seeker; you have become the very space where life celebrates its own mystery.</p>
+                `
+            },
+            {
+                title: "Book II - Intro: The Test of Reality",
+                body: `
+                    <p>The seeker reads the sacred texts, understands the mechanics of breath, sits on their cushion, and tastes the first drops of inner silence. They then believe they have arrived. But the true initiation has only just begun.</p>
+                    <p>For the goal of our practice is not to create an artificial bubble of peace in a closed room, but to forge a nervous system capable of passing through the fire of the world without being consumed. As soon as you rise from your cushion, reality awaits you. Emotional storms, burning desires, the tumult of society, and the urgency of material needs come knocking at the door of your sanctuary.</p>
+                    <div class="exergue">"The mud of daily life is not an obstacle to awakening, but the raw material of your own liberation."</div>
+                    <p>This manual is written for this precise moment. It is the guide for the alchemist who has understood how to transmute the agitation of the world into ecstatic conductivity.</p>
+                `
+            },
+            {
+                title: "Book II - Chapter 1: The Magician's Mirage",
+                body: `
+                    <p>There is a universal temptation, deeply rooted in the human heart when faced with the harshness of material life: that of seeking a magic wand in spirituality. Many approach the sanctuary not to know themselves, but to obtain. They hope that a ritual, a mantra, or a prayer will miraculously solve a money problem, cure an illness, or bend the will of others to their desires.</p>
+                    <p>This is the magician's mirage. The ego, burdened by its fears, seeks to manipulate the universe. However, using spiritual science to satisfy a material thirst is like using a solid gold sword to chop wood: it is a massive waste of energy that produces nothing but frustration.</p>
+                    <div class="exergue">"True spirituality does not give you the power to control the outside world; it gives you the power to no longer be its slave."</div>
+                    <p>Powers (or <em>siddhis</em>) may sometimes emerge on the path, but they are only side effects of nervous purification. Pursuing them is a dead end. The greatest of miracles is not making it rain gold, but traversing lack, loss, or uncertainty with an inner peace so vast that nothing can steal it from you. Do not seek to change the world through magic; purify your nervous system, and your simple silent presence will transform everything you touch.</p>
+                `
+            },
+            {
+                title: "Book II - Chapter 2: Crossing the Storms",
+                body: `
+                    <p>One of the harshest shocks for the pilgrim is to discover that meditation, far from immediately making them serene, sometimes plunges them into deep sadness, sudden anger, or unexplained apathy. They feel lost and tell themselves: <em>"My practice has failed. I was calmer before I started."</em></p>
+                    <p>This is an error in perspective. When you wash a window that has been filthy for years, the water that runs off is black. Your nervous system works the exact same way. The silence of meditation and the friction of spinal breathing act as a powerful solvent. They dislodge your old memories, your past traumas, and your repressed fears (the <em>samskaras</em>).</p>
+                    <div class="exergue">"This inner storm is not a punishment; it is the shining sign that purification is taking place."</div>
+                    <p>When these shadows rise to the surface to be evacuated, you feel them. What is the right posture? Do not flee. Do not fight. Do not identify with the passing sadness. Observe it from the rock of your inner Witness. And above all, apply self-pacing: if the storm is too strong, reduce meditation and ground yourself. Walk on the earth, eat heavily, rest. Let the storm clear your sky.</p>
+                `
+            },
+            {
+                title: "Book II - Chapter 3: The Sacred Fire",
+                body: `
+                    <p>For centuries, a false belief has poisoned the spiritual quest: the idea that one must kill their desires to reach the divine. The seeker has been taught to be ashamed of their body, their sexuality, their gluttony, or their ambition.</p>
+                    <p>But repressing a desire does not make it disappear; it turns it into a ticking time bomb, a repressed tension that blocks the sushumna (the central channel). Our path, rooted in the mechanics of ecstasy, does not destroy passions: it transmutes them.</p>
+                    <div class="exergue">"The middle path is that of the Alchemist: welcome the energy of desire when it ignites, but observe this pure heat without throwing yourself at the object."</div>
+                    <p>Desire is raw energy, an overpowering fuel. If you let it explode without awareness (indulgence), it scatters and exhausts you. If you lock it in a cellar (repression), it makes you bitter. Let this flame rise gently along your spine. What was a material or carnal hunger then becomes the very source of your ecstatic conductivity. The profane fire becomes the sacred fire.</p>
+                `
+            },
+            {
+                title: "Book II - Chapter 4: The Marketplace Sanctuary",
+                body: `
+                    <p>It is easy to be a saint on top of a mountain, far from noise and men. The true test of awakening happens in the crowded aisles of a market, in a city's traffic jams, or facing the injustice of a superior.</p>
+                    <p>Many split their day in two: sacred time (meditation) and profane time (work, family). This division is suffering. The world is not an obstacle to your practice; it is the training ground. This is what the ancients call <em>Karma Yoga</em>.</p>
+                    <div class="exergue">"The awakened man does not withdraw from the world; he dives into the heart of the marketplace, but is no longer splashed by its mud."</div>
+                    <p>When you sweep a courtyard, listen to a friend in distress, or face a financial difficulty, do so without leaving this space of silence that you cultivated in the morning on your cushion. Do not seek to be perfect; seek to be present. If anger rises in the face of an insult, watch it be born and die within your silence (this is the very essence of Samyama). Daily life then becomes an uninterrupted meditation.</p>
                 `
             }
         ],

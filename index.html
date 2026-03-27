@@ -739,25 +739,29 @@
     function renderBibliotheque() {
         const data = BIBLIOTHEQUE_DATABASE[currentLang];
         
-        // 1. Charger Les Origines (Accordéons classiques)
+  // 1. Charger Les Origines (Le Chemin Chronologique)
         const histoireContainer = document.getElementById("biblio-histoire");
-        histoireContainer.innerHTML = "";
+        let htmlOrigines = '<div class="timeline-container">';
+        
         if (data.histoire) {
             data.histoire.forEach(chapitre => {
-                histoireContainer.innerHTML += `
-                    <details class="teaching-accordion">
-                        <summary class="accordion-title" style="font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: var(--accent-color);">✧ ${chapitre.title}</summary>
-                        <div class="accordion-content parchment-text">
+                let inspirationLabel = currentLang === 'fr' ? "Inspiré des écrits d'AYP" : "Inspired by AYP writings";
+                htmlOrigines += `
+                    <div class="origine-block">
+                        <div class="origine-marker">✧</div>
+                        <div class="origine-content parchment-text">
+                            <h3 class="origine-title">${chapitre.title}</h3>
                             ${chapitre.body}
-                            <div style="display: flex; justify-content: flex-end; margin-top: 20px; opacity: 0.7; font-style: italic; font-size: 0.9rem;">
-                                <span style="color: var(--accent-color);">Inspiré des écrits d'AYP</span>
+                            <div style="display: flex; justify-content: flex-end; margin-top: 30px; opacity: 0.6; font-style: italic; font-size: 0.9rem;">
+                                <span style="color: var(--accent-color);">${inspirationLabel}</span>
                             </div>
                         </div>
-                    </details>
+                    </div>
                 `;
             });
         }
-
+        htmlOrigines += '</div>';
+        histoireContainer.innerHTML = htmlOrigines;
         // 2. Charger La Cartographie (Le Livre et son Sommaire)
         const sidebar = document.getElementById('carto-sidebar');
         sidebar.innerHTML = '';

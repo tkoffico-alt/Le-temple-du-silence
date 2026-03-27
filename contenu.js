@@ -3,7 +3,7 @@
     fr: {
         title: "Le Manuel Opératoire : L'Échelle des Pratiques",
         body: `
-            <img src="echelle-pratiques.png" alt="L'Échelle des Pratiques AYP" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="echelle-pratiques.png" alt="Schéma illustrant l'échelle des pratiques spirituelles AYP, incluant la méditation profonde et la respiration spinale" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
             
             <div style="text-align: center; margin-bottom: 30px;">
                 <button onclick="window.print()" style="background-color: var(--accent-color); color: #000; padding: 10px 20px; border: none; border-radius: 5px; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; cursor: pointer; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">

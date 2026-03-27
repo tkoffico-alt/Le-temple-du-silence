@@ -627,3 +627,97 @@ body.light-mode .exergue {
 .book-sidebar::-webkit-scrollbar-thumb:hover {
     background: rgba(212, 175, 55, 0.8);
 }
+/* =========================================
+   NOUVEAU STYLE : LES ORIGINES (LE CHEMIN)
+   ========================================= */
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px 0;
+}
+
+/* La ligne centrale dorée */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30px; 
+    width: 2px;
+    background: rgba(212, 175, 55, 0.3);
+}
+
+.origine-block {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 70px; /* Laisse la place pour la ligne et le marqueur */
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+/* Effet d'apparition en cascade pour chaque bloc */
+.origine-block:nth-child(1) { animation-delay: 0.1s; }
+.origine-block:nth-child(2) { animation-delay: 0.3s; }
+.origine-block:nth-child(3) { animation-delay: 0.5s; }
+.origine-block:nth-child(4) { animation-delay: 0.7s; }
+
+/* L'étoile sur la ligne du temps */
+.origine-marker {
+    position: absolute;
+    left: 17px; /* Centré exactement sur la ligne */
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--box-bg);
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+    z-index: 2;
+}
+
+/* Le Parchemin ouvert */
+.origine-content {
+    background: rgba(15, 15, 15, 0.7);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 35px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.origine-content:hover {
+    transform: translateY(-3px);
+    border-color: rgba(212, 175, 55, 0.7);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.origine-title {
+    color: var(--accent-color);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-bottom: 1px dashed rgba(212, 175, 55, 0.4);
+    padding-bottom: 15px;
+    line-height: 1.3;
+}
+
+/* Ajustement pour le mode clarté */
+body.light-mode .origine-content {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Ajustement pour les téléphones mobiles */
+@media (max-width: 768px) {
+    .timeline-container::before { left: 20px; }
+    .origine-block { padding-left: 50px; padding-right: 10px; }
+    .origine-marker { left: 7px; }
+    .origine-content { padding: 25px 20px; }
+    .origine-title { font-size: 1.6rem; }
+}

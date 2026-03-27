@@ -613,3 +613,17 @@ body.light-mode .exergue {
         padding: 30px 20px;
     }
 }
+/* Personnalisation de la barre de défilement du Sommaire */
+.book-sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+.book-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.book-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.4); 
+    border-radius: 10px;
+}
+.book-sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(212, 175, 55, 0.8);
+}

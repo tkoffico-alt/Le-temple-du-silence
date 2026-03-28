@@ -1360,6 +1360,24 @@ const BIBLIOTHEQUE_DATABASE = {
                     <div class="exergue">"L'homme éveillé ne se retire pas du monde ; il plonge au cœur du marché, mais il n'est plus éclaboussé par sa boue."</div>
                     <p>Lorsque vous balayez une cour, écoutez un ami en détresse ou affrontez une difficulté financière, faites-le sans quitter cet espace de silence que vous avez cultivé le matin sur votre coussin. Ne cherchez pas à être parfait ; cherchez à être présent. Si la colère monte face à une insulte, observez-la naître et mourir dans votre silence (c'est l'essence même du Samyama). La vie quotidienne devient alors une méditation ininterrompue.</p>
                 `
+            },
+            {
+                title: "Livre II - Chapitre 5 : L'Amant Cosmique (Le Fruit du Tantra au Quotidien)",
+                body: `
+                    <p>La vie moderne nous épuise. Nous courons d'un désir à l'autre, cherchant dans la nourriture, la reconnaissance sociale ou la sexualité un moyen de combler un vide lancinant. Dans cette course, la relation intime est souvent vécue comme une transaction : deux mendiants qui se rencontrent, chacun espérant que l'autre remplira sa coupe vide. C'est la nature de l'amour ordinaire, sans cesse tiraillé entre le manque et la brève satiété.</p>
+                    <p>Lorsque la pratique mécanique du Tantra fait son œuvre dans le système nerveux, elle ne se contente pas de modifier ce qui se passe sur le coussin de méditation. Elle renverse de fond en comble le paradigme même de notre existence quotidienne.</p>
+                    
+                    <div class="exergue">"L'homme et la femme éveillés ne cherchent plus à prendre le monde ; ils débordent sur lui."</div>
+                    
+                    <p>L'énergie vitale, au lieu d'être dissipée, a été redirigée vers le haut, irriguant le cerveau et le cœur. Ce courant ascendant crée une biologie nouvelle, sécrétant un nectar subtil (le <em>Soma</em>) qui baigne le système nerveux dans une félicité constante. Le désir n'est plus perçu comme une démangeaison douloureuse qu'il faut absolument gratter par une explosion. Il devient une chaleur enveloppante, un lac d'or liquide dans lequel on se baigne avec gratitude, sans urgence.</p>
+                    
+                    <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">La Révolution des Relations</h3>
+                    <p>Ce changement biologique transforme radicalement la façon dont nous aimons. Imaginez une relation où vous n'avez plus <em>besoin</em> de l'autre pour vous sentir complet. Votre propre système nerveux génère en permanence une joie extatique. Vous n'êtes plus un mendiant affamé, vous êtes un empereur dont les coffres débordent. Lorsque deux êtres ainsi purifiés se rencontrent, l'acte d'amour cesse d'être une quête de soulagement mutuel pour devenir la célébration vibrante d'une plénitude déjà présente. L'amour inconditionnel cesse d'être un concept moral pour devenir une réalité physiologique incontournable.</p>
+                    
+                    <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Le Tantra Sans Partenaire</h3>
+                    <p>Mais le plus grand secret de cette alchimie est qu'elle n'exige pas de partenaire physique. La véritable romance tantrique se joue à l'intérieur : c'est le mariage du Silence inébranlable (le principe Masculin) et de l'Énergie frémissante (le principe Féminin) au cœur de votre propre anatomie.</p>
+                    <p>Celui qui cultive cette conductivité marche dans le monde profane avec une densité nouvelle. Cette énergie transmutée devient le moteur infatigable de son travail, de sa créativité, de son art et de sa compassion. La vie entière, avec ses défis, ses tempêtes et ses silences, devient son amante cosmique. Le marché, la rue ou le bureau ne sont plus des lieux d'épuisement, mais les espaces vibrants où il offre au monde la lumière qu'il a cultivée en lui.</p>
+                `
             }
         ],
         lexique: [
@@ -1564,6 +1582,24 @@ const BIBLIOTHEQUE_DATABASE = {
                     <p>Many split their day in two: sacred time (meditation) and profane time (work, family). This division is suffering. The world is not an obstacle to your practice; it is the training ground. This is what the ancients call <em>Karma Yoga</em>.</p>
                     <div class="exergue">"The awakened man does not withdraw from the world; he dives into the heart of the marketplace, but is no longer splashed by its mud."</div>
                     <p>When you sweep a courtyard, listen to a friend in distress, or face a financial difficulty, do so without leaving this space of silence that you cultivated in the morning on your cushion. Do not seek to be perfect; seek to be present. If anger rises in the face of an insult, watch it be born and die within your silence (this is the very essence of Samyama). Daily life then becomes an uninterrupted meditation.</p>
+                `
+            },
+            {
+                title: "Book II - Chapter 5: The Cosmic Lover (The Fruit of Tantra in Daily Life)",
+                body: `
+                    <p>Modern life exhausts us. We run from one desire to another, seeking in food, social recognition, or sexuality a way to fill a nagging void. In this race, intimate relationship is often experienced as a transaction: two beggars meeting, each hoping the other will fill their empty cup. This is the nature of ordinary love, constantly torn between lack and brief satiety.</p>
+                    <p>When the mechanical practice of Tantra does its work in the nervous system, it does not merely change what happens on the meditation cushion. It completely overturns the very paradigm of our daily existence.</p>
+                    
+                    <div class="exergue">"The awakened man and woman no longer seek to take from the world; they overflow onto it."</div>
+                    
+                    <p>Vital energy, instead of being dissipated, has been redirected upwards, irrigating the brain and heart. This ascending current creates a new biology, secreting a subtle nectar (<em>Soma</em>) that bathes the nervous system in constant bliss. Desire is no longer perceived as a painful itch that absolutely must be scratched by an explosion. It becomes an enveloping warmth, a lake of liquid gold in which one bathes with gratitude, without urgency.</p>
+                    
+                    <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">The Revolution of Relationships</h3>
+                    <p>This biological change radically transforms how we love. Imagine a relationship where you no longer <em>need</em> the other to feel complete. Your own nervous system constantly generates an ecstatic joy. You are no longer a starving beggar; you are an emperor whose coffers overflow. When two beings purified in this way meet, the act of love ceases to be a quest for mutual relief to become the vibrant celebration of an already present fullness. Unconditional love ceases to be a moral concept to become an unavoidable physiological reality.</p>
+                    
+                    <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Partnerless Tantra</h3>
+                    <p>But the greatest secret of this alchemy is that it does not require a physical partner. True tantric romance plays out inside: it is the marriage of unshakable Silence (the Masculine principle) and quivering Energy (the Feminine principle) in the heart of your own anatomy.</p>
+                    <p>One who cultivates this conductivity walks in the profane world with a new density. This transmuted energy becomes the tireless engine of their work, their creativity, their art, and their compassion. All of life, with its challenges, storms, and silences, becomes their cosmic lover. The market, the street, or the office are no longer places of exhaustion, but the vibrant spaces where they offer the world the light they have cultivated within.</p>
                 `
             }
         ],

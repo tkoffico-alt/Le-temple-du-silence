@@ -416,6 +416,30 @@ const TEACHINGS_DATABASE = {
                     <p style="font-size: 0.95rem; margin-bottom: 0;"><strong>Que faire si ces signes n'y sont pas ?</strong> Surtout, ne changez rien. Asseyez-vous sans attente, comme un jardinier qui arrose une graine sans creuser la terre chaque matin pour voir si elle a poussé. Le silence émerge quand le système nerveux est prêt, jamais avant.</p>
                 </div>
             `
+        },
+        {
+            title: "Le Tantra Mécanique : L'Ascension de l'Énergie et la Règle du Bord",
+            body: `
+                <img src="tantra-mecanique.png" alt="Schéma de la mécanique tantrique et de l'énergie pré-orgasmique - AYP" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Dans l'ingénierie spirituelle, l'énergie sexuelle n'est ni un péché à réprimer, ni un simple divertissement à dissiper. C'est le carburant le plus dense et le plus puissant dont dispose le corps humain (le prana pelvien). Le Tantra, dépouillé de son folklore, est la science mécanique qui consiste à capturer ce carburant pour l'envoyer illuminer le cerveau et le système nerveux central.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">La Règle d'Or : Le Maintien de l'État Pré-Orgasmique</h3>
+                <p>La mécanique du Tantra repose sur une loi physique simple : l'énergie suit le chemin de la moindre résistance. L'habitude biologique pousse cette énergie vers le bas, cherchant la libération par la friction et l'explosion (l'orgasme). Cette explosion dissipe instantanément la force vitale vers l'extérieur, laissant le système nerveux apaisé, mais épuisé.</p>
+                <p>La pratique tantrique avancée consiste à cultiver cette immense chaleur tout en <strong>restant strictement juste avant le point de non-retour</strong>. C'est ce qu'on appelle "surfer sur le bord" (<em>riding the edge</em>). En maintenant cet état d'excitation élevée sans jamais franchir la limite de la libération physique, l'énergie, incapable de sortir par le bas, est forcée de trouver une autre issue. Sous la pression, elle s'engouffre dans le canal central (la Sushumna) et remonte la colonne vertébrale.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">L'Arsenal Physique : Aspirer le Feu</h3>
+                <p>Rester au bord ne suffit pas ; il faut aider le feu à monter. C'est ici que les "accélérateurs" physiques de notre pratique entrent en jeu de manière décisive :</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>La Respiration Spinale :</strong> C'est la pompe principale. Le souffle lent et conscient tire littéralement l'énergie accumulée dans le bassin vers le troisième œil.</li>
+                    <li><strong>Mulabandha et Ashwini Mudra :</strong> La contraction douce du périnée et du sphincter anal scelle la base du corps. Elle empêche l'énergie de fuir vers le bas et la pousse vers le haut.</li>
+                    <li><strong>Siddhasana :</strong> S'asseoir avec le talon pressant doucement contre le périnée fournit un ancrage physique et une stimulation constante de la racine.</li>
+                    <li><strong>Sambhavi Mudra :</strong> Le regard doucement levé vers le centre des sourcils agit comme un aimant supérieur, attirant le prana vers le cerveau.</li>
+                </ul>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">L'Avertissement du Jardinier (Auto-Régulation)</h3>
+                <p>Pratiquer le Tantra, c'est manipuler du carburant de fusée. Si vous injectez une quantité massive d'énergie sexuelle dans une colonne vertébrale qui n'a pas été suffisamment purifiée par la Méditation Profonde, la friction sera extrême. Insomnies, irritabilité féroce, chaleur excessive ou obsessions peuvent survenir.</p>
+                <p>L'auto-régulation (Self-Pacing) est ici vitale. Si la tension devient destructrice, vous devez impérativement réduire la stimulation, stopper les pratiques physiques (verrous), et vous ancrer lourdement dans la matière (Grounding). La transmutation sexuelle est le couronnement de la pratique, pas son point de départ.</p>
+            `
         }
     ], // <--- LE CROCHET FERMANT EST ICI, AVANT LE "en:"
     en: [
@@ -724,6 +748,30 @@ const TEACHINGS_DATABASE = {
                     <p style="font-size: 0.95rem; margin-bottom: 10px;"><strong>It is not a fixed state:</strong> Even advanced practitioners have days when silence seems "lost." The nervous system has its tides. The important thing is the trend: silence returns faster and faster.</p>
                     <p style="font-size: 0.95rem; margin-bottom: 0;"><strong>What if these signs are not there?</strong> Above all, change nothing. Sit without expectation, like a gardener who waters a seed without digging up the earth every morning to see if it has grown. Silence emerges when the nervous system is ready, never before.</p>
                 </div>
+            `
+        },
+        {
+            title: "Mechanical Tantra: The Ascent of Energy and the Rule of the Edge",
+            body: `
+                <img src="tantra-mecanique.png" alt="Diagram of tantric mechanics and pre-orgasmic energy - AYP" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>In spiritual engineering, sexual energy is neither a sin to repress nor a mere entertainment to dissipate. It is the densest and most powerful fuel available to the human body (pelvic prana). Tantra, stripped of its folklore, is the mechanical science of capturing this fuel and sending it up to illuminate the brain and the central nervous system.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">The Golden Rule: Maintaining the Pre-Orgasmic State</h3>
+                <p>Tantric mechanics relies on a simple physical law: energy follows the path of least resistance. Biological habit pushes this energy downwards, seeking release through friction and explosion (orgasm). This explosion instantly dissipates vital force outward, leaving the nervous system pacified but exhausted.</p>
+                <p>Advanced tantric practice consists of cultivating this immense heat while <strong>staying strictly just before the point of no return</strong>. This is known as "riding the edge". By maintaining this high state of arousal without ever crossing the threshold of physical release, the energy, unable to exit below, is forced to find another way out. Under pressure, it rushes into the central channel (the Sushumna) and travels up the spine.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">The Physical Arsenal: Drawing the Fire</h3>
+                <p>Staying at the edge is not enough; the fire must be helped to rise. This is where the physical "accelerators" of our practice come decisively into play:</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>Spinal Breathing:</strong> This is the main pump. The slow, conscious breath literally pulls the energy accumulated in the pelvis towards the third eye.</li>
+                    <li><strong>Mulabandha and Ashwini Mudra:</strong> The gentle contraction of the perineum and the anal sphincter seals the base of the body. It prevents energy from leaking downwards and pushes it upwards.</li>
+                    <li><strong>Siddhasana:</strong> Sitting with the heel gently pressing against the perineum provides physical grounding and constant stimulation of the root.</li>
+                    <li><strong>Sambhavi Mudra:</strong> The gaze gently raised toward the center of the eyebrows acts as a superior magnet, drawing prana toward the brain.</li>
+                </ul>
+                
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">The Gardener's Warning (Self-Pacing)</h3>
+                <p>Practicing Tantra is handling rocket fuel. If you inject a massive amount of sexual energy into a spine that has not been sufficiently purified by Deep Meditation, the friction will be extreme. Insomnia, fierce irritability, excessive heat, or obsessions can occur.</p>
+                <p>Self-pacing is vital here. If tension becomes destructive, you must imperatively reduce stimulation, stop physical practices (locks), and ground yourself heavily in matter (Grounding). Sexual transmutation is the crowning achievement of practice, not its starting point.</p>
             `
         }
     ]

@@ -1378,6 +1378,36 @@ const BIBLIOTHEQUE_DATABASE = {
                     <p>Mais le plus grand secret de cette alchimie est qu'elle n'exige pas de partenaire physique. La véritable romance tantrique se joue à l'intérieur : c'est le mariage du Silence inébranlable (le principe Masculin) et de l'Énergie frémissante (le principe Féminin) au cœur de votre propre anatomie.</p>
                     <p>Celui qui cultive cette conductivité marche dans le monde profane avec une densité nouvelle. Cette énergie transmutée devient le moteur infatigable de son travail, de sa créativité, de son art et de sa compassion. La vie entière, avec ses défis, ses tempêtes et ses silences, devient son amante cosmique. Le marché, la rue ou le bureau ne sont plus des lieux d'épuisement, mais les espaces vibrants où il offre au monde la lumière qu'il a cultivée en lui.</p>
                 `
+            },
+            {
+                title: "Livre II - Chapitre 6 : Le Piège des Symptômes (La Fièvre n'est pas le Feu)",
+                body: `
+                    <p>En parcourant les forums et les cercles spirituels modernes, une dangereuse confusion saute aux yeux. Des milliers de chercheurs décrivent des secousses violentes, des brûlures incessantes au troisième œil ou à la racine, des insomnies sévères, et parfois des vagues d'émotions dévastatrices comme le désespoir ou le vide. Le drame n'est pas qu'ils vivent cela ; le drame est qu'ils s'y complaisent. Beaucoup arborent ces tourments comme des médailles, persuadés que l'intensité de leur souffrance est la preuve de leur avancement spirituel.</p>
+                    <p>C'est une erreur fondamentale d'ingénierie spirituelle. Ils confondent les <em>symptômes</em> de la Kundalini avec la Kundalini elle-même.</p>
+                    
+                    <div class="exergue">✧ La douleur n'est pas l'illumination. La friction n'est pas le courant. ✧</div>
+                    
+                    <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">La Mécanique de la Friction</h3>
+                    <p>L'énergie évolutive (le prana) est par nature fluide, silencieuse et intensément joyeuse. Lorsque cette énergie commence à s'éveiller et à remonter dans le système nerveux, elle se heurte à vos anciens blocages, à vos traumatismes et à vos tensions refoulées (le karma). C'est cette collision qui génère des étincelles : chaleurs intenses, tremblements (kriyas), ou éruptions émotionnelles. </p>
+                    <p>Ces symptômes sont l'équivalent de la fumée noire et des secousses d'un moteur encrassé que l'on fait tourner à plein régime. Se complaire dans cette situation, c'est s'asseoir dans la fumée noire en croyant avoir atteint le but. L'objectif n'est pas de trembler ou de brûler ; l'objectif est de nettoyer le conduit (la sushumna) jusqu'à ce que l'énergie puisse y circuler dans un silence absolu et une extase lisse.</p>
+
+                    <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Le Mythe Romantique et le Danger de la Couronne</h3>
+                    <p>La vieille mythologie raconte que l'énergie féminine (Shakti) doit s'éveiller à la base de la colonne et faire tout le travail d'ascension pour aller rejoindre la conscience pure (Shiva), qui l'attend passivement au sommet du crâne. En pratique, cette approche échoue presque toujours. Si l'on force Shakti à monter seule à travers un système nerveux non purifié, elle met littéralement les nerfs en pièces. Si cette énergie atteint le sommet de la tête (la couronne) de façon prématurée, elle déclenche des émotions dévastatrices : angoisses, isolement profond et sentiment de vide abyssal.</p>
+                    <p>La solution n'est pas l'agonie, mais l'équilibre. C'est pour cela que la Respiration Spinale est vitale : elle est bipolaire. Le souffle ascendant fait monter Shakti, mais le souffle descendant <em>oblige Shiva à descendre</em> de son perchoir pour la rencontrer partout dans le corps. Cette union répartie dans chaque cellule transforme le chaos ardent en une félicité douce et gérable.</p>
+
+                    <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Aligner les Roues avant d'Accélérer</h3>
+                    <p>Vouloir continuer à "pousser" la pratique alors que l'on souffre de brûlures continues ou de détresse psychologique relève de la folie. Si vous conduisez une voiture de course et qu'elle se met à vibrer violemment, vous n'enfoncez pas la pédale d'accélérateur ; vous vous arrêtez pour aligner les roues.</p>
+                    <p>Face à des symptômes écrasants, l'ambition spirituelle doit s'effacer devant la sagesse de l'auto-régulation (Self-Pacing). Il faut suspendre les pratiques agressives (comme les verrous physiques), réduire le temps de méditation, et s'ancrer lourdement dans la matière (Grounding) : marchez dans la nature, mangez des repas consistants, occupez-vous de tâches profanes. La vraie spiritualité ne vous demande pas d'être un martyr. Choisissez toujours l'extase plutôt que l'agonie.</p>
+                `
+            },
+            {
+                title: "Livre II - Conclusion : Le Silence Devenu Chair",
+                body: `
+                    <p>Le chercheur qui a traversé le mirage des pouvoirs magiques, les tempêtes émotionnelles du nettoyage, le feu du désir, le tumulte du marché, l'intensité de la relation intime et le piège de l'ego spirituel face à l'énergie, arrive finalement à un étrange carrefour : celui de la normalité.</p>
+                    <p>L'illumination n'est pas un feu d'artifice perpétuel. C'est le moment où la pratique elle-même disparaît en tant qu'effort, pour devenir votre état naturel. Le silence n'est plus une chose que vous visitez deux fois par jour sur un coussin ; il est devenu chair. Il respire à travers vous, il marche à travers vous.</p>
+                    <div class="exergue">✧ Vous n'êtes plus quelqu'un qui fait du yoga. Vous êtes devenu l'espace silencieux où la vie danse. ✧</div>
+                    <p>Ne cherchez plus la ligne d'arrivée. Le but de l'ingénierie spirituelle n'est pas de vous faire quitter ce monde, mais de vous y ramener, pleinement équipé pour en savourer chaque instant sans jamais en être la victime. Retournez à vos proches, retournez à votre travail, et laissez la douce lumière de votre système nerveux purifié faire son œuvre silencieuse dans le monde.</p>
+                `
             }
         ],
         lexique: [
@@ -1600,6 +1630,36 @@ const BIBLIOTHEQUE_DATABASE = {
                     <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Partnerless Tantra</h3>
                     <p>But the greatest secret of this alchemy is that it does not require a physical partner. True tantric romance plays out inside: it is the marriage of unshakable Silence (the Masculine principle) and quivering Energy (the Feminine principle) in the heart of your own anatomy.</p>
                     <p>One who cultivates this conductivity walks in the profane world with a new density. This transmuted energy becomes the tireless engine of their work, their creativity, their art, and their compassion. All of life, with its challenges, storms, and silences, becomes their cosmic lover. The market, the street, or the office are no longer places of exhaustion, but the vibrant spaces where they offer the world the light they have cultivated within.</p>
+                `
+            },
+            {
+                title: "Book II - Chapter 6: The Trap of Symptoms (The Fever is not the Fire)",
+                body: `
+                    <p>When browsing modern spiritual forums and circles, a dangerous confusion glares out. Thousands of seekers describe violent shaking, incessant burning at the third eye or the root, severe insomnia, and sometimes devastating waves of emotion like despair or emptiness. The tragedy is not that they experience this; the tragedy is that they wallow in it. Many wear these torments like badges of honor, convinced that the intensity of their suffering is proof of their spiritual advancement.</p>
+                    <p>This is a fundamental error in spiritual engineering. They confuse the <em>symptoms</em> of Kundalini with Kundalini itself.</p>
+                    
+                    <div class="exergue">✧ Pain is not enlightenment. Friction is not the flow. ✧</div>
+                    
+                    <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">The Mechanics of Friction</h3>
+                    <p>Evolutionary energy (prana) is by nature fluid, silent, and intensely joyful. When this energy begins to awaken and rise through the nervous system, it collides with your old blockages, traumas, and repressed tensions (karma). It is this collision that generates sparks: intense heat, shaking (kriyas), or emotional eruptions.</p>
+                    <p>These symptoms are the equivalent of black smoke and violent rattling from a clogged engine running at full throttle. Wallowing in this situation is like sitting in the black smoke and believing you have reached the goal. The objective is not to shake or burn; the objective is to clean the pipe (the sushumna) until the energy can flow through it in absolute silence and smooth ecstasy.</p>
+
+                    <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">The Romantic Myth and the Danger of the Crown</h3>
+                    <p>The old mythology says that feminine energy (Shakti) must awaken at the base of the spine and do all the climbing work to join pure consciousness (Shiva), who waits passively at the top of the head. In practice, this approach almost always fails. If Shakti is forced to rise alone through an unpurified nervous system, she literally tears the nerves apart. If this energy reaches the top of the head (the crown) prematurely, it triggers devastating emotions: anxiety, profound isolation, and an abyssal feeling of emptiness.</p>
+                    <p>The solution is not agony, but balance. This is why Spinal Breathing is vital: it is bipolar. The ascending breath raises Shakti, but the descending breath <em>forces Shiva to come down</em> from his perch to meet her everywhere in the body. This union distributed in every cell transforms the burning chaos into a gentle and manageable bliss.</p>
+
+                    <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Aligning the Wheels Before Accelerating</h3>
+                    <p>Wanting to continue "pushing" the practice while suffering from continuous burning or psychological distress is madness. If you are driving a race car and it starts vibrating violently, you don't press the gas pedal harder; you stop to align the wheels.</p>
+                    <p>Faced with overwhelming symptoms, spiritual ambition must give way to the wisdom of Self-Pacing. You must suspend aggressive practices (like physical locks), reduce meditation time, and ground yourself heavily in matter: walk in nature, eat hearty meals, engage in mundane tasks. True spirituality does not ask you to be a martyr. Always choose ecstasy over agony.</p>
+                `
+            },
+            {
+                title: "Book II - Conclusion: Silence Made Flesh",
+                body: `
+                    <p>The seeker who has navigated the mirage of magical powers, the emotional storms of cleansing, the fire of desire, the tumult of the marketplace, the intensity of intimate relationship, and the trap of the spiritual ego facing energy, finally arrives at a strange crossroads: that of normalcy.</p>
+                    <p>Enlightenment is not a perpetual fireworks display. It is the moment when practice itself disappears as an effort, to become your natural state. Silence is no longer something you visit twice a day on a cushion; it has become flesh. It breathes through you, it walks through you.</p>
+                    <div class="exergue">✧ You are no longer someone doing yoga. You have become the silent space where life dances. ✧</div>
+                    <p>Stop looking for the finish line. The goal of spiritual engineering is not to make you leave this world, but to bring you back to it, fully equipped to savor every moment without ever being its victim. Return to your loved ones, return to your work, and let the gentle light of your purified nervous system do its silent work in the world.</p>
                 `
             }
         ],

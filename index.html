@@ -197,12 +197,13 @@
 
            <div id="chat-container" style="width: 100%; display: flex; justify-content: center;">
                 
-                <iframe 
-                    src="https://udify.app/chatbot/TFkbLNLitsHkzVxf" 
-                    style="width: 100%; max-width: 800px; height: 100%; min-height: 700px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);" 
-                    frameborder="0" 
-                    allow="microphone">
-                </iframe>
+<iframe 
+    src="https://udify.app/chatbot/TFkbLNLitsHkzVxf" 
+    style="width: 100%; max-width: 800px; height: 100%; min-height: 700px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);" 
+    frameborder="0" 
+    allow="microphone"
+    loading="lazy">
+</iframe>
                 </div>
             
             <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 20px; opacity: 0.85; position: relative; z-index: 1;">
@@ -450,25 +451,29 @@
     <script>
     let currentLang = 'fr';
     
-    function createDustParticles() {
-        const container = document.getElementById('particles-container');
-        const particleCount = 40;
-        container.innerHTML = ''; 
-        
-        for(let i = 0; i < particleCount; i++) {
-            let particle = document.createElement('div');
-            particle.className = 'dust-particle';
-            let size = Math.random() * 3 + 1; 
-            particle.style.width = size + 'px';
-            particle.style.height = size + 'px';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = Math.random() * 100 + '%';
-            particle.style.animationDuration = (Math.random() * 15 + 10) + 's'; 
-            particle.style.animationDelay = (Math.random() * 10) + 's';
-            container.appendChild(particle);
-        }
+ function createDustParticles() {
+    const container = document.getElementById('particles-container');
+    if (!container) return;
+    
+    // Détecte si le visiteur est sur mobile. Si oui, on réduit drastiquement la poussière.
+    const isMobile = window.innerWidth < 768;
+    const particleCount = isMobile ? 12 : 40; 
+    
+    container.innerHTML = ''; 
+    
+    for(let i = 0; i < particleCount; i++) {
+        let particle = document.createElement('div');
+        particle.className = 'dust-particle';
+        let size = Math.random() * 3 + 1; 
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDuration = (Math.random() * 15 + 10) + 's'; 
+        particle.style.animationDelay = (Math.random() * 10) + 's';
+        container.appendChild(particle);
     }
-
+}
    
 
     function toggleParaboleAudio() {
@@ -866,13 +871,15 @@
     }
 
     window.onload = () => {
-        createDustParticles();
-        renderEnseignements();
-        renderMurmures();
-        renderParabole();
-        renderBibliotheque();
-        renderManuel();
-    };
+    // Retarde la création des particules de 500 millisecondes (pour fluidifier le chargement)
+    setTimeout(createDustParticles, 500); 
+    
+    renderEnseignements();
+    renderMurmures();
+    renderParabole();
+    renderBibliotheque();
+    renderManuel();
+};
 
  // --- 🎧 DÉVERROUILLAGE INITIAL DU SON ---
     const resonance = document.getElementById("sage-resonance");

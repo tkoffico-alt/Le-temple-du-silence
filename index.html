@@ -30,6 +30,10 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -427,11 +431,6 @@
     <footer style="display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 30px 10px;">
         <p>© 2026 Le Temple du Silence. <span class="en" style="display:none;">All rights reserved.</span><span class="fr">Tous droits réservés.</span></p>
 
-        <div style="font-family: 'Cormorant Garamond', serif; color: var(--accent-color); font-size: 1.1rem; opacity: 0.8; letter-spacing: 1px;">
-            <span class="fr">Âmes ayant traversé le pont : </span>
-            <span class="en" style="display:none;">Souls who crossed the bridge: </span>
-            <span id="visitor-count" style="font-weight: bold; border-bottom: 1px solid var(--accent-color);">--</span>
-        </div>
     </footer>
 
    <script src="contenu.js"></script>
@@ -458,13 +457,7 @@
         }
     }
 
-    function initVisitorCounter() {
-        let count = localStorage.getItem('templeVisitorCount_v4');
-        if (!count) { count = 0; } 
-        else { count = parseInt(count) + 1; }
-        localStorage.setItem('templeVisitorCount_v4', count);
-        document.getElementById('visitor-count').innerText = count;
-    }
+   
 
     function toggleParaboleAudio() {
         const player = document.getElementById('audio-parabole-player');
@@ -862,7 +855,6 @@
 
     window.onload = () => {
         createDustParticles();
-        initVisitorCounter();
         renderEnseignements();
         renderMurmures();
         renderParabole();

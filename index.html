@@ -338,7 +338,7 @@
             </div>
         </section>
 
-     <section id="contact" class="section">
+  <section id="contact" class="section">
             <div class="teaching-article parchment-text" style="text-align: center; max-width: 650px; margin: 0 auto; background: var(--box-bg); padding: 40px; border-radius: 8px; position: relative;">
                 
                 <h2 style="border:none; color: var(--accent-color); font-size: 2.2rem; margin-bottom: 20px;">
@@ -347,26 +347,38 @@
                 </h2>
                 
                 <div style="font-size: 1.15rem; margin-bottom: 30px; line-height: 1.7; text-align: justify; opacity: 0.9;">
-                    <p class="fr">Le silence n'est pas l'absence de tempêtes, c'est l'art de rester ancré pendant qu'elles font rage. Si vous traversez actuellement une épreuve (une perte, un doute profond, un effondrement matériel ou intérieur), vous n'avez pas à porter ce fardeau seul.</p>
-                    <p class="en" style="display:none;">Silence is not the absence of storms; it is the art of remaining grounded while they rage. If you are currently going through a trial (a loss, a profound doubt, a material or inner collapse), you do not have to carry this burden alone.</p>
+                    <p class="fr">Le silence n'est pas l'absence de tempêtes, c'est l'art de rester ancré pendant qu'elles font rage. Si vous traversez actuellement une épreuve, vous n'avez pas à porter ce fardeau seul.</p>
+                    <p class="en" style="display:none;">Silence is not the absence of storms; it is the art of remaining grounded while they rage. If you are currently going through a trial, you do not have to carry this burden alone.</p>
                     
-                    <p class="fr" style="margin-top: 15px;">De même, l'ingénierie intérieure et la mécanique de l'éveil soulèvent souvent des interrogations légitimes. Si votre pratique bute sur un obstacle, si une technique avancée vous semble obscure, ou si vous ressentez le besoin d'éclairer une zone d'ombre sur votre cheminement, le sanctuaire vous est ouvert.</p>
-                    <p class="en" style="display:none;" style="margin-top: 15px;">Similarly, inner engineering and the mechanics of awakening often raise legitimate questions. If your practice hits an obstacle, if an advanced technique seems obscure, or if you feel the need to illuminate a shadow on your path, the sanctuary is open to you.</p>
+                    <p class="fr" style="margin-top: 15px;">Si votre pratique bute sur un obstacle, ou si vous ressentez le besoin d'éclairer une zone d'ombre, le sanctuaire vous est ouvert.</p>
+                    <p class="en" style="display:none;" style="margin-top: 15px;">If your practice hits an obstacle, or if you feel the need to illuminate a shadow on your path, the sanctuary is open to you.</p>
 
                     <p class="fr" style="text-align: center; font-style: italic; font-weight: bold; color: var(--accent-color); margin-top: 25px;">Écrivez-moi. Partagez votre tempête ou posez votre question.</p>
                     <p class="en" style="display:none; text-align: center; font-style: italic; font-weight: bold; color: var(--accent-color); margin-top: 25px;">Write to me. Share your storm or ask your question.</p>
-
-                    <p class="fr">Le Gardien lira chaque message avec la plus grande attention. De temps à autre, une réponse anonymisée sera partagée dans nos Lettres, afin que la lumière apportée à l'un puisse éclairer le chemin de tous.</p>
-                    <p class="en" style="display:none;">The Keeper will read every message with the utmost attention. From time to time, an anonymized response will be shared in our Letters, so that the light brought to one may illuminate the path for all.</p>
                 </div>
                 
-                <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
-                    <a href="mailto:contact@letempledusilence.org?subject=Une%20question%20ou%20une%20temp%C3%AAte%20%C3%A0%20partager" class="zen-btn" style="text-decoration: none; font-size: 1.2rem; padding: 15px 30px; font-weight: bold; background: var(--btn-blue); color: white; border: none;">
-                        <span class="fr">✉️ Écrire au Gardien</span>
-                        <span class="en" style="display:none;">✉️ Write to the Guardian</span>
-                    </a>
+                <!-- FORMULAIRE DE CONTACT OPÉRATIONNEL -->
+                <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; flex-direction: column; gap: 15px; text-align: left; max-width: 500px; margin: 0 auto 30px auto;">
+                    <div style="display: flex; flex-direction: column; gap: 5px;">
+                        <label class="fr" style="color: var(--accent-color); font-size: 0.9rem; font-family: 'Lora', serif;">Votre adresse email</label>
+                        <label class="en" style="display:none; color: var(--accent-color); font-size: 0.9rem; font-family: 'Lora', serif;">Your email address</label>
+                        <input type="email" name="email" required style="padding: 12px; border-radius: 6px; border: 1px solid var(--border-color); background: rgba(20, 20, 20, 0.5); color: white; outline: none; font-family: 'Lora', serif;">
+                    </div>
 
-                    <div style="display: flex; align-items: center; gap: 10px; opacity: 0.8; margin-top: 15px;">
+                    <div style="display: flex; flex-direction: column; gap: 5px;">
+                        <label class="fr" style="color: var(--accent-color); font-size: 0.9rem; font-family: 'Lora', serif;">Votre message</label>
+                        <label class="en" style="display:none; color: var(--accent-color); font-size: 0.9rem; font-family: 'Lora', serif;">Your message</label>
+                        <textarea name="message" required style="padding: 12px; border-radius: 6px; border: 1px solid var(--border-color); background: rgba(20, 20, 20, 0.5); color: white; min-height: 120px; outline: none; font-family: 'Lora', serif; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="zen-btn" style="background: var(--btn-blue); color: white; border: none; padding: 15px; font-weight: bold; cursor: pointer; border-radius: 20px; align-self: center; min-width: 200px;">
+                        <span class="fr">✉️ Confier au Gardien</span>
+                        <span class="en" style="display:none;">✉️ Entrust to the Guardian</span>
+                    </button>
+                </form>
+
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; opacity: 0.8;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
                         <span style="font-size: 0.9rem; font-style: italic; color: var(--accent-color);">Le Gardien du Temple</span>
                         <img src="sceau-gardien.png" alt="Sceau du Gardien" style="height: 40px; border-radius: 50%; filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));">
                     </div>

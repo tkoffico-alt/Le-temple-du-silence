@@ -255,7 +255,35 @@ const TEACHINGS_DATABASE = {
                 </ul>
                 <p style="font-style: italic; opacity: 0.9; margin-top: 20px; border-left: 2px solid var(--accent-color); padding-left: 15px;">Rappelez-vous les avertissements de la lignée : pour des techniques avancées, si une surcharge survient, n'hésitez pas à passer à la version "Lite" ou à limiter les cycles. La douceur et la régularité l'emportent toujours sur l'ambition spirituelle.</p>
             `
-        }, // <--- LA VIRGULE EST CRUCIALE ICI
+        },
+        {
+            title: "Le Fil et la Foudre : Reconnaître la Surcharge Énergétique",
+            body: `
+            <img src="surcharge-energie.png" alt="Le Fil et la Foudre : Différencier l'Éveil de la Surcharge" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Sur le chemin du silence, le système nerveux traverse une profonde purification. Cette transmutation biologique génère un courant de vie nouveau. Mais la frontière entre l'éveil sain et la surcharge énergétique est fine. Elle ne se mesure pas à l'aune de vos visions mystiques, mais à la qualité de votre ancrage dans le monde matériel.</p>
+                <p>La différence entre un remède et un poison n'est souvent qu'une question de dosage. Apprendre à lire les signaux de votre propre biologie est la plus grande des sagesses.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">1. L'Éveil Sain : Le Fleuve Paisible</h3>
+                <p>Un éveil équilibré se caractérise par une intégration harmonieuse de l'énergie (le Prana) soutenue par le vaste contenant du silence intérieur. L'eau irrigue la terre sans la noyer.</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>La Douceur de la Friction :</strong> Le nettoyage neurologique produit des sensations : une douce chaleur, de légers frissons, des frémissements à la base de la colonne. Mais ce processus reste toujours globalement agréable, extatique et tolérable.</li>
+                    <li><strong>L'Épreuve du Quotidien :</strong> Le véritable test d'un éveil sain n'est pas ce que vous ressentez les yeux fermés sur votre coussin, mais comment vous vivez les yeux ouverts. Un système nerveux purifié se traduit par plus de résilience, une joie simple, et une capacité accrue à aimer sans condition.</li>
+                    <li><strong>L'Ancrage Naturel :</strong> Vous restez fermement planté dans la réalité. Vos responsabilités professionnelles, familiales et sociales ne sont pas fuyées, mais accomplies avec une clarté nouvelle.</li>
+                </ul>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">2. La Surcharge (Overload) : Le Barrage Rompu</h3>
+                <p>La surcharge survient lorsque l'ego spirituel se montre trop gourmand. En forçant la pratique (trop de respiration spinale, rétention d'air agressive, concentration prématurée sur le sommet du crâne), vous injectez un torrent d'énergie dans des nerfs qui ne sont pas encore prêts à le conduire. C'est l'inondation d'un barrage dont les vannes sont trop étroites.</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>La Défaillance Physique :</strong> L'extase se mue en agonie. Vous pouvez ressentir de violents maux de tête, une pression écrasante dans le crâne, des brûlures nerveuses, des insomnies tenaces ou une fatigue qui vous terrasse.</li>
+                    <li><strong>La Détresse Émotionnelle :</strong> L'énergie bloquée crée une surpression psychologique. Des vagues d'irritabilité féroce, d'anxiété, de brouillard mental, de colère ou un profond sentiment de désespoir et d'isolement vous submergent.</li>
+                    <li><strong>La Fuite du Monde :</strong> La surcharge devient si débilitante qu'elle vous coupe du monde. Vous n'arrivez plus à dormir, à travailler ni à interagir sainement avec vos proches.</li>
+                </ul>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">3. L'Alchimie du Retour à la Terre</h3>
+                <p>Si la douleur et le chaos s'invitent dans votre pratique, vous avez franchi la ligne. La règle d'or de notre architecture est absolue : <strong>ne cherchez jamais à "passer à travers" la douleur en forçant davantage.</strong> La brutalité n'a pas sa place dans le Temple.</p>
+                <p>Il vous faut redescendre la foudre dans la terre : c'est l'art de <strong>l'Ancrage (Grounding)</strong>. Réduisez immédiatement la durée de vos pratiques assises, ou suspendez-les de moitié. Ensuite, occupez-vous de votre corps physique. Ramenez l'énergie vers le bas : marchez lourdement dans la nature, mangez des repas denses et chauds pour relancer le feu digestif, et plongez vos mains dans la matière. Le repos profane est le remède sacré qui permettra à votre biologie de digérer l'excès de lumière.</p>
+            `
+        },
         {
             title: "La Sushumna : L'Axe Vivant de la Transformation",
             body: `
@@ -587,6 +615,34 @@ const TEACHINGS_DATABASE = {
                     <li><strong>Grounding Techniques:</strong> It is crucial to ground yourself to the earth. Walking barefoot in nature, eating a heavier meal, performing manual labor, or simply suspending practice for a few days are concrete actions to rebalance the system.</li>
                 </ul>
                 <p style="font-style: italic; opacity: 0.9; margin-top: 20px; border-left: 2px solid var(--accent-color); padding-left: 15px;">Remember the warnings of the lineage: for advanced techniques, if an overload occurs, do not hesitate to switch to a "Lite" version or limit your cycles. Gentleness and regularity always prevail over spiritual ambition.</p>
+            `
+        },
+        {
+            title: "The Thread and the Lightning: Recognizing Energetic Overload",
+            body: `
+            <img src="surcharge-energie.png" alt="The Thread and the Lightning: Differentiating Awakening from Overload" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>On the path of silence, the nervous system undergoes a profound purification. This biological transmutation generates a new current of life. But the boundary between a healthy awakening and an energetic overload is thin. It is not measured by the yardstick of your mystical visions, but by the quality of your grounding in the material world.</p>
+                <p>The difference between a remedy and a poison is often just a matter of dosage. Learning to read the signals of your own biology is the greatest of wisdoms.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">1. Healthy Awakening: The Peaceful River</h3>
+                <p>A balanced awakening is characterized by a harmonious integration of energy (Prana) supported by the vast container of inner silence. The water irrigates the earth without drowning it.</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>The Gentleness of Friction:</strong> Neurological cleansing produces sensations: a gentle warmth, slight chills, quivering at the base of the spine. But this process always remains overall pleasant, ecstatic, and tolerable.</li>
+                    <li><strong>The Test of Daily Life:</strong> The true test of a healthy awakening is not what you feel with your eyes closed on your cushion, but how you live with your eyes open. A purified nervous system translates into more resilience, simple joy, and an increased capacity to love unconditionally.</li>
+                    <li><strong>Natural Grounding:</strong> You remain firmly planted in reality. Your professional, family, and social responsibilities are not fled from, but accomplished with new clarity.</li>
+                </ul>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">2. Overload: The Broken Dam</h3>
+                <p>Overload occurs when the spiritual ego becomes too greedy. By forcing the practice (too much spinal breathing, aggressive breath retention, premature concentration on the crown of the head), you inject a torrent of energy into nerves that are not yet ready to conduct it. It is the flooding of a dam whose gates are too narrow.</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>Physical Breakdown:</strong> Ecstasy turns into agony. You may feel violent headaches, crushing pressure in the skull, nerve burning, stubborn insomnia, or debilitating fatigue.</li>
+                    <li><strong>Emotional Distress:</strong> Blocked energy creates psychological overpressure. Waves of fierce irritability, anxiety, brain fog, anger, or a profound sense of despair and isolation overwhelm you.</li>
+                    <li><strong>Fleeing the World:</strong> The overload becomes so debilitating that it cuts you off from the world. You can no longer sleep, work, or interact healthily with your loved ones.</li>
+                </ul>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">3. The Alchemy of Returning to Earth</h3>
+                <p>If pain and chaos invite themselves into your practice, you have crossed the line. The golden rule of our architecture is absolute: <strong>never try to "push through" the pain by forcing more.</strong> Brutality has no place in the Temple.</p>
+                <p>You must bring the lightning back down into the earth: this is the art of <strong>Grounding</strong>. Immediately reduce the duration of your sitting practices, or cut them in half. Then, take care of your physical body. Bring the energy downwards: walk heavily in nature, eat dense, warm meals to reignite the digestive fire, and plunge your hands into matter. Profane rest is the sacred remedy that will allow your biology to digest the excess light.</p>
             `
         },
         {

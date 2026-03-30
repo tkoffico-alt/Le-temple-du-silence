@@ -1,5 +1,4 @@
-
-    const MANUEL_DATABASE = {
+const MANUEL_DATABASE = {
     fr: {
         title: "Le Manuel Opératoire : L'Échelle des Pratiques",
         body: `
@@ -13,42 +12,60 @@
             </div>
 
             <div id="manuel-imprimable">
-                <p>Dans notre système, l'évolution spirituelle n'est pas un bloc rigide, mais un système modulaire. On ajoute les pratiques une à une, sur des mois ou des années. La règle absolue est l'auto-régulation (<em>Self-Pacing</em>) : ne forcez jamais. Voici l'ordre d'exécution d'une séance quotidienne complète.</p>
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">L'Architecture biologique et spirituelle de l'Éveil</h3>
+                <p>Dans notre tradition, l'édifice de la conscience ne se construit pas en une nuit. Le système nerveux est une argile délicate qui nécessite d'être pétrie, nettoyée, puis cuite au feu de l'énergie vitale avec une patience d'artisan. L'ajout des pratiques suit une architecture stricte, conçue pour cultiver le silence et la conductivité extatique sans jamais faire sauter les fusibles de votre biologie.</p>
+                <p>Voici l'échelle de votre transmutation, barreau par barreau :</p>
 
-                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Étape 1 : La Préparation (Asanas)</h3>
-                <p><strong>But :</strong> Assouplir le corps et préparer les nerfs.<br>
-                <strong>Durée :</strong> 5 à 10 minutes.<br>
-                <strong>Exécution :</strong> Effectuez une routine douce de flexions et d'étirements (genoux sur la poitrine, torsion spinale, cobra). Ne forcez jamais jusqu'à la douleur.</p>
-
-                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Étape 2 : L'Éveil (Respiration Spinale & Bandhas)</h3>
-                <p><strong>But :</strong> Nettoyer le canal central et éveiller l'énergie.<br>
-                <strong>Durée :</strong> 5 à 10 minutes.<br>
-                <strong>Exécution :</strong> Respirez lentement et profondément. À l'inspiration, tracez avec votre attention un fil allant du périnée jusqu'au centre des sourcils (le 3e œil). À l'expiration, redescendez par le même chemin.<br>
-                <strong>Les Accélérateurs (à ajouter progressivement) :</strong>
+                <h4 style="color: var(--title-blue); margin-top: 35px; font-size: 1.4rem;">🔹 Phase 1 : Les Fondations (Le lit de la rivière)</h4>
+                <p>Avant de faire couler l'océan, il faut creuser le lit du fleuve.</p>
                 <ul style="line-height: 1.8; margin-bottom: 20px;">
-                    <li><em>Mulabandha :</em> Maintenez une légère contraction du sphincter anal pendant toute la respiration.</li>
-                    <li><em>Sambhavi :</em> Gardez les yeux fermés, doucement levés et centrés vers le troisième œil.</li>
-                    <li><em>Siddhasana :</em> Asseyez-vous avec un talon pressant doucement contre le périnée.</li>
-                </ul></p>
+                    <li><strong>1. Le Désir (Bhakti) :</strong> La fondation invisible. C'est l'étincelle de la soif spirituelle. Sans ce feu profond, aucune routine ne tient. C'est le moteur silencieux qui vous ramènera chaque jour sur votre coussin.</li>
+                    <li><strong>2. La Méditation Profonde (Le Silence) :</strong> L'outil premier. En utilisant la vibration subtile du mantra (<em>I AM</em> / <em>AYAM</em>), l'esprit plonge vers sa source. C'est la charrue qui retourne la terre de votre système nerveux, cultivant le Témoin immobile et purgeant les mémoires figées.</li>
+                    <li><strong>3. La Respiration Spinale (Le Prana) :</strong> Une fois le silence installé, nous invitons le mouvement. En traçant le nerf spinal (<em>Sushumna</em>) de la racine au troisième œil, on éveille et équilibre la force vitale (<em>Kundalini</em>).</li>
+                    <li><strong>4. Le Raffinement du Souffle :</strong> L'art s'affine. L'ouverture de la gorge à l'inspiration, le doux frôlement de l'épiglotte à l'expiration (<em>Ujjayi</em>), et le suivi conscient des courants (frais en montant, chauds en descendant) transforment le souffle en un laser subtil.</li>
+                </ul>
 
-                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Étape 3 : La Fondation (Méditation Profonde)</h3>
-                <p><strong>But :</strong> Cultiver le silence intérieur et le Témoin.<br>
-                <strong>Durée :</strong> 20 minutes (strictement).<br>
-                <strong>Exécution :</strong> Relâchez la respiration spinale et les verrous. Pensez doucement au mantra <strong>AYAM</strong> ("I AM"). S'il devient flou, laissez-le faire. Dès que vous réalisez que vous êtes perdu dans vos pensées, ramenez simplement et très doucement votre attention sur le mantra.</p>
+                <h4 style="color: var(--title-blue); margin-top: 35px; font-size: 1.4rem;">🔹 Phase 2 : L'Éveil Ciblé (Le réveil de la terre)</h4>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>5. Mulabandha / Asvini (Le Verrou Racine) :</strong> Une douce contraction du sphincter anal. C'est le premier coup frappé à la porte d'en bas, réveillant l'énergie dormante dans les fondations du bassin.</li>
+                    <li><strong>6. Shambhavi Mudra (Le Regard Intérieur) :</strong> Le centrage subtil des yeux vers le troisième œil, avec un froncement de sourcils à peine esquissé. Ce geste physique stimule neurologiquement le cerveau, appelant l'énergie vers le sommet.</li>
+                    <li><strong>7. Les Asanas (L'Assouplissement) :</strong> Pratiquées juste avant l'assise, les postures ne sont pas de la gymnastique. Elles essorent la chair, dénouent les nerfs grossiers et préparent le corps à recevoir la haute tension de la méditation.</li>
+                    <li><strong>8. Siddhasana (Le Sceau Parfait) :</strong> L'assise où le talon presse fermement le périnée. Un appui constant qui agit comme une pompe silencieuse, redirigeant l'énergie de la base vers le haut tout au long de votre pratique.</li>
+                </ul>
 
-                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Étape 4 : L'Expansion (Samyama)</h3>
-                <p><strong>But :</strong> Faire rayonner le silence dans l'action.<br>
-                <strong>Durée :</strong> 5 à 10 minutes.<br>
-                <strong>Exécution :</strong> Reposez-vous 1 minute après la méditation. Pensez au premier sutra (Amour, Radiance, Unité...) de manière très faible et floue, sans réfléchir à son sens, puis relâchez-le dans le silence pendant 15 secondes. Répétez chaque sutra deux fois, puis passez au suivant.</p>
+                <h4 style="color: var(--title-blue); margin-top: 35px; font-size: 1.4rem;">🔹 Phase 3 : Les Accélérateurs (L'alchimie du feu)</h4>
+                <p><em>Attention : ces techniques exigent un système nerveux déjà profondément stabilisé par les phases précédentes.</em></p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>9. Yoni Mudra Kumbhaka :</strong> La rétention du souffle, combinée à la fermeture sensorielle (oreilles, yeux, nez, bouche). Ce vide profond (<em>Kumbhaka</em>) purge le troisième œil par un puissant effet de succion énergétique.</li>
+                    <li><strong>10. L'Alchimie Tantrique :</strong> La préservation et la transmutation de l'énergie sexuelle lors des rapports physiques (par des méthodes de retenue), transformant l'élan biologique en carburant spirituel.</li>
+                    <li><strong>11. Kechari Mudra :</strong> Le retournement de la langue vers le palais (puis la cavité nasale). Il vient fermer le grand circuit énergétique dans la tête, connectant le nectar supérieur au reste du corps.</li>
+                    <li><strong>12. Uddiyana Bandha & Nauli :</strong> Le soulèvement du diaphragme et le barattage abdominal. Une véritable forge physique qui tire massivement les énergies denses du bassin vers la lumière du cœur.</li>
+                    <li><strong>13. La Pompe Cervicale (Jalandhara dynamique) :</strong> La rotation de la tête plongeant vers la poitrine. Elle crée un tourbillon extatique dans la <em>Sushumna</em>, stimulant violemment les flux entre le cœur et le crâne.</li>
+                </ul>
 
-                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Étape 5 : La Clôture (Repos Obligatoire)</h3>
-                <p><strong>But :</strong> Stabiliser l'énergie dans le système nerveux.<br>
-                <strong>Durée :</strong> 5 à 10 minutes.<br>
-                <strong>Exécution :</strong> Allongez-vous (Savasana) ou restez assis, les yeux fermés. Ne faites rien. Ce temps de repos est absolu et non négociable.</p>
+                <h4 style="color: var(--title-blue); margin-top: 35px; font-size: 1.4rem;">🔹 Phase 4 : L'Expansion et la Tempête (Haute-pression)</h4>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>14. Le Samyama :</strong> Le grand lâcher-prise en action. C'est l'art d'initier une pensée (<em>sutra</em>) puis de la laisser se dissoudre dans le silence intérieur. Il nettoie les karmas les plus profonds et fait irradier la quiétude dans la vie de tous les jours.</li>
+                    <li><strong>15. Bastrika Spinal (Le Vent Purificateur) :</strong> Une respiration très rapide, tel le halètement d'un feu, parcourant le nerf spinal. Un véritable nettoyeur haute-pression pour déloger les scories nerveuses résiduelles.</li>
+                    <li><strong>16. Bastrika Ciblé :</strong> L'application de ce vent rapide sur des nœuds karmiques spécifiques (gorge, cœur, racine) qui refusent de céder.</li>
+                    <li><strong>17. Bastrika Couronne-Racine :</strong> L'étirement ultime de ce souffle de feu entre les deux pôles absolus de notre anatomie subtile.</li>
+                </ul>
+
+                <h4 style="color: var(--title-blue); margin-top: 35px; font-size: 1.4rem;">🔹 Phase 5 : L'Intégration Cosmique (La floraison naturelle)</h4>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>18. Samyama Cosmique (Yoga Nidra Avancé) :</strong> La conscience s'allonge et s'étend jusqu'à embrasser l'univers tout entier. Le corps devient l'espace.</li>
+                    <li><strong>19. L'Alchimie du Quotidien (Yamas, Niyamas & Karma Yoga) :</strong> Au sommet de l'échelle, le style de vie n'est plus forcé par la morale, il éclot de lui-même. Alimentation légère, purifications physiques (<em>Shatkarmas</em>, <em>Amaroli</em>), auto-enquête (<em>Jnana</em>) et service désintéressé coulent naturellement d'un système nerveux purifié. L'amour devient l'état naturel du corps.</li>
+                </ul>
+
+                <hr style="border: 1px dashed var(--border-color); margin: 40px 0;">
+
+                <h3 style="color: var(--accent-color); text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem;">⚖️ LA RÈGLE D'OR : L'Auto-Ajustement (Le Dosage)</h3>
+                <p>Considérez cette règle comme la loi suprême du Temple. Cette échelle n'est pas une course à accomplir en quelques mois. C'est le pèlerinage d'une vie.</p>
+                <p><strong>N'ajoutez qu'une seule pratique à la fois.</strong> Laissez des semaines, voire des mois, à votre biologie pour absorber et stabiliser cette nouvelle lumière. Si la tension monte, si le vertige s'installe, ou si l'irritabilité vous gagne, l'ego vous dira de pousser plus fort ; la sagesse, elle, vous ordonne de reculer. Réduisez vos temps de pratique. Soyez le maître de votre propre feu, pas son esclave. La transformation la plus fulgurante est celle qui sait avancer avec la lenteur majestueuse des saisons.</p>
 
                 <div align="center" style="margin-top: 50px;">
                     <img src="sceau-gardien.png" width="80" alt="Sceau du Gardien">
-                    <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; opacity: 0.8;">Le Gardien du Temple</p>
+                    <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; opacity: 0.8;">Le Gardien du Temple<br>*( © ༄ Œuvre originale - Propriété exclusive du Temple )*</p>
                 </div>
             </div>
         `
@@ -66,42 +83,60 @@
             </div>
 
             <div id="manuel-imprimable">
-                <p>In our system, spiritual evolution is not a rigid block, but a modular system. We add practices one by one, over months or years. The absolute rule is self-pacing: never force. Here is the exact order of execution for a complete daily session.</p>
+                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">The Biological and Spiritual Architecture of Awakening</h3>
+                <p>In our tradition, the edifice of consciousness is not built overnight. The nervous system is delicate clay that needs to be kneaded, cleansed, and then fired in the kiln of vital energy with the patience of a craftsman. The addition of practices follows a strict architecture, designed to cultivate silence and ecstatic conductivity without ever blowing the fuses of your biology.</p>
+                <p>Here is the ladder of your transmutation, rung by rung:</p>
 
-                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Step 1: Preparation (Asanas)</h3>
-                <p><strong>Goal:</strong> Loosen the body and prepare the nerves.<br>
-                <strong>Duration:</strong> 5 to 10 minutes.<br>
-                <strong>Execution:</strong> Perform a gentle routine of bending and stretching. Never push to the point of pain.</p>
-
-                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Step 2: Awakening (Spinal Breathing & Bandhas)</h3>
-                <p><strong>Goal:</strong> Cleanse the central channel and awaken the energy.<br>
-                <strong>Duration:</strong> 5 to 10 minutes.<br>
-                <strong>Execution:</strong> Breathe slowly and deeply. On the inhale, trace a thread with your attention from the perineum to the center of the eyebrows (the 3rd eye). On the exhale, go back down the same path.<br>
-                <strong>Accelerators (to be added gradually):</strong>
+                <h4 style="color: var(--title-blue); margin-top: 35px; font-size: 1.4rem;">🔹 Phase 1: The Foundations (The Riverbed)</h4>
+                <p>Before letting the ocean flow, one must dig the riverbed.</p>
                 <ul style="line-height: 1.8; margin-bottom: 20px;">
-                    <li><em>Mulabandha:</em> Maintain a slight contraction of the anal sphincter throughout the breathing.</li>
-                    <li><em>Sambhavi:</em> Keep your eyes closed, gently elevated and centered towards the third eye.</li>
-                    <li><em>Siddhasana:</em> Sit with one heel gently pressing against the perineum.</li>
-                </ul></p>
+                    <li><strong>1. Desire (Bhakti):</strong> The invisible foundation. It is the spark of spiritual thirst. Without this deep fire, no routine holds. It is the silent engine that will bring you back to your cushion every day.</li>
+                    <li><strong>2. Deep Meditation (Silence):</strong> The primary tool. By using the subtle vibration of the mantra (<em>I AM</em> / <em>AYAM</em>), the mind dives toward its source. It is the plow that turns the soil of your nervous system, cultivating the still Witness and purging frozen memories.</li>
+                    <li><strong>3. Spinal Breathing (Prana):</strong> Once silence is established, we invite movement. By tracing the spinal nerve (<em>Sushumna</em>) from the root to the third eye, the vital force (<em>Kundalini</em>) is awakened and balanced.</li>
+                    <li><strong>4. Refinement of Breath:</strong> The art is refined. Opening the throat on the inhale, the gentle brushing of the epiglottis on the exhale (<em>Ujjayi</em>), and conscious tracking of the currents (cool going up, warm going down) transform the breath into a subtle laser.</li>
+                </ul>
 
-                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Step 3: The Foundation (Deep Meditation)</h3>
-                <p><strong>Goal:</strong> Cultivate inner silence and the Witness.<br>
-                <strong>Duration:</strong> 20 minutes (strictly).<br>
-                <strong>Execution:</strong> Release the spinal breathing and the locks. Gently think the mantra <strong>AYAM</strong> ("I AM"). As soon as you realize you are lost in thought, simply and very gently bring your attention back to the mantra.</p>
+                <h4 style="color: var(--title-blue); margin-top: 35px; font-size: 1.4rem;">🔹 Phase 2: Targeted Awakening (Waking the Earth)</h4>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>5. Mulabandha / Asvini (The Root Lock):</strong> A gentle contraction of the anal sphincter. It is the first knock on the door below, awakening dormant energy in the foundations of the pelvis.</li>
+                    <li><strong>6. Shambhavi Mudra (The Inner Gaze):</strong> The subtle centering of the eyes toward the third eye, with a barely sketched frown. This physical gesture neurologically stimulates the brain, calling energy to the crown.</li>
+                    <li><strong>7. Asanas (Flexibility):</strong> Practiced just before sitting, postures are not gymnastics. They wring out the flesh, untie gross nerves, and prepare the body to receive the high voltage of meditation.</li>
+                    <li><strong>8. Siddhasana (The Perfect Seal):</strong> The seated posture where the heel presses firmly against the perineum. A constant support that acts as a silent pump, redirecting energy from the base upwards throughout your practice.</li>
+                </ul>
 
-                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Step 4: Expansion (Samyama)</h3>
-                <p><strong>Goal:</strong> Radiate silence into action.<br>
-                <strong>Duration:</strong> 5 to 10 minutes.<br>
-                <strong>Execution:</strong> Rest for 1 minute after meditation. Think the first sutra in a very faint and fuzzy way, without thinking about its meaning, then release it into the silence for 15 seconds. Repeat each sutra twice, then move on to the next.</p>
+                <h4 style="color: var(--title-blue); margin-top: 35px; font-size: 1.4rem;">🔹 Phase 3: The Accelerators (The Alchemy of Fire)</h4>
+                <p><em>Warning: these techniques require a nervous system already deeply stabilized by the previous phases.</em></p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>9. Yoni Mudra Kumbhaka:</strong> Breath retention combined with sensory closure (ears, eyes, nose, mouth). This deep void (<em>Kumbhaka</em>) purges the third eye through a powerful energetic suction effect.</li>
+                    <li><strong>10. Tantric Alchemy:</strong> The preservation and transmutation of sexual energy during physical intimacy (through holdback methods), transforming biological drive into spiritual fuel.</li>
+                    <li><strong>11. Kechari Mudra:</strong> The turning back of the tongue toward the palate (and then the nasal cavity). It closes the major energetic circuit in the head, connecting the higher nectar to the rest of the body.</li>
+                    <li><strong>12. Uddiyana Bandha & Nauli:</strong> The lifting of the diaphragm and the churning of the abdominal muscles. A true physical forge that massively draws dense pelvic energies toward the light of the heart.</li>
+                    <li><strong>13. Cervical Pump (Dynamic Jalandhara):</strong> The rotation of the head dipping toward the chest. It creates an ecstatic whirlpool in the <em>Sushumna</em>, violently stimulating the flows between the heart and the skull.</li>
+                </ul>
 
-                <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">Step 5: Closing (Mandatory Rest)</h3>
-                <p><strong>Goal:</strong> Stabilize the energy in the nervous system.<br>
-                <strong>Duration:</strong> 5 to 10 minutes.<br>
-                <strong>Execution:</strong> Lie down (Savasana) or remain seated with your eyes closed. Do nothing. This rest time is absolute and non-negotiable.</p>
+                <h4 style="color: var(--title-blue); margin-top: 35px; font-size: 1.4rem;">🔹 Phase 4: Expansion and Storm (High-Pressure)</h4>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>14. Samyama:</strong> The great letting go in action. It is the art of initiating a thought (<em>sutra</em>) and then letting it dissolve into inner silence. It cleanses the deepest karmas and radiates stillness into everyday life.</li>
+                    <li><strong>15. Spinal Bastrika (The Purifying Wind):</strong> A very rapid breathing, like the panting of a fire, traveling along the spinal nerve. A true high-pressure cleaner to dislodge residual nervous dross.</li>
+                    <li><strong>16. Targeted Bastrika:</strong> The application of this rapid wind to specific stubborn karmic knots (throat, heart, root) that refuse to yield.</li>
+                    <li><strong>17. Crown-Root Bastrika:</strong> The ultimate stretching of this breath of fire between the two absolute poles of our subtle anatomy.</li>
+                </ul>
+
+                <h4 style="color: var(--title-blue); margin-top: 35px; font-size: 1.4rem;">🔹 Phase 5: Cosmic Integration (Natural Blooming)</h4>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>18. Cosmic Samyama (Advanced Yoga Nidra):</strong> Consciousness lengthens and expands to embrace the entire universe. The body becomes space.</li>
+                    <li><strong>19. Alchemy of Daily Life (Yamas, Niyamas & Karma Yoga):</strong> At the top of the ladder, lifestyle is no longer forced by morality; it blooms on its own. Light diet, physical cleanses (<em>Shatkarmas</em>, <em>Amaroli</em>), self-inquiry (<em>Jnana</em>), and selfless service flow naturally from a purified nervous system. Love becomes the natural state of the body.</li>
+                </ul>
+
+                <hr style="border: 1px dashed var(--border-color); margin: 40px 0;">
+
+                <h3 style="color: var(--accent-color); text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem;">⚖️ THE GOLDEN RULE: Self-Pacing (Dosage)</h3>
+                <p>Consider this rule as the supreme law of the Temple. This ladder is not a race to be completed in a few months. It is the pilgrimage of a lifetime.</p>
+                <p><strong>Add only one practice at a time.</strong> Allow weeks, even months, for your biology to absorb and stabilize this new light. If tension rises, if dizziness sets in, or if irritability overcomes you, the ego will tell you to push harder; wisdom, however, commands you to pull back. Reduce your practice times. Be the master of your own fire, not its slave. The most dazzling transformation is the one that knows how to move forward with the majestic slowness of the seasons.</p>
 
                 <div align="center" style="margin-top: 50px;">
                     <img src="sceau-gardien.png" width="80" alt="Seal of the Guardian">
-                    <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; opacity: 0.8;">The Guardian of the Temple</p>
+                    <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; opacity: 0.8;">The Guardian of the Temple<br>*( © ༄ Original work - Exclusive property of the Temple )*</p>
                 </div>
             </div>
         `

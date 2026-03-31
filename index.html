@@ -476,6 +476,15 @@
 
     <script>
     let currentLang = 'fr';
+        // Transforme un titre en identifiant (ex: "Le Silence Intérieur" -> "le-silence-interieur")
+function genererAncre(titre) {
+    return titre
+        .toLowerCase()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Enlève les accents
+        .replace(/[^a-z0-9]/g, '-') // Remplace tout ce qui n'est pas lettre ou chiffre par un tiret
+        .replace(/-+/g, '-') // Évite les tirets multiples
+        .replace(/^-|-$/g, ''); // Enlève les tirets au début ou à la fin
+}
     
  function createDustParticles() {
     const container = document.getElementById('particles-container');
@@ -619,8 +628,10 @@
         }
 
         currentData.forEach((item, index) => {
-            const article = document.createElement("details");
-            article.className = "teaching-accordion";
+           const idAutomatique = item.id || genererAncre(item.title);
+        const article = document.createElement("details");
+        article.id = idAutomatique; // On ajoute l'ID ici
+        article.className = "teaching-accordion";
             article.innerHTML = `
                 <summary class="accordion-title">${item.title}</summary>
                 <div class="accordion-content parchment-text">
@@ -695,8 +706,9 @@
                 titleColorStyle = "color: #5DADE2;"; 
             }
 
-            const murmureHTML = `
-                <details class="teaching-accordion">
+           const idAutomatique = murmure.id || genererAncre(murmure.title);
+        const murmureHTML = `
+            <details id="${idAutomatique}" class="teaching-accordion">
                     <summary class="accordion-title" style="${titleColorStyle}">${index + 1}. ${murmure.title}</summary>
                     <div class="accordion-content">
                         ${mediaHTML}
@@ -896,8 +908,7 @@
         }
     }
 
-    window.onload = () => {
-    // Retarde la création des particules de 500 millisecondes (pour fluidifier le chargement)
+   window.onload = () => {
     setTimeout(createDustParticles, 500); 
     
     renderEnseignements();
@@ -905,6 +916,32 @@
     renderParabole();
     renderBibliotheque();
     renderManuel();
+
+    // ---------------------------------------------------------
+    // LECTURE DE L'ANCRE : Ouverture automatique depuis un lien externe
+    // ---------------------------------------------------------
+    setTimeout(() => {
+        if (window.location.hash) {
+            const targetId = window.location.hash.substring(1); // Récupère le mot après le #
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                // 1. Trouver dans quelle salle (section) le texte est rangé et l'ouvrir
+                const parentSection = targetElement.closest('.section');
+                if (parentSection) {
+                    showSection(parentSection.id);
+                }
+                
+                // 2. Si c'est un texte caché (accordéon), on le déplie
+                if (targetElement.tagName === 'DETAILS') {
+                    targetElement.setAttribute('open', '');
+                }
+                
+                // 3. On glisse en douceur jusqu'au texte
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    }, 600); // Léger délai pour laisser le temps au temple de se construire
 };
 
  // --- 🎧 DÉVERROUILLAGE INITIAL DU SON ---

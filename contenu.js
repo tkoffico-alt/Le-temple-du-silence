@@ -503,6 +503,59 @@ const TEACHINGS_DATABASE = {
                 <p>Pratiquer le Tantra, c'est manipuler du carburant de fusée. Si vous injectez une quantité massive d'énergie sexuelle dans une colonne vertébrale qui n'a pas été suffisamment purifiée par la Méditation Profonde, la friction sera extrême. Insomnies, irritabilité féroce, chaleur excessive ou obsessions peuvent survenir.</p>
                 <p>L'auto-régulation (Self-Pacing) est ici vitale. Si la tension devient destructrice, vous devez impérativement réduire la stimulation, stopper les pratiques physiques (verrous), et vous ancrer lourdement dans la matière (Grounding). La transmutation sexuelle est le couronnement de la pratique, pas son point de départ.</p>
             `
+        },
+        {
+            title: "L'Anatomie de l'Éveil : Le Lit de la Rivière et le Courant d'Or",
+            body: `
+            <img src="anatomie-eveil.png" alt="L'Anatomie de l'Éveil : Le Lit de la Rivière et le Courant d'Or" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>L'éveil n'est pas un éclair mystique qui vous frappe au hasard. C'est le nettoyage patient et mécanique de votre système nerveux, semblable au lent travail d'une rivière qui, goutte après goutte, dissout les sédiments accumulés dans son lit. Ces sédiments sont nos peurs, nos traumatismes et nos habitudes rigides — tout ce qui obstrue la libre circulation de la vie en nous.</p>
+                <p>Ce nettoyage biologique traverse trois grandes saisons.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">1. Le Lit de la Rivière (Le Silence Intérieur)</h3>
+                <p>Avant d'accueillir le tumulte de l'eau, il faut creuser le lit du fleuve. C'est la première étape fondamentale : l'émergence d'un silence profond dans les nerfs, cultivé par la Méditation Profonde. Il s'agit du "Témoin", ce pôle masculin et inébranlable (Shiva). Ce silence agit comme un solvant universel. En lâchant prise sur les pensées avec douceur, vous permettez aux vieilles empreintes karmiques de se dissoudre. Imaginez un miroir couvert de poussière : la méditation est le souffle délicat qui, jour après jour, révèle sa surface claire. Ce roc silencieux offre la stabilité nécessaire pour traverser les tempêtes à venir.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">2. Le Courant Purificateur (La Conductivité Extatique)</h3>
+                <p>C'est la phase active, le réveil de la foudre douce (la Kundalini ou Shakti). Propulsée par la Respiration Spinale et les verrous physiques, l'énergie vitale endormie à la racine remonte le long du canal central. Cette phase connaît elle-même deux temps :</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>La friction et la boue :</strong> Au début, la pompe énergétique déloge les blocages tenaces comme une brosse frotte un tuyau rouillé. L'énergie percute vos anciennes résistances. Cette friction crée des symptômes : chaleur, frissons, ou remontées émotionnelles soudaines (tristesse, agitation). Ne résistez pas. C'est la boue qui remonte à la surface pour être évacuée. Laissez-la passer comme des nuages dans le ciel.</li>
+                    <li><strong>Le flux cristallin :</strong> À mesure que le système nerveux se purifie, la friction disparaît. Les symptômes chaotiques laissent place à un courant d'or fluide et raffiné : une extase organique continue, vécue jusque dans les cellules, 24 heures sur 24.</li>
+                </ul>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">3. L'Océan (L'Unité et l'Amour Divin)</h3>
+                <p>Le nettoyage n'est qu'un passage. Une fois les canaux libérés, l'immobilité du lit de la rivière (le Silence) et le frémissement de l'eau (l'Extase) s'entremêlent et fusionnent. De ces noces intimes naît une romance divine dans la chair. Ce qui était autrefois perçu comme des poussées d'énergie intenses se transforme en une béatitude infinie qui déborde naturellement vers l'extérieur. La frontière entre vous et le monde s'effondre. Chaque action ordinaire devient un service aimant pour le bien de tous.</p>
+
+                <div style="margin-top: 40px; padding: 25px; border-left: 3px solid var(--accent-color); background: rgba(20, 20, 20, 0.4); border-radius: 0 8px 8px 0;">
+                    <h4 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; margin-top: 0; margin-bottom: 15px; font-size: 1.4rem; font-style: italic;">La Boussole du Jardinier</h4>
+                    <p style="font-size: 1rem; line-height: 1.6; margin-bottom: 0;">Rappelez-vous que ce processus est cyclique. Il y aura des jours de soleil et des jours d'orage. Si les sensations deviennent trop intenses (maux de tête, irritabilité), appliquez la clé absolue de l'Auto-Régulation. Ralentissez. Réduisez le temps de pratique, marchez pieds nus sur la terre, mangez un repas lourd. Le système nerveux est comme un jardin : on ne tire pas sur les pousses pour les faire grandir. On arrose, on attend, et on observe. L'important n'est pas la vitesse, mais la régularité — comme le flux et le reflux de l'océan.</p>
+                </div>
+                <div align="center" style="margin-top: 40px;">
+                    <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; opacity: 0.8; font-size: 1.1rem;">✧ Le Gardien du Temple<br>*( © ༄ Œuvre originale - Propriété exclusive du Temple )*</p>
+                </div>
+            `
+        },
+        {
+            title: "Les Deux Ailes de l'Oiseau : Le Silence et l'Énergie",
+            body: `
+            <img src="deux-ailes-oiseau.png" alt="Les Deux Ailes de l'Oiseau : Le Silence et l'Énergie" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Cher voyageur, une question revient souvent aux portes du sanctuaire : <em>"Peut-on connaître l'éveil sans que l'énergie s'embrase ? Ou peut-on être traversé par cette foudre douce sans jamais avoir connu le silence ?"</em></p>
+                <p>Ces interrogations touchent au cœur même de notre mécanique spirituelle. L'illumination véritable — ce que notre tradition nomme l'Unité — n'est pas un état fragmenté. Le Silence intérieur (le Témoin) et la Conductivité extatique (la Kundalini) sont comme deux fils entrelacés dans une même tresse, ou plus exactement, comme les deux ailes d'un même oiseau. L'une sans l'autre, le vol est bancal.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">La Toile sans la Peinture (Le Silence sans l'Énergie)</h3>
+                <p>Peut-on être éveillé sans que l'énergie vitale ne remonte le long de la colonne ? Oui. La première marche de l'éveil est la reconnaissance du Témoin immobile, cette paix inébranlable qui sous-tend toute expérience. Vous pouvez tout à fait goûter à des états de silence profond et stables sans jamais ressentir de chaleur ou de frissons extatiques.</p>
+                <p>Le Silence est la toile de fond, mais la Kundalini est la peinture qui s'y déploie. Sans l'éveil de cette conductivité dans vos nerfs, votre réalisation risque de rester froide, détachée, purement expérientielle. En purifiant le corps, l'énergie permet au silence de s'incarner, de devenir vibrant dans chaque cellule. Sans cette sève, la paix ne peut pas déborder vers le monde extérieur ; il manque la "quiétude en action" et l'effusion d'amour divin.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">Le Fleuve en Crue (L'Énergie sans le Silence)</h3>
+                <p>À l'inverse, l'énergie peut-elle s'éveiller sans le roc du silence intérieur ? La réponse est plus rude : oui, mais c'est un accident de la nature. Cela survient souvent en forçant des techniques avancées sans préparation.</p>
+                <p>Si la foudre s'éveille sans le paratonnerre du Silence, elle devient une force désordonnée. Imaginez un fleuve en crue qui emporte tout sur son passage. Le Silence agit comme un gouvernail et un régulateur. Sans ce vaste espace pour accueillir la friction, la Kundalini révèle vos ombres (vos <em>samskaras</em>) sans vous offrir l'espace pour les dissoudre. Elle déchire les nerfs au lieu de les caresser. Déclencher l'énergie avant d'avoir cultivé le silence revient à mettre la charrue avant les bœufs : cela engendre le chaos émotionnel et l'épuisement.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">L'Envol vers l'Unité</h3>
+                <p>La spiritualité n'est pas une course à l'échalote entre la paix de l'esprit et les frissons du corps. C'est pour cette raison que notre pratique commence invariablement par la Méditation Profonde (pour tisser la toile du silence), avant d'y ajouter la Respiration Spinale (pour y inviter l'énergie extatique).</p>
+                <p>Si vous goûtez au silence sans ressentir l'énergie : continuez. Ne forcez rien. La sève montera d'elle-même, comme un fruit mûrit sous le soleil. L'énergie est déjà là, en germe. Laissez ces deux ailes grandir à leur propre rythme. Ensemble, et seulement ensemble, elles vous porteront vers l'horizon radieux de l'Unité.</p>
+
+                <div align="center" style="margin-top: 40px;">
+                    <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; opacity: 0.8; font-size: 1.1rem;">✧ Le Gardien du Temple<br>*( © ༄ Œuvre originale - Propriété exclusive du Temple )*</p>
+                </div>
+            `
         }
     ], // <--- LE CROCHET FERMANT EST ICI, AVANT LE "en:"
     en: [
@@ -863,6 +916,59 @@ const TEACHINGS_DATABASE = {
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">The Gardener's Warning (Self-Pacing)</h3>
                 <p>Practicing Tantra is handling rocket fuel. If you inject a massive amount of sexual energy into a spine that has not been sufficiently purified by Deep Meditation, the friction will be extreme. Insomnia, fierce irritability, excessive heat, or obsessions can occur.</p>
                 <p>Self-pacing is vital here. If tension becomes destructive, you must imperatively reduce stimulation, stop physical practices (locks), and ground yourself heavily in matter (Grounding). Sexual transmutation is the crowning achievement of practice, not its starting point.</p>
+            `
+        },
+        {
+            title: "The Anatomy of Awakening: The Riverbed and the Golden Current",
+            body: `
+            <img src="anatomie-eveil.png" alt="The Anatomy of Awakening: The Riverbed and the Golden Current" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Awakening is not a mystical lightning bolt that strikes you at random. It is the patient and mechanical cleansing of your nervous system, akin to the slow work of a river that, drop by drop, dissolves the sediments accumulated in its bed. These sediments are our fears, our traumas, and our rigid habits — everything that obstructs the free flow of life within us.</p>
+                <p>This biological cleansing goes through three major seasons.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">1. The Riverbed (Inner Silence)</h3>
+                <p>Before welcoming the tumult of the water, one must dig the riverbed. This is the fundamental first step: the emergence of a deep silence in the nerves, cultivated by Deep Meditation. This is the "Witness", this masculine and unshakable pole (Shiva). This silence acts as a universal solvent. By gently letting go of thoughts, you allow old karmic footprints to dissolve. Imagine a mirror covered in dust: meditation is the delicate breath that, day after day, reveals its clear surface. This silent rock provides the stability needed to weather the storms to come.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">2. The Purifying Current (Ecstatic Conductivity)</h3>
+                <p>This is the active phase, the awakening of the gentle lightning (Kundalini or Shakti). Propelled by Spinal Breathing and physical locks, the vital energy dormant at the root travels up the central channel. This phase itself has two stages:</p>
+                <ul style="line-height: 1.8; margin-bottom: 20px;">
+                    <li><strong>Friction and mud:</strong> At first, the energetic pump dislodges stubborn blockages the way a brush scrubs a rusty pipe. The energy hits your old resistances. This friction creates symptoms: heat, chills, or sudden emotional upsurges (sadness, agitation). Do not resist. It is the mud rising to the surface to be cleared away. Let it pass like clouds in the sky.</li>
+                    <li><strong>The crystalline flow:</strong> As the nervous system purifies, the friction disappears. The chaotic symptoms give way to a fluid and refined golden current: continuous organic ecstasy, experienced down to the cells, 24 hours a day.</li>
+                </ul>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">3. The Ocean (Unity and Divine Love)</h3>
+                <p>The cleansing is only a passage. Once the channels are cleared, the stillness of the riverbed (Silence) and the quivering of the water (Ecstasy) intertwine and merge. From these intimate nuptials is born a divine romance in the flesh. What was once perceived as intense surges of energy transforms into an infinite bliss that naturally overflows outward. The boundary between you and the world collapses. Every ordinary action becomes a loving service for the good of all.</p>
+
+                <div style="margin-top: 40px; padding: 25px; border-left: 3px solid var(--accent-color); background: rgba(20, 20, 20, 0.4); border-radius: 0 8px 8px 0;">
+                    <h4 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; margin-top: 0; margin-bottom: 15px; font-size: 1.4rem; font-style: italic;">The Gardener's Compass</h4>
+                    <p style="font-size: 1rem; line-height: 1.6; margin-bottom: 0;">Remember that this process is cyclical. There will be days of sun and days of storms. If sensations become too intense (headaches, irritability), apply the absolute key of Self-Pacing. Slow down. Reduce your practice time, walk barefoot on the earth, eat a heavy meal. The nervous system is like a garden: we don't pull on the shoots to make them grow. We water, we wait, and we observe. The important thing is not speed, but regularity — like the ebb and flow of the ocean.</p>
+                </div>
+                <div align="center" style="margin-top: 40px;">
+                    <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; opacity: 0.8; font-size: 1.1rem;">✧ The Guardian of the Temple<br>*( © ༄ Original work - Exclusive property of the Temple )*</p>
+                </div>
+            `
+        },
+        {
+            title: "The Two Wings of the Bird: Silence and Energy",
+            body: `
+            <img src="deux-ailes-oiseau.png" alt="The Two Wings of the Bird: Silence and Energy" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Dear traveler, a question often echoes at the gates of the sanctuary: <em>"Can one know awakening without the energy igniting? Or can one be traversed by this gentle lightning without ever having known silence?"</em></p>
+                <p>These inquiries touch the very heart of our spiritual mechanics. True enlightenment — what our tradition calls Unity — is not a fragmented state. Inner Silence (the Witness) and Ecstatic Conductivity (Kundalini) are like two threads woven into the same braid, or more accurately, like the two wings of the same bird. Without one, the flight is unsteady.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">The Canvas Without the Paint (Silence without Energy)</h3>
+                <p>Can one be awakened without vital energy rising along the spine? Yes. The first step of awakening is the recognition of the motionless Witness, this unshakable peace that underlies all experience. You can absolutely taste states of deep and stable silence without ever feeling ecstatic heat or thrills.</p>
+                <p>Silence is the canvas, but Kundalini is the paint that unfolds upon it. Without the awakening of this conductivity in your nerves, your realization risks remaining cold, detached, purely experiential. By purifying the body, the energy allows the silence to become embodied, to become vibrant in every cell. Without this sap, peace cannot overflow into the outside world; it lacks "stillness in action" and the outpouring of divine love.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">The Flooded River (Energy without Silence)</h3>
+                <p>Conversely, can the energy awaken without the rock of inner silence? The answer is harsher: yes, but it is an accident of nature. This often occurs by forcing advanced techniques without preparation.</p>
+                <p>If the lightning awakens without the lightning rod of Silence, it becomes a disorderly force. Imagine a flooded river sweeping away everything in its path. Silence acts as a rudder and a regulator. Without this vast space to accommodate the friction, Kundalini reveals your shadows (your <em>samskaras</em>) without offering you the space to dissolve them. It tears the nerves instead of caressing them. Triggering the energy before cultivating silence is like putting the cart before the horse: it breeds emotional chaos and exhaustion.</p>
+
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">The Flight Towards Unity</h3>
+                <p>Spirituality is not a race between the peace of the mind and the thrills of the body. This is why our practice invariably begins with Deep Meditation (to weave the canvas of silence), before adding Spinal Breathing (to invite ecstatic energy into it).</p>
+                <p>If you taste silence without feeling the energy: keep going. Do not force anything. The sap will rise on its own, as a fruit ripens under the sun. The energy is already there, in seed form. Let these two wings grow at their own pace. Together, and only together, they will carry you toward the radiant horizon of Unity.</p>
+
+                <div align="center" style="margin-top: 40px;">
+                    <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; opacity: 0.8; font-size: 1.1rem;">✧ The Guardian of the Temple<br>*( © ༄ Original work - Exclusive property of the Temple )*</p>
+                </div>
             `
         }
     ]

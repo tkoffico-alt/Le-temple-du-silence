@@ -496,6 +496,12 @@ function genererAncre(titre) {
             .replace(/[^a-z0-9]/g, '-') 
             .replace(/-+/g, '-') 
             .replace(/^-|-$/g, ''); 
+    // --- DÉCODEUR UNIVERSEL ---
+    // Cette fonction force le navigateur à lire les balises neutralisées comme du vrai code HTML
+    function decodeHTML(html) {
+        let txt = document.createElement("textarea");
+        txt.innerHTML = html;
+        return txt.value;
     }
     
  function createDustParticles() {
@@ -664,7 +670,7 @@ function genererAncre(titre) {
         });
     }
 
-   function renderMurmures() {
+  function renderMurmures() {
         const container = document.getElementById("murmures-list-container");
         container.innerHTML = ""; 
         const currentMurmures = MURMURES_DATABASE[currentLang];
@@ -675,11 +681,15 @@ function genererAncre(titre) {
         }
 
         currentMurmures.forEach((murmure, index) => {
+            // 🌟 NOUVEAU : On décode les textes pour briser l'illusion de l'éditeur
+            let vraiTitre = decodeHTML(murmure.title);
+            let vraiTexte = decodeHTML(murmure.text);
+
             let mediaHTML = "";
             let downloadBtnHTML = ""; 
             
-            // NOUVEAU : On crée une version du titre purgée de tout code HTML pour les balises
-            let plainTitle = murmure.title.replace(/<[^>]+>/g, '');
+            // On nettoie le titre pour générer une ancre propre
+            let plainTitle = vraiTitre.replace(/<[^>]+>/g, '');
 
             if (murmure.videoFile && murmure.videoFile !== "") {
                 if (murmure.videoFile.includes("youtube.com") || murmure.videoFile.includes("youtu.be")) {
@@ -693,7 +703,6 @@ function genererAncre(titre) {
             } 
             else {
                if (murmure.imageFile && murmure.imageFile !== "") {
-                    // On utilise 'plainTitle' pour ne pas casser la balise de l'image
                     let altText = currentLang === 'fr' ? `${plainTitle} - Méditation et AYP` : `${plainTitle} - Meditation and AYP`;
                     mediaHTML += `<img src="${murmure.imageFile}" alt="${altText}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">`;
                 }
@@ -722,10 +731,10 @@ function genererAncre(titre) {
            const idAutomatique = murmure.id || genererAncre(plainTitle);
            const murmureHTML = `
             <details id="${idAutomatique}" class="teaching-accordion">
-                    <summary class="accordion-title" style="${titleColorStyle}">${index + 1}. ${murmure.title}</summary>
+                    <summary class="accordion-title" style="${titleColorStyle}">${index + 1}. ${vraiTitre}</summary>
                     <div class="accordion-content">
                         ${mediaHTML}
-                        <div id="texte-murmure-${index}" class="parchment-text">${murmure.text}</div>
+                        <div id="texte-murmure-${index}" class="parchment-text">${vraiTexte}</div>
                         ${getSignatureHTML()} 
                         <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 25px;">
                             <button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerMurmure(${index})">✨ ${textShareLabel}</button>
@@ -737,6 +746,10 @@ function genererAncre(titre) {
             `;
             container.innerHTML += murmureHTML;
         });
+
+        // 🌟 NOUVEAU : On s'assure que le bouton de langue applique immédiatement les règles sur le nouveau texte
+        document.querySelectorAll('.fr').forEach(el => el.style.display = currentLang === 'fr' ? 'inline' : 'none');
+        document.querySelectorAll('.en').forEach(el => el.style.display = currentLang === 'en' ? 'inline' : 'none');
     }
     function renderParabole() {
         document.getElementById("parabole-title").innerText = PARABOLE_DATA[currentLang].title;

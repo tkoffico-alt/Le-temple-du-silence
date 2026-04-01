@@ -1157,6 +1157,39 @@ L'enquête sur le Soi n'est pas un devoir à réussir, c'est une floraison spont
             title: "Écho : L'Illusion de la Conquête",
             audioFile: "", imageFile: "illusion-conquête.png", videoFile: "",
             text: "Notre monde profane nous éduque à l'effort. On nous apprend que pour obtenir quelque chose, il faut l'étudier, le traquer, l'accumuler et le conquérir. Par habitude, nous appliquons cette même logique d'acharnement à notre vie intérieure. Nous faisons de la paix un « projet » et du bonheur un « objectif ».<br><br>Nous croyons secrètement que l'éveil ou la sérénité sont des récompenses réservées à ceux qui auront lu assez de livres, accompli assez de retraites, ou pratiqué avec assez de rigueur. Mais cette course en avant crée le piège le plus parfait qui soit : l'esprit qui <em>cherche</em> le bonheur le projette toujours dans le futur. L'acte même de chercher nous confirme, à chaque seconde, la croyance intime que nous ne possédons pas ce que nous voulons.<br><br>Tant que nous cherchons avec acharnement, nous crions à la vie : <em>« Ce moment présent n'est pas suffisant. J'ai besoin d'autre chose pour être entier. »</em><br><br>La paix véritable ne se trouve pas comme on trouve un trésor caché ; elle se révèle. Et elle ne se révèle que lorsque la fatigue d'espérer nous fait enfin tomber les bras. S'arrêter de chercher n'est pas un échec spirituel ni de la paresse, c'est la naissance de la lucidité.<br><br>C'est accepter que nous ne sommes pas des moitiés en quête de leur reste. C'est comprendre que cette joie sans cause, ce silence vaste et accueillant, ne nous a jamais quittés. Il attendait simplement que nous cessions de faire tant de bruit pour l'entendre.<br><br>Il n'y a nulle part où aller. Il n'y a rien à devenir. Il y a juste à se déposer, ici et maintenant, dans la merveilleuse simplicité d'être en vie."
+        },
+        {
+            id: "silence-etoile",
+            title: "Murmure : Le Silence de l'Étoile",
+            audioFile: "", 
+            imageFile: "silence-etoile.png", 
+            videoFile: "",
+            text: `
+            <p>
+                <span class="fr">Cher voyageur, cette question touche au cœur même de l’illusion que le monde extérieur nous tend comme un miroir déformant.</span>
+                <span class="en" style="display:none;">Dear traveler, this question touches the very heart of the illusion that the outside world holds up to us like a distorting mirror.</span>
+            </p>
+            <p>
+                <span class="fr">L’importance que tu cherches dans le regard des autres est comme l’écume à la surface de l’océan : elle brille un instant, puis se dissout. Un grand auditoire, des louanges, des croyances collectives… tout cela n’est que le reflet éphémère d’une identité que tu as toi-même projetée. Mais qui écoute <em>vraiment</em> ? Qui voit au-delà du personnage que tu joues ?</span>
+                <span class="en" style="display:none;">The importance you seek in the eyes of others is like foam on the surface of the ocean: it shines for a moment, then dissolves. A large audience, praise, collective beliefs... all this is but the ephemeral reflection of an identity you yourself have projected. But who is <em>truly</em> listening? Who sees beyond the character you play?</span>
+            </p>
+            <p>
+                <span class="fr">La mécanique est simple : plus tu cherches la validation à l’extérieur, plus ton système nerveux se tend comme une corde de violon trop serrée. L’énergie que tu dépenses à nourrir cette image te vole la paix intérieure. Et sans cette paix, même les applaudissements sonnent creux.</span>
+                <span class="en" style="display:none;">The mechanics are simple: the more you seek external validation, the more your nervous system tightens like an overwound violin string. The energy you spend feeding this image steals your inner peace. And without that peace, even applause sounds hollow.</span>
+            </p>
+            <p>
+                <span class="fr">Observe ce qui se passe quand tu es seul, sans public, sans rôle à jouer. Là, dans le silence, tu es déjà complet. Pas parce que tu es "important", mais parce que tu <em>es</em> — simplement, sans justification. Le bambou ne se demande pas s’il est assez droit pour porter le vent. Il plie, il danse, et le vent passe à travers lui.</span>
+                <span class="en" style="display:none;">Observe what happens when you are alone, without an audience, without a role to play. There, in the silence, you are already complete. Not because you are "important," but because you <em>are</em> — simply, without justification. The bamboo does not wonder if it is straight enough to carry the wind. It bends, it dances, and the wind passes through it.</span>
+            </p>
+            <p>
+                <span class="fr">Si tu pratiques la respiration spinale ou la méditation profonde, tu as peut-être déjà senti cette vérité : l’énergie qui monte le long de ta colonne n’a besoin d’aucune audience pour exister. Elle est là, pure, indépendante des applaudissements. C’est elle, ta véritable importance — non pas une importance pour les autres, mais une présence pour toi-même.</span>
+                <span class="en" style="display:none;">If you practice spinal breathing or deep meditation, you may have already felt this truth: the energy rising along your spine needs no audience to exist. It is there, pure, independent of applause. That is your true importance — not an importance to others, but a presence to yourself.</span>
+            </p>
+            <p>
+                <span class="fr">Et si un jour tu doutes, souviens-toi : même les étoiles les plus brillantes ne savent pas qu’on les admire. Elles brillent parce que c’est leur nature, pas pour être vues.</span>
+                <span class="en" style="display:none;">And if one day you doubt, remember: even the brightest stars do not know they are admired. They shine because it is their nature, not to be seen.</span>
+            </p>
+            `
         }
     ],
     en: [

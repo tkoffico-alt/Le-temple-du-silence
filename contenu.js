@@ -1158,9 +1158,9 @@ L'enquête sur le Soi n'est pas un devoir à réussir, c'est une floraison spont
             audioFile: "", imageFile: "illusion-conquête.png", videoFile: "",
             text: "Notre monde profane nous éduque à l'effort. On nous apprend que pour obtenir quelque chose, il faut l'étudier, le traquer, l'accumuler et le conquérir. Par habitude, nous appliquons cette même logique d'acharnement à notre vie intérieure. Nous faisons de la paix un « projet » et du bonheur un « objectif ».<br><br>Nous croyons secrètement que l'éveil ou la sérénité sont des récompenses réservées à ceux qui auront lu assez de livres, accompli assez de retraites, ou pratiqué avec assez de rigueur. Mais cette course en avant crée le piège le plus parfait qui soit : l'esprit qui <em>cherche</em> le bonheur le projette toujours dans le futur. L'acte même de chercher nous confirme, à chaque seconde, la croyance intime que nous ne possédons pas ce que nous voulons.<br><br>Tant que nous cherchons avec acharnement, nous crions à la vie : <em>« Ce moment présent n'est pas suffisant. J'ai besoin d'autre chose pour être entier. »</em><br><br>La paix véritable ne se trouve pas comme on trouve un trésor caché ; elle se révèle. Et elle ne se révèle que lorsque la fatigue d'espérer nous fait enfin tomber les bras. S'arrêter de chercher n'est pas un échec spirituel ni de la paresse, c'est la naissance de la lucidité.<br><br>C'est accepter que nous ne sommes pas des moitiés en quête de leur reste. C'est comprendre que cette joie sans cause, ce silence vaste et accueillant, ne nous a jamais quittés. Il attendait simplement que nous cessions de faire tant de bruit pour l'entendre.<br><br>Il n'y a nulle part où aller. Il n'y a rien à devenir. Il y a juste à se déposer, ici et maintenant, dans la merveilleuse simplicité d'être en vie."
         },
-        {
+       {
             id: "silence-etoile",
-            title: "Murmure : Le Silence de l'Étoile",
+            title: "<span class='fr'>Murmure : Le Silence de l'Étoile</span><span class='en' style='display:none;'>Whisper: The Silence of the Star</span>",
             audioFile: "", 
             imageFile: "silence-etoile.png", 
             videoFile: "",

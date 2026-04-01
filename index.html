@@ -133,8 +133,8 @@
                     <span class="en" style="display:none;">The Guardian's Letters</span>
                 </h3>
                 <p style="font-size: 1.05rem; opacity: 0.9; font-style: italic; margin-bottom: 20px; line-height: 1.6;">
-                    <span class="fr">Ne marchez pas seul dans le tumulte. Laissez-nous déposer, de temps à autre, un murmure de clarté, un paradoxe à méditer et des outils d'ancrage directement dans votre boîte mail.</span>
-                    <span class="en" style="display:none;">Do not walk alone in the tumult. Let us drop, from time to time, a whisper of clarity, a paradox to meditate on, and grounding tools directly into your inbox.</span>
+                    <span class="fr">Inscrivez votre adresse dans le registre du temple pour recevoir, au rythme lent de la pratique, une chronique inédite, une réflexion intime sur l'ancrage, l'ego et le silence dans le tumulte du quotidien.</span>
+                    <span class="en" style="display:none;">Enter your address in the temple registry to receive, at the slow pace of practice, an unpublished chronicle, an intimate reflection on grounding, ego, and silence in the tumult of daily life.</span>
                 </p>
                 <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
                     <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; width: 250px; outline: none;">
@@ -143,63 +143,93 @@
                         <span class="en" style="display:none;">Subscribe</span>
                     </button>
                 </form>
+                <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 15px; font-style: italic;">
+                    <span class="fr">Aucun bruit inutile. Seulement l'essentiel.</span>
+                    <span class="en" style="display:none;">No unnecessary noise. Only the essential.</span>
+                </p>
             </div>
             
-            <div class="temple-gates-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto 50px auto;">
-                
-                <div class="temple-gate-card" onclick="showSection('sage')">
-                    <div class="temple-gate-icon">✦ Resonance</div>
-                    <div class="temple-gate-content parchment-text">
-                        <h4 style="color: var(--accent-color); margin-top: 0; font-size: 1.3rem;">
+            <div style="max-width: 900px; margin: 0 auto 50px auto;">
+                <h3 style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 30px; border-bottom: 1px dashed var(--border-color); padding-bottom: 15px;">
+                    <span class="fr">Les Portes du Sanctuaire</span>
+                    <span class="en" style="display:none;">The Doors of the Sanctuary</span>
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                    
+                    <div onclick="showSection('sage')" style="background: rgba(20,20,20,0.7); border: 1px solid var(--accent-color); border-radius: 12px; padding: 30px; cursor: pointer; text-align: center; transition: all 0.4s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(212, 175, 55, 0.25)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.4)';">
+                        <div style="font-size: 1.2rem; color: var(--accent-color); margin-bottom: 10px; font-style: italic;">
+                            <span class="fr">✧ Résonance</span>
+                            <span class="en" style="display:none;">✧ Resonance</span>
+                        </div>
+                        <h4 style="color: white; margin-top: 0; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; margin-bottom: 15px;">
                             <span class="fr">Le Sage Interactif</span>
                             <span class="en" style="display:none;">Interactive Sage</span>
                         </h4>
-                        <p style="font-size: 0.95rem; opacity: 0.9; margin-bottom: 0; line-height: 1.6;">
-                            <span class="fr">✧ Entrez dans la salle de résonance pour interroger directement la conscience AYP.</span>
-                            <span class="en" style="display:none;">✧ Enter the resonance chamber to directly query the AYP consciousness.</span>
+                        <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 25px; line-height: 1.6;">
+                            <span class="fr">Entrez dans la salle de résonance pour interroger directement la conscience AYP.</span>
+                            <span class="en" style="display:none;">Enter the resonance chamber to directly query the AYP consciousness.</span>
                         </p>
+                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;">
+                            <span class="fr">Entrer ➔</span>
+                            <span class="en" style="display:none;">Enter ➔</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="temple-gate-card" onclick="showSection('bibliotheque')">
-                    <div class="temple-gate-icon">✦ History</div>
-                    <div class="temple-gate-content parchment-text">
-                        <h4 style="color: var(--accent-color); margin-top: 0; font-size: 1.3rem;">
+                    <div onclick="showSection('bibliotheque')" style="background: rgba(20,20,20,0.7); border: 1px solid var(--accent-color); border-radius: 12px; padding: 30px; cursor: pointer; text-align: center; transition: all 0.4s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(212, 175, 55, 0.25)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.4)';">
+                        <div style="font-size: 1.2rem; color: var(--accent-color); margin-bottom: 10px; font-style: italic;">
+                            <span class="fr">✧ Histoire</span>
+                            <span class="en" style="display:none;">✧ History</span>
+                        </div>
+                        <h4 style="color: white; margin-top: 0; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; margin-bottom: 15px;">
                             <span class="fr">La Bibliothèque</span>
                             <span class="en" style="display:none;">The Library</span>
                         </h4>
-                        <p style="font-size: 0.95rem; opacity: 0.9; margin-bottom: 0; line-height: 1.6;">
-                            <span class="fr">✧ Explorez la cartographie de la conscience et l'histoire de la Lignée.</span>
-                            <span class="en" style="display:none;">✧ Explore the cartography of consciousness and the Lineage history.</span>
+                        <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 25px; line-height: 1.6;">
+                            <span class="fr">Explorez la cartographie de la conscience et les origines de la Lignée.</span>
+                            <span class="en" style="display:none;">Explore the cartography of consciousness and the origins of the Lineage.</span>
                         </p>
+                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;">
+                            <span class="fr">Entrer ➔</span>
+                            <span class="en" style="display:none;">Enter ➔</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="temple-gate-card" onclick="showSection('enseignements')">
-                    <div class="temple-gate-icon">✦ Doctrine</div>
-                    <div class="temple-gate-content parchment-text">
-                        <h4 style="color: var(--accent-color); margin-top: 0; font-size: 1.3rem;">
-                            <span class="fr">Les EnseignementsAYP</span>
+                    <div onclick="showSection('enseignements')" style="background: rgba(20,20,20,0.7); border: 1px solid var(--accent-color); border-radius: 12px; padding: 30px; cursor: pointer; text-align: center; transition: all 0.4s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(212, 175, 55, 0.25)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.4)';">
+                        <div style="font-size: 1.2rem; color: var(--accent-color); margin-bottom: 10px; font-style: italic;">
+                            <span class="fr">✧ Étude</span>
+                            <span class="en" style="display:none;">✧ Study</span>
+                        </div>
+                        <h4 style="color: white; margin-top: 0; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; margin-bottom: 15px;">
+                            <span class="fr">Les Enseignements</span>
                             <span class="en" style="display:none;">AYP Teachings</span>
                         </h4>
-                        <p style="font-size: 0.95rem; opacity: 0.9; margin-bottom: 0; line-height: 1.6;">
-                            <span class="fr">✧ Étudiez les leçons originelles, la philosophie et l'intégration.</span>
-                            <span class="en" style="display:none;">✧ Study the original lessons, philosophy and integration.</span>
+                        <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 25px; line-height: 1.6;">
+                            <span class="fr">Étudiez les leçons originelles, la philosophie et l'intégration pratique.</span>
+                            <span class="en" style="display:none;">Study the original lessons, philosophy, and practical integration.</span>
                         </p>
+                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;">
+                            <span class="fr">Entrer ➔</span>
+                            <span class="en" style="display:none;">Enter ➔</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="temple-gate-card" onclick="showSection('murmures')">
-                    <div class="temple-gate-icon">✦ Reflexion</div>
-                    <div class="temple-gate-content parchment-text">
-                        <h4 style="color: var(--accent-color); margin-top: 0; font-size: 1.3rem;">
+                    <div onclick="showSection('murmures')" style="background: rgba(20,20,20,0.7); border: 1px solid var(--accent-color); border-radius: 12px; padding: 30px; cursor: pointer; text-align: center; transition: all 0.4s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(212, 175, 55, 0.25)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.4)';">
+                        <div style="font-size: 1.2rem; color: var(--accent-color); margin-bottom: 10px; font-style: italic;">
+                            <span class="fr">✧ Réflexion</span>
+                            <span class="en" style="display:none;">✧ Reflection</span>
+                        </div>
+                        <h4 style="color: white; margin-top: 0; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; margin-bottom: 15px;">
                             <span class="fr">Les Murmures</span>
                             <span class="en" style="display:none;">Whispers</span>
                         </h4>
-                        <p style="font-size: 0.95rem; opacity: 0.9; margin-bottom: 0; line-height: 1.6;">
-                            <span class="fr">✧ Laissez l'intuition vous guider vers le conte ou le reflet qui vous appelle.</span>
-                            <span class="en" style="display:none;">✧ Let intuition guide you to the tale or reflection that calls you.</span>
+                        <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 25px; line-height: 1.6;">
+                            <span class="fr">Laissez l'intuition vous guider vers le conte ou le reflet qui vous appelle.</span>
+                            <span class="en" style="display:none;">Let intuition guide you to the tale or reflection that calls you.</span>
                         </p>
+                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;">
+                            <span class="fr">Entrer ➔</span>
+                            <span class="en" style="display:none;">Enter ➔</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -235,12 +265,10 @@
                     <span class="fr">Les Enseignements Originels (AYP)</span>
                     <span class="en" style="display:none;">Original AYP Teachings</span>
                 </h2>
-                
                 <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 15px; font-style: italic; opacity: 0.95;">
                     <span class="fr">Les EnseignementsAYP sont des leçons originelles que vous pourrez étudier, de manière autonome. Prenez votre temps pour les assimiler avant d'avancer. La patience est indispensable pour ce voyage intérieur.</span>
                     <span class="en" style="display:none;">AYP Teachings are original lessons that you can study autonomously. Take your time to assimilate them before moving forward. Patience is indispensable for this inner journey.</span>
                 </p>
-                
                 <p style="font-size: 1rem; line-height: 1.4; margin-bottom: 15px;">
                     <span class="fr">Pour étudier la science complète, la mécanique du système nerveux et accéder à l'intégralité des leçons fondatrices AYP, nous vous invitons à visiter la source.</span>
                     <span class="en" style="display:none;">To study the complete science, the mechanics of the nervous system and access all foundational AYP lessons, we invite you to visit the source.</span>
@@ -265,8 +293,8 @@
                     <span class="en" style="display:none;">The Guardian's Letters</span>
                 </h3>
                 <p style="font-size: 1.05rem; opacity: 0.9; font-style: italic; margin-bottom: 20px; line-height: 1.6;">
-                    <span class="fr">Ne marchez pas seul dans le tumulte. Laissez-nous déposer, de temps à autre, un murmure de clarté, un paradoxe à méditer et des outils d'ancrage directement dans votre boîte mail.</span>
-                    <span class="en" style="display:none;">Do not walk alone in the tumult. Let us drop, from time to time, a whisper of clarity, a paradox to meditate on, and grounding tools directly into your inbox.</span>
+                    <span class="fr">Inscrivez votre adresse dans le registre du temple pour recevoir, au rythme lent de la pratique, une chronique inédite, une réflexion intime sur l'ancrage, l'ego et le silence dans le tumulte du quotidien.</span>
+                    <span class="en" style="display:none;">Enter your address in the temple registry to receive, at the slow pace of practice, an unpublished chronicle, an intimate reflection on grounding, ego, and silence in the tumult of daily life.</span>
                 </p>
                 <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
                     <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; width: 250px; outline: none;">
@@ -275,6 +303,10 @@
                         <span class="en" style="display:none;">Subscribe</span>
                     </button>
                 </form>
+                <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 15px; font-style: italic;">
+                    <span class="fr">Aucun bruit inutile. Seulement l'essentiel.</span>
+                    <span class="en" style="display:none;">No unnecessary noise. Only the essential.</span>
+                </p>
             </div>
         </section> 
 
@@ -287,8 +319,8 @@
                     <span class="en" style="display:none;">The Guardian's Letters</span>
                 </h3>
                 <p style="font-size: 1.05rem; opacity: 0.9; font-style: italic; margin-bottom: 20px; line-height: 1.6;">
-                    <span class="fr">Ne marchez pas seul dans le tumulte. Laissez-nous déposer, de temps à autre, un murmure de clarté, un paradoxe à méditer et des outils d'ancrage directement dans votre boîte mail.</span>
-                    <span class="en" style="display:none;">Do not walk alone in the tumult. Let us drop, from time to time, a whisper of clarity, a paradox to meditate on, and grounding tools directly into your inbox.</span>
+                    <span class="fr">Inscrivez votre adresse dans le registre du temple pour recevoir, au rythme lent de la pratique, une chronique inédite, une réflexion intime sur l'ancrage, l'ego et le silence dans le tumulte du quotidien.</span>
+                    <span class="en" style="display:none;">Enter your address in the temple registry to receive, at the slow pace of practice, an unpublished chronicle, an intimate reflection on grounding, ego, and silence in the tumult of daily life.</span>
                 </p>
                 <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
                     <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; width: 250px; outline: none;">
@@ -297,6 +329,10 @@
                         <span class="en" style="display:none;">Subscribe</span>
                     </button>
                 </form>
+                <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 15px; font-style: italic;">
+                    <span class="fr">Aucun bruit inutile. Seulement l'essentiel.</span>
+                    <span class="en" style="display:none;">No unnecessary noise. Only the essential.</span>
+                </p>
             </div>
         </section>
 
@@ -306,14 +342,12 @@
                     <span class="fr">Murmures du Silence</span>
                     <span class="en" style="display:none;">Whispers of Silence</span>
                 </h2>
-                
                 <p class="murmures-intro-text fr parchment-text" style="font-style: italic; opacity: 0.9; font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.6; background: rgba(212, 175, 55, 0.03); padding: 20px; border-radius: 8px;">
                     L'art de l'alchimie intérieure est de transformer le tumulte du monde en un silence vibrant.<br><br>Murmures sont ces chroniques, ces contes, ces reflets d'une conscience qui s'éveille. Choisissez la salle où vous souhaitez entrer pour guider votre pratique.
                 </p>
                 <p class="murmures-intro-text en parchment-text" style="display:none; font-style: italic; opacity: 0.9; font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.6; background: rgba(212, 175, 55, 0.03); padding: 20px; border-radius: 8px;">
                     The art of inner alchemy is to transform the world's tumult into a vibrant silence.<br><br>Whispers are these chronicles, these tales, these reflections of an awakening consciousness. Choose the chamber you wish to enter to guide your practice.
                 </p>
-                
             </div>
             
             <div id="murmures-list-container" class="creatif-grid"></div>
@@ -324,8 +358,8 @@
                     <span class="en" style="display:none;">The Guardian's Letters</span>
                 </h3>
                 <p style="font-size: 1.05rem; opacity: 0.9; font-style: italic; margin-bottom: 20px; line-height: 1.6;">
-                    <span class="fr">Ne marchez pas seul dans le tumulte. Laissez-nous déposer, de temps à autre, un murmure de clarté, un paradoxe à méditer et des outils d'ancrage directement dans votre boîte mail.</span>
-                    <span class="en" style="display:none;">Do not walk alone in the tumult. Let us drop, from time to time, a whisper of clarity, a paradox to meditate on, and grounding tools directly into your inbox.</span>
+                    <span class="fr">Inscrivez votre adresse dans le registre du temple pour recevoir, au rythme lent de la pratique, une chronique inédite, une réflexion intime sur l'ancrage, l'ego et le silence dans le tumulte du quotidien.</span>
+                    <span class="en" style="display:none;">Enter your address in the temple registry to receive, at the slow pace of practice, an unpublished chronicle, an intimate reflection on grounding, ego, and silence in the tumult of daily life.</span>
                 </p>
                 <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
                     <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; width: 250px; outline: none;">
@@ -334,6 +368,10 @@
                         <span class="en" style="display:none;">Subscribe</span>
                     </button>
                 </form>
+                <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 15px; font-style: italic;">
+                    <span class="fr">Aucun bruit inutile. Seulement l'essentiel.</span>
+                    <span class="en" style="display:none;">No unnecessary noise. Only the essential.</span>
+                </p>
             </div>
         </section>
 
@@ -358,7 +396,12 @@
                     <span class="fr">Bibliothèque du Silence</span>
                     <span class="en" style="display:none;">Library of Silence</span>
                 </h2>
+                <p style="font-style: italic; opacity: 0.9; font-size: 1.15rem; max-width: 700px; margin: 0 auto 20px auto; color: var(--text-color);">
+                    <span class="fr">Choisissez la salle où vous souhaitez entrer pour guider votre pratique.</span>
+                    <span class="en" style="display:none;">Choose the chamber you wish to enter to guide your practice.</span>
+                </p>
             </div>
+            
             <div class="biblio-tabs" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap;">
                 <button class="zen-btn active" onclick="openBiblioTab('cartographie', this)">
                     <span class="fr">Cartographie de la Conscience</span><span class="en" style="display:none;">Cartography of Consciousness</span>
@@ -393,8 +436,8 @@
                     <span class="en" style="display:none;">The Guardian's Letters</span>
                 </h3>
                 <p style="font-size: 1.05rem; opacity: 0.9; font-style: italic; margin-bottom: 20px; line-height: 1.6;">
-                    <span class="fr">Ne marchez pas seul dans le tumulte. Laissez-nous déposer, de temps à autre, un murmure de clarté, un paradoxe à méditer et des outils d'ancrage directement dans votre boîte mail.</span>
-                    <span class="en" style="display:none;">Do not walk alone in the tumult. Let us drop, from time to time, a whisper of clarity, a paradox to meditate on, and grounding tools directly into your inbox.</span>
+                    <span class="fr">Inscrivez votre adresse dans le registre du temple pour recevoir, au rythme lent de la pratique, une chronique inédite, une réflexion intime sur l'ancrage, l'ego et le silence dans le tumulte du quotidien.</span>
+                    <span class="en" style="display:none;">Enter your address in the temple registry to receive, at the slow pace of practice, an unpublished chronicle, an intimate reflection on grounding, ego, and silence in the tumult of daily life.</span>
                 </p>
                 <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
                     <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; width: 250px; outline: none;">
@@ -403,19 +446,23 @@
                         <span class="en" style="display:none;">Subscribe</span>
                     </button>
                 </form>
+                <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 15px; font-style: italic;">
+                    <span class="fr">Aucun bruit inutile. Seulement l'essentiel.</span>
+                    <span class="en" style="display:none;">No unnecessary noise. Only the essential.</span>
+                </p>
             </div>
         </section>
 
         <section id="contact" class="section">
             <div class="teaching-article parchment-text" style="text-align: center; max-width: 700px; margin: 0 auto; background: var(--box-bg); padding: 40px; border-radius: 8px; border: 1px solid var(--border-color);">
                 <h2 style="border:none; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; margin-bottom: 15px; font-style: italic;">
-                    <span class="fr">Confessions du Sanctuaire</span>
+                    <span class="fr">Les Confessions du Sanctuaire</span>
                     <span class="en" style="display:none;">Confessions of the Sanctuary</span>
                 </h2>
                 
                 <p style="font-size: 1.2rem; font-style: italic; opacity: 1; margin-bottom: 35px; line-height: 1.7; font-family: 'Cormorant Garamond', serif;">
-                    <span class="fr">Il y a des fardeaux trop lourds pour être portés dans le silence absolu. Si votre pratique vacille, si l'énergie vous submerge ou si le doute s'installe, ne gardez pas ces ombres pour vous. Confiez-les au Gardien.<br><br>Soyez assuré que votre voix est écoutée. Parfois, votre question, rendue anonyme, pourrait même devenir la lanterne qui éclairera le chemin d'un autre voyageur dans nos futures lettres.</span>
-                    <span class="en" style="display:none;">There are burdens too heavy to be carried in absolute silence. If your practice falters, if energy overwhelms you, or if doubt settles in, do not keep these shadows to yourself. Entrust them to the Guardian.<br><br>Rest assured that your voice is heard. Sometimes, your question, made anonymous, might even become the lantern that lights the path for another traveler in our future letters.</span>
+                    <span class="fr">Le silence n'est pas l'absence de tempêtes, c'est l'art de rester ancré pendant qu'elles font rage. Si vous traversez actuellement une épreuve (une perte, un doute profond, un effondrement matériel ou intérieur) et que la paix vous semble inaccessible, vous n'avez pas à porter ce fardeau seul.<br><br>Écrivez-moi, partagez votre tempête. Le gardien lira chaque message avec la plus grande bienveillance. De temps à autre, une réponse anonymisée sera partagée dans nos lettres, afin que la lumière apportée à l'un puisse éclairer le chemin de tous.</span>
+                    <span class="en" style="display:none;">Silence is not the absence of storms, it is the art of remaining grounded while they rage. If you are currently going through an ordeal (a loss, a deep doubt, a material or inner collapse) and peace seems inaccessible to you, you do not have to carry this burden alone.<br><br>Write to me, share your storm. The guardian will read each message with the greatest benevolence. From time to time, an anonymized response will be shared in our letters, so that the light brought to one may illuminate the path of all.</span>
                 </p>
                 
                 <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; flex-direction: column; gap: 15px; text-align: left; max-width: 500px; margin: 0 auto 30px auto;">
@@ -426,8 +473,8 @@
                         <textarea name="message" placeholder="Votre confession, doute ou préoccupation / Your confession, doubt or concern" required style="padding: 12px; border-radius: 6px; border: 1px solid var(--border-color); background: rgba(20, 20, 20, 0.5); color: white; min-height: 180px; outline: none; font-size: 1rem; line-height: 1.5;"></textarea>
                     </div>
                     <button type="submit" class="zen-btn" style="background: var(--btn-blue); color: white; border: none; padding: 15px; font-weight: bold; border-radius: 20px; align-self: center; min-width: 200px; font-size: 1.1rem; cursor: pointer; transition: background 0.3s ease;">
-                        <span class="fr">✉️ Confier au Gardien</span>
-                        <span class="en" style="display:none;">✉️ Entrust to the Guardian</span>
+                        <span class="fr">✉️ Confier mon histoire</span>
+                        <span class="en" style="display:none;">✉️ Entrust my story</span>
                     </button>
                 </form>
             </div>
@@ -595,8 +642,6 @@
                     ${getSignatureHTML()}
                 </div>
             `;
-            // Suppression de la logique Parvis (on ne peuple plus accueil-portes-grid ici)
-            // On sépare piliers et grille comme avant
             if (index < 2 && piliersContainer) piliersContainer.appendChild(article);
             else if (grilleContainer) grilleContainer.appendChild(article);
         });
@@ -701,7 +746,6 @@
         element.classList.toggle('open');
     }
 
-    // --- RENDU CARTOGRAPHIE AVEC TEXTE D'INTRO (Image 2) ---
     function loadCartoChapter(index) {
         const data = BIBLIOTHEQUE_DATABASE[currentLang].cartographie;
         const chap = data[index];
@@ -711,7 +755,6 @@
             else el.classList.remove('active');
         });
         
-        // Texte d'introduction originel (Image 2)
         let htmlGateway = '';
         if (index === 0) {
             htmlGateway = `
@@ -730,7 +773,6 @@
             ${getSignatureHTML()}
         `;
         
-        // On applique la langue au texte d'intro si on vient de le générer
         if (index === 0) {
             contentDiv.querySelectorAll('.fr').forEach(el => el.style.display = currentLang === 'fr' ? 'inline' : 'none');
             contentDiv.querySelectorAll('.en').forEach(el => el.style.display = currentLang === 'en' ? 'inline' : 'none');
@@ -740,7 +782,6 @@
     function renderBibliotheque() {
         const data = BIBLIOTHEQUE_DATABASE[currentLang];
         
-        // 1. LES ORIGINES (HISTOIRE) AVEC SIGNATURE AYP
         const histoireContainer = document.getElementById("biblio-histoire");
         if(data.histoire) {
             let htmlOrigines = '<div class="timeline-container">';
@@ -761,7 +802,6 @@
             histoireContainer.innerHTML = htmlOrigines + '</div>';
         }
 
-        // 2. LA CARTOGRAPHIE (TITRES COMPLETS DANS LA BARRE LATÉRALE)
         const sidebar = document.getElementById('carto-sidebar');
         if (sidebar) sidebar.innerHTML = '';
         if(data.cartographie && sidebar) {
@@ -771,7 +811,6 @@
             if(data.cartographie.length > 0) loadCartoChapter(0);
         }
 
-        // 3. LE LEXIQUE & LA FAQ
         const lexiqueContainer = document.getElementById("biblio-lexique");
         const faqContainer = document.getElementById("biblio-faq");
         

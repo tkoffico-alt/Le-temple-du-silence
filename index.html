@@ -41,7 +41,7 @@
             <button id="theme-toggle" onclick="toggleTheme()">Clarté</button>
         </div>
         
-        <nav>
+       <nav>
             <button id="nav-accueil" class="active" onclick="showSection('accueil')">
                 <span class="fr">Le Parvis</span>
                 <span class="en" style="display:none;">The Forecourt</span>
@@ -54,7 +54,7 @@
                 <span class="fr">Enseignements</span>
                 <span class="en" style="display:none;">Teachings</span>
             </button>
-            <button id="nav-manuel" onclick="showSection('manuel')">
+           <button id="nav-manuel" onclick="showSection('manuel')">
                 <span class="fr">Le Manuel</span>
                 <span class="en" style="display:none;">The Manual</span>
             </button>
@@ -79,6 +79,7 @@
 
     <main>
         <section id="accueil" class="section active">
+            
             <div class="teaching-article parchment-text" style="text-align: center; max-width: 750px; margin: 0 auto 50px; padding: 40px; background: var(--box-bg); border-radius: 12px; border: 1px solid var(--border-color);">
                 <h2 style="border: none; margin-bottom: 20px;">
                     <span class="fr">Bienvenue au Temple</span>
@@ -88,10 +89,10 @@
                     <span class="fr">Ici, nul besoin de forcer le pas ni de retenir son souffle. Ce domaine est dédié à la mécanique de l'éveil et à la science de la douceur. Entrez, déposez vos fardeaux de voyageur, et laissez la pratique du silence vous guider.</span>
                     <span class="en" style="display:none;">Here, there is no need to force your pace or hold your breath. This domain is dedicated to the mechanics of awakening and the science of gentleness. Enter, set down your traveler's burdens, and let the practice of silence guide you.</span>
                 </p>
-                <img src="sceau-gardien.png" alt="Sceau" style="height: 50px; margin-top: 15px; opacity: 0.8;">
+                <img src="sceau-gardien.png" alt="Sceau" style="height: 50px; margin-top: 15px; opacity: 0.8; filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.4));">
             </div>
 
-            <div id="echo-container" style="max-width: 800px; margin: 0 auto 40px auto; padding: 30px; border-top: 1px solid rgba(200, 200, 200, 0.3); border-bottom: 1px solid rgba(200, 200, 200, 0.3); text-align: center;">
+            <div style="max-width: 800px; margin: 0 auto 40px auto; padding: 30px; border-top: 1px solid rgba(200, 200, 200, 0.3); border-bottom: 1px solid rgba(200, 200, 200, 0.3); text-align: center;">
                 <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; letter-spacing: 2px; text-transform: uppercase; margin-top: 0; margin-bottom: 20px;">
                     <span class="fr">L'Écho de la Semaine</span>
                     <span class="en" style="display:none;">Echo of the Week</span>
@@ -100,94 +101,177 @@
                     <span class="fr">« La paix véritable ne se trouve pas comme on trouve un trésor caché ; elle se révèle. Et elle ne se révèle que lorsque la fatigue d'espérer nous fait enfin tomber les bras. S'arrêter de chercher n'est pas un échec spirituel ni de la paresse, c'est la naissance de la lucidité. »</span>
                     <span class="en" style="display:none;">"True peace is not found the way one finds a hidden treasure; it is revealed. And it is only revealed when the exhaustion of hoping finally makes us drop our arms. Stopping the search is not a spiritual failure or laziness; it is the birth of lucidity."</span>
                 </p>
-                <p style="font-size: 0.9rem; opacity: 0.6; margin-top: 15px;">
+                <p style="font-size: 0.9rem; opacity: 0.6; margin-top: 15px; margin-bottom: 0;">
                     <span class="fr">— Extrait de nos Murmures (L'Illusion de la Conquête)</span>
                     <span class="en" style="display:none;">— From our Whispers (The Illusion of Conquest)</span>
                 </p>
             </div>
 
-            <div class="teaching-article parchment-text" style="max-width: 750px; margin: 0 auto 50px; padding: 40px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--accent-color); text-align: center;">
-                <h3 style="color: var(--accent-color); border: none; margin-bottom: 15px;">
+            <div class="teaching-article parchment-text" style="text-align: center; max-width: 750px; margin: 0 auto 20px; padding: 40px; background: var(--box-bg); border-radius: 12px; border: 1px solid var(--border-color);">
+                <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-top: 0; margin-bottom: 15px;">
+                    <span class="fr">Le Premier Pas : Entrer dans le Silence</span>
+                    <span class="en" style="display:none;">The First Step: Entering the Silence</span>
+                </h3>
+                <p style="font-size: 1.25rem; font-style: italic; opacity: 0.9; line-height: 1.8; margin-bottom: 20px;">
+                    <span class="fr">L'intellect cherche souvent une méthode complexe dès les premiers instants, mais le système nerveux n'a besoin, pour commencer, que d'une simple pause. Avant d'étudier notre science, offrez-vous ceci :</span>
+                    <span class="en" style="display:none;">The intellect often seeks a complex method from the very first moments, but the nervous system needs, to begin with, only a simple pause. Before studying our science, offer yourself this:</span>
+                </p>
+                <ul style="font-size: 1.05rem; opacity: 0.9; line-height: 1.8; margin-bottom: 25px; list-style-type: none; padding-left: 0;">
+                    <li><span style="color: var(--accent-color); font-weight: bold;">✧ </span> <span class="fr"><strong>L'Arrêt :</strong> Fermez les yeux pendant 5 petites minutes, là où vous êtes.</span><span class="en" style="display:none;"><strong>The Stop:</strong> Close your eyes for 5 short minutes, right where you are.</span></li>
+                    <li><span style="color: var(--accent-color); font-weight: bold;">✧ </span> <span class="fr"><strong>Le Relâchement :</strong> Laissez votre respiration trouver son propre rythme. Ne forcez rien.</span><span class="en" style="display:none;"><strong>The Release:</strong> Let your breath find its own rhythm. Do not force anything.</span></li>
+                    <li><span style="color: var(--accent-color); font-weight: bold;">✧ </span> <span class="fr"><strong>L'Observation :</strong> Laissez vos pensées passer comme de simples nuages, sans vous y accrocher.</span><span class="en" style="display:none;"><strong>The Observation:</strong> Let your thoughts pass like simple clouds, without clinging to them.</span></li>
+                </ul>
+                <p style="font-size: 1.05rem; font-style: italic; opacity: 0.8; border-top: 1px dashed var(--border-color); padding-top: 15px; margin-bottom: 0;">
+                    <span class="fr">Lorsque vous sentirez le besoin d'aller plus loin et de structurer cette paix, ouvrez <a href="#" onclick="showSection('manuel'); return false;" style="color: var(--accent-color); font-weight: bold; text-decoration: none;">Le Manuel</a>. Il contient l'échelle complète de nos pratiques.</span>
+                    <span class="en" style="display:none;">When you feel the need to go further and structure this peace, open <a href="#" onclick="showSection('manuel'); return false;" style="color: var(--accent-color); font-weight: bold; text-decoration: none;">The Manual</a>. It contains the complete ladder of our practices.</span>
+                </p>
+            </div>
+
+            <div class="newsletter-block parchment-text" style="max-width: 750px; margin: 40px auto 20px; padding: 30px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--border-color); border-radius: 8px; text-align: center;">
+                <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 15px;">
                     <span class="fr">Recevoir les Lettres du Gardien</span>
                     <span class="en" style="display:none;">Receive the Guardian's Letters</span>
                 </h3>
-                <p style="margin-bottom: 20px;">
+                <p style="font-size: 1rem; opacity: 0.8; margin-bottom: 20px;">
                     <span class="fr">Rejoignez les voyageurs du Temple pour recevoir nos chroniques et pratiques directement dans votre boîte mail.</span>
                     <span class="en" style="display:none;">Join the Temple travelers to receive our chronicles and practices directly in your mailbox.</span>
                 </p>
                 <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-                    <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--accent-color); background: rgba(0,0,0,0.3); color: white; width: 250px;">
-                    <button type="submit" class="zen-btn" style="margin: 0;">
+                    <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; width: 250px; outline: none;">
+                    <button type="submit" class="zen-btn" style="margin: 0; padding: 10px 20px;">
                         <span class="fr">S'inscrire</span>
                         <span class="en" style="display:none;">Subscribe</span>
                     </button>
                 </form>
             </div>
-
-            <div class="teaching-article parchment-text" style="text-align: center; max-width: 750px; margin: 0 auto 50px; padding: 40px; background: var(--box-bg); border-radius: 12px; border: 1px solid var(--border-color);">
-                <h3 style="color: var(--accent-color); border: none; font-size: 1.8rem; margin-bottom: 15px;">
-                    <span class="fr">Le Premier Pas : Entrer dans le Silence</span>
-                    <span class="en" style="display:none;">The First Step: Entering the Silence</span>
-                </h3>
-                <p style="font-size: 1.2rem; font-style: italic; opacity: 0.9;">
-                    <span class="fr">L'intellect cherche souvent une méthode complexe dès les premiers instants, mais le système nerveux n'a besoin, pour commencer, que d'une simple pause.</span>
-                    <span class="en" style="display:none;">The intellect often seeks a complex method from the very first moments, but the nervous system needs, to begin with, only a simple pause.</span>
-                </p>
-                <ul style="list-style: none; padding: 0; margin: 25px 0; text-align: left; display: inline-block;">
-                    <li style="margin-bottom: 10px;"><span style="color: var(--accent-color);">✧ </span> <span class="fr"><strong>L'Arrêt :</strong> Fermez les yeux pendant 5 minutes.</span><span class="en" style="display:none;"><strong>The Stop:</strong> Close your eyes for 5 minutes.</span></li>
-                    <li style="margin-bottom: 10px;"><span style="color: var(--accent-color);">✧ </span> <span class="fr"><strong>Le Relâchement :</strong> Laissez votre respiration libre.</span><span class="en" style="display:none;"><strong>The Release:</strong> Let your breath be free.</span></li>
-                    <li><span style="color: var(--accent-color);">✧ </span> <span class="fr"><strong>L'Observation :</strong> Regardez vos pensées passer.</span><span class="en" style="display:none;"><strong>The Observation:</strong> Watch your thoughts pass.</span></li>
-                </ul>
-            </div>
-            
-            <div id="enseignements-piliers" class="piliers-grid" style="margin-bottom: 50px;"></div>
         </section>
 
         <section id="sage" class="section">
             <div id="particles-container"></div>
-            <div id="chat-container" style="width: 100%; max-width: 900px; height: 80vh; min-height: 500px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.5); position: relative; background: transparent; display: flex; align-items: center; justify-content: center;">
+           <div id="chat-container" style="width: 100%; max-width: 900px; height: 80vh; min-height: 500px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.5); position: relative; background: transparent; display: flex; align-items: center; justify-content: center;">
                 <div id="sage-loading-mask" style="position: absolute; z-index: 1; text-align: center; opacity: 0.7; font-family: 'Cormorant Garamond', serif;">
-                    <p style="font-size: 1.4rem; font-style: italic; color: var(--text-color);">
+                    <p style="font-size: 1.4rem; font-style: italic; color: var(--text-color); margin-bottom: 5px;">
                         <span class="fr">Le Sage s'installe dans le silence...</span>
                         <span class="en" style="display:none;">The Sage is settling into the silence...</span>
+                    </p>
+                    <p style="font-size: 0.9rem; opacity: 0.8; color: var(--text-color);">
+                        <span class="fr">(Veuillez patienter un instant)</span>
+                        <span class="en" style="display:none;">(Please wait a moment)</span>
                     </p>
                 </div>
                 <iframe src="https://udify.app/chatbot/TFkbLNLitsHkzVxf" loading="lazy" onload="document.getElementById('sage-loading-mask').style.display='none';" style="position: relative; z-index: 2; width: 100%; height: 100%; min-height: 500px; border: none; background: transparent;" allow="microphone"></iframe>
             </div>
+            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 20px; opacity: 0.85; position: relative; z-index: 1;">
+                <span class="fr" style="font-style: italic; font-size: 1rem; color: var(--accent-color); margin-right: 15px;">Œuvre Originale & Propriété de la Lignée</span>
+                <span class="en" style="display:none; font-style: italic; font-size: 1rem; color: var(--accent-color); margin-right: 15px;">Original Work & Lineage Property</span>
+                <img src="signature-ayp.png" alt="Signature Lignée" style="height: 45px; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.4));">
+            </div>
             <audio id="sage-resonance" src="resonance.mp3" loop></audio>
-        </section>
+        </section> 
 
-        <section id="enseignements" class="section">
+        <section id="enseignements" class="section"> 
+            <div class="ayp-gateway parchment-text" style="text-align: center; margin-bottom: 20px; border: 2px solid var(--accent-color); padding: 15px 20px; border-radius: 8px; background: rgba(20, 20, 20, 0.6);">
+                <h2 style="margin-top: 0; border:none; font-size: 1.5rem;">
+                    <span class="fr">Aller plus loin : Les Enseignements Originels</span>
+                    <span class="en" style="display:none;">Go Deeper: The Original Teachings</span>
+                </h2>
+                <p style="font-size: 1rem; line-height: 1.4; margin-bottom: 15px;">
+                    <span class="fr">Ce temple est une porte d'entrée. Pour étudier la science spirituelle complète, la mécanique du système nerveux et accéder à l'intégralité des leçons fondatrices, nous vous invitons à visiter la source.</span>
+                    <span class="en" style="display:none;">This temple is a gateway. To study the complete spiritual science, the mechanics of the nervous system, and access all foundational lessons, we invite you to visit the source.</span>
+                </p>
+                <a href="https://www.aypsite.org/" target="_blank" class="zen-btn" style="display: inline-block; text-decoration: none; padding: 10px 20px; font-weight:bold; font-size: 1rem;">
+                    <span class="fr">Visiter AYP (Yogani)</span>
+                    <span class="en" style="display:none;">Visit AYP (Yogani)</span>
+                </a>
+            </div>
+            
+           <div id="enseignements-piliers" class="piliers-grid"></div>
+           
+            <h3 class="enseignements-separator" style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin: 50px 0 30px; border-bottom: 1px dashed var(--border-color); padding-bottom: 15px;">
+                <span class="fr">Les Explorations Pratiques</span>
+                <span class="en" style="display:none;">Practical Explorations</span>
+            </h3>
             <div id="enseignements-grille" class="creatif-grid"></div>
-        </section>
+
+            <div class="newsletter-block parchment-text" style="max-width: 750px; margin: 50px auto 20px; padding: 30px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--border-color); border-radius: 8px; text-align: center;">
+                <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 15px;">
+                    <span class="fr">Recevoir les Lettres du Gardien</span>
+                    <span class="en" style="display:none;">Receive the Guardian's Letters</span>
+                </h3>
+                <p style="font-size: 1rem; opacity: 0.8; margin-bottom: 20px;">
+                    <span class="fr">Rejoignez les voyageurs du Temple pour recevoir nos chroniques et pratiques directement dans votre boîte mail.</span>
+                    <span class="en" style="display:none;">Join the Temple travelers to receive our chronicles and practices directly in your mailbox.</span>
+                </p>
+                <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                    <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; width: 250px; outline: none;">
+                    <button type="submit" class="zen-btn" style="margin: 0; padding: 10px 20px;">
+                        <span class="fr">S'inscrire</span>
+                        <span class="en" style="display:none;">Subscribe</span>
+                    </button>
+                </form>
+            </div>
+        </section> 
 
         <section id="manuel" class="section">
-            <div id="manuel-container" style="max-width: 800px; margin: 0 auto;"></div>
+            <div id="manuel-container" style="max-width: 800px; margin: 0 auto; background: var(--box-bg); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color);"></div>
+            
+            <div class="newsletter-block parchment-text" style="max-width: 750px; margin: 40px auto 20px; padding: 30px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--border-color); border-radius: 8px; text-align: center;">
+                <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 15px;">
+                    <span class="fr">Recevoir les Lettres du Gardien</span>
+                    <span class="en" style="display:none;">Receive the Guardian's Letters</span>
+                </h3>
+                <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                    <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; width: 250px; outline: none;">
+                    <button type="submit" class="zen-btn" style="margin: 0; padding: 10px 20px;">
+                        <span class="fr">S'inscrire</span>
+                        <span class="en" style="display:none;">Subscribe</span>
+                    </button>
+                </form>
+            </div>
         </section>
 
         <section id="murmures" class="section">
-            <div class="creatif-header" style="text-align: center; margin-bottom: 40px;">
-                <h2 style="font-size: 2rem; color: var(--accent-color); border: none;">
+           <div class="creatif-header" style="text-align: center; margin-bottom: 40px;">
+                <h2 style="font-size: 2.4rem; color: var(--accent-color); border: none; margin-bottom: 10px;">
                     <span class="fr">Les Murmures du Silence</span>
                     <span class="en" style="display:none;">Whispers of Silence</span>
                 </h2>
-                <p style="font-style: italic; opacity: 0.8;">
-                    <span class="fr">Chroniques, contes et réflexions d'un voyageur de la lignée.</span>
-                    <span class="en" style="display:none;">Chronicles, tales, and reflections of a lineage traveler.</span>
+                <p style="font-style: italic; opacity: 0.8; font-size: 1.1rem;">
+                    <span class="fr">Chroniques, contes et réflexions d'un voyageur de la lignée.<br>Ne cherchez pas à tout lire. Laissez simplement votre intuition choisir le titre qui vous appelle aujourd'hui.</span>
+                    <span class="en" style="display:none;">Chronicles, tales, and reflections of a lineage traveler.<br>Do not try to read everything. Simply let your intuition choose the title that calls to you today.</span>
                 </p>
             </div>
+            
             <div id="murmures-list-container" class="creatif-grid"></div>
+
+            <div class="newsletter-block parchment-text" style="max-width: 750px; margin: 50px auto 20px; padding: 30px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--border-color); border-radius: 8px; text-align: center;">
+                <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 15px;">
+                    <span class="fr">Recevoir les Lettres du Gardien</span>
+                    <span class="en" style="display:none;">Receive the Guardian's Letters</span>
+                </h3>
+                <p style="font-size: 1rem; opacity: 0.8; margin-bottom: 20px;">
+                    <span class="fr">Rejoignez les voyageurs du Temple pour recevoir nos chroniques et pratiques directement dans votre boîte mail.</span>
+                    <span class="en" style="display:none;">Join the Temple travelers to receive our chronicles and practices directly in your mailbox.</span>
+                </p>
+                <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                    <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; width: 250px; outline: none;">
+                    <button type="submit" class="zen-btn" style="margin: 0; padding: 10px 20px;">
+                        <span class="fr">S'inscrire</span>
+                        <span class="en" style="display:none;">Subscribe</span>
+                    </button>
+                </form>
+            </div>
         </section>
 
         <section id="parabole" class="section">
             <div class="teaching-article parchment-text">
-                <h2 id="parabole-title" style="text-align:center; border:none;"></h2>
+                <h2 id="parabole-title" style="text-align:center; border:none; font-size:2rem; margin-bottom:10px;"></h2>
                 <div class="audio-parabole-container" style="margin-bottom: 30px; text-align: center;">
                     <audio id="audio-parabole-player" preload="none"></audio>
-                    <button id="btn-play-parabole" class="zen-btn" onclick="toggleParaboleAudio()">
+                    <button id="btn-play-parabole" class="zen-btn" style="font-size: 1.1rem; padding: 10px 20px;" onclick="toggleParaboleAudio()">
                         <span id="parabole-icon">🎧</span> 
-                        <span class="fr">Écouter la voix du pèlerin</span>
-                        <span class="en" style="display:none;">Listen to the pilgrim's voice</span>
+                        <span id="parabole-text-fr" class="fr">Écouter la voix du pèlerin</span>
+                        <span id="parabole-text-en" class="en" style="display:none;">Listen to the pilgrim's voice</span>
                     </button>
                 </div>
                 <div id="parabole-text"></div>
@@ -195,53 +279,92 @@
         </section>
 
         <section id="bibliotheque" class="section">
-            <div class="biblio-tabs" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px;">
+            <div class="creatif-header" style="text-align: center; margin-bottom: 30px;">
+                <h2 style="font-size: 2.4rem; color: var(--accent-color); border: none; margin-bottom: 10px;">
+                    <span class="fr">La Bibliothèque</span>
+                    <span class="en" style="display:none;">The Library</span>
+                </h2>
+            </div>
+            <div class="biblio-tabs" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap;">
                 <button class="zen-btn active" onclick="openBiblioTab('cartographie', this)">
                     <span class="fr">La Cartographie</span><span class="en" style="display:none;">Cartography</span>
+                </button>
+                <button class="zen-btn" onclick="openBiblioTab('origines', this)">
+                    <span class="fr">Les Origines</span><span class="en" style="display:none;">The Origins</span>
                 </button>
                 <button class="zen-btn" onclick="openBiblioTab('lexique', this)">
                     <span class="fr">Lexique & FAQ</span><span class="en" style="display:none;">Lexicon & FAQ</span>
                 </button>
             </div>
+            
             <div id="tab-cartographie" class="biblio-tab-content active">
                 <div class="book-layout">
                     <div class="book-sidebar" id="carto-sidebar"></div>
                     <div class="book-content parchment-text" id="carto-content"></div>
                 </div>
             </div>
+            
+            <div id="tab-origines" class="biblio-tab-content" style="display: none;">
+                <div id="biblio-histoire" style="max-width: 800px; margin: 0 auto;"></div>
+            </div>
+            
             <div id="tab-lexique" class="biblio-tab-content" style="display: none;">
                 <div id="biblio-lexique" class="lexique-grid"></div>
-                <div id="biblio-faq" style="max-width: 800px; margin: 20px auto;"></div>
+                <div id="biblio-faq" style="max-width: 800px; margin: 0 auto; margin-bottom: 50px;"></div>
+            </div>
+
+            <div class="newsletter-block parchment-text" style="max-width: 750px; margin: 50px auto 20px; padding: 30px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--border-color); border-radius: 8px; text-align: center;">
+                <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 15px;">
+                    <span class="fr">Recevoir les Lettres du Gardien</span>
+                    <span class="en" style="display:none;">Receive the Guardian's Letters</span>
+                </h3>
+                <p style="font-size: 1rem; opacity: 0.8; margin-bottom: 20px;">
+                    <span class="fr">Rejoignez les voyageurs du Temple pour recevoir nos chroniques et pratiques directement dans votre boîte mail.</span>
+                    <span class="en" style="display:none;">Join the Temple travelers to receive our chronicles and practices directly in your mailbox.</span>
+                </p>
+                <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                    <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; width: 250px; outline: none;">
+                    <button type="submit" class="zen-btn" style="margin: 0; padding: 10px 20px;">
+                        <span class="fr">S'inscrire</span>
+                        <span class="en" style="display:none;">Subscribe</span>
+                    </button>
+                </form>
             </div>
         </section>
 
         <section id="contact" class="section">
-            <div class="teaching-article parchment-text" style="text-align: center; max-width: 650px; margin: 0 auto;">
+            <div class="teaching-article parchment-text" style="text-align: center; max-width: 650px; margin: 0 auto; background: var(--box-bg); padding: 40px; border-radius: 8px;">
                 <h2 style="border:none; color: var(--accent-color); font-size: 2.2rem; margin-bottom: 20px;">
                     <span class="fr">Les Confessions du Sanctuaire</span>
                     <span class="en" style="display:none;">Confessions of the Sanctuary</span>
                 </h2>
-                <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; flex-direction: column; gap: 15px; text-align: left;">
-                    <input type="email" name="email" placeholder="Votre email" required style="padding: 12px; border-radius: 6px; background: rgba(0,0,0,0.3); color: white; border: 1px solid var(--border-color);">
-                    <textarea name="message" placeholder="Votre confession ou question..." required style="padding: 12px; border-radius: 6px; background: rgba(0,0,0,0.3); color: white; border: 1px solid var(--border-color); min-height: 150px;"></textarea>
-                    <button type="submit" class="zen-btn" style="align-self: center;">
+                <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; flex-direction: column; gap: 15px; text-align: left; max-width: 500px; margin: 0 auto 30px auto;">
+                    <div style="display: flex; flex-direction: column; gap: 5px;">
+                        <input type="email" name="email" placeholder="Votre email / Your email" required style="padding: 12px; border-radius: 6px; border: 1px solid var(--border-color); background: rgba(20, 20, 20, 0.5); color: white; outline: none;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 5px;">
+                        <textarea name="message" placeholder="Votre message / Your message" required style="padding: 12px; border-radius: 6px; border: 1px solid var(--border-color); background: rgba(20, 20, 20, 0.5); color: white; min-height: 120px; outline: none;"></textarea>
+                    </div>
+                    <button type="submit" class="zen-btn" style="background: var(--btn-blue); color: white; border: none; padding: 15px; font-weight: bold; border-radius: 20px; align-self: center; min-width: 200px;">
                         <span class="fr">✉️ Confier au Gardien</span>
                         <span class="en" style="display:none;">✉️ Entrust to the Guardian</span>
                     </button>
                 </form>
             </div>
         </section>
+        
     </main>
 
-    <footer style="text-align: center; padding: 40px;">
-        <p>© 2026 Le Temple du Silence. <span class="fr">Tous droits réservés.</span><span class="en" style="display:none;">All rights reserved.</span></p>
+    <footer style="display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 30px 10px;">
+        <p>© 2026 Le Temple du Silence. <span class="en" style="display:none;">All rights reserved.</span><span class="fr">Tous droits réservés.</span></p>
     </footer>
 
-    <script src="contenu.js"></script>
+   <script src="contenu.js"></script>
+
     <script>
     let currentLang = 'fr';
 
-    // --- DÉCODEUR HTML ---
+    // --- DÉCODEUR UNIVERSEL ---
     function decodeHTML(html) {
         let txt = document.createElement("textarea");
         txt.innerHTML = html;
@@ -251,152 +374,341 @@
     // --- GÉNÉRATEUR D'ANCRES ---
     function genererAncre(titre) {
         let textOnly = titre.replace(/<[^>]+>/g, ''); 
-        return textOnly.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, ''); 
+        return textOnly
+            .toLowerCase()
+            .normalize("NFD").replace(/[\u0300-\u036f]/g, "") 
+            .replace(/[^a-z0-9]/g, '-') 
+            .replace(/-+/g, '-') 
+            .replace(/^-|-$/g, ''); 
+    }
+    
+    function createDustParticles() {
+        const container = document.getElementById('particles-container');
+        if (!container) return;
+        const isMobile = window.innerWidth < 768;
+        const particleCount = isMobile ? 12 : 40; 
+        container.innerHTML = ''; 
+        for(let i = 0; i < particleCount; i++) {
+            let particle = document.createElement('div');
+            particle.className = 'dust-particle';
+            let size = Math.random() * 3 + 1; 
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDuration = (Math.random() * 15 + 10) + 's'; 
+            particle.style.animationDelay = (Math.random() * 10) + 's';
+            container.appendChild(particle);
+        }
     }
 
-    // --- GESTION DES SECTIONS ---
+    function toggleParaboleAudio() {
+        const player = document.getElementById('audio-parabole-player');
+        const icon = document.getElementById('parabole-icon');
+        const targetSrc = currentLang === 'fr' ? 'parabole_fr.mp3' : 'parabole_en.mp3';
+        if (!player.src.endsWith(targetSrc)) { player.src = targetSrc; }
+        if (player.paused) {
+            player.play().catch(e => alert(currentLang === 'fr' ? "Le fichier audio est introuvable." : "The audio file is missing."));
+            icon.innerText = "⏸️";
+        } else {
+            player.pause();
+            icon.innerText = "🎧";
+        }
+        player.onended = () => { icon.innerText = "🎧"; };
+    }
+
+    function switchLang(lang) {
+        currentLang = lang;
+        const themeBtn = document.getElementById('theme-toggle');
+        const isLight = document.body.classList.contains('light-mode');
+        themeBtn.innerText = lang === 'fr' ? (isLight ? 'Obscurité' : 'Clarté') : (isLight ? 'Darkness' : 'Light');
+
+        const player = document.getElementById('audio-parabole-player');
+        if (!player.paused) {
+            player.pause();
+            document.getElementById('parabole-icon').innerText = "🎧";
+        }
+
+        renderEnseignements();
+        renderMurmures();
+        renderParabole();
+        renderBibliotheque();
+        renderManuel();
+
+        // Application finale de la langue
+        document.querySelectorAll('.fr').forEach(el => el.style.display = lang === 'fr' ? 'inline' : 'none');
+        document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? 'inline' : 'none');
+    }
+
+    function toggleLang() {
+        switchLang(currentLang === 'fr' ? 'en' : 'fr');
+        document.getElementById('lang-toggle').innerText = currentLang === 'fr' ? 'English' : 'Français';
+    }
+
+    function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('theme-toggle');
+        body.classList.toggle('light-mode');
+        btn.innerText = currentLang === 'fr' ? (body.classList.contains('light-mode') ? 'Obscurité' : 'Clarté') : (body.classList.contains('light-mode') ? 'Darkness' : 'Light');
+    }
+
     function showSection(sectionId) {
         document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
         document.getElementById(sectionId).classList.add('active');
         document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
         document.getElementById(`nav-${sectionId}`).classList.add('active');
-        
-        const res = document.getElementById("sage-resonance");
-        if(sectionId === 'sage') { res.volume = 0.08; res.play().catch(e => {}); } else { res.pause(); }
+
+        const resonance = document.getElementById("sage-resonance");
+        if (resonance) {
+            if (sectionId === 'sage') {
+                resonance.volume = 0.08; 
+                resonance.play().catch(e => console.log("Attente du premier clic"));
+            } else {
+                resonance.pause(); 
+            }
+        }
     }
 
-    // --- TRADUCTION ---
-    function switchLang(lang) {
-        currentLang = lang;
-        document.getElementById('lang-toggle').innerText = lang === 'fr' ? 'English' : 'Français';
-        
-        renderEnseignements();
-        renderMurmures();
-        renderParabole();
-        renderBibliotheque();
-        renderManuel();
-
-        document.querySelectorAll('.fr').forEach(el => el.style.display = lang === 'fr' ? 'inline' : 'none');
-        document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? 'inline' : 'none');
+    function getSignatureHTML() {
+        const signatureText = currentLang === 'fr' ? "Le Temple du Silence" : "The Temple of Silence";
+        return `
+            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 40px; opacity: 0.9; font-style: italic;">
+                <span style="color: var(--accent-color); margin-right: 12px;">${signatureText}</span>
+                <img src="sceau-gardien.png" alt="Sceau du Gardien" style="height: 35px; border-radius: 50%; box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);">
+            </div>
+        `;
     }
 
-    function toggleLang() { switchLang(currentLang === 'fr' ? 'en' : 'fr'); }
+    function renderManuel() {
+        const container = document.getElementById('manuel-container');
+        if (!container) return;
+        const data = MANUEL_DATABASE[currentLang];
+        container.innerHTML = `
+            <h2 style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; margin-bottom: 30px;">
+                ${data.title}
+            </h2>
+            <div>${data.body}</div>
+        `;
+    }
 
-    // --- RENDU MURMURES (VERSION RESTAURÉE) ---
+    function renderEnseignements() {
+        const piliersContainer = document.getElementById("enseignements-piliers");
+        const grilleContainer = document.getElementById("enseignements-grille");
+        if (piliersContainer) piliersContainer.innerHTML = ""; 
+        if (grilleContainer) grilleContainer.innerHTML = ""; 
+        const currentData = TEACHINGS_DATABASE[currentLang];
+
+        if (currentData.length === 0) {
+            piliersContainer.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${currentLang === 'fr' ? "Bientôt disponible." : "Coming soon."}</p>`;
+            return;
+        }
+
+        currentData.forEach((item, index) => {
+            const idAutomatique = item.id || genererAncre(item.title);
+            const article = document.createElement("details");
+            article.id = idAutomatique;
+            article.className = "teaching-accordion";
+            article.innerHTML = `
+                <summary class="accordion-title">${item.title}</summary>
+                <div class="accordion-content parchment-text">
+                    ${item.body}
+                    ${getSignatureHTML()}
+                </div>
+            `;
+            if (index < 2 && piliersContainer) piliersContainer.appendChild(article);
+            else if (grilleContainer) grilleContainer.appendChild(article);
+        });
+    }
+
     function renderMurmures() {
         const container = document.getElementById("murmures-list-container");
         if (!container) return;
         container.innerHTML = ""; 
-        
-        MURMURES_DATABASE.forEach((murmure, index) => {
+
+        // Base unifiée bilingue
+        const currentMurmures = MURMURES_DATABASE;
+
+        if (!currentMurmures || currentMurmures.length === 0) {
+            container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${currentLang === 'fr' ? "Bientôt disponible." : "Coming soon."}</p>`;
+            return;
+        }
+
+        currentMurmures.forEach((murmure, index) => {
             let vraiTitre = decodeHTML(murmure.title);
             let vraiTexte = decodeHTML(murmure.text);
             let plainTitle = vraiTitre.replace(/<[^>]+>/g, '');
 
             let mediaHTML = "";
-            if (murmure.imageFile) mediaHTML = `<img src="${murmure.imageFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px;">`;
+            let downloadBtnHTML = "";
 
-            // Style Bleu pour Échos et Paradoxes
-            let titleColor = (plainTitle.includes("Paradoxe") || plainTitle.includes("Écho") || plainTitle.includes("Paradox") || plainTitle.includes("Echo")) ? "color: #5DADE2;" : "";
+            if (murmure.videoFile && murmure.videoFile !== "") {
+                if (murmure.videoFile.includes("youtube.com") || murmure.videoFile.includes("youtu.be")) {
+                    mediaHTML += `<iframe width="100%" height="315" src="${murmure.videoFile}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></iframe>`;
+                } else {
+                    mediaHTML += `<video controls src="${murmure.videoFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></video>`;
+                    let downloadText = currentLang === 'fr' ? "Télécharger" : "Download";
+                    downloadBtnHTML = `<a href="${murmure.videoFile}" download class="zen-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;">📥 ${downloadText}</a>`;
+                }
+            } else {
+                if (murmure.imageFile && murmure.imageFile !== "") {
+                    let altText = currentLang === 'fr' ? `${plainTitle} - Méditation et AYP` : `${plainTitle} - Meditation and AYP`;
+                    mediaHTML += `<img src="${murmure.imageFile}" alt="${altText}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">`;
+                }
+                if (murmure.audioFile && murmure.audioFile !== "") {
+                    if (murmure.audioFile.includes("<iframe")) {
+                        mediaHTML += `<div style="margin-bottom: 15px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">${murmure.audioFile}</div>`;
+                    } else {
+                        mediaHTML += `<audio controls src="${murmure.audioFile}" style="width: 100%; margin-bottom: 15px;"></audio>`;
+                    }
+                }
+            }
 
-            const idAncre = murmure.id || genererAncre(plainTitle);
-            const html = `
-                <details id="${idAncre}" class="teaching-accordion">
-                    <summary class="accordion-title" style="${titleColor}">${index + 1}. ${vraiTitre}</summary>
+            // Couleur Bleue pour Paradoxe/Echo
+            let titleColorStyle = "";
+            if (plainTitle.includes("Paradoxe") || plainTitle.includes("Paradox") || plainTitle.includes("Écho") || plainTitle.includes("Echo")) {
+                titleColorStyle = "color: #5DADE2;"; 
+            }
+
+            let textShareLabel = currentLang === 'fr' ? 'Partager texte' : 'Share text';
+            let mediaShareLabel = currentLang === 'fr' ? 'Partager média' : 'Share media';
+            
+            let shareMediaBtn = "";
+            if (murmure.videoFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerVideoMurmure(${index})">🎥 ${mediaShareLabel}</button>`;
+            else if (murmure.audioFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerAudioMurmure(${index})">🎵 ${mediaShareLabel}</button>`;
+
+            const idAutomatique = murmure.id || genererAncre(plainTitle);
+            const murmureHTML = `
+                <details id="${idAutomatique}" class="teaching-accordion">
+                    <summary class="accordion-title" style="${titleColorStyle}">${index + 1}. ${vraiTitre}</summary>
                     <div class="accordion-content">
                         ${mediaHTML}
-                        <div class="parchment-text">${vraiTexte}</div>
-                        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
-                            <button class="zen-btn" onclick="partagerMurmure('${idAncre}')">✨ Partager</button>
+                        <div id="texte-murmure-${index}" class="parchment-text">${vraiTexte}</div>
+                        ${getSignatureHTML()} 
+                        <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 25px;">
+                            <button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerMurmure('${idAutomatique}')">✨ ${textShareLabel}</button>
+                            ${shareMediaBtn}
+                            ${downloadBtnHTML}
                         </div>
                     </div>
-                </details>`;
-            container.innerHTML += html;
+                </details>
+            `;
+            container.innerHTML += murmureHTML;
         });
     }
 
-    // --- AUTRES RENDUS ---
-    function renderEnseignements() {
-        const grille = document.getElementById("enseignements-grille");
-        const piliers = document.getElementById("enseignements-piliers");
-        grille.innerHTML = ""; piliers.innerHTML = "";
-        TEACHINGS_DATABASE[currentLang].forEach((item, i) => {
-            const html = `<details class="teaching-accordion"><summary class="accordion-title">${item.title}</summary><div class="accordion-content parchment-text">${item.body}</div></details>`;
-            if(i < 4) piliers.innerHTML += html; else grille.innerHTML += html;
+    function partagerMurmure(idAncre) {
+        const url = window.location.origin + window.location.pathname + "#" + idAncre;
+        navigator.clipboard.writeText(url).then(() => {
+            alert(currentLang === 'fr' ? "Le lien de ce murmure a été copié dans votre presse-papier." : "The link to this whisper has been copied to your clipboard.");
         });
-    }
-    
-    function renderManuel() {
-        const m = MANUEL_DATABASE[currentLang];
-        document.getElementById('manuel-container').innerHTML = `<h2 style="color:var(--accent-color); text-align:center;">${m.title}</h2><div class="parchment-text">${m.body}</div>`;
     }
 
     function renderParabole() {
-        const p = PARABOLE_DATA[currentLang];
-        document.getElementById("parabole-title").innerText = p.title;
-        document.getElementById("parabole-text").innerHTML = p.text;
+        document.getElementById("parabole-title").innerText = PARABOLE_DATA[currentLang].title;
+        document.getElementById("parabole-text").innerHTML = PARABOLE_DATA[currentLang].text + getSignatureHTML();
+    }
+
+    function openBiblioTab(tabId, btnElement) {
+        document.querySelectorAll('.biblio-tab-content').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.biblio-tabs button').forEach(b => b.classList.remove('active'));
+        document.getElementById('tab-' + tabId).style.display = 'block';
+        btnElement.classList.add('active');
+    }
+
+    function toggleLexique(element) {
+        element.classList.toggle('open');
+    }
+
+    function loadCartoChapter(index) {
+        const data = BIBLIOTHEQUE_DATABASE[currentLang].cartographie;
+        const chap = data[index];
+        const contentDiv = document.getElementById('carto-content');
+        document.querySelectorAll('.book-sidebar-item').forEach((el, i) => {
+            if (i === index) el.classList.add('active');
+            else el.classList.remove('active');
+        });
+        let formattedBody = chap.body.replace(/<p>([A-ZÉÀÎÔ])/i, '<p><span class="lettrine">$1</span>');
+        contentDiv.innerHTML = `
+            <h2 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; text-align: center; margin-bottom: 40px; border: none;">${chap.title}</h2>
+            ${formattedBody}
+            ${getSignatureHTML()}
+        `;
     }
 
     function renderBibliotheque() {
-        const b = BIBLIOTHEQUE_DATABASE[currentLang];
-        // Lexique
-        const lexContainer = document.getElementById("biblio-lexique");
-        lexContainer.innerHTML = "";
-        b.lexique.forEach(l => {
-            lexContainer.innerHTML += `<div class="lexique-card" onclick="this.classList.toggle('open')"><h4>${l.term}</h4><div class="lexique-def">${l.definition}</div></div>`;
-        });
-        // FAQ
+        const data = BIBLIOTHEQUE_DATABASE[currentLang];
+        
+        // 1. LES ORIGINES (HISTOIRE)
+        const histoireContainer = document.getElementById("biblio-histoire");
+        if(data.histoire) {
+            let htmlOrigines = '<div class="timeline-container">';
+            data.histoire.forEach(chapitre => {
+                htmlOrigines += `<div class="origine-block"><div class="origine-marker">✧</div><div class="origine-content parchment-text"><h3 class="origine-title">${chapitre.title}</h3>${chapitre.body}</div></div>`;
+            });
+            histoireContainer.innerHTML = htmlOrigines + '</div>';
+        }
+
+        // 2. LA CARTOGRAPHIE
+        const sidebar = document.getElementById('carto-sidebar');
+        sidebar.innerHTML = '';
+        if(data.cartographie) {
+            data.cartographie.forEach((chap, index) => {
+                sidebar.innerHTML += `<button class="book-sidebar-item" onclick="loadCartoChapter(${index})">${chap.title.split(':')[0]}</button>`;
+            });
+            if(data.cartographie.length > 0) loadCartoChapter(0);
+        }
+
+        // 3. LE LEXIQUE & LA FAQ
+        const lexiqueContainer = document.getElementById("biblio-lexique");
         const faqContainer = document.getElementById("biblio-faq");
-        faqContainer.innerHTML = `<h3 style="color:var(--accent-color); text-align:center;">FAQ</h3>`;
-        b.faq.forEach(f => {
-            faqContainer.innerHTML += `<details class="teaching-accordion"><summary class="accordion-title">${f.question}</summary><div class="accordion-content parchment-text">${f.answer}</div></details>`;
-        });
-        // Cartographie (Sidebar)
-        const side = document.getElementById('carto-sidebar');
-        side.innerHTML = "";
-        b.cartographie.forEach((c, i) => {
-            side.innerHTML += `<button class="book-sidebar-item" onclick="loadChapter(${i})">${c.title}</button>`;
-        });
-        loadChapter(0);
+        
+        lexiqueContainer.innerHTML = "";
+        if(data.lexique) {
+            data.lexique.forEach(mot => {
+                lexiqueContainer.innerHTML += `<div class="lexique-card" onclick="toggleLexique(this)"><h4>${mot.term}</h4><div class="lexique-def">${mot.definition}</div></div>`;
+            });
+        }
+        
+        faqContainer.innerHTML = "";
+        if(data.faq) {
+            let faqHTML = `<h3 style="color: var(--accent-color); text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; margin: 40px 0 20px;">FAQ</h3>`;
+            data.faq.forEach((item, index) => {
+                faqHTML += `
+                <details class="teaching-accordion">
+                    <summary class="accordion-title">${item.question}</summary>
+                    <div class="accordion-content parchment-text">${item.answer}</div>
+                </details>`;
+            });
+            faqContainer.innerHTML = faqHTML;
+        }
     }
 
-    function loadChapter(i) {
-        const chap = BIBLIOTHEQUE_DATABASE[currentLang].cartographie[i];
-        document.getElementById('carto-content').innerHTML = `<h3>${chap.title}</h3><div>${chap.body}</div>`;
-        document.querySelectorAll('.book-sidebar-item').forEach((b, idx) => b.classList.toggle('active', idx === i));
-    }
-
-    function openBiblioTab(id, btn) {
-        document.querySelectorAll('.biblio-tab-content').forEach(t => t.style.display = 'none');
-        document.getElementById('tab-' + id).style.display = 'block';
-        document.querySelectorAll('.biblio-tabs button').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-    }
-
-    function partagerMurmure(id) {
-        const url = window.location.origin + "/#" + id;
-        navigator.clipboard.writeText(url).then(() => alert("Lien de partage copié dans le presse-papier !"));
-    }
-
-    // --- INITIALISATION ---
     window.onload = () => {
+        setTimeout(createDustParticles, 500); 
         renderEnseignements();
         renderMurmures();
         renderParabole();
         renderBibliotheque();
         renderManuel();
-        
-        // Gestion des ancres au chargement
-        if(window.location.hash) {
-            const id = window.location.hash.substring(1);
-            const el = document.getElementById(id);
-            if(el) {
-                showSection(el.closest('.section').id);
-                if(el.tagName === 'DETAILS') el.setAttribute('open', '');
-                el.scrollIntoView({ behavior: 'smooth' });
+
+        // Application de la langue au chargement initial
+        document.querySelectorAll('.fr').forEach(el => el.style.display = 'inline');
+        document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
+
+        setTimeout(() => {
+            if (window.location.hash) {
+                const targetId = window.location.hash.substring(1); 
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const parentSection = targetElement.closest('.section');
+                    if (parentSection) showSection(parentSection.id);
+                    if (targetElement.tagName === 'DETAILS') targetElement.setAttribute('open', '');
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             }
-        }
+        }, 600); 
     };
+
     </script>
 </body>
 </html>

@@ -489,13 +489,14 @@
     let currentLang = 'fr';
         // Transforme un titre en identifiant (ex: "Le Silence Intérieur" -> "le-silence-interieur")
 function genererAncre(titre) {
-    return titre
-        .toLowerCase()
-        .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Enlève les accents
-        .replace(/[^a-z0-9]/g, '-') // Remplace tout ce qui n'est pas lettre ou chiffre par un tiret
-        .replace(/-+/g, '-') // Évite les tirets multiples
-        .replace(/^-|-$/g, ''); // Enlève les tirets au début ou à la fin
-}
+        let textOnly = titre.replace(/<[^>]+>/g, ''); // NOUVEAU : Détruit les balises HTML
+        return textOnly
+            .toLowerCase()
+            .normalize("NFD").replace(/[\u0300-\u036f]/g, "") 
+            .replace(/[^a-z0-9]/g, '-') 
+            .replace(/-+/g, '-') 
+            .replace(/^-|-$/g, ''); 
+    }
     
  function createDustParticles() {
     const container = document.getElementById('particles-container');
@@ -551,11 +552,9 @@ function genererAncre(titre) {
         }
     }
 
-    function switchLang(lang) {
+  function switchLang(lang) {
         currentLang = lang;
-        document.querySelectorAll('.fr').forEach(el => el.style.display = lang === 'fr' ? 'inline' : 'none');
-        document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? 'inline' : 'none');
-
+        
         const themeBtn = document.getElementById('theme-toggle');
         const isLight = document.body.classList.contains('light-mode');
         themeBtn.innerText = lang === 'fr' ? (isLight ? 'Obscurité' : 'Clarté') : (isLight ? 'Darkness' : 'Light');
@@ -566,11 +565,16 @@ function genererAncre(titre) {
             document.getElementById('parabole-icon').innerText = "🎧";
         }
 
+        // 1. On fabrique toutes les salles du Temple
         renderEnseignements();
         renderMurmures();
         renderParabole();
         renderBibliotheque();
         renderManuel();
+
+        // 2. NOUVEAU : On applique la langue sur les éléments fraîchement créés !
+        document.querySelectorAll('.fr').forEach(el => el.style.display = lang === 'fr' ? 'inline' : 'none');
+        document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? 'inline' : 'none');
     }
 
     function toggleTheme() {
@@ -673,12 +677,14 @@ function genererAncre(titre) {
         currentMurmures.forEach((murmure, index) => {
             let mediaHTML = "";
             let downloadBtnHTML = ""; 
+            
+            // NOUVEAU : On crée une version du titre purgée de tout code HTML pour les balises
+            let plainTitle = murmure.title.replace(/<[^>]+>/g, '');
+
             if (murmure.videoFile && murmure.videoFile !== "") {
-                // Si c'est un lien YouTube
                 if (murmure.videoFile.includes("youtube.com") || murmure.videoFile.includes("youtu.be")) {
                     mediaHTML += `<iframe width="100%" height="315" src="${murmure.videoFile}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></iframe>`;
                 } 
-                // Sinon, c'est un fichier MP4 classique
                 else {
                     mediaHTML += `<video controls src="${murmure.videoFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></video>`;
                     let downloadText = currentLang === 'fr' ? "Télécharger" : "Download";
@@ -687,16 +693,14 @@ function genererAncre(titre) {
             } 
             else {
                if (murmure.imageFile && murmure.imageFile !== "") {
-                    // Le titre du murmure devient automatiquement la balise SEO de l'image
-                    let altText = currentLang === 'fr' ? `${murmure.title} - Méditation et AYP` : `${murmure.title} - Meditation and AYP`;
+                    // On utilise 'plainTitle' pour ne pas casser la balise de l'image
+                    let altText = currentLang === 'fr' ? `${plainTitle} - Méditation et AYP` : `${plainTitle} - Meditation and AYP`;
                     mediaHTML += `<img src="${murmure.imageFile}" alt="${altText}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">`;
                 }
                 if (murmure.audioFile && murmure.audioFile !== "") {
-                    // Si c'est un code d'intégration (comme SoundCloud)
                     if (murmure.audioFile.includes("<iframe")) {
                         mediaHTML += `<div style="margin-bottom: 15px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">${murmure.audioFile}</div>`;
                     } 
-                    // Sinon, c'est un fichier MP3 classique
                     else {
                         mediaHTML += `<audio controls src="${murmure.audioFile}" style="width: 100%; margin-bottom: 15px;"></audio>`;
                     }
@@ -710,15 +714,13 @@ function genererAncre(titre) {
             if (murmure.videoFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerVideoMurmure(${index})">🎥 ${mediaShareLabel}</button>`;
             else if (murmure.audioFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerAudioMurmure(${index})">🎵 ${mediaShareLabel}</button>`;
 
-            // --- NOUVEAU : Changement de couleur dynamique ---
             let titleColorStyle = "";
-            if (murmure.title.includes("Paradoxe") || murmure.title.includes("Paradox") || murmure.title.includes("Écho") || murmure.title.includes("Echo")) {
-                // J'ai choisi un "Bleu Céleste" (#5DADE2) qui est lisible sur fond sombre comme sur fond clair
+            if (plainTitle.includes("Paradoxe") || plainTitle.includes("Paradox") || plainTitle.includes("Écho") || plainTitle.includes("Echo")) {
                 titleColorStyle = "color: #5DADE2;"; 
             }
 
-           const idAutomatique = murmure.id || genererAncre(murmure.title);
-        const murmureHTML = `
+           const idAutomatique = murmure.id || genererAncre(plainTitle);
+           const murmureHTML = `
             <details id="${idAutomatique}" class="teaching-accordion">
                     <summary class="accordion-title" style="${titleColorStyle}">${index + 1}. ${murmure.title}</summary>
                     <div class="accordion-content">
@@ -736,7 +738,6 @@ function genererAncre(titre) {
             container.innerHTML += murmureHTML;
         });
     }
-
     function renderParabole() {
         document.getElementById("parabole-title").innerText = PARABOLE_DATA[currentLang].title;
         document.getElementById("parabole-text").innerHTML = PARABOLE_DATA[currentLang].text + getSignatureHTML();

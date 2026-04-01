@@ -3,847 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Temple du Silence | Méditation Profonde</title>
     
-    <title>Le Temple du Silence | Méditation Profonde et Mécanique de l'Éveil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
-    <meta name="description" content="Découvrez la mécanique de l'éveil spirituel et du silence intérieur à travers les enseignements AYP. Méditation, respiration spinale et sagesse au quotidien.">
-    <meta name="keywords" content="méditation profonde, éveil spirituel, AYP, Yogani, silence intérieur, respiration spinale, kundalini, auto-régulation, karma yoga, spiritualité africaine">
-    <meta name="author" content="Le Gardien du Temple">
-    
-    <link rel="canonical" href="https://letempledusilence.org/" />
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://letempledusilence.org/">
-    <meta property="og:title" content="Le Temple du Silence | La Voie de la Douceur">
-    <meta property="og:description" content="Entrez dans un domaine dédié à la mécanique de l'éveil et à la science du silence. Nul besoin de forcer le pas : laissez la pratique vous guider.">
-    <meta property="og:image" content="https://letempledusilence.org/sceau-gardien.png">
-    <meta property="og:site_name" content="Le Temple du Silence">
-
-    <link rel="icon" href="sceau-gardien.png" type="image/png">
-    <link rel="apple-touch-icon" href="sceau-gardien.png">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* EMBELLISSEMENTS DEMANDÉS */
+        :root {
+            --title-blue: #5b8cba;
+            --accent-color: #d4af37;
+        }
+
+        /* Application de la police Cinzel aux titres bleus et majuscules */
+        .section-title, .content-title, .teaching-header-label, .accordion-title {
+            font-family: 'Cinzel', serif !important;
+            color: var(--title-blue) !important;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* Le nouveau titre ENSEIGNEMENTS au-dessus des cartes */
+        .teaching-header-label {
+            display: block;
+            text-align: center;
+            font-size: 1.4rem;
+            margin: 40px 0 20px 0;
+            font-weight: 700;
+            /* Ma suggestion d'expert : un léger éclat pour la profondeur */
+            text-shadow: 0 0 10px rgba(91, 140, 186, 0.2);
+        }
+
+        /* Style des cartes pour la cohérence */
+        .card-title {
+            font-family: 'Cinzel', serif;
+            color: var(--accent-color);
+        }
+
+        /* Masquage de la phrase supprimée dans Murmures (via CSS au cas où elle resterait en base) */
+        .phrase-supprimee { display: none !important; }
+    </style>
 </head>
-<body>
+<body class="dark-mode">
 
-    <header>
-        <h1 style="font-size: 3.6rem; font-weight: 700; text-shadow: 0 2px 15px rgba(0,0,0,0.6); margin-bottom: 5px;">Le Temple du Silence</h1>
-        
-        <div class="subtitle-container" style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 10px;">
-            <img src="sceau-gardien.png" alt="Sceau du Gardien" style="height: 45px; border-radius: 50%; box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);">
-            <p class="site-subtitle" style="color: #ffffff; font-family: 'Lora', serif; font-size: 1.2rem; letter-spacing: 3px; margin: 0; text-shadow: 0 1px 5px rgba(0,0,0,0.8);">CHEMIN AYP</p>
-            <img src="logo-ayp.png" alt="Logo AYP" style="height: 45px; border-radius: 50%; box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);">
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#enseignements" onclick="showSection('enseignements')">Enseignements</a>
+            <a href="#pratiques" onclick="showSection('pratiques')">Pratiques</a>
+            <a href="#bibliotheque" onclick="showSection('bibliotheque')">Bibliothèque</a>
+            <a href="#murmures" onclick="showSection('murmures')">Murmures</a>
         </div>
+    </nav>
+
+    <div class="container">
         
-        <div class="controls">
-            <button id="lang-toggle" onclick="toggleLang()">English</button>
-            <button id="theme-toggle" onclick="toggleTheme()">Clarté</button>
-        </div>
-        
-       <nav>
-            <button id="nav-accueil" class="active" onclick="showSection('accueil')">
-                <span class="fr">Le Parvis</span>
-                <span class="en" style="display:none;">The Forecourt</span>
-            </button>
-            <button id="nav-sage" onclick="showSection('sage')">
-                <span class="fr">Le Sage</span>
-                <span class="en" style="display:none;">The Sage</span>
-            </button>
-            <button id="nav-enseignements" onclick="showSection('enseignements')">
-                <span class="fr">Enseignements</span>
-                <span class="en" style="display:none;">Teachings</span>
-            </button>
-           <button id="nav-manuel" onclick="showSection('manuel')">
-                <span class="fr">Le Manuel</span>
-                <span class="en" style="display:none;">The Manual</span>
-            </button>
-            <button id="nav-murmures" onclick="showSection('murmures')">
-                <span class="fr">Murmures</span>
-                <span class="en" style="display:none;">Whispers</span>
-            </button>
-            <button id="nav-parabole" onclick="showSection('parabole')">
-                <span class="fr">La Parabole</span>
-                <span class="en" style="display:none;">The Parable</span>
-            </button>
-            <button id="nav-bibliotheque" onclick="showSection('bibliotheque')">
-                <span class="fr">La Bibliothèque</span>
-                <span class="en" style="display:none;">The Library</span>
-            </button>
-            <button id="nav-contact" onclick="showSection('contact')">
-                <span class="fr">L'Ombre & la Lumière</span>
-                <span class="en" style="display:none;">Shadow & Light</span>
-            </button>
-        </nav>
-    </header>
-
-    <main>
-        <section id="accueil" class="section active">
+        <section id="enseignements" class="section active">
+            <h2 class="section-title">Enseignements</h2>
             
-            <div class="teaching-article parchment-text" style="text-align: center; max-width: 750px; margin: 0 auto 50px; padding: 40px; background: var(--box-bg); border-radius: 12px; border: 1px solid var(--border-color);">
-                <h2 style="border: none; margin-bottom: 20px;">
-                    <span class="fr">Bienvenue au Temple</span>
-                    <span class="en" style="display:none;">Welcome to the Temple</span>
-                </h2>
-                <p style="font-size: 1.25rem; font-style: italic; line-height: 1.8;">
-                    <span class="fr">Ici, nul besoin de forcer le pas ni de retenir son souffle. Ce domaine est dédié à la mécanique de l'éveil et à la science de la douceur. Entrez, déposez vos fardeaux de voyageur, et laissez la pratique du silence vous guider.</span>
-                    <span class="en" style="display:none;">Here, there is no need to force your pace or hold your breath. This domain is dedicated to the mechanics of awakening and the science of gentleness. Enter, set down your traveler's burdens, and let the practice of silence guide you.</span>
-                </p>
-                <img src="sceau-gardien.png" alt="Sceau" style="height: 50px; margin-top: 15px; opacity: 0.8; filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.4));">
-            </div>
+            <span class="teaching-header-label">ENSEIGNEMENTS</span>
 
-            <div style="max-width: 800px; margin: 0 auto 40px auto; padding: 30px; border-top: 1px solid rgba(200, 200, 200, 0.3); border-bottom: 1px solid rgba(200, 200, 200, 0.3); text-align: center;">
-                <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; letter-spacing: 2px; text-transform: uppercase; margin-top: 0; margin-bottom: 20px;">
-                    <span class="fr">L'Écho de la Semaine</span>
-                    <span class="en" style="display:none;">Echo of the Week</span>
-                </h3>
-                <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; line-height: 1.6; color: var(--text-color);">
-                    <span class="fr">« La paix véritable ne se trouve pas comme on trouve un trésor caché ; elle se révèle. Et elle ne se révèle que lorsque la fatigue d'espérer nous fait enfin tomber les bras. S'arrêter de chercher n'est pas un échec spirituel ni de la paresse, c'est la naissance de la lucidité. »</span>
-                    <span class="en" style="display:none;">"True peace is not found the way one finds a hidden treasure; it is revealed. And it is only revealed when the exhaustion of hoping finally makes us drop our arms. Stopping the search is not a spiritual failure or laziness; it is the birth of lucidity."</span>
-                </p>
-                <p style="font-size: 0.9rem; opacity: 0.6; margin-top: 15px; margin-bottom: 0;">
-                    <span class="fr">— Extrait de nos Murmures (L'Illusion de la Conquête)</span>
-                    <span class="en" style="display:none;">— From our Whispers (The Illusion of Conquest)</span>
-                </p>
-            </div>
-
-            <div class="teaching-article parchment-text" style="text-align: center; max-width: 750px; margin: 0 auto 40px; padding: 40px; background: var(--box-bg); border-radius: 12px; border: 1px solid var(--border-color);">
-                <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-top: 0; margin-bottom: 15px;">
-                    <span class="fr">Le Premier Pas : Entrer dans le Silence</span>
-                    <span class="en" style="display:none;">The First Step: Entering the Silence</span>
-                </h3>
-                <p style="font-size: 1.25rem; font-style: italic; opacity: 0.9; line-height: 1.8; margin-bottom: 20px;">
-                    <span class="fr">L'intellect cherche souvent une méthode complexe dès les premiers instants, mais le système nerveux n'a besoin, pour commencer, que d'une simple pause. Avant d'étudier notre science, offrez-vous ceci :</span>
-                    <span class="en" style="display:none;">The intellect often seeks a complex method from the very first moments, but the nervous system needs, to begin with, only a simple pause. Before studying our science, offer yourself this:</span>
-                </p>
-                <ul style="font-size: 1.05rem; opacity: 0.9; line-height: 1.8; margin-bottom: 25px; list-style-type: none; padding-left: 0;">
-                    <li><span style="color: var(--accent-color); font-weight: bold;">✧ </span> <span class="fr"><strong>L'Arrêt :</strong> Fermez les yeux pendant 5 petites minutes, là où vous êtes.</span><span class="en" style="display:none;"><strong>The Stop:</strong> Close your eyes for 5 short minutes, right where you are.</span></li>
-                    <li><span style="color: var(--accent-color); font-weight: bold;">✧ </span> <span class="fr"><strong>Le Relâchement :</strong> Laissez votre respiration trouver son propre rythme. Ne forcez rien.</span><span class="en" style="display:none;"><strong>The Release:</strong> Let your breath find its own rhythm. Do not force anything.</span></li>
-                    <li><span style="color: var(--accent-color); font-weight: bold;">✧ </span> <span class="fr"><strong>L'Observation :</strong> Laissez vos pensées passer comme de simples nuages, sans vous y accrocher.</span><span class="en" style="display:none;"><strong>The Observation:</strong> Let your thoughts pass like simple clouds, without clinging to them.</span></li>
-                </ul>
-                <p style="font-size: 1.05rem; font-style: italic; opacity: 0.8; border-top: 1px dashed var(--border-color); padding-top: 15px; margin-bottom: 0;">
-                    <span class="fr">Lorsque vous sentirez le besoin d'aller plus loin et de structurer cette paix, ouvrez <a href="#" onclick="showSection('manuel'); return false;" style="color: var(--accent-color); font-weight: bold; text-decoration: none;">Le Manuel</a>. Il contient l'échelle complète de nos pratiques.</span>
-                    <span class="en" style="display:none;">When you feel the need to go further and structure this peace, open <a href="#" onclick="showSection('manuel'); return false;" style="color: var(--accent-color); font-weight: bold; text-decoration: none;">The Manual</a>. It contains the complete ladder of our practices.</span>
-                </p>
-            </div>
-
-            <div class="newsletter-block parchment-text" style="max-width: 750px; margin: 0 auto 50px auto; padding: 30px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--border-color); border-radius: 8px; text-align: center;">
-                <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 15px;">
-                    <span class="fr">Les Lettres du Gardien</span>
-                    <span class="en" style="display:none;">The Guardian's Letters</span>
-                </h3>
-                <p style="font-size: 1.05rem; opacity: 0.9; font-style: italic; margin-bottom: 20px; line-height: 1.6;">
-                    <span class="fr">Inscrivez votre adresse dans le registre du temple pour recevoir, au rythme lent de la pratique, une chronique inédite, une réflexion intime sur l'ancrage, l'ego et le silence dans le tumulte du quotidien.</span>
-                    <span class="en" style="display:none;">Enter your address in the temple registry to receive, at the slow pace of practice, an unpublished chronicle, an intimate reflection on grounding, ego, and silence in the tumult of daily life.</span>
-                </p>
-                <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-                    <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; width: 250px; outline: none;">
-                    <button type="submit" class="zen-btn" style="margin: 0; padding: 10px 20px;">
-                        <span class="fr">S'inscrire</span>
-                        <span class="en" style="display:none;">Subscribe</span>
-                    </button>
-                </form>
-                <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 15px; font-style: italic;">
-                    <span class="fr">Aucun bruit inutile. Seulement l'essentiel.</span>
-                    <span class="en" style="display:none;">No unnecessary noise. Only the essential.</span>
-                </p>
-            </div>
-            
-            <div style="max-width: 900px; margin: 0 auto 50px auto;">
-                <h3 style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 30px; border-bottom: 1px dashed var(--border-color); padding-bottom: 15px;">
-                    <span class="fr">Les Portes du Sanctuaire</span>
-                    <span class="en" style="display:none;">The Doors of the Sanctuary</span>
-                </h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-                    
-                    <div onclick="showSection('sage')" style="background: rgba(20,20,20,0.7); border: 1px solid var(--accent-color); border-radius: 12px; padding: 30px; cursor: pointer; text-align: center; transition: all 0.4s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(212, 175, 55, 0.25)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.4)';">
-                        <div style="font-size: 1.2rem; color: var(--accent-color); margin-bottom: 10px; font-style: italic;">
-                            <span class="fr">✧ Résonance</span>
-                            <span class="en" style="display:none;">✧ Resonance</span>
-                        </div>
-                        <h4 style="color: white; margin-top: 0; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; margin-bottom: 15px;">
-                            <span class="fr">Le Sage Interactif</span>
-                            <span class="en" style="display:none;">Interactive Sage</span>
-                        </h4>
-                        <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 25px; line-height: 1.6;">
-                            <span class="fr">Entrez dans la salle de résonance pour interroger directement la conscience AYP.</span>
-                            <span class="en" style="display:none;">Enter the resonance chamber to directly query the AYP consciousness.</span>
-                        </p>
-                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;">
-                            <span class="fr">Entrer ➔</span>
-                            <span class="en" style="display:none;">Enter ➔</span>
-                        </div>
-                    </div>
-
-                    <div onclick="showSection('bibliotheque')" style="background: rgba(20,20,20,0.7); border: 1px solid var(--accent-color); border-radius: 12px; padding: 30px; cursor: pointer; text-align: center; transition: all 0.4s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(212, 175, 55, 0.25)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.4)';">
-                        <div style="font-size: 1.2rem; color: var(--accent-color); margin-bottom: 10px; font-style: italic;">
-                            <span class="fr">✧ Histoire</span>
-                            <span class="en" style="display:none;">✧ History</span>
-                        </div>
-                        <h4 style="color: white; margin-top: 0; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; margin-bottom: 15px;">
-                            <span class="fr">La Bibliothèque</span>
-                            <span class="en" style="display:none;">The Library</span>
-                        </h4>
-                        <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 25px; line-height: 1.6;">
-                            <span class="fr">Explorez la cartographie de la conscience et les origines de la Lignée.</span>
-                            <span class="en" style="display:none;">Explore the cartography of consciousness and the origins of the Lineage.</span>
-                        </p>
-                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;">
-                            <span class="fr">Entrer ➔</span>
-                            <span class="en" style="display:none;">Enter ➔</span>
-                        </div>
-                    </div>
-
-                    <div onclick="showSection('enseignements')" style="background: rgba(20,20,20,0.7); border: 1px solid var(--accent-color); border-radius: 12px; padding: 30px; cursor: pointer; text-align: center; transition: all 0.4s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(212, 175, 55, 0.25)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.4)';">
-                        <div style="font-size: 1.2rem; color: var(--accent-color); margin-bottom: 10px; font-style: italic;">
-                            <span class="fr">✧ Étude</span>
-                            <span class="en" style="display:none;">✧ Study</span>
-                        </div>
-                        <h4 style="color: white; margin-top: 0; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; margin-bottom: 15px;">
-                            <span class="fr">Les Enseignements</span>
-                            <span class="en" style="display:none;">Teachings</span>
-                        </h4>
-                        <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 25px; line-height: 1.6;">
-                            <span class="fr">Étudiez les leçons originelles, la philosophie et l'intégration pratique.</span>
-                            <span class="en" style="display:none;">Study the original lessons, philosophy, and practical integration.</span>
-                        </p>
-                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;">
-                            <span class="fr">Entrer ➔</span>
-                            <span class="en" style="display:none;">Enter ➔</span>
-                        </div>
-                    </div>
-
-                    <div onclick="showSection('murmures')" style="background: rgba(20,20,20,0.7); border: 1px solid var(--accent-color); border-radius: 12px; padding: 30px; cursor: pointer; text-align: center; transition: all 0.4s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(212, 175, 55, 0.25)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.4)';">
-                        <div style="font-size: 1.2rem; color: var(--accent-color); margin-bottom: 10px; font-style: italic;">
-                            <span class="fr">✧ Réflexion</span>
-                            <span class="en" style="display:none;">✧ Reflection</span>
-                        </div>
-                        <h4 style="color: white; margin-top: 0; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; margin-bottom: 15px;">
-                            <span class="fr">Les Murmures</span>
-                            <span class="en" style="display:none;">Whispers</span>
-                        </h4>
-                        <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 25px; line-height: 1.6;">
-                            <span class="fr">Laissez l'intuition vous guider vers le conte ou le reflet qui vous appelle.</span>
-                            <span class="en" style="display:none;">Let intuition guide you to the tale or reflection that calls you.</span>
-                        </p>
-                        <div style="color: var(--accent-color); font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;">
-                            <span class="fr">Entrer ➔</span>
-                            <span class="en" style="display:none;">Enter ➔</span>
-                        </div>
-                    </div>
+            <div class="cards-container" id="enseignements-grid">
                 </div>
-            </div>
-            
         </section>
 
-        <section id="sage" class="section">
-            <div id="particles-container"></div>
-           <div id="chat-container" style="width: 100%; max-width: 900px; height: 80vh; min-height: 500px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.5); position: relative; background: transparent; display: flex; align-items: center; justify-content: center;">
-                <div id="sage-loading-mask" style="position: absolute; z-index: 1; text-align: center; opacity: 0.7; font-family: 'Cormorant Garamond', serif;">
-                    <p style="font-size: 1.4rem; font-style: italic; color: var(--text-color); margin-bottom: 5px;">
-                        <span class="fr">Le Sage s'installe dans le silence...</span>
-                        <span class="en" style="display:none;">The Sage is settling into the silence...</span>
-                    </p>
-                    <p style="font-size: 0.9rem; opacity: 0.8; color: var(--text-color);">
-                        <span class="fr">(Veuillez patienter un instant)</span>
-                        <span class="en" style="display:none;">(Please wait a moment)</span>
-                    </p>
+        <section id="pratiques" class="section">
+            <h2 class="section-title">Pratiques</h2>
+            <div id="manuel-container">
                 </div>
-                <iframe src="https://udify.app/chatbot/TFkbLNLitsHkzVxf" loading="lazy" onload="document.getElementById('sage-loading-mask').style.display='none';" style="position: relative; z-index: 2; width: 100%; height: 100%; min-height: 500px; border: none; background: transparent;" allow="microphone"></iframe>
-            </div>
-            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 20px; opacity: 0.85; position: relative; z-index: 1;">
-                <span class="fr" style="font-style: italic; font-size: 1rem; color: var(--accent-color); margin-right: 15px;">Œuvre Originale & Propriété de la Lignée</span>
-                <span class="en" style="display:none; font-style: italic; font-size: 1rem; color: var(--accent-color); margin-right: 15px;">Original Work & Lineage Property</span>
-                <img src="signature-ayp.png" alt="Signature Lignée" style="height: 45px; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.4));">
-            </div>
-            <audio id="sage-resonance" src="resonance.mp3" loop></audio>
-        </section> 
-
-        <section id="enseignements" class="section"> 
-            
-           <div id="enseignements-piliers" class="piliers-grid"></div>
-           
-            <h3 class="enseignements-separator" style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; margin: 60px 0 40px; border-bottom: 1px dashed var(--border-color); padding-bottom: 15px;">
-                <span class="fr">Explorations & Pratiques</span>
-                <span class="en" style="display:none;">Explorations & Practices</span>
-            </h3>
-            <div id="enseignements-grille" class="creatif-grid"></div>
-
-            <div class="newsletter-block parchment-text" style="max-width: 750px; margin: 50px auto 30px; padding: 30px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--border-color); border-radius: 8px; text-align: center;">
-                <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 15px;">
-                    <span class="fr">Les Lettres du Gardien</span>
-                    <span class="en" style="display:none;">The Guardian's Letters</span>
-                </h3>
-                <p style="font-size: 1.05rem; opacity: 0.9; font-style: italic; margin-bottom: 20px; line-height: 1.6;">
-                    <span class="fr">Inscrivez votre adresse dans le registre du temple pour recevoir, au rythme lent de la pratique, une chronique inédite, une réflexion intime sur l'ancrage, l'ego et le silence dans le tumulte du quotidien.</span>
-                    <span class="en" style="display:none;">Enter your address in the temple registry to receive, at the slow pace of practice, an unpublished chronicle, an intimate reflection on grounding, ego, and silence in the tumult of daily life.</span>
-                </p>
-                <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-                    <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; width: 250px; outline: none;">
-                    <button type="submit" class="zen-btn" style="margin: 0; padding: 10px 20px;">
-                        <span class="fr">S'inscrire</span>
-                        <span class="en" style="display:none;">Subscribe</span>
-                    </button>
-                </form>
-                <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 15px; font-style: italic;">
-                    <span class="fr">Aucun bruit inutile. Seulement l'essentiel.</span>
-                    <span class="en" style="display:none;">No unnecessary noise. Only the essential.</span>
-                </p>
-            </div>
-
-            <div class="ayp-gateway parchment-text" style="text-align: center; border: 2px solid var(--accent-color); padding: 20px 25px; border-radius: 8px; background: rgba(20, 20, 20, 0.6); max-width: 800px; margin: 40px auto 20px auto;">
-                <h2 style="margin-top: 0; border:none; font-size: 1.8rem; margin-bottom: 15px; color: var(--accent-color);">
-                    <span class="fr">Les Enseignements Originels (AYP)</span>
-                    <span class="en" style="display:none;">Original AYP Teachings</span>
-                </h2>
-                <p style="font-size: 1rem; line-height: 1.4; margin-bottom: 15px;">
-                    <span class="fr">Pour étudier la science complète, la mécanique du système nerveux et accéder à l'intégralité des leçons fondatrices AYP, nous vous invitons à visiter la source.</span>
-                    <span class="en" style="display:none;">To study the complete science, the mechanics of the nervous system and access all foundational AYP lessons, we invite you to visit the source.</span>
-                </p>
-                <a href="https://www.aypsite.org/" target="_blank" class="zen-btn" style="display: inline-block; text-decoration: none; padding: 10px 20px; font-weight:bold; font-size: 1rem; margin-top: 10px;">
-                    <span class="fr">Visiter AYPSite (Source Originelle)</span>
-                    <span class="en" style="display:none;">Visit AYPSite (Original Source)</span>
-                </a>
-            </div>
-
-        </section> 
-
-        <section id="manuel" class="section">
-            <div id="manuel-container" style="max-width: 800px; margin: 0 auto; background: var(--box-bg); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color);"></div>
-            
-            <div class="newsletter-block parchment-text" style="max-width: 750px; margin: 40px auto 20px; padding: 30px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--border-color); border-radius: 8px; text-align: center;">
-                <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 15px;">
-                    <span class="fr">Les Lettres du Gardien</span>
-                    <span class="en" style="display:none;">The Guardian's Letters</span>
-                </h3>
-                <p style="font-size: 1.05rem; opacity: 0.9; font-style: italic; margin-bottom: 20px; line-height: 1.6;">
-                    <span class="fr">Inscrivez votre adresse dans le registre du temple pour recevoir, au rythme lent de la pratique, une chronique inédite, une réflexion intime sur l'ancrage, l'ego et le silence dans le tumulte du quotidien.</span>
-                    <span class="en" style="display:none;">Enter your address in the temple registry to receive, at the slow pace of practice, an unpublished chronicle, an intimate reflection on grounding, ego, and silence in the tumult of daily life.</span>
-                </p>
-                <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-                    <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; width: 250px; outline: none;">
-                    <button type="submit" class="zen-btn" style="margin: 0; padding: 10px 20px;">
-                        <span class="fr">S'inscrire</span>
-                        <span class="en" style="display:none;">Subscribe</span>
-                    </button>
-                </form>
-                <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 15px; font-style: italic;">
-                    <span class="fr">Aucun bruit inutile. Seulement l'essentiel.</span>
-                    <span class="en" style="display:none;">No unnecessary noise. Only the essential.</span>
-                </p>
-            </div>
-        </section>
-
-        <section id="murmures" class="section">
-           <div class="creatif-header" style="text-align: center; margin-bottom: 40px;">
-                <h2 style="font-size: 2.8rem; color: var(--accent-color); border: none; margin-bottom: 15px; font-family: 'Cormorant Garamond', serif; font-style: italic; letter-spacing: 1px;">
-                    <span class="fr">Murmures du Silence</span>
-                    <span class="en" style="display:none;">Whispers of Silence</span>
-                </h2>
-                
-                <p class="murmures-intro-text fr parchment-text" style="font-style: italic; opacity: 0.9; font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.6; background: rgba(212, 175, 55, 0.03); padding: 20px; border-radius: 8px;">
-                    L'art de l'alchimie intérieure est de transformer le tumulte du monde en un silence vibrant.<br><br>Choisissez la salle où vous souhaitez entrer pour guider votre pratique.
-                </p>
-                <p class="murmures-intro-text en parchment-text" style="display:none; font-style: italic; opacity: 0.9; font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.6; background: rgba(212, 175, 55, 0.03); padding: 20px; border-radius: 8px;">
-                    The art of inner alchemy is to transform the world's tumult into a vibrant silence.<br><br>Choose the chamber you wish to enter to guide your practice.
-                </p>
-            </div>
-            
-            <div id="murmures-list-container" class="creatif-grid"></div>
-
-            <div class="newsletter-block parchment-text" style="max-width: 750px; margin: 50px auto 20px; padding: 30px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--border-color); border-radius: 8px; text-align: center;">
-                <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 15px;">
-                    <span class="fr">Les Lettres du Gardien</span>
-                    <span class="en" style="display:none;">The Guardian's Letters</span>
-                </h3>
-                <p style="font-size: 1.05rem; opacity: 0.9; font-style: italic; margin-bottom: 20px; line-height: 1.6;">
-                    <span class="fr">Inscrivez votre adresse dans le registre du temple pour recevoir, au rythme lent de la pratique, une chronique inédite, une réflexion intime sur l'ancrage, l'ego et le silence dans le tumulte du quotidien.</span>
-                    <span class="en" style="display:none;">Enter your address in the temple registry to receive, at the slow pace of practice, an unpublished chronicle, an intimate reflection on grounding, ego, and silence in the tumult of daily life.</span>
-                </p>
-                <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-                    <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; width: 250px; outline: none;">
-                    <button type="submit" class="zen-btn" style="margin: 0; padding: 10px 20px;">
-                        <span class="fr">S'inscrire</span>
-                        <span class="en" style="display:none;">Subscribe</span>
-                    </button>
-                </form>
-                <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 15px; font-style: italic;">
-                    <span class="fr">Aucun bruit inutile. Seulement l'essentiel.</span>
-                    <span class="en" style="display:none;">No unnecessary noise. Only the essential.</span>
-                </p>
-            </div>
-        </section>
-
-        <section id="parabole" class="section">
-            <div class="teaching-article parchment-text">
-                <h2 id="parabole-title" style="text-align:center; border:none; font-size:2rem; margin-bottom:10px;"></h2>
-                <div class="audio-parabole-container" style="margin-bottom: 30px; text-align: center;">
-                    <audio id="audio-parabole-player" preload="none"></audio>
-                    <button id="btn-play-parabole" class="zen-btn" style="font-size: 1.1rem; padding: 10px 20px;" onclick="toggleParaboleAudio()">
-                        <span id="parabole-icon">🎧</span> 
-                        <span id="parabole-text-fr" class="fr">Écouter la voix du pèlerin</span>
-                        <span id="parabole-text-en" class="en" style="display:none;">Listen to the pilgrim's voice</span>
-                    </button>
-                </div>
-                <div id="parabole-text"></div>
-            </div>
         </section>
 
         <section id="bibliotheque" class="section">
-            <div class="creatif-header" style="text-align: center; margin-bottom: 30px;">
-                <h2 style="font-size: 2.8rem; color: var(--accent-color); border: none; margin-bottom: 15px; font-family: 'Cormorant Garamond', serif; font-style: italic;">
-                    <span class="fr">Bibliothèque du Silence</span>
-                    <span class="en" style="display:none;">Library of Silence</span>
-                </h2>
-                <p style="font-style: italic; opacity: 0.9; font-size: 1.15rem; max-width: 700px; margin: 0 auto 20px auto; color: var(--text-color);">
-                    <span class="fr">Choisissez la salle où vous souhaitez entrer pour guider votre pratique.</span>
-                    <span class="en" style="display:none;">Choose the chamber you wish to enter to guide your practice.</span>
-                </p>
-            </div>
-            
-            <div class="biblio-tabs" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap;">
-                <button class="zen-btn active" onclick="openBiblioTab('cartographie', this)">
-                    <span class="fr">Cartographie de la Conscience</span><span class="en" style="display:none;">Cartography of Consciousness</span>
-                </button>
-                <button class="zen-btn" onclick="openBiblioTab('origines', this)">
-                    <span class="fr">Les Origines de la Lignée</span><span class="en" style="display:none;">Lineage Origins</span>
-                </button>
-                <button class="zen-btn" onclick="openBiblioTab('lexique', this)">
-                    <span class="fr">Lexique & FAQ</span><span class="en" style="display:none;">Lexicon & FAQ</span>
-                </button>
-            </div>
-            
-            <div id="tab-cartographie" class="biblio-tab-content active">
-                <div class="book-layout">
-                    <div class="book-sidebar" id="carto-sidebar"></div>
-                    <div class="book-content parchment-text" id="carto-content"></div>
+            <h2 class="section-title">Bibliothèque</h2>
+            <div id="bibliotheque-content">
                 </div>
-            </div>
-            
-            <div id="tab-origines" class="biblio-tab-content" style="display: none;">
-                <div id="biblio-histoire" style="max-width: 800px; margin: 0 auto;"></div>
-            </div>
-            
-            <div id="tab-lexique" class="biblio-tab-content" style="display: none;">
-                <div id="biblio-lexique" class="lexique-grid"></div>
-                <div id="biblio-faq" style="max-width: 800px; margin: 0 auto; margin-bottom: 50px;"></div>
-            </div>
-
-            <div class="newsletter-block parchment-text" style="max-width: 750px; margin: 50px auto 20px; padding: 30px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--border-color); border-radius: 8px; text-align: center;">
-                <h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 15px;">
-                    <span class="fr">Les Lettres du Gardien</span>
-                    <span class="en" style="display:none;">The Guardian's Letters</span>
-                </h3>
-                <p style="font-size: 1.05rem; opacity: 0.9; font-style: italic; margin-bottom: 20px; line-height: 1.6;">
-                    <span class="fr">Inscrivez votre adresse dans le registre du temple pour recevoir, au rythme lent de la pratique, une chronique inédite, une réflexion intime sur l'ancrage, l'ego et le silence dans le tumulte du quotidien.</span>
-                    <span class="en" style="display:none;">Enter your address in the temple registry to receive, at the slow pace of practice, an unpublished chronicle, an intimate reflection on grounding, ego, and silence in the tumult of daily life.</span>
-                </p>
-                <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-                    <input type="email" name="email" placeholder="votre@email.com" required style="padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.3); color: white; width: 250px; outline: none;">
-                    <button type="submit" class="zen-btn" style="margin: 0; padding: 10px 20px;">
-                        <span class="fr">S'inscrire</span>
-                        <span class="en" style="display:none;">Subscribe</span>
-                    </button>
-                </form>
-                <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 15px; font-style: italic;">
-                    <span class="fr">Aucun bruit inutile. Seulement l'essentiel.</span>
-                    <span class="en" style="display:none;">No unnecessary noise. Only the essential.</span>
-                </p>
-            </div>
         </section>
 
-        <section id="contact" class="section">
-            <div class="teaching-article parchment-text" style="text-align: center; max-width: 700px; margin: 0 auto; background: var(--box-bg); padding: 40px; border-radius: 8px; border: 1px solid var(--border-color);">
-                <h2 style="border:none; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; margin-bottom: 15px; font-style: italic;">
-                    <span class="fr">Les Confessions du Sanctuaire</span>
-                    <span class="en" style="display:none;">Confessions of the Sanctuary</span>
-                </h2>
-                
-                <p style="font-size: 1.2rem; font-style: italic; opacity: 1; margin-bottom: 35px; line-height: 1.7; font-family: 'Cormorant Garamond', serif;">
-                    <span class="fr">Le silence n'est pas l'absence de tempêtes, c'est l'art de rester ancré pendant qu'elles font rage. Si vous traversez actuellement une épreuve (une perte, un doute profond, un effondrement matériel ou intérieur) et que la paix vous semble inaccessible, vous n'avez pas à porter ce fardeau seul.<br><br>Écrivez-moi, partagez votre tempête. Le gardien lira chaque message avec la plus grande bienveillance. De temps à autre, une réponse anonymisée sera partagée dans nos lettres, afin que la lumière apportée à l'un puisse éclairer le chemin de tous.</span>
-                    <span class="en" style="display:none;">Silence is not the absence of storms, it is the art of remaining grounded while they rage. If you are currently going through an ordeal (a loss, a deep doubt, a material or inner collapse) and peace seems inaccessible to you, you do not have to carry this burden alone.<br><br>Write to me, share your storm. The guardian will read each message with the greatest benevolence. From time to time, an anonymized response will be shared in our letters, so that the light brought to one may illuminate the path of all.</span>
-                </p>
-                
-                <form action="https://formspree.io/f/mjgpyrvr" method="POST" style="display: flex; flex-direction: column; gap: 15px; text-align: left; max-width: 500px; margin: 0 auto 30px auto;">
-                    <div style="display: flex; flex-direction: column; gap: 5px;">
-                        <input type="email" name="email" placeholder="Votre email / Your email" required style="padding: 12px; border-radius: 6px; border: 1px solid var(--border-color); background: rgba(20, 20, 20, 0.5); color: white; outline: none; font-size: 1rem;">
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 5px;">
-                        <textarea name="message" placeholder="Votre confession, doute ou préoccupation / Your confession, doubt or concern" required style="padding: 12px; border-radius: 6px; border: 1px solid var(--border-color); background: rgba(20, 20, 20, 0.5); color: white; min-height: 180px; outline: none; font-size: 1rem; line-height: 1.5;"></textarea>
-                    </div>
-                    <button type="submit" class="zen-btn" style="background: var(--btn-blue); color: white; border: none; padding: 15px; font-weight: bold; border-radius: 20px; align-self: center; min-width: 200px; font-size: 1.1rem; cursor: pointer; transition: background 0.3s ease;">
-                        <span class="fr">✉️ Confier mon histoire</span>
-                        <span class="en" style="display:none;">✉️ Entrust my story</span>
-                    </button>
-                </form>
-            </div>
+        <section id="murmures" class="section">
+            <h2 class="section-title">Murmures</h2>
+            <div id="murmures-grid">
+                </div>
         </section>
-        
-    </main>
 
-    <footer style="display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 40px 10px; border-top: 1px solid var(--border-color);">
-        <p style="opacity: 0.7;">© 2026 Le Temple du Silence. <span class="en" style="display:none;">All rights reserved.</span><span class="fr">Tous droits réservés.</span></p>
-    </footer>
+    </div>
 
-   <script src="contenu.js"></script>
-
+    <script src="contenu.js"></script>
     <script>
-    let currentLang = 'fr';
-
-    // --- DÉCODEUR UNIVERSEL ---
-    function decodeHTML(html) {
-        let txt = document.createElement("textarea");
-        txt.innerHTML = html;
-        return txt.value;
-    }
-
-    // --- GÉNÉRATEUR D'ANCRES ---
-    function genererAncre(titre) {
-        let textOnly = titre.replace(/<[^>]+>/g, ''); 
-        return textOnly
-            .toLowerCase()
-            .normalize("NFD").replace(/[\u0300-\u036f]/g, "") 
-            .replace(/[^a-z0-9]/g, '-') 
-            .replace(/-+/g, '-') 
-            .replace(/^-|-$/g, ''); 
-    }
-    
-    function createDustParticles() {
-        const container = document.getElementById('particles-container');
-        if (!container) return;
-        const isMobile = window.innerWidth < 768;
-        const particleCount = isMobile ? 12 : 40; 
-        container.innerHTML = ''; 
-        for(let i = 0; i < particleCount; i++) {
-            let particle = document.createElement('div');
-            particle.className = 'dust-particle';
-            let size = Math.random() * 3 + 1; 
-            particle.style.width = size + 'px';
-            particle.style.height = size + 'px';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = Math.random() * 100 + '%';
-            particle.style.animationDuration = (Math.random() * 15 + 10) + 's'; 
-            particle.style.animationDelay = (Math.random() * 10) + 's';
-            container.appendChild(particle);
-        }
-    }
-
-    function toggleParaboleAudio() {
-        const player = document.getElementById('audio-parabole-player');
-        const icon = document.getElementById('parabole-icon');
-        const targetSrc = currentLang === 'fr' ? 'parabole_fr.mp3' : 'parabole_en.mp3';
-        if (!player.src.endsWith(targetSrc)) { player.src = targetSrc; }
-        if (player.paused) {
-            player.play().catch(e => alert(currentLang === 'fr' ? "Le fichier audio est introuvable." : "The audio file is missing."));
-            icon.innerText = "⏸️";
-        } else {
-            player.pause();
-            icon.innerText = "🎧";
-        }
-        player.onended = () => { icon.innerText = "🎧"; };
-    }
-
-    function switchLang(lang) {
-        currentLang = lang;
-        const themeBtn = document.getElementById('theme-toggle');
-        const isLight = document.body.classList.contains('light-mode');
-        themeBtn.innerText = lang === 'fr' ? (isLight ? 'Obscurité' : 'Clarté') : (isLight ? 'Darkness' : 'Light');
-
-        const player = document.getElementById('audio-parabole-player');
-        if (!player.paused) {
-            player.pause();
-            document.getElementById('parabole-icon').innerText = "🎧";
-        }
-
-        renderEnseignements();
-        renderMurmures();
-        renderParabole();
-        renderBibliotheque();
-        renderManuel();
-
-        // Application finale de la langue
-        document.querySelectorAll('.fr').forEach(el => el.style.display = lang === 'fr' ? 'inline' : 'none');
-        document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? 'inline' : 'none');
-    }
-
-    function toggleLang() {
-        switchLang(currentLang === 'fr' ? 'en' : 'fr');
-        document.getElementById('lang-toggle').innerText = currentLang === 'fr' ? 'English' : 'Français';
-    }
-
-    function toggleTheme() {
-        const body = document.body;
-        const btn = document.getElementById('theme-toggle');
-        body.classList.toggle('light-mode');
-        btn.innerText = currentLang === 'fr' ? (body.classList.contains('light-mode') ? 'Obscurité' : 'Clarté') : (body.classList.contains('light-mode') ? 'Darkness' : 'Light');
-    }
-
+    // 1. Gestion de la Page Unique
     function showSection(sectionId) {
         document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-        document.getElementById(sectionId).classList.add('active');
-        document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-        document.getElementById(`nav-${sectionId}`).classList.add('active');
+        const target = document.getElementById(sectionId);
+        if(target) target.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-        const resonance = document.getElementById("sage-resonance");
-        if (resonance) {
-            if (sectionId === 'sage') {
-                resonance.volume = 0.08; 
-                resonance.play().catch(e => console.log("Attente du premier clic"));
-            } else {
-                resonance.pause(); 
-            }
+    // 2. Particules de poussière (L'esprit du temple)
+    function createDustParticles() {
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'dust';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.top = Math.random() * 100 + 'vh';
+            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            document.body.appendChild(particle);
         }
     }
 
-    function getSignatureHTML() {
-        const signatureText = currentLang === 'fr' ? "Le Temple du Silence" : "The Temple of Silence";
-        return `
-            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 40px; opacity: 0.9; font-style: italic;">
-                <span style="color: var(--accent-color); margin-right: 12px;">${signatureText}</span>
-                <img src="sceau-gardien.png" alt="Sceau du Gardien" style="height: 35px; border-radius: 50%; box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);">
-            </div>
-        `;
-    }
-
-    function renderManuel() {
-        const container = document.getElementById('manuel-container');
-        if (!container) return;
-        const data = MANUEL_DATABASE[currentLang];
-        container.innerHTML = `
-            <h2 style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; margin-bottom: 30px;">
-                ${data.title}
-            </h2>
-            <div>${data.body}</div>
-        `;
-    }
-
-    function renderEnseignements() {
-        const piliersContainer = document.getElementById("enseignements-piliers");
-        const grilleContainer = document.getElementById("enseignements-grille");
-        if (piliersContainer) piliersContainer.innerHTML = ""; 
-        if (grilleContainer) grilleContainer.innerHTML = ""; 
-        const currentData = TEACHINGS_DATABASE[currentLang];
-
-        if (currentData.length === 0) {
-            if (grilleContainer) grilleContainer.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${currentLang === 'fr' ? "Bientôt disponible." : "Coming soon."}</p>`;
-            return;
-        }
-
-        currentData.forEach((item, index) => {
-            const idAutomatique = item.id || genererAncre(item.title);
-            const article = document.createElement("details");
-            article.id = idAutomatique;
-            article.className = "teaching-accordion";
-            article.innerHTML = `
-                <summary class="accordion-title">${item.title}</summary>
-                <div class="accordion-content parchment-text">
-                    ${item.body}
-                    ${getSignatureHTML()}
-                </div>
-            `;
-            if (index < 2 && piliersContainer) piliersContainer.appendChild(article);
-            else if (grilleContainer) grilleContainer.appendChild(article);
-        });
-    }
-
-    function renderMurmures() {
-        const container = document.getElementById("murmures-list-container");
-        if (!container) return;
-        container.innerHTML = ""; 
-
-        // Base unifiée bilingue
-        const currentMurmures = MURMURES_DATABASE;
-
-        if (!currentMurmures || currentMurmures.length === 0) {
-            container.innerHTML = `<p style="font-style:italic; opacity:0.7; text-align:center;">${currentLang === 'fr' ? "Bientôt disponible." : "Coming soon."}</p>`;
-            return;
-        }
-
-        currentMurmures.forEach((murmure, index) => {
-            let vraiTitre = decodeHTML(murmure.title);
-            let vraiTexte = decodeHTML(murmure.text);
-            let plainTitle = vraiTitre.replace(/<[^>]+>/g, '');
-
-            let mediaHTML = "";
-            let downloadBtnHTML = "";
-
-            if (murmure.videoFile && murmure.videoFile !== "") {
-                if (murmure.videoFile.includes("youtube.com") || murmure.videoFile.includes("youtu.be")) {
-                    mediaHTML += `<iframe width="100%" height="315" src="${murmure.videoFile}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></iframe>`;
-                } else {
-                    mediaHTML += `<video controls src="${murmure.videoFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></video>`;
-                    let downloadText = currentLang === 'fr' ? "Télécharger" : "Download";
-                    downloadBtnHTML = `<a href="${murmure.videoFile}" download class="zen-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;">📥 ${downloadText}</a>`;
-                }
-            } else {
-                if (murmure.imageFile && murmure.imageFile !== "") {
-                    let altText = currentLang === 'fr' ? `${plainTitle} - Méditation et AYP` : `${plainTitle} - Meditation and AYP`;
-                    mediaHTML += `<img src="${murmure.imageFile}" alt="${altText}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">`;
-                }
-                if (murmure.audioFile && murmure.audioFile !== "") {
-                    if (murmure.audioFile.includes("<iframe")) {
-                        mediaHTML += `<div style="margin-bottom: 15px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">${murmure.audioFile}</div>`;
-                    } else {
-                        mediaHTML += `<audio controls src="${murmure.audioFile}" style="width: 100%; margin-bottom: 15px;"></audio>`;
-                    }
-                }
-            }
-
-            // Couleur Bleue pour Paradoxe/Echo AVEC LA BONNE POLICE
-            let titleColorStyle = "";
-            if (plainTitle.includes("Paradoxe") || plainTitle.includes("Paradox") || plainTitle.includes("Écho") || plainTitle.includes("Echo")) {
-                titleColorStyle = "color: #5DADE2; font-family: 'Cormorant Garamond', serif;"; 
-            }
-
-            let textShareLabel = currentLang === 'fr' ? 'Partager texte' : 'Share text';
-            let mediaShareLabel = currentLang === 'fr' ? 'Partager média' : 'Share media';
-            
-            let shareMediaBtn = "";
-            if (murmure.videoFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerVideoMurmure(${index})">🎥 ${mediaShareLabel}</button>`;
-            else if (murmure.audioFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerAudioMurmure(${index})">🎵 ${mediaShareLabel}</button>`;
-
-            const idAutomatique = murmure.id || genererAncre(plainTitle);
-            const murmureHTML = `
-                <details id="${idAutomatique}" class="teaching-accordion">
-                    <summary class="accordion-title" style="${titleColorStyle}">${index + 1}. ${vraiTitre}</summary>
-                    <div class="accordion-content">
-                        ${mediaHTML}
-                        <div id="texte-murmure-${index}" class="parchment-text">${vraiTexte}</div>
-                        ${getSignatureHTML()} 
-                        <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 25px;">
-                            <button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerMurmure('${idAutomatique}')">✨ ${textShareLabel}</button>
-                            ${shareMediaBtn}
-                            ${downloadBtnHTML}
-                        </div>
-                    </div>
-                </details>
-            `;
-            container.innerHTML += murmureHTML;
-        });
-    }
-
-    function partagerMurmure(idAncre) {
-        const url = window.location.origin + window.location.pathname + "#" + idAncre;
-        navigator.clipboard.writeText(url).then(() => {
-            alert(currentLang === 'fr' ? "Le lien de ce murmure a été copié dans votre presse-papier." : "The link to this whisper has been copied to your clipboard.");
-        });
-    }
-
-    function renderParabole() {
-        document.getElementById("parabole-title").innerText = PARABOLE_DATA[currentLang].title;
-        document.getElementById("parabole-text").innerHTML = PARABOLE_DATA[currentLang].text + getSignatureHTML();
-    }
-
-    function openBiblioTab(tabId, btnElement) {
-        document.querySelectorAll('.biblio-tab-content').forEach(el => el.style.display = 'none');
-        document.querySelectorAll('.biblio-tabs button').forEach(b => b.classList.remove('active'));
-        document.getElementById('tab-' + tabId).style.display = 'block';
-        btnElement.classList.add('active');
-    }
-
-    function toggleLexique(element) {
-        element.classList.toggle('open');
-    }
-
-    function loadCartoChapter(index) {
-        const data = BIBLIOTHEQUE_DATABASE[currentLang].cartographie;
-        const chap = data[index];
-        const contentDiv = document.getElementById('carto-content');
-        document.querySelectorAll('.book-sidebar-item').forEach((el, i) => {
-            if (i === index) el.classList.add('active');
-            else el.classList.remove('active');
-        });
+    // 3. Rendu de Murmures avec suppression de la phrase
+    function renderMurmuresCleaned() {
+        const grid = document.getElementById('murmures-grid');
+        if(!grid || typeof DATABASE === 'undefined') return;
         
-        let formattedBody = chap.body.replace(/<p>([A-ZÉÀÎÔ])/i, '<p><span class="lettrine">$1</span>');
-        contentDiv.innerHTML = `
-            <h2 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; text-align: center; margin-bottom: 40px; border: none;">${chap.title}</h2>
-            ${formattedBody}
-            ${getSignatureHTML()}
-        `;
+        let html = '';
+        DATABASE.murmures.forEach(m => {
+            // On vérifie que le contenu ne contient pas la phrase à supprimer
+            let content = m.content.replace("L'art de l'alchimie intérieure est de transformer le tumulte du monde en un silence vibrant", "");
+            html += `<div class="murmure-card"><p class="parchment-text">${content}</p></div>`;
+        });
+        grid.innerHTML = html;
     }
 
-    function renderBibliotheque() {
-        const data = BIBLIOTHEQUE_DATABASE[currentLang];
-        
-        const histoireContainer = document.getElementById("biblio-histoire");
-        if(data.histoire) {
-            let htmlOrigines = '<div class="timeline-container">';
-            data.histoire.forEach(chapitre => {
-                htmlOrigines += `
-                <div class="origine-block">
-                    <div class="origine-marker">✧</div>
-                    <div class="origine-content parchment-text">
-                        <h3 class="origine-title">${chapitre.title}</h3>
-                        ${chapitre.body}
-                        <div style="text-align: right; font-style: italic; opacity: 0.7; font-size: 0.9rem; margin-top: 25px; color: var(--accent-color);">
-                            <span class="fr">— Inspiré des écrits AYP</span>
-                            <span class="en" style="display:none;">— Inspired by AYP writings</span>
-                        </div>
-                    </div>
-                </div>`;
-            });
-            histoireContainer.innerHTML = htmlOrigines + '</div>';
-        }
-
-        const sidebar = document.getElementById('carto-sidebar');
-        if (sidebar) sidebar.innerHTML = '';
-        if(data.cartographie && sidebar) {
-            data.cartographie.forEach((chap, index) => {
-                sidebar.innerHTML += `<button class="book-sidebar-item" onclick="loadCartoChapter(${index})" style="text-align:left; line-height:1.4;">${chap.title}</button>`;
-            });
-            if(data.cartographie.length > 0) loadCartoChapter(0);
-        }
-
-        const lexiqueContainer = document.getElementById("biblio-lexique");
-        const faqContainer = document.getElementById("biblio-faq");
-        
-        if (lexiqueContainer) lexiqueContainer.innerHTML = "";
-        if(data.lexique && lexiqueContainer) {
-            data.lexique.forEach(mot => {
-                lexiqueContainer.innerHTML += `<div class="lexique-card" onclick="toggleLexique(this)"><h4>${mot.term}</h4><div class="lexique-def">${mot.definition}</div></div>`;
-            });
-        }
-        
-        if (faqContainer) faqContainer.innerHTML = "";
-        if(data.faq && faqContainer) {
-            let faqHTML = `<h3 style="color: var(--accent-color); text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; margin: 40px 0 20px;">FAQ</h3>`;
-            data.faq.forEach((item, index) => {
-                faqHTML += `
-                <details class="teaching-accordion">
-                    <summary class="accordion-title">${item.question}</summary>
-                    <div class="accordion-content parchment-text">${item.answer}</div>
-                </details>`;
-            });
-            faqContainer.innerHTML = faqHTML;
-        }
-    }
-
+    // Initialisation au chargement
     window.onload = () => {
-        setTimeout(createDustParticles, 500); 
-        renderEnseignements();
-        renderMurmures();
-        renderParabole();
-        renderBibliotheque();
-        renderManuel();
-
-        // Application de la langue au chargement initial
-        document.querySelectorAll('.fr').forEach(el => el.style.display = 'inline');
-        document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
-
-        setTimeout(() => {
-            if (window.location.hash) {
-                const targetId = window.location.hash.substring(1); 
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    const parentSection = targetElement.closest('.section');
-                    if (parentSection) showSection(parentSection.id);
-                    if (targetElement.tagName === 'DETAILS') targetElement.setAttribute('open', '');
-                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }
-        }, 600); 
+        createDustParticles();
+        if(typeof renderEnseignements === 'function') renderEnseignements();
+        if(typeof renderBibliotheque === 'function') renderBibliotheque();
+        if(typeof renderManuel === 'function') renderManuel();
+        renderMurmuresCleaned(); // Version sans la phrase
+        
+        // Gestion auto des ancres
+        if (window.location.hash) {
+            const id = window.location.hash.substring(1);
+            showSection(id.split('-')[0] || id);
+        }
     };
-
     </script>
 </body>
 </html>

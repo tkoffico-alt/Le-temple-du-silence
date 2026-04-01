@@ -425,12 +425,12 @@
         });
     }
 
-    function renderMurmures() {
+   function renderMurmures() {
         const container = document.getElementById("murmures-list-container");
         if (!container) return;
         container.innerHTML = ""; 
 
-        // ATTENTION: Base unifiée pour les murmures
+        // On utilise la base de données unifiée
         const currentMurmures = MURMURES_DATABASE;
 
         if (!currentMurmures || currentMurmures.length === 0) {
@@ -444,23 +444,68 @@
             let plainTitle = vraiTitre.replace(/<[^>]+>/g, '');
 
             let mediaHTML = "";
-            if (murmure.imageFile) {
-                mediaHTML = `<img src="${murmure.imageFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px;">`;
+            let downloadBtnHTML = "";
+
+            // Gestion de l'image, vidéo ou audio
+            if (murmure.videoFile && murmure.videoFile !== "") {
+                if (murmure.videoFile.includes("youtube.com") || murmure.videoFile.includes("youtu.be")) {
+                    mediaHTML += `<iframe width="100%" height="315" src="${murmure.videoFile}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></iframe>`;
+                } else {
+                    mediaHTML += `<video controls src="${murmure.videoFile}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></video>`;
+                    let downloadText = currentLang === 'fr' ? "Télécharger" : "Download";
+                    downloadBtnHTML = `<a href="${murmure.videoFile}" download class="zen-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;">📥 ${downloadText}</a>`;
+                }
+            } else {
+                if (murmure.imageFile && murmure.imageFile !== "") {
+                    let altText = currentLang === 'fr' ? `${plainTitle} - Méditation et AYP` : `${plainTitle} - Meditation and AYP`;
+                    mediaHTML += `<img src="${murmure.imageFile}" alt="${altText}" style="width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">`;
+                }
+                if (murmure.audioFile && murmure.audioFile !== "") {
+                    if (murmure.audioFile.includes("<iframe")) {
+                        mediaHTML += `<div style="margin-bottom: 15px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">${murmure.audioFile}</div>`;
+                    } else {
+                        mediaHTML += `<audio controls src="${murmure.audioFile}" style="width: 100%; margin-bottom: 15px;"></audio>`;
+                    }
+                }
             }
 
+            // 🌟 RESTAURATION DU BLEU POUR ÉCHOS ET PARADOXES
+            let titleColorStyle = "";
+            if (plainTitle.includes("Paradoxe") || plainTitle.includes("Paradox") || plainTitle.includes("Écho") || plainTitle.includes("Echo")) {
+                titleColorStyle = "color: #5DADE2;"; 
+            }
+
+            // 🌟 RESTAURATION DES BOUTONS DE PARTAGE
+            let textShareLabel = currentLang === 'fr' ? 'Partager texte' : 'Share text';
+            let mediaShareLabel = currentLang === 'fr' ? 'Partager média' : 'Share media';
+            
+            let shareMediaBtn = "";
+            if (murmure.videoFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerVideoMurmure(${index})">🎥 ${mediaShareLabel}</button>`;
+            else if (murmure.audioFile) shareMediaBtn = `<button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerAudioMurmure(${index})">🎵 ${mediaShareLabel}</button>`;
+
+            // Génération de l'accordéon HTML
             const idAutomatique = murmure.id || genererAncre(plainTitle);
             const murmureHTML = `
                 <details id="${idAutomatique}" class="teaching-accordion">
-                    <summary class="accordion-title">${index + 1}. ${vraiTitre}</summary>
+                    <summary class="accordion-title" style="${titleColorStyle}">${index + 1}. ${vraiTitre}</summary>
                     <div class="accordion-content">
                         ${mediaHTML}
-                        <div class="parchment-text">${vraiTexte}</div>
+                        <div id="texte-murmure-${index}" class="parchment-text">${vraiTexte}</div>
                         ${getSignatureHTML()} 
+                        <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 25px;">
+                            <button class="zen-btn sharing-btn" style="font-size: 0.8rem; margin: 0; padding: 5px 10px;" onclick="partagerMurmure(${index})">✨ ${textShareLabel}</button>
+                            ${shareMediaBtn}
+                            ${downloadBtnHTML}
+                        </div>
                     </div>
                 </details>
             `;
             container.innerHTML += murmureHTML;
         });
+
+        // On applique la langue à la fin
+        document.querySelectorAll('.fr').forEach(el => el.style.display = currentLang === 'fr' ? 'inline' : 'none');
+        document.querySelectorAll('.en').forEach(el => el.style.display = currentLang === 'en' ? 'inline' : 'none');
     }
 
     function renderParabole() {

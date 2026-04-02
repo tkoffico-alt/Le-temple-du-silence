@@ -66,7 +66,7 @@
             font-size: 3rem;
             float: left;
             line-height: 1;
-            margin-right: 12px;
+            margin-right: 2px;
             color: var(--accent-color);
         }
     </style>
@@ -867,7 +867,7 @@
         }
     }
 
-    window.onload = () => {
+  window.onload = () => {
         setTimeout(createDustParticles, 500); 
         renderEnseignements();
         renderMurmures();
@@ -892,14 +892,14 @@
             }
         }, 600); 
     };
-<script>
+    </script> <script>
     // Le Gardien des Titres : S'assure que seuls Paradoxes et Échos restent bleus dans les murmures
     setInterval(() => {
-        document.querySelectorAll('.content-title, #modal-body h2, .murmure-card h3').forEach(titre => {
+        document.querySelectorAll('.content-title, #modal-body h2, .murmure-card h3, .accordion-title').forEach(titre => {
             let texte = titre.textContent.toLowerCase();
             
-            // Liste des mots-clés des murmures "classiques" (ceux qui ne sont pas des paradoxes ou échos)
-            const murmuresClassiques = ["le maître", "boussole", "roseau", "attire vraiment", "touché sans", "porte encore", "bambou", "attente de l'eau", "foyer et", "porte étroite", "poids de la", "tempête frappe", "question vivante"];
+            // Liste des mots-clés des murmures "classiques" 
+            const murmuresClassiques = ["le maître", "boussole", "roseau", "attire vraiment", "touché sans", "porte encore", "bambou", "attente de l'eau", "foyer et", "porte étroite", "poids de la", "tempête frappe", "question vivante", "silence de l'étoile"];
             
             // Si le titre ouvert fait partie des murmures classiques, il redevient Doré
             if (murmuresClassiques.some(mot => texte.includes(mot))) {
@@ -909,9 +909,8 @@
                 titre.style.letterSpacing = "normal";
                 titre.style.textShadow = "none";
             }
-            // S'il s'agit d'un Paradoxe ou d'un Écho, le bloc CSS précédent le maintient déjà en Bleu et Cinzel.
         });
-    }, 500); // Le gardien vérifie doucement chaque demi-seconde
+    }, 500);
     </script>
    
 </body>

@@ -1233,82 +1233,90 @@ const MURMURES_DATABASE = [
         </p>
         `
     },
-    {
+   {
         title: "<span class='fr'>Paradoxe : L'Obstacle de la Quête</span><span class='en' style='display:none;'>Paradox: The Obstacle of the Quest</span>",
-        audioFile: "", imageFile: "obstacle-quete.png", videoFile: "",
+        audioFile: "", 
+        imageFile: "obstacle-quete.png", 
+        videoFile: "",
         text: `
         <div class="fr">
             <p>Cher voyageur, tu poses là une question qui traverse les âges comme un fleuve traverse la terre — avec une force à la fois évidente et mystérieuse. Comment les humains cherchent-ils Dieu d'habitude ?</p>
             
             <p><strong>Ils le cherchent à l'extérieur :</strong><br>
-            <span style="color: var(--accent-color);">✧</span> Dans les temples de pierre, les livres sacrés, les rituels complexes.<br>
-            <span style="color: var(--accent-color);">✧</span> Dans les montagnes lointaines, les gourous charismatiques, les expériences extrêmes.<br>
-            <span style="color: var(--accent-color);">✧</span> Dans la souffrance, la privation, ou au contraire dans l'extase sensorielle.<br>
-            <span style="color: var(--accent-color);">✧</span> Dans les dogmes, les certitudes, les "il faut" et les "tu dois".</p>
+            Dans les temples de pierre, les livres sacrés, les rituels complexes.<br>
+            Dans les montagnes lointaines, les gourous charismatiques, les expériences extrêmes.<br>
+            Dans la souffrance, la privation, ou au contraire dans l'extase sensorielle.<br>
+            Dans les dogmes, les certitudes, les "il faut" et les "tu dois".</p>
             
             <p><strong>Ils le cherchent aussi dans le mental :</strong><br>
-            <span style="color: var(--accent-color);">✧</span> En intellectualisant, en disséquant les textes comme des anatomistes de l'âme.<br>
-            <span style="color: var(--accent-color);">✧</span> En accumulant des connaissances spirituelles comme on collectionne des objets.<br>
-            <span style="color: var(--accent-color);">✧</span> En se perdant dans des débats sans fin sur "qui a raison".</p>
+            En intellectualisant, en disséquant les textes comme des anatomistes de l'âme.<br>
+            En accumulant des connaissances spirituelles comme on collectionne des objets.<br>
+            En se perdant dans des débats sans fin sur "qui a raison".</p>
             
             <p><strong>Et parfois, ils le cherchent dans l'émotion :</strong><br>
-            <span style="color: var(--accent-color);">✧</span> Dans les vagues de dévotion qui submergent, les larmes, les chants enflammés.<br>
-            <span style="color: var(--accent-color);">✧</span> Dans l'attente d'un signe, d'une révélation, d'une preuve tangible.</p>
+            Dans les vagues de dévotion qui submergent, les larmes, les chants enflammés.<br>
+            Dans l'attente d'un signe, d'une révélation, d'une preuve tangible.</p>
             
             <p>Mais voici la vérité mécanique, simple et nue : <em>Dieu n'est pas un objet à trouver, ni un lieu à atteindre, ni une émotion à provoquer.</em> Dieu — ou ce Silence sans nom que tu pressens — est déjà là, comme l'océan est déjà sous la vague, comme le ciel est déjà derrière les nuages.</p>
             
-            <p><strong>Comment le chercher en réalité ?</strong></p>
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 25px 0;">
+            <p style="text-align: center; font-family: 'Cinzel', serif; color: #5b8cba; letter-spacing: 2px;">COMMENT LE CHERCHER EN RÉALITÉ ?</p>
             
-            <p><span style="color: var(--accent-color);">✧</span> <strong>Cesse de chercher :</strong> La quête elle-même est l'obstacle. Comme le dit un vieux proverbe zen : <em>"Quand je cherche, je ne trouve pas. Quand je ne cherche plus, je suis trouvé."</em> Le système nerveux ne peut pas se détendre dans la recherche. Il se tend, il s'agite.</p>
+            <p><span style="color: var(--accent-color);">✧</span> <strong>Cesse de chercher :</strong> La quête elle-même est l'obstacle. Le système nerveux ne peut pas se détendre dans la recherche. Il se tend, il s'agite.</p>
             
-            <p><span style="color: var(--accent-color);">✧</span> <strong>Nettoie le tuyau :</strong> Imagine ton système nerveux comme un vieux tuyau rouillé. La Respiration Spinale (cette attention qui monte et descend le long de la colonne, sans forcer, comme un fil de soie) est la brosse qui dissout les dépôts. Pas besoin de croire, pas besoin de visualiser. Juste sentir, respirer, laisser faire.</p>
+            <p><span style="color: var(--accent-color);">✧</span> <strong>Nettoie le tuyau :</strong> La Respiration Spinale (cette attention qui monte et descend le long de la colonne, sans forcer, comme un fil de soie) est la brosse qui dissout les dépôts.</p>
             
-            <p><span style="color: var(--accent-color);">✧</span> <strong>Assieds-toi dans le Silence :</strong> La Méditation Profonde avec le mantra AYAM (ou I AM) n'est pas une technique pour "atteindre" Dieu. C'est une pratique pour <em>désapprendre</em> tout ce qui n'est pas Lui. Le mantra est comme une ancre qui coule dans les profondeurs — pas pour y trouver quelque chose, mais pour laisser remonter ce qui est déjà là.</p>
+            <p><span style="color: var(--accent-color);">✧</span> <strong>Assieds-toi dans le Silence :</strong> La Méditation Profonde avec le mantra AYAM n'est pas une technique pour "atteindre" Dieu. C'est une pratique pour <em>désapprendre</em> tout ce qui n'est pas Lui.</p>
             
-            <p><span style="color: var(--accent-color);">✧</span> <strong>Laisse l'énergie monter :</strong> Quand la Shakti (l'énergie vitale) s'éveille, elle peut créer des secousses, des émotions, des peurs. Ne fuis pas. Ne te cramponne pas. Accueille, comme on accueille une vague sans vouloir la retenir. La transmutation se fait toute seule, comme le sel se dissout dans l'eau.</p>
+            <p><span style="color: var(--accent-color);">✧</span> <strong>Laisse l'énergie monter :</strong> Quand la Shakti s'éveille, elle peut créer des secousses. Ne fuis pas. Ne te cramponne pas. Accueille, comme on accueille une vague sans vouloir la retenir.</p>
             
-            <p><span style="color: var(--accent-color);">✧</span> <strong>Vois le monde comme un miroir :</strong> Le bureau, la cuisine, les embouteillages — tout est sanctuaire. Le Karma Yoga n'est pas une pratique séparée. C'est reconnaître que chaque action, même la plus banale, est une offrande si elle est faite sans attachement.</p>
+            <p><span style="color: var(--accent-color);">✧</span> <strong>Vois le monde comme un miroir :</strong> Reconnaître que chaque action, même la plus banale, est une offrande si elle est faite sans attachement.</p>
             
-            <p><span style="color: var(--accent-color);">✧</span> <strong>Ne force rien :</strong> La loi de l'effort inverse est absolue. Plus tu pousses, plus tu bloques. Comme une porte qui ne s'ouvre que si tu la tires vers toi, la spiritualité se révèle quand tu cesses de tirer.</p>
+            <p><span style="color: var(--accent-color);">✧</span> <strong>Ne force rien :</strong> La loi de l'effort inverse est absolue. Comme une porte qui ne s'ouvre que si tu la tires vers toi, la spiritualité se révèle quand tu cesses de tirer.</p>
             
-            <p style="text-align: center; font-style: italic; margin-top: 25px;">Imagine une graine enterrée dans le sol. Elle ne "cherche" pas la lumière. Elle ne se dit pas : "Je dois devenir un arbre." Elle se contente de devenir ce qu'elle est. La chaleur, l'eau, la terre font le reste. Toi aussi, deviens ce que tu es — et laisse le reste se faire.</p>
+            <p style="text-align: center; font-style: italic; margin-top: 30px; border-top: 1px solid rgba(212, 175, 55, 0.2); padding-top: 20px;">
+                Imagine une graine enterrée dans le sol. Elle ne "cherche" pas la lumière. Elle se contente de devenir ce qu'elle est. La chaleur, l'eau, la terre font le reste. Toi aussi, deviens ce que tu es — et laisse le reste se faire.
+            </p>
         </div>
         
         <div class="en" style="display:none;">
             <p>Dear traveler, you ask a question that flows through the ages like a river through the earth—with a force both obvious and mysterious. How do humans usually seek God?</p>
             
             <p><strong>They seek Him on the outside:</strong><br>
-            <span style="color: var(--accent-color);">✧</span> In stone temples, sacred books, complex rituals.<br>
-            <span style="color: var(--accent-color);">✧</span> In distant mountains, charismatic gurus, extreme experiences.<br>
-            <span style="color: var(--accent-color);">✧</span> In suffering, deprivation, or conversely, in sensory ecstasy.<br>
-            <span style="color: var(--accent-color);">✧</span> In dogmas, certainties, the "musts" and the "shoulds".</p>
+            In stone temples, sacred books, complex rituals.<br>
+            In distant mountains, charismatic gurus, extreme experiences.<br>
+            In suffering, deprivation, or conversely, in sensory ecstasy.<br>
+            In dogmas, certainties, the "musts" and the "shoulds".</p>
             
             <p><strong>They also seek Him in the mind:</strong><br>
-            <span style="color: var(--accent-color);">✧</span> By intellectualizing, dissecting texts like anatomists of the soul.<br>
-            <span style="color: var(--accent-color);">✧</span> By accumulating spiritual knowledge the way one collects objects.<br>
-            <span style="color: var(--accent-color);">✧</span> By getting lost in endless debates over "who is right".</p>
+            By intellectualizing, dissecting texts like anatomists of the soul.<br>
+            By accumulating spiritual knowledge the way one collects objects.<br>
+            By getting lost in endless debates over "who is right".</p>
             
             <p><strong>And sometimes, they seek Him in emotion:</strong><br>
-            <span style="color: var(--accent-color);">✧</span> In overwhelming waves of devotion, tears, impassioned chants.<br>
-            <span style="color: var(--accent-color);">✧</span> In the expectation of a sign, a revelation, a tangible proof.</p>
+            In overwhelming waves of devotion, tears, impassioned chants.<br>
+            In the expectation of a sign, a revelation, a tangible proof.</p>
             
             <p>But here is the mechanical truth, simple and bare: <em>God is not an object to be found, a place to reach, or an emotion to provoke.</em> God—or that nameless Silence you sense—is already here, just as the ocean is already beneath the wave, just as the sky is already behind the clouds.</p>
             
-            <p><strong>How to truly seek Him?</strong></p>
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 25px 0;">
+            <p style="text-align: center; font-family: 'Cinzel', serif; color: #5b8cba; letter-spacing: 2px;">HOW TO TRULY SEEK HIM?</p>
             
-            <p><span style="color: var(--accent-color);">✧</span> <strong>Stop seeking:</strong> The quest itself is the obstacle. As an old Zen proverb says: <em>"When I seek, I do not find. When I stop seeking, I am found."</em> The nervous system cannot relax in the search. It tenses, it becomes agitated.</p>
+            <p><span style="color: var(--accent-color);">✧</span> <strong>Stop seeking:</strong> The quest itself is the obstacle. The nervous system cannot relax in the search. It tenses, it becomes agitated.</p>
             
-            <p><span style="color: var(--accent-color);">✧</span> <strong>Clean the pipe:</strong> Imagine your nervous system as an old rusty pipe. Spinal Breathing (that attention moving up and down the spine, without forcing, like a silk thread) is the brush that dissolves the deposits. No need to believe, no need to visualize. Just feel, breathe, let it happen.</p>
+            <p><span style="color: var(--accent-color);">✧</span> <strong>Clean the pipe:</strong> Spinal Breathing (that attention moving up and down the spine, without forcing, like a silk thread) is the brush that dissolves the deposits.</p>
             
-            <p><span style="color: var(--accent-color);">✧</span> <strong>Sit in Silence:</strong> Deep Meditation with the mantra AYAM (or I AM) is not a technique to "reach" God. It is a practice to <em>unlearn</em> everything that is not Him. The mantra is like an anchor sinking into the depths—not to find something there, but to allow what is already there to rise.</p>
+            <p><span style="color: var(--accent-color);">✧</span> <strong>Sit in Silence:</strong> Deep Meditation with the mantra AYAM is not a technique to "reach" God. It is a practice to <em>unlearn</em> everything that is not Him.</p>
             
-            <p><span style="color: var(--accent-color);">✧</span> <strong>Let the energy rise:</strong> When Shakti (vital energy) awakens, it can create tremors, emotions, fears. Do not flee. Do not cling. Welcome it, as one welcomes a wave without trying to hold it back. Transmutation happens on its own, just as salt dissolves in water.</p>
+            <p><span style="color: var(--accent-color);">✧</span> <strong>Let the energy rise:</strong> When Shakti awakens, it can create tremors. Do not flee. Do not cling. Welcome it, as one welcomes a wave without trying to hold it back.</p>
             
-            <p><span style="color: var(--accent-color);">✧</span> <strong>See the world as a mirror:</strong> The office, the kitchen, traffic jams—everything is a sanctuary. Karma Yoga is not a separate practice. It is recognizing that every action, even the most mundane, is an offering if done without attachment.</p>
+            <p><span style="color: var(--accent-color);">✧</span> <strong>See the world as a mirror:</strong> Recognizing that every action, even the most mundane, is an offering if done without attachment.</p>
             
-            <p><span style="color: var(--accent-color);">✧</span> <strong>Force nothing:</strong> The law of reversed effort is absolute. The more you push, the more you block. Like a door that only opens if you pull it toward you, spirituality reveals itself when you stop pulling.</p>
+            <p><span style="color: var(--accent-color);">✧</span> <strong>Force nothing:</strong> The law of reversed effort is absolute. Like a door that only opens if you pull it toward you, spirituality reveals itself when you stop pulling.</p>
             
-            <p style="text-align: center; font-style: italic; margin-top: 25px;">Imagine a seed buried in the soil. It does not "seek" the light. It does not say to itself: "I must become a tree." It simply becomes what it is. The heat, the water, the earth do the rest. You too, become what you are—and let the rest unfold.</p>
+            <p style="text-align: center; font-style: italic; margin-top: 30px; border-top: 1px solid rgba(212, 175, 55, 0.2); padding-top: 20px;">
+                Imagine a seed buried in the soil. It does not "seek" the light. It simply becomes what it is. The heat, the water, the earth do the rest. You too, become what you are—and let the rest unfold.
+            </p>
         </div>
         `
     }

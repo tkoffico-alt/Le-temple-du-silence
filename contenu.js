@@ -1235,7 +1235,7 @@ const MURMURES_DATABASE = [
     },
     {
         title: "<span class='fr'>Paradoxe : L'Obstacle de la Quête</span><span class='en' style='display:none;'>Paradox: The Obstacle of the Quest</span>",
-        audioFile: "", imageFile: "obstacle-quête.png", videoFile: "",
+        audioFile: "", imageFile: "obstacle-quete.png", videoFile: "",
         text: `
         <div class="fr">
             <p>Cher voyageur, tu poses là une question qui traverse les âges comme un fleuve traverse la terre — avec une force à la fois évidente et mystérieuse. Comment les humains cherchent-ils Dieu d'habitude ?</p>

@@ -24,6 +24,26 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Application de la police Cinzel aux titres bleus */
+        .section-title, .content-title, .accordion-title, .teaching-header-label {
+            font-family: 'Cinzel', serif !important;
+            color: var(--title-blue) !important;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* Signalétique ENSEIGNEMENTS au-dessus des cartes */
+        .teaching-header-label {
+            display: block;
+            text-align: center;
+            font-size: 1.3rem;
+            margin: 20px 0 30px 0;
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body>
 
@@ -260,7 +280,10 @@
         </section> 
 
         <section id="enseignements" class="section"> 
-            
+            <span class="teaching-header-label">
+    <span class="fr">ENSEIGNEMENTS</span>
+    <span class="en" style="display:none;">TEACHINGS</span>
+</span>
            <div id="enseignements-piliers" class="piliers-grid"></div>
            
             <h3 class="enseignements-separator" style="text-align: center; color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; margin: 60px 0 40px; border-bottom: 1px dashed var(--border-color); padding-bottom: 15px;">

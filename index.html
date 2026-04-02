@@ -26,22 +26,48 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 
-    <style>
-        /* Application de la police Cinzel aux titres bleus */
-        .section-title, .content-title, .accordion-title, .teaching-header-label {
+   <style>
+        /* --- 1. POLICE CINZEL (Celle de l'image) POUR LES TEXTES OUVERTS --- */
+        /* S'applique UNIQUEMENT quand le visiteur ouvre un texte (La Parabole, Le Manuel, etc.) */
+        .content-title, 
+        .origine-title, 
+        #modal-body h2 {
             font-family: 'Cinzel', serif !important;
-            color: var(--title-blue) !important;
+            color: #5b8cba !important; /* Le bleu sacré */
             text-transform: uppercase;
             letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(91, 140, 186, 0.2);
         }
 
-        /* Signalétique ENSEIGNEMENTS au-dessus des cartes */
+        /* --- 2. LES CARTES FERMÉES RESTENT INTACTES --- */
+        /* On s'assure que les titres sur la page d'accueil gardent leur or et leur police d'origine */
+        .section-title, .card-title {
+            color: var(--accent-color) !important;
+            font-family: 'Cormorant Garamond', serif !important;
+            text-transform: none;
+            letter-spacing: normal;
+            text-shadow: none;
+        }
+
+        /* --- 3. LE SOUS-TITRE ENSEIGNEMENTS RESTE BLEU --- */
         .teaching-header-label {
+            font-family: 'Cinzel', serif !important;
+            color: #5b8cba !important;
             display: block;
             text-align: center;
             font-size: 1.3rem;
             margin: 20px 0 30px 0;
             font-weight: 700;
+        }
+
+        /* La Lettrine Sacrée pour le premier caractère des textes */
+        .parchment-text::first-letter {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            float: left;
+            line-height: 1;
+            margin-right: 12px;
+            color: var(--accent-color);
         }
     </style>
 </head>
@@ -866,7 +892,27 @@
             }
         }, 600); 
     };
-
+<script>
+    // Le Gardien des Titres : S'assure que seuls Paradoxes et Échos restent bleus dans les murmures
+    setInterval(() => {
+        document.querySelectorAll('.content-title, #modal-body h2, .murmure-card h3').forEach(titre => {
+            let texte = titre.textContent.toLowerCase();
+            
+            // Liste des mots-clés des murmures "classiques" (ceux qui ne sont pas des paradoxes ou échos)
+            const murmuresClassiques = ["le maître", "boussole", "roseau", "attire vraiment", "touché sans", "porte encore", "bambou", "attente de l'eau", "foyer et", "porte étroite", "poids de la", "tempête frappe", "question vivante"];
+            
+            // Si le titre ouvert fait partie des murmures classiques, il redevient Doré
+            if (murmuresClassiques.some(mot => texte.includes(mot))) {
+                titre.style.color = 'var(--accent-color)'; // Or d'origine
+                titre.style.fontFamily = "'Cormorant Garamond', serif";
+                titre.style.textTransform = "none";
+                titre.style.letterSpacing = "normal";
+                titre.style.textShadow = "none";
+            }
+            // S'il s'agit d'un Paradoxe ou d'un Écho, le bloc CSS précédent le maintient déjà en Bleu et Cinzel.
+        });
+    }, 500); // Le gardien vérifie doucement chaque demi-seconde
     </script>
+   
 </body>
 </html>

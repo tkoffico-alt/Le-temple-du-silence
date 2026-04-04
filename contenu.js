@@ -2,7 +2,7 @@ const MANUEL_DATABASE = {
     fr: {
         title: "Le Manuel Opératoire : L'Échelle des Pratiques",
         body: `
-            <img src="echelle-pratiques.png" alt="Schéma illustrant l'échelle des pratiques spirituelles AYP, incluant la méditation profonde et la respiration spinale" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="echelle-pratiques.jpg" alt="Schéma illustrant l'échelle des pratiques spirituelles AYP, incluant la méditation profonde et la respiration spinale" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
             
             <div style="text-align: center; margin-bottom: 30px;">
                 <button onclick="window.print()" style="background-color: var(--accent-color); color: #000; padding: 10px 20px; border: none; border-radius: 5px; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; cursor: pointer; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
@@ -73,7 +73,7 @@ const MANUEL_DATABASE = {
     en: {
         title: "The Operating Manual: The Ladder of Practices",
         body: `
-           <img src="echelle-pratiques.png" alt="Diagram illustrating the ladder of AYP spiritual practices, including deep meditation and spinal breathing" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+           <img src="echelle-pratiques.jpg" alt="Diagram illustrating the ladder of AYP spiritual practices, including deep meditation and spinal breathing" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
             
             <div style="text-align: center; margin-bottom: 30px;">
                 <button onclick="window.print()" style="background-color: var(--accent-color); color: #000; padding: 10px 20px; border: none; border-radius: 5px; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; cursor: pointer; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
@@ -148,7 +148,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "L’éveil du Silence Intérieur : La Fondation Inébranlable",
             body: `
-            <img src="fondation-silence.png" alt="L'éveil du Silence Intérieur : La Fondation Inébranlable" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="fondation-silence.jpg" alt="L'éveil du Silence Intérieur : La Fondation Inébranlable" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Le Silence intérieur n’est pas quelque chose que l’on crée. Il n’est ni le résultat d’un effort mental, ni un état de vide que l'on imposerait par la force. Au début du chemin, nous cherchons souvent à discipliner l'esprit, à le forcer à se taire, mais cette stratégie produit l'effet inverse.</p>
                 <p>Ce silence n'est ni une concentration tendue, ni un retrait du monde. C'est une présence dynamique, un roc de conscience pure qui réside naturellement en nous. En chacun existe une zone intacte, stable, qui n'a jamais été perturbée par les événements ou les blessures. Elle n'est pas produite par la pratique : la pratique ne fait que la révéler.</p>
                 <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">La Mécanique de l'Éveil : Régularité avant Intensité</h3>
@@ -169,7 +169,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "La Mécanique de l’Extase : Une Compréhension Progressive de l’Éveil",
             body: `
-            <img src="mecanique-extase.png" alt="La Mécanique de l'Extase : Compréhension de l'Éveil" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="mecanique-extase.jpg" alt="La Mécanique de l'Extase : Compréhension de l'Éveil" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Dans le cheminement spirituel, l’extase est souvent mal comprise. Elle est parfois recherchée comme une expérience mystique exceptionnelle, redoutée comme une perte de contrôle, ou idéalisée comme l'apanage de quelques élus. En réalité, l’extase n’est rien de tout cela. Elle est le résultat naturel d’un mécanisme précis, inscrit dans le fonctionnement neurobiologique humain, qui s'active lorsque certaines conditions sont réunies.</p>
                 <p>Comprendre cette mécanique ne sert pas à provoquer l’extase — car elle ne se laisse jamais forcer — mais à laisser le processus de purification se déployer sans confusion ni excès, jusqu'à son intégration harmonieuse dans le quotidien.</p>
                 <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">1. Ce que l'extase n'est pas (et ce qu'elle est)</h3>
@@ -219,7 +219,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "La Respiration Spinale : Le Pont entre la Matière et l'Énergie",
             body: `
-            <img src="pont-respiration.png" alt="La Respiration Spinale : Le pont entre matière et énergie" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="pont-respiration.jpg" alt="La Respiration Spinale : Le pont entre matière et énergie" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <h3 style="color: var(--accent-color); margin-top: 10px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">La Mécanique de l'Éveil</h3>
                 <p>L'évolution spirituelle n'est pas un concept philosophique abstrait ni une récompense divine. C'est un processus mécanique, biologique et mesurable. Au cœur de ce processus se trouve votre système nerveux central. Imaginez-le comme un vaste réseau électrique. Au fil des années, les traumatismes, le stress et les habitudes ont créé des "résistances" sur ces câbles, limitant la quantité d'énergie vitale (Prana) qui peut y circuler librement.</p>
                 <p>La Respiration Spinale est l'outil le plus direct pour nettoyer ce réseau. Ce n'est pas un simple exercice de relaxation pulmonaire, mais une technique d'ingénierie intérieure conçue pour purifier le canal principal de votre corps : <em>la Sushumna</em>, un fil subtil qui traverse le centre de votre colonne vertébrale, du périnée jusqu'au point entre les sourcils.</p>
@@ -242,7 +242,7 @@ const TEACHINGS_DATABASE = {
       {
             title: "L'Art de l'Auto-Régulation (Self-Pacing)",
             body: `
-            <img src="auto-regulation.png" alt="L'Art de l'Auto-Régulation et du Self-Pacing" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="auto-regulation.jpg" alt="L'Art de l'Auto-Régulation et du Self-Pacing" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p style="font-weight: bold; font-style: italic; text-align: center; margin-bottom: 25px; color: var(--accent-color);">"Le pratiquant est le seul maître de son rythme."</p>
                 <p>L'auto-régulation, ou <em>self-pacing</em>, n'est pas simplement un conseil ; c'est la règle d'or universelle qui soutient l'intégralité de la pratique yoganienne complète. Dans notre quête de silence intérieur, nous n'essayons pas de forcer la porte, mais de déblayer patiemment le chemin pour que la lumière puisse passer.</p>
                 <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">Le Principe : Écouter la Conductivité Extatique</h3>
@@ -259,7 +259,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Le Fil et la Foudre : Reconnaître la Surcharge Énergétique",
             body: `
-            <img src="surcharge-energie.png" alt="Le Fil et la Foudre : Différencier l'Éveil de la Surcharge" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="surcharge-energie.jpg" alt="Le Fil et la Foudre : Différencier l'Éveil de la Surcharge" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Sur le chemin du silence, le système nerveux traverse une profonde purification. Cette transmutation biologique génère un courant de vie nouveau. Mais la frontière entre l'éveil sain et la surcharge énergétique est fine. Elle ne se mesure pas à l'aune de vos visions mystiques, mais à la qualité de votre ancrage dans le monde matériel.</p>
                 <p>La différence entre un remède et un poison n'est souvent qu'une question de dosage. Apprendre à lire les signaux de votre propre biologie est la plus grande des sagesses.</p>
 
@@ -287,7 +287,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "La Sushumna : L'Axe Vivant de la Transformation",
             body: `
-                <img src="sushumna.png" alt="L'Axe de la Sushumna" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="sushumna.jpg" alt="L'Axe de la Sushumna" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Dans la science de l'éveil, la <em>sushumna</em> (le nerf spinal) n'est pas un concept mystique abstrait. Elle est l'autoroute centrale, le "maître contrôleur" de votre système nerveux. C'est le canal vivant par lequel s'opère toute transformation profonde.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. L'Autoroute du Système Nerveux</h3>
@@ -315,7 +315,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Démystifier la Kundalini : La Conductivité Extatique",
             body: `
-                <img src="kundalini-energie.png" alt="La Conductivité Extatique" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="kundalini-energie.jpg" alt="La Conductivité Extatique" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Pendant des siècles, la « Kundalini » a été entourée de mystère, souvent décrite comme un serpent lové à la base de la colonne vertébrale, attendant d'être éveillé avec un mélange de fascination et de peur. Notre approche dépouille cette énergie de son mysticisme intimidant pour la redéfinir en termes mécaniques simples : <strong>la conductivité extatique</strong>.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. La Racine de l'Énergie</h3>
@@ -346,7 +346,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Éveiller l'Énergie ou Laisser Faire ? Le Chemin du Milieu",
             body: `
-                <img src="chemin-milieu.png" alt="Le Chemin du Milieu" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="chemin-milieu.jpg" alt="Le Chemin du Milieu" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Dans la quête spirituelle, une question revient sans cesse : devons-nous chercher activement à éveiller notre énergie intérieure (la Kundalini), ou devons-nous simplement lâcher prise et laisser la nature faire les choses à son propre rythme ?</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">L'Illusion de la Passivité</h3>
@@ -370,7 +370,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Le Prana et le Souffle : L'Art du Forgeron",
             body: `
-                <img src="prana-souffle.png" alt="Le Feu du Prana" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="prana-souffle.jpg" alt="Le Feu du Prana" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Nous avons vu que la purification de notre système nerveux génère une friction, souvent ressentie comme une chaleur interne. Pour diriger cette énergie (le <em>prana</em>) sans se brûler, nous possédons un outil d'une précision absolue : le souffle.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. L'Aspiration : La loi du vide</h3>
@@ -389,7 +389,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "L'Émergence du Soi : Du Témoin à l'Unité",
             body: `
-                <img src="emergence-soi.png" alt="L'Émergence du Soi" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="emergence-soi.jpg" alt="L'Émergence du Soi" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>L'évolution spirituelle n'est pas un saut aveugle dans le vide, ni une illumination magique et soudaine. C'est un processus conscient et mécanique de notre système nerveux qui traverse plusieurs stades naturels. Ce cheminement nous mène de l'agitation à la liberté absolue, en passant par trois grandes étapes.</p>
 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. Le Témoin : Le fondement de la liberté</h3>
@@ -416,7 +416,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Le Samyama : L'Art de la Quiétude en Action",
             body: `
-                <img src="samyama-quietude.png" alt="Le Samyama : La Quiétude en Action" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="samyama-quietude.jpg" alt="Le Samyama : La Quiétude en Action" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Le Samyama est une pratique avancée qui consiste à introduire une intention (un <em>sutra</em>) dans notre silence intérieur, puis à la relâcher complètement. Son but n'est pas de créer des pouvoirs magiques, mais de cultiver "la quiétude en action" : permettre à notre paix profonde de rayonner dans notre vie quotidienne. Pour qu'elle fonctionne, cette pratique mécanique obéit à des règles précises.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. Le Terreau Absolu : Le Silence Intérieur</h3>
@@ -435,7 +435,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "L'Enquête sur le Soi : Poser la Question dans le Silence",
             body: `
-                <img src="enquete-soi.png" alt="L'Enquête sur le Soi : Le miroir du Silence" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="enquete-soi.webp" alt="L'Enquête sur le Soi : Le miroir du Silence" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>L'Enquête sur le Soi (demander <em>"Qui suis-je ?"</em>) est souvent mal comprise. On la confond avec une réflexion philosophique. Or, essayer de résoudre le problème de l'ego avec l'intellect revient à nommer le voleur comme chef de la police. C'est une boucle sans fin. L'Enquête est une pratique vibratoire qui exige une fondation solide.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. La Maturité du Témoin</h3>
@@ -454,7 +454,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Les Signes de l'Aube : Reconnaître le Silence Intérieur",
             body: `
-                <img src="signes-silence.png" alt="Les signes du Silence Intérieur" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="signes-silence.jpg" alt="Les signes du Silence Intérieur" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Le silence intérieur n’est pas un objet que l’on possède, ni un exploit mystique. C'est un espace que l’on découvre — comme le ciel bleu qui se révèle enfin quand les nuages de l'esprit se dissipent. Cultivée jour après jour par la méditation profonde, l'émergence de ce silence (le Samadhi) se manifeste par des signes neurobiologiques et psychologiques très concrets. Voici les repères qui indiquent que l'aube se lève en vous.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. Le Vide Actif et le Roc Inébranlable</h3>
@@ -483,7 +483,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Le Tantra Mécanique : L'Ascension de l'Énergie et la Règle du Bord",
             body: `
-                <img src="tantra-mecanique.png" alt="Schéma de la mécanique tantrique et de l'énergie pré-orgasmique - AYP" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="tantra-mecanique.jpg" alt="Schéma de la mécanique tantrique et de l'énergie pré-orgasmique - AYP" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Dans l'ingénierie spirituelle, l'énergie sexuelle n'est ni un péché à réprimer, ni un simple divertissement à dissiper. C'est le carburant le plus dense et le plus puissant dont dispose le corps humain (le prana pelvien). Le Tantra, dépouillé de son folklore, est la science mécanique qui consiste à capturer ce carburant pour l'envoyer illuminer le cerveau et le système nerveux central.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">La Règle d'Or : Le Maintien de l'État Pré-Orgasmique</h3>
@@ -507,7 +507,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "L'Anatomie de l'Éveil : Le Lit de la Rivière et le Courant d'Or",
             body: `
-            <img src="anatomie-eveil.png" alt="L'Anatomie de l'Éveil : Le Lit de la Rivière et le Courant d'Or" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="anatomie-eveil.webp" alt="L'Anatomie de l'Éveil : Le Lit de la Rivière et le Courant d'Or" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>L'éveil n'est pas un éclair mystique qui vous frappe au hasard. C'est le nettoyage patient et mécanique de votre système nerveux, semblable au lent travail d'une rivière qui, goutte après goutte, dissout les sédiments accumulés dans son lit. Ces sédiments sont nos peurs, nos traumatismes et nos habitudes rigides — tout ce qui obstrue la libre circulation de la vie en nous.</p>
                 <p>Ce nettoyage biologique traverse trois grandes saisons.</p>
 
@@ -536,7 +536,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Les Deux Ailes de l'Oiseau : Le Silence et l'Énergie",
             body: `
-            <img src="deux-ailes-oiseau.png" alt="Les Deux Ailes de l'Oiseau : Le Silence et l'Énergie" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="deux-ailes-oiseau.webp" alt="Les Deux Ailes de l'Oiseau : Le Silence et l'Énergie" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Cher voyageur, une question revient souvent aux portes du sanctuaire : <em>"Peut-on connaître l'éveil sans que l'énergie s'embrase ? Ou peut-on être traversé par cette foudre douce sans jamais avoir connu le silence ?"</em></p>
                 <p>Ces interrogations touchent au cœur même de notre mécanique spirituelle. L'illumination véritable — ce que notre tradition nomme l'Unité — n'est pas un état fragmenté. Le Silence intérieur (le Témoin) et la Conductivité extatique (la Kundalini) sont comme deux fils entrelacés dans une même tresse, ou plus exactement, comme les deux ailes d'un même oiseau. L'une sans l'autre, le vol est bancal.</p>
 
@@ -562,7 +562,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "The Awakening of Inner Silence: The Unshakable Foundation",
             body: `
-            <img src="fondation-silence.png" alt="The Awakening of Inner Silence: The Unshakeable Foundation" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="fondation-silence.jpg" alt="The Awakening of Inner Silence: The Unshakeable Foundation" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Inner silence is not something we create. It is neither the result of mental effort nor a state of emptiness imposed by force. At the beginning of the path, we often try to discipline the mind, to force it to be quiet, but this strategy produces the opposite effect.</p>
                 <p>This silence is neither tense concentration nor a withdrawal from the world. It is a dynamic presence, a rock of pure consciousness that naturally resides within us. In everyone, there is an intact, stable zone that has never been disturbed by events or wounds. It is not produced by practice: practice merely reveals it.</p>
                 <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">The Mechanics of Awakening: Regularity over Intensity</h3>
@@ -583,7 +583,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "The Mechanics of Ecstasy: A Progressive Understanding of Awakening",
             body: `
-            <img src="mecanique-extase.png" alt="The Mechanics of Ecstasy: A Progressive Understanding of Awakening" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="mecanique-extase.jpg" alt="The Mechanics of Ecstasy: A Progressive Understanding of Awakening" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>In the spiritual journey, ecstasy is often misunderstood. It is sometimes sought as an exceptional mystical experience, feared as a loss of control, or idealized as the privilege of a chosen few. In reality, ecstasy is none of these. It is the natural result of a precise mechanism, inscribed in human neurobiological functioning, which activates when certain conditions are met.</p>
                 <p>Understanding this mechanic does not serve to provoke ecstasy — for it can never be forced — but to allow the purification process to unfold without confusion or excess, until its harmonious integration into daily life.</p>
                 <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">1. What ecstasy is not (and what it is)</h3>
@@ -633,7 +633,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Spinal Breathing: The Bridge Between Matter and Energy",
             body: `
-            <img src="pont-respiration.png" alt="Spinal Breathing: The Bridge Between Matter and Energy" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="pont-respiration.jpg" alt="Spinal Breathing: The Bridge Between Matter and Energy" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <h3 style="color: var(--accent-color); margin-top: 10px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">The Mechanics of Awakening</h3>
                 <p>Spinal evolution is not an abstract philosophical concept or a divine reward. It is a mechanical, biological, and measurable process. At the heart of this process lies your central nervous system. Imagine it as a vast electrical network. Over the years, trauma, stress, and habits have created "resistances" on these cables, limiting the amount of vital energy (Prana) that can flow freely.</p>
                 <p>Spinal Breathing is the most direct tool to clean this network. It is not a simple pulmonary relaxation exercise, but a technique of inner engineering designed to purify the main channel of your body: <em>the Sushumna</em>, a subtle thread that runs through the center of your spine, from the perineum up to the point between the eyebrows.</p>
@@ -656,7 +656,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "The Art of Self-Regulation (Self-Pacing)",
             body: `
-            <img src="auto-regulation.png" alt="The Art of Self-Pacing" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="auto-regulation.jpg" alt="The Art of Self-Pacing" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p style="font-weight: bold; font-style: italic; text-align: center; margin-bottom: 25px; color: var(--accent-color);">"The practitioner is the sole master of their pace."</p>
                 <p>Self-pacing is not just advice; it is the universal golden rule that supports the entirety of deep yogic practice. In our quest for inner silence, we do not attempt to force the door, but patiently clear the path so that the light may pass.</p>
                 <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">The Principle: Listening to Ecstatic Conductivity</h3>
@@ -673,7 +673,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "The Thread and the Lightning: Recognizing Energetic Overload",
             body: `
-            <img src="surcharge-energie.png" alt="The Thread and the Lightning: Differentiating Awakening from Overload" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="surcharge-energie.jpg" alt="The Thread and the Lightning: Differentiating Awakening from Overload" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>On the path of silence, the nervous system undergoes a profound purification. This biological transmutation generates a new current of life. But the boundary between a healthy awakening and an energetic overload is thin. It is not measured by the yardstick of your mystical visions, but by the quality of your grounding in the material world.</p>
                 <p>The difference between a remedy and a poison is often just a matter of dosage. Learning to read the signals of your own biology is the greatest of wisdoms.</p>
 
@@ -701,7 +701,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Sushumna: The Living Axis of Transformation",
             body: `
-                <img src="sushumna.png" alt="Sushumna Axis" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="sushumna.jpg" alt="Sushumna Axis" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>In the science of awakening, the <em>sushumna</em> (the spinal nerve) is not an abstract mystical concept. It is the central highway, the "master controller" of your nervous system. It is the living channel through which all deep transformation takes place.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. The Highway of the Nervous System</h3>
@@ -729,7 +729,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Demystifying Kundalini: Ecstatic Conductivity",
             body: `
-                <img src="kundalini-energie.png" alt="Ecstatic Conductivity" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="kundalini-energie.jpg" alt="Ecstatic Conductivity" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>For centuries, "Kundalini" has been shrouded in mystery, often described as a serpent coiled at the base of the spine, waiting to be awakened with a mix of fascination and fear. Our approach strips this energy of its intimidating mysticism to redefine it in simple mechanical terms: <strong>ecstatic conductivity</strong>.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. The Root of Energy</h3>
@@ -760,7 +760,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Awakening the Energy or Letting It Be? The Middle Path",
             body: `
-                <img src="chemin-milieu.png" alt="The Middle Path" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="chemin-milieu.jpg" alt="The Middle Path" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>In the spiritual quest, one question constantly arises: should we actively seek to awaken our inner energy (Kundalini), or should we simply let go and allow nature to take its course at its own pace?</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">The Illusion of Passivity</h3>
@@ -784,7 +784,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Prana and the Breath: The Blacksmith's Art",
             body: `
-                <img src="prana-souffle.png" alt="The Fire of Prana" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="prana-souffle.jpg" alt="The Fire of Prana" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>We have seen that the purification of our nervous system generates friction, often felt as internal heat. To direct this energy (<em>prana</em>) without burning out, we possess a tool of absolute precision: the breath.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. The Vacuum Effect: Drawing the Energy</h3>
@@ -803,7 +803,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "The Emergence of the Self: From Witness to Unity",
             body: `
-                <img src="emergence-soi.png" alt="Emergence of the Self" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="emergence-soi.jpg" alt="Emergence of the Self" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Spiritual evolution is not a blind leap into the void, nor a sudden magical enlightenment. It is a conscious, mechanical process of our nervous system that passes through several natural stages. This journey leads us from inner turmoil to absolute freedom, crossing three major milestones.</p>
 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. The Witness: The Foundation of Freedom</h3>
@@ -830,7 +830,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Samyama: The Art of Stillness in Action",
             body: `
-                <img src="samyama-quietude.png" alt="Samyama: Stillness in Action" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="samyama-quietude.jpg" alt="Samyama: Stillness in Action" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Samyama is an advanced practice that consists of introducing an intention (a <em>sutra</em>) into our inner silence, and then releasing it completely. Its goal is not to create magical powers, but to cultivate "stillness in action": allowing our deep peace to radiate into our daily life. For it to work, this mechanical practice obeys precise rules.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. The Absolute Soil: Inner Silence</h3>
@@ -849,7 +849,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Self-Inquiry: Dropping the Question into Silence",
             body: `
-                <img src="enquete-soi.png" alt="Self-Inquiry: The Mirror of Silence" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="enquete-soi.webp" alt="Self-Inquiry: The Mirror of Silence" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Self-Inquiry (asking <em>"Who am I?"</em>) is often misunderstood. It is confused with philosophical reflection. However, trying to solve the problem of the ego with the intellect is like appointing the thief as the chief of police. It's an endless loop. Inquiry is a vibrational practice that requires a solid foundation.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. The Maturity of the Witness</h3>
@@ -868,7 +868,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Signs of the Dawn: Recognizing Inner Silence",
             body: `
-                <img src="signes-silence.png" alt="Signs of Inner Silence" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="signes-silence.jpg" alt="Signs of Inner Silence" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Inner silence is not an object to be possessed, nor a mystical achievement. It is a space to be discovered — like the blue sky that finally reveals itself when the clouds of the mind dissipate. Cultivated day after day through deep meditation, the emergence of this silence (Samadhi) manifests through very concrete neurobiological and psychological signs. Here are the markers that indicate the dawn is breaking within you.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">1. The Active Void and the Unshakable Rock</h3>
@@ -897,7 +897,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "Mechanical Tantra: The Ascent of Energy and the Rule of the Edge",
             body: `
-                <img src="tantra-mecanique.png" alt="Diagram of tantric mechanics and pre-orgasmic energy - AYP" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="tantra-mecanique.jpg" alt="Diagram of tantric mechanics and pre-orgasmic energy - AYP" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>In spiritual engineering, sexual energy is neither a sin to repress nor a mere entertainment to dissipate. It is the densest and most powerful fuel available to the human body (pelvic prana). Tantra, stripped of its folklore, is the mechanical science of capturing this fuel and sending it up to illuminate the brain and the central nervous system.</p>
                 
                 <h3 style="color: var(--accent-color); margin-top: 30px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic;">The Golden Rule: Maintaining the Pre-Orgasmic State</h3>
@@ -921,7 +921,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "The Anatomy of Awakening: The Riverbed and the Golden Current",
             body: `
-            <img src="anatomie-eveil.png" alt="The Anatomy of Awakening: The Riverbed and the Golden Current" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="anatomie-eveil.webp" alt="The Anatomy of Awakening: The Riverbed and the Golden Current" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Awakening is not a mystical lightning bolt that strikes you at random. It is the patient and mechanical cleansing of your nervous system, akin to the slow work of a river that, drop by drop, dissolves the sediments accumulated in its bed. These sediments are our fears, our traumas, and our rigid habits — everything that obstructs the free flow of life within us.</p>
                 <p>This biological cleansing goes through three major seasons.</p>
 
@@ -950,7 +950,7 @@ const TEACHINGS_DATABASE = {
         {
             title: "The Two Wings of the Bird: Silence and Energy",
             body: `
-            <img src="deux-ailes-oiseau.png" alt="The Two Wings of the Bird: Silence and Energy" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+            <img src="deux-ailes-oiseau.webp" alt="The Two Wings of the Bird: Silence and Energy" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <p>Dear traveler, a question often echoes at the gates of the sanctuary: <em>"Can one know awakening without the energy igniting? Or can one be traversed by this gentle lightning without ever having known silence?"</em></p>
                 <p>These inquiries touch the very heart of our spiritual mechanics. True enlightenment — what our tradition calls Unity — is not a fragmented state. Inner Silence (the Witness) and Ecstatic Conductivity (Kundalini) are like two threads woven into the same braid, or more accurately, like the two wings of the same bird. Without one, the flight is unsteady.</p>
 
@@ -1162,7 +1162,7 @@ const MURMURES_DATABASE = [
     },
     {
         title: "<span class='fr'>Le Poids de la Terre (L'Art de l'Ancrage)</span><span class='en' style='display:none;'>The Weight of the Earth (The Art of Grounding)</span>",
-        audioFile: "", imageFile: "ancrage-terre.png", videoFile: "",
+        audioFile: "", imageFile: "ancrage-terre.jpg", videoFile: "",
         text: `
         <div class="fr"><strong>Le Conte :</strong><br>Un jeune pèlerin, après des mois de pratiques respiratoires intenses, vint trouver son maître. Il tremblait légèrement, les yeux grands ouverts. <em>« Maître, mon énergie tourbillonne ! Je ne dors plus, je vois des flashs de lumière, mon esprit vole au-dessus de mon corps. J'atteins enfin les hautes sphères ! »</em><br><br>Le maître l'observa un long moment. Il ne le félicita pas. Il se leva, alla dans la cuisine, et revint avec un grand bol de riz chaud et consistant. Puis il lui tendit une houe. <em>« Assieds-toi. Mange ce riz jusqu'au dernier grain. Ensuite, tu iras retourner la terre du jardin potager pieds nus, jusqu'au coucher du soleil. »</em><br><br>Le pèlerin fut offusqué : <em>« Mais maître, mon esprit s'élève ! Pourquoi me ramener à la boue et à la lourdeur de la matière ? »</em><br><br>Le maître sourit doucement : <em>« Si tu veux qu'un arbre touche le ciel sans être abattu par la première tempête, ses racines doivent plonger profondément dans la boue. Une énergie sans ancrage n'est pas l'illumination ; c'est un cerf-volant dont la corde a cassé. Mange. Et touche la terre. »</em><br><br><strong>L'Essence :</strong><br><em>Dans notre quête de lumière, nous oublions souvent que le corps physique est la batterie de notre système nerveux. Lorsque la pratique éveille une conductivité extatique intense, la friction peut causer de l'irritabilité, des insomnies ou une sensation de flottement. La solution n'est jamais de méditer plus. La solution est l'ancrage (le Grounding). Marcher pieds nus, manger un repas lourd, accomplir des tâches ménagères ou rire avec des amis : ce ne sont pas des distractions profanes. Ce sont les soupapes de sécurité sacrées qui permettent à votre système d'absorber l'énergie sans se briser. L'éveil n'est pas une fuite vers le haut, c'est l'infusion de la lumière dans la matière.</em></div>
         <div class="en" style="display:none;"><strong>The Tale:</strong><br>A young pilgrim, after months of intense respiratory practices, came to his master. He was trembling slightly, his eyes wide open. <em>« Master, my energy is swirling! I can no longer sleep, I see flashes of light, my mind flies above my body. I am finally reaching the higher spheres! »</em><br><br>The master observed him for a long moment. He did not congratulate him. He stood up, went to the kitchen, and returned with a large bowl of hot, hearty rice. Then he handed him a hoe. <em>« Sit down. Eat this rice to the last grain. Then, you will go turn the soil in the vegetable garden barefoot, until sunset. »</em><br><br>The pilgrim was offended: <em>« But master, my spirit is rising! Why bring me back to the mud and the heaviness of matter? »</em><br><br>The master smiled gently: <em>« If you want a tree to touch the sky without being knocked down by the first storm, its roots must plunge deep into the mud. Energy without grounding is not enlightenment; it is a kite with a broken string. Eat. And touch the earth. »</em><br><br><strong>The Essence:</strong><br><em>In our quest for light, we often forget that the physical body is the battery of our nervous system. When practice awakens intense ecstatic conductivity, the friction can cause irritability, insomnia, or a feeling of floating. The solution is never to meditate more. The solution is Grounding. Walking barefoot, eating a heavy meal, doing household chores, or laughing with friends: these are not mundane distractions. They are the sacred safety valves that allow your system to absorb energy without breaking. Awakening is not an escape upwards; it is the infusion of light into matter.</em></div>
@@ -1170,7 +1170,7 @@ const MURMURES_DATABASE = [
     },
     {
         title: "<span class='fr'>Quand la Tempête Frappe : Entre Silence et Responsabilité</span><span class='en' style='display:none;'>When the Storm Hits: Between Silence and Responsibility</span>",
-        audioFile: "", imageFile: "tempête-frappe.png", videoFile: "",
+        audioFile: "", imageFile: "tempête-frappe.jpg", videoFile: "",
         text: `
         <div class="fr">Il y a des moments dans la vie où tout semble basculer en même temps. Une perte, une erreur, une situation que l’on n’a pas vue venir. Soudain, ce qui paraissait stable se fissure.<br><br>Dans ces moments-là, l’esprit cherche immédiatement à comprendre : *Pourquoi ? Qu’ai-je fait pour mériter cela ? Quel est le sens caché derrière cette épreuve ?* Mais il arrive que la réponse ne soit pas là où l’on regarde.<br><br><strong>Ce qui est… simplement</strong><br>Parfois, ce qui survient n’est pas le fruit d’un karma mystérieux, ni d’une volonté supérieure à interpréter. C’est simplement un manque de discernement dans l’action, une confiance accordée trop vite, une vigilance qui n’a pas été suffisante. Cela peut sembler décevant pour l’esprit en quête de sens élevé. Mais c’est en réalité une porte vers une compréhension plus mature : la vie spirituelle ne nous éloigne pas du réel, elle nous y ramène avec plus de clarté.<br><br><strong>Le Choc et le Silence</strong><br>Lorsque l’épreuve frappe, deux mouvements apparaissent en nous. D’un côté, le mental s’agite : il projette l’avenir, amplifie la peur, imagine les conséquences sur des années. De l’autre, plus en profondeur, quelque chose reste intact. Un espace silencieux. Une présence qui ne s’effondre pas.<br><br>Ce Silence n’enlève pas la difficulté, mais il empêche qu’elle devienne totale. S’y appuyer ne consiste pas à fuir la réalité, mais à ne pas être englouti par elle.<br><br><strong>Responsabilité sans Écrasement</strong><br>Il est naturel, après coup, de voir ce qui n’a pas été fait : un doute non écouté, une vérification manquée. Cela peut faire naître un poids immense. Mais il y a une différence essentielle entre la culpabilité et la responsabilité. La culpabilité enferme ; la responsabilité éclaire. Reconnaître simplement : *« Je n’ai pas vu. J’apprends. »* ouvre la voie à une vigilance nouvelle, plus fine, plus stable.<br><br><strong>L’Épreuve dans le Lien</strong><br>Lorsque deux personnes traversent ensemble une difficulté, un autre enjeu apparaît. La tension peut rapprocher… ou séparer. Le véritable danger n’est pas toujours dans l’événement lui-même, mais dans la manière dont il affecte le lien. Dans ces moments, rester uni devient la plus haute pratique intérieure : ne pas se retourner contre l’autre, ne pas ajouter de la dureté à la douleur, et rester dans une présence partagée.<br><br><strong>Rester vivant au cœur de la tempête</strong><br>Ce qui est perdu est perdu, pour l’instant. Mais ce qui reste vivant — la présence, la conscience, la capacité d’aimer, d’agir, de se relever — n’a pas été atteint. L’épreuve ne demande pas toujours d’être comprise. Elle demande d’être traversée avec plus de justesse. Moins de projection. Plus de présence. Et, au cœur de tout cela, ce Silence discret qui ne résout pas tout, mais qui permet de ne pas se perdre.</div>
         <div class="en" style="display:none;">There are moments in life when everything seems to collapse at once. A loss, a mistake, a situation we didn't see coming. Suddenly, what seemed stable cracks.<br><br>In those moments, the mind immediately seeks to understand: *Why? What did I do to deserve this? What is the hidden meaning behind this ordeal?* But sometimes the answer isn't where we are looking.<br><br><strong>What is... simply</strong><br>Sometimes, what happens is not the result of a mysterious karma, nor a higher will to be interpreted. It is simply a lack of discernment in action, trust given too quickly, a vigilance that was not sufficient. This may seem disappointing for the mind in search of higher meaning. But it is actually a door to a more mature understanding: spiritual life does not distance us from reality; it brings us back to it with more clarity.<br><br><strong>The Shock and the Silence</strong><br>When hardship strikes, two movements appear within us. On the one hand, the mind becomes agitated: it projects the future, amplifies fear, imagines consequences years down the line. On the other, deeper down, something remains intact. A silent space. A presence that does not collapse.<br><br>This Silence does not remove the difficulty, but it prevents it from becoming total. Leaning on it is not about escaping reality, but about not being swallowed by it.<br><br><strong>Responsibility without Crushing</strong><br>It is natural, in hindsight, to see what was not done: an ignored doubt, a missed verification. This can give rise to an immense weight. But there is an essential difference between guilt and responsibility. Guilt imprisons; responsibility illuminates. Simply acknowledging: *'I didn't see. I am learning,'* opens the way to a new, finer, more stable vigilance.<br><br><strong>The Ordeal in Connection</strong><br>When two people go through a difficulty together, another challenge arises. Tension can bring them closer... or tear them apart. The real danger is not always in the event itself, but in how it affects the bond. In these moments, staying united becomes the highest inner practice: not turning against each other, not adding harshness to the pain, and remaining in a shared presence.<br><br><strong>Staying alive in the heart of the storm</strong><br>What is lost is lost, for now. But what remains alive—presence, consciousness, the ability to love, to act, to rise again—has not been touched. The ordeal does not always ask to be understood. It asks to be navigated with more accuracy. Less projection. More presence. And, at the heart of it all, this discreet Silence that doesn't solve everything, but allows us not to lose ourselves.</div>
@@ -1178,7 +1178,7 @@ const MURMURES_DATABASE = [
     },
     {
         title: "<span class='fr'>La Question Vivante (Qui suis-je ?)</span><span class='en' style='display:none;'>The Living Question (Who am I?)</span>",
-        audioFile: "", imageFile: "dissolution-presence.png", videoFile: "",
+        audioFile: "", imageFile: "dissolution-presence.webp", videoFile: "",
         text: `
         <div class="fr">Il y a des questions qui traversent le temps, qui ne se fanent pas. Parmi elles, « Qui suis-je ? » demeure comme une énigme qui ne cesse d’appeler. Ce n’est pas une curiosité intellectuelle, ni une formule philosophique abstraite. C’est un tremblement intime, un retournement qui nous pousse à regarder au-delà des apparences.<br><br>Un matin, en me regardant dans le miroir, j’ai eu un sursaut. Les traits avaient changé, marqués par les années. Pourtant, à l’intérieur, je me sentais toujours le même. Alors qui est ce « même » qui ne vieillit pas, même quand le visage se transforme ?<br><br>La question peut sembler banale, trop entendue… et pourtant, si je l’affronte sans détour, elle devient vertigineuse.<br>Suis-je seulement le produit de mon éducation, de ma culture, de ma religion ?<br>Suis-je la couleur de ma peau, mon sexe, mon âge, mes habitudes de penser ?<br>Suis-je mes goûts, mes préférences, mes aversions ?<br><br>Ces réponses viennent vite, mais elles se fissurent aussitôt. Car tout cela change. Mon corps change, mes idées changent, mes croyances se transforment. Et pourtant, à travers tous ces changements, je reste.<br>Alors… qu’est-ce qui reste ?<br><br>Il y a en moi quelque chose qui observe ces transformations. Une Présence qui ne vieillit pas, qui ne change pas. J’appelle cela Conscience.<br>Mais est-ce que « moi », je suis cette Conscience ? Ou bien suis-je encore identifié aux formes qui apparaissent en elle — mes émotions, mes souvenirs, mes désirs ?<br><br>C’est là que le vertige recommence. Car si je ne suis pas ces couches accumulées, alors qui suis-je ?<br>Je n’ai pas de réponse définitive. Mais je pressens qu’en suivant cette question, en l’habitant au lieu de la fuir, quelque chose peut se dévoiler.<br><br>À force de demeurer dans cette interrogation, un silence s’éclaire : je découvre que je ne suis pas mon corps (il se modifie), je ne suis pas mes pensées (elles surgissent et s’évanouissent), je ne suis pas mes émotions (elles traversent mon existence puis s’éteignent). Je suis ce qui voit, ce qui perçoit toutes ces formes sans jamais s’y confondre. La Conscience contemple le flux de la vie sans être altérée par lui.<br><br>Reconnaître cela ne signifie pas nier mes racines ou mes désirs. Mais je perçois qu’ils ne sont que des parures passagères, des vêtements de l’existence, et non mon essence.<br><br><h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic; margin-top: 30px;">Le Piège du Mental et l'Enquête Relationnelle</h3><br>C'est ici que le chercheur tombe souvent dans un piège épuisant. Face à ce vertige, l'ego tente de pousser la question plus loin par l’analyse. Le mental tourne en boucle, cherchant une conclusion logique, une illumination soudaine. La question « Qui suis-je ? » devient alors une source de tension, un fardeau intellectuel.<br><br>La pensée seule ne peut pas découvrir l’espace qui la contient. C'est comme demander à une lampe de poche d'éclairer sa propre ampoule.<br><br>C’est ici qu’une orientation précieuse, issue de la lignée, se révèle : <strong>la manière d’interroger est aussi importante que la question elle-même.</strong><br><br>Lorsque la question est posée dans l’agitation du mental, elle crée de l'incertitude. Mais lorsque nous laissons cette question reposer dans le calme du Témoin — ce silence préalablement cultivé par la méditation profonde — elle devient un instrument d'une douceur absolue.<br><br>C’est ce que l’on appelle : <strong>l’enquête relationnelle</strong>.<br><br>Dans cette approche, nous ne luttons plus pour obtenir une réponse. Nous prenons la question « Qui suis-je ? » et nous la laissons doucement tomber dans notre silence intérieur, comme on jette un caillou dans un lac immobile. Puis... nous ne faisons rien. Nous lâchons prise. Nous permettons à la question d’entrer en relation avec le silence, au lieu d’essayer de tout comprendre par la pensée.<br><br><h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic; margin-top: 30px;">L'Invitation au Silence</h3><br>Si aujourd'hui, en vous posant cette question, vous ne ressentez que du vide, de l'angoisse ou un brouillard mental, rassurez-vous. Cela signifie simplement que le miroir de votre esprit est encore agité par les vagues de la surface.<br><br>Ne forcez pas l'enquête. Laissez la question de côté. Revenez à la fondation absolue : asseyez-vous, fermez les yeux, et cultivez la tranquillité du Témoin à l'aide de votre mantra.<br><br>L'enquête sur le Soi n'est pas un devoir à réussir, c'est une floraison spontanée. Un jour, lorsque le système nerveux sera suffisamment purifié, la question cessera d’être une recherche angoissée pour devenir une présence vivante. Vous ne trouverez pas de réponse intellectuelle à formuler. Vous deviendrez simplement la Présence qui embrasse chaque instant.</div>
         <div class="en" style="display:none;">There are questions that span across time, that do not fade. Among them, "Who am I?" remains like an enigma that never ceases to call. It is not an intellectual curiosity, nor an abstract philosophical formula. It is an intimate tremor, an inward turning that pushes us to look beyond appearances.<br><br>One morning, looking at myself in the mirror, I was startled. My features had changed, marked by the years. Yet, inside, I still felt the same. So who is this "same" that does not age, even when the face transforms?<br><br>The question may seem banal, too often heard... and yet, if I face it head-on, it becomes dizzying.<br>Am I merely the product of my education, my culture, my religion?<br>Am I the color of my skin, my gender, my age, my thinking habits?<br>Am I my tastes, my preferences, my aversions?<br><br>These answers come quickly, but they crack immediately. Because all of this changes. My body changes, my ideas change, my beliefs transform. And yet, through all these changes, I remain.<br>So... what remains?<br><br>There is something in me that observes these transformations. A Presence that does not age, that does not change. I call this Consciousness.<br>But am I, "me", this Consciousness? Or am I still identified with the forms that appear within it — my emotions, my memories, my desires?<br><br>This is where the vertigo begins again. For if I am not these accumulated layers, then who am I?<br>I have no definitive answer. But I sense that by following this question, by inhabiting it instead of fleeing from it, something can be revealed.<br><br>By dwelling in this inquiry, a silence lights up: I discover that I am not my body (it changes), I am not my thoughts (they arise and vanish), I am not my emotions (they cross my existence and then fade). I am that which sees, that which perceives all these forms without ever merging with them. Consciousness contemplates the flow of life without being altered by it.<br><br>Recognizing this does not mean denying my roots or my desires. But I perceive that they are only passing adornments, garments of existence, and not my essence.<br><br><h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic; margin-top: 30px;">The Trap of the Mind and Relational Inquiry</h3><br>This is where the seeker often falls into an exhausting trap. Faced with this vertigo, the ego tries to push the question further through analysis. The mind loops, seeking a logical conclusion, a sudden illumination. The question "Who am I?" then becomes a source of tension, an intellectual burden.<br><br>Thought alone cannot discover the space that contains it. It is like asking a flashlight to illuminate its own bulb.<br><br>This is where a precious orientation, drawn from the lineage, reveals itself: <strong>the way of inquiring is as important as the question itself.</strong><br><br>When the question is asked in the agitation of the mind, it creates uncertainty. But when we let this question rest in the calm of the Witness — this silence previously cultivated by deep meditation — it becomes an instrument of absolute gentleness.<br><br>This is what we call: <strong>relational inquiry</strong>.<br><br>In this approach, we no longer fight to get an answer. We take the question "Who am I?" and we let it gently drop into our inner silence, like dropping a pebble into a still lake. Then... we do nothing. We let go. We allow the question to enter into a relationship with the silence, instead of trying to understand everything through thought.<br><br><h3 style="color: var(--accent-color); font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-style: italic; margin-top: 30px;">The Invitation to Silence</h3><br>If today, when asking yourself this question, you feel only emptiness, anxiety, or mental fog, rest assured. This simply means that the mirror of your mind is still agitated by the waves on the surface.<br><br>Do not force the inquiry. Set the question aside. Return to the absolute foundation: sit down, close your eyes, and cultivate the tranquility of the Witness using your mantra.<br><br>Self-inquiry is not a task to succeed at; it is a spontaneous flowering. One day, when the nervous system is sufficiently purified, the question will cease to be an anxious search and become a living presence. You will not find an intellectual answer to formulate. You will simply become the Presence that embraces every moment.</div>
@@ -1186,7 +1186,7 @@ const MURMURES_DATABASE = [
     },
     {
         title: "<span class='fr'>Écho : La Rivière Invisible</span><span class='en' style='display:none;'>Echo: The Invisible River</span>",
-        audioFile: "", imageFile: "rivière-invisible.png", videoFile: "",
+        audioFile: "", imageFile: "rivière-invisible.webp", videoFile: "",
         text: `
         <div class="fr">Nous avons tous notre propre rivière à traverser. Elle ne coule pas dans une contrée lointaine, mais creuse son lit en plein milieu de nos existences. C’est cette frontière invisible qui sépare la sécurité étouffante de nos habitudes, des terres inconnues de notre propre profondeur.<br><br>Toute notre vie, on nous raconte des histoires sur ce qui se trouve de l’autre côté. On nous parle du danger de sortir du rang, de la folie qu'il y a à ne plus courir après ce que tout le monde désire, du risque terrifiant qu’il y a à se retrouver seul face à soi-même. Ces récits ne sont pas des vérités ; ce sont les clôtures que le monde érige pour maintenir l’illusion de son propre contrôle. Nous héritons des peurs de ceux qui nous ont précédés, et nous finissons par croire que la forêt de notre intériorité est un lieu sombre et redoutable, peuplé par nos propres démons.<br><br>Mais que se passe-t-il lorsque l'appel intérieur devient plus fort que l'effroi ? Lorsque l'on cesse de peser le pour et le contre, pour écouter cet élan qui ne s'explique pas, mais qui exige le mouvement ?<br><br>Le passage ne requiert aucune bravoure héroïque. L'héroïsme est souvent bruyant. Ce qu'il faut, c'est une forme de nudité. Fermer les yeux, non par déni, mais pour cesser d'être hypnotisé par le courant agité de nos pensées. Et poser le pied dans l'eau.<br><br>Ceux qui osent franchir la limite découvrent alors le plus grand des paradoxes. De l'autre côté, il n'y a pas de monstres à terrasser. Il n'y a pas non plus de grande révélation fulgurante qui viendrait tout résoudre par magie. Il y a simplement un espace clair, un sanctuaire oublié, où les choses existent sans que l'on ait besoin de se battre contre elles. La terreur n'était qu'une ombre projetée par notre propre esprit.<br><br>La véritable initiation commence le jour où nous comprenons que l'inconnu n'a jamais été hostile. Ce que nous cherchions si désespérément à l'extérieur, ou ce que nous fuyions avec tant d'ardeur, n'était que le reflet de notre propre tumulte. La paix n'est pas une conquête ; c'est ce qui nous accueille lorsque nous osons enfin laisser nos vieilles peurs sur la rive.</div>
         <div class="en" style="display:none;">We all have our own river to cross. It does not flow in a distant land, but carves its bed right in the middle of our lives. It is this invisible border that separates the stifling security of our habits from the unknown lands of our own depths.<br><br>All our lives, we are told stories about what lies on the other side. We are told of the danger of stepping out of line, of the madness of no longer chasing what everyone desires, of the terrifying risk of finding oneself alone with oneself. These tales are not truths; they are the fences the world erects to maintain the illusion of its own control. We inherit the fears of those who came before us, and we end up believing that the forest of our interiority is a dark and fearsome place, populated by our own demons.<br><br>But what happens when the inner call becomes stronger than the dread? When we stop weighing the pros and cons, to listen to this impulse that cannot be explained, but which demands movement?<br><br>The crossing requires no heroic bravery. Heroism is often loud. What is needed is a form of nakedness. Closing the eyes, not in denial, but to stop being hypnotized by the agitated current of our thoughts. And stepping into the water.<br><br>Those who dare to cross the limit then discover the greatest of paradoxes. On the other side, there are no monsters to slay. Nor is there any great, blinding revelation that magically solves everything. There is simply a clear space, a forgotten sanctuary, where things exist without us needing to fight against them. The terror was only a shadow cast by our own mind.<br><br>True initiation begins the day we understand that the unknown was never hostile. What we sought so desperately on the outside, or what we fled with such fervor, was only the reflection of our own tumult. Peace is not a conquest; it is what welcomes us when we finally dare to leave our old fears on the shore.</div>
@@ -1194,7 +1194,7 @@ const MURMURES_DATABASE = [
     },
     {
         title: "<span class='fr'>Écho : L'Illusion de la Conquête</span><span class='en' style='display:none;'>Echo: The Illusion of Conquest</span>",
-        audioFile: "", imageFile: "illusion-conquête.png", videoFile: "",
+        audioFile: "", imageFile: "illusion-conquête.webp", videoFile: "",
         text: `
         <div class="fr">Notre monde profane nous éduque à l'effort. On nous apprend que pour obtenir quelque chose, il faut l'étudier, le traquer, l'accumuler et le conquérir. Par habitude, nous appliquons cette même logique d'acharnement à notre vie intérieure. Nous faisons de la paix un « projet » et du bonheur un « objectif ».<br><br>Nous croyons secrètement que l'éveil ou la sérénité sont des récompenses réservées à ceux qui auront lu assez de livres, accompli assez de retraites, ou pratiqué avec assez de rigueur. Mais cette course en avant crée le piège le plus parfait qui soit : l'esprit qui <em>cherche</em> le bonheur le projette toujours dans le futur. L'acte même de chercher nous confirme, à chaque seconde, la croyance intime que nous ne possédons pas ce que nous voulons.<br><br>Tant que nous cherchons avec acharnement, nous crions à la vie : <em>« Ce moment présent n'est pas suffisant. J'ai besoin d'autre chose pour être entier. »</em><br><br>La paix véritable ne se trouve pas comme on trouve un trésor caché ; elle se révèle. Et elle ne se révèle que lorsque la fatigue d'espérer nous fait enfin tomber les bras. S'arrêter de chercher n'est pas un échec spirituel ni de la paresse, c'est la naissance de la lucidité.<br><br>C'est accepter que nous ne sommes pas des moitiés en quête de leur reste. C'est comprendre que cette joie sans cause, ce silence vaste et accueillant, ne nous a jamais quittés. Il attendait simplement que nous cessions de faire tant de bruit pour l'entendre.<br><br>Il n'y a nulle part où aller. Il n'y a rien à devenir. Il y a juste à se déposer, ici et maintenant, dans la merveilleuse simplicité d'être en vie.</div>
         <div class="en" style="display:none;">Our profane world educates us for effort. We are taught that to get something, we must study it, hunt it, accumulate it, and conquer it. Out of habit, we apply this exact same logic of relentlessness to our inner life. We make peace a 'project' and happiness a 'goal'.<br><br>We secretly believe that awakening or serenity are rewards reserved for those who have read enough books, completed enough retreats, or practiced with enough rigor. But this forward race creates the most perfect trap there is: the mind that <em>seeks</em> happiness always projects it into the future. The very act of seeking confirms to us, every second, the intimate belief that we do not possess what we want.<br><br>As long as we seek relentlessly, we are shouting at life: <em>'This present moment is not enough. I need something else to be whole.'</em><br><br>True peace is not found the way one finds a hidden treasure; it is revealed. And it is only revealed when the exhaustion of hoping finally makes us drop our arms. Stopping the search is not a spiritual failure or laziness; it is the birth of lucidity.<br><br>It is accepting that we are not halves in search of our remainder. It is understanding that this causeless joy, this vast and welcoming silence, has never left us. It was simply waiting for us to stop making so much noise so we could hear it.<br><br>There is nowhere to go. There is nothing to become. There is only to settle down, here and now, in the wonderful simplicity of being alive.</div>
@@ -1204,7 +1204,7 @@ const MURMURES_DATABASE = [
         id: "silence-etoile",
         title: "<span class='fr'>Murmure : Le Silence de l'Étoile</span><span class='en' style='display:none;'>Whisper: The Silence of the Star</span>",
         audioFile: "", 
-        imageFile: "silence-etoile.png", 
+        imageFile: "silence-etoile.jpg", 
         videoFile: "",
         text: `
         <p>
@@ -1236,7 +1236,7 @@ const MURMURES_DATABASE = [
    {
         title: "<span class='fr'>Paradoxe : L'Obstacle de la Quête</span><span class='en' style='display:none;'>Paradox: The Obstacle of the Quest</span>",
         audioFile: "", 
-        imageFile: "obstacle-quete.png", 
+        imageFile: "obstacle-quete.jpg", 
         videoFile: "",
         text: `
         <div class="fr">

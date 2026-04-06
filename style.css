@@ -721,3 +721,20 @@ body.light-mode .origine-content {
     .origine-content { padding: 25px 20px; }
     .origine-title { font-size: 1.6rem; }
 }
+/* Guide pour les voyageurs entre les portails */
+.murmure-guide {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #888888; /* Un gris perle doux qui n'agresse pas l'œil */
+    text-align: center;
+    margin: 10px auto 25px auto;
+    padding-bottom: 15px;
+    max-width: 600px;
+    border-bottom: 1px dashed #cccccc; /* Une ligne subtile pour séparer l'avertissement du champ de saisie */
+    line-height: 1.6;
+}
+
+.murmure-guide strong {
+    font-weight: 600;
+    color: #555555;
+}

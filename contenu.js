@@ -556,6 +556,25 @@ const TEACHINGS_DATABASE = {
                     <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; opacity: 0.8; font-size: 1.1rem;">✧ Le Gardien du Temple<br>*( © ༄ Œuvre originale - Propriété exclusive du Temple )*</p>
                 </div>
             `
+        },
+        {
+            title: "Le Piège du Magicien : Manipuler l'Univers ou Purifier son Temple",
+            body: `
+            <img src="piege-magicien.jpg" alt="Le Piège du Magicien : De la Manipulation à la Transformation" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>Sur son chemin, le voyageur arrive toujours à un carrefour silencieux. Deux voies s'offrent à lui : tenter de plier le monde à sa volonté par la magie, ou bien purifier son propre cœur pour que le monde s'y reflète en paix. C'est toute la différence entre l'illusion du contrôle (le pouvoir) et la véritable transformation (la spiritualité). L'éveil n'est pas un don magique tombé du ciel ni un pouvoir sur les éléments. C'est l'éclosion naturelle d'un corps et d'un esprit doucement nettoyés de l'intérieur.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">L'Illusion du Combat et du Pouvoir</h3>
+                <p>La première voie attire souvent l'ego, car l'ego adore agir et se sentir puissant. Il utilise la volonté féroce, les rituels complexes ou la pensée magique pour tenter de contrôler la vie, d'attirer l'abondance ou de repousser les ombres. Mais vouloir forcer la porte de l'esprit est dangereux : cela ne fait que blesser la délicate machinerie de notre corps.</p>
+                <p>S'attarder à chercher des esprits guides, ou trembler face aux "forces obscures", c'est perdre son temps à discuter avec des ombres. Ces phénomènes n'ont sur nous que le poids que nous leur donnons par notre peur ou notre fascination. S'épuiser à manipuler les énergies extérieures, c'est comme frotter frénétiquement un miroir dans l'espoir de changer son propre visage. On s'épuise, et l'illusion de la séparation demeure.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">Le Corps comme Seul Temple</h3>
+                <p>La voie de la véritable spiritualité est d'une simplicité désarmante. Elle détourne le regard du miroir pour observer celui qui regarde. Tout le voyage se passe à un seul endroit : à l'intérieur de notre propre système nerveux. C'est ici, dans nos nerfs, notre chair et notre souffle, que l'alchimie s'opère. Le principe est absolu : nul besoin de chercher un maître parfait sur un trône lointain, car le véritable guide respire sous ta propre peau.</p>
+                <p>Ici, on ne force rien. L'outil n'est plus la manipulation, mais le lâcher-prise. Par une pratique douce et quotidienne de la méditation, on retire un à un les cailloux qui bloquent la rivière de notre corps, pour que la vie y coule sans effort. Même lorsque l'on dépose une intention dans le Silence (comme dans le Samyama), ce n'est jamais pour exiger ou manipuler. C'est un abandon total : on laisse tomber la graine dans la terre fertile du cœur, et on la laisse germer. En s'installant dans cette paix vaste et inébranlable, le voyageur s'élève naturellement au-dessus des tempêtes du monde. Il devient intouchable.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">L'Enfant et l'Adulte Spirituel</h3>
+                <p>Vient enfin le jour où le pèlerin lâche la main des figures d'autorité. Confier aveuglément son salut à une institution, un vieux texte ou un gourou extérieur est la phase de l'enfance spirituelle. L'ère est aujourd'hui à la maturité : le marcheur prend l'entière responsabilité de son propre nettoyage intérieur. Il devient autonome, avançant non plus comme un disciple craintif, mais d'égal à égal avec ses frères et sœurs de route.</p>
+                <p>Le grand paradoxe est là : c'est précisément en posant les armes du magicien, en cessant de vouloir dominer l'univers, que tout s'harmonise. Le véritable sage ne manipule rien. Il se contente de balayer son propre temple intérieur, devenant ainsi une fenêtre si propre, si transparente, que l'amour divin peut enfin la traverser pour éclairer le monde.</p>
+            `
         }
     ], // <--- LE CROCHET FERMANT EST ICI, AVANT LE "en:"
     en: [
@@ -969,6 +988,25 @@ const TEACHINGS_DATABASE = {
                 <div align="center" style="margin-top: 40px;">
                     <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; opacity: 0.8; font-size: 1.1rem;">✧ The Guardian of the Temple<br>*( © ༄ Original work - Exclusive property of the Temple )*</p>
                 </div>
+            `
+        },
+        {
+            title: "The Magician's Trap: Manipulating the Universe or Purifying One's Temple",
+            body: `
+            <img src="piege-magicien.jpg" alt="The Magician's Trap: From Manipulation to Transformation" style="width: 100%; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <p>On their path, the traveler always arrives at a silent crossroads. Two paths emerge: attempting to bend the world to one's will through magic, or purifying one's own heart so the world reflects peacefully within it. This is the entire difference between the illusion of control (power) and true transformation (spirituality). Awakening is not a magical gift dropped from the sky, nor a power over the elements. It is the natural blossoming of a body and mind gently cleansed from the inside out.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">The Illusion of Struggle and Power</h3>
+                <p>The first path often attracts the ego, for the ego loves to act and feel powerful. It uses fierce willpower, complex rituals, or magical thinking to try to control life, attract abundance, or repel shadows. But trying to force the door of the spirit is dangerous: it only wounds the delicate machinery of our body.</p>
+                <p>Lingering to seek spirit guides, or trembling before "dark forces," is wasting time arguing with shadows. These phenomena only have the weight we give them through our fear or fascination. Exhausting oneself manipulating external energies is like frantically rubbing a mirror hoping to change one's own face. We exhaust ourselves, and the illusion of separation remains.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">The Body as the Only Temple</h3>
+                <p>The path of true spirituality is disarmingly simple. It turns its gaze away from the mirror to observe the one who is looking. The entire journey happens in one single place: inside our own nervous system. It is here, in our nerves, our flesh, and our breath, that the alchemy takes place. The principle is absolute: there is no need to seek a perfect master on a distant throne, for the true guide breathes beneath your own skin.</p>
+                <p>Here, nothing is forced. The tool is no longer manipulation, but letting go. Through a gentle and daily practice of meditation, we remove one by one the pebbles that block the river of our body, so life can flow effortlessly. Even when an intention is dropped into the Silence (as in Samyama), it is never to demand or manipulate. It is a total surrender: we drop the seed into the fertile soil of the heart, and let it sprout. By settling into this vast and unshakable peace, the traveler naturally rises above the storms of the world. They become untouchable.</p>
+                
+                <h3 style="color: var(--accent-color); margin-top: 40px; text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; letter-spacing: 1px;">The Child and the Spiritual Adult</h3>
+                <p>Finally comes the day when the pilgrim lets go of the hand of authority figures. Blindly entrusting one's salvation to an institution, an ancient text, or an external guru is the stage of spiritual childhood. Today's era calls for maturity: the walker takes full responsibility for their own inner cleansing. They become autonomous, advancing no longer as a fearful disciple, but as an equal with their brothers and sisters on the road.</p>
+                <p>The great paradox lies here: it is precisely by laying down the magician's arms, by ceasing to want to dominate the universe, that everything harmonizes. The true sage manipulates nothing. They simply sweep their own inner temple, becoming a window so clean, so transparent, that divine love can finally pass through it to illuminate the world.</p>
             `
         }
     ]

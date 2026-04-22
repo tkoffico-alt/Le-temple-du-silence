@@ -1357,7 +1357,17 @@ const MURMURES_DATABASE = [
             </p>
         </div>
         `
-    }
+    },
+    {
+        id: "feu-force",
+        title: "<span class='fr'>L'Incendie du Temple : Le Danger du Feu Forcé</span><span class='en' style='display:none;'>The Temple Fire: The Danger of Forced Fire</span>",
+        audioFile: "", imageFile: "feu-force.jpg", videoFile: "",
+        text: `
+        <div class="fr">L'ego spirituel murmure souvent à l'oreille du chercheur qu'il faut aller vite, frapper fort, et forcer l'éveil. Mais forcer la foudre douce de la Kundalini à travers un système nerveux qui n'a pas été préalablement purifié par le silence, c'est comme injecter un torrent de feu dans un réseau de fils fragiles. La friction devient alors destructrice.<br><br>Au lieu de l'illumination, c'est l'incendie. Le corps s'embrase : chaleurs extrêmes, maux de tête fulgurants, insomnies chroniques ou palpitations. Le mental, lui, est happé par la surcharge, sombrant dans l'angoisse, la paranoïa, la colère ou un profond désespoir.<br><br>Le piège le plus redoutable est de diriger cette énergie prématurément vers le sommet du crâne (le chakra couronne). Ce centre agit alors comme un aspirateur spirituel aveugle, attirant violemment l'énergie vers le haut et déchirant les nerfs subtils. De plus, la fierté d'avoir des visions spectaculaires ou de ressentir une grande puissance masque souvent le terrible crash physique et émotionnel qui s'ensuit, comme un effet à retardement de la rétention du souffle.<br><br>L'ambition spirituelle est une illusion qui ralentit la marche. Surcharger son système oblige le pèlerin à tout arrêter, parfois pendant des mois, simplement pour guérir et s'ancrer à nouveau. Souvenez-vous de la loi du jardinier : on ne fait pas pousser une plante plus vite en tirant brusquement sur sa tige. Le silence prépare la terre, le souffle invite la lumière. Tout le reste n'est qu'une affaire de patience et d'auto-régulation.</div>
+        
+        <div class="en" style="display:none;">The spiritual ego often whispers in the seeker's ear that one must go fast, strike hard, and force awakening. But forcing the gentle lightning of Kundalini through a nervous system that has not been previously purified by silence is like injecting a torrent of fire into a network of fragile wires. The friction then becomes destructive.<br><br>Instead of enlightenment, there is a fire. The body catches flame: extreme heat, blinding headaches, chronic insomnia, or palpitations. The mind is engulfed by the overload, sinking into anxiety, paranoia, anger, or profound despair.<br><br>The most formidable trap is directing this energy prematurely towards the top of the skull (the crown chakra). This center then acts as a blind spiritual vacuum, violently drawing energy upwards and tearing the subtle nerves. Moreover, the pride of having spectacular visions or feeling great power often masks the terrible physical and emotional crash that follows, like a delayed effect of breath retention.<br><br>Spiritual ambition is an illusion that slows the journey. Overloading one's system forces the pilgrim to stop everything, sometimes for months, simply to heal and ground themselves again. Remember the gardener's law: you do not make a plant grow faster by abruptly pulling on its stem. Silence prepares the soil, breath invites the light. Everything else is a matter of patience and self-pacing.</div>
+        `
+    },
 ];
 const PARABOLE_DATA = {
     fr: {
